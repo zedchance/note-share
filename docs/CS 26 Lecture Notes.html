@@ -1,0 +1,1117 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS 26 Reading Notes.html'>CS 26 Reading Notes</a>, Previous: <a href='CS 13 Lecture Notes.html'>CS 13 Lecture Notes</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS 26 Lecture Notes</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>CS 26 Lecture Notes</h1>
+<ul>
+<li><a href="#jan-28-2019">Jan 28, 2019</a>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+</ul>
+</li>
+<li><a href="#jan-30-2019">Jan 30, 2019</a>
+<ul>
+<li><a href="#binary-numbers">Binary Numbers</a></li>
+</ul>
+</li>
+<li><a href="#feb-4-2019">Feb 4, 2019</a>
+<ul>
+<li><a href="#signed-integers">Signed Integers</a></li>
+</ul>
+</li>
+<li><a href="#feb-6-2019">Feb 6, 2019</a>
+<ul>
+<li><a href="#non-integral-numbers">Non-integral numbers</a></li>
+<li><a href="#fixed-point">Fixed point</a></li>
+<li><a href="#floating-point">Floating point</a></li>
+</ul>
+</li>
+<li><a href="#feb-11-2019">Feb 11, 2019</a>
+<ul>
+<li><a href="#gates-and-logic">Gates and Logic</a></li>
+</ul>
+</li>
+<li><a href="#feb-13-2019">Feb 13, 2019</a>
+<ul>
+<li><a href="#boolean-logic">Boolean Logic</a></li>
+</ul>
+</li>
+<li><a href="#feb-20-2019">Feb 20, 2019</a>
+<ul>
+<li><a href="#karnaugh-maps">Karnaugh Maps</a></li>
+<li><a href="#lab-3-satisfiability">Lab 3: Satisfiability</a></li>
+</ul>
+</li>
+<li><a href="#feb-27-2019">Feb 27, 2019</a>
+<ul>
+<li><a href="#modular-arithmetic-and-cryptography">Modular Arithmetic and Cryptography</a></li>
+</ul>
+</li>
+<li><a href="#mar-4-2019">Mar 4, 2019</a>
+<ul>
+<li><a href="#test-1">Test 1</a></li>
+<li><a href="#linear-cipher">Linear cipher</a></li>
+</ul>
+</li>
+<li><a href="#mar-6-2019">Mar 6, 2019</a>
+<ul>
+<li><a href="#greatest-common-divisor">Greatest Common Divisor</a></li>
+<li><a href="#lab-5">Lab 5</a></li>
+</ul>
+</li>
+<li><a href="#mar-11-2019">Mar 11, 2019</a>
+<ul>
+<li><a href="#pseudo-random-number-generator-prng">Pseudo Random Number Generator (PRNG)</a></li>
+<li><a href="#linear-congruential-generators-lcg">Linear Congruential Generators (LCG)</a></li>
+<li><a href="#checksums">Checksums</a></li>
+<li><a href="#hash">Hash</a></li>
+</ul>
+</li>
+<li><a href="#mar-13-2019">Mar 13, 2019</a>
+<ul>
+<li><a href="#more-hashing">More hashing</a></li>
+</ul>
+</li>
+<li><a href="#mar-18-2019">Mar 18, 2019</a>
+<ul>
+<li><a href="#symmetric-vs-asymmetric-encryption">Symmetric vs. Asymmetric encryption</a></li>
+<li><a href="#rsa">RSA</a></li>
+</ul>
+</li>
+<li><a href="#apr-20-2019">Apr 20, 2019</a>
+<ul>
+<li><a href="#communicating-using-public-private-key-cryptography">Communicating using public-private key cryptography</a></li>
+<li><a href="#the-real-rsa">The Real RSA</a></li>
+</ul>
+</li>
+<li><a href="#apr-3-2019">Apr 3, 2019</a>
+<ul>
+<li><a href="#spam-filtering">Spam filtering</a></li>
+</ul>
+</li>
+<li><a href="#apr-10-2019">Apr 10, 2019</a>
+<ul>
+<li><a href="#graphs">Graphs</a></li>
+<li><a href="#trees">Trees</a></li>
+</ul>
+</li>
+<li><a href="#"></a></li>
+</ul>
+<h2>Jan 28, 2019</h2>
+<h3>Introduction</h3>
+<p>Discrete: Not "discreet", opposite of continuous, goes in steps. The graphs we worked with can only be expanded in steps, you can't add a half edge or half vertex.</p>
+<p>Structure: a set of related values and the operations on them. (integers, graphs).</p>
+<p>Like a venn diagram of math and computer science, discrete structures is the combination.</p>
+<hr>
+<h2>Jan 30, 2019</h2>
+<h3>Binary Numbers</h3>
+<p>Spending method:<br>
+89 can be converted to decimal by "buying" the most expensive thing you can from the powers of two.</p>
+<p>Repeated division:<br>
+89 can be repeatedly divided by 2. the remainders in reverse order will be the binary number.</p>
+<p>Hexadecimal - Base 16<br>
+Using higher bases means you can pack more information into a smaller space.</p>
+<p>Base 32 uses 1..9A..V<br>
+Can be easily converted from binary by using groups of 5 bits.</p>
+<p>Base 64 uses 1..9A..Za..z+/<br>
+Can be easily converted from binary by using groups of 6 bits. Starts from the beginning of the file, grouping into 6 bits then padded with an equals sign (=) for each 2 bits left over.</p>
+<p>All data is just numbers. How you "chunk it up" is just a way of representation the information.</p>
+<hr>
+<h2>Feb 4, 2019</h2>
+<h3>Signed Integers</h3>
+<ul>
+<li>2's complement
+<ul>
+<li>In 2's complement subtracting and addition are the same operation.</li>
+<li>To subtract, add the negative version of the number. The result will be in 2's complement, which needs context to be understood.</li>
+<li>Without context, there is no way to know which.</li>
+<li>The CPU does not know (and doesn't care) whether we are using unsigned or 2s complement numbers.</li>
+</ul>
+</li>
+<li>Sign-magnitude
+<ul>
+<li>MSB is the sign bit, 1 means negative, 0 means positive.</li>
+</ul>
+</li>
+<li>Excess-n or Excess-k
+<ul>
+<li>Splits the numbers in but not in half. It is shifted down to accomodate however many negative numbers you need.</li>
+</ul>
+</li>
+</ul>
+<p>Pros</p>
+<ul>
+<li>Signed magnitude
+<ul>
+<li>Easy for humans</li>
+<li>Symmetric range</li>
+<li>LSB shows even/odd</li>
+<li>MSB is pos/neg</li>
+</ul>
+</li>
+<li>2s Complement
+<ul>
+<li>Easy arithmetic</li>
+<li>LSB is even/odd</li>
+<li>MSB is pos/neg</li>
+</ul>
+</li>
+<li>Excess-n
+<ul>
+<li>Easy negation (add or subtract)</li>
+<li>Definable range</li>
+</ul>
+</li>
+</ul>
+<p>Cons</p>
+<ul>
+<li>Signed magnitude
+<ul>
+<li>Two zeros</li>
+<li>difficult for computers</li>
+</ul>
+</li>
+<li>2s complement
+<ul>
+<li>Negation more difficult (than signed magnitude)</li>
+</ul>
+</li>
+<li>Excess-n</li>
+</ul>
+<hr>
+<h2>Feb 6, 2019</h2>
+<h3>Non-integral numbers</h3>
+<p><code>110.101</code> = 6.625</p>
+<p>The places to the right of the radix are still powers of 2 (negative powers)</p>
+<p>Certain numbers cannot be broken down into base 2 (for instance 7.6, .6 cannot be broken down into powers of 2). When sending floating point numbers, the radix point cannot be shown in 1s and 0s. You can agree on where the radix point will go before hand, which is called fixed-point.</p>
+<h3>Fixed point</h3>
+<p><code>___.___</code>, the radix point isn't sent along, its just agreed upon where it will be. <code>0b1101 1100</code> would turn into 1101.1100 = 13.75. Depending on where the radix point goes it changes the value of the number (can be drastic). If using 8 bits with the radix point in the middle, the smallest value possible is 0.0 and the largest would be 15.9375. Steps of 0.0625 (<code>0b0000.0001</code>)</p>
+<h3>Floating point</h3>
+<p>IEEE-754 is the standard for floating point numbers. Floating point numbers is essentially scientific notation but in binary.</p>
+<p><span class="MathJax" id="MathJax-Element-535-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5110" style="width: 6.078em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.462em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.484em, 1000em, 2.717em, -0.443em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5111"><span class="mo" id="MathJax-Span-5112" style="font-family: STIXGeneral-Regular;">−</span><span class="mn" id="MathJax-Span-5113" style="font-family: STIXGeneral-Regular;">6.521</span><span class="mi" id="MathJax-Span-5114" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-5115"><span style="display: inline-block; position: relative; width: 1.483em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.396em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5116" style="font-family: STIXGeneral-Regular;">10</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 1.014em;"><span class="mn" id="MathJax-Span-5117" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mn" id="MathJax-Span-5118" style="font-family: STIXGeneral-Regular;">7</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.118em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-535">-6.521 x 10^27</script></p>
+<p>The three parts you need to pay attention to are the sign, the mantissa (the number after the sign) and the exponent. Numbers must be normalized (<span class="MathJax" id="MathJax-Element-536-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5119" style="width: 8.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.939em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.437em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5120"><span class="mn" id="MathJax-Span-5121" style="font-family: STIXGeneral-Regular;">.0314</span><span class="mo" id="MathJax-Span-5122" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-5123" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">3.14</span><span class="mi" id="MathJax-Span-5124" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-5125"><span style="display: inline-block; position: relative; width: 1.595em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.396em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5126" style="font-family: STIXGeneral-Regular;">10</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 1.014em;"><span class="mo" id="MathJax-Span-5127" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">−</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mn" id="MathJax-Span-5128" style="font-family: STIXGeneral-Regular;">2</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.891em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-536">.0314 = 3.14x10^-2</script>).</p>
+<p>Modified IEEE-754 (8 bits):<br>
+Trade off between precision and range. Will use 1 bit for the sign (MSB), 4 bits for exponent, and 3 for mantissa.</p>
+<p><code>_ _ _ _ _ _ _ _</code></p>
+<p>Sign</p>
+<ul>
+<li>0 is pos</li>
+<li>1 is neg</li>
+</ul>
+<p>Exponent</p>
+<ul>
+<li>Represented in excess-n</li>
+</ul>
+<p>Mantissa</p>
+<ul>
+<li>Fractional binary</li>
+</ul>
+<p>The leftmost digit after normalized is always a 1, so that can be ommited when transfering to a floating point number. IEEE-754 says if you are using 4 bits for exponent, you should use excess-7. To find the number of bits to shift by you should use <span class="MathJax" id="MathJax-Element-537-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5129" style="width: 5.953em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.349em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.479em, 1000em, 2.712em, -0.493em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5130"><span class="mi" id="MathJax-Span-5131" style="font-family: STIXGeneral-Italic;">n</span><span class="mo" id="MathJax-Span-5132" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="msubsup" id="MathJax-Span-5133" style="padding-left: 0.313em;"><span style="display: inline-block; position: relative; width: 1.82em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.478em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5134" style="font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 0.507em;"><span class="texatom" id="MathJax-Span-5135"><span class="mrow" id="MathJax-Span-5136"><span class="mi" id="MathJax-Span-5137" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">b</span><span class="mo" id="MathJax-Span-5138" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">−</span><span class="mn" id="MathJax-Span-5139" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mo" id="MathJax-Span-5140" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">−</span><span class="mn" id="MathJax-Span-5141" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.118em; vertical-align: -0.072em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-537">n = 2^{b-1} - 1</script> where <span class="MathJax" id="MathJax-Element-538-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5142" style="width: 0.578em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.507em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.714em, -0.484em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5143"><span class="mi" id="MathJax-Span-5144" style="font-family: STIXGeneral-Italic;">b</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.895em; vertical-align: -0.075em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-538">b</script> is the number of bits used to express the exponent.</p>
+<p>Range of values</p>
+<ul>
+<li>Smallest positive value (in our modified 8 bit version, in the real version it says if all bits are 0 then the number is 0)
+<ul>
+<li><code>0b0000 0000</code> = <span class="MathJax" id="MathJax-Element-539-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5145" style="width: 4.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.336em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.396em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5146"><span class="mn" id="MathJax-Span-5147" style="font-family: STIXGeneral-Regular;">1.000</span><span class="mi" id="MathJax-Span-5148" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-5149"><span style="display: inline-block; position: relative; width: 1.089em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.478em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5150" style="font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 0.507em;"><span class="mo" id="MathJax-Span-5151" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">−</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mn" id="MathJax-Span-5152" style="font-family: STIXGeneral-Regular;">7</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.891em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-539">1.000 x 2^-7</script> = <span class="MathJax" id="MathJax-Element-540-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5153" style="width: 2.641em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.365em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.396em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5154"><span class="mn" id="MathJax-Span-5155" style="font-family: STIXGeneral-Regular;">1</span><span class="texatom" id="MathJax-Span-5156"><span class="mrow" id="MathJax-Span-5157"><span class="mo" id="MathJax-Span-5158" style="font-family: STIXGeneral-Regular;">/</span></span></span><span class="mn" id="MathJax-Span-5159" style="font-family: STIXGeneral-Regular;">128</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.891em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-540">1/128</script></li>
+</ul>
+</li>
+<li>Largest positive value
+<ul>
+<li><code>0b0111 1111</code> = <span class="MathJax" id="MathJax-Element-541-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5160" style="width: 4.141em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.716em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.484em, 1000em, 2.714em, -0.396em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5161"><span class="mn" id="MathJax-Span-5162" style="font-family: STIXGeneral-Regular;">1.111</span><span class="mi" id="MathJax-Span-5163" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-5164"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.478em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5165" style="font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 0.507em;"><span class="mn" id="MathJax-Span-5166" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">8</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.115em; vertical-align: -0.075em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-541">1.111 x 2^8</script> = <span class="MathJax" id="MathJax-Element-542-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5167" style="width: 1.703em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.52em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.495em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5168"><span class="mn" id="MathJax-Span-5169" style="font-family: STIXGeneral-Regular;">480</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.891em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-542">480</script></li>
+</ul>
+</li>
+<li>Next largest
+<ul>
+<li><code>0b1111 1110</code> = <span class="MathJax" id="MathJax-Element-543-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5170" style="width: 4.141em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.716em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.484em, 1000em, 2.717em, -0.396em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5171"><span class="mn" id="MathJax-Span-5172" style="font-family: STIXGeneral-Regular;">1.110</span><span class="mi" id="MathJax-Span-5173" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-5174"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.478em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5175" style="font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 0.507em;"><span class="mn" id="MathJax-Span-5176" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">8</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.118em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-543">1.110 x 2^8</script> = <span class="MathJax" id="MathJax-Element-544-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5177" style="width: 1.703em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.52em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.717em, -0.495em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5178"><span class="mn" id="MathJax-Span-5179" style="font-family: STIXGeneral-Regular;">448</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.891em; vertical-align: -0.078em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-544">448</script></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Feb 11, 2019</h2>
+<h3>Gates and Logic</h3>
+<p>74163 - 4 bit counter<br>
+74138 - 3 to 8 bit decoder<br>
+7400 - NAND</p>
+<p>These chips can be mounted on PCBs to make a computer.</p>
+<p>Two circuits/expressions are equivalent if they have the same truth tables.</p>
+<p>NAND is a universal gate, meaning you can make any other gate out of just NANDs.</p>
+<hr>
+<h2>Feb 13, 2019</h2>
+<h3>Boolean Logic</h3>
+<p>Boolean expressions are equivalent if they have the same truth table. To flip the output of a truth table over, not the result.</p>
+<hr>
+<h2>Feb 20, 2019</h2>
+<h3>Karnaugh Maps</h3>
+<p>How to:</p>
+<ol>
+<li>Get expression into SoP (Sum of products) or DNF (Disjunctive normal form)</li>
+<li>Make grid, label axes, use grade code to fill out any multiple variable columns</li>
+<li>Dot boxes for each term</li>
+<li>Circle adjacent dots
+<ol>
+<li>As big as possible</li>
+<li>Dimensions of circle must be powers of 2</li>
+<li>As few circles as possible to cover all dots</li>
+<li>Overlap circles in order to make them as big as possible</li>
+</ol>
+</li>
+<li>Each circle is a term in the minimized expression</li>
+</ol>
+<h3>Lab 3: Satisfiability</h3>
+<p>pseudo:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>for x from 0 to 1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   for y from 0 to 1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  for x from 0 to 1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> if x == 0 or y == 1 and z == 1 or y == 0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    print x, y, z
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Feb 27, 2019</h2>
+<h3>Modular Arithmetic and Cryptography</h3>
+<p>Overview</p>
+<ul>
+<li>Shift cipher (Caesar)</li>
+<li>Linear cipher</li>
+<li>Vigenere cipher</li>
+<li>Hasing and passwords</li>
+<li>Symmetric key crypto</li>
+<li>Public key crypto</li>
+</ul>
+<p>Encoding is just transforming from one form to another. There isn't any secret information, you just need to know what algorithm is being used. Cryptography uses encoding with some secret information to make the algorithm harder to decode.</p>
+<p><strong>Modular arithmetic</strong></p>
+<blockquote>
+<p>18 + 35 mod 7 = 18<br>
+18 + 35 (mod 7) = 4</p>
+</blockquote>
+<p>These expressions are not the same. The first expression the mod is only applying to the 35, whereas the second expression mods the entire sum of whats on the left before mod. <strong>Congruent numbers</strong> are numbers that land on the same spot in the mod circle.</p>
+<p><strong>Remainder vs modulo</strong></p>
+<p>Remainders can be negative, and modulos is always positive.</p>
+<p><strong>Arithmetic properties</strong></p>
+<p>Sum</p>
+<blockquote>
+<p>123456 + 7891011 (mod 79) = (123456 mod 79) + (7891011 mod 79)<br>
+(a + b) mod n = (a mod n) + (b mod n) (mod n)</p>
+</blockquote>
+<p>To do this on the normal calculator, divide the numbers, minus the quotient, then multiply by the mod number.</p>
+<p>Multiplication</p>
+<blockquote>
+<p>Multiplication</p>
+</blockquote>
+<p>Exponents</p>
+<blockquote>
+<p>456^789 mod 79 = 58<br>
+(456 mod 79)^789 = 58</p>
+</blockquote>
+<p>You can mod the base but not the exponent!</p>
+<p><strong>Preview of RSA</strong></p>
+<ul>
+<li>Plaintext
+<ul>
+<li>the message you want to encrypt</li>
+</ul>
+</li>
+<li>Ciphertext
+<ul>
+<li>the encrypted message</li>
+<li>This is basically the <span class="MathJax" id="MathJax-Element-545-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5180" style="width: 5.641em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.068em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.908em, -0.477em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5181"><span class="mi" id="MathJax-Span-5182" style="font-family: STIXGeneral-Italic;">c</span><span class="mo" id="MathJax-Span-5183" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="msubsup" id="MathJax-Span-5184" style="padding-left: 0.313em;"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.908em, -0.582em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-5185" style="font-family: STIXGeneral-Italic;">p</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.671em; left: 0.563em;"><span class="texatom" id="MathJax-Span-5186"><span class="mrow" id="MathJax-Span-5187"><span class="mi" id="MathJax-Span-5188" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">e</span></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mi" id="MathJax-Span-5189" style="font-family: STIXGeneral-Italic;">m</span><span class="mi" id="MathJax-Span-5190" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-5191" style="font-family: STIXGeneral-Italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.027em;"></span></span><span class="mi" id="MathJax-Span-5192" style="font-family: STIXGeneral-Italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.111em; vertical-align: -0.29em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-545">c = p^{e} mod n</script>
+<ul>
+<li>c = cihper text</li>
+<li>p = plain text</li>
+<li>e = encryption exponent (up to 100-200 digits long)</li>
+<li>n &gt; p (n can be as big as 400 digits long)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>(40 digits)^(200 digits) mod (400 digits)</p>
+</blockquote>
+<blockquote>
+<p>17^123 (mod 19)  = 17^100 * 17^23 = 17^50 * 17^50 * 17^23</p>
+</blockquote>
+<hr>
+<h2>Mar 4, 2019</h2>
+<h3>Test 1</h3>
+<ul>
+<li>Opens Friday 8a, closes Mon 8a</li>
+<li>You have 3 hours to finish once you start
+<ul>
+<li>Most people need about 1 hour</li>
+</ul>
+</li>
+<li>Covers
+<ul>
+<li>Binary</li>
+<li>Signed integers</li>
+<li>Gates and circuits</li>
+<li>Boolean logic</li>
+<li>K-maps</li>
+<li>Floating-point</li>
+</ul>
+</li>
+<li>Work on seperate sheet of paper. Turn in paper next class to get partial credit for problems.</li>
+</ul>
+<h3>Linear cipher</h3>
+<p>Formula</p>
+<ul>
+<li>c = pm + k (mod n)
+<ul>
+<li>n is size of alphabet</li>
+<li>c is cipher text</li>
+<li>p is plaintext</li>
+<li>m is multiplier</li>
+</ul>
+</li>
+</ul>
+<p>In python:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">linear</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">p</span>, <span class="ace_identifier">m</span>, <span class="ace_identifier">k</span><span class="ace_paren ace_rparen">)</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">return</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">p</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">m</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">k</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_identifier">n</span>
+</div></div></div></div><div class="cell markdown-cell"><p>The process looks like this, using m = 5 and k = 7</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>C  A  T       plaintext
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>02 00 19      coded
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>17 07 102     multiplied and shifted
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>17 07 24      mod 26
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>R  H  Y       ciphertext
+</div></div></div></div><div class="cell markdown-cell"><p>To decipher</p>
+<ul>
+<li>Must know m and k, and reverse the process</li>
+</ul>
+<p>What makes good numbers for m and k?</p>
+<ul>
+<li>m should be greater then 0 and less than n
+<ul>
+<li>If you multiply by anything over n it is the same as multiplying as numbers that are less then n. Multiplying by n is the same as multiplying by 0</li>
+</ul>
+</li>
+<li>k should be greater than or equal to 0 and less than n
+<ul>
+<li>Anything below 0 or above n is no point</li>
+</ul>
+</li>
+<li><strong>m and n should have no common factors!</strong> (coprime, or relatively prime) This creates non-1:1 mappings!</li>
+</ul>
+<p>An example in python, using m = 22 and k = 24:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">for</span> <span class="ace_identifier">p</span> <span class="ace_keyword">in</span> <span class="ace_support ace_function">range</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0</span>, <span class="ace_constant ace_numeric">26</span><span class="ace_paren ace_rparen">)</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">c</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">p</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_constant ace_numeric">22</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_constant ace_numeric">24</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_constant ace_numeric">26</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">print</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">p</span>, <span class="ace_identifier">c</span><span class="ace_paren ace_rparen">)</span>
+</div></div></div></div><div class="cell markdown-cell"><p>This pattern creates repeating numbers that don't map 1:1 anymore with numbers, so it isn't a good choice for a multiplier and shift.</p>
+<p><strong>Field</strong></p>
+<ul>
+<li>A set of values on which the following operations are defined:
+<ul>
+<li>Addition</li>
+<li>Multiplication</li>
+<li>Additive inverse</li>
+<li>Multiplicative inverse</li>
+</ul>
+</li>
+</ul>
+<p><strong>Euler's Totient Function</strong></p>
+<ul>
+<li>How many numbers less the number are coprimes of the number.</li>
+<li>Properties
+<ul>
+<li>If n is prime
+<ul>
+<li>then φ(n) = n-1</li>
+</ul>
+</li>
+<li>If n = a * b, a and b are coprime and a ≠ b
+<ul>
+<li>then φ(n) = φ(a) * φ(b)</li>
+</ul>
+</li>
+<li>If n = p^k, where p is prime, and 0 &lt; k (and integer)
+<ul>
+<li>then φ(n) = φ(p^k) = p^k-1(p-1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Euler's Theorem</strong></p>
+<ul>
+<li>a^φ(n) = 1 (mod n), if a and n are coprime</li>
+</ul>
+<hr>
+<h2>Mar 6, 2019</h2>
+<h3>Greatest Common Divisor</h3>
+<p>gcd(15, 21) = 3<br>
+gcd(90, 60) = 30</p>
+<p><strong>Euclidean Algorithm</strong></p>
+<ul>
+<li>gcd(a, 0) = a</li>
+<li>gcd(a, b) = gcd(b, a mod b)</li>
+</ul>
+<p>Example:<br>
+gcd(90, 60) = gcd(60, 90 mod 60) = gcd(60, 30) = gcd(30, 60 mod 30) = gcd(30, 0) = 30</p>
+<p>gcd(15, 270) = gcd(270, 15 mod 270) = gcd(270, 15) = gcd(15, 270 mod 15) = gcd(15, 0) = 15</p>
+<p>In a python function:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">def</span> <span class="ace_identifier">gcd</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">a</span>, <span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">if</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">a</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">else</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">gcd</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">b</span>, <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span>
+</div></div></div></div><div class="cell markdown-cell"><p><strong>Extended Euclidean Algorithm</strong></p>
+<ul>
+<li>ax + by = gcd(a, b)
+<ul>
+<li>You give it a and b, it returns x and y</li>
+</ul>
+</li>
+</ul>
+<p>Try:<br>
+a = 60<br>
+b = 90</p>
+<p>60x + 90y = gcd(60, 90)<br>
+60x + 90y = 30<br>
+2x + 3y = 1<br>
+x = -1, y = 1<br>
+x = 2, y = -1<br>
+x = 5, y = -3</p>
+<p>egcd(15, 21)<br>
+15x + 21y = gcd(15, 21)<br>
+15x + 21 y = 3<br>
+5x + 7y = 1<br>
+x = 3, y = -2<br>
+x = -4, y = 3</p>
+<p>egcd(15, 26)<br>
+15x + 26 y = gcd(15, 26)<br>
+15x + 26y = 1<br>
+x = 7, y = -4<br>
+15 * 7 (mod 26) = 1<br>
+<strong>x is the multiplicative inverse of a mod b</strong></p>
+<h3>Lab 5</h3>
+<p>Linear cipher</p>
+<ul>
+<li>To encrypt:
+<ul>
+<li><code>c = pm + k % n</code></li>
+</ul>
+</li>
+<li>To decrypt
+<ul>
+<li><code>c = (c - k) m^-1 % n</code>
+<ul>
+<li><code>m^-1 % n</code> is the multiplicative inverse</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>To calculate multiplicative inverse use the Extended Euclidean Algorithm<br>
+egcd(a, 0) = (1, 0)</p>
+<p>egcd(a, b) = (t, s-q*t)</p>
+<ul>
+<li>q equals to <code>a//b</code></li>
+<li>r equals <code>a mod b</code></li>
+<li>(s, t) = egcd(b, r)</li>
+</ul>
+<p>In python:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">def</span> <span class="ace_identifier">egcd</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">a</span>, <span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">if</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span>, <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">else</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">q</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">//</span> <span class="ace_identifier">b</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">r</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_identifier">b</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">s</span>, <span class="ace_identifier">t</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">egcd</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">b</span>, <span class="ace_identifier">r</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">t</span>, <span class="ace_identifier">s</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">q</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">t</span><span class="ace_paren ace_rparen">)</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Mar 11, 2019</h2>
+<h3>Pseudo Random Number Generator (PRNG)</h3>
+<p>In 1946, Von Neumann proposed a random number generator:</p>
+<ul>
+<li>Start with a 4 digit number</li>
+<li>Square it</li>
+<li>Extract the middle 4 digits</li>
+<li>Use this pseudo random number as the seed for the next</li>
+</ul>
+<p>The PRNG gets a seed as input, which is then put through a calculation, and the output is your pseudo random number. The output can then be used as a seed for the next random number.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">def</span> <span class="ace_identifier">vn</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">seed</span><span class="ace_paren ace_rparen">)</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">sq</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">seed</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">seed</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment"># divide by 100 using integer division to remove the rightmost 2 digits, then mod by 10k to keep the rightmost 4 digits</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">rnd</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">sq</span> <span class="ace_keyword ace_operator">//</span> <span class="ace_constant ace_numeric">100</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_constant ace_numeric">10000</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">return</span> <span class="ace_identifier">rnd</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">s</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">4321</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">for</span> <span class="ace_identifier">i</span> <span class="ace_keyword">in</span> <span class="ace_support ace_function">range</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">100</span><span class="ace_paren ace_rparen">)</span>:
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">r</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">vn</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">print</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">r</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">s</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">r</span>
+</div></div></div></div><div class="cell markdown-cell"><h3>Linear Congruential Generators (LCG)</h3>
+<p>The formula: rand = seed * multiplier + constant (mod n)</p>
+<p>Just like our linear cipher, the multiplier and mod number must be <strong>coprime</strong>. N is the length of the cycle. Any seed you pick will be one of the values in the cycle. This is useful for debugging programs that use a random number generator to see if they are working before letting them loose with random seeds. Inside the computer at a random place in memory, the OS keeps whats called a "Pool of entropy", which stores random bits to be used as starting points for random seeds, this is replenished by random events such as network activity times or times between keypresses etc.</p>
+<p>Concerning domain and range:</p>
+<ul>
+<li>If every value in the domain has a 1:1 value in the range, this is called bijection (good for crypto).</li>
+<li>If If every value has a many:1 value in the range, this is called a surjection (not good for crypto). This can't be reversed (its a one way function)</li>
+</ul>
+<h3>Checksums</h3>
+<p>A small number calculated from data being sent that is used to verify the integrity of the data. Designed to be very fast to compute, can catch common problems, not to be used for encryption though.</p>
+<p>Luhn algorithm:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>4539 7043 5470 6391        double every other digit
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   insert other digits
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   sum up all the resulting single digits
+</div></div></div></div><div class="cell markdown-cell"><p>If sum is multiple of 10, it's good!<br>
+This is designed to catch common data entry errors.</p>
+<ul>
+<li>Transposing adjacent digits</li>
+<li>Mistyping one digit</li>
+</ul>
+<h3>Hash</h3>
+<p>A checksum that is much harder to compute, and used to verify the integrity of a file</p>
+<table>
+<thead>
+<tr>
+<th>Hash</th>
+<th>Bits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD5</td>
+<td>128 bits</td>
+</tr>
+<tr>
+<td>SHA256</td>
+<td>256 bits</td>
+</tr>
+<tr>
+<td>SHA512</td>
+<td>512 bits</td>
+</tr>
+<tr>
+<td>RipeMD-160</td>
+<td>160 bits</td>
+</tr>
+</tbody>
+</table>
+<p>These hash values has the same idea as a checksum, but are much bigger. This can be analogous with a coffee grinder. The grinder grinds up a bunch of beans, then a scoop is taken out (the hash). These can't be reversed because only a portion of the "beans" were used as the hash. If working with a huge file (a bucket of beans), a scoop is taken, grinded, then a scoop of that is taken and added to another scoop of beans, where the process repeats. This gives an even representation of the file.</p>
+<p>Bash:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_builtin">echo</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">n</span> <span class="ace_string">"Hello"</span> <span class="ace_keyword ace_operator">|</span> <span class="ace_identifier">md5</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_builtin">echo</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">n</span> <span class="ace_string">"Hola"</span> <span class="ace_keyword ace_operator">|</span> <span class="ace_identifier">md5</span>
+</div></div></div></div><div class="cell markdown-cell"><p>These hashs work in a chain, and use the last "scoop" in the next so that the entire data structure is represented. The domain is almost infinity, and the range is 2^ number of bits in hash. The chances of 2 documents having the same checksum is 1 in 2^b where b is the number of bits</p>
+<hr>
+<h2>Mar 13, 2019</h2>
+<h3>More hashing</h3>
+<ul>
+<li>MD5
+<ul>
+<li>Message digest version 5</li>
+</ul>
+</li>
+<li>SHA256
+<ul>
+<li>Secure hashing algorithm</li>
+</ul>
+</li>
+<li>SHA512</li>
+<li>RipeMD-160</li>
+</ul>
+<p>How many possible n-char passwords?</p>
+<ul>
+<li>8 character password (only letters)
+<ul>
+<li>52^8 = 5.3e13</li>
+</ul>
+</li>
+<li>8 character with numbers
+<ul>
+<li>62^8 = 2.2e14</li>
+</ul>
+</li>
+<li>9 character only letters
+<ul>
+<li>52^9 = 2.7e15</li>
+</ul>
+</li>
+</ul>
+<p>What makes a good hashing algorithm?</p>
+<ul>
+<li>Should be computationally expensive, but not too expensive
+<ul>
+<li>MD5 used to be considered a good hash, now it is too easy (fast)</li>
+</ul>
+</li>
+<li>Outputs should be evenly distributed
+<ul>
+<li>Think plotting the on a histogram</li>
+</ul>
+</li>
+<li>Easy to go one way, hard to go the other</li>
+<li>Pre-image resistance
+<ul>
+<li>For a given hash (h) it should be hard to guess the original message (m), such that hash(m) = h</li>
+</ul>
+</li>
+<li>Second pre-image resistance
+<ul>
+<li>For a given message (m1), it's hard to find another message (m2), such that hash(m1) = hash(m2)</li>
+</ul>
+</li>
+<li>Collision resistance
+<ul>
+<li>Hard to find two messages (m1, m2) such that hash(m1) = hash(m2)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Mar 18, 2019</h2>
+<h3>Symmetric vs. Asymmetric encryption</h3>
+<p><strong>Symmetric:</strong></p>
+<ul>
+<li>Both parties share a secret key</li>
+<li>Faster then asymmetric</li>
+</ul>
+<p>Alice and Bob want to communicate, Eve is the eavesdropper. How do Alice and Bob keep Eve from obtaining the key?</p>
+<p><strong>Public Key Cryptosystems (asymmetric)</strong>:</p>
+<ul>
+<li>This solves the "key-exchange" problem.</li>
+</ul>
+<h3>RSA</h3>
+<p>R: Rivesst<br>
+S: Shamir<br>
+A: Adelman</p>
+<ol>
+<li>Pick two primes p &amp; q
+<ol>
+<li>p = 13, q = 47</li>
+</ol>
+</li>
+<li>Calculate n = p * q (this will be the mod)
+<ol>
+<li>n = 611</li>
+</ol>
+</li>
+<li>Calculate totient(n)
+<ol>
+<li>totient(611) = totient(13) * totient(47) = (13-1)(47-1) = 552</li>
+</ol>
+</li>
+<li>Find e, such that 1 &lt; e &lt; totient(n) and e &amp; totient(n) are coprime
+<ol>
+<li>These can easily be found using our gcd() function</li>
+<li>271</li>
+</ol>
+</li>
+<li>Find d such that e is the multiplicative inverse of e and totient(n)
+<ol>
+<li>e * d = 1 mod totient(n)</li>
+<li>271 * d mod 552 = 1</li>
+<li>d = 55</li>
+</ol>
+</li>
+<li>Throw away p, q, and totient(n)!</li>
+</ol>
+<p>3 Ways to find multiplicative inverse</p>
+<ul>
+<li>Loop</li>
+<li>Extended GCD</li>
+<li>Euler's Theorem</li>
+</ul>
+<p>RSA Formulas:</p>
+<ul>
+<li>c = p^e mod n</li>
+<li>p = c^d mod n</li>
+</ul>
+<p>(e, n) is one key<br>
+(d, n) is another key, you choose which you want to keep private</p>
+<p>For communication:</p>
+<ul>
+<li>Alice and bob want to communicate</li>
+<li>They both independently go through the RSA calculations</li>
+<li>Alice's
+<ul>
+<li>public key Apub = (ea, na)</li>
+<li>private key Apriv (da, na)</li>
+</ul>
+</li>
+<li>Bob's
+<ul>
+<li>public key Bpub = (eb, nb)</li>
+<li>private key Bpriv = (db, nb)</li>
+</ul>
+</li>
+<li>Alice wants to send Bob a message such that only Bob can read it.
+<ul>
+<li>A: plain -&gt; Bpub -&gt; cipher</li>
+<li>B: cipher -&gt; Bpriv -&gt; plain</li>
+</ul>
+</li>
+</ul>
+<p>Let's try:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>Hi!            Alice's message
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>H i !
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>72 105 33      Ascii values
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   Using Bob's public key Alice can encrypt
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>474 248 266    e = 271, n = 611
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>72 105 33      Bob uses his private key to decrypt
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   d = 55, n = 611
+</div></div></div></div><div class="cell markdown-cell"><p>How can Eve decrypt the message?</p>
+<ul>
+<li>Eve has
+<ul>
+<li>both public keys
+<ul>
+<li>Composed of 2 pieces (e and n)</li>
+</ul>
+</li>
+<li>ciphertext</li>
+<li>Eve needs d to decrypt
+<ul>
+<li>However to calculate the totient of n Eve will need to factor n (it is composed of 2 large prime factors)</li>
+<li>She needs to factor n into p and q</li>
+<li>This is a hard problem</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Quantum computers have Shor's Algorithm that can factor a number quickly</p>
+</blockquote>
+<hr>
+<h2>Apr 20, 2019</h2>
+<h3>Communicating using public-private key cryptography</h3>
+<p>Alice and Bob both generate independent sets of keys.</p>
+<ul>
+<li>Alice
+<ul>
+<li>Apub</li>
+<li>Apriv</li>
+</ul>
+</li>
+<li>Bob
+<ul>
+<li>Bpub</li>
+<li>Bpriv</li>
+</ul>
+</li>
+</ul>
+<p><strong>Alice wants to send Bob a message so that only Bob can read it.</strong></p>
+<ul>
+<li>She needs to run her plaintext thru Bob's public key to obtain ciphertext.</li>
+<li>A: p -&gt; Bpub -&gt; c</li>
+<li>B: c -&gt; Bpriv -&gt; p</li>
+<li>This gives us security</li>
+</ul>
+<p><strong>Alice wants to send Bob a message such that Bob knows it came from Alice:</strong></p>
+<ul>
+<li>A: p -&gt; Apriv -&gt; cipher</li>
+<li>B: c -&gt; Apub -&gt; plain</li>
+<li>This gives us authenticity</li>
+</ul>
+<p>Combining these gives both authenticity and security</p>
+<ul>
+<li>A: p -&gt; Apriv  -&gt; Bpub -&gt; cipher</li>
+<li>B: c -&gt; Bpriv -&gt; Apub -&gt; plain</li>
+<li>This order matters! Otherwise Eve can unlock the outter "box" with Alice's public key</li>
+</ul>
+<p><strong>Alice wants to send a message to Bob such that:</strong></p>
+<ul>
+<li>Alice is the sender (authenticity)</li>
+<li>Bob is the recipient (security)</li>
+<li>Message has not been tampered with (integrity)</li>
+<li>A: p -&gt; hash -&gt; h
+<ul>
+<li>p + h -&gt; Apriv -&gt; Bpub -&gt; cipher</li>
+</ul>
+</li>
+<li>B: c -&gt; Bpriv -&gt; Apub -&gt; p + h
+<ul>
+<li>p -&gt; hash -&gt; h</li>
+<li>Compares hashes</li>
+</ul>
+</li>
+<li>This is called "signing" a document (computing hash, then locking with private key)</li>
+</ul>
+<p>How do Alice and Bob know the public-keys are authentic?</p>
+<ul>
+<li>Public keys are embedded in a digital certificate</li>
+</ul>
+<p>How can Eve decrypt the message?</p>
+<ul>
+<li>Eve knows Apub, Bpub, and ciphertext</li>
+<li>Both public keys are split into
+<ul>
+<li>e</li>
+<li>n</li>
+</ul>
+</li>
+<li>Eve needs d to decrypt e * d = 1 (mod phi)</li>
+<li>To calculate phi Eve must factor into p and q, this is very hard</li>
+</ul>
+<h3>The Real RSA</h3>
+<p>OpenSSL</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">openssl</span> <span class="ace_identifier">genrsa</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">out</span> <span class="ace_identifier">keyfile</span>.<span class="ace_identifier">pem</span> <span class="ace_constant ace_numeric">2048</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">openssl</span> <span class="ace_identifier">rsa</span> <span class="ace_keyword ace_operator">-</span><span class="ace_keyword">in</span> <span class="ace_identifier">keyfile</span>.<span class="ace_identifier">pem</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">pubout</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">out</span> <span class="ace_identifier">key</span>.<span class="ace_identifier">pub</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">more</span> <span class="ace_identifier">key</span>.<span class="ace_identifier">pub</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">openssl</span> <span class="ace_identifier">rsa</span> <span class="ace_keyword ace_operator">-</span><span class="ace_keyword">in</span> <span class="ace_identifier">keyfile</span>.<span class="ace_identifier">pem</span> 
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">vi</span> <span class="ace_identifier">plaintext</span>.<span class="ace_identifier">txt</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">openssl</span> <span class="ace_identifier">rsautl</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">pubin</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">inkey</span> <span class="ace_identifier">key</span>.<span class="ace_identifier">pub</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">endcrypt</span> <span class="ace_keyword ace_operator">-</span><span class="ace_keyword">in</span> <span class="ace_identifier">plaintext</span>.<span class="ace_identifier">txt</span> <span class="ace_keyword ace_operator">-</span><span class="ace_identifier">out</span> <span class="ace_identifier">ciphertext</span>.<span class="ace_identifier">txt</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Apr 3, 2019</h2>
+<h3>Spam filtering</h3>
+<p>To a spam filter: a message is just a set of words.</p>
+<ul>
+<li>"Hello I will say Hello"</li>
+</ul>
+<p>The filter splits the words up and compiles some information about them. It creates a dictionary.</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Occurences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hello</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I</td>
+<td>1</td>
+</tr>
+<tr>
+<td>will</td>
+<td>1</td>
+</tr>
+<tr>
+<td>say</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>P("Hello") = 2/5<br>
+P("will") = 1/5<br>
+P("today") = 0</p>
+<hr>
+<h2>Apr 10, 2019</h2>
+<h3>Graphs</h3>
+<p>Planar graph: any graph that can be drawn on flat paper without crossing edges</p>
+<p>The graph coloring problem: also known as the cartographers problem. To find the minimum number of colors needed to color a map. Its proven to be no more then 4, but finding the minimum is known as a "intractable problem".</p>
+<p>A lot of problems can be turned into graph problems.</p>
+<ul>
+<li>Shortest path</li>
+<li>Spanning tree
+<ul>
+<li>Connecting cable to a housing development using the least cable possible</li>
+</ul>
+</li>
+<li>Travelling salesmen CEO
+<ul>
+<li>Minimize a metric on a graph (cheapest, shortest, time-spent...)</li>
+</ul>
+</li>
+</ul>
+<p>Terminology</p>
+<ul>
+<li>Vertex
+<ul>
+<li>point on the graph</li>
+</ul>
+</li>
+<li>Edge
+<ul>
+<li>Normal
+<ul>
+<li>Connects 2 vertex</li>
+</ul>
+</li>
+<li>Directed edge
+<ul>
+<li>Edge that goes one way</li>
+</ul>
+</li>
+<li>Weighted edge
+<ul>
+<li>Has a value associated with the edge (cost, distance...)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Fully connected graph
+<ul>
+<li>Each vertice is connected to each other</li>
+</ul>
+</li>
+<li>Disconnected graph
+<ul>
+<li>Not all vertices are connected to each other</li>
+</ul>
+</li>
+</ul>
+<h3>Trees</h3>
+<ul>
+<li>A graph built down from a root with leaves</li>
+<li>Interior nodes are vertices that aren't leaves</li>
+<li>Depth-first traversal
+<ul>
+<li>Search as deep as possible before exploring another branch</li>
+<li>Pre-order depth first traversal
+<ul>
+<li>As soon as you encounter a node, you record it (think binary search tree)</li>
+</ul>
+</li>
+<li>Post-order depth first traversal
+<ul>
+<li>As you encounter a vertex, you record it the <strong>second</strong> time you encounter it</li>
+<li>Could be used to turn high-level language into assembly</li>
+<li>This puts the operation in postfix!</li>
+</ul>
+</li>
+<li>In order depth first traversal
+<ul>
+<li>This puts the operation back to how it was</li>
+<li>This could be used to turn a high-level language into another high-level language (java &lt;-&gt; c)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Breadth-first travesal
+<ul>
+<li>Search all neighbors before going deeper</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Apr 22, 2019</h2>
+<h3>Minimal spanning tree</h3>
+<p>How to</p>
+<ol>
+<li>Initialize the set of visited vertices with any vertext from the graph. Iniialize the set of unvisited vertices to be all but the starting vertex</li>
+<li>Consider each of the unvisited neighbors of the bisited set. Identify the neighbor with the lowest edge weight</li>
+<li>Add the neighbors to the visited set. Remove it from the unvisited set.</li>
+<li>If the unvisited set is empty, we are done. Otherwise go back to step 2.</li>
+</ol>
+<p>Greedy algorithm: Looks at the information it has at the moment, doesn't look ahead.</p>
+<ul>
+<li>Make a decision based on information you have and no more.</li>
+<li>Make best decision and don't change your mind.</li>
+</ul>
+<hr>
+<h2>Apr 24, 2019</h2>
+<h3>Finite State Machine</h3>
+<p>There is a <strong>starting</strong> or <strong>initial state</strong> and one or more <strong>accepting states</strong>. Vertices are <strong>states</strong>, and edges are <strong>transitions</strong>. <strong>Strings</strong> describe pathes along the machine, and there are an infinte number of strings because of the looping nature of them. The set of all accepting strings is a <strong>language</strong>.</p>
+<h3>How a program gets compiled</h3>
+<p>Scanning</p>
+<ul>
+<li>Goes thru program and finds and identifies tokens</li>
+</ul>
+<hr>
+<h2>Apr 29, 2019</h2>
+<h3>Compilers continued</h3>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>grammar blub;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>program: (assignment | print)* ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>assignment: IDENT ASSIGNOP expr SEMICOLON ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>expr: expr ('*'|'/') expr | expr ('+'|'-') expr | IDENT | INT ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>print: 'print' expr SEMICOLON ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>IDENT: ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ASSIGNOP: '=' ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>SEMICOLON: ';' ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>INT: ('+'|'-'|'0'..'9')('0'-'9')* ;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>WS: (' '|'\n'|'\r'|'\t') -&gt; skip ;
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>May 1, 2019</h2>
+<h3>State machines cont.</h3>
+<p>Deterministic state automaton</p>
+<ul>
+<li>Where each state only has one choice, no ambiguous choices.</li>
+</ul>
+<p>Non-deterministic state automaton</p>
+<ul>
+<li>State machines that have multiple choices for each state (for example one state could have multiple routes labeled 'x')</li>
+<li>All NFAs can be converted to an equiavlent DFA</li>
+</ul>
+<hr>
+<h2>May 6, 2019</h2>
+<h3>NFA with epsilon transition</h3>
+<p>The epsilon transition is basically like a free door that doesn't consume any letters.</p>
+<p>Thompson's constructions are a general (generic) way of converting a regex to NFA without a lot of analysis.</p>
+<hr>
+<h2>May 8, 2019</h2>
+<p>Transform Regex into DFA</p>
+<ol>
+<li>Transform regex into NFA using Thompson's constructions</li>
+<li>Transform into DFA
+<ol>
+<li>Transform NFA into table</li>
+<li>Transform NFA table into DFA table</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2>May 13, 2019</h2>
+<h3>Mealy and Moore Machines</h3>
+<p>A state machine without a accepting state, it just outputs a stream.</p>
+<p>Takes a input of a string and outputs another string.</p>
+<p>Moore machine is a "dual" of a Mealy machine. (This means you can turn a Mealy into a Moore and vice versa)</p>
+<p>A Moore machine takes an input, but instead of the output on the transition, the states are the outputs. Moore machines always output something at the first state(the start). If this isn't what you want, the solution is to add an initial state that doesn't output anything.</p>
+<hr>
+<h2>May 15, 2019</h2>
+<h3>Data compression (text)</h3>
+<p>Text compression should be lossless, in that none of the information is actually able to be put back after compressed.</p>
+<p>Huffman encoding</p>
+<p><code>THE CAT IN THE HAT CAME BACK</code></p>
+<p>Start by creating a dictinonary for all the letters</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>T H E C A I N M B K _
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>4 3 3 3 4 1 1 1 1 1 6
+</div></div></div></div><div class="cell markdown-cell"><p>Then order for frequency</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>_ T A H E C I N M B K
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>6 4 4 3 3 3 1 1 1 1 1
+</div></div></div></div><div class="cell markdown-cell"><p>Combine the 2 lowest items</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>_6 T4 A4 H3 E3 C3 BK 2 N1 M1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>_6 T4 A4 H3 E3 C3 NM2 BK2 I1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>_6 T4 A4 H3 E3 C3 BKI3 NM2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>_6 BKINM5 T4 A4 H3 E3 C3
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>EC6 _6 BKINM5 T4 A4 H3
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>AH7 EC6 _6 BKINM5 T4
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>BKINMT9 AH7 EC6 _6
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>EC_12 BKINMT9 AH7
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>BKINMTAH16 EC_12
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>BKINMTAHEC_28
+</div></div></div></div><div class="cell markdown-cell"><p>Then build a tree out of the combinations of these and assign 0s and 1s to the branches to get the new bitcodes</p>
+<hr>
+<h2></h2>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS 26 Reading Notes.html';
+if (e.keyCode === 37) window.location.href = 'CS 13 Lecture Notes.html';
+}</script>
+    </body>
+    </html>
+  

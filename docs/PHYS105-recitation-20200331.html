@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-recitation-20200414.html'>PHYS105-recitation-20200414</a>, Previous: <a href='PHYS105-lecture-20200414.html'>PHYS105-lecture-20200414</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-recitation-20200331</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h2>Angular motion questions</h2>
+<p><img src="resources/74EFBC9BF905CD9B15643A4AD8B10880.jpg" alt="IMAGE" width="885" height="551"><br>
+<img src="resources/5CE7ABA1798B2E0199D62C2303433BE1.jpg" alt="IMAGE" width="839" height="674"><br>
+<img src="resources/461DAC760B0FD155AD4AE7CFADB4DB75.jpg" alt="IMAGE" width="817" height="177"><br>
+<img src="resources/6C4B760E338619CE49E903C627633892.jpg" alt="IMAGE" width="767" height="337"><br>
+<img src="resources/83D76A85BFC06D91F6766BA6C2740F88.jpg" alt="IMAGE" width="742" height="125"></p>
+<h2>HW Questions</h2>
+<p>1</p>
+<p><img src="resources/5F0CAAA30A26997460095BBAF79CC825.jpg" alt="IMAGE" width="1074" height="312"><br>
+<img src="resources/27D71A8AE49963FE1EC8ED777604414B.jpg" alt="IMAGE" width="1070" height="370"><br>
+<img src="resources/DAC4BC0EFEEC70AA42D3AABDD9F5BF69.jpg" alt="IMAGE" width="612" height="224"><br>
+<img src="resources/20A535AEC5FC03DB9A873AB3631ACEA2.jpg" alt="IMAGE" width="835" height="239"><br>
+<img src="resources/0BEFF5A4EF00171EAC74BAF0EFBBF298.jpg" alt="IMAGE" width="712" height="99"><br>
+<img src="resources/8AD20228560F0F02E7CB2AC2B96136E0.png" alt="IMAGE" width="169" height="146"></p>
+<p>5</p>
+<p><img src="resources/A0322D009685DF0D3AF1F0587F2AA6E4.jpg" alt="IMAGE" width="980" height="184"><br>
+<img src="resources/B7AC13D2D7966E9C2B6B5A83B01C1EF6.jpg" alt="IMAGE" width="596" height="401"><br>
+<img src="resources/A1417358BFCD4D2F27C6BD778721743D.jpg" alt="IMAGE" width="483" height="180"><br>
+<img src="resources/B4F7850E7455BE9FBE1DCE6991674CB7.jpg" alt="IMAGE" width="587" height="448"><br>
+<img src="resources/E4579260B956904B4EBBACDA1356CA58.jpg" alt="IMAGE" width="404" height="223"><br>
+<img src="resources/2460FD60C09F7B2A1F6904105C07DB13.jpg" alt="IMAGE" width="478" height="299"><br>
+<img src="resources/32B73A4ABE30E2BC6A7150795EEBB90E.jpg" alt="IMAGE" width="497" height="329"><br>
+<img src="resources/2F282BC17F7ED174F236EF634F3456FD.jpg" alt="IMAGE" width="479" height="100"><br>
+<img src="resources/74E1CFB1D1397433517A7CB7725D2244.jpg" alt="IMAGE" width="213" height="84"><br>
+<img src="resources/4432E84511517C84588D3BF184CBF840.jpg" alt="IMAGE" width="958" height="153"></p>
+<p>Since traveling less than ideal speed the car slides down the bank.</p>
+<p><img src="resources/5AEC438FCEFFCAC33291D4518526F91B.jpg" alt="IMAGE" width="416" height="393"><br>
+<img src="resources/05F813D5986BA08E05E6527A2BBB7092.jpg" alt="IMAGE" width="528" height="386"><br>
+<img src="resources/5E2BA59B61204A447822FBEB9E425ED6.jpg" alt="IMAGE" width="252" height="257"><br>
+<img src="resources/DC3B531661B7814E0067E5A8B2E98921.jpg" alt="IMAGE" width="555" height="415"><br>
+<img src="resources/DC56ADE23D075C3554D067BBB3E66696.jpg" alt="IMAGE" width="775" height="231"><br>
+<img src="resources/838A438F12549B0681369F2ED04EED17.jpg" alt="IMAGE" width="921" height="256"><br>
+<img src="resources/5B36CFC39C00209F32AC3B83EEC4692B.jpg" alt="IMAGE" width="918" height="247"><br>
+<img src="resources/BE555D8C70A6F19F0DC989FE5911E6E0.jpg" alt="IMAGE" width="785" height="174"><br>
+<img src="resources/F042F8F77A2F845ECB1D44F3CADC18CE.jpg" alt="IMAGE" width="937" height="260"><br>
+<img src="resources/D89336E7C38794046605C71B67624945.jpg" alt="IMAGE" width="968" height="222"></p>
+<p>6</p>
+<p><img src="resources/BDCE04377F157DC04E63EE7DD3EC5077.jpg" alt="IMAGE" width="1020" height="135"><br>
+<img src="resources/10236BEE5362AAAC3B798C52CC8AB7A5.jpg" alt="IMAGE" width="1026" height="318"><br>
+<img src="resources/B09E342AE3BD676EE2605FEEE8C487C2.jpg" alt="IMAGE" width="305" height="240"><br>
+<img src="resources/3594E6CAECB3B8D0BFB178482E62C479.jpg" alt="IMAGE" width="321" height="173"><br>
+<img src="resources/B64B71A362EA704968F2FE2428482707.jpg" alt="IMAGE" width="227" height="158"><br>
+<img src="resources/75A525581918E96A0FCC7009D59D7827.jpg" alt="IMAGE" width="442" height="276"><br>
+<img src="resources/0F07A405FC3644A7B6FFC86A480CF64D.jpg" alt="IMAGE" width="648" height="252"><br>
+<img src="resources/C237FBB966C96AEF74B4398A8D23D845.jpg" alt="IMAGE" width="552" height="213"><br>
+<img src="resources/4440DC2E240678B4F329EF147E09CAB7.jpg" alt="IMAGE" width="551" height="224"><br>
+<img src="resources/8A80098CE9CD9A06F76285C788FDB5F4.jpg" alt="IMAGE" width="494" height="137"><br>
+<img src="resources/86EFA77D8E9CE9D629D6F26275710D73.jpg" alt="IMAGE" width="353" height="185"></p>
+<h2>Another problem</h2>
+<p>A pendulum swings back and forth with a given length 2m. (Similar to quiz)</p>
+<p><img src="resources/874B9242B8BC657FF7D1A502E1877514.jpg" alt="IMAGE" width="696" height="299"></p>
+<p>It is moving tangenital at 8 m/s</p>
+<p><img src="resources/027E8C512A17F49D0EB0459CA5DD322E.jpg" alt="IMAGE" width="302" height="82"></p>
+<ol>
+<li>What is the radial or centripetal acceleration?</li>
+</ol>
+<p><img src="resources/CF6E4CF516111D73CD8596ABAE41C55B.jpg" alt="IMAGE" width="969" height="341"></p>
+<ol start="2">
+<li>What is the tangential acceleration?</li>
+</ol>
+<p><img src="resources/AB55A05C023784A31B04F55EBB74FA2E.jpg" alt="IMAGE" width="295" height="313"><br>
+<img src="resources/2EBE4DE699DBBC311C8620092A5A9B2A.jpg" alt="IMAGE" width="564" height="373"><br>
+<img src="resources/2711ACE2A4405B28A6A6D93B629345A1.jpg" alt="IMAGE" width="776" height="409"></p>
+<ol start="3">
+<li>What is the tension in the string?</li>
+</ol>
+<p><img src="resources/7AAA6B06F87B17E25E095DD230F72A3E.jpg" alt="IMAGE" width="801" height="208"><br>
+<img src="resources/1C43328250DC79A25FAC5A549B7BE283.jpg" alt="IMAGE" width="735" height="102"><br>
+<img src="resources/8E15B0644F00F251B897AB6D6FE4776F.jpg" alt="IMAGE" width="319" height="46"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-recitation-20200414.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-lecture-20200414.html';
+}</script>
+    </body>
+    </html>
+  

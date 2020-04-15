@@ -1,0 +1,140 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-lecture-20200319.html'>PHYS105-lecture-20200319</a>, Previous: <a href='PHYS105-lab-20200326.html'>PHYS105-lab-20200326</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-lab-20200402</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p><img src="resources/EA338464718BA31C8576F710B79A8A75.jpg" alt="IMAGE" width="705" height="402"></p>
+<p>Due in 3 weeks.</p>
+<h2>The Ballistic Pendulum</h2>
+<p>2 different ways to measure a projectile</p>
+<p>Watch the <a href="https://www.youtube.com/watch?v=Vz382_AQ9nI">youtube video</a></p>
+<h3>For the theory section:</h3>
+<p><img src="resources/56DE5B611E32B6DC85767C100EA2D887.jpg" alt="IMAGE" width="1127" height="656"><br>
+<img src="resources/273CD34470255491CB79D64A1E1D8CE6.jpg" alt="IMAGE" width="1121" height="644"></p>
+<p>How to find initial velocity:</p>
+<p><img src="resources/4456750326F3898E908B1474C8A68686.jpg" alt="IMAGE" width="232" height="78"></p>
+<p>Measure the total height</p>
+<p><img src="resources/08852CFB305203E89A107C601F8FAA50.jpg" alt="IMAGE" width="1092" height="670"></p>
+<p>And the length in the x direction</p>
+<p><img src="resources/BE1596440159B2D4D90C1DBDD7770DEA.jpg" alt="IMAGE" width="1001" height="694"></p>
+<p>Kinematics</p>
+<p><img src="resources/690800DCD8A5D4DD9F4229F5C1AD5646.jpg" alt="IMAGE" width="572" height="361"><br>
+<img src="resources/A3EAD1675265DB71A7D7CCA1B8D219C0.jpg" alt="IMAGE" width="270" height="219"><br>
+<img src="resources/B53E732A8DBF7220316B912473AB31C2.jpg" alt="IMAGE" width="413" height="168"><br>
+<img src="resources/533458F301079BBF72D79C9AD042C67B.jpg" alt="IMAGE" width="505" height="121"></p>
+<p>Then find total time</p>
+<p><img src="resources/788AF3D1837ED6075CC9E4040563B4E3.jpg" alt="IMAGE" width="693" height="169"><br>
+<img src="resources/CF735A1760A0D5E0A51AD648EC5ACCB4.jpg" alt="IMAGE" width="753" height="208"></p>
+<p>Solve for t</p>
+<p><img src="resources/7CCCBED3CCAC63B38432B281BA6FAD43.jpg" alt="IMAGE" width="534" height="199"></p>
+<p>Plug back in</p>
+<p><img src="resources/BAEA828550CA45ECA804D69930CDB423.jpg" alt="IMAGE" width="727" height="197"></p>
+<p>To make the calculations:</p>
+<p>Horizontal measurements</p>
+<p><img src="resources/30F66402E56BFB855949804F0DC69E83.jpg" alt="IMAGE" width="396" height="193"><br>
+<img src="resources/A8D93FF4EDDADC6F2947D75A65B83271.jpg" alt="IMAGE" width="606" height="169"></p>
+<p>Both of these together is x total</p>
+<p><img src="resources/AD854396E5F3BFFA461727A4AA868C9C.jpg" alt="IMAGE" width="440" height="96"></p>
+<p>Then measure vertical</p>
+<p><img src="resources/033F171499A75B749A4B929D48C37BFA.jpg" alt="IMAGE" width="159" height="222"><br>
+<img src="resources/F76949927ECA3066033B46969F4191BB.jpg" alt="IMAGE" width="213" height="464"></p>
+<p>Add both together to get y total</p>
+<p><img src="resources/0D8ED1CE4B93E4172CC0F4902EE6AE7D.jpg" alt="IMAGE" width="497" height="116"></p>
+<p>Data is already in the document</p>
+<p>Calculate the muzzle speed using the kinematics equations</p>
+<p>Second part of the lab has the pendulum down so the ball launches into the pendulum.</p>
+<p><img src="resources/9AC8D91E229B3753A364AFA015B24F4A.jpg" alt="IMAGE" width="727" height="354"></p>
+<p>The change in height of the pendulum is measured.</p>
+<p><img src="resources/94C3F97A143C5953D55ED687B3074A46.jpg" alt="IMAGE" width="1022" height="391"><br>
+<img src="resources/A7ED77190E26DA9459D51FFF374DA64E.jpg" alt="IMAGE" width="1104" height="556"><br>
+<img src="resources/E6B4F121857FD0EF73F36DB118B47AE9.jpg" alt="IMAGE" width="263" height="153"><br>
+<img src="resources/B9DD5500464A65FFE5E61D4D42186F37.jpg" alt="IMAGE" width="575" height="247"><br>
+<img src="resources/8665A74E0C6BE57D9E358F9FFCF1B095.jpg" alt="IMAGE" width="916" height="154"></p>
+<p><span class="MathJax" id="MathJax-Element-578-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5486" style="width: 0.578em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.507em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.712em, -0.488em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5487"><span class="mi" id="MathJax-Span-5488" style="font-family: STIXGeneral-Italic;">h</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.893em; vertical-align: -0.072em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-578">h</script> is the difference in height of the pendulum's center of mass</p>
+<p><img src="resources/5053E176FAFCF53E060CEE3BED4D8CDE.jpg" alt="IMAGE" width="463" height="149"><br>
+<img src="resources/D1CAC1B9AEEECE46A6ACAF041EE818C5.jpg" alt="IMAGE" width="900" height="275"><br>
+<img src="resources/477D1595EE713AA2C8DD3095584750D1.jpg" alt="IMAGE" width="830" height="177"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-579-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5489" style="width: 1.266em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.126em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.523em, -0.431em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-5490"><span class="msubsup" id="MathJax-Span-5491"><span style="display: inline-block; position: relative; width: 1.124em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.721em, -0.431em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-5492" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.655em;"><span class="mi" id="MathJax-Span-5493" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">o</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.025em; vertical-align: -0.238em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-579">V_o</script></p>
+<p>For the second part</p>
+<p><img src="resources/911EEB5AA5E54AF2B83B4AC1A06680F1.jpg" alt="IMAGE" width="563" height="173"></p>
+<p>Initial height is of above the platform, final is the height after launch. Change in height is the difference between them.</p>
+<p>Due on the 24th</p>
+<h2>HW questions</h2>
+<p>Number 4</p>
+<p><img src="resources/BFB94527AD703A1580C3E4523275BE33.jpg" alt="IMAGE" width="1062" height="389"><br>
+<img src="resources/CC15BF81522A7EC4E768AF6B655CF987.jpg" alt="IMAGE" width="385" height="243"></p>
+<p>We want to know the speed of the Earth around the Sun and Io around Jupiter.</p>
+<p><img src="resources/644A31D2330260268E71E6B99301857B.jpg" alt="IMAGE" width="213" height="222"><br>
+<img src="resources/BBEF090C7EE85C80E9A0593E5F9419B7.jpg" alt="IMAGE" width="478" height="147"><br>
+<img src="resources/2268FFDFC64C9584F6A80BE93A924899.jpg" alt="IMAGE" width="494" height="126"><br>
+<img src="resources/A6E043F513CEA45CC9037EE4D5341D53.jpg" alt="IMAGE" width="419" height="278"><br>
+<img src="resources/DC8E4214A0B700CB5E964036EA8DBEB1.jpg" alt="IMAGE" width="518" height="377"><br>
+<img src="resources/50B61D64FA5C9D7DEB97F720E91B218B.jpg" alt="IMAGE" width="433" height="100"></p>
+<p>Number 5</p>
+<p><img src="resources/DB1D03584845EFCCD04D9243A631E2CB.jpg" alt="IMAGE" width="868" height="407"><br>
+<img src="resources/8CD6253C21E9A7AC2D145576EC34551D.jpg" alt="IMAGE" width="677" height="224"><br>
+<img src="resources/81E12F48FBDCB69F705079E12FEB7206.jpg" alt="IMAGE" width="634" height="210"><br>
+<img src="resources/D41B8EE51B13A00A2B991753212E719D.jpg" alt="IMAGE" width="630" height="272"><br>
+<img src="resources/FF09A23373361CEE824D996E9728F7BD.jpg" alt="IMAGE" width="361" height="86"><br>
+<img src="resources/143640FA7FB36A07453DFF8CFCB074F6.jpg" alt="IMAGE" width="573" height="96"><br>
+<img src="resources/F311E91FAEF0FBFF4DB7EAF02C9AD8F2.jpg" alt="IMAGE" width="712" height="178"><br>
+<img src="resources/9533A499452F3CBD56D7FA98A62FA3A9.jpg" alt="IMAGE" width="701" height="321"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-580-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5494" style="width: 0.578em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.507em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.714em, -0.534em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-5495"><span class="mi" id="MathJax-Span-5496" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.627em; vertical-align: -0.075em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-580">x</script></p>
+<p><img src="resources/206AAA053EF84645D7DF784DF0503B65.jpg" alt="IMAGE" width="624" height="222"></p>
+<p>Number 6</p>
+<p><img src="resources/8DAE315A6214422C2402E80A20CF9DC1.jpg" alt="IMAGE" width="1059" height="450"><br>
+<img src="resources/C8CD17FBCA756A52AAA7534C5EC7534A.jpg" alt="IMAGE" width="901" height="327"><br>
+<img src="resources/DF69810F33F7DDD4BCFAF275621B77C0.jpg" alt="IMAGE" width="966" height="388"><br>
+<img src="resources/61F8333BF02D5DB714986C42DEA24E52.jpg" alt="IMAGE" width="661" height="442"></p>
+<p>The two objects are traveling perpendicular</p>
+<p><img src="resources/3521CAD371235F5E01F74BCA38BE8C02.jpg" alt="IMAGE" width="513" height="269"></p>
+<p>Both speeds are relative to earth and its asking for the rivet's speed relative to the satellite</p>
+<p><img src="resources/2B32A2BCC066B007EF57698DCD338318.jpg" alt="IMAGE" width="656" height="278"><br>
+<img src="resources/E877AC41323A9B9ADE5F458792FE0C8F.jpg" alt="IMAGE" width="247" height="113"></p>
+<p>Before they collide</p>
+<p><img src="resources/9295C2C4AC3CC4410DD7BDADA731F39A.jpg" alt="IMAGE" width="729" height="270"></p>
+<p>After they collide</p>
+<p><img src="resources/218078D7EEC4EF2BFF156258B34BE62F.jpg" alt="IMAGE" width="356" height="208"></p>
+<p>Smashed like a pancake, they want to know time of interaction</p>
+<p><img src="resources/F89917E747741A4FF437CD0C39D4D022.jpg" alt="IMAGE" width="489" height="247"></p>
+<p>What is the average force?</p>
+<p><img src="resources/36EC85075DE3D659266DCE9024205A67.jpg" alt="IMAGE" width="651" height="145"><br>
+<img src="resources/CE7CD7F4A1041007338CB6A33DC6FC86.jpg" alt="IMAGE" width="782" height="305"><br>
+<img src="resources/6D1592F534D4709F91C406B9B06E1C6C.jpg" alt="IMAGE" width="683" height="211"></p>
+<p><img src="resources/B8BBFC0CED9F9FC572645CB2FA042802.jpg" alt="IMAGE" width="876" height="134"><br>
+<img src="resources/FE68582AF6D1F246E9737F4BFE3224A8.jpg" alt="IMAGE" width="547" height="179"></p>
+<h2>Lab 6 question</h2>
+<p><img src="resources/6B556917E3073FD9EC39EC5D6F60CFBA.jpg" alt="IMAGE" width="959" height="459"><br>
+<img src="resources/C58CE391420B47FDBB59E4359D5AEC98.jpg" alt="IMAGE" width="502" height="228"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-lecture-20200319.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-lab-20200326.html';
+}</script>
+    </body>
+    </html>
+  
