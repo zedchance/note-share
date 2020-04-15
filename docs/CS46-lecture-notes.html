@@ -1,0 +1,993 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='luhns.c.html'>luhns.c</a>, Previous: <a href='CS39-lecture-notes.html'>CS39-lecture-notes</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS46-lecture-notes</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>CS 46 Lecture Notes</h1>
+<ul>
+<li><a href="#august-27">August 27</a></li>
+<li><a href="#august-29">August 29</a>
+<ul>
+<li><a href="#data-types-and-syntax">Data types and syntax</a></li>
+</ul>
+</li>
+<li><a href="#september-3rd">September 3rd</a></li>
+<li><a href="#september-10th">September 10th</a>
+<ul>
+<li><a href="#define"><code>#define</code></a></li>
+</ul>
+</li>
+<li><a href="#october-1">October 1</a>
+<ul>
+<li><a href="#10-foot-view-of-the-computer">10 foot view of the computer</a></li>
+</ul>
+</li>
+<li><a href="#october-3">October 3</a>
+<ul>
+<li><a href="#pointers">Pointers</a></li>
+</ul>
+</li>
+<li><a href="#october-10">October 10</a>
+<ul>
+<li><a href="#valid-pointers">Valid pointers</a></li>
+</ul>
+</li>
+<li><a href="#october-15">October 15</a>
+<ul>
+<li><a href="#core-dumps">Core dumps</a></li>
+</ul>
+</li>
+<li><a href="#october-17">October 17</a>
+<ul>
+<li><a href="#version-control-systems">Version Control Systems</a></li>
+</ul>
+</li>
+<li><a href="#october-22">October 22</a>
+<ul>
+<li><a href="#working-with-files-in-c">Working with files in C</a></li>
+</ul>
+</li>
+<li><a href="#october-24">October 24</a></li>
+<li><a href="#october-29">October 29</a>
+<ul>
+<li><a href="#hashing-algorithms">Hashing algorithms</a></li>
+</ul>
+</li>
+<li><a href="#october-31">October 31</a>
+<ul>
+<li><a href="#makefiles">Makefiles</a></li>
+</ul>
+</li>
+<li><a href="#november-21">November 21</a>
+<ul>
+<li><a href="#quantum-computers">Quantum computers</a></li>
+</ul>
+</li>
+<li><a href="#november-26">November 26</a>
+<ul>
+<li><a href="#networking">Networking</a></li>
+</ul>
+</li>
+</ul>
+<h2>August 27</h2>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">I &lt;3 C</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">for</span> <span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">50</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">I &lt;3 C</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Enter your agge: </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">age</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">age</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// scanf is expecting a decimal (base 10), and stores it in age</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">dogAge</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">age</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_constant ace_numeric">7</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">You are </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string"> dog years old </span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">dogAge</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>To compile:<br>
+Type <code>clang file.c</code> where file is the name of the file</p>
+<p>This will make a new file, to run this program type <code>./.a.out</code> where a.out is the name of the file created</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Enter two numbers: </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">a</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">b</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">a</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Average of </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string"> and </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string"> is: </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">a</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">b</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">/</span> <span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Differences between Java and C</p>
+<ul>
+<li><code>#include</code> is kind of like import but not exactly</li>
+<li>No classes</li>
+<li>Not OO</li>
+<li>No public/private</li>
+<li>String is not a type</li>
+</ul>
+<p>Primitive data types</p>
+<table>
+<thead>
+<tr>
+<th>Java</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>no equiavlent, use int</td>
+</tr>
+<tr>
+<td>char</td>
+<td>char is a byte</td>
+</tr>
+<tr>
+<td>int</td>
+<td>int is defined as a int with as many bits as the machine its running on, most natural data type</td>
+</tr>
+<tr>
+<td>double</td>
+<td>same</td>
+</tr>
+<tr>
+<td>float</td>
+<td>same</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Use char</td>
+</tr>
+<tr>
+<td>short</td>
+<td>half the size of an int</td>
+</tr>
+<tr>
+<td>long</td>
+<td>double the size of an int</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>August 29</h2>
+<h3>Data types and syntax</h3>
+<p>Primitive types</p>
+<table>
+<thead>
+<tr>
+<th>Java</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>double</td>
+<td>double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>no equivalent</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>int</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>char</td>
+</tr>
+<tr>
+<td>String</td>
+<td>char[]</td>
+</tr>
+<tr>
+<td>float</td>
+<td>float</td>
+</tr>
+</tbody>
+</table>
+<p>C has unsigned intger types:<br>
+unsigned int<br>
+unsigned char<br>
+unsigned long</p>
+<p>Same as java:<br>
+braces<br>
+semicolons<br>
+if..else<br>
+for<br>
+while</p>
+<p>Operators:<br>
++, -, *, /<br>
+&amp;&amp;, ||, !</p>
+<p>Conditionals can be applied to ints</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">5</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_control">if</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">x</span><span class="ace_paren ace_rparen">)</span> <span class="ace_comment">// 0 is a false value, anything else is true</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">whee</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">10</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">||</span> <span class="ace_identifier">b</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">whop!</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">c</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">!</span><span class="ace_identifier">c</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// this prints a 1</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">z</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">10</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">z</span><span class="ace_keyword ace_operator">--</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">foo</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>printf and scanf are the 2 primary tools for getting information from a user and showing them information</p>
+<p>printf(______)<br>
+format</p>
+<p><code>%d</code> is a integer<br>
+<code>%f</code> is a float<br>
+<code>%s</code> is a string (char array)<br>
+<code>%li</code> is long int<br>
+<code>%u</code> is unsigned int</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">int is </span><span class="ace_constant ace_language ace_escape">%l</span><span class="ace_string">i bytes</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">sizeof</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">width</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">height</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">depth</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Enter width: </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">width</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Enter height: </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">height</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Enter depth: </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">depth</span><span class="ace_string ace_start">"</span><span class="ace_string">);</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">volume</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">width</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">height</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">depth</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Volume is: </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">volume</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>In C the variables are not initialized, it defaults to whatever was in memory at the moment in time.</p>
+<hr>
+<h2>September 3rd</h2>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;time.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_modifier">const</span> <span class="ace_storage ace_type">int</span> <span class="ace_identifier">max</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">100</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">// #define max 100</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">srandom</span><span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">time</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_language">NULL</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// seeds random number generator from system's time</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">num</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_identifier">max</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_constant ace_numeric">1</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">I have picked a random number between 1 and </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string">.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">max</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Can you guess it? </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">guess</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">scanf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">guess</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">do</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">guess</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_identifier">num</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">You got it!.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">else</span> <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">guess</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_identifier">num</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Too low.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">else</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Too high!</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">guess</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_identifier">num</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Includes can be in angle brackets &lt;&gt; or quotes "". Quotes look in the current directory and angle brackets look in the system's directories. <code>const</code> is a constant that can't be changed. <code>#define</code> is an older way to do it, (ex. <code>#define max 100</code>), no data type or equals sign, anywhere it sees the label max it'll replace it with 100. Anything that starts with a hash mark is called a pre-processor directive.</p>
+<p>Compiling steps</p>
+<ul>
+<li>.c -&gt; pre-processor
+<ul>
+<li>Any #define just swaps the term with the value</li>
+</ul>
+</li>
+<li>compilers, turns into assembly</li>
+<li>linker, hooks up everything</li>
+<li>executable</li>
+</ul>
+<hr>
+<h2>September 10th</h2>
+<p><a href="http://arduino.cc">arduino.cc</a>, download IDE</p>
+<h3><code>#define</code></h3>
+<p>An example of how to use <code>#define</code></p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#define</span><span class="ace_constant ace_other"> DEBUG</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">sum</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_control">for</span> <span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">10</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#ifdef</span> <span class="ace_identifier">DEBUG</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">i = </span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string">, sum = </span><span class="ace_constant ace_language ace_escape">%d\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">i</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">sum</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#endif</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">sum</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">sum</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">i</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p><code>typedef</code> works kind of like define but for data types</p>
+<p>Java:<br>
+<code>int[] arr = new int[10];</code></p>
+<p>C:<br>
+<code>int arr[10];</code></p>
+<p>Brackets for arrays go after variable name.</p>
+<p>Segmentation fault (core dumped):</p>
+<ul>
+<li>Happens when your program attempts to go outside of your memory segment.</li>
+</ul>
+<hr>
+<h2>October 1</h2>
+<h3>10 foot view of the computer</h3>
+<p>Memory is just an array of bytes. Programs/data both reside in memory.</p>
+<p>Address of variables can be accessed with an <code>&amp;</code></p>
+<p>Address of a is <code>&amp;a</code> and b is <code>&amp;b</code></p>
+<p>A variable <code>c</code> that can hold the address of an int:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">a</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">b</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">c</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// this is the address of an integer, not the interger itself</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">c</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">b</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// puts the address of b into the variable c</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>October 3</h2>
+<h3>Pointers</h3>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">;</span>         <span class="ace_comment">// x holds an int</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">float</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">;</span>       <span class="ace_comment">// y holds a float</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">a</span><span class="ace_punctuation ace_operator">;</span>        <span class="ace_comment">// a holds the address of an int</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">float</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">z</span><span class="ace_punctuation ace_operator">;</span>      <span class="ace_comment">// z holds the address of a float</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">;</span>            <span class="ace_comment">// address of x</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">;</span>            <span class="ace_comment">// address of y</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">;</span>        <span class="ace_comment">// a is set to address of x</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">z</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">;</span>        <span class="ace_comment">// z is set to address of y</span>
+</div></div></div></div><div class="cell markdown-cell"><p>You can't put the address of <code>y</code> into <code>a</code> because of loss of precision</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">j</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">6</span><span class="ace_punctuation ace_operator">;</span>     <span class="ace_comment">// 6 is checked to be an int before putting it into j</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">k</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">j</span><span class="ace_punctuation ace_operator">;</span>   <span class="ace_comment">// legal</span>
+</div></div></div></div><div class="cell markdown-cell"><p>The compiler checks the right hand side first, then the left side then checks if they are compatable. (Static analysis)</p>
+<hr>
+<h2>October 10</h2>
+<h3>Valid pointers</h3>
+<table>
+<thead>
+<tr>
+<th>Thing</th>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int xy;</td>
+<td>xy</td>
+<td>int</td>
+</tr>
+<tr>
+<td>double abc;</td>
+<td>abc</td>
+<td>double</td>
+</tr>
+<tr>
+<td>char mp;</td>
+<td>mp</td>
+<td>char</td>
+</tr>
+<tr>
+<td>int broom[10];</td>
+<td>broom</td>
+<td>int array or int pointer</td>
+</tr>
+<tr>
+<td>marp blee;</td>
+<td>blee</td>
+<td>marp</td>
+</tr>
+<tr>
+<td>char *flam;</td>
+<td>flam</td>
+<td>char pointer</td>
+</tr>
+<tr>
+<td>marp bomaz[5];</td>
+<td>bomaz</td>
+<td>marp array or marp pointer</td>
+</tr>
+<tr>
+<td>short int max;</td>
+<td>max</td>
+<td>short int</td>
+</tr>
+<tr>
+<td>marp **z;</td>
+<td>z</td>
+<td>pointer to pointer to a marp, marp pointer pointer, pointer to marp pointer</td>
+</tr>
+<tr>
+<td>double floof[2], *mop;</td>
+<td>floof, mop</td>
+<td>double array, double pointer</td>
+</tr>
+<tr>
+<td>marp *whop[20];</td>
+<td>whop</td>
+<td>array of marp pointers</td>
+</tr>
+</tbody>
+</table>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">// Valid?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">broom</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">4</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">xy</span><span class="ace_punctuation ace_operator">;</span>       <span class="ace_comment">// Valid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">floof</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">abc</span><span class="ace_punctuation ace_operator">;</span>     <span class="ace_comment">// Invalid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">max</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">broom</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>      <span class="ace_comment">// Valid, with warning</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">flam</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">8</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string ace_start">"</span><span class="ace_string">1234</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">;</span>    <span class="ace_comment">// Invalid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">z</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">whop</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>        <span class="ace_comment">// Valid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword ace_operator">*</span><span class="ace_identifier">floof</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">4.8</span><span class="ace_punctuation ace_operator">;</span>        <span class="ace_comment">// Valid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">blee</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">bomaz</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>    <span class="ace_comment">// Invalid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">mop</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">floof</span><span class="ace_punctuation ace_operator">;</span>         <span class="ace_comment">// Valid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">flam</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string ace_start">"</span><span class="ace_string">hello</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">;</span>      <span class="ace_comment">// Valid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">mp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">flam</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">5</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>        <span class="ace_comment">// Valid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">mp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">flam</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">4</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>       <span class="ace_comment">// Invalid</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">whop</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">10</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">z</span><span class="ace_punctuation ace_operator">;</span>       <span class="ace_comment">// Valid</span>
+</div></div></div></div><div class="cell markdown-cell"><p>blah[5] is equivalent to *(blah + 5)</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">// Valid ways of invoking these functions?</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">void</span> <span class="ace_identifier">feet</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">x</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">feep</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">xy</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">feep</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">broom</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">])</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">feep</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">max</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">feep</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*</span><span class="ace_identifier">broom</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">feep</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">broom</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_constant ace_numeric">9</span><span class="ace_paren ace_rparen">))</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">char</span> <span class="ace_identifier">gabi</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">marp</span> <span class="ace_identifier">c</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">mp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">gabi</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">blee</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">flam</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">gabi</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">bomaz</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">flam</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">4</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">gabi</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">**</span><span class="ace_identifier">z</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">marp</span> <span class="ace_identifier">asdf</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">a</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">marp</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">m</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">blee</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">asdf</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">xy</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">z</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_operator">**</span><span class="ace_identifier">z</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">asdf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">broom</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">whop</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_operator">*&amp;</span><span class="ace_identifier">blee</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">asdf</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">broom</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">bomaz</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">struct</span> <span class="ace_identifier">gps</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">double</span> <span class="ace_identifier">lat</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">double</span> <span class="ace_storage ace_type">long</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></div><div class="cell markdown-cell"><p>This makes a new struct called gps that has 2 doubles inside</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">typedef</span> <span class="ace_storage ace_type">struct</span> <span class="ace_identifier">gps</span> <span class="ace_identifier">gps</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">gps</span> <span class="ace_identifier">here</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">here</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">lat</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">38.5</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">here</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">lon</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">-121.3</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Or all at once:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">typdef</span> <span class="ace_storage ace_type">struct</span> <span class="ace_identifier">gps</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">double</span> <span class="ace_identifier">lat</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">double</span> <span class="ace_storage ace_type">long</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span> <span class="ace_identifier">gps</span><span class="ace_punctuation ace_operator">;</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Memory allocation:<br>
+<code>address = malloc(how big)</code>, this puts the memory into dynamic memory</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">malloc</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">40</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// This is in dynamic memory until free(x) is called</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">y</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">malloc</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">10</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_keyword ace_operator">sizeof</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// Another way to figure out how much you need</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>October 15</h2>
+<h3>Core dumps</h3>
+<p>To debug a core dump:<br>
+First recompile program with <code>-g</code> flag, then run <code>gdb ./recover core</code></p>
+<p>String example:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;string.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">char</span> <span class="ace_identifier">str</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">40</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Enter a string: </span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">gets</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">str</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Length is: </span><span class="ace_constant ace_language ace_escape">%l</span><span class="ace_string">u</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string">, strlen(str));</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Compiler warns that <code>gets()</code> is dangerous because it will continue over the 40 chars set aside. <code>fgets()</code> takes three parameters, name of string, how long, and where to get input from. It will compensate for the null term at the end and also compensates for the new line char at the end of the string. This differs from <code>scanf()</code> with a <code>%s</code> because scanf will stop when it hits a space.</p>
+<p>Our own length functions:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">s</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">count</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_string">'\0'</span><span class="ace_paren ace_rparen">)</span>   <span class="ace_comment">// Checks against null char</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length2</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">s</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">count</span><span class="ace_paren ace_rparen">])</span>            <span class="ace_comment">// Implicitally compares to 0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length3</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">s</span><span class="ace_keyword ace_operator">+</span><span class="ace_identifier">count</span><span class="ace_paren ace_rparen">))</span>          <span class="ace_comment">// Pointer arithmetic</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length4</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>                  <span class="ace_comment">// Dereference s and increment it</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">s</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length5</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span>                <span class="ace_comment">// Post increment</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length6</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">t</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">s</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">*++</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>               <span class="ace_comment">// Pre increment and return difference</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">s</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">t</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">length7</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">for</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">s</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>October 17</h2>
+<h3>Version Control Systems</h3>
+<p>Git commands:</p>
+<p><code>git init</code> initializes local repo<br>
+<code>git config</code> configures user's information<br>
+<code>git add &lt;filename&gt;</code> marks a file to commit<br>
+<code>git commit -m "commit message"</code> commit ready files with a message</p>
+<hr>
+<h2>October 22</h2>
+<h3>Working with files in C</h3>
+<p>Use <code>#include &lt;stdio.h&gt;</code> to work with files. A file is just a sequence of bytes. It has a beginning and an end.</p>
+<p>Files can be "unstructured" or "structured"</p>
+<ul>
+<li>Unstructured: text files</li>
+<li>Structured: CSX, executables, JPEG, video</li>
+</ul>
+<p>Structured files can be "record oriented"</p>
+<ul>
+<li>Fixed-sized records</li>
+<li>Array of structs</li>
+</ul>
+<p>The <code>FILE</code> struct keeps track of things like:</p>
+<ul>
+<li>Name of file</li>
+<li>Permissions</li>
+<li>Where you are in the file</li>
+</ul>
+<p>When you read from a file, you start from the beginning, the <code>FILE</code> struct keeps track fo how far you have ready, so the next time you read it resumes where you left off.</p>
+<p>Operations on a file:</p>
+<ul>
+<li>Open
+<ul>
+<li><code>FILE * fopen(char *, char *);</code></li>
+<li>filename, mode ("r", "w", "a")</li>
+<li>Returns a FILE * or NULL if there was a problem</li>
+</ul>
+</li>
+<li>Read
+<ul>
+<li>Use functions like <code>fscanf</code> and <code>fgets</code></li>
+<li><code>fscanf(fp, "format", variables);</code></li>
+<li><code>fgets(char *, length, fp);</code></li>
+</ul>
+</li>
+<li>Write
+<ul>
+<li><code>fprintf(fp, "format", variables);</code></li>
+</ul>
+</li>
+<li>Close
+<ul>
+<li><code>fclose(fp);</code></li>
+</ul>
+</li>
+</ul>
+<p>For example:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">fp</span><span class="ace_punctuation ace_operator">;</span>                   <span class="ace_comment">// file pointer</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">fp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">test</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">r</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>     <span class="ace_comment">// opens a file called "test" for read</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">fp</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_language">NULL</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">// This means the file didn't open correctly</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Can't open file</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span> <span class="ace_comment">// For exit command</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">fp</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">fp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">hello.txt</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">w</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Could not open file!</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">fp</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">hello</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_comment">// Write to file</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>             <span class="ace_comment">// Close file</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">argc</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_paren ace_rparen">])</span> <span class="ace_comment">// Main now accepts command line parameters</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argc</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Please enter a filename after the command</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">fp</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">fp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">r</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Can't open </span><span class="ace_constant ace_language ace_escape">%s\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">char</span> <span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">500</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">1</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">fgets</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">500</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_constant ace_language">NULL</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%d</span><span class="ace_string"> </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">count</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;string.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">argc</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_paren ace_rparen">])</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argc</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">3</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">You must supply a file name</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">in</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">*</span><span class="ace_identifier">out</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">in</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">r</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">in</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Can't open </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string"> for reading</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">out</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">w</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">out</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Can't open </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string"> for writing</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">char</span> <span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">500</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span> <span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">fgets</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">500</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">in</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_constant ace_language">NULL</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">strcmp</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">pizza</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">out</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Nice! </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">else</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">out</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">in</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">out</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>October 24</h2>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">/*</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">A program to count the number of spaces</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">The filename is given on the command line</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span> <span class="ace_comment">// For exit()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;string.h&gt;</span> <span class="ace_comment">// For strlen()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;ctype.h&gt;</span>  <span class="ace_comment">// For isupper()</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">argc</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_paren ace_rparen">])</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Check number of command line arguments</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">agc</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">You must supply a filename</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Open file for reading</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">fp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">r</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Can't open </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string"> for reading</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Read line by line</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">char</span> <span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">5000</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">space_count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">int</span> <span class="ace_identifier">cap_count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span><span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">fgets</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">5000</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_constant ace_language">NULL</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">// For each line, go char by char</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">for</span> <span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_support ace_function ace_C99 ace_c">strlen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// If its a space count++</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">i</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_string">' '</span><span class="ace_paren ace_rparen">)</span> <span class="ace_identifier">space_count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// if (line[i] &gt;= 'A' &amp;&amp; line[i] &lt;= 'Z') cap_count++;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">isupper</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">i</span><span class="ace_paren ace_rparen">]))</span> <span class="ace_identifier">cap_count</span><span class="ace_keyword ace_operator">++</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Close the file</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">fp</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Print the counts</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Spaces: </span><span class="ace_constant ace_language ace_escape">%d\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">space_count</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">printf</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_start">"</span><span class="ace_string">Capitals: </span><span class="ace_constant ace_language ace_escape">%d\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">cap_count</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Converts file to all uppercase letters</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdio.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;stdlib.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;string.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;ctype.h&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;sys/stat.h&gt;</span> <span class="ace_comment">// For stat struct</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">argc</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_storage ace_type">char</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_paren ace_rparen">])</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Check number of command line arguments</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argc</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Please enter a filename to read from.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">else</span> <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argc</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">3</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Please enter a filename to write to.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">/*</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">   else if (strcmp(argv[1], argv[2]) == 0)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">   {</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_comment">  fprintf(stderr, "You must supply two different files, otherwise file loss will occur.\n");</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_comment">  exit(5);</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">   }</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">   */</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Better way to check if files are the same</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">struct</span> <span class="ace_identifier">stat</span> <span class="ace_identifier">s1</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">s2</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">stat</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">s1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">stat</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_keyword ace_operator">&amp;</span><span class="ace_identifier">s2</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">s1</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">st_ino</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_identifier">s2</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">st_ino</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">You must supply two different files, otherwise file loss will occur.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">5</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Open input file for reading</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">in</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">r</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">in</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Could not open </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string"> for reading.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">3</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Open output file for writing</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">FILE</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">out</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">fopen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">w</span><span class="ace_string ace_end">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">!</span><span class="ace_identifier">out</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">stderr</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_string">Could not open </span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string"> for reading.</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">argv</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">exit</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">4</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Loop through input file, line by line</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">char</span> <span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_constant ace_numeric">5000</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">while</span> <span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function ace_C99 ace_c">fgets</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">5000</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">in</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_constant ace_language">NULL</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">// For each line, convert chars to upper</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword ace_control">for</span> <span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_support ace_function ace_C99 ace_c">strlen</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">i</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function ace_C99 ace_c">toupper</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">line</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">i</span><span class="ace_paren ace_rparen">])</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">// Write line to output</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function ace_C99 ace_c">fprintf</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">out</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string ace_start">"</span><span class="ace_constant ace_language ace_escape">%s</span><span class="ace_string ace_end">"</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">line</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment">// Close files</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">in</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function ace_C99 ace_c">fclose</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">out</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>October 29</h2>
+<h3>Hashing algorithms</h3>
+<p>Mixes up the bits of input data and produces a fixed-size output</p>
+<table>
+<thead>
+<tr>
+<th>Types</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD5</td>
+<td>128 bits</td>
+</tr>
+<tr>
+<td>SHA256</td>
+<td>256 bits</td>
+</tr>
+<tr>
+<td>SHA512</td>
+<td>512 bits</td>
+</tr>
+<tr>
+<td>DES</td>
+<td>56 bits</td>
+</tr>
+</tbody>
+</table>
+<p><code>echo -n word | md5sum</code></p>
+<hr>
+<h2>October 31</h2>
+<p>When compiling, make sure you compile you're own .c file and the md5.c file.</p>
+<p>Use -g when compiling program and then call <code>valgrind</code> then the command to detect memory leaks.</p>
+<p><code>clang -c hash1.c</code> makes it compile and not delete the .o file.</p>
+<p>Then you can compile all the .o files with clang and <code>-l crypto</code>.</p>
+<h3>Makefiles</h3>
+<p>Dependency tree (Makefile)</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>hash1 : hash1.o md5.o
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   clang hash.o md5.o -o hash1 -l crypto
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>hash1.o : hash1.c
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   clang -c hash1.o
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>md5.0 : md5.c
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   clang -c md5.c
+</div></div></div></div><div class="cell markdown-cell"><blockquote>
+<p>Indentation must be 1 tab!</p>
+</blockquote>
+<hr>
+<h2>November 21</h2>
+<h3>Quantum computers</h3>
+<p>Classic bit (cbit): 0 or 1<br>
+Quantum bit (qbit): 0 or 1 (or anywhere in between)</p>
+<p>Quantum bits can be represented as |0&gt; or |1&gt;</p>
+<p>X operation, (similar to classic NOT)<br>
+(1, 0) flips into (0, 1)</p>
+<p>H operation (Hadamard), turns bit into intermediate bit between 0 and 1<br>
+H |0&gt; = |+&gt;</p>
+<p>CNOT (Conditional NOT)<br>
+If the first qbit is a 1 then the second is flipped (using X)<br>
+CNOT |00&gt; = |00&gt;<br>
+CNOT |01&gt; = |01&gt;<br>
+CNOT |10&gt; = |11&gt;<br>
+CNOT |11&gt; = |10&gt;</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">struct</span> <span class="ace_identifier">qbit</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">double</span> <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">double</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_modifier">const</span> <span class="ace_storage ace_type">struct</span> <span class="ace_identifier">qbit</span> <span class="ace_identifier">q0</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">{</span><span class="ace_constant ace_numeric">1.0</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">0.0</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_modifier">const</span> <span class="ace_storage ace_type">struct</span> <span class="ace_identifier">qbit</span> <span class="ace_identifier">q1</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">{</span><span class="ace_constant ace_numeric">0.0</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">1.1</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_storage ace_type">struct</span> <span class="ace_identifier">qbit</span> <span class="ace_identifier">x</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">struct</span> <span class="ace_identifier">qbit</span> <span class="ace_identifier">q</span><span class="ace_paren ace_rparen">)</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_lparen">{</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_storage ace_type">struct</span> <span class="ace_identifier">qbit</span> <span class="ace_identifier">qnew</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">qnew</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">q</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_constant ace_numeric">1</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">q</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">qnew</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">y</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">1</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">q</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_constant ace_numeric">0</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">q</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword ace_control">return</span> <span class="ace_identifier">qnew</span><span class="ace_punctuation ace_operator">;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_paren ace_rparen">}</span>
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>November 26</h2>
+<h3>Networking</h3>
+<p>Host: a computer with network access<br>
+Hostname: a "human readable" name for a host</p>
+<ul>
+<li><a href="http://www.amazon.com">www.amazon.com</a></li>
+<li><a href="http://sierracollege.edu">sierracollege.edu</a></li>
+</ul>
+<p>IP address: unique number assigned to a host</p>
+<ul>
+<li>IPv4: 10.6.34.124</li>
+<li>IPv6: fe80:4332:5153:....</li>
+</ul>
+<p>Client: requests info from a server<br>
+Server: fulfills the requests</p>
+<p>Usually, client initiates the transaction</p>
+<p>Socket: a connection between two hosts</p>
+<ol>
+<li>Setup a socket to the server, you get back a socket number</li>
+<li>Turn the socket number into a <code>FILE *</code></li>
+<li>Use any of the file functions (<code>fprintf</code>, <code>fscanf</code>, <code>fgets</code>, <code>fclose</code>, <code>fread</code>, <code>fwrite</code>)</li>
+</ol>
+<p>Example on the command line</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ncat -C www.cs.sierracollege.edu 80
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>GET /~mmelendexgalindo/index.html HTTP/1.0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>Host: www.cs.sierracollege.edu
+</div></div></div></div><div class="cell markdown-cell"><p>For C code: use a library called libsocket</p>
+<hr>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'luhns.c.html';
+if (e.keyCode === 37) window.location.href = 'CS39-lecture-notes.html';
+}</script>
+    </body>
+    </html>
+  

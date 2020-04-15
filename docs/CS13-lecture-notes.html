@@ -1,0 +1,1146 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS26-lecture-notes.html'>CS26-lecture-notes</a>, Previous: <a href='CS12-lecture-notes.html'>CS12-lecture-notes</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS13-lecture-notes</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>CS 13 Lecture Notes</h1>
+<ul>
+<li><a href="#jan-28-2019">Jan 28, 2019</a>
+<ul>
+<li><a href="#weather-class">Weather class</a></li>
+</ul>
+</li>
+<li><a href="#jan-30-2019">Jan 30, 2019</a>
+<ul>
+<li><a href="#constructors">Constructors</a></li>
+<li><a href="#about-this-class">About this class</a></li>
+<li><a href="#arrays">Arrays</a></li>
+</ul>
+</li>
+<li><a href="#feb-4-2019">Feb 4, 2019</a>
+<ul>
+<li><a href="#expanding-arrays">Expanding arrays</a></li>
+</ul>
+</li>
+<li><a href="#feb-6-2019">Feb 6, 2019</a>
+<ul>
+<li><a href="#more-methods-for-our-metaarray-class">More methods for our MetaArray class</a></li>
+</ul>
+</li>
+<li><a href="#feb-11-2019">Feb 11, 2019</a>
+<ul>
+<li><a href="#generic-data-types">Generic data types</a></li>
+</ul>
+</li>
+<li><a href="#feb-13-2019">Feb 13, 2019</a>
+<ul>
+<li><a href="#evens-game">"Evens" game</a></li>
+</ul>
+</li>
+<li><a href="#feb-20-2019">Feb 20, 2019</a>
+<ul>
+<li><a href="#linked-lists">Linked lists</a></li>
+</ul>
+</li>
+<li><a href="#feb-25-2019">Feb 25, 2019</a>
+<ul>
+<li><a href="#llist-continued">LList continued</a></li>
+</ul>
+</li>
+<li><a href="#feb-27-2019">Feb 27, 2019</a>
+<ul>
+<li><a href="#speed-of-our-metaarray-and-llist">Speed of our MetaArray and LList</a></li>
+</ul>
+</li>
+<li><a href="#mar-4-2019">Mar 4, 2019</a>
+<ul>
+<li><a href="#stacks">Stacks</a></li>
+</ul>
+</li>
+<li><a href="#mar-6-2019">Mar 6, 2019</a>
+<ul>
+<li><a href="#dog-class">Dog class</a></li>
+</ul>
+</li>
+<li><a href="#mar-11-2019">Mar 11, 2019</a>
+<ul>
+<li><a href="#llist-unit-tests">LList unit tests</a></li>
+<li><a href="#postfix-notation">Postfix notation</a></li>
+</ul>
+</li>
+<li><a href="#mar-13-2019">Mar 13, 2019</a>
+<ul>
+<li><a href="#postfix-stack">Postfix stack</a></li>
+</ul>
+</li>
+<li><a href="#apr-18-2019">Apr 18, 2019</a>
+<ul>
+<li><a href="#javafx">JavaFX</a></li>
+</ul>
+</li>
+<li><a href="#smoot-calc">Smoot calc</a></li>
+<li><a href="#mar-27-2019">Mar 27, 2019</a>
+<ul>
+<li><a href="#git">Git</a></li>
+</ul>
+</li>
+<li><a href="#apr-10-2019">Apr 10, 2019</a></li>
+</ul>
+<h2>Jan 28, 2019</h2>
+<ul class="task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> <s><em>Download BlueJ</em></s> [2019-01-29]</li>
+</ul>
+<h3>Weather class</h3>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Weather</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">double</span> <span class="ace_identifier">highTemp</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">double</span> <span class="ace_identifier">lowTemp</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">condition</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">int</span> <span class="ace_identifier">rainChain</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Weather</span> (<span class="ace_keyword">double</span> <span class="ace_identifier">h</span>, <span class="ace_keyword">double</span> <span class="ace_identifier">l</span>, <span class="ace_support ace_function">String</span> <span class="ace_identifier">c</span>, <span class="ace_keyword">int</span> <span class="ace_identifier">r</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">highTemp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">h</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">lowTemp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">l</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">condition</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">c</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">rainChain</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">r</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">double</span> <span class="ace_identifier">delta</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">highTemp</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">lowTemp</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">toString</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_string">"High: "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">highTemp</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">", Low: "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">lowTemp</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">", Condition: "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">condition</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">", Chance of rain: "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">rainChance</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>Using this class we can make another to populate a forecast</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Forecast</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_identifier">Weather</span> <span class="ace_identifier">days</span>[];
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">int</span> <span class="ace_identifier">nextDay</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Forecast</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">days</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Weather</span>[<span class="ace_constant ace_numeric">4</span>];
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">nextDay</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">addDay</span>(<span class="ace_keyword">double</span> <span class="ace_identifier">h</span>, <span class="ace_keyword">double</span> <span class="ace_identifier">l</span>, <span class="ace_support ace_function">String</span> <span class="ace_identifier">c</span>, <span class="ace_keyword">int</span> <span class="ace_identifier">r</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Weather</span> <span class="ace_identifier">w</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Weather</span>(<span class="ace_identifier">h</span>, <span class="ace_identifier">l</span>, <span class="ace_identifier">c</span>, <span class="ace_identifier">r</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">days</span>[<span class="ace_identifier">nextDay</span>] <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">w</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">nextDay</span><span class="ace_keyword ace_operator">++</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">display</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">for</span> (<span class="ace_keyword">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>; <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_identifier">nextDay</span>; <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function">System</span>.<span class="ace_identifier">out</span>.<span class="ace_identifier">println</span>(<span class="ace_identifier">days</span>[<span class="ace_identifier">i</span>]);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Jan 30, 2019</h2>
+<h3>Constructors</h3>
+<p>Purpose of the constructor: Initialize variables, and do any other work necessary to get the object usable. The <code>new</code> keyboard actually makes the object, not the constructor.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Weather</span> <span class="ace_identifier">w</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Weather</span>(<span class="ace_constant ace_numeric">60</span>,<span class="ace_constant ace_numeric">40</span>,<span class="ace_string">"Cloudy"</span>, <span class="ace_constant ace_numeric">10</span>);
+</div></div></div></div><div class="cell markdown-cell"><p>The <code>new</code> keyboard happens first, which allocates memory for the object. Then the constructor is called and the object is filled with the parameters. Then finally the address set aside by <code>new</code> is set to the <code>w</code> variable.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Weather</span> <span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">w</span>;
+</div></div></div></div><div class="cell markdown-cell"><p><code>x</code> will contain the same address that <code>w</code> contains.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Forecast</span> <span class="ace_identifier">f</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Forecast</span>();
+</div></div></div></div><div class="cell markdown-cell"><p><code>f</code> points at the address of a new <code>Forecast</code> object, which has another pointer to an array filled with nulls.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">f</span>.<span class="ace_identifier">addDay</span>(<span class="ace_constant ace_numeric">60</span>, <span class="ace_constant ace_numeric">40</span>, <span class="ace_string">"Cloudy"</span>, <span class="ace_constant ace_numeric">10</span>);
+</div></div></div></div><div class="cell markdown-cell"><p>This creates a weather object that then gets filled with the parameters from the constructor. The address that is inside the <code>w</code> object is then copied to the first slot in the array. The <code>w</code> object then dies when it leaves the scope of the method.</p>
+<h3>About this class</h3>
+<p>First half:</p>
+<ul>
+<li>Builds upon CS12 (variables, loops, conditionals, objects, classes)</li>
+<li>Starts to look at more complicated data structures</li>
+</ul>
+<p>Second half:</p>
+<ul>
+<li>Larger projects</li>
+<li>Team work, collaboration</li>
+<li>Version control</li>
+<li>Communication tools</li>
+</ul>
+<h3>Arrays</h3>
+<p><code>int[] a = new int[10];</code> is valid</p>
+<p><code>int b[10];</code> is not valid in Java</p>
+<p><code>a[5] = 6;</code> is valid because they are both array.</p>
+<p><code>a[6] = "Hello";</code> is not valid because it is a type mismatch.</p>
+<p><code>a[a[5]] = 8;</code> is valid, <code>a[5]</code> evaluates to an integer, so it puts 8 into <code>a[6]</code>. Whatever is inside the square brackets must evaluate to an integer.</p>
+<p>Limitations:</p>
+<ul>
+<li>Can't change the size of an array once declared.</li>
+<li>Can't access out of bounds</li>
+<li>Can't delete an element</li>
+<li>Can't search for an element</li>
+<li>Can't sort them</li>
+</ul>
+<hr>
+<h2>Feb 4, 2019</h2>
+<p>Why do classes/objects exist?</p>
+<ul>
+<li>A class lets us group related data together</li>
+<li>Attach code (methods) to the data</li>
+<li>Structurally encapsulate things to organize larger projects</li>
+</ul>
+<p>The purpose of a class is to package data together and provide methods to manipulate the data.</p>
+<p>For example in a class called Player for the super mario bros game:<br>
+Data</p>
+<ul>
+<li>size</li>
+<li>color</li>
+<li>speed</li>
+<li>x</li>
+<li>y</li>
+<li>isSolid</li>
+<li>score</li>
+<li>lives</li>
+</ul>
+<p>Actions (methods)</p>
+<ul>
+<li>run</li>
+<li>jump</li>
+<li>fall</li>
+<li>duck</li>
+<li>die</li>
+<li>slideDown</li>
+<li>goToNextLevel</li>
+<li>shoot</li>
+<li>spawn</li>
+<li>pause</li>
+</ul>
+<h3>Expanding arrays</h3>
+<p><code>String[] arr = new String[5];</code> creates an array of Strings, <code>arr</code> contains the address (points to) of the array. <code>arr[0] = "Alpha";</code> places the string Alpha in the first slot. To make an array that is 50% bigger than <code>arr</code> you can multiply the length of the original array by 1.5 and cast it as an int when creating the new array: <code>String[] arr2 = new String[(int)(arr.length * 1.5)];</code></p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">ElastArray</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">arr</span>[];
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">int</span> <span class="ace_identifier">size</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">ElastArray</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">arr</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_support ace_function">String</span>[<span class="ace_constant ace_numeric">5</span>];
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">size</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">add</span>(<span class="ace_support ace_function">String</span> <span class="ace_identifier">s</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">if</span> (<span class="ace_identifier">size</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_identifier">arr</span>.<span class="ace_identifier">length</span>) <span class="ace_comment">//array full</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function">String</span>[] <span class="ace_identifier">arr2</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_support ace_function">String</span>[(<span class="ace_keyword">int</span>)(<span class="ace_identifier">arr</span>.<span class="ace_identifier">length</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_constant ace_numeric">1.5</span>)]; <span class="ace_comment">//create expanded array</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_keyword">for</span> (<span class="ace_keyword">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>; <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_identifier">arr</span>.<span class="ace_identifier">length</span>; <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span>) <span class="ace_comment">//copy old values</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">arr2</span>[<span class="ace_identifier">i</span>] <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">arr</span>[<span class="ace_identifier">i</span>];
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">arr</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">arr2</span>; <span class="ace_comment">//point old array to new</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">arr</span>[<span class="ace_identifier">size</span>] <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">s</span>; <span class="ace_comment">//add string</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">size</span><span class="ace_keyword ace_operator">++</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">else</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">arr</span>[<span class="ace_identifier">size</span>] <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">s</span>; <span class="ace_comment">//add string</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">size</span><span class="ace_keyword ace_operator">++</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Feb 6, 2019</h2>
+<h3>More methods for our MetaArray class</h3>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Clear out entire array</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">clear</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Delete an element from the array, reducing its size</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">remove</span>(<span class="ace_keyword">int</span> <span class="ace_identifier">index</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Replace the element at index with new string</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">set</span>(<span class="ace_keyword">int</span> <span class="ace_identifier">index</span>, <span class="ace_support ace_function">String</span> <span class="ace_identifier">s</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Return the element at a given index</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">get</span>(<span class="ace_keyword">int</span> <span class="ace_identifier">index</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Insert a new element into array</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">insert</span>(<span class="ace_keyword">int</span> <span class="ace_identifier">index</span>, <span class="ace_support ace_function">String</span> <span class="ace_identifier">s</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Return how many items in the array</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">int</span> <span class="ace_identifier">size</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Search the array for the target. Return the index</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* of the first occurrence.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">int</span> <span class="ace_identifier">indexOf</span>(<span class="ace_support ace_function">String</span> <span class="ace_identifier">target</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">* Returns true if the array contains the string</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">*/</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">boolean</span> <span class="ace_identifier">contains</span>(<span class="ace_support ace_function">String</span> <span class="ace_identifier">target</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>Insert method</p>
+<ul>
+<li>Should insert object into the index, and shift everything else down.</li>
+<li>How to:
+<ul>
+<li>Must start at the right and shift things down while greater then the index.</li>
+</ul>
+</li>
+</ul>
+<p>Exception:<br>
+A catastrophic error occurred. Causes program to terminate. Goes "around' the normal return channel. When exceptions are generated, they are thrown. The caller will catch it.</p>
+<hr>
+<h2>Feb 11, 2019</h2>
+<h3>Generic data types</h3>
+<p>To specify a data type that can be a variable, you can use angle brackets after the class name.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Box</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">T</span><span class="ace_keyword ace_operator">&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_identifier">T</span> <span class="ace_identifier">x</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_identifier">Box</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_language">null</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_identifier">Box</span>(<span class="ace_identifier">T</span> <span class="ace_identifier">o</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">o</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">set</span>(<span class="ace_identifier">T</span> <span class="ace_identifier">value</span>) {<span class="ace_identifier">x</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">value</span>;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_identifier">T</span> <span class="ace_identifier">get</span>() {<span class="ace_keyword">return</span> <span class="ace_identifier">x</span>;}
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>The <code>&lt;T&gt;</code> after the class name makes the actual data type that a Box object is made of a variable. That way you can make a Box that holds any data type, but only that data type.</p>
+<p>When creating the object, you must specify the data type in angle brackets:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Box</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_support ace_function">String</span><span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Box</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_support ace_function">String</span><span class="ace_keyword ace_operator">&gt;</span>();
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Feb 13, 2019</h2>
+<h3>"Evens" game</h3>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Evens</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">int</span> <span class="ace_identifier">pile</span>, <span class="ace_identifier">p1</span>, <span class="ace_identifier">p2</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">p1name</span>, <span class="ace_identifier">p2name</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">int</span> <span class="ace_identifier">turn</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Evens</span>(<span class="ace_support ace_function">String</span> <span class="ace_identifier">p1n</span>, <span class="ace_support ace_function">String</span> <span class="ace_identifier">p2n</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">p1name</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p1n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">p2name</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p2n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">pile</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">15</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">p1</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p2</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">turn</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">take</span>(<span class="ace_keyword">int</span> <span class="ace_identifier">a</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">if</span> (<span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">pile</span> <span class="ace_keyword ace_operator">||</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">&gt;</span> <span class="ace_constant ace_numeric">3</span> <span class="ace_keyword ace_operator">||</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_constant ace_numeric">0</span> <span class="ace_keyword ace_operator">||</span> <span class="ace_identifier">isGameOver</span>())
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">throw</span> <span class="ace_keyword">new</span> <span class="ace_identifier">IllegalMoveException</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">if</span> (<span class="ace_identifier">turn</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_constant ace_numeric">2</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span>) <span class="ace_comment">//player 1s turn</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   <span class="ace_identifier">p1</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p1</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">a</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">else</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   <span class="ace_identifier">p2</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p2</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">a</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_identifier">pile</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">pile</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">a</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_identifier">turn</span><span class="ace_keyword ace_operator">++</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">boolean</span> <span class="ace_identifier">isGameOver</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">return</span> (<span class="ace_identifier">pile</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">whoWon</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">if</span> (<span class="ace_identifier">p1</span> <span class="ace_keyword ace_operator">%</span> <span class="ace_constant ace_numeric">2</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">return</span> <span class="ace_identifier">p1name</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">else</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   <span class="ace_keyword">return</span> <span class="ace_identifier">p2name</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">toString</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_string">"Pile: "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">pile</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">", "</span><span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">p1name</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">":"</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">p1</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">", "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">p2name</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">":"</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">p2</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>The point of the game is to have an even number of chips left. This can be tested using a test code file and JUnit</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_keyword">static</span> <span class="ace_identifier">org</span>.<span class="ace_identifier">junit</span>.<span class="ace_identifier">Assert</span>.<span class="ace_keyword ace_operator">*</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">org</span>.<span class="ace_identifier">junit</span>.<span class="ace_identifier">After</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">org</span>.<span class="ace_identifier">junit</span>.<span class="ace_identifier">Before</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">org</span>.<span class="ace_identifier">junit</span>.<span class="ace_identifier">Test</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc"> * Test class EvensTest.</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc"> */</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">EvensTest</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    @<span class="ace_identifier">Test</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">testGame</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">Evens</span> <span class="ace_identifier">e</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Evens</span>(<span class="ace_string">"A"</span>, <span class="ace_string">"B"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_string">"Pile: 15, A:0, B:0"</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">toString</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_string">"Pile: 12, A:3, B:0"</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">toString</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">2</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_string">"Pile: 10, A:3, B:2"</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">toString</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">1</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_string">"Pile: 9, A:4, B:2"</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">toString</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_constant ace_language ace_boolean">false</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">isGameOver</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_constant ace_language ace_boolean">true</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">isGameOver</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">assertEquals</span>(<span class="ace_string">"B"</span>, <span class="ace_identifier">e</span>.<span class="ace_identifier">whoWon</span>());
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    @<span class="ace_identifier">Test</span> (<span class="ace_identifier">expected</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">IllegalMoveException</span>.<span class="ace_keyword">class</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">testEvil</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">Evens</span> <span class="ace_identifier">e</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Evens</span>(<span class="ace_string">"A"</span>, <span class="ace_string">"B"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">4</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    @<span class="ace_identifier">Test</span> (<span class="ace_identifier">expected</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">IllegalMoveException</span>.<span class="ace_keyword">class</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">testEvil2</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">Evens</span> <span class="ace_identifier">e</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Evens</span>(<span class="ace_string">"A"</span>, <span class="ace_string">"B"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">-1</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    @<span class="ace_identifier">Test</span> (<span class="ace_identifier">expected</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">IllegalMoveException</span>.<span class="ace_keyword">class</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">testEvil3</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">Evens</span> <span class="ace_identifier">e</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Evens</span>(<span class="ace_string">"A"</span>, <span class="ace_string">"B"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">e</span>.<span class="ace_identifier">take</span>(<span class="ace_constant ace_numeric">3</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>The <code>@Test</code> annotation right before the method header is called an <em>annotation</em>. This is how you "tag" methods to be tested. <code>(expected = IllegalMoveException.class)</code> means that that method is expecting to throw the exception, because its a test thats trying to see if it can throw the exception. When you write a test thats supposed to throw an exception you need to tell it what it should expect. <code>assertEquals()</code> is a method that takes 2 parameters, the first one is what it should equal, and the second is what its testing. In this case we are playing the game and testing the <code>toString()</code> to make sure its playing properly.</p>
+<p>Model-View-Controller</p>
+<ul>
+<li>Model is the math underlying the program</li>
+<li>View is how it appears on the screen</li>
+<li>Controller is how you interact with the two</li>
+</ul>
+<p>Test-Driven-Development</p>
+<ul>
+<li>Writing code to pass the tests and writing tests to break the code.</li>
+</ul>
+<p>Refactoring</p>
+<ul>
+<li>Making changes to the code without changing its behavior.</li>
+</ul>
+<hr>
+<h2>Feb 20, 2019</h2>
+<h3>Linked lists</h3>
+<p>Analogy: A train. Each car can only hold one thing and each car is hooked up to the one following it. Each train car is called a node.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Node</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_support ace_function">Object</span> <span class="ace_identifier">item</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">Node</span> <span class="ace_identifier">next</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>This is a self-referential class. Each node will hold both the item you want it to contain and the address of the next node. Also note that everything in this class is public.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">a</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Alpha"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">b</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Beta"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">//Hook together</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">a</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">b</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">c</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">c</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Gamma"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">b</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">c</span>;
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">a</span>.<span class="ace_identifier">next</span>.<span class="ace_identifier">next</span>.<span class="ace_identifier">item</span> <span class="ace_comment">//shows item in c</span>
+</div></div></div></div><div class="cell markdown-cell"><p>Attaching things to the end of the 'train' gets longer and longer. If you hook things to the front of the linked list it will be faster.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">n</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">n</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Alpha"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">m</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">m</span>.<span class="ace_identifier">item</span> <span class="ace_string">"Beta"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">m</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">t</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">t</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Gamma"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">t</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">m</span>;
+</div></div></div></div><div class="cell markdown-cell"><p>You can reuse the variables. This means you're essentially adding a car to the front of the train and calling that the new first car.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">n</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">n</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Alpha"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">Node</span> <span class="ace_identifier">p</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">p</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"Beta"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">p</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_identifier">n</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p</span>;
+</div></div></div></div><div class="cell markdown-cell"><p>In a new class:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">LList</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">Node</span> <span class="ace_identifier">first</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">LList</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">first</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_language">null</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">addFirst</span>(<span class="ace_support ace_function">Object</span> <span class="ace_identifier">o</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Node</span> <span class="ace_identifier">p</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>(); <span class="ace_comment">//new node with object</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">p</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">o</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">p</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">first</span>; <span class="ace_comment">//make new node point at first</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">first</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">p</span>; <span class="ace_comment">//make p new first</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">int</span> <span class="ace_identifier">size</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">if</span> (<span class="ace_identifier">first</span> <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_language">null</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_keyword">return</span> <span class="ace_constant ace_numeric">0</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Node</span> <span class="ace_identifier">temp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">first</span>; <span class="ace_comment">//not creating a new object, just pointing</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">int</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">1</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">while</span> (<span class="ace_identifier">temp</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">!=</span> <span class="ace_constant ace_language">null</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">count</span><span class="ace_keyword ace_operator">++</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">temp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">temp</span>.<span class="ace_identifier">next</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">count</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Feb 25, 2019</h2>
+<h3>LList continued</h3>
+<p>Get<br>
+To get contents of a Node, you must use a loop and "hop" along each car until you get to where you want to be.</p>
+<p>The "locomotive" in the train can keep track of both first and last which can make adding things to the end of the train a lot faster as it becomes bigger.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">addLast</span>(<span class="ace_identifier">object</span> <span class="ace_identifier">o</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">Node</span> <span class="ace_identifier">n</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Node</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">n</span>.<span class="ace_identifier">item</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">o</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">last</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">n</span>.<span class="ace_identifier">next</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_language">null</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">last</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Feb 27, 2019</h2>
+<h3>Speed of our MetaArray and LList</h3>
+<p>Adding to LList is called an O(1) operation. Means order of 1 operation to add something onto the LList.</p>
+<p>Adding to the MetaArray is grows by an percentage, however, if you average the times of this operation out it is still an O(1) operation. Adding to the MetaArray using a constant amount ( not a percentage ) then adding a successive element to the array becomes longer and longer, this is called an O(n) operation.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>addFirst</th>
+<th>addLast</th>
+<th>insert (middle)</th>
+<th>remove (end)</th>
+<th>size</th>
+<th>toString</th>
+<th>clear</th>
+<th>indexOf</th>
+<th>get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArrayList</td>
+<td>O(1)</td>
+<td>amortized O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>LinkedList</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>o(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Mar 4, 2019</h2>
+<h3>Stacks</h3>
+<p>A data structure (like a stack of paper)</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>push(o)</code></td>
+<td>adds item <code>o</code> to stack</td>
+</tr>
+<tr>
+<td><code>pop()</code></td>
+<td>returns the item on top of the stack, then removes it</td>
+</tr>
+<tr>
+<td><code>peek()</code></td>
+<td>shows item on top of stack</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>clears stack</td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td>returns true if stack is empty</td>
+</tr>
+</tbody>
+</table>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">java</span>.<span class="ace_identifier">util</span>.<span class="ace_identifier">LinkedList</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Stack</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">X</span><span class="ace_keyword ace_operator">&gt;</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_identifier">LinkedList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">X</span><span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">s</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Stack</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">s</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">LinkedList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">X</span><span class="ace_keyword ace_operator">&gt;</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">push</span>(<span class="ace_identifier">X</span> <span class="ace_identifier">o</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">s</span>.<span class="ace_identifier">addLast</span>(<span class="ace_identifier">o</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">X</span> <span class="ace_identifier">pop</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">X</span> <span class="ace_identifier">temp</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">s</span>.<span class="ace_identifier">get</span>(<span class="ace_identifier">s</span>.<span class="ace_identifier">size</span>() <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">1</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">s</span>.<span class="ace_identifier">remove</span>(<span class="ace_identifier">s</span>.<span class="ace_identifier">size</span>() <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">1</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">temp</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">clear</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">s</span>.<span class="ace_identifier">clear</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">X</span> <span class="ace_identifier">peek</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">s</span>.<span class="ace_identifier">get</span>(<span class="ace_identifier">s</span>.<span class="ace_identifier">size</span>() <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">1</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">boolean</span> <span class="ace_identifier">isEmpty</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">s</span>.<span class="ace_identifier">size</span>() <span class="ace_keyword ace_operator">==</span> <span class="ace_constant ace_numeric">0</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>When using <code>extends</code></p>
+<ul>
+<li>This sets up a <em>is-a</em> relationship, for example, <code>Stack</code> <em>is-a</em> <code>LinkedList</code></li>
+<li>This makes <code>Stack</code> have all the methods that <code>LinkedList</code> has</li>
+</ul>
+<p>When encapsulating inside the class</p>
+<ul>
+<li>This sets up a <em>has-a</em> relationship</li>
+<li><code>Stack</code> <em>has-a</em> <code>LinkedList</code> inside of it</li>
+</ul>
+<blockquote>
+<p><em>Sidenote</em>:<br>
+When you can't think of a placeholder name, use: <em>foo</em>, <em>bar</em>, <em>baz</em>, <em>qux</em>, <em>quux</em> ...</p>
+</blockquote>
+<hr>
+<h2>Mar 6, 2019</h2>
+<h3>Dog class</h3>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Corgi</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">name</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">private</span> <span class="ace_keyword">int</span> <span class="ace_identifier">age</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Corgi</span>(<span class="ace_support ace_function">String</span> <span class="ace_identifier">n</span>, <span class="ace_keyword">int</span> <span class="ace_identifier">a</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">name</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">n</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">age</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">a</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">sleep</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_string">"Zzzzzz"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">eat</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_string">"Chomp chomp!"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">bark</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_string">"Woof!"</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">toString</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">name</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">" "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">age</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">birthday</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">age</span><span class="ace_keyword ace_operator">++</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><blockquote>
+<p>2 more classes (Shiba and Dachshund)</p>
+</blockquote>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">java</span>.<span class="ace_identifier">util</span>.<span class="ace_identifier">ArrayList</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Kennel</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">ArrayList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">Corgi</span><span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">corgis</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">ArrayList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">Shiba</span><span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">shibas</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">ArrayList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">Dachshund</span><span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">dachshund</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Kennel</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">corgis</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">ArrayList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">Corgi</span><span class="ace_keyword ace_operator">&gt;</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">shibas</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">ArrayList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">Shiba</span><span class="ace_keyword ace_operator">&gt;</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">dachshunds</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">ArrayList</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">Dachshund</span><span class="ace_keyword ace_operator">&gt;</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">addCorgi</span>(<span class="ace_identifier">Corgi</span> <span class="ace_identifier">c</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">corgis</span>.<span class="ace_identifier">add</span>(<span class="ace_identifier">c</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">addShiba</span>(<span class="ace_identifier">Shiba</span> <span class="ace_identifier">s</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">shibas</span>.<span class="ace_identifier">add</span>(<span class="ace_identifier">s</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">addDachshund</span>(<span class="ace_identifier">Dachshund</span> <span class="ace_identifier">d</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">dachshunds</span>.<span class="ace_identifier">add</span>(<span class="ace_identifier">d</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>Scaling this up becomes problematic because everytime you want to add another breed of dog you need to add methods and arraylists for it. To generalize this, we will make a Dog interface.</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">interface</span> <span class="ace_identifier">Dog</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">eat</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">bark</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">sleep</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">toString</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">birthday</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>Interfaces list all the methods that you want all Dogs to do.</p>
+<p>Now in Corgi class add the word <code>implements</code> after the class</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Corgi</span> <span class="ace_keyword">implements</span> <span class="ace_identifier">Dog</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>You can then make new dogs like this:<br>
+<code>Dog d = new Corgi("Fred", 2);</code><br>
+This makes the only the methods available to Dog available in variable <code>d</code>, it can be cast as a Corgi to gain access all the methods that Dog doesn't have but Corgi does.</p>
+<hr>
+<h2>Mar 11, 2019</h2>
+<ul class="task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> <s><em>Midterm is wednesday (4/20)</em></s> [2019-05-06]</li>
+</ul>
+<h3>LList unit tests</h3>
+<p>Concerning Rigorous test 2:<br>
+Problem is usually with remove() method, make 4 cases:</p>
+<ul>
+<li>List with 1 item</li>
+<li>Remove last item</li>
+<li>Remove first item</li>
+<li>Remove from middle</li>
+</ul>
+<h3>Postfix notation</h3>
+<p>Infix notation puts the operations in between the numbers. Postfix puts the operator after the operands (numbers).</p>
+<p>If its a number: <strong>Push onto stack</strong><br>
+If its a operator <strong>Pop 2 and perform the operation then push</strong></p>
+<blockquote>
+<p>20 3 4 + + = 27<br>
+6 8 2 + - = -4</p>
+</blockquote>
+<p>4 + 2 * 3 - 8 / 6 + 7 + 9<br>
+4 + <code>2 3 *</code> - 8 / 6 + 7 + 9<br>
+4 + <code>2 3 *</code> - <code>8 6 /</code> + 7 + 9<br>
+<code>4 2 3 * +</code> - <code>8 6 /</code> + 7 + 9<br>
+<code>4 2 3 * + 8 6 / -</code> + 7 + 9<br>
+<code>4 2 3 * + 8 6 / - 7 +</code> + 9<br>
+<code>4 2 3 * + 8 6 / - 7 + 9 +</code></p>
+<hr>
+<h2>Mar 13, 2019</h2>
+<h3>Postfix stack</h3>
+<p>When splitting a string into pieces (using split), the split pieces are called "tokens".</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">java</span>.<span class="ace_identifier">util</span>.<span class="ace_identifier">Stack</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Postfix</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_support ace_function">String</span> <span class="ace_identifier">expr</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_identifier">Stack</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_support ace_function">Double</span><span class="ace_keyword ace_operator">&gt;</span> <span class="ace_identifier">stack</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_identifier">Postfix</span>(<span class="ace_support ace_function">String</span> <span class="ace_identifier">e</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">expr</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">e</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">stack</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Stack</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_support ace_function">Double</span><span class="ace_keyword ace_operator">&gt;</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    <span class="ace_keyword">public</span> <span class="ace_keyword">double</span> <span class="ace_identifier">eval</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_support ace_function">String</span>[] <span class="ace_identifier">tokens</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">expr</span>.<span class="ace_identifier">split</span>(<span class="ace_string">" "</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">for</span> (<span class="ace_support ace_function">String</span> <span class="ace_identifier">token</span> : <span class="ace_identifier">tokens</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">if</span> (<span class="ace_identifier">token</span>.<span class="ace_identifier">equals</span>(<span class="ace_string">"+"</span>))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">double</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">stack</span>.<span class="ace_identifier">pop</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">double</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">stack</span>.<span class="ace_identifier">pop</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">stack</span>.<span class="ace_identifier">push</span>(<span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">b</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">else</span> <span class="ace_keyword">if</span> (<span class="ace_identifier">token</span>.<span class="ace_identifier">equals</span>(<span class="ace_string">"-"</span>))
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">double</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">stack</span>.<span class="ace_identifier">pop</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">double</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">stack</span>.<span class="ace_identifier">pop</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">stack</span>.<span class="ace_identifier">push</span>(<span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">a</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">else</span> <span class="ace_comment">// Must be a number</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">try</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">double</span> <span class="ace_identifier">n</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function">Double</span>.<span class="ace_identifier">parseDouble</span>(<span class="ace_identifier">token</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_identifier">stack</span>.<span class="ace_identifier">push</span>(<span class="ace_identifier">n</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">catch</span> (<span class="ace_identifier">java</span>.<span class="ace_identifier">lang</span>.<span class="ace_support ace_function">NumberFormatException</span> <span class="ace_identifier">n</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">throw</span> <span class="ace_keyword">new</span> <span class="ace_identifier">UnknownToken</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>    <span class="ace_keyword">return</span> <span class="ace_identifier">stack</span>.<span class="ace_identifier">peek</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>    }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>New java shortcut, the for each loop:</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">for</span> (<span class="ace_support ace_function">String</span> <span class="ace_identifier">token</span> : <span class="ace_identifier">tokens</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p><code>tokens</code> is the array you are walking thru, and <code>token</code> is a variable that refers to each element of the array. This is a for each loop. (This is like <code>for i in list:</code> in python)</p>
+<hr>
+<h2>Apr 18, 2019</h2>
+<h3>JavaFX</h3>
+<p>Terminology</p>
+<ul>
+<li>Stage
+<ul>
+<li>A window</li>
+</ul>
+</li>
+<li>Scene
+<ul>
+<li>A container to put things in</li>
+<li>Can have more then one scene per window</li>
+</ul>
+</li>
+</ul>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">application</span>.<span class="ace_identifier">Application</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">stage</span>.<span class="ace_identifier">Stage</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">layout</span>.<span class="ace_identifier">Pane</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">Scene</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">shape</span>.<span class="ace_identifier">Circle</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">First</span> <span class="ace_keyword">extends</span> <span class="ace_identifier">Application</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">start</span>(<span class="ace_identifier">Stage</span> <span class="ace_identifier">window</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">show</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">setTitle</span>(<span class="ace_string">"First!"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">setSize</span>(<span class="ace_constant ace_numeric">600</span>, <span class="ace_constant ace_numeric">400</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Pane</span> <span class="ace_identifier">canvas</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Pane</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">setScene</span>(<span class="ace_keyword">new</span> <span class="ace_identifier">Scene</span>(<span class="ace_identifier">canvas</span>, <span class="ace_constant ace_numeric">600</span>, <span class="ace_constant ace_numeric">400</span>));
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Circle</span> <span class="ace_identifier">c</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Circle</span>(<span class="ace_constant ace_numeric">300</span>, <span class="ace_constant ace_numeric">200</span>, <span class="ace_constant ace_numeric">100</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">c</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><hr>
+<h2>Smoot calc</h2>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Distance</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">double</span> <span class="ace_identifier">feet</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_identifier">Distance</span>(<span class="ace_keyword">double</span> <span class="ace_identifier">f</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">feet</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">f</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_comment ace_doc">/**</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">   1 smooth equals 5 foot 7 inches</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment ace_doc">   */</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">double</span> <span class="ace_identifier">toSmoots</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">feet</span> / (<span class="ace_constant ace_numeric">5</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_constant ace_numeric">7.0</span>/<span class="ace_constant ace_numeric">12.0</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"></div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">application</span>.<span class="ace_identifier">Application</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">stage</span>.<span class="ace_identifier">Stage</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">Scene</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">layout</span>.<span class="ace_identifier">Pane</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">control</span>.<span class="ace_identifier">Label</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">control</span>.<span class="ace_identifier">TextField</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">scene</span>.<span class="ace_identifier">control</span>.<span class="ace_identifier">Button</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">import</span> <span class="ace_identifier">javafx</span>.<span class="ace_identifier">event</span>.<span class="ace_identifier">ActionEvent</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">UI</span> <span class="ace_keyword">extends</span> <span class="ace_identifier">Application</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">TextField</span> <span class="ace_identifier">feetField</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_identifier">TextField</span> <span class="ace_identifier">smootField</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">start</span>(<span class="ace_identifier">Stage</span> <span class="ace_identifier">window</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">show</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">setTitle</span>(<span class="ace_string">"Smoot Calc"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Pane</span> <span class="ace_identifier">canvas</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Pane</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Scene</span> <span class="ace_identifier">myScene</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Scene</span>(<span class="ace_identifier">canvas</span>, <span class="ace_constant ace_numeric">400</span>, <span class="ace_constant ace_numeric">200</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">window</span>.<span class="ace_identifier">setScene</span>(<span class="ace_identifier">myScene</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Label</span> <span class="ace_identifier">feetLabel</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Label</span>(<span class="ace_string">"Feet"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Label</span> <span class="ace_identifier">smootLabel</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Label</span>(<span class="ace_string">"Smoots"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">feetLabel</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">smootLabel</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">feetLabel</span>.<span class="ace_identifier">relocate</span>(<span class="ace_constant ace_numeric">20</span>, <span class="ace_constant ace_numeric">50</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">smootLabel</span>.<span class="ace_identifier">relocate</span>(<span class="ace_constant ace_numeric">20</span>, <span class="ace_constant ace_numeric">100</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">feetField</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">TextField</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">smootField</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">TextField</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">feetField</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">smootField</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">feetField</span>.<span class="ace_identifier">relocate</span>(<span class="ace_constant ace_numeric">80</span>, <span class="ace_constant ace_numeric">48</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">smootField</span>.<span class="ace_identifier">relocate</span>(<span class="ace_constant ace_numeric">80</span>, <span class="ace_constant ace_numeric">98</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Button</span> <span class="ace_identifier">goButton</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Button</span>(<span class="ace_string">"Go!"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Button</span> <span class="ace_identifier">clearButton</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Button</span>(<span class="ace_string">"Clear"</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">goButton</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">canvas</span>.<span class="ace_identifier">getChildren</span>().<span class="ace_identifier">add</span>(<span class="ace_identifier">clearButton</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">goButton</span>.<span class="ace_identifier">relocate</span>(<span class="ace_constant ace_numeric">80</span>, <span class="ace_constant ace_numeric">150</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">clearButton</span>.<span class="ace_identifier">relocate</span>(<span class="ace_constant ace_numeric">150</span>, <span class="ace_constant ace_numeric">150</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">goButton</span>.<span class="ace_identifier">setOnAction</span>(<span class="ace_keyword">this</span>::<span class="ace_identifier">handleGoButton</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">clearButton</span>.<span class="ace_identifier">setOnAction</span>(<span class="ace_keyword">this</span>::<span class="ace_identifier">handleClearButton</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">handleGoButton</span>(<span class="ace_identifier">ActionEvent</span> <span class="ace_identifier">ae</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">//Get feet from feetField</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function">String</span> <span class="ace_identifier">feet</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">feetField</span>.<span class="ace_identifier">getText</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">//Create distance object</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">double</span> <span class="ace_identifier">dfeet</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_support ace_function">Double</span>.<span class="ace_identifier">parseDouble</span>(<span class="ace_identifier">feet</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Distance</span> <span class="ace_identifier">d</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Distance</span>(<span class="ace_identifier">dfeet</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">//Convert</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">double</span> <span class="ace_identifier">smoots</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">d</span>.<span class="ace_identifier">toSmoots</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">//Output to smootField</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">smootField</span>.<span class="ace_identifier">setText</span>(<span class="ace_string">""</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">smoots</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">void</span> <span class="ace_identifier">handleClearButton</span>(<span class="ace_identifier">ActionEvent</span> <span class="ace_identifier">ae</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">feetField</span>.<span class="ace_identifier">setText</span>(<span class="ace_string">""</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">smootField</span>.<span class="ace_identifier">setText</span>(<span class="ace_string">""</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>The <code>::</code> in the <code>setOnAction()</code> method refers to which class the method to call is in. (<code>class::method</code>)</p>
+<hr>
+<h2>Mar 27, 2019</h2>
+<h3>Git</h3>
+<p>Terminology:</p>
+<ul>
+<li>Working directory
+<ul>
+<li>Where you edit, compile, run program</li>
+</ul>
+</li>
+<li>Repository
+<ul>
+<li>Where the backups are kept</li>
+<li>Local
+<ul>
+<li>On your local machine</li>
+</ul>
+</li>
+<li>Remote
+<ul>
+<li>On a server</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Commit
+<ul>
+<li>Make a backup</li>
+</ul>
+</li>
+<li>Push
+<ul>
+<li>Upload local repo to remote repo</li>
+</ul>
+</li>
+<li>Pull
+<ul>
+<li>Download remote repo to local repo</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Apr 22, 2019</h2>
+<h3>JSON data from Java class</h3>
+<p>URL consists of 4 parts</p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>https://www.sierracollege.edu/student-services/financial-aid.php
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>^ protocol  ^ host            ^ path
+</div></div></div></div><div class="cell markdown-cell"><p><a href="http://newsapi.org">newsapi.org</a></p>
+<p>To call the newsapi:</p>
+<p><a href="https://newsapi.org/v2/everything/?q=whattosearchfor&amp;apiKey=">https://newsapi.org/v2/everything/?q=whattosearchfor&amp;apiKey=</a></p>
+</div><div class="cell code-cell"><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">News</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   <span class="ace_keyword">public</span> <span class="ace_keyword">static</span> <span class="ace_keyword">void</span> <span class="ace_identifier">main</span>(<span class="ace_support ace_function">String</span>[] <span class="ace_identifier">args</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">// Prompt</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_identifier">Scanner</span> <span class="ace_identifier">in</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">Scanner</span>(<span class="ace_support ace_function">System</span>.<span class="ace_identifier">in</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function">System</span>.<span class="ace_identifier">out</span>.<span class="ace_identifier">print</span>(<span class="ace_string">"Enter query: "</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function">String</span> <span class="ace_identifier">keyword</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">in</span>.<span class="ace_identifier">next</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_comment">// URL with keyword</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_support ace_function">String</span> <span class="ace_identifier">urlString</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">"https://newsapi.org/v2/everything?q="</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">keyword</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">"&amp;apiKey="</span>; <span class="ace_comment">//TODO add apiKey</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">try</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// Make URL object</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">URL</span> <span class="ace_identifier">url</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">URL</span>(<span class="ace_identifier">urlString</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> 
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// Open stream readers for incoming data</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">InputStream</span> <span class="ace_identifier">is</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">url</span>.<span class="ace_identifier">openStream</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">InputStreamReader</span> <span class="ace_identifier">isr</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">InputStreamReader</span>(<span class="ace_identifier">is</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">BufferedReader</span> <span class="ace_identifier">br</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">BufferedReader</span>(<span class="ace_identifier">isr</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// </span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">JsonParser</span> <span class="ace_identifier">parser</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_keyword">new</span> <span class="ace_identifier">JsonParser</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">JsonElement</span> <span class="ace_identifier">results</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">parser</span>.<span class="ace_identifier">parse</span>(<span class="ace_identifier">br</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// Show title of article 0</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function">String</span> <span class="ace_identifier">title</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">results</span>.<span class="ace_identifier">getAsJsonObject</span>().<span class="ace_identifier">get</span>(<span class="ace_string">"articles"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   .<span class="ace_identifier">getAsJsonArray</span>().<span class="ace_identifier">get</span>(<span class="ace_constant ace_numeric">0</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   .<span class="ace_identifier">getAsJsonObject</span>().<span class="ace_identifier">get</span>(<span class="ace_string">"title"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   .<span class="ace_identifier">getAsString</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_support ace_function">System</span>.<span class="ace_identifier">out</span>.<span class="ace_identifier">println</span>(<span class="ace_identifier">title</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> 
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_comment">// Print out all titles</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">JsonArray</span> <span class="ace_identifier">titles</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">results</span>.<span class="ace_identifier">getAsJsonObject</span>().<span class="ace_identifier">get</span>(<span class="ace_string">"articles"</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>   .<span class="ace_identifier">getAsJsonArray</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_keyword">for</span> (<span class="ace_keyword">int</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span>; <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_identifier">titles</span>.<span class="ace_identifier">size</span>(); <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_support ace_function">String</span> <span class="ace_identifier">title</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">titles</span>.<span class="ace_identifier">get</span>(<span class="ace_identifier">i</span>).<span class="ace_identifier">getAsJsonObject</span>()
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> .<span class="ace_identifier">get</span>(<span class="ace_string">"title"</span>).<span class="ace_identifier">getAsString</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_support ace_function">System</span>.<span class="ace_identifier">out</span>.<span class="ace_identifier">println</span>(<span class="ace_string">""</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">i</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">" "</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">title</span>);
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">catch</span> (<span class="ace_identifier">MalformedURLException</span> <span class="ace_identifier">e</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">e</span>.<span class="ace_identifier">printStackTrace</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  <span class="ace_keyword">catch</span> (<span class="ace_identifier">IOException</span> <span class="ace_identifier">e</span>)
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  {
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span> <span class="ace_identifier">e</span>.<span class="ace_identifier">printStackTrace</span>();
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_indent-guide">    </span>  
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>   }
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></div><div class="cell markdown-cell"><p>Make a new directory called <code>libs</code> inside idea project. Put gson-2.8.5.jar inside, then choose "Add As Library" from right click menu</p>
+<hr>
+<h2>Apr 24, 2019</h2>
+<h3>Sanitizing data</h3>
+<p>Clean up data before submitting</p>
+<hr>
+<h2>May 15, 2019</h2>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS26-lecture-notes.html';
+if (e.keyCode === 37) window.location.href = 'CS12-lecture-notes.html';
+}</script>
+    </body>
+    </html>
+  
