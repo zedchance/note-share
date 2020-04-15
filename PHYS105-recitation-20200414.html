@@ -1,0 +1,108 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-tomorrow-night-eighties .ace_gutter {background: #272727;color: #CCC}.ace-tomorrow-night-eighties .ace_print-margin {width: 1px;background: #272727}.ace-tomorrow-night-eighties {background-color: #2D2D2D;color: #CCCCCC}.ace-tomorrow-night-eighties .ace_constant.ace_other,.ace-tomorrow-night-eighties .ace_cursor {color: #CCCCCC}.ace-tomorrow-night-eighties .ace_marker-layer .ace_selection {background: #515151}.ace-tomorrow-night-eighties.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #2D2D2D;}.ace-tomorrow-night-eighties .ace_marker-layer .ace_step {background: rgb(102, 82, 0)}.ace-tomorrow-night-eighties .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid #6A6A6A}.ace-tomorrow-night-bright .ace_stack {background: rgb(66, 90, 44)}.ace-tomorrow-night-eighties .ace_marker-layer .ace_active-line {background: #393939}.ace-tomorrow-night-eighties .ace_gutter-active-line {background-color: #393939}.ace-tomorrow-night-eighties .ace_marker-layer .ace_selected-word {border: 1px solid #515151}.ace-tomorrow-night-eighties .ace_invisible {color: #6A6A6A}.ace-tomorrow-night-eighties .ace_keyword,.ace-tomorrow-night-eighties .ace_meta,.ace-tomorrow-night-eighties .ace_storage,.ace-tomorrow-night-eighties .ace_storage.ace_type,.ace-tomorrow-night-eighties .ace_support.ace_type {color: #CC99CC}.ace-tomorrow-night-eighties .ace_keyword.ace_operator {color: #66CCCC}.ace-tomorrow-night-eighties .ace_constant.ace_character,.ace-tomorrow-night-eighties .ace_constant.ace_language,.ace-tomorrow-night-eighties .ace_constant.ace_numeric,.ace-tomorrow-night-eighties .ace_keyword.ace_other.ace_unit,.ace-tomorrow-night-eighties .ace_support.ace_constant,.ace-tomorrow-night-eighties .ace_variable.ace_parameter {color: #F99157}.ace-tomorrow-night-eighties .ace_invalid {color: #CDCDCD;background-color: #F2777A}.ace-tomorrow-night-eighties .ace_invalid.ace_deprecated {color: #CDCDCD;background-color: #CC99CC}.ace-tomorrow-night-eighties .ace_fold {background-color: #6699CC;border-color: #CCCCCC}.ace-tomorrow-night-eighties .ace_entity.ace_name.ace_function,.ace-tomorrow-night-eighties .ace_support.ace_function,.ace-tomorrow-night-eighties .ace_variable {color: #6699CC}.ace-tomorrow-night-eighties .ace_support.ace_class,.ace-tomorrow-night-eighties .ace_support.ace_type {color: #FFCC66}.ace-tomorrow-night-eighties .ace_heading,.ace-tomorrow-night-eighties .ace_markup.ace_heading,.ace-tomorrow-night-eighties .ace_string {color: #99CC99}.ace-tomorrow-night-eighties .ace_comment {color: #999999}.ace-tomorrow-night-eighties .ace_entity.ace_name.ace_tag,.ace-tomorrow-night-eighties .ace_entity.ace_other.ace_attribute-name,.ace-tomorrow-night-eighties .ace_meta.ace_tag,.ace-tomorrow-night-eighties .ace_variable {color: #F2777A}.ace-tomorrow-night-eighties .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ09NrYAgMjP4PAAtGAwchHMyAAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='Flowchart.html'>Flowchart</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-recitation-20200414</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Anouncements</h1>
+<p><img src="resources/FF47EB5D1BE9327EA64B1F961BC42FE8.jpg" alt="IMAGE" width="833" height="393"></p>
+<h1>Quiz 7</h1>
+<h2>Part 1</h2>
+<p><img src="resources/5E42E6356FEE07397ED35E0E42A45A2C.jpg" alt="IMAGE" width="362" height="249"><br>
+<img src="resources/9831BD14C95A1D2CEBB36FF3033ECA43.jpg" alt="IMAGE" width="553" height="321"></p>
+<p>The shape made by swinging the string makes a cone.</p>
+<p><img src="resources/F8115BC5DD5901BC2945561CC55E026C.jpg" alt="IMAGE" width="452" height="309"><br>
+<img src="resources/FA0F59FC46C9D1F93402CA66CF836804.jpg" alt="IMAGE" width="293" height="298"><br>
+<img src="resources/1714BEF28ECADA4524F4AC151477BDCE.jpg" alt="IMAGE" width="445" height="301"><br>
+<img src="resources/3630652AA31EE4498B90721F89880DD4.jpg" alt="IMAGE" width="444" height="285"><br>
+<img src="resources/763F04B9E746F9984162AC670CC065A7.jpg" alt="IMAGE" width="452" height="286"></p>
+<p>To find the angle look at the second equation.</p>
+<p><img src="resources/ADE545F46EFDD1EBF0BDA0987C88F652.jpg" alt="IMAGE" width="624" height="226"><br>
+<img src="resources/315579FD37DDE5B84EC4AB4183F01859.jpg" alt="IMAGE" width="257" height="283"></p>
+<p>The radius of the circle is <span class="MathJax" id="MathJax-Element-293-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2689" style="width: 2.203em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.971em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.716em, -0.466em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-2690"><span class="mi" id="MathJax-Span-2691" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span class="mi" id="MathJax-Span-2692" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-2693" style="font-family: STIXGeneral-Italic;">i</span><span class="mi" id="MathJax-Span-2694" style="font-family: STIXGeneral-Italic;">n</span><span class="mi" id="MathJax-Span-2695" style="font-family: STIXGeneral-Italic;">θ<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.014em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.898em; vertical-align: -0.077em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-293">lsin \theta</script></p>
+<p><img src="resources/6952323786B4341A307C7193918CEA2A.jpg" alt="IMAGE" width="625" height="197"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-294-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2696" style="width: 0.516em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.45em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.721em, -0.487em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-2697"><span class="mi" id="MathJax-Span-2698" style="font-family: STIXGeneral-Italic;">v</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.634em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-294">v</script>.</p>
+<h2>Part 2</h2>
+<p>Vertical circle</p>
+<p>We're interested in the ball at three different points.</p>
+<p><img src="resources/B29F2D12E6D1E65077A7AABB9701B66B.jpg" alt="IMAGE" width="409" height="380"></p>
+<p>Part A</p>
+<p><img src="resources/4A114A821C45298FF85E5B16240C0433.jpg" alt="IMAGE" width="389" height="116"><br>
+<img src="resources/41C1F260E280806EFC283051464E8F5B.jpg" alt="IMAGE" width="218" height="243"><br>
+<img src="resources/EA0BA8EDF336C44E77D3955631080707.jpg" alt="IMAGE" width="387" height="223"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-294-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2696" style="width: 0.516em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.45em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.721em, -0.487em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-2697"><span class="mi" id="MathJax-Span-2698" style="font-family: STIXGeneral-Italic;">v</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.634em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-294">v</script></p>
+<p>Part B</p>
+<p><img src="resources/ECCFB8D409D4344E8F84E60635BBB606.jpg" alt="IMAGE" width="476" height="269"><br>
+<img src="resources/4585C3F48E53952F0EB16CF82D2000AC.jpg" alt="IMAGE" width="415" height="251"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-294-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2696" style="width: 0.516em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.45em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.721em, -0.487em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-2697"><span class="mi" id="MathJax-Span-2698" style="font-family: STIXGeneral-Italic;">v</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.634em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-294">v</script></p>
+<p>Part C</p>
+<p><img src="resources/62754ADBE826746D20C1A97C4C9667CC.jpg" alt="IMAGE" width="655" height="136"><br>
+<img src="resources/394CE9124A8EB6A1C0B6ECFFC3D27A6F.jpg" alt="IMAGE" width="268" height="191"><br>
+<img src="resources/0F8258CF3BC2273104604CC36D3BB517.jpg" alt="IMAGE" width="354" height="128"><br>
+<img src="resources/2B91F793D13661B4313ED0917A5D7D3C.jpg" alt="IMAGE" width="567" height="323"><br>
+<img src="resources/CAEEC77DDCFD76FE97F5BD6BDC575790.jpg" alt="IMAGE" width="910" height="496"><br>
+<img src="resources/E157AB48A24C5AFB48FE97D67366B47D.jpg" alt="IMAGE" width="288" height="195"><br>
+<img src="resources/E811E8C00D08B90048F6BEE398710D5D.jpg" alt="IMAGE" width="459" height="143"><br>
+<img src="resources/D71820903203AE6BA6512DBBDF944878.jpg" alt="IMAGE" width="286" height="171"><br>
+<img src="resources/A84580D6C22DA9383B5A116CF699BD1A.jpg" alt="IMAGE" width="464" height="113"></p>
+<hr>
+<h1>HW</h1>
+<h2>2</h2>
+<p><img src="resources/F65857F0D4CD63483AE24B7B59CEB827.jpg" alt="IMAGE" width="966" height="311"><br>
+<img src="resources/A9E72DCE775F4CC96D8F1846A7603872.jpg" alt="IMAGE" width="691" height="371"><br>
+<img src="resources/4A6FC3CCB90D5BBB6CA4E15104999FDD.jpg" alt="IMAGE" width="786" height="216"><br>
+<img src="resources/BCFA38C1FF28F79F6626C63934D8C318.jpg" alt="IMAGE" width="785" height="257"><br>
+<img src="resources/FA761B51F84FBC0C73EBCBA9CEDE5FD9.jpg" alt="IMAGE" width="345" height="216"><br>
+<img src="resources/50F0890A996237D9652DB9CF88CA89CD.jpg" alt="IMAGE" width="1065" height="547"><br>
+<img src="resources/45C71A52BAED90B5EBBEDC315F400536.jpg" alt="IMAGE" width="577" height="258"><br>
+<img src="resources/58875A49088D35EFFDC62E52EEC60354.jpg" alt="IMAGE" width="548" height="254"></p>
+<p>Positive torque clockwise, negative torque CCW.</p>
+<p><img src="resources/3569C4A6BEDD8F59D15AD88497F75CAF.jpg" alt="IMAGE" width="882" height="213"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-295-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2699" style="width: 0.953em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.845em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.344em, 1000em, 2.515em, -0.466em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-2700"><span class="msubsup" id="MathJax-Span-2701"><span style="display: inline-block; position: relative; width: 0.806em; height: 0px;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.714em, -0.466em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-2702" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.337em;"><span class="mn" id="MathJax-Span-2703" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.05em; vertical-align: -0.229em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-295">l_2</script></p>
+<p>If getting the wrong answer switch the place of the pivot and the center of mass.</p>
+<p><img src="resources/9FE23FBCBD33738B5C29AA347220BAA8.jpg" alt="IMAGE" width="905" height="218"></p>
+<p>Switch sign (at red arrow above)</p>
+<p>Part B</p>
+<p><img src="resources/EE8B6CCC107854ACEB8CF0967CB495A4.jpg" alt="IMAGE" width="992" height="185"></p>
+<p>Use the other condition of equilibrium</p>
+<h2>3</h2>
+<p><img src="resources/3F3E7138B817F6C608265DC65F8C4E6C.jpg" alt="IMAGE" width="990" height="357"><br>
+<img src="resources/9F60C0C2804233D04997104BE67B566F.jpg" alt="IMAGE" width="529" height="401"></p>
+<p>What is the force applied at that orientation to achieve the given torque.</p>
+<p><img src="resources/B82AC07793D537389C6EEA19D425BE82.jpg" alt="IMAGE" width="437" height="102"><br>
+<img src="resources/F4A8603BBD327A30A8F5A6280A53A4C8.jpg" alt="IMAGE" width="271" height="241"></p>
+<p>The perpendicular force results in the wrench spinning.</p>
+<p><img src="resources/47448AC1AF1C32C67EA7D0627AF0D24A.jpg" alt="IMAGE" width="435" height="180"><br>
+<img src="resources/541FB904CE4C454F1499F59431DA1EBE.jpg" alt="IMAGE" width="540" height="303"><br>
+<img src="resources/4038DC4E109CD94B092181D7E43A57AA.jpg" alt="IMAGE" width="599" height="312"><br>
+<img src="resources/4EEB8876A8F92A8F33183AFFCB0D350A.jpg" alt="IMAGE" width="578" height="243"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'Flowchart.html';
+}</script>
+    </body>
+    </html>
+  
