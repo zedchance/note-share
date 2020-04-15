@@ -1,4 +1,4 @@
-# note-share
+# notes
 
 [Sharing my notes](https://zedchance.github.io/notes)!
 
