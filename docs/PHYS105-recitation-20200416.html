@@ -1,0 +1,151 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-resources.html'>PHYS105-resources</a>, Previous: <a href='PHYS105-recitation-20200414.html'>PHYS105-recitation-20200414</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-recitation-20200416</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p>This is usually lab time but today it will be recitation.</p>
+<h1>Announcements</h1>
+<p><img src="resources/DF008F98EC10CDD8C628D28F4D1532C5.jpg" alt="IMAGE" width="854" height="561"></p>
+<hr>
+<p>Spine problem</p>
+<p><img src="resources/A3A945E3D6B18F60D0BFA67FAD691EA3.jpg" alt="IMAGE" width="894" height="700"><br>
+<img src="resources/F7A2DFC68033CDF9D3EB2C6D54C6715D.jpg" alt="IMAGE" width="735" height="719"></p>
+<p><img src="resources/4C57B85EEBADC64347DAA74A74F40F8E.jpg" alt="IMAGE" width="504" height="104"><br>
+<img src="resources/2BAB8D2057CFC9F99BEA7519DAEC4FAE.jpg" alt="IMAGE" width="217" height="156"><br>
+<img src="resources/00BD8A011EF933C7ED9B9624EDA04259.jpg" alt="IMAGE" width="531" height="469"><br>
+<img src="resources/2C91D6A797941814B37164A7D7FA8E51.jpg" alt="IMAGE" width="580" height="196"><br>
+<img src="resources/B98F799CE644518E828B0516A2F27557.jpg" alt="IMAGE" width="559" height="171"></p>
+<p><img src="resources/016F4AC3CDBC263AF39AC4BA5A26D427.jpg" alt="IMAGE" width="565" height="335"></p>
+<p>To find these unknowns we use the sum of the torques</p>
+<p><img src="resources/1A698C37FCA590724C9B5F355F921CD2.jpg" alt="IMAGE" width="1071" height="416"></p>
+<p>Fill out distances</p>
+<p><img src="resources/4F23DF9F11F4537CBE1C97D3EDEE85AE.jpg" alt="IMAGE" width="577" height="413"></p>
+<p>Find perpendicular components</p>
+<p><img src="resources/25B3E1A5D51D4C0D1451D69355DD0DEF.jpg" alt="IMAGE" width="349" height="181"><br>
+<img src="resources/0CEE763ECE0D033E8579CF02476E2C63.jpg" alt="IMAGE" width="260" height="95"><br>
+<img src="resources/3F25C4C68BE66E27745DD9A0D339318C.jpg" alt="IMAGE" width="721" height="156"><br>
+<img src="resources/75F48AB21074C16C57DE6525A10EB6F9.jpg" alt="IMAGE" width="981" height="190"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-925-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8623" style="width: 1.453em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.295em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.521em, -0.499em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8624"><span class="msubsup" id="MathJax-Span-8625"><span style="display: inline-block; position: relative; width: 1.28em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.499em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8626" style="font-family: STIXGeneral-Italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.034em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.642em;"><span class="mi" id="MathJax-Span-8627" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">m</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.023em; vertical-align: -0.236em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-925">F_m</script></p>
+<p><img src="resources/EF49DA93409AE17D0B20811339451F03.jpg" alt="IMAGE" width="1026" height="132"><br>
+<img src="resources/35BB96500CE06357939CC771A194C6EB.jpg" alt="IMAGE" width="386" height="67"></p>
+<p>Back muscle exerts 2.3 times your weight to hold you up!</p>
+<p><img src="resources/27F3F1295BDADAD04B05E08A52FA736A.jpg" alt="IMAGE" width="815" height="134"><br>
+<img src="resources/4FE74576FE4356BBC7CB4CB2621581C9.jpg" alt="IMAGE" width="805" height="238"></p>
+<p>Total force</p>
+<p><img src="resources/DE43C9B23B4563387C43BBA3947E2284.jpg" alt="IMAGE" width="520" height="215"></p>
+<p>Just bending over the force you put on your spine is 2.5 times your body weight.</p>
+<p><img src="resources/41918A38C4AADF2F525B6677B5D66BBE.jpg" alt="IMAGE" width="916" height="639"></p>
+<hr>
+<p>Kinematics problem</p>
+<p><img src="resources/54999A17715DA2241A0A524BC33A726E.jpg" alt="IMAGE" width="853" height="487"></p>
+<p><img src="resources/04A884A8E85AC3A7925679209F22D74F.jpg" alt="IMAGE" width="1008" height="262"><br>
+<img src="resources/15EF0B8B6A4BCED41A6D9BA4CA8F5EB3.jpg" alt="IMAGE" width="316" height="193"></p>
+<p>Final angular velocity will be 0</p>
+<p><img src="resources/B2204242B57D3A964A832B76F53C30EA.jpg" alt="IMAGE" width="847" height="296"></p>
+<p>What does the sign of the answer mean?</p>
+<p><img src="resources/883B73C470D191A84F6F46F679323BB0.jpg" alt="IMAGE" width="609" height="90"></p>
+<p>Means it is slowing down.</p>
+<p><img src="resources/71E058ED3AEE8340F3F8C3EF1913227D.jpg" alt="IMAGE" width="786" height="403"></p>
+<hr>
+<p><img src="resources/03D89C59273E2268645F85C7E64C81F0.jpg" alt="IMAGE" width="888" height="544"></p>
+<p>Rotational inertia will be given to us. Not expected to calculate or memorize them.</p>
+<p>Point particle</p>
+<p><img src="resources/484D29A33709E93A74030C765550C722.jpg" alt="IMAGE" width="846" height="259"></p>
+<p>Ring</p>
+<p><img src="resources/722FEFB5636D7875BED01C44CB720D2E.jpg" alt="IMAGE" width="879" height="181"></p>
+<p>Disc / clinder</p>
+<p><img src="resources/E84129CF5E41740337E4322B63507CFC.jpg" alt="IMAGE" width="933" height="160"></p>
+<p>Solid sphere</p>
+<p><img src="resources/66D6A93A9056402A355CFDB045B8D9B8.jpg" alt="IMAGE" width="917" height="135"></p>
+<hr>
+<p>Atwood machine (w/ pulley)</p>
+<p><img src="resources/C9D44AEA80E7815D76D2BC8DBD51F651.jpg" alt="IMAGE" width="374" height="453"></p>
+<p>What is the acceleration of the masses?</p>
+<p>Frictionless pulley</p>
+<p>Free body of <span class="MathJax" id="MathJax-Element-926-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8628" style="width: 0.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.712em, -0.495em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-8629"><span class="mi" id="MathJax-Span-8630" style="font-family: STIXGeneral-Italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.625em; vertical-align: -0.072em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-926">m</script></p>
+<p><img src="resources/D5D14DC9D4B15854F3278978BA7BB340.jpg" alt="IMAGE" width="302" height="354"><br>
+<img src="resources/C00E2CDD40E96DC9F3A9AED5DB3B1E29.jpg" alt="IMAGE" width="262" height="93"><br>
+<img src="resources/D3CA02C081BA88AF57AF18563875C0FB.jpg" alt="IMAGE" width="383" height="129"></p>
+<p>Free body of <span class="MathJax" id="MathJax-Element-927-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8631" style="width: 1.391em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.239em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.712em, -0.478em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-8632"><span class="mn" id="MathJax-Span-8633" style="font-family: STIXGeneral-Regular;">2</span><span class="mi" id="MathJax-Span-8634" style="font-family: STIXGeneral-Italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.885em; vertical-align: -0.072em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-927">2m</script></p>
+<p><img src="resources/46A04E99B7C56849CCDBB6809A067964.jpg" alt="IMAGE" width="222" height="277"><br>
+<img src="resources/DF4B5D986979C460A35EA1F9B7734B55.jpg" alt="IMAGE" width="343" height="121"></p>
+<p>The rope is not stretching</p>
+<p>Free body of pulley</p>
+<p><img src="resources/79F99C75F36353C614CA6DDF47F089D2.jpg" alt="IMAGE" width="343" height="267"></p>
+<p>Sum the torques</p>
+<p><img src="resources/3B1234E4574A2373B0CFF34BC0D7C570.jpg" alt="IMAGE" width="243" height="90"><br>
+<img src="resources/3F11CC8C92D7E580DD264B44042A94B0.jpg" alt="IMAGE" width="270" height="91"></p>
+<p>Pivots on the axel</p>
+<p><img src="resources/13617D33C1577CD6A9168858EE7A3A77.jpg" alt="IMAGE" width="389" height="243"></p>
+<p>The tensions causes the rotation. Clockwise positive</p>
+<p><img src="resources/66FC95F7E1CB5E1042E5AA14EABAF4C5.jpg" alt="IMAGE" width="392" height="81"><br>
+<img src="resources/2DD9DB2D1EB3D0C3E32900304DECF25D.jpg" alt="IMAGE" width="1086" height="632"></p>
+<p>3 equations with a new unknown</p>
+<p><img src="resources/4D19D42462ADA4B0C613FEFEBFCDF174.jpg" alt="IMAGE" width="1117" height="230"><br>
+<img src="resources/28DA063726A3ED4DBF385F769C9A4083.jpg" alt="IMAGE" width="536" height="207"></p>
+<p><img src="resources/3C2F487713AD4337719D5F5B6D5850FC.jpg" alt="IMAGE" width="501" height="171"></p>
+<p>Solve for <span class="MathJax" id="MathJax-Element-928-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8635" style="width: 1.203em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.07em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.515em, -0.448em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8636"><span class="msubsup" id="MathJax-Span-8637"><span style="display: inline-block; position: relative; width: 1.068em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.448em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8638" style="font-family: STIXGeneral-Italic;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.599em;"><span class="mn" id="MathJax-Span-8639" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.016em; vertical-align: -0.229em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-928">T_1</script> and <span class="MathJax" id="MathJax-Element-929-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8640" style="width: 1.203em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.07em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.515em, -0.448em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8641"><span class="msubsup" id="MathJax-Span-8642"><span style="display: inline-block; position: relative; width: 1.068em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.448em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8643" style="font-family: STIXGeneral-Italic;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.599em;"><span class="mn" id="MathJax-Span-8644" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.016em; vertical-align: -0.229em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-929">T_2</script></p>
+<p><img src="resources/44061F5C08EF064C011D749534579E86.jpg" alt="IMAGE" width="350" height="88"><br>
+<img src="resources/9A20B5124D20E77086B16BA5C0F23483.jpg" alt="IMAGE" width="461" height="154"><br>
+<img src="resources/487A8AF72FD659A4665B11DDD95ED6B6.jpg" alt="IMAGE" width="948" height="480"><br>
+<img src="resources/E8549AB4FEFC31849BC1176132E2900C.jpg" alt="IMAGE" width="932" height="139"><br>
+<img src="resources/578A9DE936B4E45FAD732E73E331378A.jpg" alt="IMAGE" width="589" height="109"><br>
+<img src="resources/D9C6C360303977FDF582A47B034291AB.jpg" alt="IMAGE" width="666" height="96"></p>
+<hr>
+<h1>HW Problems</h1>
+<h2>4</h2>
+<p><img src="resources/D3CB2F48395B3286B5BCDA316AF821D7.jpg" alt="IMAGE" width="758" height="511"><br>
+<img src="resources/6C25AD1CF53239755AB061BCAD09170E.jpg" alt="IMAGE" width="805" height="452"></p>
+<p>Problem is looking for force the ground exerts on the hoof <span class="MathJax" id="MathJax-Element-930-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8645" style="width: 1.953em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.745em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.528em, -0.499em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8646"><span class="msubsup" id="MathJax-Span-8647"><span style="display: inline-block; position: relative; width: 1.73em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.499em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8648" style="font-family: STIXGeneral-Italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.034em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.642em;"><span class="texatom" id="MathJax-Span-8649"><span class="mrow" id="MathJax-Span-8650"><span class="mi" id="MathJax-Span-8651" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">G</span><span class="mi" id="MathJax-Span-8652" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">Y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.054em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.03em; vertical-align: -0.243em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-930">F_{GY}</script></p>
+<p>Divide total mass by 2 because only looking at one hoof.</p>
+<p><img src="resources/0141922EF07C1FABAF4CBCE4D62F6172.jpg" alt="IMAGE" width="273" height="169"><br>
+<img src="resources/5D00965834C5DD1FD746B11A63F850CC.jpg" alt="IMAGE" width="173" height="111"><br>
+<img src="resources/9BD44781A9813BB92E59A32375E48542.jpg" alt="IMAGE" width="478" height="112"><br>
+<img src="resources/A00D125DEF5EF77DB8311B034E1CCC96.jpg" alt="IMAGE" width="352" height="195"><br>
+<img src="resources/BA712A0C6A0344705BF9AB3D450B28A0.jpg" alt="IMAGE" width="282" height="103"></p>
+<p>Unknowns</p>
+<p><img src="resources/E0322F965193958A41B1365C5BC5BED3.jpg" alt="IMAGE" width="304" height="79"></p>
+<p>Choose pivot point at hoof</p>
+<p>Find angles</p>
+<p><img src="resources/397EA9AE4E7F23FEA43D35B15946D789.jpg" alt="IMAGE" width="386" height="239"><br>
+<img src="resources/392C75DE13404FA28846E6CED10654C2.jpg" alt="IMAGE" width="521" height="366"></p>
+<p>CCW positive torques</p>
+<p><img src="resources/5A8958E0A3293964F3AAA5FF11AA56AB.jpg" alt="IMAGE" width="770" height="186"></p>
+<p><strong>Correction</strong>: actually force of wall divided by two because its being supported by both hoofs.</p>
+<p><img src="resources/391C399C602580FF0DD91D571B8359FC.jpg" alt="IMAGE" width="310" height="81"><br>
+<img src="resources/E9C22E04E9F3C9A1E4FFFE224972730D.jpg" alt="IMAGE" width="831" height="312"></p>
+<p><img src="resources/7FF2B971BA95E828EB08B5FC53333ADC.jpg" alt="IMAGE" width="576" height="317"><br>
+<img src="resources/62450337C4A814B0D5DAB866593832A2.jpg" alt="IMAGE" width="279" height="204"><br>
+<img src="resources/725049545460AC6FCDC4727D016DEB81.jpg" alt="IMAGE" width="310" height="168"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-resources.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-recitation-20200414.html';
+}</script>
+    </body>
+    </html>
+  
