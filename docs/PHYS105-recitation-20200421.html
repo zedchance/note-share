@@ -1,0 +1,120 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-resources.html'>PHYS105-resources</a>, Previous: <a href='PHYS105-recitation-20200416.html'>PHYS105-recitation-20200416</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-recitation-20200421</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p><img src="resources/71CCA93720E0C88840E7F408C6B5AA98.jpg" alt="IMAGE" width="889" height="461"></p>
+<h1>Quiz 8</h1>
+<p>Part 1</p>
+<p><img src="resources/17B50C15F3F73110A84E342C25B280B5.jpg" alt="IMAGE" width="567" height="152"><br>
+<img src="resources/96FCA5ACB4211B4F867234E89DFBFD00.jpg" alt="IMAGE" width="307" height="328"><br>
+<img src="resources/796380BFFFFA4C6BDB4DB7B092D3044B.jpg" alt="IMAGE" width="515" height="335"><br>
+<img src="resources/71C23F0345E0009FB96FBEBDEA0E357B.jpg" alt="IMAGE" width="536" height="253"></p>
+<p>What is the tension <span class="MathJax" id="MathJax-Element-242-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2037" style="width: 1.266em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.126em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.515em, -0.448em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-2038"><span class="msubsup" id="MathJax-Span-2039"><span style="display: inline-block; position: relative; width: 1.124em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.448em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-2040" style="font-family: STIXGeneral-Italic;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.599em;"><span class="mi" id="MathJax-Span-2041" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">L<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.002em;"></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.016em; vertical-align: -0.229em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-242">T_L</script>?</p>
+<p><img src="resources/D3A7DB69D44CAC47F28B6950D55B2F83.jpg" alt="IMAGE" width="82" height="116"><br>
+<img src="resources/722D3CADA6085FB558312194F364FF51.jpg" alt="IMAGE" width="1014" height="663"><br>
+<img src="resources/722DEBA779EA2701EFB8C5E6A6D00E1C.jpg" alt="IMAGE" width="651" height="286"></p>
+<p>Part 2</p>
+<p><img src="resources/ECB5076876B8293527C7883EBCDF4F21.jpg" alt="IMAGE" width="662" height="330"><br>
+<img src="resources/38301331134FE804CA2DA9D47FBE19BC.jpg" alt="IMAGE" width="431" height="647"><br>
+<img src="resources/2C3DA9F66D9C5D2F0E6E17A3C644A626.jpg" alt="IMAGE" width="470" height="99"><br>
+<img src="resources/CB2C48B7A497DD6324BD1A185382B26E.jpg" alt="IMAGE" width="501" height="209"><br>
+<img src="resources/2A2B5AF934BB2EC7D3DDDBAB09793DED.jpg" alt="IMAGE" width="575" height="137"><br>
+<img src="resources/99DCB86748150070E45837BE7A6693CA.jpg" alt="IMAGE" width="578" height="139"></p>
+<p>Because the disc is spinning you must add in the rotational component. <span class="MathJax" id="MathJax-Element-243-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-2042" style="width: 0.453em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.394em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.515em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-2043"><span class="mi" id="MathJax-Span-2044" style="font-family: STIXGeneral-Italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.051em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.85em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-243">I</script> Will be given.</p>
+<p><img src="resources/AAB5D6178957749D2CCD4F7B352A700C.jpg" alt="IMAGE" width="285" height="95"><br>
+<img src="resources/18FA2CCBE0BC24AC47DE8CB39A69E9EE.jpg" alt="IMAGE" width="545" height="292"><br>
+<img src="resources/C98ABE92AEF543C27A678C23220852B2.jpg" alt="IMAGE" width="583" height="127"></p>
+<p>Doesn't depend on mass.</p>
+<p><img src="resources/60207787C8C6DC157E60AD5A8110B13B.jpg" alt="IMAGE" width="598" height="124"><br>
+<img src="resources/42B8570BB6DE413AD8C062A3508EBF9A.jpg" alt="IMAGE" width="469" height="101"><br>
+<img src="resources/836675CB71B940BBE964A56E8B599BF9.jpg" alt="IMAGE" width="597" height="265"></p>
+<hr>
+<h1>Topics to be covered on exam</h1>
+<p>Rotational translation</p>
+<p><img src="resources/A1525FDD09D968754D36E0F734A84C87.jpg" alt="IMAGE" width="929" height="319"></p>
+<p>Centripetal acceleration</p>
+<p><img src="resources/D74E0E45CEEEAAECDEAFB1A5AF91E2AB.jpg" alt="IMAGE" width="768" height="157"><br>
+<img src="resources/DDC5A22110E085D173807E588E8B5C83.jpg" alt="IMAGE" width="702" height="99"></p>
+<p>Gravitational laws</p>
+<p><img src="resources/A4C905DF96A380D77286706C2FF207D0.jpg" alt="IMAGE" width="432" height="155"></p>
+<p>Angular velocity</p>
+<p><img src="resources/4CF36ACD2A06CFD54F1FB082DD4F7B71.jpg" alt="IMAGE" width="774" height="268"><br>
+<img src="resources/9880C8426BD0B4E1987F52151BC76FBE.jpg" alt="IMAGE" width="873" height="321"></p>
+<p>If something is rolling</p>
+<p><img src="resources/D84F3BA6A1547DD86CA6F9FAB5853C9F.jpg" alt="IMAGE" width="247" height="175"></p>
+<hr>
+<h1>HW</h1>
+<h2>6</h2>
+<p><img src="resources/B701D09EB8EFA5C8B9C41BF012C4E9DD.jpg" alt="IMAGE" width="764" height="276"><br>
+<img src="resources/1C278DDA5907939997282F675C9FEE90.jpg" alt="IMAGE" width="586" height="657"><br>
+<img src="resources/848D9D16CC62DB4BAE54EA816504AC35.jpg" alt="IMAGE" width="458" height="218"><br>
+<img src="resources/966DC4B4C4818E13383F9DAF3EB14924.jpg" alt="IMAGE" width="360" height="150"></p>
+<p>Convert to seconds</p>
+<p><img src="resources/68A95CEDA69F62FB7871E8A5E84E0019.jpg" alt="IMAGE" width="424" height="168"><br>
+<img src="resources/2299A2C07C6C175B13679C5F99AAA394.jpg" alt="IMAGE" width="432" height="77"><br>
+<img src="resources/DAD01C428AE50ECA9FC3FB86A4C7A0DF.jpg" alt="IMAGE" width="568" height="92"></p>
+<p><img src="resources/8CC66A1F9BCE78C10E98141056B9AEB7.jpg" alt="IMAGE" width="443" height="234"><br>
+<img src="resources/63438DDB222E521492A68322CA7079D2.jpg" alt="IMAGE" width="211" height="99"><br>
+<img src="resources/827786ABF7F1C9000C1F023084514D12.jpg" alt="IMAGE" width="745" height="190"><br>
+<img src="resources/8845C5CB46D2E79EBE9B54FB70264AAE.jpg" alt="IMAGE" width="503" height="109"></p>
+<p>Use the period around the sun to find the speed</p>
+<p><img src="resources/07309E8482ADAE899B6D3CB3F230D648.jpg" alt="IMAGE" width="355" height="159"></p>
+<p>Possible to do it this way:</p>
+<p><img src="resources/426142ECDA405228F9B367ECCDAC5AF9.jpg" alt="IMAGE" width="361" height="221"><br>
+<img src="resources/35DB8714E83D8DC6700E966433AF8A75.jpg" alt="IMAGE" width="562" height="310"></p>
+<h2>7</h2>
+<p><img src="resources/7227897C9089083E8665145F90F80A13.jpg" alt="IMAGE" width="753" height="135"><br>
+<img src="resources/F3ED2CB109014D73FA2295B77A420C51.jpg" alt="IMAGE" width="834" height="193"><br>
+<img src="resources/D1F0778E9022DEE1D807552B7B8705E8.jpg" alt="IMAGE" width="863" height="180"><br>
+<img src="resources/6F852ECDE9622796660C90EAE274276A.jpg" alt="IMAGE" width="273" height="94"><br>
+<img src="resources/5F1769B302C509534A971BC97BBB0C35.jpg" alt="IMAGE" width="310" height="80"><br>
+<img src="resources/E959DFBB0B6E28509702D38575C12566.jpg" alt="IMAGE" width="277" height="104"><br>
+<img src="resources/2D43FA46BA6E114DAE04692CE881AA4E.jpg" alt="IMAGE" width="374" height="63"></p>
+<hr>
+<h1>Clicker question</h1>
+<p><img src="resources/95D1E4A8060B2FA537AEA0759F577ED0.jpg" alt="IMAGE" width="976" height="699"><br>
+<img src="resources/3DA57E6456EA7BE9E4141B63633C7D1A.jpg" alt="IMAGE" width="827" height="420"><br>
+<img src="resources/A333964B87657215A363E5ABF35398A3.jpg" alt="IMAGE" width="308" height="163"></p>
+<p>Prove it:</p>
+<p><img src="resources/DE70BDB3C36DC7F1955760AAAD37161E.jpg" alt="IMAGE" width="499" height="153"><br>
+<img src="resources/546FD7879E8026FD02A2312963079FEA.jpg" alt="IMAGE" width="602" height="221"><br>
+<img src="resources/67EE7E7800E1823E57588FB2E230F6EB.jpg" alt="IMAGE" width="679" height="150"><br>
+<img src="resources/19061F874658F16533C2DA32D27FC25C.jpg" alt="IMAGE" width="379" height="94"><br>
+<img src="resources/89AA5A342C7BF754567F2405CF44CAE6.jpg" alt="IMAGE" width="684" height="116"><br>
+<img src="resources/C7FDD47937589D0A957C3B5CFC61808C.jpg" alt="IMAGE" width="930" height="326"><br>
+<img src="resources/8CFB60886925401A7A29379FB75BE1A5.jpg" alt="IMAGE" width="820" height="272"><br>
+<img src="resources/D5F19D05671A69A479BD4121ED8C447C.jpg" alt="IMAGE" width="850" height="164"><br>
+<img src="resources/DDF0339EC9BE778BF4218337550D65C5.jpg" alt="IMAGE" width="1020" height="355"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-resources.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-recitation-20200416.html';
+}</script>
+    </body>
+    </html>
+  
