@@ -1,0 +1,116 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-resources.html'>PHYS105-resources</a>, Previous: <a href='PHYS105-recitation-20200421.html'>PHYS105-recitation-20200421</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-recitation-20200428</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Announcements</h1>
+<p><img src="resources/8098917266F2D366107E7EC9C5A82B01.jpg" alt="IMAGE" width="764" height="289"></p>
+<h1>Clicker</h1>
+<p><img src="resources/061AA021FFC5E1F2F254D576905397F4.jpg" alt="IMAGE" width="854" height="546"><br>
+<img src="resources/0DF60F2BEE524FD20044F6D98BB96C1B.jpg" alt="IMAGE" width="385" height="221"><br>
+<img src="resources/26142501DE8C2D61FCD517E4A678FD45.jpg" alt="IMAGE" width="547" height="398"></p>
+<hr>
+<p><img src="resources/A066D8101667514F87F5AA0955F78139.jpg" alt="IMAGE" width="877" height="607"><br>
+<img src="resources/45828AF58FBE9A92B0AFB794BDA8A7A8.jpg" alt="IMAGE" width="935" height="382"></p>
+<p>The only thing that doesn't change with temperature is mass.</p>
+<hr>
+<p><img src="resources/3ADC5B725F042ADFBFC30E63E30E7392.jpg" alt="IMAGE" width="845" height="455"><br>
+<img src="resources/18AFBEDA941E0A8CAB8A10F73F4C86AA.jpg" alt="IMAGE" width="379" height="233"><br>
+<img src="resources/D201CA03F011E76070BC473F84F5ADD7.jpg" alt="IMAGE" width="994" height="573"></p>
+<p>Atoms are also mostly empty space.</p>
+<hr>
+<h1>Ideal gas law</h1>
+<p><img src="resources/D0FECB0CCA13159BEE102E354DF218AB.jpg" alt="IMAGE" width="892" height="710"><br>
+<img src="resources/64F4A48D7CB5473B83A585247828D567.jpg" alt="IMAGE" width="547" height="460"></p>
+<p>Molecules of a gas bouncing off the walls of a container on average is the gas pressure.</p>
+<p><img src="resources/C9450AFF7964A0DE4C2D7A0F47E2E930.jpg" alt="IMAGE" width="850" height="628"></p>
+<p>Gas pressure arises from the temperature of the gas molecules.</p>
+<p><img src="resources/1FE28ED741C013CE051C4363F65E1D9A.jpg" alt="IMAGE" width="831" height="681"></p>
+<p>Increasing the temp increases the pressure. Increasing the number of molecules also increases the temperature.</p>
+<p><img src="resources/8C15CFFFCE84DCD7975A43CC9071F950.jpg" alt="IMAGE" width="830" height="691"></p>
+<p>Decreasing the volume of the container increases the pressure.</p>
+<p><img src="resources/B34E20EE0FE67B1C2B455FA88B835F71.jpg" alt="IMAGE" width="917" height="616"></p>
+<p><img src="resources/A52AB053341CFFBD347B1E066D9DE956.jpg" alt="IMAGE" width="387" height="547"></p>
+<p>Gases reach their minimum thermal energy at 0 kelvin (absolute zero). Because of quantum mechanics, you can never stop all molecular motion.</p>
+<p><img src="resources/F13B0A98E967C59924654B73C4F16D32.jpg" alt="IMAGE" width="754" height="570"></p>
+<p>This was understood before even the molecular theory.</p>
+<p><img src="resources/4C8228D6A9A4F66A0BD0EF6135AEA37D.jpg" alt="IMAGE" width="824" height="628"></p>
+<h2>Examples</h2>
+<p><img src="resources/801A894A4775ACAE61B792A45ECFF221.jpg" alt="IMAGE" width="736" height="491"><br>
+<img src="resources/093C285204B48AB9253862FB7D7AEDF3.jpg" alt="IMAGE" width="515" height="405"></p>
+<p>Lets use the ideal gas law:</p>
+<p><img src="resources/0EBF8071A76F3FB81B1C2DEDCF6511F7.jpg" alt="IMAGE" width="299" height="78"><br>
+<img src="resources/1F0B0E6529ED2BA826D5A4D8FE1DFC86.jpg" alt="IMAGE" width="969" height="241"><br>
+<img src="resources/091F6FC4CEE4E866CFE51EBF8F782808.jpg" alt="IMAGE" width="647" height="78"></p>
+<p>So lets interpret this:</p>
+<p><img src="resources/CAB31BF1042ED901E0242E8CF43CD9F5.jpg" alt="IMAGE" width="592" height="139"></p>
+<p>Check the periodic table for the atomic number of N (the number of protons/electrons in an atom). And the bottom number is the atomic mass in g/mol</p>
+<p><img src="resources/3905CDF85C108695E366E7C2255F5112.jpg" alt="IMAGE" width="577" height="252"></p>
+<p>Remember that nitrogen in the gasous state is a diatomic molecule. Since there are two molecules, it has 26 grams per mole.</p>
+<p>Solve for the volume:</p>
+<p><img src="resources/8B574C3D398289C0D1F11D1C79A0E448.jpg" alt="IMAGE" width="881" height="307"></p>
+<p>All gases at standard temp and pressure, all gases occupy the same volume regardless of the makeup.</p>
+<p><img src="resources/A128183E1046A490D518A48779C5AD19.jpg" alt="IMAGE" width="849" height="131"><br>
+<img src="resources/D681B642787FB284E09769F3FC13C03A.jpg" alt="IMAGE" width="774" height="529"></p>
+<hr>
+<p><img src="resources/9732CB4E08433284BFA85DDEEC24E1FE.jpg" alt="IMAGE" width="830" height="456"><br>
+<img src="resources/023C04798BCE76B0E76C58EEA122786B.jpg" alt="IMAGE" width="409" height="568"><br>
+<img src="resources/D7E807A165AF2FE92EE87E0B3735B51D.jpg" alt="IMAGE" width="562" height="349"></p>
+<p>Start with the ideal gas law:</p>
+<p><img src="resources/5DCD8269A7B0ABDB9FF22ACCC575D129.jpg" alt="IMAGE" width="406" height="294"><br>
+<img src="resources/4AAE899391627362969D28E4EC80CD28.jpg" alt="IMAGE" width="412" height="216"><br>
+<img src="resources/1D5C7CEB459B22C0682E778D652A3B58.jpg" alt="IMAGE" width="951" height="444"></p>
+<p>Remember to convert to kelvin to use the ideal gas law.</p>
+<hr>
+<p><img src="resources/36B81DD3A3339139F2BF7390CA8D1EFE.jpg" alt="IMAGE" width="861" height="610"><br>
+<img src="resources/AAF04F2AA2810DC3FA9F99271A6ACC17.jpg" alt="IMAGE" width="1123" height="689"></p>
+<p>We're looking for <span class="MathJax" id="MathJax-Element-525-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8921" style="width: 0.578em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.507em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.712em, -0.488em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-8922"><span class="mi" id="MathJax-Span-8923" style="font-family: STIXGeneral-Italic;">h</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.893em; vertical-align: -0.072em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-525">h</script> here where the red portion is the gas in the bell:</p>
+<p><img src="resources/54D9CA90DD0CEE19F8975F863FD4381D.jpg" alt="IMAGE" width="431" height="220"><br>
+<img src="resources/54A7120F190A82E452F572A037FA9619.jpg" alt="IMAGE" width="365" height="251"></p>
+<p>We need to find the pressure final <span class="MathJax" id="MathJax-Element-526-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8924" style="width: 1.141em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.014em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.374em, 1000em, 2.661em, -0.507em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8925"><span class="msubsup" id="MathJax-Span-8926"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.507em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8927" style="font-family: STIXGeneral-Italic;">P</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.619em;"><span class="mi" id="MathJax-Span-8928" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.103em;"></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.179em; vertical-align: -0.391em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-526">P_f</script>.</p>
+<p><img src="resources/F300A57339A3D9E62B4122A8A28620C0.jpg" alt="IMAGE" width="554" height="178"></p>
+<p>where <span class="MathJax" id="MathJax-Element-527-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8929" style="width: 0.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.703em, -0.515em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-8930"><span class="mi" id="MathJax-Span-8931" style="font-family: STIXGeneral-Italic;">D</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.85em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-527">D</script> is the depth of water.</p>
+<p>Convert:</p>
+<p><img src="resources/0E6FDC9A62658A74B3988705A8A761DA.jpg" alt="IMAGE" width="711" height="191"><br>
+<img src="resources/D0A024DEB58522DD94F9EF144EA4D536.jpg" alt="IMAGE" width="817" height="317"><br>
+<img src="resources/CB1C18C810416096E6E76BBDA2F471B6.jpg" alt="IMAGE" width="386" height="71"></p>
+<p>Now we can solve for <span class="MathJax" id="MathJax-Element-528-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8932" style="width: 0.953em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.845em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.586em, 1000em, 2.661em, -0.487em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8933"><span class="msubsup" id="MathJax-Span-8934"><span style="display: inline-block; position: relative; width: 0.807em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.721em, -0.487em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8935" style="font-family: STIXGeneral-Italic;">v</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.45em;"><span class="mi" id="MathJax-Span-8936" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.103em;"></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.943em; vertical-align: -0.391em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-528">v_f</script></p>
+<p><img src="resources/A24D8B6773EF3FF144F367444629D261.jpg" alt="IMAGE" width="485" height="170"><br>
+<img src="resources/2E699571B19A81F1D5A65CB5528A0DD5.jpg" alt="IMAGE" width="522" height="250"></p>
+<p>Lets find out what <span class="MathJax" id="MathJax-Element-529-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8937" style="width: 1.078em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.957em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.586em, 1000em, 2.523em, -0.487em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-8938"><span class="msubsup" id="MathJax-Span-8939"><span style="display: inline-block; position: relative; width: 0.92em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.721em, -0.487em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8940" style="font-family: STIXGeneral-Italic;">v</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.159em; left: 0.45em;"><span class="mi" id="MathJax-Span-8941" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">o</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.79em; vertical-align: -0.238em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-529">v_o</script> is so we can finish it.</p>
+<p><img src="resources/17C71D859011440F92C431E1C5810BB7.jpg" alt="IMAGE" width="684" height="279"><br>
+<img src="resources/E4A0EFC19233626DE0A6F52B5491862D.jpg" alt="IMAGE" width="766" height="202"><br>
+<img src="resources/5476AEBF748C789717C91BCFF587CD93.jpg" alt="IMAGE" width="772" height="259"></p>
+<p>This problem has some similarities to the next quiz.</p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-resources.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-recitation-20200421.html';
+}</script>
+    </body>
+    </html>
+  
