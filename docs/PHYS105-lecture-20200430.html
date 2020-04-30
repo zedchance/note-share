@@ -1,0 +1,138 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-recitation-20200331.html'>PHYS105-recitation-20200331</a>, Previous: <a href='PHYS105-lecture-20200428.html'>PHYS105-lecture-20200428</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-lecture-20200430</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Announcements</h1>
+<p><img src="resources/19E875B95D23091A0AE38637C238FD56.jpg" alt="IMAGE" width="988" height="626"><br>
+<img src="resources/F5DD0866C46CBD2F0088D88180186459.jpg" alt="IMAGE" width="942" height="286"></p>
+<h1>Today</h1>
+<p><img src="resources/AAF30705E3116A7D8A06C316AB8D3176.jpg" alt="IMAGE" width="787" height="366"></p>
+<h1>Clickers</h1>
+<p><img src="resources/BB8905721AAB4B6AE34A1E4787D88057.jpg" alt="IMAGE" width="880" height="369"><br>
+<img src="resources/4ED7CD9EF6E91789700C6D42C9E20E07.jpg" alt="IMAGE" width="390" height="244"></p>
+<hr>
+<p><img src="resources/5A8203B2CF2D82254968576DE6809681.jpg" alt="IMAGE" width="906" height="447"><br>
+<img src="resources/14855742CEC19058495D2B63C1309A59.jpg" alt="IMAGE" width="381" height="293"><br>
+<img src="resources/185424970F7E4E1FD41795B5FFB71657.jpg" alt="IMAGE" width="332" height="133"><br>
+<img src="resources/47453729D67F454B1DBAEFA3E90A02C8.jpg" alt="IMAGE" width="376" height="188"><br>
+<img src="resources/0C87320333455FD3EDBAD68489116F0D.jpg" alt="IMAGE" width="428" height="169"><br>
+<img src="resources/211D919E9607311C2626EF6AAC0ECC57.jpg" alt="IMAGE" width="475" height="360"><br>
+<img src="resources/F8A52C08110B4C20C5AD753DDAD34010.jpg" alt="IMAGE" width="634" height="321"></p>
+<hr>
+<p><img src="resources/370E4DBD22D6A8F6B9A26380446B17EB.jpg" alt="IMAGE" width="934" height="654"><br>
+<img src="resources/3186AD5F5E7935989F63548C3202F9F5.jpg" alt="IMAGE" width="380" height="303"><br>
+<img src="resources/4E20382E9BA63B5B15E4350C4C34EC49.jpg" alt="IMAGE" width="443" height="275"><br>
+<img src="resources/ECD2D6A44E7532B25F249947EFDA3974.jpg" alt="IMAGE" width="509" height="244"><br>
+<img src="resources/319ECF0CFDDC28B5055D13024D4952CB.jpg" alt="IMAGE" width="372" height="159"></p>
+<p>Remember temperature is the average kinetic energy of the system.</p>
+<h1>Discussion</h1>
+<blockquote>
+<p>Note: Ability to derive this next part isn't included in the test.</p>
+</blockquote>
+<p><img src="resources/E94774CE58278E9730B12EA1BA37B8B3.jpg" alt="IMAGE" width="868" height="697"></p>
+<p>Look at a box with one particle:</p>
+<p><img src="resources/62BBB15016E83819C83CBE6CD1CA402A.jpg" alt="IMAGE" width="969" height="660"></p>
+<p>Now lets add a lot more particles:</p>
+<p><img src="resources/50B5562E1A698C8F75D0CC89110EEF55.jpg" alt="IMAGE" width="884" height="673"><br>
+<img src="resources/2A153BB70C7B531787B3FD6F6EA4FD77.jpg" alt="IMAGE" width="774" height="527"><br>
+<img src="resources/F2E87F3B2384A90724F1C2F03F199C79.jpg" alt="IMAGE" width="757" height="283"><br>
+<img src="resources/69B35F6E4084C186309DA0904EC22070.jpg" alt="IMAGE" width="640" height="612"><br>
+<img src="resources/47B3802043E81001955F50C3577CA004.jpg" alt="IMAGE" width="760" height="645"><br>
+<img src="resources/41AF0FCF131DD078E26F770F4C9B807C.jpg" alt="IMAGE" width="911" height="540"><br>
+<img src="resources/BA0B2B5F99B6D7D1AC18683F15F3D860.jpg" alt="IMAGE" width="895" height="545"><br>
+<img src="resources/3B5C6865B114957B1EBAB4FD3EC98AE2.jpg" alt="IMAGE" width="851" height="648"></p>
+<p>These don't need to be derived, but understood. Will be useful on the next exam.</p>
+<p><img src="resources/8058270EE14F1B03DEE76394142DFA9C.jpg" alt="IMAGE" width="895" height="650"></p>
+<p>The degree of freedom is the "number of boxes" you can divide the energy into.</p>
+<h2>Example</h2>
+<p><img src="resources/ECBBA2F41745F6382271054F4FBB15FB.jpg" alt="IMAGE" width="849" height="421"><br>
+<img src="resources/1BF8B8F4E6BAE7D9519FF984EA31FDE9.jpg" alt="IMAGE" width="1021" height="437"></p>
+<p>The conversion of a liter:</p>
+<p><img src="resources/545EEC67C4127B1E009B7E100D69764C.jpg" alt="IMAGE" width="396" height="261"><br>
+<img src="resources/88E97DBC26473ABC0E493098500C1590.jpg" alt="IMAGE" width="617" height="117"><br>
+<img src="resources/575148AF27EDDFA7638D3519D6520C49.jpg" alt="IMAGE" width="1006" height="287"></p>
+<h1>First law of thermodynamics</h1>
+<p><img src="resources/84F774B40471EF63B9408D6AF14F8A74.jpg" alt="IMAGE" width="840" height="557"><br>
+<img src="resources/7EB51E67C08FEFE3801D4CE8D3156A7E.jpg" alt="IMAGE" width="828" height="535"><br>
+<img src="resources/D36917FCD425849CA20D44C5BCE4D24C.jpg" alt="IMAGE" width="861" height="106"><br>
+<img src="resources/4DBC4C95B7D2B0C58096DA3EF874B44B.jpg" alt="IMAGE" width="328" height="440"><br>
+<img src="resources/BC30C4830AA74D16ECFF836EE40F73D3.jpg" alt="IMAGE" width="418" height="268"></p>
+<p>We'll use the symbol <span class="MathJax" id="MathJax-Element-774-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-13320" style="width: 0.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.699em, 1000em, 2.885em, -0.448em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-13321"><span class="mi" id="MathJax-Span-13322" style="font-family: STIXGeneral-Italic;">Q</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.265em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-774">Q</script> for heat.</p>
+<p><img src="resources/5AFF0BC5191FFCF9A6C3F684FFDD5F0A.jpg" alt="IMAGE" width="658" height="350"></p>
+<p><img src="resources/580807C6E236A6062FA3F1EFEA7F91C8.jpg" alt="IMAGE" width="827" height="304"></p>
+<p>The change in internal energy equals the heat added to or the work done on the system.</p>
+<p><img src="resources/94188EA4F438A4248606093C1E562029.jpg" alt="IMAGE" width="870" height="400"></p>
+<p><img src="resources/277216397F0F643C62B594E9CFD0CF9F.jpg" alt="IMAGE" width="883" height="499"></p>
+<p>Imagine dumping a bunch of heated copper pellets into a beaker of water and stir:</p>
+<p><img src="resources/B39131F922BB7AF1555C742B508BF39C.jpg" alt="IMAGE" width="981" height="586"><br>
+<img src="resources/84BF2DEF8DB915215B7598CDDE1D90F1.jpg" alt="IMAGE" width="1080" height="379"><br>
+<img src="resources/9150D4DE33540B00047FF47AE3E23708.jpg" alt="IMAGE" width="262" height="189"><br>
+<img src="resources/0270BA79686FE9FB1E4A75FCA6E369F9.jpg" alt="IMAGE" width="691" height="228"></p>
+<p>The final temp ends up being close to the water temp:</p>
+<p><img src="resources/72F068E80760D557B534EAE88A641272.jpg" alt="IMAGE" width="472" height="148"><br>
+<img src="resources/9D78C6958A18D7DE7D05F19139E2627B.jpg" alt="IMAGE" width="957" height="290"><br>
+<img src="resources/0E2108C1CE4F0F8C4AF0C8F51876D102.jpg" alt="IMAGE" width="511" height="144"></p>
+<p>Remember water has an ability to absorb a lot of heat without changing temp.</p>
+<p><img src="resources/EE77FD36E163F4B3291E2D84FC08DE68.jpg" alt="IMAGE" width="927" height="128"></p>
+<p>Looking at the copper against a thermometer:</p>
+<p><img src="resources/45E3B4E2B54D434190FB92F2560BC80D.jpg" alt="IMAGE" width="448" height="561"></p>
+<p>Looking at water against the thermometer:</p>
+<p><img src="resources/B0214A7CD862737CF3D08CD5D26DC706.jpg" alt="IMAGE" width="469" height="548"></p>
+<p><img src="resources/C5EAFE2874661CE5314A2C1FC9556F3A.jpg" alt="IMAGE" width="901" height="542"></p>
+<p><img src="resources/A637A9EDE0000A2E03C505F0BA4CA974.jpg" alt="IMAGE" width="662" height="514"></p>
+<p>Whats <span class="MathJax" id="MathJax-Element-775-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-13323" style="width: 0.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.699em, 1000em, 2.721em, -0.441em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-13324"><span class="mi" id="MathJax-Span-13325" style="font-family: STIXGeneral-Italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.022em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.884em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-775">C</script>?</p>
+<p><img src="resources/0F4DE5028B34AB15CD5095EC9A4FB91F.jpg" alt="IMAGE" width="796" height="437"><br>
+<img src="resources/043E14EC9395E6F63E0C8DC0DA548FA7.jpg" alt="IMAGE" width="715" height="505"><br>
+<img src="resources/BE92886CE88D4A3CF0AC465D76D0E906.jpg" alt="IMAGE" width="897" height="401"><br>
+<img src="resources/A606C887AA6776959AF9B991F759D678.jpg" alt="IMAGE" width="778" height="420"></p>
+<h2>Example</h2>
+<p><img src="resources/452A70F5A30285B4A8519EC3AAAE060A.jpg" alt="IMAGE" width="804" height="678"><br>
+<img src="resources/097D640B1164BFE16A4AC401469D1088.jpg" alt="IMAGE" width="393" height="328"><br>
+<img src="resources/A2786A95C3B1FF0973D3EBADE12F1EB3.jpg" alt="IMAGE" width="591" height="326"><br>
+<img src="resources/7137883CF1ECEB2F6D5688F0FDAE0580.jpg" alt="IMAGE" width="1046" height="377"><br>
+<img src="resources/CA29EFC6EC55F93402F36AB0B2EADE11.jpg" alt="IMAGE" width="745" height="341"><br>
+<img src="resources/757FFC7BB808BACDA7F13246F66D5914.jpg" alt="IMAGE" width="339" height="107"><br>
+<img src="resources/76600FB6F5AF934D3B42DD9A25E13D16.jpg" alt="IMAGE" width="858" height="86"></p>
+<p>Ignore heat exchange with the calorimeter/outside world.</p>
+<p><img src="resources/E5B299DBFD7AD2F142E5F2D298C166C4.jpg" alt="IMAGE" width="736" height="98"><br>
+<img src="resources/76A8344CFF76141C6241FF67F5A9571B.jpg" alt="IMAGE" width="703" height="132"><br>
+<img src="resources/CB55AA88BCBA36CC85319E327B83F3F7.jpg" alt="IMAGE" width="924" height="101"><br>
+<img src="resources/86949FD122465EAD49F639DF6F1E51D6.jpg" alt="IMAGE" width="1040" height="137"><br>
+<img src="resources/8E6C48BC5EC5EA9359C70B3B2C999C9D.jpg" alt="IMAGE" width="1035" height="235"><br>
+<img src="resources/3A3911AC82AD9DB7EBD9C8B16F1F8277.jpg" alt="IMAGE" width="1006" height="281"><br>
+<img src="resources/3FEC30509DF8573FB32F19EF1E9B9315.jpg" alt="IMAGE" width="1031" height="448"></p>
+<p>The answer we got for our grey metal is very close to lead:</p>
+<p><img src="resources/DEF1648289DC1790047D22071A78F081.jpg" alt="IMAGE" width="913" height="440"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-recitation-20200331.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-lecture-20200428.html';
+}</script>
+    </body>
+    </html>
+  
