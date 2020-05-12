@@ -1,0 +1,114 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-recitation-20200331.html'>PHYS105-recitation-20200331</a>, Previous: <a href='PHYS105-lecture-20200507.html'>PHYS105-lecture-20200507</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-lecture-20200512</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Announcements</h1>
+<p><img src="resources/D572706CD1046AE6A1273B22CB45454C.jpg" alt="IMAGE" width="918" height="682"></p>
+<p>The open ended question on the exam will almost certainly be a heat engine problem.</p>
+<h1>Today</h1>
+<p><img src="resources/4AC1233F3041D9CB7BB221A0824A194A.jpg" alt="IMAGE" width="854" height="382"></p>
+<p>There will be recitation this afternoon.</p>
+<h1>Clickers</h1>
+<p><img src="resources/4346E0A861BC81DC28218D7E53A89C59.jpg" alt="IMAGE" width="850" height="528"><br>
+<img src="resources/E607D8B818EBBB3D08101F09AA3D3CA4.jpg" alt="IMAGE" width="380" height="250"><br>
+<img src="resources/CBD0834DDFD804962934AE0EF878B86B.jpg" alt="IMAGE" width="1006" height="615"></p>
+<hr>
+<p><img src="resources/D3100FC6803BEE22AEA9ACC7C5EBF032.jpg" alt="IMAGE" width="811" height="545"><br>
+<img src="resources/83EC9206A9EF31FB46D8CBBDB7D735AD.jpg" alt="IMAGE" width="1055" height="579"></p>
+<hr>
+<p><img src="resources/0EBE675B6EB164EAEADF2D253648254D.jpg" alt="IMAGE" width="872" height="639"><br>
+<img src="resources/B0511037DDB227DB2E23B0C2901D723E.jpg" alt="IMAGE" width="371" height="308"><br>
+<img src="resources/4D510DD9AF6F71969AFC728ECCD650E3.jpg" alt="IMAGE" width="1058" height="596"></p>
+<h1>Quick review of thermal processes</h1>
+<p>Isobaric (constant pressure)</p>
+<p><img src="resources/33F91750EA6D3E3CBA4C9665E48BC872.jpg" alt="IMAGE" width="1048" height="690"></p>
+<p>Isometric (constant volume)</p>
+<p><img src="resources/C51DBC12185021F59C670D4C489852D1.jpg" alt="IMAGE" width="987" height="423"></p>
+<p>Isothermal (constant temperature)</p>
+<p><img src="resources/8B472D1D378F1BCC6A9C420BEC505426.jpg" alt="IMAGE" width="996" height="465"></p>
+<p>Adiabatic (<span class="MathJax" id="MathJax-Element-2143-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-35682" style="width: 2.641em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.365em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.912em, -0.482em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-35683"><span class="mi" id="MathJax-Span-35684" style="font-family: STIXGeneral-Italic;">q</span><span class="mo" id="MathJax-Span-35685" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-35686" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.107em; vertical-align: -0.294em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-2143">q = 0</script>)</p>
+<p><img src="resources/D9E2AE91FE98FADD4BCA2CFC26713472.jpg" alt="IMAGE" width="1017" height="646"></p>
+<p>Remember:</p>
+<p><img src="resources/775E6FBC62D9B0ED7B5B48DB98F8408A.jpg" alt="IMAGE" width="316" height="146"></p>
+<h1>Discussion</h1>
+<p><img src="resources/87BD548D331C96C4F5D15905E9A68B90.jpg" alt="IMAGE" width="567" height="667"><br>
+<img src="resources/C8DB03C0601984D6E292C0331905D00C.jpg" alt="IMAGE" width="559" height="671"><br>
+<img src="resources/1CE293E97A4F6ECFBF8D091E19BAF042.jpg" alt="IMAGE" width="575" height="693"><br>
+<img src="resources/68F7A913C28AF1015CBD030ACA5F0AAB.jpg" alt="IMAGE" width="581" height="652"></p>
+<p>According to the second law of thermodynamics, there is no perfect heat engine.</p>
+<p><img src="resources/CE453D4901544A854B1E8D3A08058C9A.jpg" alt="IMAGE" width="682" height="700"><br>
+<img src="resources/7E50C6564AC5E65C971A814F1BF16A03.jpg" alt="IMAGE" width="825" height="683"></p>
+<p><img src="resources/1E3D62BFE75CFECD85032A1B99C78BBC.jpg" alt="IMAGE" width="831" height="340"><br>
+<img src="resources/1338845B3D3BB6C6B7E5A680CC109FA0.jpg" alt="IMAGE" width="854" height="521"><br>
+<img src="resources/2CC04DD8AE764F66E166B439DB06C433.jpg" alt="IMAGE" width="828" height="531"><br>
+<img src="resources/FE21563DC34AFE9B2C5ECEF590F4C52C.jpg" alt="IMAGE" width="773" height="680"><br>
+<img src="resources/B69A4FB0B71AD91A466953AA7C85EC07.jpg" alt="IMAGE" width="873" height="546"><br>
+<img src="resources/6C439882A59590D8EAFEC762A3D9A0D7.jpg" alt="IMAGE" width="861" height="673"><br>
+<img src="resources/AC2417521C040D9AB1257A7DDBA666D6.jpg" alt="IMAGE" width="807" height="503"><br>
+<img src="resources/66553FE8CC9E5719ED556A51C4296270.jpg" alt="IMAGE" width="952" height="659"><br>
+<img src="resources/1A9C9BFD1F2277584A28D3D1F925A1E0.jpg" alt="IMAGE" width="843" height="609"><br>
+<img src="resources/50BBB2C038109D3395E518CDB9AFAA5F.jpg" alt="IMAGE" width="874" height="639"><br>
+<img src="resources/CB4CECF1C6414A4A579672C09A37EC44.jpg" alt="IMAGE" width="779" height="544"><br>
+<img src="resources/916F855149E7C3FFD249420C8552E1E8.jpg" alt="IMAGE" width="812" height="354"><br>
+<img src="resources/967A48751CC228544DC0FEED08982DC9.jpg" alt="IMAGE" width="853" height="331"><br>
+<img src="resources/E855042FC66636C2EBE028E34548B09B.jpg" alt="IMAGE" width="873" height="665"><br>
+<img src="resources/470F4066EC81964C4AF3E128F854946F.jpg" alt="IMAGE" width="864" height="646"><br>
+<img src="resources/A65026CA6FFBC666474A8602FC70D36B.jpg" alt="IMAGE" width="871" height="674"><br>
+<img src="resources/F8D99DFC013B626C5D334D9CC83ED0BE.jpg" alt="IMAGE" width="848" height="654"><br>
+<img src="resources/BEDA3F8DE1B28C780129CD11700FE089.jpg" alt="IMAGE" width="880" height="675"><br>
+<img src="resources/AAAFEC55215ECB68787B509F9F954213.jpg" alt="IMAGE" width="876" height="658"><br>
+<img src="resources/C44E990540F23790BC63F2A9301199D1.jpg" alt="IMAGE" width="862" height="660"><br>
+<img src="resources/A9A6F59A918795A4116FA87376C9DF2E.jpg" alt="IMAGE" width="820" height="649"><br>
+<img src="resources/EE0B2A727C73276D62F3DD563E0808D6.jpg" alt="IMAGE" width="406" height="236"><br>
+<img src="resources/FED1B2DB6D3DDB35F61546A2B58C23EE.jpg" alt="IMAGE" width="955" height="707"><br>
+<img src="resources/6C67BD9C8BE8ADA69CC11133F680BFFB.jpg" alt="IMAGE" width="953" height="671"><br>
+<img src="resources/6A795984CC1012DD061F7A9E9EF77FB9.jpg" alt="IMAGE" width="820" height="299"><br>
+<img src="resources/EF7EEF37CCCE99F9AC9D97015CC3C1C7.jpg" alt="IMAGE" width="768" height="422"></p>
+<hr>
+<p><img src="resources/68C06DF6711ACD8303884D37B3885950.jpg" alt="IMAGE" width="859" height="401"><br>
+<img src="resources/89EB446E9D3B22482986EB91E5325CA4.jpg" alt="IMAGE" width="1062" height="268"><br>
+<img src="resources/F6E4C9F4958025F4903BDAE3313CD0B3.jpg" alt="IMAGE" width="943" height="440"><br>
+<img src="resources/2BA6DB9508E0EB26E62F67E262F8F91E.jpg" alt="IMAGE" width="447" height="420"></p>
+<hr>
+<p><img src="resources/59DEE45CAD668779EDBC153AE90E5E63.jpg" alt="IMAGE" width="869" height="573"><br>
+<img src="resources/F8CC6D2D5E4F70FB6974335DC9A25648.jpg" alt="IMAGE" width="908" height="415"><br>
+<img src="resources/DC0E39E47AD552403B348152E7A4F84B.jpg" alt="IMAGE" width="860" height="172"><br>
+<img src="resources/704701E934E14FEA12A1B7B17F85905C.jpg" alt="IMAGE" width="596" height="153"><br>
+<img src="resources/57D6E960C1E650B6952A88BE11DB5249.jpg" alt="IMAGE" width="732" height="241"><br>
+<img src="resources/C6240C26E8D735F95EFE159F8A5E7E7F.jpg" alt="IMAGE" width="737" height="333"></p>
+<hr>
+<p><img src="resources/DDD9A6C9BD907A9D433A4986A73BAA34.jpg" alt="IMAGE" width="843" height="507"><br>
+<img src="resources/0ADEC004B78846C7B6231C26F4825EF2.jpg" alt="IMAGE" width="925" height="580"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-recitation-20200331.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-lecture-20200507.html';
+}</script>
+    </body>
+    </html>
+  
