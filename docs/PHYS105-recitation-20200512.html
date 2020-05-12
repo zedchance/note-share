@@ -1,0 +1,89 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-resources.html'>PHYS105-resources</a>, Previous: <a href='PHYS105-recitation-20200507.html'>PHYS105-recitation-20200507</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHYS105-recitation-20200512</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Announcements</h1>
+<h1>HW</h1>
+<h2>3</h2>
+<p><img src="resources/0C1B11F3451C92719CE0782280ED3582.jpg" alt="IMAGE" width="1049" height="279"><br>
+<img src="resources/8C66D9EED18B24EAEDFC2B9A5DFD0D52.jpg" alt="IMAGE" width="358" height="383"><br>
+<img src="resources/F45F45F4B86FBA390F8A0C920B5E4273.jpg" alt="IMAGE" width="498" height="340"><br>
+<img src="resources/0CB7F67E98383C2571E0C32387A853C9.jpg" alt="IMAGE" width="490" height="424"><br>
+<img src="resources/381A5ACD7B379C2EA400360FBE3B9604.jpg" alt="IMAGE" width="786" height="140"><br>
+<img src="resources/6A9CBF6D633DA897925AB5F34D7FBD39.jpg" alt="IMAGE" width="937" height="160"><br>
+<img src="resources/E1F992BA255FD7FAC147F5B7E52A4C62.jpg" alt="IMAGE" width="990" height="116"><br>
+<img src="resources/22C0B66E203888060A11C550B2DBE676.jpg" alt="IMAGE" width="1125" height="584"><br>
+<img src="resources/EB1B335B8084348E77315ADFF474D376.jpg" alt="IMAGE" width="780" height="114"><br>
+<img src="resources/942161FA261659C46E2087F9C6913759.jpg" alt="IMAGE" width="709" height="217"><br>
+<img src="resources/4C9EDE89E8E0F3867EBF4C5B5CAFFC62.jpg" alt="IMAGE" width="427" height="211"></p>
+<h2>4</h2>
+<p><img src="resources/262C2145309D6879627C7BF400D9C51A.jpg" alt="IMAGE" width="1038" height="423"><br>
+<img src="resources/31DE04DE45DD3F2D90B71BA2AEA4BAF9.jpg" alt="IMAGE" width="391" height="399"><br>
+<img src="resources/3737815A90859E8B2A8C4B637DAFA254.jpg" alt="IMAGE" width="386" height="230"><br>
+<img src="resources/45C0FAA28794BAE86165F6FF5600E203.jpg" alt="IMAGE" width="572" height="333"><br>
+<img src="resources/E924EC2D333970CA06C48D18BA667C19.jpg" alt="IMAGE" width="599" height="150"><br>
+<img src="resources/DB9F2B2649482FC79B26AB18462BF459.jpg" alt="IMAGE" width="327" height="112"><br>
+<img src="resources/A37E1D2B355F0223A2F3A83A72F6CE75.jpg" alt="IMAGE" width="409" height="187"><br>
+<img src="resources/2465B9A82AA5CDAE96A3D0590D2DB975.jpg" alt="IMAGE" width="606" height="36"><br>
+<img src="resources/F2DA342CF20D406838A6BE7C6E0DD650.jpg" alt="IMAGE" width="436" height="168"></p>
+<h2>7</h2>
+<p><img src="resources/388F3BDA663E2AD3DED1C009B704AD01.jpg" alt="IMAGE" width="938" height="240"><br>
+<img src="resources/DA147FB55053CA4C86A699BBB3D14A8A.jpg" alt="IMAGE" width="914" height="423"><br>
+<img src="resources/80E3BE6B1C147162C81FF87044DCDA87.jpg" alt="IMAGE" width="944" height="298"><br>
+<img src="resources/08B834F9043759CBE1A0C443A2445818.jpg" alt="IMAGE" width="141" height="71"><br>
+<img src="resources/4360955CB40EB8BCA5AE5000BBA27A2C.jpg" alt="IMAGE" width="697" height="160"><br>
+<img src="resources/F964A328307594817E9CAA18CD6472FC.jpg" alt="IMAGE" width="548" height="110"></p>
+<p><img src="resources/6777A80E459E614788D227C2D2ADF91C.jpg" alt="IMAGE" width="618" height="173"><br>
+<img src="resources/6B1BF0D16BE10976AC190745E766C2EE.jpg" alt="IMAGE" width="507" height="176"></p>
+<p><img src="resources/CB53FFA8E6696F09E3277413D87167A0.jpg" alt="IMAGE" width="661" height="212"></p>
+<hr>
+<h1>Other questions</h1>
+<p><img src="resources/420A6BA6DDFFF43A8E47893BF812E211.jpg" alt="IMAGE" width="903" height="330"></p>
+<ol start="3">
+<li>It is reflecting all colors because of its crystal structure, so it is not absorbing a lot of heat.</li>
+</ol>
+<p><img src="resources/E7F6828DE584E44A1D5754E5724C4E00.jpg" alt="IMAGE" width="838" height="212"></p>
+<p>It adds a lot of thermal mass so it takes a lot more energy to cool down the entire room.</p>
+<p><img src="resources/4EF376437B29A624F84974124B2142B6.jpg" alt="IMAGE" width="970" height="191"><br>
+<img src="resources/8F6CD99B520317BBA625DD1B8BB1A43D.jpg" alt="IMAGE" width="880" height="193"><br>
+<img src="resources/202979040BC772A9322D3623AFF21BBF.jpg" alt="IMAGE" width="901" height="482"><br>
+<img src="resources/3C43F7256DDD76797B0EC2460A9561E1.jpg" alt="IMAGE" width="888" height="582"></p>
+<p><img src="resources/A2021E60D793E79DFFBD71BDDC6E1ED6.jpg" alt="IMAGE" width="926" height="211"></p>
+<p>Air is a worse conductor of heat than water.</p>
+<p><img src="resources/DE7FC39853D988773FC372010A830547.jpg" alt="IMAGE" width="815" height="333"></p>
+<p>Shiney side will reflect more, so shiny side in lets heat thru then traps it inside.</p>
+<p><img src="resources/83921A35975E777690A7F2DDD1338656.jpg" alt="IMAGE" width="870" height="265"></p>
+<p>The amount of mass in the pot is a lot more so it has a lot more potential to dump out heat to your hand.</p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-resources.html';
+if (e.keyCode === 37) window.location.href = 'PHYS105-recitation-20200507.html';
+}</script>
+    </body>
+    </html>
+  
