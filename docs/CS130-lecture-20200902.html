@@ -23,38 +23,43 @@
       <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='CS130-lecture-20200902.html'>CS130-lecture-20200902</a>, Previous: <a href='CS46-lecture-notes.html'>CS46-lecture-notes</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='CS131-lecture-20200901.html'>CS131-lecture-20200901</a>, Previous: <a href='CS130-lecture-20200831.html'>CS130-lecture-20200831</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>CS130-lecture-20200831</h2>
+        <h2>CS130-lecture-20200902</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"><h1>Syllabus</h1>
-<p><img src="resources/BC1F3EB6441A9E1D7BE730B9AE63C98B.jpg" alt="IMAGE" width="627" height="563"></p>
-<p>The required text is available for free in the school library</p>
-<p><img src="resources/EAD7E3894164A2B18D85649A391F7BDA.jpg" alt="IMAGE" width="574" height="149"><br>
-<img src="resources/CF551E273BB4F28968FAA91761253077.jpg" alt="IMAGE" width="667" height="365"></p>
-<p>Both sections will take the exam together</p>
-<p><img src="resources/7819ADED373D759817920CDE68C05E29.jpg" alt="IMAGE" width="660" height="454"></p>
-<h1>Module 1</h1>
-<p><img src="resources/40B3DFF0CBB3441E7EE5130617A123B4.jpg" alt="IMAGE" width="785" height="505"></p>
-<p>Test cases will usually be provided.</p>
-<p><img src="resources/D58D01FC300B49FBE24F88338F5BBE62.jpg" alt="IMAGE" width="773" height="523"><br>
-<img src="resources/5BD67EDB2808C0F0025CDDA6F173E772.jpg" alt="IMAGE" width="778" height="521"><br>
-<img src="resources/9CBBE2D8AA1E4ED937F54D37264A09D3.jpg" alt="IMAGE" width="783" height="506"><br>
-<img src="resources/56D13736B3A00DBA88315C18867AB0AD.jpg" alt="IMAGE" width="727" height="525"><br>
-<img src="resources/74B1610281BEE33CDDDD8D6C446AB768.jpg" alt="IMAGE" width="534" height="581"><br>
-<img src="resources/0AB4F922C71F586EB8C149691BAF993A.jpg" alt="IMAGE" width="504" height="546"><br>
-<img src="resources/E595C6C88B53C14B51726393401AA442.jpg" alt="IMAGE" width="503" height="548"><br>
-<img src="resources/5BE24AC98BD59AB2E429E426469E98DD.jpg" alt="IMAGE" width="608" height="540"><br>
-<img src="resources/6813D7E47C3C32AA0097C690E36275FF.jpg" alt="IMAGE" width="660" height="558"><br>
-<img src="resources/90FD0595B48A1902DD8D581B8DC6BA43.jpg" alt="IMAGE" width="480" height="524"><br>
-<img src="resources/B76166DF7B7C8C5D5256ED7DC7123953.jpg" alt="IMAGE" width="686" height="529"><br>
-<img src="resources/C71113654A11BAD3ACD1EFB73E142407.jpg" alt="IMAGE" width="663" height="534"><br>
-<img src="resources/55D8EC69434A2B15142DC07930AFF3D8.jpg" alt="IMAGE" width="656" height="540"></p>
-<p><img src="resources/52E0F3265955DF37C7A43636C86A180F.jpg" alt="IMAGE" width="797" height="577"></p>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Concerning the survey from last class</h1>
+<p>The differences between an array and a linked list:</p>
+<ul>
+<li>Access: arrays can access an spot instantly, linked lists need to iterate from the head until they reach the target.</li>
+<li>Size: arrays are fixed in size, linked lists can become bigger or smaller</li>
+</ul>
+<p>Stacks can be implemented using a linked list or an array. FILO</p>
+<p>Queues can be implemented using a linked list or a circular array. FIFO</p>
+<h1>Recursion</h1>
+<p><img src="resources/1BBDB33272B35862C895DE383FB94CCA.jpg" alt="IMAGE" width="827" height="439"></p>
+<p>Recursive functions must have a base case, otherwise you will get an infinite loop!</p>
+<p><img src="resources/D94BC62DD5140A17E8AC18B50A52765B.jpg" alt="IMAGE" width="486" height="530"></p>
+<p><img src="resources/DEB42613B50FA9528637CE042D5B55BF.jpg" alt="IMAGE" width="851" height="452"></p>
+<ol>
+<li>f1 has no base case</li>
+<li>f2 doesn't reduce the problem to the base case (no n - 1)</li>
+<li>f3 needs to check the base case first</li>
+<li>f4 recursive call is infinite when n &gt; 0</li>
+</ol>
+<p><img src="resources/92B7710790AE103646AA0805CA385C2C.jpg" alt="IMAGE" width="850" height="548"></p>
+<h1>Algorithm analysis</h1>
+<p><img src="resources/02EACDDF6766801B1419933893851558.jpg" alt="IMAGE" width="786" height="514"><br>
+<img src="resources/BD8C3CD06443AB4C3703662F43F601F0.jpg" alt="IMAGE" width="804" height="583"><br>
+<img src="resources/5973DF4A0C5B5613F9386A16ECB9D995.jpg" alt="IMAGE" width="786" height="586"><br>
+<img src="resources/529E9098BA54D325B011EC6C42F852EF.jpg" alt="IMAGE" width="759" height="593"><br>
+<img src="resources/01AEB37ADF162598245D72495F4DB76C.jpg" alt="IMAGE" width="799" height="595"><br>
+<img src="resources/9C86864D8E4A4CC4D2A17C97BCE698BF.jpg" alt="IMAGE" width="696" height="514"><br>
+<img src="resources/DDAB387E6E8325E59B7557E75056BB21.jpg" alt="IMAGE" width="733" height="475"><br>
+<img src="resources/FBDB0EC72A69BE433ECFD77103373549.jpg" alt="IMAGE" width="808" height="521"></p>
 </div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'CS130-lecture-20200902.html';
-if (e.keyCode === 37) window.location.href = 'CS46-lecture-notes.html';
+if (e.keyCode === 39) window.location.href = 'CS131-lecture-20200901.html';
+if (e.keyCode === 37) window.location.href = 'CS130-lecture-20200831.html';
 }</script>
     </body>
     </html>
