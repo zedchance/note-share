@@ -1,0 +1,75 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS130-lecture-20200916.html'>CS130-lecture-20200916</a>, Previous: <a href='CS130-lecture-20200909.html'>CS130-lecture-20200909</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS130-lecture-20200914</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Annoucements</h1>
+<p>New webcam usage survey</p>
+<p>Exercise solutions:</p>
+<p><img src="resources/ECD8F005BAB9B831B396F193BEFB7D43.jpg" alt="IMAGE" width="585" height="255"><br>
+<img src="resources/921697BE5D513730CFC2C2A5EF5934A3.jpg" alt="IMAGE" width="587" height="266"><br>
+<img src="resources/30EF3616CC41A4F63E10324F0E9E293E.jpg" alt="IMAGE" width="571" height="169"></p>
+<hr>
+<h1>Runtime analysis cont.</h1>
+<p><img src="resources/65541EFF73BA8407423D25425D583FA1.jpg" alt="IMAGE" width="842" height="582"><br>
+<img src="resources/7F01E7F7E87CA87A17B84C1A31840A12.jpg" alt="IMAGE" width="540" height="471"><br>
+<img src="resources/595B00161AFA2EDA92AE7C99509EF7B3.jpg" alt="IMAGE" width="836" height="583"></p>
+<h1>Space complexity analysis</h1>
+<p><img src="resources/90B2228186C823EDE18553CCB13656F4.jpg" alt="IMAGE" width="741" height="562"></p>
+<p>1MB = <span class="MathJax" id="MathJax-Element-451-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6705" style="width: 1.516em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.351em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.146em, 1000em, 2.365em, -0.478em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-6706"><span class="msubsup" id="MathJax-Span-6707"><span style="display: inline-block; position: relative; width: 1.314em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.478em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-6708" style="font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 0.507em;"><span class="texatom" id="MathJax-Span-6709"><span class="mrow" id="MathJax-Span-6710"><span class="mn" id="MathJax-Span-6711" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">10</span></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.103em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-451">2^{10}</script> kB</p>
+<p><img src="resources/CA73822E543B5AC9E874CB454A9FA87C.jpg" alt="IMAGE" width="148" height="220"><br>
+<img src="resources/8D177FEFA44E0AC98420231275AF241B.jpg" alt="IMAGE" width="804" height="522"></p>
+<p>Strings have the fields: start address, length, offset, hash</p>
+<p><img src="resources/F1B318FE409D865A9973D98A10EFE650.jpg" alt="IMAGE" width="198" height="173"></p>
+<p>For example:</p>
+<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>str = "Java";
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>str1 = str.substring(1, 3);
+</div></div></div></pre>
+<p><img src="resources/A460F81DC74BE2AD12181405669E70EB.jpg" alt="IMAGE" width="526" height="406"></p>
+<p>The space is constant because the sub string isn't copied, just more references are made.</p>
+<p><img src="resources/7AF6AC94AFE6179BA3EE3CBD103F4552.jpg" alt="IMAGE" width="816" height="418"></p>
+<ul>
+<li>c + 4n, so O(n)</li>
+<li><img src="resources/991309B4374D3B0F147B1E999C836EB4.jpg" alt="IMAGE" width="745" height="593"> = O(n*m)</li>
+<li>32 + 64n = O(n)</li>
+</ul>
+<p><img src="resources/96EE64A6178F4C685C388E57DC7DB130.jpg" alt="IMAGE" width="818" height="536"><br>
+<img src="resources/FF85F6535A51F5A873AC65B5C6484896.jpg" alt="IMAGE" width="742" height="585"><br>
+<img src="resources/4643C150AB97095DC2BD5968F76535BF.jpg" alt="IMAGE" width="813" height="510"></p>
+<p>Normally you don't count the space of the parameters or the return.</p>
+<p><img src="resources/A57DBB7053F64680493EC1EA3C0B6974.jpg" alt="IMAGE" width="833" height="561"><br>
+<img src="resources/3370FFA44B7C7FCC497BDCC5B67F2D16.jpg" alt="IMAGE" width="849" height="521"></p>
+<p>Time complexity is O(n)<br>
+Space complexity is O(1)</p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS130-lecture-20200916.html';
+if (e.keyCode === 37) window.location.href = 'CS130-lecture-20200909.html';
+}</script>
+    </body>
+    </html>
+  
