@@ -23,52 +23,19 @@
       <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='CS130-lecture-20200916.html'>CS130-lecture-20200916</a>, Previous: <a href='CS130-lecture-20200909.html'>CS130-lecture-20200909</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='ENGL1B Assignment 8 Notes.html'>ENGL1B Assignment 8 Notes</a>, Previous: <a href='CS131-lecture-20200917.html'>CS131-lecture-20200917</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>CS130-lecture-20200914</h2>
+        <h2>CS131-lecture-20200922</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"><h1>Annoucements</h1>
-<p>New webcam usage survey</p>
-<p>Exercise solutions:</p>
-<p><img src="resources/ECD8F005BAB9B831B396F193BEFB7D43.jpg" alt="IMAGE" width="585" height="255"><br>
-<img src="resources/921697BE5D513730CFC2C2A5EF5934A3.jpg" alt="IMAGE" width="587" height="266"><br>
-<img src="resources/30EF3616CC41A4F63E10324F0E9E293E.jpg" alt="IMAGE" width="571" height="169"></p>
-<hr>
-<h1>Runtime analysis cont.</h1>
-<p><img src="resources/65541EFF73BA8407423D25425D583FA1.jpg" alt="IMAGE" width="842" height="582"><br>
-<img src="resources/7F01E7F7E87CA87A17B84C1A31840A12.jpg" alt="IMAGE" width="540" height="471"><br>
-<img src="resources/595B00161AFA2EDA92AE7C99509EF7B3.jpg" alt="IMAGE" width="836" height="583"></p>
-<h1>Space complexity analysis</h1>
-<p><img src="resources/90B2228186C823EDE18553CCB13656F4.jpg" alt="IMAGE" width="741" height="562"></p>
-<p>1MB = <span class="MathJax" id="MathJax-Element-308-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-5020" style="width: 1.516em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.351em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.146em, 1000em, 2.365em, -0.478em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-5021"><span class="msubsup" id="MathJax-Span-5022"><span style="display: inline-block; position: relative; width: 1.314em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.478em); top: -2.534em; left: 0em;"><span class="mn" id="MathJax-Span-5023" style="font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.712em; left: 0.507em;"><span class="texatom" id="MathJax-Span-5024"><span class="mrow" id="MathJax-Span-5025"><span class="mn" id="MathJax-Span-5026" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">10</span></span></span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.103em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-308">2^{10}</script> kB</p>
-<p><img src="resources/CA73822E543B5AC9E874CB454A9FA87C.jpg" alt="IMAGE" width="148" height="220"><br>
-<img src="resources/8D177FEFA44E0AC98420231275AF241B.jpg" alt="IMAGE" width="804" height="522"></p>
-<p>Strings have the fields: start address, length, offset, hash</p>
-<p><img src="resources/F1B318FE409D865A9973D98A10EFE650.jpg" alt="IMAGE" width="198" height="173"></p>
-<p>For example:</p>
-<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>str = "Java";
-</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>str1 = str.substring(1, 3);
-</div></div></div></pre>
-<p><img src="resources/A460F81DC74BE2AD12181405669E70EB.jpg" alt="IMAGE" width="526" height="406"></p>
-<p>The space is constant because the sub string isn't copied, just more references are made.</p>
-<p><img src="resources/7AF6AC94AFE6179BA3EE3CBD103F4552.jpg" alt="IMAGE" width="816" height="418"></p>
-<ul>
-<li>c + 4n, so O(n)</li>
-<li><img src="resources/991309B4374D3B0F147B1E999C836EB4.jpg" alt="IMAGE" width="745" height="593"> = O(n*m)</li>
-<li>32 + 64n = O(n)</li>
-</ul>
-<p><img src="resources/96EE64A6178F4C685C388E57DC7DB130.jpg" alt="IMAGE" width="818" height="536"><br>
-<img src="resources/FF85F6535A51F5A873AC65B5C6484896.jpg" alt="IMAGE" width="742" height="585"><br>
-<img src="resources/4643C150AB97095DC2BD5968F76535BF.jpg" alt="IMAGE" width="813" height="510"></p>
-<p>Normally you don't count the space of the parameters or the return.</p>
-<p><img src="resources/A57DBB7053F64680493EC1EA3C0B6974.jpg" alt="IMAGE" width="833" height="561"><br>
-<img src="resources/3370FFA44B7C7FCC497BDCC5B67F2D16.jpg" alt="IMAGE" width="849" height="521"></p>
-<p>Time complexity is O(n)<br>
-Space complexity is O(1)</p>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>3Cs</h1>
+<p><img src="resources/87970011980758514001687F2E9B2FDB.jpg" alt="IMAGE" width="833" height="457"><br>
+<img src="resources/DA35ECCF6EA2BB0D346AAC3291753DA4.jpg" alt="IMAGE" width="1022" height="557"></p>
+<p><a href="https://docs.google.com/presentation/d/1zvpwRAHGJwOE9QqhNkLQHHftV6guk7rNxwDQ6RuYhZA/edit#slide=id.g998494e7fd_0_119">https://docs.google.com/presentation/d/1zvpwRAHGJwOE9QqhNkLQHHftV6guk7rNxwDQ6RuYhZA/edit#slide=id.g998494e7fd_0_119</a></p>
+<p><a href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/;WWWSESSIONID=C67B13698C795B1642BC5FB95C52D8F8.www1">https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/;WWWSESSIONID=C67B13698C795B1642BC5FB95C52D8F8.www1</a></p>
 </div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'CS130-lecture-20200916.html';
-if (e.keyCode === 37) window.location.href = 'CS130-lecture-20200909.html';
+if (e.keyCode === 39) window.location.href = 'ENGL1B Assignment 8 Notes.html';
+if (e.keyCode === 37) window.location.href = 'CS131-lecture-20200917.html';
 }</script>
     </body>
     </html>
