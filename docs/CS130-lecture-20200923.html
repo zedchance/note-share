@@ -1,0 +1,67 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS131-HW3.html'>CS131-HW3</a>, Previous: <a href='CS130-lecture-20200921.html'>CS130-lecture-20200921</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS130-lecture-20200923</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Annoucements</h1>
+<p>Assignment 1 has unlimited attempts, the last attempt counts.</p>
+<h1>Substrings</h1>
+<p><img src="resources/2A36F80DCD1D42BAE58AB99D29B9AE22.jpg" alt="IMAGE" width="334" height="188"><br>
+<img src="resources/008B4D65BB63E764FF8128E69D9C3AD1.jpg" alt="IMAGE" width="477" height="356"></p>
+<h1>Quicksort cont.</h1>
+<p><img src="resources/95BD2C6680D771373755E4510491681B.jpg" alt="IMAGE" width="777" height="453"><br>
+<img src="resources/3E6C81ABE54BE117D51180065FE07DB1.jpg" alt="IMAGE" width="843" height="549"><br>
+<img src="resources/5F9F6C709B4EAB6D0C334DB90129ACDF.jpg" alt="IMAGE" width="563" height="153"><br>
+<img src="resources/4467FF2A0EA0C1F21102A9BD0C58809F.jpg" alt="IMAGE" width="567" height="212"><br>
+<img src="resources/B9222788E1C02BD786857CD46C6BF25D.jpg" alt="IMAGE" width="554" height="214"><br>
+<img src="resources/8503123897BD65FFB629CFE24A05FF01.jpg" alt="IMAGE" width="555" height="220"><br>
+<img src="resources/9C3F5954D7C82F3B0C1BCF6221CA1997.jpg" alt="IMAGE" width="567" height="205"><br>
+<img src="resources/97362373587A439B4D7E6A3FBDF449D4.jpg" alt="IMAGE" width="556" height="191"><br>
+<img src="resources/BAF119CB4451D02D28CDB3A54E3DCFE0.jpg" alt="IMAGE" width="567" height="191"><br>
+<img src="resources/0360DE1E742EA0394F8D601AAE909F6F.jpg" alt="IMAGE" width="549" height="191"><br>
+<img src="resources/CF161BA25FF43726D195F96EFA0C4D28.jpg" alt="IMAGE" width="551" height="176"><br>
+<img src="resources/41A4A74C07CAC30E5293B9EB5208F619.jpg" alt="IMAGE" width="559" height="237"><br>
+<img src="resources/437F93E92330FA674D40AE3A17A90298.jpg" alt="IMAGE" width="569" height="236"></p>
+<p><img src="resources/BEAFE0904F73D911E86E775F3951DBD8.jpg" alt="IMAGE" width="840" height="593"></p>
+<p>Space complexity is O(1).<br>
+Running time is O(n).</p>
+<p>Exercise posted:</p>
+<p><img src="resources/016DC5D9C81B1E03C44B229AE9CC5CB9.jpg" alt="IMAGE" width="818" height="591"></p>
+<p><img src="resources/554AAA80D8B8A4489720C8884F3BE57D.jpg" alt="IMAGE" width="759" height="462"><br>
+<img src="resources/5AD4ED84E62EDEBDA15D8F6670C44BC4.jpg" alt="IMAGE" width="806" height="597"></p>
+<p>Space complexity best case is O(log(n)), and worst case is O(n).<br>
+Running time best case is O(log(n)), and worst case is O(n).</p>
+<p><img src="resources/303362FFFFBD189FAAAA76A6E25285C2.jpg" alt="IMAGE" width="816" height="537"><br>
+<img src="resources/4335E10B59DC02E50D358323B8698A44.jpg" alt="IMAGE" width="813" height="544"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS131-HW3.html';
+if (e.keyCode === 37) window.location.href = 'CS130-lecture-20200921.html';
+}</script>
+    </body>
+    </html>
+  
