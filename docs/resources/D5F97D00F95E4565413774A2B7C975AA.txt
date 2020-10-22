@@ -1,0 +1,39 @@
+                                    Mid-Term Review
+
+Contents
+    Everything covered from Module 1 to Module 6
+
+Analysis of algorithm
+    Asymptotic notations
+    Best-case, average-case, worst-case
+    Be able to provide time and space analysis for an given algorithm
+
+Memory of a process
+    What are the four sections? (code, data, heap, stack)  What does each section contain?
+    Understand function call and stack-based memory allocation
+
+Recursion
+    Base case
+    Recursive vs. iterative approach, every recursive method can be implemented iteratively
+    Consider stack-based memory allocation in space analysis
+
+Sorting Algorithms
+    merge sort, quick sort, heap sort, count sort, radix sort
+    Sorting algorithm implementation & application, performance analysis and comparison
+
+Data structures
+	Binary tree
+	Complete binary tree, priority queue, binary max/min heap
+  Binary search tree
+  Common operations for each data structure and their implementation
+  Usages of data structures
+
+Question types
+    Single or Multiple choices
+    Short answer
+    Algorithm analysis (time and space)
+
+Note
+    The best way to prepare for the exam is to review class notes and related sections in the text book,
+    and redo in-class exercises as well as homework questions.
+    The mid-term exam will be open-book and open-notes.
