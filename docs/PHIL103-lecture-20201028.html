@@ -1,0 +1,123 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHYS105-lab-20200326.html'>PHYS105-lab-20200326</a>, Previous: <a href='PHIL103-lecture-20201024.html'>PHIL103-lecture-20201024</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHIL103-lecture-20201028</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Corporate Social Responsibility</h1>
+<h2>Markets, recap...</h2>
+<ul>
+<li>Market mechanisms vs political mechanisms for resource allocation</li>
+<li>You get (more!) effecient coordination without central direction in a system of property, contract, and consent.</li>
+<li>Private vices translate into public benefits</li>
+<li><em>Social</em> obligations?</li>
+</ul>
+<h2>CSR</h2>
+<ul>
+<li>Friedman's main complain: "socially responsible" business amounts to a kind of fraud</li>
+<li>A violation of the fiduciary relatioinship between principal (owners, shareholders) and agent (CEO, management).</li>
+</ul>
+<h2>Examples</h2>
+<ul>
+<li>Reducing emissions more than the law requires to offset global warming</li>
+<li>Using more expensive domestic suppliers to keep American indsutry strong</li>
+<li>Keeping on unproductive workers to save jobs</li>
+<li>Keeping a failing, obsolete factory open to save a local community</li>
+</ul>
+<h2>Using other people's money without their consent</h2>
+<ul>
+<li>A business executive needs to decide whether or not to close an unprofitable division. Who would be affected?</li>
+<li>Stakeholders: shareholders of corporation, but also employees, customers, suppliers, and local community of the company.</li>
+<li>"Creative destruction"</li>
+<li>Larry the Liquidator</li>
+</ul>
+<p>So who's the better fiduciary?</p>
+<h2>Principal-agent problems</h2>
+<ul>
+<li>Separation of ownership (shareholders) and control (CEO, management).</li>
+<li>Gekko says "greed is good." Why?</li>
+<li>Problems in corporations are primarily the result of a <em>lack of managerial accountability</em>.</li>
+</ul>
+<h2>What happens if managers are told to serve multiple masters?</h2>
+<ul>
+<li>Endangers incentives that encourage managers to make very poor decisions.</li>
+<li>Makes it difficult to detect the rent-seeking behavior of corporate managers because they aren't scrutinized according to the profitability of the firm.</li>
+<li>And Friedman's position actually makes the actions of managers more tractable – prevents corporate managers from being able to concentrate benefits on themselves, while dispersing costs on unsuspecting shareholders.</li>
+</ul>
+<h2>A diagnosis</h2>
+<ul>
+<li>The problem is a stakeholder-type approach that makes it very difficult to detect the rent-seeking behavior of corporate managers because they aren't scrutinized according to the profitability of the firm.</li>
+</ul>
+<h2>Friedman's claim</h2>
+<p>"There is one and only one social responsibility for business – to use its resources and engage in activities designed to increase its profits so long as it stays within the rules of the game."</p>
+<p>Friedman's argument implies either</p>
+<ol>
+<li>Managers (CEOs) should do whatever it takes to maximize profit (shareholder interests), so long as they don't break the law, <em>OR</em></li>
+<li>Managers should maximize profit, but only in ways that observe their pre-existing moral duties.</li>
+</ol>
+<p>Option 1 makes the view false, or option 2 makes the view vacuous.</p>
+<h2>Heath's market failures approach to ethics in business</h2>
+<h3>Thesis</h3>
+<ul>
+<li>The market will force firms to be ethical (or, ethical enough). <em>Really?</em></li>
+</ul>
+<h2>"Pharma bro" Martin Shkreli</h2>
+<p>Shkreli bought the rights of a drug that started at $13 per pill, and raised the price to $750 per pill. He was able to take the monopoly situation because there was only a certain group of people who needed the situation. Other companies had to go through a long rigaramole to create their own version of the drug, so he had a monopolized market for a while.</p>
+<h2>Typical argument (in reponse to market failure)</h2>
+<ol>
+<li>Idealized perfectly competitive economic model of a market would achieve some socially optimal (or Pareto efficient) outcome.</li>
+<li>Real world market fails to achieve that outcome: "Market failure!"</li>
+<li>Implement an interventionist solution.</li>
+</ol>
+<h2>What is a market failure?</h2>
+<ul>
+<li>Not just a market outcome that you don't like</li>
+<li>A (free) market failed to generate an efficient outcome.</li>
+<li>Not all the costs associated with a private transaction are internalized?</li>
+<li>Or, certain goods/services will tend to be under-provided by the market because of a lack of incentives.</li>
+<li>An institution failed in some way: the market.</li>
+</ul>
+<h2>Heath's argument</h2>
+<ol>
+<li>Idealized perfectly competitive economioc model of a market would achieve some socially optimal (or Pareto efficient) outcome.</li>
+<li>Real world market fails to achieve that outcome: "Market failure!"</li>
+<li>Business have a morally responsibility to act in ways that correct for these inefficiencies.</li>
+</ol>
+<h2>Three kinds of rules</h2>
+<ol>
+<li>Recognition rules: rules about the making of rules, rules that rules have to answer to.</li>
+<li>Rules of the game: formal rules governing "play."</li>
+<li>Rules <em>in</em> the game: informal rules governing "play."<br>
+This third area is where business ethics is important.</li>
+</ol>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHYS105-lab-20200326.html';
+if (e.keyCode === 37) window.location.href = 'PHIL103-lecture-20201024.html';
+}</script>
+    </body>
+    </html>
+  

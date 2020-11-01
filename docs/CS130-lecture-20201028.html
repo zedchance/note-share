@@ -1,0 +1,85 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS130-priority-queues.html'>CS130-priority-queues</a>, Previous: <a href='CS130-lecture-20201021.html'>CS130-lecture-20201021</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS130-lecture-20201028</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>2-3 Tree</h1>
+<p><img src="resources/2F44211A61AD038BB581CCDA5C911FD4.jpg" alt="IMAGE" width="752" height="518"></p>
+<ol>
+<li>An empty tree is a 2-3</li>
+<li>A BST is a 2-3 search tree</li>
+<li>no</li>
+<li>is yes</li>
+</ol>
+<p><img src="resources/8F06620D1A29B4DA8D207BC0AF57A208.jpg" alt="IMAGE" width="725" height="462"><br>
+<img src="resources/710B20DD47DFF933F7CBF0E92B20C4C6.jpg" alt="IMAGE" width="645" height="396"><br>
+<img src="resources/C6EBEDEA050EC80CB62EE37D959F33D9.jpg" alt="IMAGE" width="338" height="234"><br>
+<img src="resources/52EAB689EA8C767209CC2C0136998A37.jpg" alt="IMAGE" width="426" height="250"><br>
+<img src="resources/E9BFA0DAABEE2E20F6B360D67056FFF6.jpg" alt="IMAGE" width="393" height="243"></p>
+<p>Search miss</p>
+<p><img src="resources/B6B77E37E49A82D4A9A6C6055E787C2F.jpg" alt="IMAGE" width="400" height="246"><br>
+<img src="resources/BE4EFC0EA509C31D0268BACC98C9CDD2.jpg" alt="IMAGE" width="425" height="240"><br>
+<img src="resources/ADA241FEE34293FD3D60179D5E6C53E7.jpg" alt="IMAGE" width="431" height="262"><br>
+<img src="resources/C96730AFE11208B1D8E2EF86E3BA79C2.jpg" alt="IMAGE" width="443" height="221"><br>
+<img src="resources/C9508FF8D663B2F8AA1C2E18369085E2.jpg" alt="IMAGE" width="571" height="300"></p>
+<p>Worst case running time for 2-3 tree search is O(lgn). Remember the height of a 2-3 tree is between <span class="MathJax" id="MathJax-Element-491-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8814" style="width: 6.203em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.574em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.966em, -0.654em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-8815"><span class="mi" id="MathJax-Span-8816" style="font-family: STIXGeneral-Italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span class="mi" id="MathJax-Span-8817" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span class="mi" id="MathJax-Span-8818" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-8819" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-8820" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.023em;"></span></span><span class="mo" id="MathJax-Span-8821" style="font-family: STIXGeneral-Regular;">(</span><span class="msubsup" id="MathJax-Span-8822"><span style="display: inline-block; position: relative; width: 1.82em; height: 0px;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.921em, -0.488em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8823" style="font-family: STIXGeneral-Regular;">log</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.055em; left: 1.351em;"><span class="mn" id="MathJax-Span-8824" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">3</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mo" id="MathJax-Span-8825"></span><span class="mi" id="MathJax-Span-8826" style="font-family: STIXGeneral-Italic; padding-left: 0.188em;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span class="mo" id="MathJax-Span-8827" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.175em; vertical-align: -0.355em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-491">floor(\log_3 N)</script> and <span class="MathJax" id="MathJax-Element-492-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-8828" style="width: 5.953em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.349em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.682em, 1000em, 2.944em, -0.654em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-8829"><span class="mi" id="MathJax-Span-8830" style="font-family: STIXGeneral-Italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.146em;"></span></span><span class="mi" id="MathJax-Span-8831" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span class="mi" id="MathJax-Span-8832" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-8833" style="font-family: STIXGeneral-Italic;">o</span><span class="mi" id="MathJax-Span-8834" style="font-family: STIXGeneral-Italic;">r<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.023em;"></span></span><span class="mo" id="MathJax-Span-8835" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-8836" style="font-family: STIXGeneral-Italic;">l<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.001em;"></span></span><span class="mi" id="MathJax-Span-8837" style="font-family: STIXGeneral-Italic;">o</span><span class="msubsup" id="MathJax-Span-8838"><span style="display: inline-block; position: relative; width: 0.976em; height: 0px;"><span style="position: absolute; clip: rect(1.924em, 1000em, 2.909em, -0.499em); top: -2.534em; left: 0em;"><span class="mi" id="MathJax-Span-8839" style="font-family: STIXGeneral-Italic;">g</span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; top: -2.067em; left: 0.507em;"><span class="mn" id="MathJax-Span-8840" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 2.309em;"></span></span></span></span><span class="mi" id="MathJax-Span-8841" style="font-family: STIXGeneral-Italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.06em;"></span></span><span class="mo" id="MathJax-Span-8842" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.151em; vertical-align: -0.33em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-492">floor(log_2 N)</script>. So in the worst case it searches the entire height of the tree + 1.</p>
+<p><img src="resources/103274EC33EACC15F4A4CB0C85A21233.jpg" alt="IMAGE" width="613" height="471"></p>
+<p>It inserts it into the 3 node to preserve the balance of the 2-3 tree.</p>
+<p><img src="resources/45A17A5687D7E4B6AF63846571DAEA7E.jpg" alt="IMAGE" width="699" height="437"></p>
+<p>Creates a temporary 4 node, then it splits.</p>
+<p><img src="resources/BEA3769542C5B21962FED3822328FF93.jpg" alt="IMAGE" width="629" height="522"><br>
+<img src="resources/AE25F3775A2CCD877F0D896CA0C9F692.jpg" alt="IMAGE" width="722" height="521"><br>
+<img src="resources/B2028D4B52C46F42EDDA6B49C2A2FBD2.jpg" alt="IMAGE" width="733" height="528"></p>
+<p>The worst-case running time for 2-3 tree insertion is O(lgn)</p>
+<p><img src="resources/703DACC4C4D56D6789E38A9CD3A01126.jpg" alt="IMAGE" width="734" height="424"><br>
+<img src="resources/58FF896FE6B2DDA67964391AC7BC2888.jpg" alt="IMAGE" width="734" height="466"><br>
+<img src="resources/B423B313D03500FDF763C4062E0A3756.jpg" alt="IMAGE" width="731" height="250"><br>
+<img src="resources/78EF293B740C03B52B77ED503C4CE66E.jpg" alt="IMAGE" width="734" height="470"><br>
+<img src="resources/A021C2DA74C2277D71D422FFD708C131.jpg" alt="IMAGE" width="1387" height="956"></p>
+<p><img src="resources/BD019166690AA118F1D701C2CD3E0ED8.jpg" alt="IMAGE" width="742" height="516"></p>
+<p>Invalid red-black BSTs</p>
+<p><img src="resources/154B97C6CA42EF448F27DEB6FCF2319D.jpg" alt="IMAGE" width="265" height="149"><br>
+<img src="resources/76E5353F6F2F8F0F1D57ED84BBD318A5.jpg" alt="IMAGE" width="162" height="165"><br>
+<img src="resources/CA8AC93B23AA703B1385EB38998F5943.jpg" alt="IMAGE" width="599" height="559"></p>
+<p>This is perfectly "black balanced" because each null leaf is 2 black links to the root. The height is 4 because you consider both black and red links.</p>
+<p><img src="resources/08B8E29E7EEEE0D5389DD81518F634C6.jpg" alt="IMAGE" width="731" height="470"></p>
+<ol>
+<li><strong>(i)</strong> is not black balanced, so not red-black BST<br>
+<strong>(ii)</strong> is not black balanced, also key order is wrong, so not red-black BST<br>
+<strong>(iii)</strong> is black balanced, special case where there is no red links (but they're not required), so yes it is a red-black BST<br>
+<strong>(iv)</strong> is black balanced, and red links are valid, key order is good, so red-black BST</li>
+<li></li>
+</ol>
+<p><img src="resources/2F3B58D476F557B4663E3716FC904380.jpg" alt="IMAGE" width="724" height="479"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS130-priority-queues.html';
+if (e.keyCode === 37) window.location.href = 'CS130-lecture-20201021.html';
+}</script>
+    </body>
+    </html>
+  

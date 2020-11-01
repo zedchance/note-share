@@ -1,0 +1,146 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='PHIL103-lecture-20200831.html'>PHIL103-lecture-20200831</a>, Previous: <a href='MATH31-unit-3.html'>MATH31-unit-3</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>PHIL103-ec-lectures</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Marybeth Gasman: Are we ready to educate a diverse nation?</h1>
+<p>The landscape of higher education</p>
+<ul>
+<li>2014, for the first time the nation's study body, K-12, was majority students of color</li>
+<li>2019, almost half (45%) of the nation's college students are students of color</li>
+<li>2050, census data predicts that the US will be majority people of color</li>
+</ul>
+<p>Faculty</p>
+<ul>
+<li>
+<p>88% of faculty at 60 top research universities is White</p>
+</li>
+<li>
+<p>76% of the nation's faculty overall is White</p>
+</li>
+<li>
+<p>5% of faculty are Latinx compared to 20% of undergraduate population, 2% growth in 20 years</p>
+</li>
+<li>
+<p>6% of faculty are black compared to 14% of undergraduate population, 1% growth in 20  years</p>
+</li>
+<li>
+<p>11% of faculty are Asian compared to 7% of the undergraduate population</p>
+<p><img src="resources/3BF3B653D149D8DA74A1DD20BEBC64E8.jpg" alt="IMAGE" width="473" height="513"></p>
+</li>
+</ul>
+<p>How teaching needs to change a diverse nation</p>
+<ul>
+<li>Assume success on the part of the students rather than seeing students of color from a deficit perspective.
+<ul>
+<li>Faculty should believe in their students success (even sometimes more so than the student believes in themselves)</li>
+</ul>
+</li>
+<li>Teach in ways that focus on what the students need to learn rather than what is convenient for the professor.</li>
+<li>Work together to co-construct classes and cirricula that empowers the students.</li>
+</ul>
+<p>Changing teaching to educate a diverse nation</p>
+<ul>
+<li>Allow students to bring their full identities to the classroom and capitalize on all aspects of a student's identity in the learning process</li>
+<li>Give students the opportunity to participate in culturally relevant assignments that speak to the issues in the communities from which they come.</li>
+<li>Encourage students collaboration over competition.</li>
+</ul>
+<p>The role today's students can play, consider becoming a professor, why?</p>
+<ol>
+<li>Opportunity to challenge and shape the minds of the next generation</li>
+<li>Chance to pursue your ideas</li>
+<li>Opportunity to have an impact on society with your research and teaching.</li>
+</ol>
+<p>The role today's faculty can play</p>
+<ol>
+<li>Encourage your students to pursue the professoriate as a career.</li>
+<li>Introduce your students to research of various types.</li>
+<li>Share the various aspects of your faculty career with your students so they understand faculty life.</li>
+<li>Show enthusiasm for your teaching, research and career so that students understand the positive aspects of being a professor.</li>
+</ol>
+<h1>Eric Helland: Why are the prices so damn high?</h1>
+<p><img src="resources/A7A2F066AD5D575B3559559D14E8FA21.jpg" alt="IMAGE" width="546" height="397"></p>
+<p>Why?</p>
+<ul>
+<li>Lazy rivers and other waste?</li>
+<li>Administrative costs?</li>
+<li>Increases in quality?</li>
+</ul>
+<p>Administrators</p>
+<ul>
+<li>The reason college tuition costs so much is "the constant expansion of university administration"</li>
+</ul>
+<p>Bloat</p>
+<p><img src="resources/6BF0AB8FACE04612936F06092A44748D.jpg" alt="IMAGE" width="938" height="364"></p>
+<p>Increase in quality?</p>
+<p><img src="resources/A7FABB0924EAF3468C492F23E899CDD4.jpg" alt="IMAGE" width="545" height="397"><br>
+<img src="resources/728CC270F29C7F9A6FCDB90E1C0F44D3.jpg" alt="IMAGE" width="556" height="400"></p>
+<p>Why should higher quality increase cost?</p>
+<ul>
+<li>What we teach has improved in quality (in some cases), but these kinds of improvements cannot explain increases in costs. It is no more expensive to teach new theories than old</li>
+<li>Why should quality increase cost?</li>
+</ul>
+<p>If not bloat or quality then what?</p>
+<p><img src="resources/AADB01C93A8AA42F697B34B121A28D29.jpg" alt="IMAGE" width="913" height="411"><br>
+<img src="resources/E4DD9D319282EE16745FDF702C4526BC.jpg" alt="IMAGE" width="563" height="406"></p>
+<p>It really looks like the story is the cost of faculty is the big driver in the rise of tuition.</p>
+<p>Health care: note fastest increase in 60s and 70s</p>
+<p><img src="resources/3F836481BB9B7F652FCDBEDD299AB72D.jpg" alt="IMAGE" width="541" height="385"></p>
+<ul>
+<li>Waste and administrative costs are plausible reasons why the US health care costs system is expensive but less so for why costs have grown over time.</li>
+<li>If growth in admin costs explain the growth in health care costs, then admin costs would have to grown by 8k%, even assuming that base health care costs had doubled. These numbers are not plausible.</li>
+</ul>
+<p><img src="resources/AD34AEB98035B7F15D154342AD2B0281.jpg" alt="IMAGE" width="894" height="411"><br>
+<img src="resources/98597E41D1324E7CB8052C81D716DB8E.jpg" alt="IMAGE" width="870" height="407"></p>
+<p>The costs have been driven by the salaries</p>
+<p><img src="resources/4750A96D06149DE6CD4DD63C027ABA9E.jpg" alt="IMAGE" width="557" height="401"><br>
+<img src="resources/73B06BA84D9E9A7C320A6FF728C04121.jpg" alt="IMAGE" width="562" height="405"></p>
+<p>But why do wages increases lead to price increases in some industries but not others?</p>
+<p><img src="resources/19D9B00DAD0512BAE831E93ED1B240E4.jpg" alt="IMAGE" width="906" height="520"><br>
+<img src="resources/23246F42887AD284CC431AD92A8E3378.jpg" alt="IMAGE" width="638" height="491"></p>
+<p>Relative productivity growth</p>
+<p><img src="resources/DAA33BFF25D65047562231D76C7F9783.jpg" alt="IMAGE" width="566" height="403"></p>
+<p>Unique aspects of the Baumol Effect</p>
+<p><img src="resources/A9F27CAE81FDBADE0E18E198D057E965.jpg" alt="IMAGE" width="874" height="371"><br>
+<img src="resources/55BE4E46A6AAA65FFD97DEFB9EBFD066.jpg" alt="IMAGE" width="855" height="358"><br>
+<img src="resources/4D1924F0D9D01179E9A78BA360F6C106.jpg" alt="IMAGE" width="858" height="315"><br>
+<img src="resources/8462EF7CFA7D3899481BC226F5631C7C.jpg" alt="IMAGE" width="862" height="383"><br>
+<img src="resources/264C8439DA3892281059ED76586CB4BF.jpg" alt="IMAGE" width="883" height="399"><br>
+<img src="resources/7FE26F69A00EA1DE5EC732B107E475EF.jpg" alt="IMAGE" width="867" height="272"><br>
+<img src="resources/CA0E888ED807D83479836FEDF6152DAC.jpg" alt="IMAGE" width="860" height="328"><br>
+<img src="resources/AF1176304BCC9128E6153D940CD5F03F.jpg" alt="IMAGE" width="809" height="81"><br>
+<img src="resources/3F78ACE3CEC83B4524049988F0433FFA.jpg" alt="IMAGE" width="868" height="188"><br>
+<img src="resources/62C6863381CB381A66EC0CB65CA1A11E.jpg" alt="IMAGE" width="887" height="359"><br>
+<img src="resources/309A8049682502C117D194731F9A4A49.jpg" alt="IMAGE" width="523" height="355"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'PHIL103-lecture-20200831.html';
+if (e.keyCode === 37) window.location.href = 'MATH31-unit-3.html';
+}</script>
+    </body>
+    </html>
+  
