@@ -1,0 +1,64 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS131-lecture-20201105.html'>CS131-lecture-20201105</a>, Previous: <a href='CS131-lecture-20201029.html'>CS131-lecture-20201029</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS131-lecture-20201103</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p><img src="resources/64DE7D5EC0E39613EF016021F343D5DF.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/4E9B4E960B39A99D213C5D7A966A98A6.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/AE16518981B128F6273602428D4DEABA.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/B51DA59D80D22DCFBB3AC2CB34A12A9E.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/8ED010BA70DD469560FA83179F1CE717.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/CDAC2252D014BCEBAD408872430DE87B.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/2CCC51003E3FDEE64686AC32AD101671.jpg" alt="IMAGE" width="1241" height="675"></p>
+<p><a href="https://www.youtube.com/watch?v=UI6lqHOVHic">https://www.youtube.com/watch?v=UI6lqHOVHic</a></p>
+<p><img src="resources/2C20786568A76ADA4667A99EDA10D54F.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/2643959771DC91F402DBEC2F897830D7.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/B4D52D7CB80C0A8C668ED0DBFF4026F6.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/34628EC430749FFE6A6042373C541637.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/BC8CFD75819F14236249A9C8235E8FA8.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/29EDB59540483BD23FAB03D947D9AB1A.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/5395740B0BB4139A5EEB4A036650B8C6.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/1AD8B80B52D9F548F70353DF903B87F2.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/26F5FE5A3F9C4186977D6418C9EDD473.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/57409C009DAB9265BB76E01FFE5733A9.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/EF30B1231DC4DA6A1405590660D0BA00.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/CFE9A6CECD060FFB9927BF151C1A4F22.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/53EBD643DDF0F7E9F146687BBB92C0B6.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/BB4BFF3091D1BEF65DAB18B9C4B9D02D.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/3B8B6EEE7AD117C4EEBB7ADCB1409D88.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/557ED923D2C91AC5A4FC802788AB60F3.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/A6E95CE9892ECE7E56155F3C98647591.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/1CFB45372696FE262BA454E3719BDFB1.jpg" alt="IMAGE" width="1241" height="675"><br>
+<img src="resources/12C7DD91C4E401E377BD785F1EC1221F.jpg" alt="IMAGE" width="1241" height="675"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS131-lecture-20201105.html';
+if (e.keyCode === 37) window.location.href = 'CS131-lecture-20201029.html';
+}</script>
+    </body>
+    </html>
+  
