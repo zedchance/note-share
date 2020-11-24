@@ -1,0 +1,66 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS131-project-diagram.html'>CS131-project-diagram</a>, Previous: <a href='CS131-lecture-20201112.html'>CS131-lecture-20201112</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS131-lecture-20201119</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p><img src="resources/065D98A1F8D8234315F4437C2D2090BC.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/034971877F88C42D692E374B457733A1.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/B7218236508D9EA0A4A7168D3BFFD4F3.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/98ADAA6C53238C5B2E5F318D141F1319.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/A0C2EA0F195FDB6128EEBDBCE166BB0B.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/C9E2C0FD23D43CFE76BB2B2EF45ADA69.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/4C689AF95EB29F11ECBBE7900EA93576.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/5D46038F6FB2B79250C9F79634F48706.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/3EDDA8B2BCA40110BCA34E7736AE434B.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/4D481D4B97495D472BAFCACFB9438D89.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/2F1573A6C372AA0848A9EE34726ADBF9.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/D33FCED55C11242AF75EA67B948515D0.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/C454CC4D2B2EEBB51AA5C8A9F01C5358.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/8AB97DFEEF2D4101248A0861C078B68A.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/0EE9995BC85DA0F7D6664A3BAE90F0D7.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/03EA59C8A260AA0E86A549C9B48C619E.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/B14A7E9261B45E0DE35DCE4E926797F0.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/8474B8657BEC199817576CC86B6F068B.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/5FB545802A47C385BFD842E0C07C090E.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/46C0BFB37FAF9930C85B9F32B1E4412E.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/BBD010C270EBE36B22B4A83CA323BFB2.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/628458750B57CD9B390B6952BD3902BE.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/BCDE4CF0242881F324953AF2FA607EA3.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/6F3B1FC69E022C05548B391D07A88CDE.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/FCD1740CE70E4FE227A27FB8753B437B.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/70A23AF1A0054F37C89B6CA36FE614BA.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/364578F249E0123712D79E13F4F7B141.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/E4AB123884F956D815B6A2FCF548C4BA.jpg" alt="IMAGE" width="1265" height="673"><br>
+<img src="resources/E85502FB925E96D6F1236ED144DC0A4C.jpg" alt="IMAGE" width="1265" height="673"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS131-project-diagram.html';
+if (e.keyCode === 37) window.location.href = 'CS131-lecture-20201112.html';
+}</script>
+    </body>
+    </html>
+  
