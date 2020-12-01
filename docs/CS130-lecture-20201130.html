@@ -1,0 +1,125 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS130-priority-queues.html'>CS130-priority-queues</a>, Previous: <a href='CS130-lecture-20201125.html'>CS130-lecture-20201125</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS130-lecture-20201130</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Exercise solns</h1>
+<p><img src="resources/EDFB4E1CA97568E7EBF9130338984027.jpg" alt="IMAGE" width="747" height="509"><br>
+<img src="resources/9F48D00C2A787676546BC7A91DB58CF4.jpg" alt="IMAGE" width="747" height="509"><br>
+<img src="resources/91AEFAFC4118794CCFA854B5A8FFD006.jpg" alt="IMAGE" width="408" height="439"></p>
+<h1>Graph cont.</h1>
+<p><img src="resources/3A9B08216B5D4815CC8B8023C0CD74AD.jpg" alt="IMAGE" width="779" height="556"></p>
+<p>Gets shortest path because it starts by searching all edges that are 1 away, then 2 away, and so forth.</p>
+<p>Tracing the BFS implementation</p>
+<p><img src="resources/2F15414264B5237FF8F395DB39A69AD6.jpg" alt="IMAGE" width="689" height="627"><br>
+<img src="resources/69132E5EFF072EC6ED57400DC18885E4.jpg" alt="IMAGE" width="728" height="627"><br>
+<img src="resources/1D3E9BE710EA5945A73444871041F154.jpg" alt="IMAGE" width="728" height="627"></p>
+<p>Enter the loop</p>
+<p><img src="resources/049463560E0EDC3CDC59CBD2396FB538.jpg" alt="IMAGE" width="728" height="627"><br>
+<img src="resources/04E066758B696A9EB408AD5C6AEF6175.jpg" alt="IMAGE" width="728" height="627"><br>
+<img src="resources/6B4152AF68D512A73C708942BA6CB559.jpg" alt="IMAGE" width="728" height="627"><br>
+<img src="resources/65F481DA89685529BDF0BE141A1C98E4.jpg" alt="IMAGE" width="728" height="627"><br>
+<img src="resources/AC0FCE8BDF537F35F36355BE831E92CA.jpg" alt="IMAGE" width="728" height="627"><br>
+<img src="resources/85F36870E18FB8E3A47D7E0AF4F052CA.jpg" alt="IMAGE" width="754" height="627"><br>
+<img src="resources/C80C902B088706831C2663A741064C5B.jpg" alt="IMAGE" width="769" height="627"><br>
+<img src="resources/AF5BA0C5F987B26725FC526EA5739B0F.jpg" alt="IMAGE" width="769" height="627"><br>
+<img src="resources/9DD25BE302C45687891AD87D82B1D0D5.jpg" alt="IMAGE" width="804" height="627"><br>
+<img src="resources/48D0C0230077FA26C1F1A5D1CDF0AC6A.jpg" alt="IMAGE" width="804" height="627"><br>
+<img src="resources/3EE60C9842682EBCB45B03F7FF39238D.jpg" alt="IMAGE" width="804" height="627"><br>
+<img src="resources/C963CC68639DCBDB02C6D408F406FED0.jpg" alt="IMAGE" width="837" height="627"></p>
+<p>Path tree on right ^</p>
+<p><img src="resources/AE078322F46D266B84CF656AD020D39C.jpg" alt="IMAGE" width="787" height="581"><br>
+<img src="resources/91BF160606D16E8C8833627F788665C2.jpg" alt="IMAGE" width="794" height="586"></p>
+<p>Performance:</p>
+<ul>
+<li>Worst case runtime is O(E) or O(V+E)</li>
+<li>Worst case space complexity O(V), when every vertice is added to the queue</li>
+</ul>
+<p><img src="resources/95D31959B99FEAD8DC395EACE1F7B285.jpg" alt="IMAGE" width="794" height="586"><br>
+<img src="resources/98F7273948B5ABCE15F2915A367FEB6D.jpg" alt="IMAGE" width="794" height="586"><br>
+<img src="resources/8C79CF036A81721E1409C6DD1C3913F4.jpg" alt="IMAGE" width="798" height="598"><br>
+<img src="resources/8D0BF049F6ECE52A14F28CC8E0EDD6A6.jpg" alt="IMAGE" width="798" height="598"></p>
+<ol>
+<li>There is a maximum of <span class="MathJax" id="MathJax-Element-99-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-883" style="width: 4.203em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.773em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.88em, -0.431em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-884"><span class="mi" id="MathJax-Span-885" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span class="mo" id="MathJax-Span-886" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-887" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span class="mo" id="MathJax-Span-888" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">−</span><span class="mn" id="MathJax-Span-889" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">1</span><span class="mo" id="MathJax-Span-890" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.072em; vertical-align: -0.259em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-99">V(V-1)</script> vertices in a digraph with no parallel or self-loops. "Each edge can connect to every other edge."</li>
+<li>The minimum number of edges is <span class="MathJax" id="MathJax-Element-100-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-891" style="width: 2.703em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.421em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.721em, -0.431em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-892"><span class="mi" id="MathJax-Span-893" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span class="mo" id="MathJax-Span-894" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">−</span><span class="mn" id="MathJax-Span-895" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.895em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-100">V-1</script>.</li>
+</ol>
+<p><img src="resources/2BB88A874B1C6866629B4F51C22267FC.jpg" alt="IMAGE" width="798" height="598"><br>
+<img src="resources/F9E0A1C7677045D52147DAF335285431.jpg" alt="IMAGE" width="798" height="598"></p>
+<ol>
+<li>The indegree for 6 is 2</li>
+<li>The outdegree for 6 is 1</li>
+</ol>
+<p><img src="resources/DB4C7FD290E5F8FB8E95C445A84224D7.jpg" alt="IMAGE" width="798" height="598"><br>
+<img src="resources/E193D59CB57F549FC42741EE40A8A228.jpg" alt="IMAGE" width="798" height="598"></p>
+<p>Space complexity of <code>reverse</code> is O(V+E). Runtime complexity is O(V+E).</p>
+<p><img src="resources/AA7F2761F7248D6FE25556D2D73404F4.jpg" alt="IMAGE" width="798" height="598"></p>
+<p>What vertices are reachable from</p>
+<ul>
+<li>Source 1: 1</li>
+<li>Source 2: 0, 1, 2, 3, 4, 5</li>
+<li>Source 1,2,6: All except 7 and 8</li>
+</ul>
+<p><img src="resources/D5EE0B2B2B0223752425370C1A8560E5.jpg" alt="IMAGE" width="798" height="598"><br>
+<img src="resources/4D6CCA98CE54FCD0F19C85ED22AD4391.jpg" alt="IMAGE" width="805" height="598"></p>
+<p>Directing cycle</p>
+<p><img src="resources/256F5BD4417171B2E5ED293E18684A8A.jpg" alt="IMAGE" width="158" height="129"></p>
+<p>This would be impossible to take any courses. There cannot be any directed cycles in the digraph, it would be impossible to find the topological order. (This is a DAG).</p>
+<p><img src="resources/A2F491ED0437CAB2C2F1AEEC775D5119.jpg" alt="IMAGE" width="805" height="598"><br>
+<img src="resources/D70E3F743C77C75E9396BAA025FCFFC7.jpg" alt="IMAGE" width="805" height="598"></p>
+<p>Topological sort with DFS trace</p>
+<p><img src="resources/26BD7491583009503BFC7DD60B0276FA.jpg" alt="IMAGE" width="224" height="388"><br>
+<img src="resources/57B00CAEFB8F8DE27C5E2440E235A487.jpg" alt="IMAGE" width="470" height="598"></p>
+<p>Vertexes in different color have been visited</p>
+<p><img src="resources/9FE51EDA7043D50E99A7D41DD105EEB7.jpg" alt="IMAGE" width="470" height="598"><br>
+<img src="resources/A72D85755254EC216BC4E0F6CE9DD97F.jpg" alt="IMAGE" width="470" height="598"><br>
+<img src="resources/B9D6C4029DA031A1200FABB96F0F6DC9.jpg" alt="IMAGE" width="470" height="598"><br>
+<img src="resources/133D3E7A930C4B552D989E7FFE74C4A0.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/92B7DF2716FA17B3F3C8BB2CB66B1A1F.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/2D86DAC9EB08B299F6283E671D8D82EE.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/14F2B7C3D935AEF715BDC1E282065C8B.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/DB12AA2EB8E8F8DA84E814E86FFFD9E8.jpg" alt="IMAGE" width="484" height="598"></p>
+<p>0, 3, 7, 6, 5 are reachable from 0. Now go by vertex order and check 1</p>
+<p><img src="resources/C5A9874AD4E79CA9F6B66333D65FB242.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/7B49D561B01EC816D35D3048AC2C26A7.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/5ED9720C76E14388FD42CF2730CC2FFE.jpg" alt="IMAGE" width="484" height="598"></p>
+<p>Now check 2</p>
+<p><img src="resources/77719A6219EE6D0216270CFFEBC6F716.jpg" alt="IMAGE" width="484" height="598"><br>
+<img src="resources/3C76F20E8D806D5972D5993C84AA09CE.jpg" alt="IMAGE" width="484" height="598"></p>
+<p>Everything has been visited now. Our <code>reversePost</code> is finished. All edges flow from left to right.</p>
+<p><img src="resources/7F3C0AF9C50914E5A56E74C5BFCB6DA9.jpg" alt="IMAGE" width="300" height="232"></p>
+<p><img src="resources/14C8E278A191A67EB551BE0C6F169E06.jpg" alt="IMAGE" width="460" height="435"></p>
+<p>The runtime for the constructor is O(V+E). Space complexity for the constructor is O(V).</p>
+<p><img src="resources/52F1BAD1416F315E4050548EB4BF6551.jpg" alt="IMAGE" width="810" height="605"><br>
+<img src="resources/46EF2DA6346E3FE491A9CB93725AEEEF.jpg" alt="IMAGE" width="810" height="605"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS130-priority-queues.html';
+if (e.keyCode === 37) window.location.href = 'CS130-lecture-20201125.html';
+}</script>
+    </body>
+    </html>
+  
