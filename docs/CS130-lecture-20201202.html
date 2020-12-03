@@ -1,0 +1,128 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS130-priority-queues.html'>CS130-priority-queues</a>, Previous: <a href='CS130-lecture-20201130.html'>CS130-lecture-20201130</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS130-lecture-20201202</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Exercise solutions</h1>
+<p><img src="resources/D3D28CC731F0F0845F072469AC7BAABC.jpg" alt="IMAGE" width="645" height="438"><br>
+<img src="resources/F2B9752885D6219D5289A0EB1C7260B1.jpg" alt="IMAGE" width="464" height="267"></p>
+<p>On the whiteboard:</p>
+<p><img src="resources/EDC7C9DC9E09272F07A21D7D76B60ACA.jpg" alt="IMAGE" width="516" height="610"></p>
+<p>Start on vertex 0</p>
+<p><img src="resources/090E2D9FAAE8BB3C5BD71F5C4B6AC300.jpg" alt="IMAGE" width="684" height="615"><br>
+<img src="resources/028F3CAF1924758810A752964EC6C9DB.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/26A1CBC3A9C108CA6A291ABE4ED3052F.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/216E82B6E1F8CFC6E821CEADE0DF3D08.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/50E833623133AC9AFC2A629996883D00.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/8BEA57D60047F2E9E4AB738284D6A53E.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/EFAA484ED10F27078F55EC8D9CDF7BA9.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/51294853AF0A044230C8BE53BA7D6FB5.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/C59F3222AF9B9DE95B666E9F086A5C76.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/B86ECA711E55F54F3D8E66E74B1FE8CA.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/7FCD232C464D2286562A1070645AAC62.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/D153693295D2313D13569C4C1ECDAF09.jpg" alt="IMAGE" width="704" height="615"></p>
+<p>Move onto vertex 2, need to exhaust all vertices</p>
+<p><img src="resources/05C8BF5C4D705A89FC9FC908B0656294.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/F4F8685503B6BBC1FA748B5F7036CF55.jpg" alt="IMAGE" width="704" height="615"></p>
+<p>Move onto vertex 7</p>
+<p><img src="resources/E3E60E9076F2A67A7546BE548BC2D4D0.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/B7E433F4BB68F4216C9C90CA8411D30A.jpg" alt="IMAGE" width="704" height="615"><br>
+<img src="resources/B9BB249A077077384C01C72E6E01827E.jpg" alt="IMAGE" width="704" height="615"></p>
+<p>The reverse post order is : 8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4</p>
+<p><img src="resources/E9993D87D6C7A936B243D33E43DD395D.jpg" alt="IMAGE" width="464" height="362"></p>
+<h1>Graph cont.</h1>
+<p><img src="resources/B684EE5A1E4A34CD274E2B72C3A4E1B5.jpg" alt="IMAGE" width="746" height="560"><br>
+<img src="resources/1FB0734FDC24B2A369E48D10D1BFDAC1.jpg" alt="IMAGE" width="746" height="560"><br>
+<img src="resources/E47F0690D6F11E71F5DA7FD344853ECE.jpg" alt="IMAGE" width="130" height="117"></p>
+<p>These are considered strongly connected. Also considered a <em>strongly connected digraph</em>.</p>
+<p><img src="resources/A2EB6CB12FB57EF9892BAB9396E69520.jpg" alt="IMAGE" width="324" height="212"></p>
+<p>5 strongly connected components.</p>
+<p><img src="resources/9BCD05BE65127C7B4B1AD0374A59B317.jpg" alt="IMAGE" width="745" height="559"></p>
+<p>Reversed graphs are still strongly connected in the same components. A reversed graph's reverse post order will show each component. Visit each vertex in the reverse post order and keep track of which ones have been visited, each vertex will be able to reach all the other vertex in the same component.</p>
+<p><img src="resources/7DE93FF5EE44B259EE7644DFD1EA885D.jpg" alt="IMAGE" width="745" height="559"></p>
+<p><img src="resources/A8E866B85F8BE3B9D71BEA4AD054220A.jpg" alt="IMAGE" width="756" height="562"></p>
+<p>A strongly connected digraph has 1 strong component.</p>
+<p>A DAG has <span class="MathJax" id="MathJax-Element-809-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-12279" style="width: 0.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.721em, -0.431em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-12280"><span class="mi" id="MathJax-Span-12281" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.87em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-809">V</script> strong components.</p>
+<h1>Weighted graphs</h1>
+<p><img src="resources/41C999533FBE7410EDA7F70A2940CB5A.jpg" alt="IMAGE" width="756" height="562"></p>
+<p>If a graph is not connected, it doesn't have a spanning tree.</p>
+<p>For an edge-weighted graph with <span class="MathJax" id="MathJax-Element-809-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-12279" style="width: 0.828em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.712em, 1000em, 2.721em, -0.431em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-12280"><span class="mi" id="MathJax-Span-12281" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.87em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-809">V</script> vertices, a MST has <span class="MathJax" id="MathJax-Element-810-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-12282" style="width: 2.703em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.421em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.721em, -0.431em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-12283"><span class="mi" id="MathJax-Span-12284" style="font-family: STIXGeneral-Italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.077em;"></span></span><span class="mo" id="MathJax-Span-12285" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">−</span><span class="mn" id="MathJax-Span-12286" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.895em; vertical-align: -0.082em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-810">V - 1</script> edges.</p>
+<p><img src="resources/E3A7F340410DC37C0BEA7842A3123119.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/063E5F83362C10DB30A060D1F1D90BD0.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/C6C0520E430B3E316F9F2DF6A32DF72A.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/43F036EA7843728F922DA326B3940371.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/9E5CDB16C784D3D02F4E5B844B0D8D57.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/1BE18E79AD4F6F7EFC5B220B5C984DE8.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/85FC4966DE6A794EF897DCC5389DA1DE.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/D7E88E68F63672509AA2CB7EC013ADFC.jpg" alt="IMAGE" width="756" height="562"><br>
+<img src="resources/262D42DC337DB2C85CD0FDF473B6879B.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/F6B4328B82EEAEE43ED7E5D90C0BFD4A.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/C01159ABF21D3A85A68956B528337764.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/29798ED0E694DEB83CB602A5B045D5E3.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/258D5E49FAE6752D82CE8881491DA81B.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/7BBBBB92CCF5EB9868B230081C30DE2F.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/3DEB49A7ED5384DEC76D109BB8D25225.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/9A3203DD88AC8752FB751A6B9DE9DE96.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/40CB16A03658B9CBFC1B34EA68A61358.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/D7A198DC0BA08914ECEC345B12658037.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/D79F405890FFF7D15EA1083A1C6457EF.jpg" alt="IMAGE" width="756" height="566"></p>
+<p>Another look at the implementation:</p>
+<p><img src="resources/BF6FAC7C86CB58EF33E1BA402BA686D1.jpg" alt="IMAGE" width="756" height="566"></p>
+<p>Worst case time comes from the pq operation.</p>
+<p><img src="resources/27E2CF2611046F8B673387262BDC136A.jpg" alt="IMAGE" width="313" height="100"></p>
+<p>This type of graph gives the maximum size of the pq.</p>
+<p><img src="resources/995CCAB2EF1B944BB72E5E215E8083A1.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/3962BC8B10192C47EACBFA3C910AD8B7.jpg" alt="IMAGE" width="756" height="566"></p>
+<p>Skipping the eager prim implementation</p>
+<p><img src="resources/8B6F50965081FFA866DD5821CBDB4EB4.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/1E7E0A8C3F984D3327B4554A10161CA9.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/D0BD283AE06A3ECA3B9A5956340E2E7D.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/69720CF95384FC7D26CA1B8909CA6BA0.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/5E40FF0ABB94633C9F56711A97ACB1AF.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/760A311FD46218E883D353628246705B.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/40AA8BFC84A0147896AC8DB33CB164F4.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/3BCCD1340C64885184363C1A92D12A77.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/C2F8E48469E0653755E271C8BFCB78E3.jpg" alt="IMAGE" width="756" height="566"><br>
+<img src="resources/785D1F56537CCD53D96F3EA15605FDDF.jpg" alt="IMAGE" width="756" height="566"></p>
+<p>The for loop on 13 is O(ElgE). The union find is O(ElgV). and since E is greater than or equal to the vertices minus 1, the overall runtime is O(E).</p>
+<p><img src="resources/9A0C7BB54A913CC17D69DF0B6D461A56.jpg" alt="IMAGE" width="183" height="164"></p>
+<p>It won't connect <code>v</code> and <code>w</code> because it will create a cycle.</p>
+<h1>Edge weighted digraphs</h1>
+<p><img src="resources/B850102CA35D662ACCBDFE67510BDD2E.jpg" alt="IMAGE" width="856" height="647"><br>
+<img src="resources/A7508296FC4690BBE4B9E11FB085BC59.jpg" alt="IMAGE" width="856" height="647"><br>
+<img src="resources/9E29DF15969B0AABE4D0CC4AFF8EE766.jpg" alt="IMAGE" width="856" height="647"><br>
+<img src="resources/3FA70DFEA67307ED7025EA77DB8AF8FE.jpg" alt="IMAGE" width="856" height="650"><br>
+<img src="resources/2E464C7F329A384FAEF27BF6AD5874F0.jpg" alt="IMAGE" width="856" height="650"><br>
+<img src="resources/DA1C7F8F9C4A8C9BF6E85694C820A6AE.jpg" alt="IMAGE" width="856" height="650"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS130-priority-queues.html';
+if (e.keyCode === 37) window.location.href = 'CS130-lecture-20201130.html';
+}</script>
+    </body>
+    </html>
+  
