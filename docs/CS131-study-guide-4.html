@@ -1,0 +1,140 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='ENGL1B Assignment 8 Notes.html'>ENGL1B Assignment 8 Notes</a>, Previous: <a href='CS131-study-guide-3.html'>CS131-study-guide-3</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS131-study-guide-4</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1><a href="CS131-study-guide-1.html">CS131-study-guide-1</a></h1>
+<ul>
+<li>Software engineering definitions</li>
+<li>SDLC lifecycles</li>
+<li>SDLC phases</li>
+<li>Pros and cons of each SDLC model</li>
+<li>Top agile techniques</li>
+<li>Agile frameworks, characteristics</li>
+<li>Scrum roles/responsibilities</li>
+<li>Requirements, properties of good requirements</li>
+<li>IEEE quality attributes</li>
+<li>Use case</li>
+<li>3C's</li>
+<li>User stories, how to break them up</li>
+</ul>
+<h1><a href="CS131-study-guide-2.html">CS131-study-guide-2</a></h1>
+<ul>
+<li>Contextual inquiry</li>
+<li>Persona</li>
+<li>Scrum roles, artifacts, events</li>
+<li>3C's</li>
+<li>Mockups, wireframe, story board</li>
+<li>Design elements, SAC, CAP FeVER</li>
+<li>XML, JSON</li>
+<li>200, 404, 500 HTTP codes</li>
+<li>Git commands, basic</li>
+</ul>
+<h1><a href="CS131-study-guide-3.html">CS131-study-guide-3</a></h1>
+<ul>
+<li>Architecture style, monolith, client-server, layered, pipe/filter, event driven, model-view-controller, service based, microservice</li>
+<li>Advantages and disadvantages of architectures</li>
+<li>Class diagrams</li>
+<li>Symptoms of poor design</li>
+<li>Design principles, SOLID, KISS, YAGNI etc</li>
+<li>SOLID principles in detail</li>
+<li>Coupling and cohesion</li>
+<li>Why use design patterns?</li>
+<li>Design pattern types, creational/structural/behavioral</li>
+<li>What pattern provides the best solution?</li>
+<li>Static and dynamic analysis</li>
+<li>Refactoring</li>
+</ul>
+<h1>Final study guide</h1>
+<h2>Project Management</h2>
+<p><img src="resources/FBC2F7DA1FD849BDA862F565E22C2BF3.jpg" alt="IMAGE" width="1260" height="677"></p>
+<ol>
+<li>
+<p>Constraints<br>
+<img src="resources/7C48D76722C2E170E37C8E4786C0F6CC.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/B09E2DF2864A2A1AA043B17D17308400.jpg" alt="IMAGE" width="1260" height="677"></p>
+</li>
+<li>
+<p>Triple Constraint Theory / Brooks Law<br>
+<img src="resources/169B95EFBBED1A759E948B5F0280B3C5.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/381C4C408FD0B69FF25D8226443EEA6C.jpg" alt="IMAGE" width="1260" height="677"></p>
+</li>
+</ol>
+<h2>Quality/Testing</h2>
+<ol>
+<li>
+<p>Validation vs. verification<br>
+<img src="resources/118E3D6B84E3B6B9C1C2E2557C19476F.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/042686EE0A3F9CADC846009AAD980057.jpg" alt="IMAGE" width="1260" height="677"></p>
+</li>
+<li>
+<p>Terminology (defect, trigger, etc)<br>
+<img src="resources/9311403094859360A6AA3B664AC0FFFB.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/9ABF9F7FEE008FB82A8D2028463D5588.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/2F5F1AB0A8D58C3293CB50A293ED0B1C.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/3241FC02DDD0FBDF0547C1421FD88CA2.jpg" alt="IMAGE" width="1260" height="677"><br>
+<img src="resources/E51D6659948B771AC53513E2ED46A9F7.jpg" alt="IMAGE" width="1260" height="677"></p>
+</li>
+<li>
+<p>White Box vs. Black Box Testing<br>
+<img src="resources/830146D803F1AA9B214ACB0A330AF321.jpg" alt="IMAGE" width="1268" height="681"><br>
+<img src="resources/A56A4C58A81F58E34A28017AEA857D13.jpg" alt="IMAGE" width="1268" height="681"><br>
+<img src="resources/3BC3694DEB162150A7D3A18CAC084403.jpg" alt="IMAGE" width="1268" height="681"><br>
+<img src="resources/7FF5AB630FA187E4547F43D7C042FD74.jpg" alt="IMAGE" width="1268" height="681"><br>
+<img src="resources/E4F7BD22AB13C64874EDFECB07BAF942.jpg" alt="IMAGE" width="1274" height="677"></p>
+</li>
+<li>
+<p>Given flow graph, define all possible paths 5. Types of tests (unit, system, etc.)</p>
+</li>
+<li>
+<p>Partition input values<br>
+<img src="resources/554FEC4BB64F05E0098B1B38D3A321F1.jpg" alt="IMAGE" width="1274" height="677"><br>
+<img src="resources/966AE94AD650A99D3A67CCFDDC45CB4F.jpg" alt="IMAGE" width="1165" height="651"><br>
+<img src="resources/3A6E036FF09AF9DD11C9581C88384447.jpg" alt="IMAGE" width="1270" height="675"><br>
+<img src="resources/CD8E7B2EA5083446C114ED33E7DFD8F8.jpg" alt="IMAGE" width="1270" height="675"><br>
+<img src="resources/B5BA602A432CDB1B4D442702B07768A8.jpg" alt="IMAGE" width="1270" height="675"><br>
+<img src="resources/2AE588B5CA607303492345904A35D619.jpg" alt="IMAGE" width="1270" height="675"><br>
+<img src="resources/B2A8617342B779B34DCC5BC8C3D376C9.jpg" alt="IMAGE" width="1270" height="675"><br>
+<img src="resources/B47E154A9B8C3225EF66261D7EAA4986.jpg" alt="IMAGE" width="1270" height="675"><br>
+<img src="resources/ADCA3E914510AF4620FFC5CA9E2046CE.jpg" alt="IMAGE" width="1270" height="675"></p>
+</li>
+</ol>
+<h2>DevOps</h2>
+<p>Covered in <a href="CS131-lecture-20201208.html">CS131-lecture-20201208</a></p>
+<ol>
+<li>DevOps Terminology (SLA, Operations, CI/CD etc.)</li>
+<li>How DevOps differs from traditional Operations/Maintenance phase</li>
+<li>DevOps components</li>
+</ol>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'ENGL1B Assignment 8 Notes.html';
+if (e.keyCode === 37) window.location.href = 'CS131-study-guide-3.html';
+}</script>
+    </body>
+    </html>
+  
