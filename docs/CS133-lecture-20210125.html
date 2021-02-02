@@ -1,0 +1,258 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS135-lecture-20210126.html'>CS135-lecture-20210126</a>, Previous: <a href='CS131-study-guide-4.html'>CS131-study-guide-4</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS133-lecture-20210125</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Abstraction</h1>
+<ul>
+<li>A generalization of something too complext to be dealt with in its entirety</li>
+<li>For humans not computers
+<ul>
+<li>It is a techinque we use to compensate for the relatively puny capacity of our brains</li>
+<li>There aren't enough neurons (or connections) in our brain to process the rich detail around us during a single moment in time</li>
+</ul>
+</li>
+<li>Successful designers developer abstractions and hierarchies of abstractions for complex entities and move up and down this hierarchy with splendid ease.</li>
+</ul>
+<p>Examples</p>
+<ul>
+<li>Anytime we see a simple interface covering a more complex system, you should think "abstraction"
+<ul>
+<li>A car is a very complex machine but the interface is simple</li>
+<li>A video game controller only has a few buttons, but underneath the controller is a complex mechanism</li>
+<li>A programming language can be fairly simple, but it translates the instructions you write into machine code, which is complex</li>
+</ul>
+</li>
+<li>Data types are abstractions
+<ul>
+<li>A linked list abstracts a collection of connected nodes</li>
+<li>A node abstracts the detail of a structure holding an instance of a primitive data type and a pointer</li>
+</ul>
+</li>
+<li>Functions are abstractions
+<ul>
+<li>A function abstracts the details of an algorithm, with a simple name e.g. <code>fahrenheitToCentrigrade()</code></li>
+</ul>
+</li>
+</ul>
+<p>Form consistent abstractions</p>
+<ul>
+<li>Abstraction is the ability to engage with a concept while safely ignoring some of its details</li>
+<li>Base classes and interfaces are abstractions
+<ul>
+<li>i.e. <code>UIComponent</code> (or any GUI toolkit)</li>
+<li>Mammal (classic superclass when discussing OO)</li>
+<li>The interface defined by a class is an abstraction of what the class represents</li>
+</ul>
+</li>
+<li>You shouldn't have to look at the method body code to understand what this method does
+<ul>
+<li><code>someObject.toString()</code></li>
+</ul>
+</li>
+</ul>
+<p>What is OO?</p>
+<ul>
+<li>Procedural paradigm:
+<ul>
+<li>Software is organized around the notion of <em>procedures</em></li>
+<li><em>Procedural abstraction</em>
+<ul>
+<li>Works as long as the data is simple</li>
+</ul>
+</li>
+<li><em>Adding data abstractions</em>
+<ul>
+<li>Groups together the pieces of data that describe some entity</li>
+<li>Helps reduce the system's complexity, such as <em>Records</em> and <em>structures</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Object oriented paradigm:
+<ul>
+<li>Organizing procedural abstractions in the context of data abstractions</li>
+</ul>
+</li>
+</ul>
+<p>OO paradigm</p>
+<p><strong>An approach to the solution of problems in which all computations are performed in the context of objects.</strong></p>
+<ul>
+<li>The objects are instances of classes, which:
+<ul>
+<li>are data abstractions</li>
+<li>container procedural abstractions that operate on the objects</li>
+</ul>
+</li>
+<li>A running program can be seen as the collectino of objects collaborating to perform a given task</li>
+</ul>
+<p>What is a class?</p>
+<ul>
+<li>A unit of abstraction in an OO program</li>
+<li>Represents similar objects
+<ul>
+<li>its <em>instances</em></li>
+</ul>
+</li>
+<li>A kind of software module
+<ul>
+<li>Describes its instances' structure (properties)</li>
+<li>contains <em>methods</em> to implement their behavior</li>
+</ul>
+</li>
+<li>A blueprint
+<ul>
+<li>we can use this blueprint to create new objects</li>
+</ul>
+</li>
+<li>Are a container in which we define the properties and behaviors of the objects that will become our system</li>
+<li>faciliate the organization of <em>concepts</em> within the <em>domain</em> of the system</li>
+<li>We think of them as having responsibilities, but vlasses are an organization tool, its really the objects that have the responsibilitiy</li>
+<li>Classes are for the developer, they are the organizational bridge between our understanding of the software system and its runtime behavior.</li>
+</ul>
+<p>Whats an object?</p>
+<ul>
+<li>A chunk of structured data in a running software system</li>
+<li>Has <em>properties</em>
+<ul>
+<li>represents its state</li>
+</ul>
+</li>
+<li>Has <em>behavior</em>
+<ul>
+<li>how it acts and reacts</li>
+<li>May simulate the behavior of an object in the real world</li>
+</ul>
+</li>
+</ul>
+<p><img src="resources/28CEA5E275B13B798B2DBB6969F1350A.jpg" alt="IMAGE" width="339" height="263"></p>
+<ul>
+<li>An object is a bundle of capabilities</li>
+<li>It is defined by what it can do
+<ul>
+<li>not how it does it</li>
+</ul>
+</li>
+<li>Practically, this means an object is defined by the messages that it can send and receieve</li>
+<li>The methods that handle these messages comprise the sole interface to the outside world</li>
+<li>Yes, objects have data, but the makeup of that data should be irrelevant</li>
+<li><strong><em>Focus on what objects can do!</em></strong></li>
+</ul>
+<p>The prime directive</p>
+<blockquote>
+<p>Never ask an object for information that you need to do something; rather, ask the object that has the information to do the work for you!</p>
+</blockquote>
+<h1>Modularity</h1>
+<blockquote>
+<p>The goal of design is to partition the system into modules and assign responsibility among the components</p>
+</blockquote>
+<p>Many languages embrace the concept of a module</p>
+<p><img src="resources/353ACA5E2E3100C066B70B1009EF5157.jpg" alt="IMAGE" width="1069" height="592"><br>
+<img src="resources/DF804BFC2B2EE9F502DC057EFFE4AC52.jpg" alt="IMAGE" width="1069" height="592"></p>
+<ul>
+<li>Packages are <em>named</em> using the concatenation of the enclosing packagee names</li>
+<li>Types (classes) must declare what package they belong to
+<ul>
+<li>Otherwise they are placed in the "default" (unnamed) package</li>
+</ul>
+</li>
+<li>Packages name become part of the class name, for following class has the full name <code>solarSystem.planets.earth.Human</code></li>
+</ul>
+<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">package</span> <span class="ace_identifier">solarSystem</span>.<span class="ace_identifier">planets</span>.<span class="ace_identifier">earth</span>;
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_comment">// a class defining species originating on Earth</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span><span class="ace_keyword">public</span> <span class="ace_keyword">class</span> <span class="ace_identifier">Human</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>{
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>  <span class="ace_comment">// class declarations and methods</span>
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>}
+</div></div></div></pre>
+<p><img src="resources/01C1E098D3D40232F3BA852E3A5A1FFE.jpg" alt="IMAGE" width="1069" height="592"></p>
+<ul>
+<li>The goal of design is to partition the system into modules and assign responsibility among the components in a way that
+<ul>
+<li>High <em>cohesion</em> within modules, and</li>
+<li>Loose <em>coupling</em> between modules</li>
+</ul>
+</li>
+<li>Modularity reduces the total complexity a programmer has to deal with at anyone time assuming:
+<ol>
+<li>Functions are assigned to modules in a way that groups similar functions together (separation of concerns), and</li>
+<li>There are small, simple, well-defined interfaces between modules (information hiding)</li>
+</ol>
+</li>
+<li>The principles of cohesion and coupling are probably the most important design principles for evaluating the effectiveness of a design</li>
+</ul>
+<p><img src="resources/AD5862B334238DBB14C8358020A6F672.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/22DA6596A9E047D29D37C2FC863AC03C.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/429CD4769F6D958FF8250B5E2450A95F.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/ED7DBFE7A7AF66EE7BA6BCA052E1956D.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/04548598FD512B1BC8600D528A144CE2.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/7743A891B7393A71B60609A21C321192.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/0A0567C6AD38D53C357795CFFA06916D.jpg" alt="IMAGE" width="1069" height="598"></p>
+<h1>Encapsulation</h1>
+<p><img src="resources/333FA41E101F16F28049F342B17115BB.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/74DAE1D626CA5025851E7DA52385CBE0.jpg" alt="IMAGE" width="1069" height="598"></p>
+<p>Access modifiers</p>
+<ul>
+<li><code>public</code>
+<ul>
+<li>any class has acesss</li>
+</ul>
+</li>
+<li><code>protected</code>
+<ul>
+<li>Only code in the package, or subclasses can access</li>
+</ul>
+</li>
+<li>(blank) default is called <em>package protected</em></li>
+<li><code>private</code>
+<ul>
+<li>Only code written in the class can access</li>
+<li>Inheritance still occurs</li>
+</ul>
+</li>
+</ul>
+<p><img src="resources/D768303729E60B367EDCBB709D5A3C11.jpg" alt="IMAGE" width="1069" height="598"></p>
+<p>So do we need getters and setters in example 1? No. The class is really just a structure. If the class were imbued with some more behavior, then we should revisit this question.</p>
+<p><img src="resources/5C36F2B550A2022D07C68578612B0562.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/8070E9B78E0DA523C2EF8E7478332952.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/DE8881BD34C024DEF0C93891C863D2AD.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/64C1B672A9571193FC5ACB3B6A2FF3F9.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/DC56C54379176542BB7AC904A07C8D9C.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/1AB235562B45ECEF6438F4741E99AFAA.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/0C572D649D598C182C17FEEF9493D7FB.jpg" alt="IMAGE" width="1069" height="598"><br>
+<img src="resources/90AE5197E79B5623063D3B51FCD78C4D.jpg" alt="IMAGE" width="1069" height="598"></p>
+<p>So back to the point example, we are not hiding information at all.<br>
+With the balance example, we agree there should be something hidden (the balance).</p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS135-lecture-20210126.html';
+if (e.keyCode === 37) window.location.href = 'CS131-study-guide-4.html';
+}</script>
+    </body>
+    </html>
+  
