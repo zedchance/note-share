@@ -23,7 +23,7 @@
       <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='CS137-lecture-20200128.html'>CS137-lecture-20200128</a>, Previous: <a href='CS135-lecture-20210129.html'>CS135-lecture-20210129</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='CS135-lecture-20210204.html'>CS135-lecture-20210204</a>, Previous: <a href='CS135-lecture-20210129.html'>CS135-lecture-20210129</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
         <h2>CS135-lecture-20210201</h2>
       </div>
@@ -53,9 +53,155 @@
 <li>Make sure your FA is legal. Double check that every state has an arrow out for each alphabet symbol and that their's a start state</li>
 <li>Try to break your solutions. Look for strings it accepts that it shouldn't. Look for strings that it rejects that it shouldn't.</li>
 </ol>
+<hr>
+<p>Write a FSM for the language: <code>L = {abba}</code></p>
+<p><img src="resources/F1331C18130F0CD5FB1EC22BB1E3CCE5.jpg" alt="IMAGE" width="862" height="129"></p>
+<p>This is the "write the part that accepts the good strings".</p>
+<p>We can start to figure out what we don't want to initially accept in the string, "starting with a <code>b</code>"</p>
+<p><img src="resources/89D23FCD725E18CF9234784BFB2EA524.jpg" alt="IMAGE" width="911" height="229"><br>
+<img src="resources/6F64984C97BCCA676AB59BC817A5D86F.jpg" alt="IMAGE" width="891" height="250"><br>
+<img src="resources/767B4CCC302EFBA291B48DCFF2A72097.jpg" alt="IMAGE" width="915" height="455"><br>
+<img src="resources/8FB5E86FD99B41F1CC1F67CCEBD48A7C.jpg" alt="IMAGE" width="1043" height="483"><br>
+<img src="resources/94BE86D4DC0C9A09F0992D10B4B7E9AF.jpg" alt="IMAGE" width="1065" height="475"></p>
+<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#alphabet
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>a
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>b
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#states
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>3
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>4
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#initial
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#accepting
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>4
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#transitions
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:a&gt;1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:b&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>1:b&gt;2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>1:a&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2:b&gt;3
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2:a&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>3:a&gt;4
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>3:b&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>4:a&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>4:b&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>5:a&gt;5
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>5:b&gt;5
+</div></div></div></pre>
+<hr>
+<p>Write a FSM for the language <code>{w in {a,b}*: w has at least two a's}</code></p>
+<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#alphabet
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>a
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>b
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#states
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#initial
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#accepting
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#transitions
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:a&gt;1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:b&gt;0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>1:a&gt;2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>1:b&gt;1
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2:a&gt;2
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>2:b&gt;2
+</div></div></div></pre>
+<p>In steps:</p>
+<p><img src="resources/D92961853F72A6233CEC927B3401362F.jpg" alt="IMAGE" width="330" height="264"><br>
+<img src="resources/975B875AEACE17F0DE8DD045530ADC94.jpg" alt="IMAGE" width="479" height="272"><br>
+<img src="resources/424737278A8C20214E78E47AC50AE077.jpg" alt="IMAGE" width="572" height="194"><br>
+<img src="resources/00E58F96388C7F1E90C0731709378AB5.jpg" alt="IMAGE" width="594" height="198"><br>
+<img src="resources/87EA6192F76BD43D8756C8D4A830874D.jpg" alt="IMAGE" width="545" height="187"><br>
+<img src="resources/AFBFDF1FE43974F9D05C2E6ADE0613AE.jpg" alt="IMAGE" width="526" height="185"></p>
+<hr>
+<p>Write a FSM for the language <code>{w in {a,b}* : w begins and ends in the same letter}</code></p>
+<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#alphabet
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>a
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>b
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#states
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>aa
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ab
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ba
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#initial
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#accepting
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>aa
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#transitions
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:a&gt;aa
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:b&gt;bb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>aa:a&gt;aa
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>aa:b&gt;ab
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bb:b&gt;bb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bb:a&gt;ba
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ab:b&gt;ab
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ab:a&gt;aa
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ba:a&gt;ba
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ba:b&gt;bb
+</div></div></div></pre>
+<p>In Steps:</p>
+<p><img src="resources/FA949D02D647F5C1DC0F04C1E0FCCE41.jpg" alt="IMAGE" width="304" height="317"><br>
+<img src="resources/E66042DA0D084F0E28C89C9DE891197D.jpg" alt="IMAGE" width="419" height="266"><br>
+<img src="resources/F7FEB9A3C1FDE56CBDC4EB35DC77E928.jpg" alt="IMAGE" width="393" height="374"><br>
+<img src="resources/4B2702E2F3D768951C2822381EF0EB5A.jpg" alt="IMAGE" width="614" height="410"><br>
+<img src="resources/988FF1E440E11A9FEF0D0C15DEC40F61.jpg" alt="IMAGE" width="616" height="407"></p>
+<hr>
+<p>Write a FSM for the language: <code>{a^n b^m : n is odd and m is even}</code></p>
+<pre><div class="ace-dawn"><div class="ace_static_highlight ace_show_gutter" style="counter-reset:ace_line 0"><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#alphabet
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>a
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>b
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#states
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ae
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ao
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>be
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bo
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>garb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#initial
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#accepting
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ao
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>be
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>#transitions
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:a&gt;ao
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>0:b&gt;garb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ao:a&gt;ae
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ae:a&gt;ao
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ae:b&gt;garb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>ao:b&gt;bo
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bo:b&gt;be
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>be:b&gt;bo
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>be:a&gt;garb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>bo:a&gt;garb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>garb:a&gt;garb
+</div><div class="ace_line"><span class="ace_gutter ace_gutter-cell" unselectable="on"></span>garb:b&gt;garb
+</div></div></div></pre>
+<p>In steps:</p>
+<p><img src="resources/DC41EB960F805F771E423B48DFCFC794.jpg" alt="IMAGE" width="373" height="126"><br>
+<img src="resources/1A89119A7331A5ABD3B5A69F5BB3E165.jpg" alt="IMAGE" width="507" height="141"><br>
+<img src="resources/F059FCC0A54910E597FCA71D55E7D952.jpg" alt="IMAGE" width="532" height="150"><br>
+<img src="resources/27DBD6ACFF554EEDD811A1FECDC08041.jpg" alt="IMAGE" width="533" height="251"><br>
+<img src="resources/20A2B61756C75A5D9701F75B9DB7526A.jpg" alt="IMAGE" width="707" height="259"><br>
+<img src="resources/E4950B52900753244378E534F79FC6A9.jpg" alt="IMAGE" width="710" height="282"><br>
+<img src="resources/F89B18DDA1B0A17066FEBF576E587F8C.jpg" alt="IMAGE" width="599" height="372"><br>
+<img src="resources/0BB85D80015747C90E2D46C55E252725.jpg" alt="IMAGE" width="536" height="380"></p>
+<p>Now this accepts all the good strings, lets make it legal.</p>
+<p><img src="resources/C1A8672B994AB434C14F847CE14E0D54.jpg" alt="IMAGE" width="605" height="546"><br>
+<img src="resources/5BF8C5DF99944AE2AE0E2396534CEB73.jpg" alt="IMAGE" width="801" height="479"><br>
+<img src="resources/4FF563DDDD8385C82F94A23D787EF07E.jpg" alt="IMAGE" width="809" height="469"></p>
+<p>We can optimize this by making <code>ae</code> the initial state:</p>
+<p><img src="resources/5D5E827329C2CE5D08B2D9000135358F.jpg" alt="IMAGE" width="748" height="314"></p>
 </div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'CS137-lecture-20200128.html';
+if (e.keyCode === 39) window.location.href = 'CS135-lecture-20210204.html';
 if (e.keyCode === 37) window.location.href = 'CS135-lecture-20210129.html';
 }</script>
     </body>
