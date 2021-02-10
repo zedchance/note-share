@@ -1,0 +1,120 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS138-lecture-20210126.html'>CS138-lecture-20210126</a>, Previous: <a href='CS137-lecture-20210204.html'>CS137-lecture-20210204</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS137-lecture-20210209</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p><a href="resources/DFEA51F2817D8DD2110D2009F41EE8C1.pdf">Ch2.pdf</a></p>
+<p><img src="resources/0BB7BF15462F1731858C34F5597D4783.jpg" alt="IMAGE" width="681" height="514"><br>
+<img src="resources/6DB7B9093DE250B84B5C79B01004406C.jpg" alt="IMAGE" width="681" height="518"><br>
+<img src="resources/58FB08A50873B958C3520E957E1C8917.jpg" alt="IMAGE" width="855" height="645"></p>
+<p>LUT = lookup table</p>
+<p><img src="resources/DADA5D949FD6865985C40B6A27B9E676.jpg" alt="IMAGE" width="670" height="508"><br>
+<img src="resources/8BBF1E54EF14E96276A36C49C6479561.jpg" alt="IMAGE" width="674" height="512"><br>
+<img src="resources/8633BED6F201EDACBF134AD05999B237.jpg" alt="IMAGE" width="672" height="513"></p>
+<p>SOP = sum of products</p>
+<h2>DeMorgan's theorem</h2>
+<ol>
+<li>Two or more variables NAND'd together is the same as the two terms inverted and OR'd<br>
+<img src="resources/F45D8D67B9A16097EAB95AA7715C7D15.jpg" alt="IMAGE" width="166" height="65"></li>
+<li>Two or more variables NOR'd together is the same as the two variables inverted and AND'd together<br>
+<img src="resources/7F4B5C051EDA81E5B28FCF41A138E1C0.jpg" alt="IMAGE" width="167" height="58"></li>
+</ol>
+<p>Lets show this via tables for these two equations:</p>
+</div><div class="cell latex-cell"><div class="MathJax_Display" role="textbox" aria-readonly="true" style="text-align: center;"><span class="MathJax" id="MathJax-Element-611-Frame" style=""><nobr><span class="math" id="MathJax-Span-6177" style="width: 9.641em; display: inline-block;"><span style="display: inline-block; position: relative; width: 8.671em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(0.608em, 1000em, 3.284em, -0.332em); top: -2.196em; left: 0em;"><span class="mrow" id="MathJax-Span-6178"><span class="mtable" id="MathJax-Span-6179" style="padding-right: 0.167em; padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 8.333em; height: 0px;"><span style="position: absolute; clip: rect(2.534em, 1000em, 5.062em, -0.499em); top: -3.998em; left: 0em;"><span style="display: inline-block; position: relative; width: 3.322em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.499em); top: -3.153em; right: 0em;"><span class="mtd" id="MathJax-Span-6180"><span class="mrow" id="MathJax-Span-6181"><span class="mi" id="MathJax-Span-6182" style="font-family: STIXGeneral-Italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.034em;"></span></span><span class="mn" id="MathJax-Span-6183" style="font-family: STIXGeneral-Regular;">1</span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; clip: rect(1.689em, 1000em, 2.88em, -0.459em); top: -1.815em; right: 0em;"><span class="mtd" id="MathJax-Span-6189"><span class="mrow" id="MathJax-Span-6190"><span class="mi" id="MathJax-Span-6191" style="font-family: STIXGeneral-Regular;">¬</span><span class="mo" id="MathJax-Span-6192" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-6193" style="font-family: STIXGeneral-Italic;">A</span><span class="mo" id="MathJax-Span-6194" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">⋅</span><span class="mi" id="MathJax-Span-6195" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">B</span><span class="mo" id="MathJax-Span-6196" style="font-family: STIXGeneral-Regular;">)</span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span><span style="position: absolute; clip: rect(2.534em, 1000em, 4.926em, -0.209em); top: -3.998em; left: 3.322em;"><span style="display: inline-block; position: relative; width: 5.011em; height: 0px;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.209em); top: -3.153em; left: 0em;"><span class="mtd" id="MathJax-Span-6184"><span class="mrow" id="MathJax-Span-6185"><span class="mo" id="MathJax-Span-6186" style="font-family: STIXGeneral-Regular; padding-left: 0.25em; padding-right: 0.375em;">=</span><span class="mi" id="MathJax-Span-6187" style="font-family: STIXGeneral-Italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.034em;"></span></span><span class="mn" id="MathJax-Span-6188" style="font-family: STIXGeneral-Regular;">2</span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span><span style="position: absolute; clip: rect(1.697em, 1000em, 2.744em, -0.209em); top: -1.815em; left: 0em;"><span class="mtd" id="MathJax-Span-6197"><span class="mrow" id="MathJax-Span-6198"><span class="mo" id="MathJax-Span-6199" style="font-family: STIXGeneral-Regular; padding-left: 0.25em; padding-right: 0.375em;">=</span><span class="mi" id="MathJax-Span-6200" style="font-family: STIXGeneral-Regular;">¬</span><span class="mi" id="MathJax-Span-6201" style="font-family: STIXGeneral-Italic;">A</span><span class="mo" id="MathJax-Span-6202" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mi" id="MathJax-Span-6203" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">¬</span><span class="mi" id="MathJax-Span-6204" style="font-family: STIXGeneral-Italic;">B</span></span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.196em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 2.72em; vertical-align: -1.082em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-611"> \begin{align*}   F1 &= F2 \\   \neg(A \cdot B) &= \neg A + \neg B \end{align*} </script></div><div class="cell markdown-cell"><p>Here is a table for <span class="MathJax" id="MathJax-Element-612-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6205" style="width: 1.328em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.182em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.499em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6206"><span class="mi" id="MathJax-Span-6207" style="font-family: STIXGeneral-Italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.034em;"></span></span><span class="mn" id="MathJax-Span-6208" style="font-family: STIXGeneral-Regular;">1</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.875em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-612">F1</script>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="MathJax" id="MathJax-Element-613-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6209" style="width: 1.391em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.239em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.697em, 1000em, 2.703em, -0.558em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6210"><span class="mi" id="MathJax-Span-6211" style="font-family: STIXGeneral-Italic;">A</span><span class="mi" id="MathJax-Span-6212" style="font-family: STIXGeneral-Italic;">B</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.866em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-613">A B</script></th>
+<th><span class="MathJax" id="MathJax-Element-614-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6213" style="width: 2.328em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.083em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.697em, 1000em, 2.703em, -0.558em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6214"><span class="mi" id="MathJax-Span-6215" style="font-family: STIXGeneral-Italic;">A</span><span class="mo" id="MathJax-Span-6216" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">⋅</span><span class="mi" id="MathJax-Span-6217" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">B</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.866em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-614">A \cdot B</script></th>
+<th><span class="MathJax" id="MathJax-Element-615-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6218" style="width: 3.703em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.322em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.88em, -0.459em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6219"><span class="mi" id="MathJax-Span-6220" style="font-family: STIXGeneral-Regular;">¬</span><span class="mo" id="MathJax-Span-6221" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-6222" style="font-family: STIXGeneral-Italic;">A</span><span class="mo" id="MathJax-Span-6223" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">⋅</span><span class="mi" id="MathJax-Span-6224" style="font-family: STIXGeneral-Italic; padding-left: 0.25em;">B</span><span class="mo" id="MathJax-Span-6225" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.072em; vertical-align: -0.259em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-615">\neg(A \cdot B)</script></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0 0</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>0 1</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1 0</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1 1</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p>Here is a table for <span class="MathJax" id="MathJax-Element-616-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6226" style="width: 1.328em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.182em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.689em, 1000em, 2.703em, -0.499em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6227"><span class="mi" id="MathJax-Span-6228" style="font-family: STIXGeneral-Italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.034em;"></span></span><span class="mn" id="MathJax-Span-6229" style="font-family: STIXGeneral-Regular;">2</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.875em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-616">F2</script>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="MathJax" id="MathJax-Element-613-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6209" style="width: 1.391em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.239em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.697em, 1000em, 2.703em, -0.558em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6210"><span class="mi" id="MathJax-Span-6211" style="font-family: STIXGeneral-Italic;">A</span><span class="mi" id="MathJax-Span-6212" style="font-family: STIXGeneral-Italic;">B</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.866em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-613">A B</script></th>
+<th><span class="MathJax" id="MathJax-Element-617-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6230" style="width: 2.766em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.477em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.697em, 1000em, 2.703em, -0.459em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6231"><span class="mi" id="MathJax-Span-6232" style="font-family: STIXGeneral-Regular;">¬</span><span class="mi" id="MathJax-Span-6233" style="font-family: STIXGeneral-Italic;">A</span><span class="mi" id="MathJax-Span-6234" style="font-family: STIXGeneral-Regular;">¬</span><span class="mi" id="MathJax-Span-6235" style="font-family: STIXGeneral-Italic;">B</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.866em; vertical-align: -0.063em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-617">\neg A \neg B</script></th>
+<th><span class="MathJax" id="MathJax-Element-618-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6236" style="width: 4.078em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.66em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.697em, 1000em, 2.744em, -0.459em); top: -2.534em; left: 0em;"><span class="mrow" id="MathJax-Span-6237"><span class="mi" id="MathJax-Span-6238" style="font-family: STIXGeneral-Regular;">¬</span><span class="mi" id="MathJax-Span-6239" style="font-family: STIXGeneral-Italic;">A</span><span class="mo" id="MathJax-Span-6240" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mi" id="MathJax-Span-6241" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">¬</span><span class="mi" id="MathJax-Span-6242" style="font-family: STIXGeneral-Italic;">B</span></span><span style="display: inline-block; width: 0px; height: 2.534em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 0.912em; vertical-align: -0.108em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-618">\neg A + \neg B</script></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0 0</code></td>
+<td><code>1 1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>0 1</code></td>
+<td><code>1 0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1 0</code></td>
+<td><code>0 1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1 1</code></td>
+<td><code>0 0</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p>Notice that the output of each table is the same, thus the theorem is true.</p>
+<p><img src="resources/32D0F7C14863E605A255276B794EAA0C.jpg" alt="IMAGE" width="683" height="465"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS138-lecture-20210126.html';
+if (e.keyCode === 37) window.location.href = 'CS137-lecture-20210204.html';
+}</script>
+    </body>
+    </html>
+  
