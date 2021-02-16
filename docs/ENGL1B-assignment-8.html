@@ -23,29 +23,39 @@
       <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
     </head>
     <body>
-      <div id="nav"><div>Next: <a href='CS137-lecture-20210204.html'>CS137-lecture-20210204</a>, Previous: <a href='CS137-lecture-20210128.html'>CS137-lecture-20210128</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="nav"><div>Next: <a href='luhns.c.html'>luhns.c</a>, Previous: <a href='CS138-lecture-20210216.html'>CS138-lecture-20210216</a>, Up: <a href='index.html'>Index</a></div></div>
       <div id="titlearea">
-        <h2>CS137-lecture-20210202</h2>
+        <h2>ENGL1B-assignment-8</h2>
       </div>
-      <div id="contentarea"><div class="cell markdown-cell"><p><a href="resources/D4109819AD6F200349BB45F6B34F6FA8.docx">CSc 137 Presentation -Topics-1-1.docx</a></p>
-<p><img src="resources/CE43A00F271F94188897A70B291137C7.jpg" alt="IMAGE" width="1054" height="657"><br>
-<img src="resources/E2C4C604413DE785CCBBD8131DE76250.jpg" alt="IMAGE" width="558" height="354"></p>
-<p>How to convert 5.375 to a floating point representation using IEEE 754:</p>
-<ol>
-<li>Convert the number to a binary representation<br>
-Start with the whole part: 5<br>
-<code>101</code><br>
-Then do the fractional part: .375<br>
-Using successive multiplication<br>
-<div class="MathJax_Display" role="textbox" aria-readonly="true"><span class="MathJax" id="MathJax-Element-653-Frame" style=""><nobr><span class="math" id="MathJax-Span-6475" style="width: 100%; display: inline-block; min-width: 8.891em;"><span style="display: inline-block; position: relative; width: 100%; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(3.31em, 1000em, 6.803em, -0.507em); top: -4.167em; left: 0em; width: 100%;"><span class="mrow" id="MathJax-Span-6476"><span style="display: inline-block; position: relative; width: 100%; height: 0px;"><span style="position: absolute; clip: rect(3.141em, 1000em, 4.208em, -0.483em); top: -3.998em; left: 50%; margin-left: -4.01em;"><span class="mn" id="MathJax-Span-6477" style="font-family: STIXGeneral-Regular;">0.375</span><span class="mo" id="MathJax-Span-6478" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">∗</span><span class="mn" id="MathJax-Span-6479" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">2</span><span class="mo" id="MathJax-Span-6480" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-6481" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">0</span><span class="mo" id="MathJax-Span-6482" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mn" id="MathJax-Span-6483" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">.75</span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span><span style="position: absolute; clip: rect(3.141em, 1000em, 4.208em, -0.507em); top: -2.784em; left: 50%; margin-left: -3.51em;"><span class="mspace" id="MathJax-Span-6484" style="height: 0em; vertical-align: 0em; width: 0em; display: inline-block; overflow: hidden;"></span><span class="mn" id="MathJax-Span-6485" style="font-family: STIXGeneral-Regular;">0.75</span><span class="mo" id="MathJax-Span-6486" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">∗</span><span class="mn" id="MathJax-Span-6487" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">2</span><span class="mo" id="MathJax-Span-6488" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-6489" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">1</span><span class="mo" id="MathJax-Span-6490" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mn" id="MathJax-Span-6491" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">.5</span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span><span style="position: absolute; clip: rect(3.141em, 1000em, 4.208em, -0.507em); top: -1.571em; left: 50%; margin-left: -3.26em;"><span class="mspace" id="MathJax-Span-6492" style="height: 0em; vertical-align: 0em; width: 0em; display: inline-block; overflow: hidden;"></span><span class="mn" id="MathJax-Span-6493" style="font-family: STIXGeneral-Regular;">0.5</span><span class="mo" id="MathJax-Span-6494" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">∗</span><span class="mn" id="MathJax-Span-6495" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">5</span><span class="mo" id="MathJax-Span-6496" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">=</span><span class="mn" id="MathJax-Span-6497" style="font-family: STIXGeneral-Regular; padding-left: 0.313em;">1</span><span class="mo" id="MathJax-Span-6498" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">+</span><span class="mn" id="MathJax-Span-6499" style="font-family: STIXGeneral-Regular; padding-left: 0.25em;">.0</span><span style="display: inline-block; width: 0px; height: 3.998em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.167em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 3.628em; vertical-align: -2.802em;"></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-653">0.375 * 2 = 0 + .75 \\ 0.75 * 2 = 1 + .5 \\  0.5 * 5 = 1 + .0 </script><br>
-So .375 = <code>.011</code><br>
-So 5.375 = <code>101.011</code> in fixed point</li>
-<li></li>
-</ol>
+      <div id="contentarea"><div class="cell markdown-cell"><h1>Assignment 8 Notes</h1>
+<h2>Walt Whitman video notes</h2>
+<ul>
+<li>Seems that Whitman is more appreciated later in life</li>
+<li>Started as a printer when he was 12</li>
+<li>His journalistic exposure led to his view on america</li>
+<li>Whitman wrote poetry that dealt with the world he knew, not normal feudal concepts that were out of reach to most</li>
+<li>Whitman brought in the everyday particulars</li>
+<li>"An American Bard", but to be a bard you needed to see what was really around you, this included the new american world</li>
+<li>He loved american slang, the phrase "so long".</li>
+<li>He tasted the words, the words he used has a physical body</li>
+<li>Couldn't have written <em>Leaves of Grass</em> without italian opera</li>
+<li>He followed great political debates, inspired by the way a politican tries to move a crowd</li>
+<li>"It was the destiny of the United States to democratize the entire world"</li>
+<li>Manifest destiny</li>
+<li>Writes in a persona that makes it so he can write as the American, not as Whitman</li>
+<li>While he presented himself as a "brawler", he was very much quiet</li>
+<li>His poems, and <em>Leaves of Grass</em> were always being re-written</li>
+<li>Lost his job after publishing his book because of the sexuality</li>
+<li>Emerson wanted Whitman to cut down on the sexuality, to which he simply replied "No"</li>
+<li>No large audience materialized for his book</li>
+<li>Never recovered emotionally from the affects of the Civil War</li>
+<li>Intimate poet commemorating specifics suffersings of the dying, as he sees them</li>
+<li>Writes what war looks like</li>
+</ul>
 </div></div>
       <script>document.body.onkeyup = function(e) {
-if (e.keyCode === 39) window.location.href = 'CS137-lecture-20210204.html';
-if (e.keyCode === 37) window.location.href = 'CS137-lecture-20210128.html';
+if (e.keyCode === 39) window.location.href = 'luhns.c.html';
+if (e.keyCode === 37) window.location.href = 'CS138-lecture-20210216.html';
 }</script>
     </body>
     </html>
