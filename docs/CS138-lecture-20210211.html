@@ -1,0 +1,85 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- common.css -->
+      <style>* {-webkit-tap-highlight-color: rgba(0,0,0,0);}html {-webkit-text-size-adjust: none;}body {font-family: -apple-system, Helvetica, Arial, sans-serif;margin: 0;padding: 20px;color: #333;word-wrap: break-word;}h1, h2, h3, h4, h5, h6 {line-height: 1.1;}img {max-width: 100% !important;height: auto;}blockquote {margin: 0;padding: 0 15px;color: #777;border-left: 4px solid #ddd;}hr {background-color: #ddd;border: 0;height: 1px;margin: 15px 0;}code {font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;line-height: 1.4;margin: 0;padding: 0.2em 0;font-size: 90%;background-color: rgba(0,0,0,0.04);border-radius: 3px;}pre > code {margin: 0;padding: 0;font-size: 100%;word-break: normal;background: transparent;border: 0;}ol {list-style-type: decimal;}ol ol, ul ol {list-style-type: lower-latin;}ol ol ol, ul ol ol, ul ul ol, ol ul ol {list-style-type: lower-roman;}table {border-spacing: 0;border-collapse: collapse;margin-top: 0;margin-bottom: 16px;}table th {font-weight: bold;}table th, table td {padding: 6px 13px;border: 1px solid #ddd;}table tr {border-top: 1px solid #ccc;}table tr:nth-child(even) {background-color: #f8f8f8;}input[type="checkbox"] {cursor: default;margin-right: 0.5em;font-size: 13px;}.task-list-item {list-style-type: none;}.task-list-item+.task-list-item {margin-top: 3px;}.task-list-item input {float: left;margin: 0.3em 1em 0.25em -1.6em;vertical-align: middle;}#tag-field {margin: 8px 2px 10px;}#tag-field .tag {display: inline-block;background: #cadff3;border-radius: 4px;padding: 1px 8px;color: black;font-size: 12px;margin-right: 10px;line-height: 1.4;}</style>
+      <!-- ace-static.css -->
+      <style>.ace_static_highlight {white-space: pre-wrap;}.ace_static_highlight .ace_gutter {width: 2em;text-align: right;padding: 0 3px 0 0;margin-right: 3px;}.ace_static_highlight.ace_show_gutter > .ace_line {padding-left: 2.6em;}.ace_static_highlight .ace_line {position: relative;}.ace_static_highlight .ace_gutter-cell {-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;top: 0;bottom: 0;left: 0;position: absolute;}.ace_static_highlight .ace_gutter-cell:before {content: counter(ace_line, decimal);counter-increment: ace_line;}.ace_static_highlight {counter-reset: ace_line;}</style>
+      <style>.ace-dawn .ace_gutter {background: #ebebeb;color: #333}.ace-dawn .ace_print-margin {width: 1px;background: #e8e8e8}.ace-dawn {background-color: #F9F9F9;color: #080808}.ace-dawn .ace_cursor {color: #000000}.ace-dawn .ace_marker-layer .ace_selection {background: rgba(39, 95, 255, 0.30)}.ace-dawn.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #F9F9F9;}.ace-dawn .ace_marker-layer .ace_step {background: rgb(255, 255, 0)}.ace-dawn .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgba(75, 75, 126, 0.50)}.ace-dawn .ace_marker-layer .ace_active-line {background: rgba(36, 99, 180, 0.12)}.ace-dawn .ace_gutter-active-line {background-color : #dcdcdc}.ace-dawn .ace_marker-layer .ace_selected-word {border: 1px solid rgba(39, 95, 255, 0.30)}.ace-dawn .ace_invisible {color: rgba(75, 75, 126, 0.50)}.ace-dawn .ace_keyword,.ace-dawn .ace_meta {color: #794938}.ace-dawn .ace_constant,.ace-dawn .ace_constant.ace_character,.ace-dawn .ace_constant.ace_character.ace_escape,.ace-dawn .ace_constant.ace_other {color: #811F24}.ace-dawn .ace_invalid.ace_illegal {text-decoration: underline;font-style: italic;color: #F8F8F8;background-color: #B52A1D}.ace-dawn .ace_invalid.ace_deprecated {text-decoration: underline;font-style: italic;color: #B52A1D}.ace-dawn .ace_support {color: #691C97}.ace-dawn .ace_support.ace_constant {color: #B4371F}.ace-dawn .ace_fold {background-color: #794938;border-color: #080808}.ace-dawn .ace_list,.ace-dawn .ace_markup.ace_list,.ace-dawn .ace_support.ace_function {color: #693A17}.ace-dawn .ace_storage {font-style: italic;color: #A71D5D}.ace-dawn .ace_string {color: #0B6125}.ace-dawn .ace_string.ace_regexp {color: #CF5628}.ace-dawn .ace_comment {font-style: italic;color: #5A525F}.ace-dawn .ace_heading,.ace-dawn .ace_markup.ace_heading {color: #19356D}.ace-dawn .ace_variable {color: #234A97}.ace-dawn .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxNNsZAAAAAElFTkSuQmCC) right repeat-y}</style>
+      <!-- export.css -->
+      <style>
+        body{margin:0 auto;max-width:800px;line-height:1.4}
+        #nav{margin:5px 0 10px;font-size:15px}
+        #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px 0;}
+        #contentarea{font-size:15px;margin:16px 0}
+        .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 0;}
+        .code-cell{font-family:Menlo,Consolas,'Ubuntu Mono',Monaco,'source-code-pro',monospace;font-size:12px;}
+        .latex-cell{white-space:pre-wrap;}
+      </style>
+      <!-- User CSS -->
+      <style> a {font-family: "HelveticaNeue-Light", sans-serif;font-size: 15px;}div.ace_line {}.text-cell {font-size: 15px;font-family: Sans-Serif;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 15px;font-family: Sans-Serif;}.latex-cell {font-size: 15px;font-family: Sans-Serif;}</style>
+    </head>
+    <body>
+      <div id="nav"><div>Next: <a href='CS138-lecture-20210216.html'>CS138-lecture-20210216</a>, Previous: <a href='CS138-lecture-20210209.html'>CS138-lecture-20210209</a>, Up: <a href='index.html'>Index</a></div></div>
+      <div id="titlearea">
+        <h2>CS138-lecture-20210211</h2>
+      </div>
+      <div id="contentarea"><div class="cell markdown-cell"><p>RE: Wireshark lab 1. This is an intro to the wireshark software.</p>
+<p><img src="resources/D295F7D318D8E1C847C9B330918C713F.jpg" alt="IMAGE" width="1182" height="745"></p>
+<p>observe that the <code>en0</code> has activity. Double click the card with activity to start packet analyzing.</p>
+<hr>
+<p><img src="resources/D2BFF09D9A7663AE325229205D17A826.jpg" alt="IMAGE" width="1116" height="814"><br>
+<img src="resources/4BEC59995E18CADE8E96449CF5AEC9E7.jpg" alt="IMAGE" width="609" height="296"><br>
+<img src="resources/1F0420BFFB18E661E3A9F36B7CD5E098.jpg" alt="IMAGE" width="606" height="273"><br>
+<img src="resources/97A87336AF3F61BF13C9E75F3B8780D6.jpg" alt="IMAGE" width="599" height="273"></p>
+<p>Hl = Physical address (MAC), Hn = IP address, Ht = port number</p>
+<p>Each time the packet goes thru a router, it must go up to the network layer and back down.</p>
+<p><img src="resources/BE7519E9EF7F569604311853B10C8CCB.jpg" alt="IMAGE" width="619" height="231"></p>
+<p>At the destination, the layers are removed on the way up to the application layer.</p>
+<p><img src="resources/8BC37A00DD784CB2C7AE959A767EFA93.jpg" alt="IMAGE" width="486" height="272"></p>
+<p>Transport layer: port number<br>
+Network layer: IP address<br>
+Link layer: MAC address</p>
+<p>Most important things about encapsulation:</p>
+<ol>
+<li>End systems have all the layers, but a switch only has 2 layers, and a router only has 3 layers.</li>
+<li>On end systems, when packets are generated and sent, headers are added layer by layer. When the packets are received by the final destination, headers will be removed one by one.</li>
+<li>On switch/routers, the packet will need to go up and down each layer, for error checking or extracting information from headers for routing/forwarding. Some other actions may be taken as well, including the update of link layer header.</li>
+</ol>
+<p><img src="resources/D182EEFCE5F2B9BEAC69D404CB5197A6.jpg" alt="IMAGE" width="1116" height="814"><br>
+<img src="resources/D09713520FCC59309C08FCEC29E9CD6F.jpg" alt="IMAGE" width="1116" height="814"><br>
+<img src="resources/ED4E68278A8E6C2215C56E783391635D.jpg" alt="IMAGE" width="1116" height="814"><br>
+<img src="resources/8EE0080AD313501A881361C623D93B4F.jpg" alt="IMAGE" width="1116" height="814"><br>
+<img src="resources/16B1F6E69C46784D4E7DAFA1503BFB5E.jpg" alt="IMAGE" width="1116" height="814"><br>
+<img src="resources/35BE92BBFBDCC5E0889C878545851730.jpg" alt="IMAGE" width="1116" height="814"></p>
+<p>Emails can also be spoofed:</p>
+<p><img src="resources/1D6CC4D982DD51DBF203F2C2F2FB6303.jpg" alt="IMAGE" width="1293" height="803"></p>
+<p><img src="resources/DC37DC8BE4E489FA570CB0ECB481ED50.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/EA427F2150491A5C81F732B8DC8A27BC.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/4F08908F443F38DACB3B097BED4A9117.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/E39B65E83EC25C34DD97505806D928E7.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/E883635C2D84BF9C7AD6E9C58AFD9A69.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/A7309ADDFC4020D137AF446B72423CB9.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/FB32EC9750029CE220A44CC444A0C4E8.jpg" alt="IMAGE" width="1113" height="813"></p>
+<h1>Ch 2</h1>
+<p><a href="resources/EE5AA4D9893DCF4B5B905BFE0AC444C3.pdf">Chapter_2_Application Layer.pdf</a></p>
+<p><img src="resources/65DE637A6746EEAB003A5C88C7CF2F1B.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/FF332808A431D0476FCE637D59501A88.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/21F62760196F28DA74281F5B7CF0DE4B.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/7F028E71497F20FD30E85C68363AFF98.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/8CECEDAA182CA8F4C789BCEFD79C90EC.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/8E52381F8D03E76906315731F7561C39.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/B3159176228FD7313947FC794B9D4A05.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/0D8F1E37AA1820A9E4F3061F9D37C7B9.jpg" alt="IMAGE" width="1113" height="813"><br>
+<img src="resources/DFD2948A24F684518450643061E592A9.jpg" alt="IMAGE" width="1113" height="813"></p>
+</div></div>
+      <script>document.body.onkeyup = function(e) {
+if (e.keyCode === 39) window.location.href = 'CS138-lecture-20210216.html';
+if (e.keyCode === 37) window.location.href = 'CS138-lecture-20210209.html';
+}</script>
+    </body>
+    </html>
+  
