@@ -1,0 +1,6 @@
+# Helper script to push notes
+set -e
+git status -sb
+git add .
+git commit -m "Update `date`"
+echo "<link rel=\"stylesheet\" href=\"style.css\">" >> docs/index.html
