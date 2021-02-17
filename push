@@ -4,3 +4,4 @@ git status -sb
 git add .
 git commit -m "Update `date`"
 echo "<link rel=\"stylesheet\" href=\"style.css\">" >> docs/index.html
+git push
