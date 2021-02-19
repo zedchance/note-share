@@ -2,9 +2,15 @@
 {
   html {background-color: #333;}
 
-  body {background-color: #333; color:#AAA;}
+  body
+  {
+    background-color: #333;
+    color:#AAA;
+  }
 
-  a {color:#9b5d17;}
+  a {color:#b57730;}
+
+  :visited {color:#777;}
 
   p {color: #AAA;}
 
@@ -17,8 +23,6 @@
   h1, h2, .title, .subtitle {color: #aaa;}
 
   .post-data {color: #666;}
-
-  a:hover {color:#444;}
 
   table tr:nth-child(even)
   {
@@ -44,16 +48,9 @@
   
   pre
   {
-    background-color: rgb(58, 58, 58);
-    color: #999;
-    border: 1px solid #444;
     page-break-inside: avoid;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
     max-width: 100%;
     overflow: auto;
-    padding: 1em 1.5em;
     display: block;
     word-wrap: break-word;
   }
