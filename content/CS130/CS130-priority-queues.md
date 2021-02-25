@@ -5,7 +5,7 @@ tags:
 
 ## Maxpq 
 
-[MaxPQ.java](/02DCEA3D1D7A986CF1BE641493DC1673.java)
+[MaxPQ.java](/notes/02DCEA3D1D7A986CF1BE641493DC1673.java)
 
 ```java
 /**

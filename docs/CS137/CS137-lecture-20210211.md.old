@@ -1,0 +1,15 @@
+---
+title: CS137-lecture-20210211
+tags: ["karnaugh map"]
+---
+
+![IMAGE](/EB9AB7683AA290707F21DDFAC532ECC1.jpg)
+![IMAGE](/95F430D0C379469B9E95BC6189429C5A.jpg)
+
+- A Karnaugh map is a graphical representation of a logic function. The map for {{< katex >}}n{{< /katex >}}-input logic function is an array with {{< katex >}}2^n{{< /katex >}} cells, (one for each possible input combination).
+- To represent a logic function in a k-map, we copy the 1s from the truth table to the corresponding cells.
+- Implicants are squares or rectangles made up of minterms
+- Pairs of adjacent 1 cells  in the k-map have minterms that differ in ONLY 1 variable
+- The minterm pairs can be combined into a single product term using the generalization of theorem T10:
+  - `T10) = term`
+- Thus, we can use k-maps to simplify the sum of the function.

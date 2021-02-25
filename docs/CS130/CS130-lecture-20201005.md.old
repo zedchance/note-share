@@ -1,0 +1,40 @@
+---
+title: CS130-lecture-20201005
+tags: ["heapsort"]
+---
+
+## Assignment 1 solutions
+
+![IMAGE](/130E510A8E85AB8087F84093C6F0A118.jpg)
+![IMAGE](/01D3E186749B8B5E307834D15B2E6808.jpg)
+
+## Heapsort
+
+![IMAGE](/3CB4503C941845EFC807E2AC2A6E74E4.jpg)
+![IMAGE](/BAE865F909A480D223A56A5FF3CFE4D4.jpg)
+![IMAGE](/355189E57A71366518636B2C965B0257.jpg)
+
+With the goal of non-decreasing order.
+
+Sink each parent starting with the last, and working down.
+
+![IMAGE](/0C1897B137518EAED65CAB946B30C36F.jpg)
+
+Now to sort, swap last element, reduce heap size, and sink item down
+
+The element at the end will be put into place.
+
+![IMAGE](/A45E16C239F84F21D19EDAAB6CFEE4FC.jpg)
+![IMAGE](/DE048D5AFD3885439D8B13868F8587A6.jpg)
+
+![IMAGE](/ED1B348F87BD3BF2A06C330A6C3E9F8A.jpg)
+![IMAGE](/A8E72AD4F3600E405AF1FF74C0887B97.jpg)
+![IMAGE](/5A6421DD8D4BD24E045122FADBD67AD3.jpg)
+
+Running time for `sink` is O(lg(n))
+Running time for entire `sort` is O(nlg(n)) worst case, best case)
+
+Space complexity for `sink` is O(1)
+Space complexity for `sort` is O(1)
+
+![IMAGE](/117791F5B2311D3EEC2E6CC9CB25D525.jpg)

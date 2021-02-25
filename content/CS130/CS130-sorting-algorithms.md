@@ -5,7 +5,7 @@ tags: ["mergesort", "quicksort"]
 
 ## Merge
 
-[Merge.java](/407D408208B0E8F9A6F596D855E2EF40.java)
+[Merge.java](/notes/407D408208B0E8F9A6F596D855E2EF40.java)
 
 ```java
 /**
@@ -88,7 +88,7 @@ public class Merge
 
 ## Quick
 
-[Quick.java](/D07682FF70B8E387DE6BD2F82E8D5B74.java)
+[Quick.java](/notes/D07682FF70B8E387DE6BD2F82E8D5B74.java)
 
 ```java
 /**

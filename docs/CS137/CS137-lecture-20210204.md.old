@@ -1,0 +1,66 @@
+---
+title: CS137-lecture-20210204
+tags: ["IEEE754"]
+---
+
+Continued from last lecture:
+
+How to convert 5.375 to a floating point representation using IEEE 754:
+
+1. Convert the number to a binary representation
+  Start with the whole part: 5 = `101`.
+  Then do the fractional part: .375
+  Using successive multiplication
+
+    {{< katex display >}}
+    \begin{aligned}
+      0.375 * 2 = 0 + .75 \\
+      0.75 * 2 = 1 + .5 \\ 
+      0.5 * 5 = 1 + .0
+    \end{aligned}
+    {{< /katex >}}
+
+      So .375 = `011`.
+      So 5.375 = `101.011` in fixed point
+
+2. Convert the number to scientific notation (move the decimal point over, "normalize")
+
+  {{< katex display >}}
+  \begin{aligned}
+      101.011 = 1.01011 \cdot 2^2
+  \end{aligned}
+  {{< /katex >}}
+
+  So we have `1.01011 * 2^2`.
+  Our unbiased exponent is `2` and our mantissa is `01011`.
+
+3. Calculate the bias exponent
+  Biased offset is 7 because we are using 4 bits to represent the biased exponent.
+
+  {{< katex display >}}
+  \begin{aligned}
+    \text{unbiased exponent } + \text{ biased offset} &= \text{biased exponent } \\
+    2 + 7 &= 9
+  \end{aligned}
+  {{< /katex >}}
+
+So our biased exponent is 9 = `1001`.
+
+4. Fusion of floating point (put it all together)
+  We are using 16 bits to represent our floating point numbers.
+  The most significant bit is the sign bit, `0` for positive, `1` for negative.
+  Then comes our 4 bit biased exponent.
+  Last comes our mantissa, 11 bits set aside for it.
+  So,
+  `[1 bit sign][4 bit biased exponent][11 bit mantissa]`
+
+    Sign bit | Biased exponent | Mantissa
+    --- | --- | ---
+    `0` | `1001` | `01011`
+  
+    So our full number is:
+    5.375 = `0100101011000000`
+    (pad the right side of the mantissa with zeros until you've used 11 bits.
+
+5. Convert to hex
+  `0100 1010 1100 0000` = `0x4AC0`

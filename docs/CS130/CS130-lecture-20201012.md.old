@@ -1,0 +1,63 @@
+---
+title: CS130-lecture-20201012
+tags: ["binary search", "radix sort", "symbol table"]
+---
+
+## Annoucements
+
+Midterm exam on 21, unless pushed back to 26th.
+
+The format is open book, open notes, no webcam. During class time so it will be timed. One question at a time, randomly shuffled, and you can't go back to work on previous questions.
+
+## Radix sort
+
+![IMAGE](/282E4957D4E1318B11E43ECB7D0E1DE3.jpg)
+![IMAGE](/E4D0120E76FD8B2AC7C452E935F81B6A.jpg)
+
+In this example: D = 3, K = 10. Sort from the least significant digit to the most significant digit.
+
+If we use count sort to sort, our runtime is O(D * (N + K)).
+
+![IMAGE](/2B1E7A59EE3AAFF63C8D52CAE0B42885.jpg)
+
+Best case is O(n)
+Worst case O(n^2)
+Average O(n)
+
+Best/worst case space complexity os O(1)
+
+## Symbol table
+
+![IMAGE](/B421529E691F455CB43A3FDA2C086ED2.jpg)
+![IMAGE](/CF06E88CE6B790D82E6FABB9D41FC582.jpg)
+![IMAGE](/93F7897EC91B2CA097713ECA8C41AD84.jpg)
+![IMAGE](/B71D1A29E5CFD419EAEA2693C537EB44.jpg)
+![IMAGE](/F1BAD99C9B002973B67D2F7B2B3B81DF.jpg)
+![IMAGE](/EEEC0162B02DA440E415AAE05E4DD744.jpg)
+![IMAGE](/FD5D3AE514730906D87678F32CE35CC9.jpg)
+![IMAGE](/553B1CD252D139C89665D5D53D4590BA.jpg)
+
+![IMAGE](/39D5008E80A1D48E26C9244DF2FDBC38.jpg)
+
+When a duplicate is added the value is overwritten. Ordered symbol tables are sorted by key.
+
+![IMAGE](/B552E2CB9647B72F57BEDBA3EFCF28B4.jpg)
+
+key, value
+"", 0
+"S", 1
+"E", 3
+"A", 2
+"R", 1
+"C", 1
+"H", 1
+"X", 1
+"M", 1
+"P", 1
+
+When it reaches the "E", it adds 1 to the value. maxFreqKey would be "E".
+
+![IMAGE](/5B626562ED1E4485FD0A87DED1D92ABB.jpg)
+![IMAGE](/8E57B57DB3C1813BF0FA249C767F519B.jpg)
+![IMAGE](/A7CD84A1125DD030216AA302379F2DF6.jpg)
+![IMAGE](/75AD70940A98233AFDDA00F791AB58F5.jpg)

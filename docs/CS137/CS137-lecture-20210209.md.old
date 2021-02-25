@@ -1,0 +1,56 @@
+---
+title: CS137-lecture-20210209
+tags: ["combinational circuits", "demorgan's theorem"]
+---
+
+[Ch2.pdf](/DFEA51F2817D8DD2110D2009F41EE8C1.pdf)
+
+![IMAGE](/0BB7BF15462F1731858C34F5597D4783.jpg)
+![IMAGE](/6DB7B9093DE250B84B5C79B01004406C.jpg)
+![IMAGE](/58FB08A50873B958C3520E957E1C8917.jpg)
+
+LUT = lookup table
+
+![IMAGE](/DADA5D949FD6865985C40B6A27B9E676.jpg)
+![IMAGE](/8BBF1E54EF14E96276A36C49C6479561.jpg)
+![IMAGE](/8633BED6F201EDACBF134AD05999B237.jpg)
+
+SOP = sum of products
+
+## DeMorgan's theorem
+
+1. Two or more variables NAND'd together is the same as the two terms inverted and OR'd
+  ![IMAGE](/F45D8D67B9A16097EAB95AA7715C7D15.jpg)
+2. Two or more variables NOR'd together is the same as the two variables inverted and AND'd together
+  ![IMAGE](/7F4B5C051EDA81E5B28FCF41A138E1C0.jpg)
+
+Lets show this via tables for these two equations:
+
+{{< katex display >}}
+\begin{aligned}
+  F1 &= F2 \\
+  \neg(A \cdot B) &= \neg A + \neg B
+\end{aligned}
+{{< /katex >}}
+
+Here is a table for {{< katex >}}F1{{< /katex >}}:
+
+{{< katex >}}A B{{< /katex >}} | {{< katex >}}A \cdot B{{< /katex >}} | {{< katex >}}\neg(A \cdot B){{< /katex >}}
+--- | --- | ---
+`0 0` | `0` | `1`
+`0 1` | `0` | `1`
+`1 0` | `0` | `1`
+`1 1` | `1` | `0`
+
+Here is a table for {{< katex >}}F2{{< /katex >}}:
+
+{{< katex >}}A B{{< /katex >}} | {{< katex >}}\neg A \neg B{{< /katex >}} | {{< katex >}}\neg A + \neg B{{< /katex >}}
+--- | --- | ---
+`0 0` | `1 1` | `1`
+`0 1` | `1 0` | `1`
+`1 0` | `0 1` | `1`
+`1 1` | `0 0` | `0`
+
+Notice that the output of each table is the same, thus the theorem is true.
+
+![IMAGE](/32D0F7C14863E605A255276B794EAA0C.jpg)

@@ -1,0 +1,41 @@
+---
+title: CS138-lecture-20210202
+tags: ["network edge", "network core"]
+---
+
+![IMAGE](/007D9B5E2B8501191DFCD8E3309ACDE7.jpg)
+![IMAGE](/3217A65B8AB3FC920E379B8DFE897599.jpg)
+
+NAT = network address translator
+
+![IMAGE](/5118CD86BABC607DF4C01B3E8E481E98.jpg)
+![IMAGE](/06C632128D22110DA78BDEDB2D8F7C31.jpg)
+![IMAGE](/62473E5C4024AF633305ADE464992AD7.jpg)
+
+The packet transmission delay is the delay that it takes your computer to send the packet to the link. (Your car from the garage to the driveway).
+
+![IMAGE](/C6FDF7FE1A8D0A0CB1E57A76D65BECDC.jpg)
+![IMAGE](/4FA81C829B8532B58F280100F9122542.jpg)
+
+HFC = hybrid fiber coax
+
+Without fiber optic cable we could not span networks across oceans.
+
+![IMAGE](/84FD1CC8E5B586A60D0BCE88E0306547.jpg)
+![IMAGE](/10F0A126ECEF65731534255102AAD464.jpg)
+![IMAGE](/F305B59DCA20CB11037CA9835BEE957B.jpg)
+![IMAGE](/185021269D621ADB87C31FFC3808B58B.jpg)
+
+Between the source and destination, what if there are N routers?
+
+\((N+1) \frac{L}{R}\)
+
+The entire packet must fully arrive at the router before being transmitted. The packet holds the information on where it needs to go, so it needs to be fully stored before being forwarded.
+
+![IMAGE](/28BAEEBD8D81B3BE26116E3FC52B123B.jpg)
+
+Queue = "waiting in line"
+
+https://wps.pearsoned.com/ecs_kurose_compnetw_6/216/55463/14198700.cw/index.html
+
+![IMAGE](/2862355D111A9D2B24FDD9098EADC0B0.jpg)

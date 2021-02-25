@@ -1,0 +1,96 @@
+---
+title: PHIL103-lecture-20201122
+tags: ["morality"]
+---
+
+# Why be moral?
+
+Two questions
+
+- Descriptive: would you be moral if you could always get away with immorality?
+- Normative: _should_ you be moral if you could always get away with immorality?
+- Normativity clarification: this is a rational _should_, not a moral _should_.
+- _Is morality rational?_
+
+Rational choice theory
+
+- People have a stable, ordered set of _preferences_.
+- Actions have _utility_ insofar as they satisfy these preferences.
+- Rational agents always choose the action that has the highest _expected utility_ in light of their _preferences_.
+
+Expected utility
+
+- Discount the value of something by the probability it will occur.
+- E.g., you can buy a lottery ticket for \$10. Has a 1% chance of winning \$100, and a 99% chance of winning \$0. Whats the expected utility?
+- \((0.01 \cdot 90) + (0.99 \cdot -10))
+
+Is morality (altruism) rational?
+
+- Why does this matter? Why try to show that it can be in our interest to be altruistic?
+- Remember, preferences are just given.
+- And it turns out that most people are naturally altruistic.
+- So, according to rational choice expected utility theory, altruism is rational.
+
+Not a satisfying answer
+
+- Still want to know if its rational to have such preferences in the first place
+  - If you could take a pill that would eliminate altruistic ends, would you have reason to do so/not to do so?
+  - If you were a sociopath and you could take a pill that would imbue you with altruistic prefernces, would you have a reason to do so/not do so?
+  
+Prisoner's Dilemma
+
+Imagine you have 2 prisoners, A and B
+
+| | B is silent | B testifies
+--- | --- | ---
+A is silent | Both get 6 months | A gets 10 years, B goes free
+A testifies | A goes free, B gets 10 years | Both get 5 years
+
+Another version
+
+| | Player 2 cooperates | Player 2 defects
+--- | --- | ---
+Player 1 cooperates | 1: WIN, 2: WIN | 1: LOSE BIG, 2: WIN BIG
+Player 1 defects | 1: WIN, 2: LOSE BIG | 1: LOSE, 2: LOSE
+
+Cooperation is a positive-sum, but defection is a dominant strategy
+
+- _Dominant strategy_: a strategy that produces the best results for a player regardless of what other players do
+- Other player will either defect or cooperate:
+  - If she defects, I do better by defecting
+  - If she cooperates, I do better by defecting.
+  - So I should always defect.
+
+Connection to morality
+
+- Generally, morality is a positive-sum game.
+- Life without morality is a negative sum game.
+- But theres always a strong temptation to cheat.
+- _Should_ I?
+
+Iterated games
+
+- What if you play PD multiple times with different players who play a wide variety of ways?
+- What strategy works best then?
+
+Robert Axelrod's computer simulations
+
+- Best strategy is **tit for tat**.
+- Cooperate until the other player defects, then do whatever the other player did last.
+
+Variations: reputation
+
+1. Play one PD round with the person next to you
+2. Record total score
+3. Hold up whatever card you played (so everyone can see)
+4. Find a new player to play with – must agree to play next round.
+5. Play another round and record the total score
+6. Repeat 3-5
+7. One person is randomly selected and paid a tally of their score
+
+An argument that it's rational to be mroal
+
+1. Life is a series of PD interactions, where we have informatino about each other
+2. So, "maximize my utility" doesn't maximize your utility.
+3. It's better to adopt a credible, public strategy to restrain yourself, provided others do so as well.
+4. Therefore, it's rational to internalize a moral code that requires restraint and disposes one to cooperate.
