@@ -1,7 +1,7 @@
 # Helper script to push notes
 set -e
-echo "<link rel=\"stylesheet\" href=\"style.css\">" >> docs/index.html
+hugo -d docs
 git status -sb
-git add .
+git add content docs
 git commit -m "Update `date`"
 git push
