@@ -1,6 +1,7 @@
 ---
 title: "CS13-lecture-notes"
 tags: "java"
+bookToc: true
 ---
 
 # CS 13 Lecture Notes
