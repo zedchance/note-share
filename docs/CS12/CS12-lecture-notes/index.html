@@ -1,0 +1,4716 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CS 12 Lecture notes #  Aug 20, 2018 #  [X] Download Java JDK and jGRASP [2018-08-20]
+A class is a “blueprint&quot; for objects in object-oriented coding
+ Aug 22, 2018 #  class #  All Java programs are structured in a class. It is a the fundamental part of a Java program. The simplest programs have a main method, which contains all of the code. The actual java library only has around 40 commands, but it has an extensive library of classes that you can use.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS12-lecture-notes" />
+<meta property="og:description" content="CS 12 Lecture notes #  Aug 20, 2018 #  [X] Download Java JDK and jGRASP [2018-08-20]
+A class is a “blueprint&quot; for objects in object-oriented coding
+ Aug 22, 2018 #  class #  All Java programs are structured in a class. It is a the fundamental part of a Java program. The simplest programs have a main method, which contains all of the code. The actual java library only has around 40 commands, but it has an extensive library of classes that you can use." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zedchance.github.io/CS12/CS12-lecture-notes/" />
+
+<title>CS12-lecture-notes | Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
+<script defer src="/en.search.min.7e6ef5189d02a74db84eb4c019c821b289d74a85c2b5286d5dd13c5be3f9c638.js" integrity="sha256-fm71GJ0Cp024TrTAGcghsonXSoXCtShtXdE8W&#43;P5xjg="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</head>
+
+<body dir="ltr">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: true},
+                  {left: "\\(", right: "\\)", display: true}
+              ]
+          }
+      );
+    </script>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e1a1b689fe907f6677087e2d9b539d9" class="toggle"  />
+    <label for="section-6e1a1b689fe907f6677087e2d9b539d9" class="flex justify-between">
+      <a  class="">CS10</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS10/CS10-Processing-labs/" class="">CS10-labs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06677567046f19eb3dacf987145475f" class="toggle" checked />
+    <label for="section-d06677567046f19eb3dacf987145475f" class="flex justify-between">
+      <a  class="">CS12</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS12/CS12-lecture-notes/" class=" active">CS12-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98a455a71c68533365837514b17a9eb9" class="toggle"  />
+    <label for="section-98a455a71c68533365837514b17a9eb9" class="flex justify-between">
+      <a  class="">CS13</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS13/CS13-lecture-notes/" class="">CS13-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9490b93202949ed3704ff9f858ef63c3" class="toggle"  />
+    <label for="section-9490b93202949ed3704ff9f858ef63c3" class="flex justify-between">
+      <a  class="">CS130</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-exercise-solutions-1/" class="">CS130-exercise-solutions-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200831/" class="">CS130-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200902/" class="">CS130-lecture-20200902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200909/" class="">CS130-lecture-20200909</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200914/" class="">CS130-lecture-20200914</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200916/" class="">CS130-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200921/" class="">CS130-lecture-20200921</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200923/" class="">CS130-lecture-20200923</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200928/" class="">CS130-lecture-20200928</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200930/" class="">CS130-lecture-20200930</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201005/" class="">CS130-lecture-20201005</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201007/" class="">CS130-lecture-20201007</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201012/" class="">CS130-lecture-20201012</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201014/" class="">CS130-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201019/" class="">CS130-lecture-20201019</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201021/" class="">CS130-lecture-20201021</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201028/" class="">CS130-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201102/" class="">CS130-lecture-20201102</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201104/" class="">CS130-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201109/" class="">CS130-lecture-20201109</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201116/" class="">CS130-lecture-20201116</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201118/" class="">CS130-lecture-20201118</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201123/" class="">CS130-lecture-20201123</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201125/" class="">CS130-lecture-20201125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201130/" class="">CS130-lecture-20201130</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201202/" class="">CS130-lecture-20201202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201207/" class="">CS130-lecture-20201207</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201209/" class="">CS130-lecture-20201209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-priority-queues/" class="">CS130-priority-queues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-sorting-algorithms/" class="">CS130-sorting-algorithms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7685cd96811cc43c9ecd205128385c1" class="toggle"  />
+    <label for="section-a7685cd96811cc43c9ecd205128385c1" class="flex justify-between">
+      <a  class="">CS131</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200901/" class="">CS131-lecture-20200901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200903/" class="">CS131-lecture-20200903</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200908/" class="">CS131-lecture-20200908</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200910/" class="">CS131-lecture-20200910</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200915/" class="">CS131-lecture-20200915</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200917/" class="">CS131-lecture-20200917</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200922/" class="">CS131-lecture-20200922</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200924/" class="">CS131-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200929/" class="">CS131-lecture-20200929</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201001/" class="">CS131-lecture-20201001</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201006/" class="">CS131-lecture-20201006</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201008/" class="">CS131-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201013/" class="">CS131-lecture-20201013</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201015/" class="">CS131-lecture-20201015</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201020/" class="">CS131-lecture-20201020</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201022/" class="">CS131-lecture-20201022</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201027/" class="">CS131-lecture-20201027</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201029/" class="">CS131-lecture-20201029</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201103/" class="">CS131-lecture-20201103</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201105/" class="">CS131-lecture-20201105</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201110/" class="">CS131-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201112/" class="">CS131-lecture-20201112</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201119/" class="">CS131-lecture-20201119</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201124/" class="">CS131-lecture-20201124</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201201/" class="">CS131-lecture-20201201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201203/" class="">CS131-lecture-20201203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201208/" class="">CS131-lecture-20201208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-1/" class="">CS131-study-guide-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-2/" class="">CS131-study-guide-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-3/" class="">CS131-study-guide-3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-4/" class="">CS131-study-guide-4</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ea6710cf4db85b6757a42f14aedf299" class="toggle"  />
+    <label for="section-9ea6710cf4db85b6757a42f14aedf299" class="flex justify-between">
+      <a  class="">CS133</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210125/" class="">CS133-lecture-20210125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210208/" class="">CS133-lecture-20210208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210210/" class="">CS133-lecture-20210210</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210215/" class="">CS133-lecture-20210215</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210217/" class="">CS133-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6c9e9a90396154c6e5e42bf42955eff" class="toggle"  />
+    <label for="section-f6c9e9a90396154c6e5e42bf42955eff" class="flex justify-between">
+      <a  class="">CS135</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-hw-20210203/" class="">CS135-hw-20210203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210126/" class="">CS135-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210129/" class="">CS135-lecture-20210129</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210201/" class="">CS135-lecture-20210201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210204/" class="">CS135-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210205/" class="">CS135-lecture-20210205</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210209/" class="">CS135-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210216/" class="">CS135-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210217/" class="">CS135-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210218/" class="">CS135-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eaf59c9d6b1b58452cc45e5585dd0717" class="toggle"  />
+    <label for="section-eaf59c9d6b1b58452cc45e5585dd0717" class="flex justify-between">
+      <a  class="">CS137</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210216/" class="">CS137-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210126/" class="">CS137-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210128/" class="">CS137-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210202/" class="">CS137-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210204/" class="">CS137-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210209/" class="">CS137-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210211/" class="">CS137-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210218/" class="">CS137-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e470c63ab7ad9a473e61272e98b3bcce" class="toggle"  />
+    <label for="section-e470c63ab7ad9a473e61272e98b3bcce" class="flex justify-between">
+      <a  class="">CS138</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210126/" class="">CS138-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210128/" class="">CS138-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210202/" class="">CS138-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210204/" class="">CS138-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210209/" class="">CS138-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210211/" class="">CS138-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210216/" class="">CS138-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210218/" class="">CS138-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-356e0128f78fd703af66d8abf4ebf976" class="toggle"  />
+    <label for="section-356e0128f78fd703af66d8abf4ebf976" class="flex justify-between">
+      <a  class="">CS26</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-lecture-notes/" class="">CS26-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-reading-notes/" class="">CS26-reading-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98681ab3e1e8c09eb7daeac8547903e6" class="toggle"  />
+    <label for="section-98681ab3e1e8c09eb7daeac8547903e6" class="flex justify-between">
+      <a  class="">CS39</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS39/CS39-lecture-notes/" class="">CS39-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe80ac56b57c0244f1c986628504841" class="toggle"  />
+    <label for="section-8fe80ac56b57c0244f1c986628504841" class="flex justify-between">
+      <a  class="">CS46</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/CS46-lecture-notes/" class="">CS46-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/luhns.c/" class="">Luhn&#39;s Algorithm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="toggle"  />
+    <label for="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="flex justify-between">
+      <a  class="">CS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="toggle"  />
+    <label for="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="flex justify-between">
+      <a  class="">ENGL1B</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/" class="">ENGL1B-assignment-8</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92d8bad8aa3f85c10048f789591cd9d3" class="toggle"  />
+    <label for="section-92d8bad8aa3f85c10048f789591cd9d3" class="flex justify-between">
+      <a  class="">MATH100</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH100/MATH100-lecture-notes/" class="">MATH100-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0495fd11e1626446d2b1cf0439989d77" class="toggle"  />
+    <label for="section-0495fd11e1626446d2b1cf0439989d77" class="flex justify-between">
+      <a  class="">MATH31</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-comparison-tests/" class="">MATH31-comparison-tests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-integral-test/" class="">MATH31-integral-test</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-series/" class="">MATH31-series</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-1/" class="">MATH31-unit-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-2/" class="">MATH31-unit-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-3/" class="">MATH31-unit-3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d4164ee5c968fdda8d4b42b98383d88" class="toggle"  />
+    <label for="section-1d4164ee5c968fdda8d4b42b98383d88" class="flex justify-between">
+      <a  class="">PHIL103</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/" class="">PHIL103-ec-lecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/" class="">PHIL103-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/" class="">PHIL103-lecture-20200907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/" class="">PHIL103-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/" class="">PHIL103-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/" class="">PHIL103-lecture-20200927</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/" class="">PHIL103-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/" class="">PHIL103-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/" class="">PHIL103-lecture-20201024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/" class="">PHIL103-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/" class="">PHIL103-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/" class="">PHIL103-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/" class="">PHIL103-lecture-20201122</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-71647d44f109da70d5305fe9e01e1a51" class="toggle"  />
+    <label for="section-71647d44f109da70d5305fe9e01e1a51" class="flex justify-between">
+      <a  class="">PHYS105</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-resources/" class="">PHYS105-resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/" class="">PHYS105-lab-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/" class="">PHYS105-lab-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/" class="">PHYS105-lab-20200423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/" class="">PHYS105-lecture-20200319</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/" class="">PHYS105-lecture-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/" class="">PHYS105-lecture-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/" class="">PHYS105-lecture-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/" class="">PHYS105-lecture-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/" class="">PHYS105-lecture-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/" class="">PHYS105-lecture-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/" class="">PHYS105-lecture-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/" class="">PHYS105-lecture-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/" class="">PHYS105-lecture-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/" class="">PHYS105-lecture-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/" class="">PHYS105-lecture-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/" class="">PHYS105-lecture-20200514</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/" class="">PHYS105-recitation-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/" class="">PHYS105-recitation-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/" class="">PHYS105-recitation-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/" class="">PHYS105-recitation-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/" class="">PHYS105-recitation-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/" class="">PHYS105-recitation-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/" class="">PHYS105-recitation-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/" class="">PHYS105-recitation-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/" class="">PHYS105-recitation-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/" class="">PHYS105-recitation-20200514</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2051d762fa29d975e5db96fff6a3c194" class="toggle"  />
+    <label for="section-2051d762fa29d975e5db96fff6a3c194" class="flex justify-between">
+      <a  class="">STATS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/STATS50/STATS50-lecture-notes/" class="">STATS50-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CS12-lecture-notes</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aug-20-2018">Aug 20, 2018</a></li>
+    <li><a href="#aug-22-2018">Aug 22, 2018</a>
+      <ul>
+        <li><a href="#class"><code>class</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#aug-27-2018">Aug 27, 2018</a>
+      <ul>
+        <li><a href="#the-rules-of-quality-software">The rules of quality software</a></li>
+      </ul>
+    </li>
+    <li><a href="#aug-29-2018">Aug 29, 2018</a></li>
+    <li><a href="#sep-5-2018">Sep 5, 2018</a>
+      <ul>
+        <li><a href="#data-types-in-java">Data Types in Java</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-10-2018">Sep 10, 2018</a>
+      <ul>
+        <li><a href="#cat-class">Cat class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-12-2018">Sep 12, 2018</a>
+      <ul>
+        <li><a href="#lab-1-aircraft-class">Lab 1: Aircraft Class</a></li>
+        <li><a href="#employee-class">Employee Class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-17-2018">Sep 17, 2018</a>
+      <ul>
+        <li><a href="#chicken-class">Chicken class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-19-2018">Sep 19, 2018</a>
+      <ul>
+        <li><a href="#donut-class">Donut class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-24-2018">Sep 24, 2018</a>
+      <ul>
+        <li><a href="#lab-2-bac-calculation">Lab 2: BAC Calculation</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-1-2018">Oct 1, 2018</a>
+      <ul>
+        <li><a href="#decision-statements">Decision statements</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-3-2018">Oct 3, 2018</a>
+      <ul>
+        <li><a href="#lift-and-drag-calculation">Lift and drag calculation</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-8-2018">Oct 8, 2018</a>
+      <ul>
+        <li><a href="#ifelse-worksheet"><code>if</code>..<code>else</code> worksheet</a></li>
+        <li><a href="#tip-worksheet">Tip worksheet</a></li>
+        <li><a href="#switch-statement"><code>switch</code> statement</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-10-2018">Oct 10, 2018</a>
+      <ul>
+        <li><a href="#more-ifelse">More <code>if</code>..<code>else</code>:</a></li>
+        <li><a href="#escape-velocity">Escape velocity</a></li>
+        <li><a href="#lab-3-robot">Lab 3: Robot</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-15-2018">Oct 15, 2018</a>
+      <ul>
+        <li><a href="#string-class">String class</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-22-2018">Oct 22, 2018</a>
+      <ul>
+        <li><a href="#while-loops"><code>while</code> loops</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-24-2018">Oct 24, 2018</a>
+      <ul>
+        <li><a href="#for-loop"><code>for</code> loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-29-2018">Oct 29, 2018</a>
+      <ul>
+        <li><a href="#arrays">Arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-31-2018">Oct 31, 2018</a>
+      <ul>
+        <li><a href="#sorting-and-searching-arrays">Sorting and searching arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-14-2018">Nov 14, 2018</a>
+      <ul>
+        <li><a href="#stacks">Stacks</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-26-2018">Nov 26, 2018</a>
+      <ul>
+        <li><a href="#java-swing-gui">Java Swing (GUI)</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-28-2018">Nov 28, 2018</a>
+      <ul>
+        <li><a href="#feet-to-meters-gui">Feet to meters GUI</a></li>
+      </ul>
+    </li>
+    <li><a href="#dec-3-2018">Dec 3, 2018</a>
+      <ul>
+        <li><a href="#review">Review</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/java/">java</a></li>
+  
+  </ul>
+</nav>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cs-12-lecture-notes">
+  CS 12 Lecture notes
+  <a class="anchor" href="#cs-12-lecture-notes">#</a>
+</h1>
+<h2 id="aug-20-2018">
+  Aug 20, 2018
+  <a class="anchor" href="#aug-20-2018">#</a>
+</h2>
+<p>[X] <del><em>Download Java JDK and jGRASP</em></del> [2018-08-20]</p>
+<p>A <code>class</code> is a “blueprint&quot; for objects in object-oriented coding</p>
+<hr>
+<h2 id="aug-22-2018">
+  Aug 22, 2018
+  <a class="anchor" href="#aug-22-2018">#</a>
+</h2>
+<h3 id="class">
+  <code>class</code>
+  <a class="anchor" href="#class">#</a>
+</h3>
+<p>All Java programs are structured in a <code>class</code>. It is a the fundamental part of a Java program. The simplest programs have a <code>main</code> method, which contains all of the code. The actual java library only has around 40 commands, but it has an extensive library of classes that you can use. <code>​main</code>​ is the entry point to the code.</p>
+<p>A more serious java program also includes a <code>class</code>​, but it will generally start with fields, then constructors, then accessors, then mutators, then general methods.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstJava</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello from Java\n&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The <code>public</code> class determines how exposed the class is to the world. <code>class</code> means were going to create a structure these sort of things. <code>FirstJava</code> is the identifier of the <code>class</code>. It is simply a name for the class, created by the programmer, must start with a alphabetic character. <strong>The java way is to capiatlize the first character of a class, although it doesn’t need to be.</strong> A string is a contiguously allocated sequence of bites. <code>\n</code> is an escape character to make a new line.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MilesPerGallon</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">double</span> miles<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> gallons<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> mpg<span style="color:#f92672">;</span>
+    
+    Scanner kb<span style="color:#f92672">);</span>
+    
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;Enter miles driven: &#34;</span> <span style="color:#f92672">);</span>
+    miles<span style="color:#f92672">);</span>
+    
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;Enter gallons used: &#34;</span> <span style="color:#f92672">);</span>
+    gallons<span style="color:#f92672">);</span>
+    
+    mpg <span style="color:#f92672">=</span> miles <span style="color:#f92672">/</span> gallons<span style="color:#f92672">;</span>
+    
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Your car drove &#34;</span> <span style="color:#f92672">+</span> mpg <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; miles per gallon&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span><span style="color:#75715e">// end main
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span><span style="color:#75715e">// end class
+</span></code></pre></div><p><code>public static void main(String[] args)</code>​</p>
+<p><code>public</code> means that it is exposed, a visibility specifier. <code>static</code> means that <code>main</code> exists, its ready to be used. <code>void</code> means that it doesn’t return anything. <code>main</code> is the name of the method, a method is a block of code that does something. All java applets must have a <code>main</code> method. <code>(String[] args)</code> is the parameter list.</p>
+<hr>
+<h2 id="aug-27-2018">
+  Aug 27, 2018
+  <a class="anchor" href="#aug-27-2018">#</a>
+</h2>
+<blockquote>
+<p>Programming is a craft, with a lot of trial and error.</p>
+</blockquote>
+<p>Developing software:</p>
+<ol>
+<li>Understand the problem</li>
+<li>Develop our key algorithm in pseudocode (plain english)</li>
+<li>Test the algorithm with pencil and paper</li>
+<li>Code the algorithm in the target language</li>
+<li>Test the code (arguably the hardest part of the development)
+<ol>
+<li>Usually have to go back to step 4, sometimes back to step 2, and if still not working then step 1. If steps 1-3 go well then 4-5 are easy.</li>
+</ol>
+</li>
+</ol>
+<p>Algorithms characteristics:</p>
+<ul>
+<li>Unambiguous</li>
+<li>Executable</li>
+<li>Terminates</li>
+<li>Zero or more inpurts</li>
+<li>One or more outputs</li>
+</ul>
+<p>To develop an algorithm:</p>
+<ol>
+<li>Determine the inputs and the outputs (if you know this step its extremely helpful)
+<ol>
+<li>Evaluate solutions (survey the landscape)</li>
+</ol>
+</li>
+<li>Break our solution into smaller pieces (divide and conquer)</li>
+<li>Describe each subtask in pseudocode</li>
+<li>Test pseudocode with a desk-check (pencil and paper test)</li>
+</ol>
+<p>Pseudocode for making breakfast:</p>
+<ul>
+<li>Fill kettle with water</li>
+<li>Set kettle on burner</li>
+<li>Turn burner on high</li>
+<li>Grind coffee</li>
+<li>Put pan on burner</li>
+<li>Turn burner on med</li>
+<li>Put butter in pan</li>
+<li>Crack eggs in pan</li>
+<li>Put english muffin in toaster</li>
+<li>scramble eggs</li>
+<li>Pour boiling water into coffee maker</li>
+<li>Pull english muffins out of toaster</li>
+<li>place eggs on muffins</li>
+<li>pour coffee into mug</li>
+</ul>
+<p>Pseudocode for Babylonian square root <code>a</code>:</p>
+<ul>
+<li>Start with <code>a</code> / 2</li>
+<li>this is <code>g</code></li>
+<li>then find average of <code>g</code> and <code>a / g</code>
+<ul>
+<li>this is your <code>newg</code></li>
+<li><code>newg</code>) / 2`</li>
+<li>repeat until 2 consequtive guesses are “close enough”</li>
+</ul>
+</li>
+<li>display <code>newg</code></li>
+</ul>
+<h3 id="the-rules-of-quality-software">
+  The rules of quality software
+  <a class="anchor" href="#the-rules-of-quality-software">#</a>
+</h3>
+<ol>
+<li>Quality software works
+<ol>
+<li>It correctly incorporates its specification</li>
+</ol>
+</li>
+<li>Quality software can be read and understood
+<ol>
+<li>good variable names</li>
+<li>commented code</li>
+<li><strong>clear code not clever code</strong></li>
+<li>indentation</li>
+</ol>
+</li>
+<li>Quality software is easy to modify</li>
+</ol>
+<hr>
+<h2 id="aug-29-2018">
+  Aug 29, 2018
+  <a class="anchor" href="#aug-29-2018">#</a>
+</h2>
+<p>Program to calculate the area of a rectangle
+area = length * width</p>
+<p>pseudocode:</p>
+<ul>
+<li>get length from user</li>
+<li>get width from user</li>
+<li>area = length * width</li>
+<li>print area</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javax.swing.JOptionPane<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RectangleArea</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">double</span> length<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> width<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> area<span style="color:#f92672">;</span>
+    
+    length<span style="color:#f92672">);</span>
+    width<span style="color:#f92672">);</span>
+    
+    area <span style="color:#f92672">=</span> length <span style="color:#f92672">*</span> width<span style="color:#f92672">;</span>
+    
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Area is &#34;</span> <span style="color:#f92672">+</span> area<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span><span style="color:#75715e">//end main
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span><span style="color:#75715e">//end class
+</span></code></pre></div><p><code>JOptionPane</code> makes the user input much more user-friendly by using pop-up dialog boxes. The <code>showInputDialog</code> is expecting a string, but the <code>length</code> variable is expecting a <code>double</code>. So the <code>Double.parseDouble</code> takes the string of numbers and turn it into a <code>double</code>.</p>
+<p>Classes contain:</p>
+<ul>
+<li>Fields</li>
+<li>Constructor</li>
+<li>General Methods (behaviors)</li>
+</ul>
+<hr>
+<h2 id="sep-5-2018">
+  Sep 5, 2018
+  <a class="anchor" href="#sep-5-2018">#</a>
+</h2>
+<h3 id="data-types-in-java">
+  Data Types in Java
+  <a class="anchor" href="#data-types-in-java">#</a>
+</h3>
+<p><strong>Integers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Integers</th>
+<th>Bits</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>8</td>
+<td>-128 &gt; 127</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16</td>
+<td>-32,768 &gt; 32,767</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>32</td>
+<td>~± 2 billion</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64</td>
+<td>~± 9.2e18 (really big)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//Example
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">byte</span> myByte<span style="color:#f92672">;</span>
+myByte <span style="color:#f92672">=</span> 23<span style="color:#f92672">;</span> <span style="color:#75715e">//This is legal
+</span><span style="color:#75715e"></span>myByte<span style="color:#f92672">)</span>
+
+<span style="color:#66d9ef">short</span> myShort <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">//Legal
+</span><span style="color:#75715e"></span>myShort <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>100000<span style="color:#f92672">;</span> <span style="color:#75715e">//Illegal, out of range
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> myInt <span style="color:#f92672">=</span> 100<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">long</span> myLong<span style="color:#f92672">;</span>
+</code></pre></div><p>Twos complement:</p>
+<blockquote>
+<p>$2 ^ {(bits - 1)} - 1 = max$<br>
+$-2 ^ {(bits - 1)} = min$</p>
+</blockquote>
+<p>For example in 8 bits:</p>
+<blockquote>
+<p>$2^{(8 - 1)} - 1)$<br>
+$-2^{(8 - 1)})$</p>
+</blockquote>
+<p>(The reason you minus one from the max is to compensate for zero)</p>
+<p>To go from positive to negative (for example in a byte) <strong>invert the bits and add 1</strong><br>
+For example with the decimal number 5:</p>
+<blockquote>
+<p>$0101 = 5_{10}$<br>
+$1010 + 1 = 1011 = -5_{10}$</p>
+</blockquote>
+<p><strong>Floating point types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Floats</th>
+<th>Bits</th>
+<th>Range</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>32</td>
+<td>~± 2 billion</td>
+<td>~7 decimal digit accuracy</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64</td>
+<td>~± 9.2e18 (really big)</td>
+<td>~15 decimal digit accuracy</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//Examples
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">byte</span> myByte <span style="color:#f92672">=</span> 97<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> myInt <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+
+myInt <span style="color:#f92672">=</span> myByte<span style="color:#f92672">;</span> <span style="color:#75715e">//This is legal, they are both integers and it will fit in the int type
+</span><span style="color:#75715e"></span>myBye<span style="color:#f92672">)</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">float</span> myFloat <span style="color:#f92672">=</span> 3004<span style="color:#f92672">.</span><span style="color:#a6e22e">215</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> myInt <span style="color:#f92672">=</span> 315<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">double</span> myDouble <span style="color:#f92672">=</span> 297<span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">;</span>
+
+myDouble<span style="color:#f92672">)</span>
+myFloat <span style="color:#f92672">=</span> myInt<span style="color:#f92672">;</span> <span style="color:#75715e">//Legal
+</span><span style="color:#75715e"></span>myInt<span style="color:#f92672">)</span>
+myFloat <span style="color:#f92672">=</span> myDouble<span style="color:#f92672">;</span> <span style="color:#75715e">//Illegal, 64 bits cannot fit in 32 bits
+</span></code></pre></div><p><strong>Other types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Other data types</th>
+<th>Bits</th>
+<th>Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td>16</td>
+<td>Unicode character set</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1</td>
+<td><code>true</code> or <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<blockquote>
+<p>‘A’ = 65 = 0x0041<br>
+‘B’ = 66 = 0x0042<br>
+‘C’ = 67 = 0x0043<br>
+‘0’ = 48 = 0x0030<br>
+‘1’ = 49 = 0x0031</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//Example
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> myChar <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span><span style="color:#f92672">;</span> <span style="color:#75715e">//Use single quotes to assign a char
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>myChar<span style="color:#f92672">);</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//Example
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">boolean</span> myBool <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span> <span style="color:#75715e">//Can only be true or false
+</span></code></pre></div><p><strong>Strings:</strong></p>
+<p><code>String</code> is a class, not an intrinsic data types. This makes them less limited than the built-in data types.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//Example
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringFun</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Dave&#34;</span><span style="color:#f92672">;</span>
+    String notHere <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39;s not here man&#34;</span><span style="color:#f92672">;</span>
+    String both <span style="color:#f92672">=</span> name <span style="color:#f92672">+</span> notHere<span style="color:#f92672">;</span> <span style="color:#75715e">//Concatenation of both strings
+</span><span style="color:#75715e"></span>    
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>both<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Prints <code>​Dave’s not here man</code>​</p>
+<p><strong>Strings are just concatenated <code>char</code>s from an array.</strong></p>
+<hr>
+<h2 id="sep-10-2018">
+  Sep 10, 2018
+  <a class="anchor" href="#sep-10-2018">#</a>
+</h2>
+<h3 id="cat-class">
+  Cat class
+  <a class="anchor" href="#cat-class">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Fields</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>double</td>
+</tr>
+<tr>
+<td>color</td>
+<td>String</td>
+</tr>
+<tr>
+<td>age</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>meow()</code></td>
+<td>void</td>
+</tr>
+<tr>
+<td><code>sleep()</code></td>
+<td>void</td>
+</tr>
+<tr>
+<td><code>scratch()</code></td>
+<td>void</td>
+</tr>
+<tr>
+<td><code>eat()</code></td>
+<td>void</td>
+</tr>
+<tr>
+<td><code>birthday()</code></td>
+<td>void</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Fields
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> weight<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> String color<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+  
+  <span style="color:#75715e">//Constructors
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Cat</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Cat&#34;</span><span style="color:#f92672">;</span>
+    weight <span style="color:#f92672">=</span> 8<span style="color:#f92672">;</span>
+    color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Black&#34;</span><span style="color:#f92672">;</span>
+    age <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span><span style="color:#75715e">//end default constructor, used to make it easy for testing
+</span><span style="color:#75715e"></span>  
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Cat</span> <span style="color:#f92672">(</span>String n<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> w<span style="color:#f92672">,</span> String c<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> a<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    name <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+    weight <span style="color:#f92672">=</span> w<span style="color:#f92672">;</span>
+    color <span style="color:#f92672">=</span> c<span style="color:#f92672">;</span>
+    age <span style="color:#f92672">=</span> a<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span><span style="color:#75715e">//end constructor
+</span><span style="color:#75715e"></span>  
+  <span style="color:#75715e">//Accessors, let us access a field
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> name<span style="color:#f92672">;}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">getWeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> weight<span style="color:#f92672">;}</span>
+  
+  <span style="color:#75715e">//Mutators, let us change a field
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>String nn<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>name <span style="color:#f92672">=</span> nn<span style="color:#f92672">;}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setWeight</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> nw<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>weight <span style="color:#f92672">=</span> nw<span style="color:#f92672">;}</span>
+  
+  <span style="color:#75715e">//General methods
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">meow</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; is meowing&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">hairball</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; is making a hairball&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span><span style="color:#75715e">//end Cat class
+</span></code></pre></div><p>In another file to test this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CatTest</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//Reference variable
+</span><span style="color:#75715e"></span>    Cat cat1<span style="color:#f92672">);</span>
+    
+    <span style="color:#75715e">//Calling methods
+</span><span style="color:#75715e"></span>    cat1<span style="color:#f92672">.</span><span style="color:#a6e22e">meow</span><span style="color:#f92672">();</span>
+    cat1<span style="color:#f92672">.</span><span style="color:#a6e22e">hairball</span><span style="color:#f92672">();</span>
+    
+    <span style="color:#75715e">//Using an accessor
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span> cat1<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+    
+    <span style="color:#75715e">//Using a mutator
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Current weight: &#34;</span> <span style="color:#f92672">+</span> cat1<span style="color:#f92672">.</span><span style="color:#a6e22e">getWeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span> <span style="color:#75715e">//seeing current weight
+</span><span style="color:#75715e"></span>    cat1<span style="color:#f92672">.</span><span style="color:#a6e22e">setWeight</span><span style="color:#f92672">(</span>13<span style="color:#f92672">.</span><span style="color:#a6e22e">2</span><span style="color:#f92672">);</span> <span style="color:#75715e">//new weight
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;New weight: &#34;</span> <span style="color:#f92672">+</span> cat1<span style="color:#f92672">.</span><span style="color:#a6e22e">getWeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span> <span style="color:#75715e">//seeing new weight
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="sep-12-2018">
+  Sep 12, 2018
+  <a class="anchor" href="#sep-12-2018">#</a>
+</h2>
+<h3 id="lab-1-aircraft-class">
+  Lab 1: Aircraft Class
+  <a class="anchor" href="#lab-1-aircraft-class">#</a>
+</h3>
+<p>Create a Java class the encapsulates the concept of a small aircraft.<br>
+Your class should have the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Field Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>manufacturer</td>
+<td>Name of aircraft manufacturer, e.g., Cessna</td>
+</tr>
+<tr>
+<td>String</td>
+<td>model</td>
+<td>Model number of the aircraft, e.g., 172</td>
+</tr>
+<tr>
+<td>double</td>
+<td>mtow</td>
+<td>Maximum takeoff weight in pounds</td>
+</tr>
+<tr>
+<td>double</td>
+<td>emptyWeight</td>
+<td>Empty weight in pounds.</td>
+</tr>
+<tr>
+<td>double</td>
+<td>fuelBurnRate</td>
+<td>Fuel burn rate in gallons/hour</td>
+</tr>
+</tbody>
+</table>
+<p>Accessors and mutators for each field, except fuelBurnRate.<br>
+Your class should override the toString() method and return a string with manufacturer and model number.<br>
+Your class should have general methods as follows: </p>
+<table>
+<thead>
+<tr>
+<th>Visibility</th>
+<th>Return</th>
+<th>Method name</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>double</td>
+<td><code>usefulLoad()</code></td>
+<td>// returns the maximum takeoff weight minus the empty weight.</td>
+</tr>
+<tr>
+<td>public</td>
+<td>double</td>
+<td><code>fuelWeight(double gallons)</code></td>
+<td>// returns the weight of gallons of fuel. Aviation fuel (100LL) weighs 6 lbs. per gallon.</td>
+</tr>
+<tr>
+<td>public</td>
+<td>double</td>
+<td><code>fueledWeightMargin (double hours)</code></td>
+<td>// remaining weight margin</td>
+</tr>
+</tbody>
+</table>
+<p>Write a main method that instantiates an airplane and tests the various methods.</p>
+<h3 id="employee-class">
+  Employee Class
+  <a class="anchor" href="#employee-class">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Variables</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>salary</td>
+<td>double</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>raiseSalary(double)</code></td>
+<td>void</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> salary<span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">(</span>String n<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> s<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    name <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+    salary <span style="color:#f92672">=</span> s<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">raiseSalary</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> p<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    salary <span style="color:#f92672">*=</span> p <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="sep-17-2018">
+  Sep 17, 2018
+  <a class="anchor" href="#sep-17-2018">#</a>
+</h2>
+<p>Making use of the graphics frame:<br>
+<code>GraphicsFrame.java</code> and <code>Drawable.java</code> are available on canvas. <strong>Use these files but do not modify them.</strong></p>
+<h3 id="chicken-class">
+  Chicken class
+  <a class="anchor" href="#chicken-class">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Variables</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>double</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Methods</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>crow()</code></td>
+<td>void</td>
+</tr>
+<tr>
+<td><code>peck()</code></td>
+<td>void</td>
+</tr>
+<tr>
+<td><code>draw()</code></td>
+<td>void</td>
+</tr>
+</tbody>
+</table>
+<p>This will use the Chicken class, GraphicsFrame class, Drawable class, and a MakeChicken class (which will contain our main). These must all be in the same folder.</p>
+<p>Using the GraphicsFrame</p>
+<ol>
+<li>Create the base class ( the class you want to draw )</li>
+<li>Put the <code>GraphicsFrame.java</code> and <code>Drawable.java</code> into the same folder</li>
+</ol>
+<p><code>drawString()</code> prints to the graphics window. <code>println()</code> only prints to the console. <code>implements</code> keyword after a class refers to an <code>interface</code> class. This is basically a promise to put the method that the class is implementing in your code. This is referring to the <code>draw()</code> method. This is needed in the Chicken class. The chicken class with the <code>draw()</code> method cannot draw itself, but can be used to draw. Use <code>setColor()</code> and <code>getColor()</code> to change the color back to the default after its drawn so the default color isn&rsquo;t changed for future draws.</p>
+<hr>
+<h2 id="sep-19-2018">
+  Sep 19, 2018
+  <a class="anchor" href="#sep-19-2018">#</a>
+</h2>
+<p>Everything inherits from <code>Object.java</code>. The class <code>Object.java</code> has a method called <code>toString()</code> which returns the address of where the object lives in memory. This method is called on default if you were to call an object on its own, i.e. <code>System.out.println(a1);</code> is the same as calling <code>System.out.println(a1.toString);</code>. To override <code>toString()</code> you could put in your own aircraft class <code>public String toString() {return manufacturer + &quot; &quot; + model;}</code> for example. The <code>toString()</code> method should return something descriptive about the object, in the case of our Aircraft class, it returns the manufacturer and model of the aircraft object.</p>
+<h3 id="donut-class">
+  Donut class
+  <a class="anchor" href="#donut-class">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Variables</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>char</td>
+</tr>
+<tr>
+<td>x coordinate</td>
+<td>int</td>
+</tr>
+<tr>
+<td>y coordinate</td>
+<td>int</td>
+</tr>
+<tr>
+<td>color</td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.awt.Color<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.awt.Graphics<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Donut</span> <span style="color:#66d9ef">implements</span> Drawable
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> String type<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">char</span> shape<span style="color:#f92672">;</span> <span style="color:#75715e">//C for circular, R for rectangle
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> Color color<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span>y<span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Donut</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Glazed&#34;</span><span style="color:#f92672">;</span>
+    shape <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C&#39;</span><span style="color:#f92672">;</span>
+    color <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</span><span style="color:#a6e22e">YELLOW</span><span style="color:#f92672">;</span>
+    x <span style="color:#f92672">=</span> y <span style="color:#f92672">=</span> 400<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Donut</span><span style="color:#f92672">(</span>String t<span style="color:#f92672">,</span> <span style="color:#66d9ef">char</span> s<span style="color:#f92672">,</span> Color c<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> px<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> py<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    type <span style="color:#f92672">=</span> t<span style="color:#f92672">;</span>
+    shape <span style="color:#f92672">=</span> s<span style="color:#f92672">;</span>
+    color <span style="color:#f92672">=</span> c<span style="color:#f92672">;</span>
+    x <span style="color:#f92672">=</span> px<span style="color:#f92672">;</span>
+    y <span style="color:#f92672">=</span> py<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span>Graphics g<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//Draw code goes here
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="sep-24-2018">
+  Sep 24, 2018
+  <a class="anchor" href="#sep-24-2018">#</a>
+</h2>
+<h3 id="lab-2-bac-calculation">
+  Lab 2: BAC Calculation
+  <a class="anchor" href="#lab-2-bac-calculation">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Fields</th>
+<th>Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>weight, in kg</td>
+<td>double</td>
+</tr>
+<tr>
+<td>gender, M or F</td>
+<td>char</td>
+</tr>
+<tr>
+<td>standard drinks (SD)</td>
+<td>double</td>
+</tr>
+<tr>
+<td>drinking period (DP)</td>
+<td>double</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Local constants</th>
+<th>Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body water (BW, 0.58 for male, 0.49 for female, constants)</td>
+<td>double</td>
+</tr>
+<tr>
+<td>metabolism rate (MR, 0.015 for male, 0.017 for female, constants)</td>
+<td>double</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EstimatedBloodAlcoholContent</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> weight<span style="color:#f92672">;</span> <span style="color:#75715e">//kg
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">char</span> gender<span style="color:#f92672">;</span> <span style="color:#75715e">//M or F
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> SD<span style="color:#f92672">;</span> <span style="color:#75715e">//Standard drinks: 10 grams of ethanol per drink
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> DP<span style="color:#f92672">;</span> <span style="color:#75715e">//Drinking hours
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">EstimatedBloodAlcoholContent</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jane Doe&#34;</span><span style="color:#f92672">;</span>
+    weight <span style="color:#f92672">=</span> 70<span style="color:#f92672">;</span>
+    gender <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;F&#39;</span><span style="color:#f92672">;</span>
+    SD <span style="color:#f92672">=</span> 2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">;</span>
+    DP <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e">//Full constructor goes here
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">//Accessors
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> name<span style="color:#f92672">;}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">ebac</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">double</span> BW <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> MR <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>gender<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      BW <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">49</span><span style="color:#f92672">;</span>
+      MR <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">017</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#75715e">//gender == &#39;M&#39;
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">{</span>
+      BW <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">58</span><span style="color:#f92672">;</span>
+      MR <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">015</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">806</span> <span style="color:#f92672">*</span> SD <span style="color:#f92672">*</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">2</span><span style="color:#f92672">)</span> <span style="color:#f92672">/</span> <span style="color:#f92672">(</span>BW <span style="color:#f92672">*</span> weight<span style="color:#f92672">)</span> <span style="color:#f92672">-</span> <span style="color:#f92672">(</span>MR <span style="color:#f92672">*</span> DP<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span><span style="color:#75715e">//end ebac
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> gender<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    EstimatedBloodAlcoholContent pf<span style="color:#f92672">);</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>pf<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span> <span style="color:#f92672">+</span> pf<span style="color:#f92672">.</span><span style="color:#a6e22e">ebac</span><span style="color:#f92672">());</span>
+  <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span><span style="color:#75715e">//end class
+</span></code></pre></div><p><code>toString()</code> should return something that is &ldquo;representative of the object&rdquo;, and should always be overriden.</p>
+<hr>
+<h2 id="oct-1-2018">
+  Oct 1, 2018
+  <a class="anchor" href="#oct-1-2018">#</a>
+</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Ch. 4 Quiz</em></del> [2018-10-08]</li>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Midterm is on 17th of Oct, covers Ch. 1 - 5.2 (only <code>if</code> and <code>if..else</code> from Ch. 5)</em></del> [2018-10-17]</li>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Make midterm notes (<strong>Allowed one 8.5 x 11 sheet of paper</strong>)</em></del> [2018-10-17]</li>
+</ul>
+<h3 id="decision-statements">
+  Decision statements
+  <a class="anchor" href="#decision-statements">#</a>
+</h3>
+<p>Control Statement review:</p>
+<ul>
+<li>Simple Sequence
+<ul>
+<li>Blocks are executed sequentially</li>
+</ul>
+</li>
+<li>Decision statements
+<ul>
+<li>if, if..else, switch</li>
+</ul>
+</li>
+<li>Iterate (repeat/loop)</li>
+</ul>
+<p><strong>if (and if..else):</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>boolean_expression<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Code block goes here
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>If the <code>boolean_expression</code> is <code>true</code>, then the code block gets executed, if <code>false</code> the block is skipped and the flow of the program continues normally.</p>
+<p>Boolean expressions are formed with <strong>relational operators</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Is equal to</td>
+<td><code>a == 5</code></td>
+<td>Works with fundamental data types, but be careful with floating point types</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Is not equal</td>
+<td><code>b != a</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>5 &gt; 4</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>10 &lt; 15</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Greater than or equal</td>
+<td><code>a &gt;= value</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Less than or equal</td>
+<td><code>a &lt;= c + 5</code></td>
+<td>Arithmetic is allowed</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>value <span style="color:#f92672">&gt;=</span> 21<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Code
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>A simple program to check drinking age:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>age <span style="color:#f92672">&gt;=</span> 21<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Come on in and kill some brain cells&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">&#34;</span>Go home punk<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>More complicated (waterfall type if):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>age <span style="color:#f92672">&lt;</span> 21<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No beer for you&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>age <span style="color:#f92672">&lt;=</span> 29<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Come on in and spend your limited money killing braincells&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>age <span style="color:#f92672">&lt;)</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Come in and spends lots and lots of money&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>age <span style="color:#f92672">&lt;=</span> 49<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;You&#39;re a bit old but we want your money&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span> <span style="color:#75715e">//over 49
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Get back in your Impala and listen to your 8-track&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="oct-3-2018">
+  Oct 3, 2018
+  <a class="anchor" href="#oct-3-2018">#</a>
+</h2>
+<p>Side read: <em>Physics for Game Programmers</em> by Grant Palmer</p>
+<h3 id="lift-and-drag-calculation">
+  Lift and drag calculation
+  <a class="anchor" href="#lift-and-drag-calculation">#</a>
+</h3>
+<p>Lift and drag for a rectangle wing:</p>
+<blockquote>
+<p>$lift = \frac{1}{2}ρ<em>v^2</em>cl<em>A$<br>
+$drag = \frac{1}{2}ρ</em>v^2<em>cd</em>A$</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>final double</td>
+<td><code>rho</code></td>
+<td><em>ρ</em> (rho)</td>
+<td>Density of air at STP (standard temp and pressure). Looking at sea level air density ($1.225 kg/m^3$)</td>
+</tr>
+<tr>
+<td>double</td>
+<td><code>v</code></td>
+<td>velocity</td>
+<td>Velocity in meters per second (will need to be converted to knots)</td>
+</tr>
+<tr>
+<td>double</td>
+<td><code>cl</code></td>
+<td>lift coeffecient</td>
+<td>Dimensionless</td>
+</tr>
+<tr>
+<td>double</td>
+<td><code>cd</code></td>
+<td>drag coeffecient</td>
+<td>Dimensionless</td>
+</tr>
+<tr>
+<td>double</td>
+<td><code>b</code></td>
+<td>wing span</td>
+<td>In meters</td>
+</tr>
+<tr>
+<td>double</td>
+<td><code>c</code></td>
+<td>wing chord</td>
+<td>In meters</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Wing</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> rho <span style="color:#f92672">=</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">225</span><span style="color:#f92672">;</span> <span style="color:#75715e">//kg/m^3
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> v<span style="color:#f92672">;</span>  <span style="color:#75715e">//meters per second
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> cl<span style="color:#f92672">;</span> <span style="color:#75715e">//dimensionless coeffecient of lift
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> cd<span style="color:#f92672">;</span> <span style="color:#75715e">//dimensionless drag
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> b<span style="color:#f92672">;</span>  <span style="color:#75715e">//span in meters
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> c<span style="color:#f92672">;</span>  <span style="color:#75715e">//chord in meters
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Wing</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    v<span style="color:#f92672">)</span>
+    cl <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">4</span><span style="color:#f92672">;</span> <span style="color:#75715e">//coeffecient of lift
+</span><span style="color:#75715e"></span>    cd <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">08</span><span style="color:#f92672">;</span><span style="color:#75715e">//drag
+</span><span style="color:#75715e"></span>    b <span style="color:#f92672">=</span> 9<span style="color:#f92672">.</span><span style="color:#a6e22e">25</span><span style="color:#f92672">;</span> <span style="color:#75715e">//meters
+</span><span style="color:#75715e"></span>    c <span style="color:#f92672">=</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">25</span><span style="color:#f92672">;</span> <span style="color:#75715e">//chord
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Wing</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> pv<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> pcl<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> pcd<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> pb<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> pc<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    v <span style="color:#f92672">=</span> pv<span style="color:#f92672">;</span>
+    cl <span style="color:#f92672">=</span> pcl<span style="color:#f92672">;</span>
+    cd <span style="color:#f92672">=</span> pcd<span style="color:#f92672">;</span>
+    b <span style="color:#f92672">=</span> pb<span style="color:#f92672">;</span>
+    c <span style="color:#f92672">=</span> pc<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e">//Accessors for all fields
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">//Mutators for b and c
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">lift</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">/</span>2 <span style="color:#f92672">*</span> rho <span style="color:#f92672">*</span> v <span style="color:#f92672">*</span> v <span style="color:#f92672">*</span> cl <span style="color:#f92672">*</span> area<span style="color:#f92672">();</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">liftkg</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> lift<span style="color:#f92672">()</span> <span style="color:#f92672">/</span> 9<span style="color:#f92672">.</span><span style="color:#a6e22e">81</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">area</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> b <span style="color:#f92672">*</span> c<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    Wing cruiseWing<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Area: &#34;</span> <span style="color:#f92672">+</span> cruiseWing<span style="color:#f92672">.</span><span style="color:#a6e22e">area</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; square meters&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Lift: &#34;</span> <span style="color:#f92672">+</span> cruiseWing<span style="color:#f92672">.</span><span style="color:#a6e22e">lift</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; N&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Lift: &#34;</span> <span style="color:#f92672">+</span> cruiseWing<span style="color:#f92672">.</span><span style="color:#a6e22e">lift</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; kg&#34;</span><span style="color:#f92672">);</span>
+
+    Wing stallWing<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Area: &#34;</span> <span style="color:#f92672">+</span> stallWing<span style="color:#f92672">.</span><span style="color:#a6e22e">area</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; square meters&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Lift: &#34;</span> <span style="color:#f92672">+</span> stallWing<span style="color:#f92672">.</span><span style="color:#a6e22e">lift</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; N&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Lift: &#34;</span> <span style="color:#f92672">+</span> stallWing<span style="color:#f92672">.</span><span style="color:#a6e22e">lift</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; kg&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span><span style="color:#75715e">//end Wing
+</span></code></pre></div><p>The <code>lift()</code> method must use a floating point number in the calculation of 1/2 otherwise with integer math it equals 0. By putting at least one decimal in the calculation (1.0/2) it forces Java to use floating point math. Also handling the $v^2$ is as easy as multiplying it by itself, however for higher powers <code>Math.pow(v, 2)</code> would be a better option. For example $v^5$: <code>Math.pow(v, 5)</code></p>
+<hr>
+<h2 id="oct-8-2018">
+  Oct 8, 2018
+  <a class="anchor" href="#oct-8-2018">#</a>
+</h2>
+<p>Variables are declared inside a method, and fields are global to a class. Fields ultimately become a variable when an instance of an object is created.</p>
+<h3 id="ifelse-worksheet">
+  <code>if</code>..<code>else</code> worksheet
+  <a class="anchor" href="#ifelse-worksheet">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ifElse1</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 100<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 50<span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a);
+</span><span style="color:#e6db74">    System.out.println(&#34;</span>a <span style="color:#f92672">!=</span> b<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34; + (a != b));
+</span><span style="color:#e6db74">    System.out.println(&#34;</span>a <span style="color:#f92672">&gt;</span> b<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34; + (a &gt; b));
+</span><span style="color:#e6db74">    System.out.println(&#34;</span>a <span style="color:#f92672">&lt;</span> b<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34; + (a &lt; b));
+</span><span style="color:#e6db74">    System.out.println(&#34;</span>a <span style="color:#f92672">&gt;=</span> b<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34; + (a &gt;= b));
+</span><span style="color:#e6db74">    System.out.println(&#34;</span>a <span style="color:#f92672">&lt;=</span> b<span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&lt;=</span> b<span style="color:#f92672">));</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="tip-worksheet">
+  Tip worksheet
+  <a class="anchor" href="#tip-worksheet">#</a>
+</h3>
+<p>pseudo:</p>
+<ul>
+<li>get check amount</li>
+<li>get satisfaction level from customer</li>
+<li>based on satisfaction level
+<ul>
+<li>calculate tip</li>
+</ul>
+</li>
+<li>display amount, tip, satisfaction level</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javax.swing.JOptionPane<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ifElse2</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">double</span> amount<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> tip <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> satisfactionLevel<span style="color:#f92672">;</span>
+    String sasLevel<span style="color:#f92672">;</span>
+
+    amount<span style="color:#f92672">);</span>
+    satisfactionLevel<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>satisfactionLevel<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      tip <span style="color:#f92672">=</span> amount <span style="color:#f92672">*</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">20</span><span style="color:#f92672">;</span>
+      sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Very satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>satisfactionLevel<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      tip <span style="color:#f92672">=</span> amount <span style="color:#f92672">*</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">15</span><span style="color:#f92672">;</span>
+      sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>satisfactionLevel<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      tip <span style="color:#f92672">=</span> amount <span style="color:#f92672">*</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">;</span>
+      sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Somewhat satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span>
+    <span style="color:#f92672">{</span>
+      tip <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+      sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Not satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Check amount: &#34;</span> <span style="color:#f92672">+</span> check<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tip: &#34;</span> <span style="color:#f92672">+</span> tip<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sasLevel<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>JOptionPane</code> doesn&rsquo;t need to be instantiated as an object, <strong>because all the methods are <code>static</code> inside the class.</strong></p>
+<h3 id="switch-statement">
+  <code>switch</code> statement
+  <a class="anchor" href="#switch-statement">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>exp<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span> 
+    <span style="color:#75715e">//Code for case 1
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+    <span style="color:#75715e">//Code for case 2
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">case</span> 3<span style="color:#f92672">:</span>
+    <span style="color:#75715e">//Code for case 3
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+    <span style="color:#75715e">//Default case code (runs if no other case is met)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong><code>exp</code> must be a integer or a String expression.</strong> <code>switch</code> statements only work for exact matches, not greater or less expressions. The code in each case must end with a <code>break</code> otherwise the other cases will execute also. The code in each statement can have curly braces around it but it doesn&rsquo;t need them.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>satisfactionLevel<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+    tip <span style="color:#f92672">=</span> amount <span style="color:#f92672">*</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">15</span><span style="color:#f92672">;</span>
+    sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+    tip <span style="color:#f92672">=</span> amount <span style="color:#f92672">*</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">20</span><span style="color:#f92672">;</span>
+    sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Very satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">case</span> 3<span style="color:#f92672">:</span>
+    tip <span style="color:#f92672">=</span> amount <span style="color:#f92672">*</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">10</span><span style="color:#f92672">;</span>
+    sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Somewhat satisfied&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+    tip <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    sasLevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;You suck!&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="oct-10-2018">
+  Oct 10, 2018
+  <a class="anchor" href="#oct-10-2018">#</a>
+</h2>
+<h3 id="more-ifelse">
+  More <code>if</code>..<code>else</code>:
+  <a class="anchor" href="#more-ifelse">#</a>
+</h3>
+<p>pseudo</p>
+<ul>
+<li>get float from user</li>
+<li>check
+<ul>
+<li>is zero</li>
+<li>is pos</li>
+<li>is neg</li>
+</ul>
+</li>
+<li>print corresponding messages</li>
+<li>also check
+<ul>
+<li>if number is less than 1</li>
+<li>if number is more then 1000000</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ifelse0</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    Scanner kb<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">double</span> input<span style="color:#f92672">;</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Enter a number: &#34;</span><span style="color:#f92672">);</span>
+    input<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>input <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The number is positive&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>input<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printlnt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The number is zero&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#75715e">//input &lt; 0
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printlnt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The number is negative&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">abs</span><span style="color:#f92672">(</span>input<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The number is small&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>input <span style="color:#f92672">&gt;</span> 1000000<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;The number is large&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="escape-velocity">
+  Escape velocity
+  <a class="anchor" href="#escape-velocity">#</a>
+</h3>
+<p>The average person can jump off the ground with a velocity of 3.13 m/s (about 7mph) without fear of leaving the planet. However, if an astronomer jumps with this velocity while standing on Halley&rsquo;s Comet, will the astronaut ever come back down? Create a Java test program that allows the user to input a launch velocity (m/s) from the surface of a small body and determine whether the jumper will return to the surface.</p>
+<blockquote>
+<p>$v_{escape} = \sqrt{ 2 \frac{GM}{R} }$<br>
+$G)<br>
+$M)<br>
+$R)</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Escape</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> G <span style="color:#f92672">=</span> 6<span style="color:#f92672">.</span><span style="color:#a6e22e">67E</span><span style="color:#f92672">-</span>11<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">double</span> M <span style="color:#f92672">=</span> 2<span style="color:#f92672">.</span><span style="color:#a6e22e">2E14</span><span style="color:#f92672">;</span> <span style="color:#75715e">//mass in kg
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">double</span> R <span style="color:#f92672">=</span> 5500<span style="color:#f92672">;</span>   <span style="color:#75715e">//radius in m
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">double</span> vEscape<span style="color:#f92672">;</span>
+
+    vEscape<span style="color:#f92672">);</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printlnt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Escape Velocity: &#34;</span> <span style="color:#f92672">+</span> vEscape<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>vEscape <span style="color:#f92672">&lt;</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">13</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printlnt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;You are leaving Halley&#39;s comet&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printlnt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;You are staying on Halley&#39;s comet&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Scientific notation can be entered in using the E for exponent. (<code>6.67E-11</code> is the same as writing $6.67 * 10^{-11}$)</p>
+<h3 id="lab-3-robot">
+  Lab 3: Robot
+  <a class="anchor" href="#lab-3-robot">#</a>
+</h3>
+<p><em>See Labs/L3Robot/<a href="Labs/L3Robot/RobotClass.pdf">RobotClass.pdf</a></em></p>
+<hr>
+<h2 id="oct-15-2018">
+  Oct 15, 2018
+  <a class="anchor" href="#oct-15-2018">#</a>
+</h2>
+<h3 id="string-class">
+  String class
+  <a class="anchor" href="#string-class">#</a>
+</h3>
+<p>Strings are objects, that hold values about the string. Some of the fields include the length of the string. Strings also have methods because they are objects. <code>length()</code> returns the length of the string. Strings are immutable, if a method returns a string it is technically a new string.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javax.swing.JOptionPane<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringTest</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    String s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, world!&#34;</span><span style="color:#f92672">;</span>
+    String s2<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 4<span style="color:#f92672">;</span>
+
+    s2<span style="color:#f92672">);</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">());</span> <span style="color:#75715e">//prints length
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">());</span> <span style="color:#75715e">//prints string in upper case
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span> <span style="color:#75715e">//prints the char at the speicified index (declared above)
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">));</span> <span style="color:#75715e">//prints the last char
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">endsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;world!&#34;</span><span style="color:#f92672">));</span> <span style="color:#75715e">//prints boolean if the suffix is found
+</span><span style="color:#75715e"></span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s2<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>s2<span style="color:#f92672">));</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">.</span><span style="color:#a6e22e">equalsIgnoreCase</span><span style="color:#f92672">(</span>s2<span style="color:#f92672">));</span>
+
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>When calling the <code>toUpperCase()</code> method, the string is changed to a different string, but the original <code>s1</code> is unaffected. <code>charAt(int i)</code> is a method that returns the char at the specified index <strong>(starting at 0)</strong>. Strings are immutable (not mutatable). <code>endsWith(String suffix)</code> returns a boolean if the suffix is at the end of the string checked. <code>equals()</code> returns a boolean if the strings are equal, <code>equalsIgnoreCase()</code> returns a boolean without looking at the case sensitivity.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">;</span>
+String s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">;</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1<span style="color:#f92672">);</span>
+</code></pre></div><p>This prints <code>true</code>, because the way Java allocates memory, technically speaking, since the 2 strings are of identical contents, Java points <code>s1</code> and <code>s2</code> at the same object in memory. If the object is then changed later it creates another object to store the changed string.</p>
+<hr>
+<h2 id="oct-22-2018">
+  Oct 22, 2018
+  <a class="anchor" href="#oct-22-2018">#</a>
+</h2>
+<h3 id="while-loops">
+  <code>while</code> loops
+  <a class="anchor" href="#while-loops">#</a>
+</h3>
+<blockquote>
+<p>Review:<br>
+Three control structores</p>
+<ul>
+<li>Sequence</li>
+<li>Branching</li>
+<li>Iteration (loops)</li>
+</ul>
+</blockquote>
+<p><code>while</code> loops are used to make iteration that is event-based, meaning it usually means the loop must run an unknown amount of times. (Contrasted with the <code>for</code> loop, where you know the amount of times the loop must run)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>boolean_expression<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#75715e">/*
+</span><span style="color:#75715e">  Code to be executed while boolean_expression is true
+</span><span style="color:#75715e">  When the body of the loop is finished, the boolean_expression is checked again
+</span><span style="color:#75715e">  If boolean_expression is false the body is skipped
+</span><span style="color:#75715e">  */</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>(You can <code>break</code> out of the loop at any point, however this is considered to be poor programming.)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WhileThing</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>count <span style="color:#f92672">&lt;=</span> 10<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>count <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+      count<span style="color:#f92672">++;</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Prints:</p>
+<blockquote>
+<p>1 2 3 4 5 6 7 8 9 10</p>
+</blockquote>
+<p>More examples:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringSlicer</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    String myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Stuff in the String.&#34;</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> myString<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">())</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>myString<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span>
+      i<span style="color:#f92672">++;</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>StringSlicer</code> prints a string vertically</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnesAndZeros</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> onesCount <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> zerosCount <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> otherCount <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    String myString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1110101xx00&#34;</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> myString<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">())</span>
+    <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>myString<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">))</span>
+      <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;1&#39;</span><span style="color:#f92672">:</span>
+          onesCount<span style="color:#f92672">++;</span>
+          <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;0&#39;</span><span style="color:#f92672">:</span>
+          zerosCount<span style="color:#f92672">++;</span>
+          <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+          otherCount<span style="color:#f92672">++;</span>
+          <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+      <span style="color:#f92672">}</span>
+
+      i<span style="color:#f92672">++;</span>
+    <span style="color:#f92672">}</span>
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;onesCount);
+</span><span style="color:#e6db74">    System.out.println(&#34;</span>zerosCount<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">&#34;</span>otherCount<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Prints:</p>
+<blockquote>
+<p>onesCount = 5<br>
+zerosCount = 4<br>
+otherCount = 2</p>
+</blockquote>
+<p><code>OnesAndZeros</code> counts the amount of 1s and 0s in a string. It also counts any other char under the <code>otherCount</code> variable.</p>
+<hr>
+<h2 id="oct-24-2018">
+  Oct 24, 2018
+  <a class="anchor" href="#oct-24-2018">#</a>
+</h2>
+<h3 id="for-loop">
+  <code>for</code> loop
+  <a class="anchor" href="#for-loop">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>initialize counter<span style="color:#f92672">;</span> boolean_expression<span style="color:#f92672">;</span> increment counter<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#75715e">//code to be executed in loop
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>All looping can be done with a <code>while</code> loop, however, the <code>for</code> loop makes it conveinent to see all the pieces of the loop. <code>for</code> loops are used for counted loops, not necessarily event-based loops. The initialization of the counter doesn&rsquo;t need to be inside the parameters of the <code>for</code> loop, however you want to try to limit the scope of variables as much as possible, so unless you need that variable after the loop, keep the initialization inside the parameters.</p>
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Loopy</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Prints:</p>
+<blockquote>
+<p>1 2 3 4 5 6 7 8 9 10</p>
+</blockquote>
+<p>The initialization of the counter only happens as you enter the loop for the first pass. The boolean_expression happens everytime you get to the top of the loop. The increment happens at the bottom of the loop. In this example, the scope of <code>i</code> is only inside the loop.</p>
+<p>More examples:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ValidEmail</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+   String email <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myEmail@somePlace.com&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">int</span> atCount <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>  <span style="color:#75715e">//for this excercise valid emails have only one @ symbol
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> dotCount <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">//and only one . symbol
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">))</span>
+      <span style="color:#f92672">{</span>
+        atCount<span style="color:#f92672">++;</span>
+      <span style="color:#f92672">}</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>email<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">))</span>
+      <span style="color:#f92672">{</span>
+        dotCount<span style="color:#f92672">++;</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>atCount<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;This is a valid email&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;This is not a valid email&#34;</span><span style="color:#f92672">);</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>email<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstAt</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    String email <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myEmail@somePlace.com&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> email<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> email<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;@&#39;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      i<span style="color:#f92672">++;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> email<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">())</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;@ symbol is at index: &#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;No @ symbol&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Order the boolean_expression properly, so you must put the increment before the check of the array because otherwise it will check an out of bounds index before checking the increment.</p>
+<hr>
+<h2 id="oct-29-2018">
+  Oct 29, 2018
+  <a class="anchor" href="#oct-29-2018">#</a>
+</h2>
+<h3 id="arrays">
+  Arrays
+  <a class="anchor" href="#arrays">#</a>
+</h3>
+<p>An array is nothing more then a list. Arrays are homogenous, meaning all the elements of an array is of the same data type. Indecies in arrays start at 0.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> grades <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>8<span style="color:#f92672">];</span> <span style="color:#75715e">//must specify the size of the array
+</span><span style="color:#75715e"></span>
+grades<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 92<span style="color:#f92672">;</span> <span style="color:#75715e">//to set an individual element
+</span><span style="color:#75715e"></span>grades<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 85<span style="color:#f92672">;</span>
+</code></pre></div><p><code>grades</code> is the name of the integer array list with 8 cells. This also loads each cell with 0s. The size of the array must be a positive integer. 92 will be at the first cell (index 0) of the array. <code>grades[0]</code> reads as &ldquo;grades sub zero&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>grades<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>length</code> doesn&rsquo;t need parenthesis after it because it is a value in the array object, not a method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> total <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  total <span style="color:#f92672">=</span> total <span style="color:#f92672">+</span> grades<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">int</span> average <span style="color:#f92672">=</span> total <span style="color:#f92672">/</span> grades<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+</code></pre></div><p><code>total</code> is being used as an accumlator for the sum of the array&rsquo;s elements. You can then divide <code>total</code> by <code>grades.length</code> to get the average.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArrayTest</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> myArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>8<span style="color:#f92672">];</span>
+
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Index: &#34;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; is &#34;</span> <span style="color:#f92672">+</span> myArray<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>An array can be automatically initialized using this syntax:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> myArray <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>92<span style="color:#f92672">,</span> 85<span style="color:#f92672">,</span> 64<span style="color:#f92672">,</span> 23<span style="color:#f92672">,</span> 32<span style="color:#f92672">,</span> 28<span style="color:#f92672">,</span> 34<span style="color:#f92672">,</span> 85<span style="color:#f92672">};</span>
+</code></pre></div><p>Java will automatically make the array size based on how many elements are in the first list.</p>
+<p>To fill an array with random data:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RandomArray</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    Random rangen<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> randomArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>100<span style="color:#f92672">];</span>
+
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      randomArray<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>nextInt()</code> will return a random integer inside the limits of an integer. The parameter inside <code>nextInt</code> is the upper limit exclusive of the number you want to generate. <code>nextInt(100)</code> would make random numbers between 0 and 99.</p>
+<hr>
+<h2 id="oct-31-2018">
+  Oct 31, 2018
+  <a class="anchor" href="#oct-31-2018">#</a>
+</h2>
+<h3 id="sorting-and-searching-arrays">
+  Sorting and searching arrays
+  <a class="anchor" href="#sorting-and-searching-arrays">#</a>
+</h3>
+<p>Bubble swap compares 2 elements and swaps them if the first element is bigger. The loop continues until each element has been swapped.</p>
+<p>Array declaration review:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String<span style="color:#f92672">[]</span> myArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[</span>5<span style="color:#f92672">];</span> <span style="color:#75715e">//makes an array of strings with 5 cells
+</span><span style="color:#75715e"></span>
+myArray<span style="color:#f92672">[</span>0<span style="color:#f92672">])</span>
+</code></pre></div><p>Code to write a bubble sort:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BubbleSort</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printArray</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> a<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-----&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> n <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>94<span style="color:#f92672">,</span> 28<span style="color:#f92672">,</span> 67<span style="color:#f92672">,</span> 125<span style="color:#f92672">,</span> 8<span style="color:#f92672">};</span>
+
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> outer<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> n<span style="color:#f92672">[</span>i <span style="color:#f92672">+</span> 1<span style="color:#f92672">])</span>
+        <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> n<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+          n<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> n<span style="color:#f92672">[</span>i <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
+          n<span style="color:#f92672">[</span>i <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    printArray<span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AnotherSort</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    Random rangen<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> n <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>1000<span style="color:#f92672">];</span>
+
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      n<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>A better way to sort is to use <code>java.util.Arrays</code>, in this class there is a <code>sort()</code> method that is the fastest sort available to us. Using a bubble sort is slow, but it works. Sorting an array of 1 million cells with a bubble sort takes around 30 min, whereas <code>sort()</code> in the arrays class can do 100 million in a second or so, maxing out the heap at 1 billion.</p>
+<hr>
+<h2 id="nov-14-2018">
+  Nov 14, 2018
+  <a class="anchor" href="#nov-14-2018">#</a>
+</h2>
+<h3 id="stacks">
+  Stacks
+  <a class="anchor" href="#stacks">#</a>
+</h3>
+<p>Infix expression: $20 + 4 * 2$<br>
+Postfix expression (RPN): <code>20 4 2 * +</code></p>
+<p>The computer doesn&rsquo;t know the order of operations, so while the computer is chugging along reading things it doesn&rsquo;t know what to do first. By putting the operands at the end, the computer can correctly do the evaluation.</p>
+<p>Post fix rules:</p>
+<ol>
+<li>If the token is a number
+<ol>
+<li>push to the stack</li>
+</ol>
+</li>
+<li>If the token is an operator
+<ol>
+<li>Pop the stack <strong>twice</strong></li>
+<li>Then apply the operator.</li>
+<li>Drop on top</li>
+</ol>
+</li>
+</ol>
+<p>Infix: (3 + 2) * 4</p>
+<p>RPN: <code>3 2 + 4 *</code></p>
+<p>Pseudo:<br>
+<code>push(int e)</code></p>
+<ul>
+<li>If stack is not full
+<ul>
+<li>increment stack pointer</li>
+<li>stack[sp] = e</li>
+</ul>
+</li>
+</ul>
+<p><code>int pop()</code></p>
+<ul>
+<li>temp = stk[sp]</li>
+<li>decrement stack</li>
+<li>return temp</li>
+</ul>
+<p><code>boolean isEmpty()</code></p>
+<ul>
+<li>return sp == -1</li>
+</ul>
+<p><code>boolean isFull()</code></p>
+<ul>
+<li>return stack.length - 1 == sp</li>
+</ul>
+<hr>
+<h2 id="nov-26-2018">
+  Nov 26, 2018
+  <a class="anchor" href="#nov-26-2018">#</a>
+</h2>
+<p>ANYCUBIC Photon<br>
+The New New Thing (Book about netscape)</p>
+<h3 id="java-swing-gui">
+  Java Swing (GUI)
+  <a class="anchor" href="#java-swing-gui">#</a>
+</h3>
+<p>GUI&rsquo;s are built from 2 different ideas, the <strong>view</strong> (GUI) and the <strong>model</strong> (code). A third piece called the <strong>controller</strong> ties these 2 pieces together. This entire idea is called a <strong>software pattern</strong>. (Model-view-controller paradigm, MVC).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javax.swing.*<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.awt.*<span style="color:#f92672">;</span> <span style="color:#75715e">//abstract window toolkit
+</span><span style="color:#75715e"></span><span style="color:#f92672">import</span> java.awt.event.*<span style="color:#f92672">;</span> <span style="color:#75715e">//action listener
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstWindow</span> <span style="color:#66d9ef">extends</span> JFrame <span style="color:#66d9ef">implements</span> ActionListener
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> JLabel myLabel<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> JButton myButton<span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">FirstWindow</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    setLayout<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FlowLayout<span style="color:#f92672">());</span> <span style="color:#75715e">//sets layout
+</span><span style="color:#75715e"></span>    setDefaultCloseOperation<span style="color:#f92672">(</span>JFrame<span style="color:#f92672">.</span><span style="color:#a6e22e">EXIT_ON_CLOSE</span><span style="color:#f92672">);</span> <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    setSize<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span> 200<span style="color:#f92672">);</span> <span style="color:#75715e">//width and heigth in pixels
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">//Controls
+</span><span style="color:#75715e"></span>    myLabel<span style="color:#f92672">);</span>
+    add<span style="color:#f92672">(</span>myLabel<span style="color:#f92672">);</span>
+    myButton<span style="color:#f92672">);</span>
+    add<span style="color:#f92672">(</span>myButton<span style="color:#f92672">);</span>
+    myButton<span style="color:#f92672">.</span><span style="color:#a6e22e">addActionListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span> <span style="color:#75715e">//tells constructor that action listener is in this code
+</span><span style="color:#75715e"></span>
+    setVisible<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span> <span style="color:#75715e">//boolean that renders window
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">actionPerformed</span><span style="color:#f92672">(</span>ActionEvent ae<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    myLabel<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;You pressed the button&#34;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    FirstWindow fw<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Inheret from <code>JFrame</code>. <code>extends</code> keyword inherts from the class after. <code>setLayout()</code> determines what layout manager you want to use to make the window. The next thing needed is the close operation, in this case we want to exit on close so there isn&rsquo;t memory leak. <code>JLabel</code> makes text in the window.</p>
+<hr>
+<h2 id="nov-28-2018">
+  Nov 28, 2018
+  <a class="anchor" href="#nov-28-2018">#</a>
+</h2>
+<h3 id="feet-to-meters-gui">
+  Feet to meters GUI
+  <a class="anchor" href="#feet-to-meters-gui">#</a>
+</h3>
+<p>Model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Conversions</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> FEET_TO_METERS_CONVERSION <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">3048</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> n<span style="color:#f92672">;</span> <span style="color:#75715e">//number
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Conversions</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> valueToConvert<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    n <span style="color:#f92672">=</span> valueToConvert<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">feetToMeters</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> FEET_TO_METERS_CONVERSION<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    Conversions c<span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">feetToMeters</span><span style="color:#f92672">());</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>View:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javax.swing.*<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.awt.*<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.awt.event.*<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FeetToMetersView</span> <span style="color:#66d9ef">extends</span> JFrame <span style="color:#66d9ef">implements</span> ActionListener
+<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> JTextField tfFeet<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> JLabel lblMeters<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> JButton bConvert<span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">FeetToMetersView</span><span style="color:#f92672">()</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//Setup
+</span><span style="color:#75715e"></span>    setLayout<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> GridLayout<span style="color:#f92672">(</span>3<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 5<span style="color:#f92672">));</span> <span style="color:#75715e">//rows, columns, 5 pixels padding inbetween boxes
+</span><span style="color:#75715e"></span>    setDefaultCloseOperation<span style="color:#f92672">(</span>JFrame<span style="color:#f92672">.</span><span style="color:#a6e22e">EXIT_ON_CLOSE</span><span style="color:#f92672">);</span>
+    setSize<span style="color:#f92672">(</span>250<span style="color:#f92672">,</span>125<span style="color:#f92672">);</span>
+
+    <span style="color:#75715e">//Controls
+</span><span style="color:#75715e"></span>    add<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> JLabel<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Feet:&#34;</span><span style="color:#f92672">,</span> JLabel<span style="color:#f92672">.</span><span style="color:#a6e22e">RIGHT</span><span style="color:#f92672">));</span>
+
+    tfFeet<span style="color:#f92672">);</span>
+    add<span style="color:#f92672">(</span>tfFeet<span style="color:#f92672">);</span>
+    add<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> JLabel<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Meters:&#34;</span><span style="color:#f92672">,</span> JLabel<span style="color:#f92672">.</span><span style="color:#a6e22e">RIGHT</span><span style="color:#f92672">));</span>
+    lblMeters<span style="color:#f92672">);</span>
+    lblMeters<span style="color:#f92672">.</span><span style="color:#a6e22e">setBorder</span><span style="color:#f92672">(</span>BorderFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">createLineBorder</span><span style="color:#f92672">(</span>Color<span style="color:#f92672">.</span><span style="color:#a6e22e">BLACK</span><span style="color:#f92672">));</span>
+    add<span style="color:#f92672">(</span>lblMeters<span style="color:#f92672">);</span>
+    bConvert<span style="color:#f92672">);</span>
+    add<span style="color:#f92672">(</span>bConvert<span style="color:#f92672">);</span>
+    bConvert<span style="color:#f92672">.</span><span style="color:#a6e22e">addActionListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+
+    setVisible<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">actionPerformed</span><span style="color:#f92672">(</span>ActionEvent ae<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">double</span> feet<span style="color:#f92672">);</span>
+    Conversions conv<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">double</span> meters<span style="color:#f92672">);</span>
+    lblMeters<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>Double<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>meters<span style="color:#f92672">));</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    FeetToMetersView ftmv<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="dec-3-2018">
+  Dec 3, 2018
+  <a class="anchor" href="#dec-3-2018">#</a>
+</h2>
+<h3 id="review">
+  Review
+  <a class="anchor" href="#review">#</a>
+</h3>
+<p>Declaring an array field:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">;</span>
+
+nums <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">double</span><span style="color:#f92672">[</span>20<span style="color:#f92672">];</span>
+</code></pre></div><p>Most missed questions on exam:</p>
+<ol>
+<li>41/2 (ints)
+<ol>
+<li>= 20</li>
+</ol>
+</li>
+<li>the last character index position in a String variable naemd address is address.length()
+<ol>
+<li>false</li>
+</ol>
+</li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/zedchance/notes/edit/master/content/CS12/CS12-lecture-notes.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aug-20-2018">Aug 20, 2018</a></li>
+    <li><a href="#aug-22-2018">Aug 22, 2018</a>
+      <ul>
+        <li><a href="#class"><code>class</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#aug-27-2018">Aug 27, 2018</a>
+      <ul>
+        <li><a href="#the-rules-of-quality-software">The rules of quality software</a></li>
+      </ul>
+    </li>
+    <li><a href="#aug-29-2018">Aug 29, 2018</a></li>
+    <li><a href="#sep-5-2018">Sep 5, 2018</a>
+      <ul>
+        <li><a href="#data-types-in-java">Data Types in Java</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-10-2018">Sep 10, 2018</a>
+      <ul>
+        <li><a href="#cat-class">Cat class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-12-2018">Sep 12, 2018</a>
+      <ul>
+        <li><a href="#lab-1-aircraft-class">Lab 1: Aircraft Class</a></li>
+        <li><a href="#employee-class">Employee Class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-17-2018">Sep 17, 2018</a>
+      <ul>
+        <li><a href="#chicken-class">Chicken class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-19-2018">Sep 19, 2018</a>
+      <ul>
+        <li><a href="#donut-class">Donut class</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-24-2018">Sep 24, 2018</a>
+      <ul>
+        <li><a href="#lab-2-bac-calculation">Lab 2: BAC Calculation</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-1-2018">Oct 1, 2018</a>
+      <ul>
+        <li><a href="#decision-statements">Decision statements</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-3-2018">Oct 3, 2018</a>
+      <ul>
+        <li><a href="#lift-and-drag-calculation">Lift and drag calculation</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-8-2018">Oct 8, 2018</a>
+      <ul>
+        <li><a href="#ifelse-worksheet"><code>if</code>..<code>else</code> worksheet</a></li>
+        <li><a href="#tip-worksheet">Tip worksheet</a></li>
+        <li><a href="#switch-statement"><code>switch</code> statement</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-10-2018">Oct 10, 2018</a>
+      <ul>
+        <li><a href="#more-ifelse">More <code>if</code>..<code>else</code>:</a></li>
+        <li><a href="#escape-velocity">Escape velocity</a></li>
+        <li><a href="#lab-3-robot">Lab 3: Robot</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-15-2018">Oct 15, 2018</a>
+      <ul>
+        <li><a href="#string-class">String class</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-22-2018">Oct 22, 2018</a>
+      <ul>
+        <li><a href="#while-loops"><code>while</code> loops</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-24-2018">Oct 24, 2018</a>
+      <ul>
+        <li><a href="#for-loop"><code>for</code> loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-29-2018">Oct 29, 2018</a>
+      <ul>
+        <li><a href="#arrays">Arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-31-2018">Oct 31, 2018</a>
+      <ul>
+        <li><a href="#sorting-and-searching-arrays">Sorting and searching arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-14-2018">Nov 14, 2018</a>
+      <ul>
+        <li><a href="#stacks">Stacks</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-26-2018">Nov 26, 2018</a>
+      <ul>
+        <li><a href="#java-swing-gui">Java Swing (GUI)</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-28-2018">Nov 28, 2018</a>
+      <ul>
+        <li><a href="#feet-to-meters-gui">Feet to meters GUI</a></li>
+      </ul>
+    </li>
+    <li><a href="#dec-3-2018">Dec 3, 2018</a>
+      <ul>
+        <li><a href="#review">Review</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/java/">java</a></li>
+  
+  </ul>
+</nav>
+
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

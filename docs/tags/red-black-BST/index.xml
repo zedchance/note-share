@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>red-black BST on Notes</title>
+    <link>http://zedchance.github.io/tags/red-black-BST/</link>
+    <description>Recent content in red-black BST on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/red-black-BST/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20201028</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201028/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201028/</guid>
+      <description>2-3 Tree #   An empty tree is a 2-3 A BST is a 2-3 search tree no is yes  Search miss
+Worst case running time for 2-3 tree search is O(lgn). Remember the height of a 2-3 tree is between (floor(\log_3 N)) and (floor(log_2 N)). So in the worst case it searches the entire height of the tree + 1.
+It inserts it into the 3 node to preserve the balance of the 2-3 tree.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201102</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201102/</guid>
+      <description>One line is black, 2 lines is red
+is false  Runtime of rotateLeft is O(1). Space complexity is O(1).
+Our definition is left leaning so it needs to be rotated left.
+The runtime of put is O(lgn). Space complexity is O(lgn).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201104</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201104/</guid>
+      <description>Midterm solutions #  Red-black BST exercise solution #  M is the number of children per node.
+Each non-leaf node has between 3 and 5 children for above example. Each leaf node has between 3 and 5 data items.
+Unordered symbol tables #  </description>
+    </item>
+    
+  </channel>
+</rss>

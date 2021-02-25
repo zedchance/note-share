@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pumping lemma on Notes</title>
+    <link>http://zedchance.github.io/tags/pumping-lemma/</link>
+    <description>Recent content in pumping lemma on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/pumping-lemma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS135-lecture-20210209</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210209/</guid>
+      <description>How to show what a finite atomata can&amp;rsquo;t do #  Pumping Lemma for regular languages #  Let   \(M\)  be a DFA with  \(p\)  states. Let  \(s \in L(M)\)  , and  \(|s| \geq p\)  , &amp;ldquo;the length of  \(s\)  is greater than or equal to the number of states.&amp;rdquo;
+At one point we reach a state that is going to be visited twice first, we can call this &amp;ldquo;the first state that gets repeated.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210217</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210217/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210217/</guid>
+      <description>Example proofs for pumping lemma #  1 #  Let   \(L\)  be the set of all strings with an equal number of 0 and 1 over the alphabet {0,1}. i.e. { \(\lambda\)  , 01, 10, 0011, 0101, 0110, 1001 &amp;hellip;}
+Theorem:  \(L\)  is not regular.
+Proof:
+For purposes of contradicition assume  \(L\)  is regular. Because  \(L\)  is regular there must be a pumping length  \(p\)  .</description>
+    </item>
+    
+  </channel>
+</rss>

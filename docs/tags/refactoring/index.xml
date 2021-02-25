@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>refactoring on Notes</title>
+    <link>http://zedchance.github.io/tags/refactoring/</link>
+    <description>Recent content in refactoring on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS131-lecture-20201119</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201119/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201119/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

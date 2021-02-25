@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>angular motion on Notes</title>
+    <link>http://zedchance.github.io/tags/angular-motion/</link>
+    <description>Recent content in angular motion on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/angular-motion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHYS105-recitation-20200331</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/</guid>
+      <description>Angular motion questions #  HW Questions #  1
+5
+Since traveling less than ideal speed the car slides down the bank.
+6
+Another problem #  A pendulum swings back and forth with a given length 2m. (Similar to quiz)
+It is moving tangenital at 8 m/s
+ What is the radial or centripetal acceleration?  What is the tangential acceleration?  What is the tension in the string?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B-tree on Notes</title>
+    <link>http://zedchance.github.io/tags/B-tree/</link>
+    <description>Recent content in B-tree on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/B-tree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20201104</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201104/</guid>
+      <description>Midterm solutions #  Red-black BST exercise solution #  M is the number of children per node.
+Each non-leaf node has between 3 and 5 children for above example. Each leaf node has between 3 and 5 data items.
+Unordered symbol tables #  </description>
+    </item>
+    
+  </channel>
+</rss>

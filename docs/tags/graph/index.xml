@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>graph on Notes</title>
+    <link>http://zedchance.github.io/tags/graph/</link>
+    <description>Recent content in graph on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20201125</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201125/</guid>
+      <description>Answer: ( \frac{2E}{V}) avg number of degree.
+If you have V, no self loop, no parallel edges, what is maximum edges?
+Answer: ( \frac{V(V-1)}{2} )
+So if you have (V), considered sparse.
+Adjacency lists represent each edge twice, so the number of spaces taken (number of nodes) is (2E). So the full space used by this is (V + 2E), so our space complexity is O(E + V).
+(V - 1)  Depth-first search trace on whiteboard:</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201130</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201130/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201130/</guid>
+      <description>Exercise solns #  Graph cont. #  Gets shortest path because it starts by searching all edges that are 1 away, then 2 away, and so forth.
+Tracing the BFS implementation
+Enter the loop
+Path tree on right ^
+Performance:
+ Worst case runtime is O(E) or O(V+E) Worst case space complexity O(V), when every vertice is added to the queue   There is a maximum of (V(V-1)) vertices in a digraph with no parallel or self-loops.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201202</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201202/</guid>
+      <description>Exercise solutions #  On the whiteboard:
+Start on vertex 0
+Move onto vertex 2, need to exhaust all vertices
+Move onto vertex 7
+The reverse post order is : 8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4
+Graph cont. #  These are considered strongly connected. Also considered a strongly connected digraph.
+5 strongly connected components.
+Reversed graphs are still strongly connected in the same components.</description>
+    </item>
+    
+  </channel>
+</rss>

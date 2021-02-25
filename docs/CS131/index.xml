@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS131 on Notes</title>
+    <link>http://zedchance.github.io/CS131/</link>
+    <description>Recent content in CS131 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/CS131/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS131-lecture-20200901</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200901/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200901/</guid>
+      <description>Syllabus #  CSC131Syllabus_Penn.pdf
+Send email prior to office hours, makes it easier.
+A team project will happen.
+Notes are allowed during quizes! Don&amp;rsquo;t miss a quiz!
+https://padlet.com/azizipenn/cuj51f9q36w079ko
+What is computer engineering? #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200903</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200903/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200903/</guid>
+      <description>HW 1 #  Article on Boeing 737 MAX disaster. Due next week.
+How do we create software? #  This is the &amp;ldquo;original approach&amp;rdquo; to software engineering:
+Deployments can be done by the developers, or a separate team. Maintenance is typically done by developers, original or not.
+SLDC Models #  Waterfall Model #  The completed output from one phase is the necessary input to the next level.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200908</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200908/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200908/</guid>
+      <description>Agile cont. #  The generic model for &amp;ldquo;doing&amp;rdquo; agile
+We will be using Scrum for this class.
+A daily standup is a timed event where the whole team gathers and stands together and checks in with each other.
+Retrospectives: at the end of a piece of work you will look back and try to improve.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200910</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200910/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200910/</guid>
+      <description>Breakout room exercise #  Our group is thinking waterfall.
+Agile
+Spiral
+ Agile frameworks #  An example of a Trello board</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200915</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200915/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200915/</guid>
+      <description>Annoucements #  First quiz at the end of next week, covers the first 4 weeks. It&amp;rsquo;ll be open over the weekend. Use case homework has been published. Going to hold off on discussion on the 737 MAX HW until case study is finished. Team survey is open!
+Software requirements #  How do you translate all of the elicited data into requirements?
+ In-Class_and_HW_Activity 3_Use Case Description.pdf
+Business Use Case Name: International flight check-in</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200917</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200917/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200917/</guid>
+      <description>Use case template recap #  Traditional requirements #  Agile requirements #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200922</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200922/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200922/</guid>
+      <description>3Cs #  https://docs.google.com/presentation/d/1zvpwRAHGJwOE9QqhNkLQHHftV6guk7rNxwDQ6RuYhZA/edit#slide=id.g998494e7fd_0_119
+https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/;WWWSESSIONID=C67B13698C795B1642BC5FB95C52D8F8.www1</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200924</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200924/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200924/</guid>
+      <description>Annoucements #  Quiz opens up tonight at midnight
+User stories cont #  Scrum #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200929</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200929/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200929/</guid>
+      <description>Annoucements #  HW4 is due Oct 5 Team assignment 1 agreement is posted
+3C examples #  A good example:
+A &amp;ldquo;cloudy&amp;rdquo; example:
+Another good example:
+&amp;ldquo;Kinda cloudy&amp;rdquo; example:
+Human computer interation concepts #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201001</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201001/</guid>
+      <description>HCI cont. #  ProjectDesc-OscarsProject.pdf
+Some questions we might want to ask:
+  How do the users usually watch movies
+ tv with streaming service pc with streaming service x3    how often do you watch movies
+  How far through the movies do you usually watch
+  What language do they speak
+  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201006</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201006/</guid>
+      <description>737 Boeing disaster #  Unexpected by the pilots, the engineers knew.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201008</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201008/</guid>
+      <description>HCI finished #  Accessability slide
+ </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201013</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201013/</guid>
+      <description>Project, sprint 0 #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201015</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201015/</guid>
+      <description>Git #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201020</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201020/</guid>
+      <description>Annoucements #  Our next quiz is next fri 30
+REST #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201022</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201022/</guid>
+      <description>Software architecture #  Architecture has styles, and this can be translated to software terms also
+CRC (Class responsibility collaboration) #  CRC Cards are a brainstorming technique to help you think about the design of your application.
+Like the 3C&amp;rsquo;s card, its meant to be done on a 3x5 card. The assumption is its not permanent, you&amp;rsquo;re not locked in.
+Classes should only be responsible for its own information. It shouldn&amp;rsquo;t be responsible for keeping track of or holding another class&amp;rsquo;s data.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201027</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201027/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201027/</guid>
+      <description>Sprint 0 Review and Retrospective #  The review is about the product.
+The retrospective is about the process. Make some concrete goals for the next sprint. Instead of &amp;ldquo;improve communication&amp;rdquo;, make it something concrete like &amp;ldquo;We agree to communicate via X and respond within Y time.&amp;rdquo;
+1. What went well in the sprint? #  Our team was able to create a persona from the contextual inquiry of multiple people.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201029</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201029/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201029/</guid>
+      <description>Reminder #  Quiz opens at fri and closes mon at midnight. 35 min to complete 17 questions.
+Architecture cont. #  SOA: Service oriented architecture</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201103</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201103/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201103/</guid>
+      <description>https://www.youtube.com/watch?v=UI6lqHOVHic</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201105</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201105/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201105/</guid>
+      <description>A solution
+&amp;ldquo;Design specs&amp;rdquo; aren&amp;rsquo;t a part of the agile process, but this basic idea holds in sprint plannings.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201110</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201110/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201110/</guid>
+      <description>Correction from UML lectures #  Correction: there is no distinction between a filled in triangle between inheritance when inheriting from abstract or concrete.
+SOLID cont. #  Code Design #  Singleton pattern #  Factory pattern #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201112</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201112/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201112/</guid>
+      <description>Architecture
+ Application – layers – what do the layers do Where do the different components live Whats the interface between layers  Design principles
+ Symptoms of bad design – rigid, fragile, easier to modify with hacks (viscosity) SOLID – employed by frameworks  Design patterns
+ Used in frameworks – a lot employ the factory pattern May be used ourselves, iterator pattern? Singleton?  On tuesday we need a diagram of the application structure.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201119</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201119/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201119/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201124</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201124/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201124/</guid>
+      <description>Final will be essay and same format as other exams. May be cumulative.
+Project management #  Verification and validation #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201201</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201201/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201201/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201203</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201203/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201203/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201208</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201208/</guid>
+      <description>DevOps #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-1</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-1/</guid>
+      <description>Study guide 1 #  Fall2020-Quiz 01 Study Guide_Revised.pdf
+1. Know one of the definitions of software engineering presented in class. #  2. Be able to identify an SDLC model given a diagram and/or it’s unique characteristics #  Waterfall #  The completed output from one phase is the necessary input to the next level.
+Prototype model #  Spiral model #  Adhoc model #  Agile #  3.</description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-2</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-2/</guid>
+      <description>Study guide 2 #  1. Know the main purpose and general process of conducting a Contextual Inquiry. #  2. Know what is a persona. #  3. Be able to describe the flow of an Activity Diagram. #  4. Know Scrum roles, artifacts and events. #    Understand their definition/purpose/responsibilities.
+  Know the Scrum lifecycle and order of events.
+  5. Know the 3C’s(Card, Conversation, Confirmation).</description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-3</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-3/</guid>
+      <description>Software Architecture #  1. Given an architecture diagram or description, identify the architecture style. #  2. Know 1 advantage and disadvantage of: #    Client-Server
+  Layered &amp;amp; Mutli-tiered
+  Model-View-Controller
+  Pipe and filter
+  3. Given a class diagram, answer some questions about relationships/properties. #  4. Name and explain(brief) some symptoms of poor design. #  5. Name and explain(brief) three general design principles.</description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-4</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-4/</guid>
+      <description>CS131-study-guide-1 #   Software engineering definitions SDLC lifecycles SDLC phases Pros and cons of each SDLC model Top agile techniques Agile frameworks, characteristics Scrum roles/responsibilities Requirements, properties of good requirements IEEE quality attributes Use case 3C&amp;rsquo;s User stories, how to break them up  CS131-study-guide-2 #   Contextual inquiry Persona Scrum roles, artifacts, events 3C&amp;rsquo;s Mockups, wireframe, story board Design elements, SAC, CAP FeVER XML, JSON 200, 404, 500 HTTP codes Git commands, basic  CS131-study-guide-3 #   Architecture style, monolith, client-server, layered, pipe/filter, event driven, model-view-controller, service based, microservice Advantages and disadvantages of architectures Class diagrams Symptoms of poor design Design principles, SOLID, KISS, YAGNI etc SOLID principles in detail Coupling and cohesion Why use design patterns?</description>
+    </item>
+    
+  </channel>
+</rss>

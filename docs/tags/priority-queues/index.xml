@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>priority queues on Notes</title>
+    <link>http://zedchance.github.io/tags/priority-queues/</link>
+    <description>Recent content in priority queues on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/priority-queues/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20200928</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200928/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200928/</guid>
+      <description>Dev environment #  JDK 11 JUnit 5 Module with all docs for setup
+Filenames: assignment1_ZedChance.zip
+Quicksort exercise solutions #  Quicksort cont. #  Runningtime is O(n)
+Priority queues #  a is complete b is complete c is incomplete d is not a binary tree e is incomplete f is complete
+a is a height of 0 b-d is a height of 1 e-f is a height of 2</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200930</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200930/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200930/</guid>
+      <description>Regarding quicksort 3-way #  Used for when there is a lot of duplicate keys, for example sorting by US state.
+Heap and priority queues #  Index starts at 1 so the math to find the child or parent works.
+Size starts at 0, but is incremented BEFORE it is used for the pq position.
+Space complexity of swim method is O(1).
+Swap root and highest index and decrement index to break it off</description>
+    </item>
+    
+  </channel>
+</rss>

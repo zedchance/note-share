@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>full adder on Notes</title>
+    <link>http://zedchance.github.io/tags/full-adder/</link>
+    <description>Recent content in full adder on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/full-adder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS137-lecture-20210218</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210218/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210218/</guid>
+      <description>CPA cont. #  Design a 1-bit full adder #     Ax Bx C-in Sx C-out     0 0 0 0 0   0 0 1 1 0   0 1 0 1 0   0 1 1 0 1   1 0 0 1 0   1 0 1 0 1   1 1 0 0 1   1 1 1 1 1    We can reduce the diagonals in Sx: note that Sx is true if only 1 of the inputs is on, or all are on (this is XOR).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regular expressions on Notes</title>
+    <link>http://zedchance.github.io/tags/regular-expressions/</link>
+    <description>Recent content in regular expressions on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS135-lecture-20210204</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210204/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210204/</guid>
+      <description>re.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210205</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210205/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210205/</guid>
+      <description>DFA, RE, and NFA have equal expressive power.
+ Every DFA can be converted into an equivalent RE Every RE can be converted into an equivalent NFA Every NFA can be converted into an equivalent DFA  Today we will take a NFA and convert it into a DFA.
+abba will leave you in states 1 and 3.
+Our NFA:
+#states empty 13 2 23 3 123 #initial 13 #accepting 13 123 #alphabet a b #transitions 13:a&amp;gt;13 13:b&amp;gt;2 2:a&amp;gt;23 2:b&amp;gt;3 23:a&amp;gt;123 23:b&amp;gt;3 3:a&amp;gt;13 3:b&amp;gt;empty 123:a&amp;gt;123 123:b&amp;gt;23 empty:a&amp;gt;empty empty:b&amp;gt;empty This is now a legal DFA, except the accept state.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210216</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210216/</guid>
+      <description>Regular languages #  Any language specifiable by regular expression or finite automata.
+RE to NFA #  Building blocks
+Example #  (0+1)*1</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,3083 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140  //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y&#43;50,100,20,10); rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); rect(x&#43;35,y&#43;40,20,100,10); //Legs  rect(x-30,y&#43;130,27,100,10); rect(x&#43;3,y&#43;130,27,100,10); //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160); triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255); //Blast off!">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS10-labs" />
+<meta property="og:description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140  //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y&#43;50,100,20,10); rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); rect(x&#43;35,y&#43;40,20,100,10); //Legs  rect(x-30,y&#43;130,27,100,10); rect(x&#43;3,y&#43;130,27,100,10); //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160); triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255); //Blast off!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zedchance.github.io/CS10/CS10-Processing-labs/" />
+
+<title>CS10-labs | Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
+<script defer src="/en.search.min.7e6ef5189d02a74db84eb4c019c821b289d74a85c2b5286d5dd13c5be3f9c638.js" integrity="sha256-fm71GJ0Cp024TrTAGcghsonXSoXCtShtXdE8W&#43;P5xjg="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</head>
+
+<body dir="ltr">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: true},
+                  {left: "\\(", right: "\\)", display: true}
+              ]
+          }
+      );
+    </script>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e1a1b689fe907f6677087e2d9b539d9" class="toggle" checked />
+    <label for="section-6e1a1b689fe907f6677087e2d9b539d9" class="flex justify-between">
+      <a  class="">CS10</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS10/CS10-Processing-labs/" class=" active">CS10-labs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06677567046f19eb3dacf987145475f" class="toggle"  />
+    <label for="section-d06677567046f19eb3dacf987145475f" class="flex justify-between">
+      <a  class="">CS12</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS12/CS12-lecture-notes/" class="">CS12-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98a455a71c68533365837514b17a9eb9" class="toggle"  />
+    <label for="section-98a455a71c68533365837514b17a9eb9" class="flex justify-between">
+      <a  class="">CS13</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS13/CS13-lecture-notes/" class="">CS13-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9490b93202949ed3704ff9f858ef63c3" class="toggle"  />
+    <label for="section-9490b93202949ed3704ff9f858ef63c3" class="flex justify-between">
+      <a  class="">CS130</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-exercise-solutions-1/" class="">CS130-exercise-solutions-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200831/" class="">CS130-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200902/" class="">CS130-lecture-20200902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200909/" class="">CS130-lecture-20200909</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200914/" class="">CS130-lecture-20200914</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200916/" class="">CS130-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200921/" class="">CS130-lecture-20200921</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200923/" class="">CS130-lecture-20200923</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200928/" class="">CS130-lecture-20200928</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200930/" class="">CS130-lecture-20200930</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201005/" class="">CS130-lecture-20201005</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201007/" class="">CS130-lecture-20201007</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201012/" class="">CS130-lecture-20201012</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201014/" class="">CS130-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201019/" class="">CS130-lecture-20201019</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201021/" class="">CS130-lecture-20201021</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201028/" class="">CS130-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201102/" class="">CS130-lecture-20201102</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201104/" class="">CS130-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201109/" class="">CS130-lecture-20201109</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201116/" class="">CS130-lecture-20201116</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201118/" class="">CS130-lecture-20201118</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201123/" class="">CS130-lecture-20201123</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201125/" class="">CS130-lecture-20201125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201130/" class="">CS130-lecture-20201130</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201202/" class="">CS130-lecture-20201202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201207/" class="">CS130-lecture-20201207</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201209/" class="">CS130-lecture-20201209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-priority-queues/" class="">CS130-priority-queues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-sorting-algorithms/" class="">CS130-sorting-algorithms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7685cd96811cc43c9ecd205128385c1" class="toggle"  />
+    <label for="section-a7685cd96811cc43c9ecd205128385c1" class="flex justify-between">
+      <a  class="">CS131</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200901/" class="">CS131-lecture-20200901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200903/" class="">CS131-lecture-20200903</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200908/" class="">CS131-lecture-20200908</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200910/" class="">CS131-lecture-20200910</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200915/" class="">CS131-lecture-20200915</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200917/" class="">CS131-lecture-20200917</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200922/" class="">CS131-lecture-20200922</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200924/" class="">CS131-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200929/" class="">CS131-lecture-20200929</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201001/" class="">CS131-lecture-20201001</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201006/" class="">CS131-lecture-20201006</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201008/" class="">CS131-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201013/" class="">CS131-lecture-20201013</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201015/" class="">CS131-lecture-20201015</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201020/" class="">CS131-lecture-20201020</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201022/" class="">CS131-lecture-20201022</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201027/" class="">CS131-lecture-20201027</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201029/" class="">CS131-lecture-20201029</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201103/" class="">CS131-lecture-20201103</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201105/" class="">CS131-lecture-20201105</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201110/" class="">CS131-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201112/" class="">CS131-lecture-20201112</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201119/" class="">CS131-lecture-20201119</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201124/" class="">CS131-lecture-20201124</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201201/" class="">CS131-lecture-20201201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201203/" class="">CS131-lecture-20201203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201208/" class="">CS131-lecture-20201208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-1/" class="">CS131-study-guide-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-2/" class="">CS131-study-guide-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-3/" class="">CS131-study-guide-3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-4/" class="">CS131-study-guide-4</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ea6710cf4db85b6757a42f14aedf299" class="toggle"  />
+    <label for="section-9ea6710cf4db85b6757a42f14aedf299" class="flex justify-between">
+      <a  class="">CS133</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210125/" class="">CS133-lecture-20210125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210208/" class="">CS133-lecture-20210208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210210/" class="">CS133-lecture-20210210</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210215/" class="">CS133-lecture-20210215</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210217/" class="">CS133-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6c9e9a90396154c6e5e42bf42955eff" class="toggle"  />
+    <label for="section-f6c9e9a90396154c6e5e42bf42955eff" class="flex justify-between">
+      <a  class="">CS135</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-hw-20210203/" class="">CS135-hw-20210203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210126/" class="">CS135-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210129/" class="">CS135-lecture-20210129</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210201/" class="">CS135-lecture-20210201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210204/" class="">CS135-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210205/" class="">CS135-lecture-20210205</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210209/" class="">CS135-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210216/" class="">CS135-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210217/" class="">CS135-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210218/" class="">CS135-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eaf59c9d6b1b58452cc45e5585dd0717" class="toggle"  />
+    <label for="section-eaf59c9d6b1b58452cc45e5585dd0717" class="flex justify-between">
+      <a  class="">CS137</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210216/" class="">CS137-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210126/" class="">CS137-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210128/" class="">CS137-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210202/" class="">CS137-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210204/" class="">CS137-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210209/" class="">CS137-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210211/" class="">CS137-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210218/" class="">CS137-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e470c63ab7ad9a473e61272e98b3bcce" class="toggle"  />
+    <label for="section-e470c63ab7ad9a473e61272e98b3bcce" class="flex justify-between">
+      <a  class="">CS138</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210126/" class="">CS138-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210128/" class="">CS138-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210202/" class="">CS138-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210204/" class="">CS138-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210209/" class="">CS138-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210211/" class="">CS138-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210216/" class="">CS138-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210218/" class="">CS138-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-356e0128f78fd703af66d8abf4ebf976" class="toggle"  />
+    <label for="section-356e0128f78fd703af66d8abf4ebf976" class="flex justify-between">
+      <a  class="">CS26</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-lecture-notes/" class="">CS26-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-reading-notes/" class="">CS26-reading-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98681ab3e1e8c09eb7daeac8547903e6" class="toggle"  />
+    <label for="section-98681ab3e1e8c09eb7daeac8547903e6" class="flex justify-between">
+      <a  class="">CS39</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS39/CS39-lecture-notes/" class="">CS39-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe80ac56b57c0244f1c986628504841" class="toggle"  />
+    <label for="section-8fe80ac56b57c0244f1c986628504841" class="flex justify-between">
+      <a  class="">CS46</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/CS46-lecture-notes/" class="">CS46-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/luhns.c/" class="">Luhn&#39;s Algorithm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="toggle"  />
+    <label for="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="flex justify-between">
+      <a  class="">CS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="toggle"  />
+    <label for="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="flex justify-between">
+      <a  class="">ENGL1B</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/" class="">ENGL1B-assignment-8</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92d8bad8aa3f85c10048f789591cd9d3" class="toggle"  />
+    <label for="section-92d8bad8aa3f85c10048f789591cd9d3" class="flex justify-between">
+      <a  class="">MATH100</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH100/MATH100-lecture-notes/" class="">MATH100-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0495fd11e1626446d2b1cf0439989d77" class="toggle"  />
+    <label for="section-0495fd11e1626446d2b1cf0439989d77" class="flex justify-between">
+      <a  class="">MATH31</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-comparison-tests/" class="">MATH31-comparison-tests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-integral-test/" class="">MATH31-integral-test</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-series/" class="">MATH31-series</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-1/" class="">MATH31-unit-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-2/" class="">MATH31-unit-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-3/" class="">MATH31-unit-3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d4164ee5c968fdda8d4b42b98383d88" class="toggle"  />
+    <label for="section-1d4164ee5c968fdda8d4b42b98383d88" class="flex justify-between">
+      <a  class="">PHIL103</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/" class="">PHIL103-ec-lecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/" class="">PHIL103-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/" class="">PHIL103-lecture-20200907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/" class="">PHIL103-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/" class="">PHIL103-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/" class="">PHIL103-lecture-20200927</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/" class="">PHIL103-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/" class="">PHIL103-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/" class="">PHIL103-lecture-20201024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/" class="">PHIL103-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/" class="">PHIL103-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/" class="">PHIL103-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/" class="">PHIL103-lecture-20201122</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-71647d44f109da70d5305fe9e01e1a51" class="toggle"  />
+    <label for="section-71647d44f109da70d5305fe9e01e1a51" class="flex justify-between">
+      <a  class="">PHYS105</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-resources/" class="">PHYS105-resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/" class="">PHYS105-lab-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/" class="">PHYS105-lab-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/" class="">PHYS105-lab-20200423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/" class="">PHYS105-lecture-20200319</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/" class="">PHYS105-lecture-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/" class="">PHYS105-lecture-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/" class="">PHYS105-lecture-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/" class="">PHYS105-lecture-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/" class="">PHYS105-lecture-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/" class="">PHYS105-lecture-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/" class="">PHYS105-lecture-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/" class="">PHYS105-lecture-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/" class="">PHYS105-lecture-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/" class="">PHYS105-lecture-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/" class="">PHYS105-lecture-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/" class="">PHYS105-lecture-20200514</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/" class="">PHYS105-recitation-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/" class="">PHYS105-recitation-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/" class="">PHYS105-recitation-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/" class="">PHYS105-recitation-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/" class="">PHYS105-recitation-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/" class="">PHYS105-recitation-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/" class="">PHYS105-recitation-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/" class="">PHYS105-recitation-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/" class="">PHYS105-recitation-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/" class="">PHYS105-recitation-20200514</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2051d762fa29d975e5db96fff6a3c194" class="toggle"  />
+    <label for="section-2051d762fa29d975e5db96fff6a3c194" class="flex justify-between">
+      <a  class="">STATS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/STATS50/STATS50-lecture-notes/" class="">STATS50-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CS10-labs</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lab-1---my-creature">Lab 1 - My &ldquo;creature&rdquo;</a></li>
+    <li><a href="#lab-2---making-my-creature-redraw-with-the-mouses-movement">Lab 2 - Making my creature redraw with the mouse&rsquo;s movement</a></li>
+    <li><a href="#lab-4---launching-my-creature-like-a-rocket">Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket</a></li>
+    <li><a href="#lab-5---creature-screensaver">Lab 5 - Creature screensaver</a></li>
+    <li><a href="#lab-6---multiplying-creature-with-loops">Lab 6 - Multiplying creature with loops</a></li>
+    <li><a href="#lab-7---using-a-function-to-create-multiple-creatures">Lab 7 - Using a function to create multiple creatures</a></li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/processing/">processing</a></li>
+  
+  </ul>
+</nav>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cs10-labs">
+  CS10 Labs
+  <a class="anchor" href="#cs10-labs">#</a>
+</h1>
+<h2 id="lab-1---my-creature">
+  Lab 1 - My &ldquo;creature&rdquo;
+  <a class="anchor" href="#lab-1---my-creature">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Zed Chance
+</span><span style="color:#75715e">Lab 1
+</span><span style="color:#75715e">CS 10
+</span><span style="color:#75715e">Summer 18
+</span><span style="color:#75715e">My &#34;creature&#34; 
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">//Setup
+</span><span style="color:#75715e"></span>size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
+background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//MENS BATHROOM SIGN
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//Signpost
+</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+noStroke<span style="color:#f92672">();</span>
+fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span>86<span style="color:#f92672">,</span>86<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>250<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Background circle
+</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span>89<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
+ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>200<span style="color:#f92672">,</span>350<span style="color:#f92672">,</span>350<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
+fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>145<span style="color:#f92672">,</span>140<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>235<span style="color:#f92672">,</span>140<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>170<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>203<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//WOMENS BATHROOM SIGN
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//Signpost
+</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+noStroke<span style="color:#f92672">();</span>
+fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span>86<span style="color:#f92672">,</span>86<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>250<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Background circle
+</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span>89<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
+ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+ellipse<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>200<span style="color:#f92672">,</span>350<span style="color:#f92672">,</span>350<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
+fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+ellipse<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+stroke<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+strokeWeight<span style="color:#f92672">(</span>25<span style="color:#f92672">);</span>
+line<span style="color:#f92672">(</span>560<span style="color:#f92672">,</span>155<span style="color:#f92672">,</span>535<span style="color:#f92672">,</span>235<span style="color:#f92672">);</span>
+line<span style="color:#f92672">(</span>640<span style="color:#f92672">,</span>155<span style="color:#f92672">,</span>665<span style="color:#f92672">,</span>235<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Dress
+</span><span style="color:#75715e"></span>quad<span style="color:#f92672">(</span>585<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>565<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>635<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>615<span style="color:#f92672">,</span>190<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
+rect<span style="color:#f92672">(</span>570<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>603<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//ARROW SIGNS
+</span><span style="color:#75715e">//left background
+</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>75<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+fill<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>145<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//left arrow
+</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>210<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>25<span style="color:#f92672">);</span>
+triangle<span style="color:#f92672">(</span>190<span style="color:#f92672">,</span>425<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>450<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//right background
+</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>75<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+fill<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>145<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//right arrow
+</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+rect<span style="color:#f92672">(</span>590<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>25<span style="color:#f92672">);</span>
+triangle<span style="color:#f92672">(</span>610<span style="color:#f92672">,</span>425<span style="color:#f92672">,</span>610<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>650<span style="color:#f92672">,</span>450<span style="color:#f92672">);</span>
+</code></pre></div><h2 id="lab-2---making-my-creature-redraw-with-the-mouses-movement">
+  Lab 2 - Making my creature redraw with the mouse&rsquo;s movement
+  <a class="anchor" href="#lab-2---making-my-creature-redraw-with-the-mouses-movement">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Zed Chance
+</span><span style="color:#75715e">Lab 2
+</span><span style="color:#75715e">CS 10
+</span><span style="color:#75715e">Summer 18
+</span><span style="color:#75715e">Making my creature redraw with the mouse&#39;s movement
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">//Setup
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  size<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span> 600<span style="color:#f92672">);</span>
+  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Signpost
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  noStroke<span style="color:#f92672">();</span>
+  fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span> 86<span style="color:#f92672">,</span> 86<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 475<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 250<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Background circle
+</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span> 89<span style="color:#f92672">,</span> 255<span style="color:#f92672">);</span>
+  ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+  strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+  ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 200<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 350<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">//Continuously redraw the human
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Declare mouse
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> mouseX<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> mouseY<span style="color:#f92672">;</span>
+  
+  <span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>  stroke<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+  strokeWeight<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span> <span style="color:#75715e">//Had to add weight, otherwise it was hard to tell if it was moving
+</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>220<span style="color:#f92672">,</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">);</span>
+  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,100
+</span><span style="color:#75715e"></span>  
+  <span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,150
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 145/140
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 235/140
+</span><span style="color:#75715e"></span>  
+  <span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 170,230
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 203,230
+</span><span style="color:#75715e"></span>  
+  <span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,190
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+
+<span style="color:#75715e">//Click mouse to reset
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">mousePressed</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Signpost
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  noStroke<span style="color:#f92672">();</span>
+  fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span> 86<span style="color:#f92672">,</span> 86<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 475<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 250<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Background circle
+</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span> 89<span style="color:#f92672">,</span> 255<span style="color:#f92672">);</span>
+  ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+  strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+  ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 200<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 350<span style="color:#f92672">);</span>
+  
+  println<span style="color:#f92672">(</span>hour<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">,</span>minute<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">,</span>second<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;Mouse input detected: Background reset&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="lab-4---launching-my-creature-like-a-rocket">
+  Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket
+  <a class="anchor" href="#lab-4---launching-my-creature-like-a-rocket">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Zed Chance
+</span><span style="color:#75715e">Lab 4
+</span><span style="color:#75715e">CS 10
+</span><span style="color:#75715e">Summer 18
+</span><span style="color:#75715e">Launching my &#34;creature&#34; like a rocket
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">//Initialize variables
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  size<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
+  x <span style="color:#f92672">=</span> width<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span> <span style="color:#75715e">//x is centered
+</span><span style="color:#75715e"></span>  y <span style="color:#f92672">=</span> height <span style="color:#f92672">+</span> 50<span style="color:#f92672">;</span> <span style="color:#75715e">//starts 50 pixels below
+</span><span style="color:#75715e"></span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
+  fill<span style="color:#f92672">(</span>255<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
+  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Rockets
+</span><span style="color:#75715e"></span>  r<span style="color:#f92672">);</span>
+  b <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+  g<span style="color:#f92672">);</span>
+  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span> <span style="color:#75715e">//Jets random color between yellow and red
+</span><span style="color:#75715e"></span>  
+  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>45<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>160<span style="color:#f92672">);</span> <span style="color:#75715e">//Hand jets
+</span><span style="color:#75715e"></span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>45<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>160<span style="color:#f92672">);</span>
+  
+  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>5<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>18<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>255<span style="color:#f92672">);</span> <span style="color:#75715e">//Feet jets
+</span><span style="color:#75715e"></span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>5<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>18<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>255<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Blast off!
+</span><span style="color:#75715e"></span>  x<span style="color:#f92672">);</span>
+  y <span style="color:#f92672">=</span> y <span style="color:#f92672">-</span> 2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="lab-5---creature-screensaver">
+  Lab 5 - Creature screensaver
+  <a class="anchor" href="#lab-5---creature-screensaver">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Zed Chance
+</span><span style="color:#75715e">Lab 5
+</span><span style="color:#75715e">CS 10
+</span><span style="color:#75715e">Summer 18
+</span><span style="color:#75715e">Creature screensaver
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">//Initialize variables
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">float</span> xSpeed <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> ySpeed <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  size<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
+  x <span style="color:#f92672">=</span> width<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span>
+  y <span style="color:#f92672">=</span> height<span style="color:#f92672">/</span>4<span style="color:#f92672">;</span>
+  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Horizontal movement
+</span><span style="color:#75715e"></span>  x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> xSpeed<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">-</span>55 <span style="color:#f92672">||</span> x <span style="color:#f92672">&lt;</span> 55<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    xSpeed <span style="color:#f92672">=</span> xSpeed<span style="color:#f92672">*-</span>1<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#75715e">//Vertical movement
+</span><span style="color:#75715e"></span>  y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> ySpeed<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">-</span>230 <span style="color:#f92672">||</span> y <span style="color:#f92672">&lt;</span> 35<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    ySpeed <span style="color:#f92672">=</span> ySpeed<span style="color:#f92672">*-</span>1<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#75715e">//Color changes with quadrant
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">/</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    b <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">/</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    r <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+    g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    g <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+    b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    g <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+    b <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  
+  <span style="color:#75715e">//Fill body with color determined by above
+</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
+  noStroke<span style="color:#f92672">();</span>
+  
+  <span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="lab-6---multiplying-creature-with-loops">
+  Lab 6 - Multiplying creature with loops
+  <a class="anchor" href="#lab-6---multiplying-creature-with-loops">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Zed Chance
+</span><span style="color:#75715e">Lab 6
+</span><span style="color:#75715e">CS 10
+</span><span style="color:#75715e">Summer 18
+</span><span style="color:#75715e">Multiplying creature with loops
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">//Setup
+</span><span style="color:#75715e"></span>size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>300<span style="color:#f92672">);</span>
+background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//Initialize variables
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>20<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 50<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Color
+</span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
+  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Randomly change color pallette
+</span><span style="color:#75715e"></span>  r<span style="color:#f92672">);</span>
+  g<span style="color:#f92672">);</span>
+  b<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Move creature over
+</span><span style="color:#75715e"></span>  x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> 120<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="lab-7---using-a-function-to-create-multiple-creatures">
+  Lab 7 - Using a function to create multiple creatures
+  <a class="anchor" href="#lab-7---using-a-function-to-create-multiple-creatures">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
+</span><span style="color:#75715e">Zed Chance
+</span><span style="color:#75715e">Lab 6
+</span><span style="color:#75715e">CS 10
+</span><span style="color:#75715e">Summer 18
+</span><span style="color:#75715e">Using a function to create multiple creatures
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">//Define my creature function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myCreature</span><span style="color:#f92672">(</span><span style="color:#66d9ef">float</span> x<span style="color:#f92672">,</span><span style="color:#66d9ef">float</span> y<span style="color:#f92672">,</span>color c<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Color
+</span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
+  fill<span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Head
+</span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Arms
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Legs
+</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+  
+  <span style="color:#75715e">//Torso
+</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>800<span style="color:#f92672">);</span>
+  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#75715e">//Call my creature function in draw function
+</span><span style="color:#75715e"></span>  myCreature<span style="color:#f92672">(</span>random<span style="color:#f92672">(</span>width<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>height<span style="color:#f92672">),</span>color<span style="color:#f92672">(</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">)));</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/zedchance/notes/edit/master/content/CS10/CS10-Processing-labs.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lab-1---my-creature">Lab 1 - My &ldquo;creature&rdquo;</a></li>
+    <li><a href="#lab-2---making-my-creature-redraw-with-the-mouses-movement">Lab 2 - Making my creature redraw with the mouse&rsquo;s movement</a></li>
+    <li><a href="#lab-4---launching-my-creature-like-a-rocket">Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket</a></li>
+    <li><a href="#lab-5---creature-screensaver">Lab 5 - Creature screensaver</a></li>
+    <li><a href="#lab-6---multiplying-creature-with-loops">Lab 6 - Multiplying creature with loops</a></li>
+    <li><a href="#lab-7---using-a-function-to-create-multiple-creatures">Lab 7 - Using a function to create multiple creatures</a></li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/processing/">processing</a></li>
+  
+  </ul>
+</nav>
+
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

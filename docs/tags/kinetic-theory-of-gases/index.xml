@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kinetic theory of gases on Notes</title>
+    <link>http://zedchance.github.io/tags/kinetic-theory-of-gases/</link>
+    <description>Recent content in kinetic theory of gases on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/kinetic-theory-of-gases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHYS105-lecture-20200430</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/</guid>
+      <description>Announcements #  Today #  Clickers #    Remember temperature is the average kinetic energy of the system.
+Discussion #   Note: Ability to derive this next part isn&amp;rsquo;t included in the test.
+ Look at a box with one particle:
+Now lets add a lot more particles:
+These don&amp;rsquo;t need to be derived, but understood. Will be useful on the next exam.
+The degree of freedom is the &amp;ldquo;number of boxes&amp;rdquo; you can divide the energy into.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>human computer interaction on Notes</title>
+    <link>http://zedchance.github.io/tags/human-computer-interaction/</link>
+    <description>Recent content in human computer interaction on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/human-computer-interaction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS131-lecture-20200929</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200929/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200929/</guid>
+      <description>Annoucements #  HW4 is due Oct 5 Team assignment 1 agreement is posted
+3C examples #  A good example:
+A &amp;ldquo;cloudy&amp;rdquo; example:
+Another good example:
+&amp;ldquo;Kinda cloudy&amp;rdquo; example:
+Human computer interation concepts #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201008</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201008/</guid>
+      <description>HCI finished #  Accessability slide
+ </description>
+    </item>
+    
+  </channel>
+</rss>

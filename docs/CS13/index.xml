@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS13 on Notes</title>
+    <link>http://zedchance.github.io/CS13/</link>
+    <description>Recent content in CS13 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/CS13/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS13-lecture-notes</title>
+      <link>http://zedchance.github.io/CS13/CS13-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS13/CS13-lecture-notes/</guid>
+      <description>CS 13 Lecture Notes #  Jan 28, 2019 #   Download BlueJ [2019-01-29]  Weather class #  public class Weather { private double highTemp; private double lowTemp; private String condition; private int rainChain; public Weather (double h, double l, String c, int r) { highTemp = h; lowTemp = l; condition = c; rainChain = r; } public double delta() { return highTemp - lowTemp; } public String toString() { return &amp;#34;High: &amp;#34; + highTemp + &amp;#34;, Low: &amp;#34; + lowTemp + &amp;#34;, Condition: &amp;#34; + condition + &amp;#34;, Chance of rain: &amp;#34; + rainChance; } } Using this class we can make another to populate a forecast</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>entropy on Notes</title>
+    <link>http://zedchance.github.io/tags/entropy/</link>
+    <description>Recent content in entropy on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/entropy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHYS105-lecture-20200514</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/</guid>
+      <description>Announcements #  Today #  Clickers #   Clockwise around the PV diagram is negative work done on the gas.
+Discussion #  Container on the left contains 3 times the thermal energy because it has 3 times the amount of particles, even tho the temperatures are the same.
+The disorder is proportional to the number of available states (boxes that you can divide each curve into). More temp = more disordered state.</description>
+    </item>
+    
+  </channel>
+</rss>

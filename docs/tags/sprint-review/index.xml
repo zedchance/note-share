@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sprint review on Notes</title>
+    <link>http://zedchance.github.io/tags/sprint-review/</link>
+    <description>Recent content in sprint review on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/sprint-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS131-lecture-20201027</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201027/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201027/</guid>
+      <description>Sprint 0 Review and Retrospective #  The review is about the product.
+The retrospective is about the process. Make some concrete goals for the next sprint. Instead of &amp;ldquo;improve communication&amp;rdquo;, make it something concrete like &amp;ldquo;We agree to communicate via X and respond within Y time.&amp;rdquo;
+1. What went well in the sprint? #  Our team was able to create a persona from the contextual inquiry of multiple people.</description>
+    </item>
+    
+  </channel>
+</rss>

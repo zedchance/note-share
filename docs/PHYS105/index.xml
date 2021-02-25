@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHYS105 on Notes</title>
+    <link>http://zedchance.github.io/PHYS105/</link>
+    <description>Recent content in PHYS105 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/PHYS105/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-resources/</guid>
+      <description>   Resources      Text book UniversityPhysicsVolume2-OP.pdf   Lab coversheet p105L Lab Coversheet sp17.pdf   Text 3 notes p105 Test 3 notes.pdf       My stuff      Quiz 6 Quiz-6.pdf   Test 2 PHYS105-test2.pdf    </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lab-20200326</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/</guid>
+      <description>Centripetal force lab #  The string holds the bob, and the entire mechanism spins in a circle to cause the bob to extend outward and hit the tape marker.
+Time for 20 revolutions
+Data measured is from inside to center of L
+Should be percent difference not % error
+Write a brief conclusion after the lab. Usually we try to make our experiments have a small percent error, but until now its been hard to tell if it is indeed small.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lab-20200402</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/</guid>
+      <description>Due in 3 weeks.
+The Ballistic Pendulum #  2 different ways to measure a projectile
+Watch the youtube video
+For the theory section: #  How to find initial velocity:
+Measure the total height
+And the length in the x direction
+Kinematics
+Then find total time
+Solve for t
+Plug back in
+To make the calculations:
+Horizontal measurements
+Both of these together is x total
+Then measure vertical
+Add both together to get y total</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lab-20200423</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/</guid>
+      <description>Today #  Lab 8 #  Gas pressure arises from the thermal energy of the gas molecules
+Pressure on the y axis, temp on x axis
+Graph the data, find the x intercept, and that should be near absolute zero. Compare that to the accepted absolute zero for percent diff.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200319</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/</guid>
+      <description>Announcements #   CH 8 HWs due tomorrow Quiz 6 due tomorrow  PDF   Power and Energy Lab due tomorrow Can come to either recitation meetings  Test 2 #   Tuesday 11a - 1p Given in docx and PDF Info posted in Course Info folder Just like in class, only use your big powerful brain and the crib sheet No outside help permitted Please do not post test on Cheggs or other websites, academic misconduct  </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200326</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/</guid>
+      <description>Anouncements #   HW 12 CH6 due tues HW 13 Office hour tomorrow at 11am We will meet for lab today (either meeting) Spring break is coming  Clicker question notes #  $$ \Sigma F = ma \
+\Sigma F = -mgy $$
+In circular motion the direction of the velocity is tangent to the circle.
+Circular motion and Gravity #  Major topics
+ Uniform circular motion Centripetal acceleration Gravitation  Circular motion #  Objects moving in a circular path are accelerating.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200331</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/</guid>
+      <description>Annoucements #   HW 13 due tonight HW 14 due fri Quiz 7 posted due 4/16 Centripetal force lab due Fri Recitation today: attend either session Lab on Thurs: attend either session Schedule update by thurs  Today #   More centripetal force  Clicker questions #  Problems #   Ball hanging from pendulum inside moving car turning at 10 mph, what is the radius of the turn?</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200402</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/</guid>
+      <description>Announcements #   HW 13 Ch 6 due tomorrow Quiz 7 due 4/14 Lab due tomorrow New lab today Revised schedule posted Office hour tomorrow @ 11am  Today #  Clicker questions #  Gravitational force is always attractive.
+To find the net force equaling 0, solve this for x:
+Lecture #  $G$ is really small, so for it to be appreciable at least one of the masses needs to be big (for instance Earth).</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200414</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/</guid>
+      <description>Anouncements #  Todays new material #  Clicker questions #  The mass of the satellites actually don&amp;rsquo;t matter
+The smaller the radius the faster the satelite.
+ The bigger the radius the longer the period.
+  Discussion #  Last chapter we introduced centripetal acceleration. We briefly introduced what happens when the speed doesn&amp;rsquo;t change. The tangenital component makes the accelerate faster in a circle.
+How do we get things spinning in a circle in the first place?</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200416</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/</guid>
+      <description>Announcements #  Today #  Clicker questions #     Discussion #  Weight of the beam is in the middle because it is uniform, and the center of mass is in the exact center.
+Two conditions for equilibrium, x is positive to right y is positive to up.
+Two equations and three unknowns. To get to the solution we need to use the sum of the torques = 0 also.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200421</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/</guid>
+      <description>Announcements #  No graphing exercises on upcoming test despite containing some kinematics.
+Today #  Clicker questions #  Radians are unitless. The 1/2 second doesn&amp;rsquo;t have anything to do with the problem.
+ Use the first equation
+You can also use this equation:
+ Use the third equation from above
+What is the initial tangential speed $v_{oT}$ and the tangential acceleration $a_T$?
+Its slowing down quite fast!
+ Discussion #  1:1 correspondence between transational motion and rotational motion.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200428</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/</guid>
+      <description>Announcements #  Test scores
+Probably cancel today&amp;rsquo;s recitation.
+Today #  Microscopid mechanics will have macroscopic ramifications. We&amp;rsquo;ll have to go over:
+ Heat Temperature Internal energy Thermal energy  Temperature #  Prof Harris will almost always use (U) for internal energy instead of (E).
+Temperature affects the vibrational energy (E_{vib}), rotational energy (E_{rot}), and the kinetic energy (KE).
+Thermal energy
+The aspects of the internal energy that is affected by thermal processes.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200430</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/</guid>
+      <description>Announcements #  Today #  Clickers #    Remember temperature is the average kinetic energy of the system.
+Discussion #   Note: Ability to derive this next part isn&amp;rsquo;t included in the test.
+ Look at a box with one particle:
+Now lets add a lot more particles:
+These don&amp;rsquo;t need to be derived, but understood. Will be useful on the next exam.
+The degree of freedom is the &amp;ldquo;number of boxes&amp;rdquo; you can divide the energy into.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200505</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/</guid>
+      <description>Announcements #  Class postponed until recitation.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200507</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/</guid>
+      <description>Announcements #  Clickers #    Discussion #  Convection:
+The warm air is pushed up by the cold air underneath it. Same as buoyant force! This is where the term &amp;ldquo;heat rises&amp;rdquo; comes from.
+Then the hot air cools and cycles down.
+Radiation:
+Infrared heat. Wavelengths that are longer than visible light.
+The emissivaty of 1 radiates a lot (like a black surface). Emissivaty of 0 radiates nothing.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200512</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/</guid>
+      <description>Announcements #  The open ended question on the exam will almost certainly be a heat engine problem.
+Today #  There will be recitation this afternoon.
+Clickers #    Quick review of thermal processes #  Isobaric (constant pressure)
+Isometric (constant volume)
+Isothermal (constant temperature)
+Adiabatic ((q)
+Remember:
+Discussion #  According to the second law of thermodynamics, there is no perfect heat engine.
+   </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200514</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/</guid>
+      <description>Announcements #  Today #  Clickers #   Clockwise around the PV diagram is negative work done on the gas.
+Discussion #  Container on the left contains 3 times the thermal energy because it has 3 times the amount of particles, even tho the temperatures are the same.
+The disorder is proportional to the number of available states (boxes that you can divide each curve into). More temp = more disordered state.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200331</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/</guid>
+      <description>Angular motion questions #  HW Questions #  1
+5
+Since traveling less than ideal speed the car slides down the bank.
+6
+Another problem #  A pendulum swings back and forth with a given length 2m. (Similar to quiz)
+It is moving tangenital at 8 m/s
+ What is the radial or centripetal acceleration?  What is the tangential acceleration?  What is the tension in the string?</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200414</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/</guid>
+      <description>Anouncements #  Quiz 7 #  Part 1 #  The shape made by swinging the string makes a cone.
+To find the angle look at the second equation.
+The radius of the circle is $lsin \theta$
+Solve for $v$.
+Part 2 #  Vertical circle
+We&amp;rsquo;re interested in the ball at three different points.
+Part A
+Solve for $v$
+Part B
+Solve for $v$
+Part C
+ HW #  2 #  Positive torque clockwise, negative torque CCW.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200416</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/</guid>
+      <description>This is usually lab time but today it will be recitation.
+Announcements #   Spine problem
+To find these unknowns we use the sum of the torques
+Fill out distances
+Find perpendicular components
+Solve for $F_m$
+Back muscle exerts 2.3 times your weight to hold you up!
+Total force
+Just bending over the force you put on your spine is 2.5 times your body weight.
+ Kinematics problem
+Final angular velocity will be 0</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200421</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/</guid>
+      <description>Quiz 8 #  Part 1
+What is the tension $T_L$?
+Part 2
+Because the disc is spinning you must add in the rotational component. $I$ Will be given.
+Doesn&amp;rsquo;t depend on mass.
+ Topics to be covered on exam #  Rotational translation
+Centripetal acceleration
+Gravitational laws
+Angular velocity
+If something is rolling
+ HW #  6 #  Convert to seconds
+Use the period around the sun to find the speed</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200428</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/</guid>
+      <description>Announcements #  Clicker #   The only thing that doesn&amp;rsquo;t change with temperature is mass.
+ Atoms are also mostly empty space.
+ Ideal gas law #  Molecules of a gas bouncing off the walls of a container on average is the gas pressure.
+Gas pressure arises from the temperature of the gas molecules.
+Increasing the temp increases the pressure. Increasing the number of molecules also increases the temperature.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200430</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/</guid>
+      <description>HW #  2 #  A
+B
+Solve for (K)
+5 #  7 #  Part b asks for the same thing but with water, then you find the difference in the overflows.
+Next HW #  For the next HW assignment we need to define gauge pressure.
+The gauge pressure is like what you measure when you measure your tire pressure. Its not the pressure of the gas inside, its the pressure of the gas inside above normal atmosphere.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200505</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/</guid>
+      <description>Announcements #  Today #  Discussion #  The melting process is breaking the bonds
+The temp stays the same while changing from liquid to gas also.
+Melting and evaporating are cooling processes.
+Freezizng and condensating are warming processes.
+ The system is the ice, aluminum, and the water. Isolated from the environment.
+There are three possible cases:
+We know the water and liquid will cool, but we&amp;rsquo;re letting the sign take care of it.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200507</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/</guid>
+      <description>Announcements #  Discussion #  N means no change C means change on this summary.
+  If you travel around a PV diagram in the clockwise direction the net work will be negative. If counterclockwise, the work done on the gas is positive.
+HW #  5 tonights #  7 tomorrows #  </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200512</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/</guid>
+      <description>Announcements #  HW #  3 #  4 #  7 #   Other questions #  It is reflecting all colors because of its crystal structure, so it is not absorbing a lot of heat.  It adds a lot of thermal mass so it takes a lot more energy to cool down the entire room.
+Air is a worse conductor of heat than water.
+Shiney side will reflect more, so shiny side in lets heat thru then traps it inside.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200514</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/</guid>
+      <description>HW 22 #  4 #  Solve for (T_H)
+10 #  HW 21 #  2 #  Quiz 11 #  Calculate the value (P_A) and the circled empty values of the table:</description>
+    </item>
+    
+  </channel>
+</rss>

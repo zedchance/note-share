@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>class diagrams on Notes</title>
+    <link>http://zedchance.github.io/tags/class-diagrams/</link>
+    <description>Recent content in class diagrams on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/class-diagrams/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS131-lecture-20201103</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201103/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201103/</guid>
+      <description>https://www.youtube.com/watch?v=UI6lqHOVHic</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201105</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201105/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201105/</guid>
+      <description>A solution
+&amp;ldquo;Design specs&amp;rdquo; aren&amp;rsquo;t a part of the agile process, but this basic idea holds in sprint plannings.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201110</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201110/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201110/</guid>
+      <description>Correction from UML lectures #  Correction: there is no distinction between a filled in triangle between inheritance when inheriting from abstract or concrete.
+SOLID cont. #  Code Design #  Singleton pattern #  Factory pattern #  </description>
+    </item>
+    
+  </channel>
+</rss>

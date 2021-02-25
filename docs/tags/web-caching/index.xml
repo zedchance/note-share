@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web caching on Notes</title>
+    <link>http://zedchance.github.io/tags/web-caching/</link>
+    <description>Recent content in web caching on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/web-caching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210223</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210223/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210223/</guid>
+      <description>Average rate to browsers:
+  \[\begin{aligned} 100\text{ K } \cdot 15/\text{ sec } = 1.5 \text{ MBps } \end{aligned}\]  So our LAN utilization is:
+ \[\begin{aligned} \frac{1.5 \text{ Mbps }}{10 \text{ Mbps}} = 15\% \end{aligned}\]  And the access link utilization is:
+ \[\begin{aligned} \frac{1.5 \text{ Mbps }}{1.54 \text{ Mbps}} = 99\% \end{aligned}\]  Access link utilization:
+ \[\begin{aligned} 99\% \cdot 0.6 = 58\% \end{aligned}\]  Total delay:</description>
+    </item>
+    
+  </channel>
+</rss>

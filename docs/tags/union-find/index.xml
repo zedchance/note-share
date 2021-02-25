@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>union find on Notes</title>
+    <link>http://zedchance.github.io/tags/union-find/</link>
+    <description>Recent content in union find on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/union-find/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20201123</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201123/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201123/</guid>
+      <description>Quick union example
+   index 0 1 2 3 4 5 6 7 8 9     id 1 1 1 8 3 0 5 1 8 8       id 0 1 2 3 4     id 1 2 3 4 4    O(n^2) runtime if unioning linear items.
+Weighted union example
+   id 0 1 2 3 4 5 6 7 8 9     id 6 2 6 4 4 6 6 2 4 4    CORRECTION: 0 should be the root.</description>
+    </item>
+    
+  </channel>
+</rss>

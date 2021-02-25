@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clean code on Notes</title>
+    <link>http://zedchance.github.io/tags/clean-code/</link>
+    <description>Recent content in clean code on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS133-lecture-20210208</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210208/</guid>
+      <description>UML #  Since there isn&amp;rsquo;t a way to pass a new DisplayPanel object into the constructor, it is a composition.
+Example CRC card building
+Clean code #  Design principles #  &amp;ldquo;The Art of Clean Code&amp;rdquo; video #  Summary:
+Victor Rentea&amp;rsquo;s clean code video had a lot of amazing information for making sure that the code you write is considered &amp;ldquo;clean.&amp;rdquo; I think that clean code is a very important part of being a good programmer because it conveys the sense that you care about your team&amp;rsquo;s ability to read your code.</description>
+    </item>
+    
+  </channel>
+</rss>

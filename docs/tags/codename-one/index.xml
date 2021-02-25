@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>codename one on Notes</title>
+    <link>http://zedchance.github.io/tags/codename-one/</link>
+    <description>Recent content in codename one on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/codename-one/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS133-lecture-20210215</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210215/</guid>
+      <description>CN1 #  Components #  Layout managers #  Building the GUI #  </description>
+    </item>
+    
+    <item>
+      <title>CS133-lecture-20210217</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210217/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210217/</guid>
+      <description>Event driven #  laidOut() is called once the component is fully &amp;ldquo;laid out&amp;rdquo; (once it&amp;rsquo;s drawn after the show() method is called).
+Command design pattern #  Observer design pattern #  The old way of doing it: #  </description>
+    </item>
+    
+  </channel>
+</rss>

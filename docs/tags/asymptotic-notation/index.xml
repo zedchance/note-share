@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asymptotic notation on Notes</title>
+    <link>http://zedchance.github.io/tags/asymptotic-notation/</link>
+    <description>Recent content in asymptotic notation on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/asymptotic-notation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20200902</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200902/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200902/</guid>
+      <description>Concerning the survey from last class #  The differences between an array and a linked list:
+ Access: arrays can access an spot instantly, linked lists need to iterate from the head until they reach the target. Size: arrays are fixed in size, linked lists can become bigger or smaller  Stacks can be implemented using a linked list or an array. FILO
+Queues can be implemented using a linked list or a circular array.</description>
+    </item>
+    
+  </channel>
+</rss>

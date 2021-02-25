@@ -1,0 +1,4056 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CS 26 Lecture Notes #  Jan 28, 2019 #  Introduction #  Discrete: Not &ldquo;discreet&rdquo;, opposite of continuous, goes in steps. The graphs we worked with can only be expanded in steps, you can&rsquo;t add a half edge or half vertex.
+Structure: a set of related values and the operations on them. (integers, graphs).
+Like a venn diagram of math and computer science, discrete structures is the combination.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS26-lecture-notes" />
+<meta property="og:description" content="CS 26 Lecture Notes #  Jan 28, 2019 #  Introduction #  Discrete: Not &ldquo;discreet&rdquo;, opposite of continuous, goes in steps. The graphs we worked with can only be expanded in steps, you can&rsquo;t add a half edge or half vertex.
+Structure: a set of related values and the operations on them. (integers, graphs).
+Like a venn diagram of math and computer science, discrete structures is the combination." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zedchance.github.io/CS26/CS26-lecture-notes/" />
+
+<title>CS26-lecture-notes | Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
+<script defer src="/en.search.min.7e6ef5189d02a74db84eb4c019c821b289d74a85c2b5286d5dd13c5be3f9c638.js" integrity="sha256-fm71GJ0Cp024TrTAGcghsonXSoXCtShtXdE8W&#43;P5xjg="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</head>
+
+<body dir="ltr">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: true},
+                  {left: "\\(", right: "\\)", display: true}
+              ]
+          }
+      );
+    </script>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e1a1b689fe907f6677087e2d9b539d9" class="toggle"  />
+    <label for="section-6e1a1b689fe907f6677087e2d9b539d9" class="flex justify-between">
+      <a  class="">CS10</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS10/CS10-Processing-labs/" class="">CS10-labs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06677567046f19eb3dacf987145475f" class="toggle"  />
+    <label for="section-d06677567046f19eb3dacf987145475f" class="flex justify-between">
+      <a  class="">CS12</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS12/CS12-lecture-notes/" class="">CS12-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98a455a71c68533365837514b17a9eb9" class="toggle"  />
+    <label for="section-98a455a71c68533365837514b17a9eb9" class="flex justify-between">
+      <a  class="">CS13</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS13/CS13-lecture-notes/" class="">CS13-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9490b93202949ed3704ff9f858ef63c3" class="toggle"  />
+    <label for="section-9490b93202949ed3704ff9f858ef63c3" class="flex justify-between">
+      <a  class="">CS130</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-exercise-solutions-1/" class="">CS130-exercise-solutions-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200831/" class="">CS130-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200902/" class="">CS130-lecture-20200902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200909/" class="">CS130-lecture-20200909</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200914/" class="">CS130-lecture-20200914</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200916/" class="">CS130-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200921/" class="">CS130-lecture-20200921</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200923/" class="">CS130-lecture-20200923</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200928/" class="">CS130-lecture-20200928</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200930/" class="">CS130-lecture-20200930</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201005/" class="">CS130-lecture-20201005</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201007/" class="">CS130-lecture-20201007</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201012/" class="">CS130-lecture-20201012</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201014/" class="">CS130-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201019/" class="">CS130-lecture-20201019</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201021/" class="">CS130-lecture-20201021</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201028/" class="">CS130-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201102/" class="">CS130-lecture-20201102</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201104/" class="">CS130-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201109/" class="">CS130-lecture-20201109</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201116/" class="">CS130-lecture-20201116</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201118/" class="">CS130-lecture-20201118</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201123/" class="">CS130-lecture-20201123</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201125/" class="">CS130-lecture-20201125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201130/" class="">CS130-lecture-20201130</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201202/" class="">CS130-lecture-20201202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201207/" class="">CS130-lecture-20201207</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201209/" class="">CS130-lecture-20201209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-priority-queues/" class="">CS130-priority-queues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-sorting-algorithms/" class="">CS130-sorting-algorithms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7685cd96811cc43c9ecd205128385c1" class="toggle"  />
+    <label for="section-a7685cd96811cc43c9ecd205128385c1" class="flex justify-between">
+      <a  class="">CS131</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200901/" class="">CS131-lecture-20200901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200903/" class="">CS131-lecture-20200903</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200908/" class="">CS131-lecture-20200908</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200910/" class="">CS131-lecture-20200910</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200915/" class="">CS131-lecture-20200915</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200917/" class="">CS131-lecture-20200917</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200922/" class="">CS131-lecture-20200922</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200924/" class="">CS131-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200929/" class="">CS131-lecture-20200929</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201001/" class="">CS131-lecture-20201001</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201006/" class="">CS131-lecture-20201006</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201008/" class="">CS131-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201013/" class="">CS131-lecture-20201013</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201015/" class="">CS131-lecture-20201015</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201020/" class="">CS131-lecture-20201020</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201022/" class="">CS131-lecture-20201022</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201027/" class="">CS131-lecture-20201027</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201029/" class="">CS131-lecture-20201029</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201103/" class="">CS131-lecture-20201103</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201105/" class="">CS131-lecture-20201105</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201110/" class="">CS131-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201112/" class="">CS131-lecture-20201112</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201119/" class="">CS131-lecture-20201119</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201124/" class="">CS131-lecture-20201124</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201201/" class="">CS131-lecture-20201201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201203/" class="">CS131-lecture-20201203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201208/" class="">CS131-lecture-20201208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-1/" class="">CS131-study-guide-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-2/" class="">CS131-study-guide-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-3/" class="">CS131-study-guide-3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-4/" class="">CS131-study-guide-4</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ea6710cf4db85b6757a42f14aedf299" class="toggle"  />
+    <label for="section-9ea6710cf4db85b6757a42f14aedf299" class="flex justify-between">
+      <a  class="">CS133</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210125/" class="">CS133-lecture-20210125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210208/" class="">CS133-lecture-20210208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210210/" class="">CS133-lecture-20210210</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210215/" class="">CS133-lecture-20210215</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210217/" class="">CS133-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6c9e9a90396154c6e5e42bf42955eff" class="toggle"  />
+    <label for="section-f6c9e9a90396154c6e5e42bf42955eff" class="flex justify-between">
+      <a  class="">CS135</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-hw-20210203/" class="">CS135-hw-20210203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210126/" class="">CS135-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210129/" class="">CS135-lecture-20210129</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210201/" class="">CS135-lecture-20210201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210204/" class="">CS135-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210205/" class="">CS135-lecture-20210205</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210209/" class="">CS135-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210216/" class="">CS135-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210217/" class="">CS135-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210218/" class="">CS135-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eaf59c9d6b1b58452cc45e5585dd0717" class="toggle"  />
+    <label for="section-eaf59c9d6b1b58452cc45e5585dd0717" class="flex justify-between">
+      <a  class="">CS137</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210216/" class="">CS137-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210126/" class="">CS137-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210128/" class="">CS137-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210202/" class="">CS137-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210204/" class="">CS137-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210209/" class="">CS137-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210211/" class="">CS137-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210218/" class="">CS137-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e470c63ab7ad9a473e61272e98b3bcce" class="toggle"  />
+    <label for="section-e470c63ab7ad9a473e61272e98b3bcce" class="flex justify-between">
+      <a  class="">CS138</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210126/" class="">CS138-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210128/" class="">CS138-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210202/" class="">CS138-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210204/" class="">CS138-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210209/" class="">CS138-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210211/" class="">CS138-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210216/" class="">CS138-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210218/" class="">CS138-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-356e0128f78fd703af66d8abf4ebf976" class="toggle" checked />
+    <label for="section-356e0128f78fd703af66d8abf4ebf976" class="flex justify-between">
+      <a  class="">CS26</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-lecture-notes/" class=" active">CS26-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-reading-notes/" class="">CS26-reading-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98681ab3e1e8c09eb7daeac8547903e6" class="toggle"  />
+    <label for="section-98681ab3e1e8c09eb7daeac8547903e6" class="flex justify-between">
+      <a  class="">CS39</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS39/CS39-lecture-notes/" class="">CS39-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe80ac56b57c0244f1c986628504841" class="toggle"  />
+    <label for="section-8fe80ac56b57c0244f1c986628504841" class="flex justify-between">
+      <a  class="">CS46</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/CS46-lecture-notes/" class="">CS46-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/luhns.c/" class="">Luhn&#39;s Algorithm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="toggle"  />
+    <label for="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="flex justify-between">
+      <a  class="">CS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="toggle"  />
+    <label for="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="flex justify-between">
+      <a  class="">ENGL1B</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/" class="">ENGL1B-assignment-8</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92d8bad8aa3f85c10048f789591cd9d3" class="toggle"  />
+    <label for="section-92d8bad8aa3f85c10048f789591cd9d3" class="flex justify-between">
+      <a  class="">MATH100</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH100/MATH100-lecture-notes/" class="">MATH100-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0495fd11e1626446d2b1cf0439989d77" class="toggle"  />
+    <label for="section-0495fd11e1626446d2b1cf0439989d77" class="flex justify-between">
+      <a  class="">MATH31</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-comparison-tests/" class="">MATH31-comparison-tests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-integral-test/" class="">MATH31-integral-test</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-series/" class="">MATH31-series</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-1/" class="">MATH31-unit-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-2/" class="">MATH31-unit-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-3/" class="">MATH31-unit-3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d4164ee5c968fdda8d4b42b98383d88" class="toggle"  />
+    <label for="section-1d4164ee5c968fdda8d4b42b98383d88" class="flex justify-between">
+      <a  class="">PHIL103</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/" class="">PHIL103-ec-lecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/" class="">PHIL103-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/" class="">PHIL103-lecture-20200907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/" class="">PHIL103-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/" class="">PHIL103-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/" class="">PHIL103-lecture-20200927</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/" class="">PHIL103-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/" class="">PHIL103-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/" class="">PHIL103-lecture-20201024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/" class="">PHIL103-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/" class="">PHIL103-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/" class="">PHIL103-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/" class="">PHIL103-lecture-20201122</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-71647d44f109da70d5305fe9e01e1a51" class="toggle"  />
+    <label for="section-71647d44f109da70d5305fe9e01e1a51" class="flex justify-between">
+      <a  class="">PHYS105</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-resources/" class="">PHYS105-resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/" class="">PHYS105-lab-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/" class="">PHYS105-lab-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/" class="">PHYS105-lab-20200423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/" class="">PHYS105-lecture-20200319</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/" class="">PHYS105-lecture-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/" class="">PHYS105-lecture-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/" class="">PHYS105-lecture-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/" class="">PHYS105-lecture-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/" class="">PHYS105-lecture-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/" class="">PHYS105-lecture-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/" class="">PHYS105-lecture-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/" class="">PHYS105-lecture-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/" class="">PHYS105-lecture-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/" class="">PHYS105-lecture-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/" class="">PHYS105-lecture-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/" class="">PHYS105-lecture-20200514</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/" class="">PHYS105-recitation-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/" class="">PHYS105-recitation-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/" class="">PHYS105-recitation-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/" class="">PHYS105-recitation-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/" class="">PHYS105-recitation-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/" class="">PHYS105-recitation-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/" class="">PHYS105-recitation-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/" class="">PHYS105-recitation-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/" class="">PHYS105-recitation-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/" class="">PHYS105-recitation-20200514</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2051d762fa29d975e5db96fff6a3c194" class="toggle"  />
+    <label for="section-2051d762fa29d975e5db96fff6a3c194" class="flex justify-between">
+      <a  class="">STATS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/STATS50/STATS50-lecture-notes/" class="">STATS50-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CS26-lecture-notes</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jan-28-2019">Jan 28, 2019</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+      </ul>
+    </li>
+    <li><a href="#jan-30-2019">Jan 30, 2019</a>
+      <ul>
+        <li><a href="#binary-numbers">Binary Numbers</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-4-2019">Feb 4, 2019</a>
+      <ul>
+        <li><a href="#signed-integers">Signed Integers</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-6-2019">Feb 6, 2019</a>
+      <ul>
+        <li><a href="#non-integral-numbers">Non-integral numbers</a></li>
+        <li><a href="#fixed-point">Fixed point</a></li>
+        <li><a href="#floating-point">Floating point</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-11-2019">Feb 11, 2019</a>
+      <ul>
+        <li><a href="#gates-and-logic">Gates and Logic</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-13-2019">Feb 13, 2019</a>
+      <ul>
+        <li><a href="#boolean-logic">Boolean Logic</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-20-2019">Feb 20, 2019</a>
+      <ul>
+        <li><a href="#karnaugh-maps">Karnaugh Maps</a></li>
+        <li><a href="#lab-3-satisfiability">Lab 3: Satisfiability</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-27-2019">Feb 27, 2019</a>
+      <ul>
+        <li><a href="#modular-arithmetic-and-cryptography">Modular Arithmetic and Cryptography</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-4-2019">Mar 4, 2019</a>
+      <ul>
+        <li><a href="#test-1">Test 1</a></li>
+        <li><a href="#linear-cipher">Linear cipher</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-6-2019">Mar 6, 2019</a>
+      <ul>
+        <li><a href="#greatest-common-divisor">Greatest Common Divisor</a></li>
+        <li><a href="#lab-5">Lab 5</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-11-2019">Mar 11, 2019</a>
+      <ul>
+        <li><a href="#pseudo-random-number-generator-prng">Pseudo Random Number Generator (PRNG)</a></li>
+        <li><a href="#linear-congruential-generators-lcg">Linear Congruential Generators (LCG)</a></li>
+        <li><a href="#checksums">Checksums</a></li>
+        <li><a href="#hash">Hash</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-13-2019">Mar 13, 2019</a>
+      <ul>
+        <li><a href="#more-hashing">More hashing</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-18-2019">Mar 18, 2019</a>
+      <ul>
+        <li><a href="#symmetric-vs-asymmetric-encryption">Symmetric vs. Asymmetric encryption</a></li>
+        <li><a href="#rsa">RSA</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-20-2019">Apr 20, 2019</a>
+      <ul>
+        <li><a href="#communicating-using-public-private-key-cryptography">Communicating using public-private key cryptography</a></li>
+        <li><a href="#the-real-rsa">The Real RSA</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-3-2019">Apr 3, 2019</a>
+      <ul>
+        <li><a href="#spam-filtering">Spam filtering</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-10-2019">Apr 10, 2019</a>
+      <ul>
+        <li><a href="#graphs">Graphs</a></li>
+        <li><a href="#trees">Trees</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-22-2019">Apr 22, 2019</a>
+      <ul>
+        <li><a href="#minimal-spanning-tree">Minimal spanning tree</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-24-2019">Apr 24, 2019</a>
+      <ul>
+        <li><a href="#finite-state-machine">Finite State Machine</a></li>
+        <li><a href="#how-a-program-gets-compiled">How a program gets compiled</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-29-2019">Apr 29, 2019</a>
+      <ul>
+        <li><a href="#compilers-continued">Compilers continued</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-1-2019">May 1, 2019</a>
+      <ul>
+        <li><a href="#state-machines-cont">State machines cont.</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-6-2019">May 6, 2019</a>
+      <ul>
+        <li><a href="#nfa-with-epsilon-transition">NFA with epsilon transition</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-8-2019">May 8, 2019</a></li>
+    <li><a href="#may-13-2019">May 13, 2019</a>
+      <ul>
+        <li><a href="#mealy-and-moore-machines">Mealy and Moore Machines</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-15-2019">May 15, 2019</a>
+      <ul>
+        <li><a href="#data-compression-text">Data compression (text)</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading"></a></li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/discrete-structures/">discrete structures</a></li>
+  
+      <li><a href="http://zedchance.github.io/tags/python/">python</a></li>
+  
+  </ul>
+</nav>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cs-26-lecture-notes">
+  CS 26 Lecture Notes
+  <a class="anchor" href="#cs-26-lecture-notes">#</a>
+</h1>
+<h2 id="jan-28-2019">
+  Jan 28, 2019
+  <a class="anchor" href="#jan-28-2019">#</a>
+</h2>
+<h3 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h3>
+<p>Discrete: Not &ldquo;discreet&rdquo;, opposite of continuous, goes in steps. The graphs we worked with can only be expanded in steps, you can&rsquo;t add a half edge or half vertex.</p>
+<p>Structure: a set of related values and the operations on them. (integers, graphs).</p>
+<p>Like a venn diagram of math and computer science, discrete structures is the combination.</p>
+<hr>
+<h2 id="jan-30-2019">
+  Jan 30, 2019
+  <a class="anchor" href="#jan-30-2019">#</a>
+</h2>
+<h3 id="binary-numbers">
+  Binary Numbers
+  <a class="anchor" href="#binary-numbers">#</a>
+</h3>
+<p>Spending method:
+89 can be converted to decimal by &ldquo;buying&rdquo; the most expensive thing you can from the powers of two.</p>
+<p>Repeated division:
+89 can be repeatedly divided by 2. the remainders in reverse order will be the binary number.</p>
+<p>Hexadecimal - Base 16
+Using higher bases means you can pack more information into a smaller space.</p>
+<p>Base 32 uses 1..9A..V
+Can be easily converted from binary by using groups of 5 bits.</p>
+<p>Base 64 uses 1..9A..Za..z+/
+Can be easily converted from binary by using groups of 6 bits. Starts from the beginning of the file, grouping into 6 bits then padded with an equals sign (=) for each 2 bits left over.</p>
+<p>All data is just numbers. How you &ldquo;chunk it up&rdquo; is just a way of representation the information.</p>
+<hr>
+<h2 id="feb-4-2019">
+  Feb 4, 2019
+  <a class="anchor" href="#feb-4-2019">#</a>
+</h2>
+<h3 id="signed-integers">
+  Signed Integers
+  <a class="anchor" href="#signed-integers">#</a>
+</h3>
+<ul>
+<li>2&rsquo;s complement
+<ul>
+<li>In 2&rsquo;s complement subtracting and addition are the same operation.</li>
+<li>To subtract, add the negative version of the number. The result will be in 2&rsquo;s complement, which needs context to be understood.</li>
+<li>Without context, there is no way to know which.</li>
+<li>The CPU does not know (and doesn&rsquo;t care) whether we are using unsigned or 2s complement numbers.</li>
+</ul>
+</li>
+<li>Sign-magnitude
+<ul>
+<li>MSB is the sign bit, 1 means negative, 0 means positive.</li>
+</ul>
+</li>
+<li>Excess-n or Excess-k
+<ul>
+<li>Splits the numbers in but not in half. It is shifted down to accomodate however many negative numbers you need.</li>
+</ul>
+</li>
+</ul>
+<p>Pros</p>
+<ul>
+<li>Signed magnitude
+<ul>
+<li>Easy for humans</li>
+<li>Symmetric range</li>
+<li>LSB shows even/odd</li>
+<li>MSB is pos/neg</li>
+</ul>
+</li>
+<li>2s Complement
+<ul>
+<li>Easy arithmetic</li>
+<li>LSB is even/odd</li>
+<li>MSB is pos/neg</li>
+</ul>
+</li>
+<li>Excess-n
+<ul>
+<li>Easy negation (add or subtract)</li>
+<li>Definable range</li>
+</ul>
+</li>
+</ul>
+<p>Cons</p>
+<ul>
+<li>Signed magnitude
+<ul>
+<li>Two zeros</li>
+<li>difficult for computers</li>
+</ul>
+</li>
+<li>2s complement
+<ul>
+<li>Negation more difficult (than signed magnitude)</li>
+</ul>
+</li>
+<li>Excess-n</li>
+</ul>
+<hr>
+<h2 id="feb-6-2019">
+  Feb 6, 2019
+  <a class="anchor" href="#feb-6-2019">#</a>
+</h2>
+<h3 id="non-integral-numbers">
+  Non-integral numbers
+  <a class="anchor" href="#non-integral-numbers">#</a>
+</h3>
+<p><code>110.101</code> = 6.625</p>
+<p>The places to the right of the radix are still powers of 2 (negative powers)</p>
+<p>Certain numbers cannot be broken down into base 2 (for instance 7.6, .6 cannot be broken down into powers of 2). When sending floating point numbers, the radix point cannot be shown in 1s and 0s. You can agree on where the radix point will go before hand, which is called fixed-point.</p>
+<h3 id="fixed-point">
+  Fixed point
+  <a class="anchor" href="#fixed-point">#</a>
+</h3>
+<p><code>___.___</code>, the radix point isn&rsquo;t sent along, its just agreed upon where it will be. <code>0b1101 1100</code> would turn into 1101.1100)</p>
+<h3 id="floating-point">
+  Floating point
+  <a class="anchor" href="#floating-point">#</a>
+</h3>
+<p>IEEE-754 is the standard for floating point numbers. Floating point numbers is essentially scientific notation but in binary.</p>
+<p>$-6.521 x 10^27$</p>
+<p>The three parts you need to pay attention to are the sign, the mantissa (the number after the sign) and the exponent. Numbers must be normalized ($.0314).</p>
+<p>Modified IEEE-754 (8 bits):
+Trade off between precision and range. Will use 1 bit for the sign (MSB), 4 bits for exponent, and 3 for mantissa.</p>
+<p><code>_ _ _ _ _ _ _ _</code></p>
+<p>Sign</p>
+<ul>
+<li>0 is pos</li>
+<li>1 is neg</li>
+</ul>
+<p>Exponent</p>
+<ul>
+<li>Represented in excess-n</li>
+</ul>
+<p>Mantissa</p>
+<ul>
+<li>Fractional binary</li>
+</ul>
+<p>The leftmost digit after normalized is always a 1, so that can be ommited when transfering to a floating point number. IEEE-754 says if you are using 4 bits for exponent, you should use excess-7. To find the number of bits to shift by you should use $n = 2^{b-1} - 1$ where $b$ is the number of bits used to express the exponent.</p>
+<p>Range of values</p>
+<ul>
+<li>Smallest positive value (in our modified 8 bit version, in the real version it says if all bits are 0 then the number is 0)
+<ul>
+<li><code>0b0000 0000</code> = $1.000 x 2^-7$ = $1/128$</li>
+</ul>
+</li>
+<li>Largest positive value
+<ul>
+<li><code>0b0111 1111</code> = $1.111 x 2^8$ = $480$</li>
+</ul>
+</li>
+<li>Next largest
+<ul>
+<li><code>0b1111 1110</code> = $1.110 x 2^8$ = $448$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="feb-11-2019">
+  Feb 11, 2019
+  <a class="anchor" href="#feb-11-2019">#</a>
+</h2>
+<h3 id="gates-and-logic">
+  Gates and Logic
+  <a class="anchor" href="#gates-and-logic">#</a>
+</h3>
+<p>74163 - 4 bit counter
+74138 - 3 to 8 bit decoder
+7400 - NAND</p>
+<p>These chips can be mounted on PCBs to make a computer.</p>
+<p>Two circuits/expressions are equivalent if they have the same truth tables.</p>
+<p>NAND is a universal gate, meaning you can make any other gate out of just NANDs.</p>
+<hr>
+<h2 id="feb-13-2019">
+  Feb 13, 2019
+  <a class="anchor" href="#feb-13-2019">#</a>
+</h2>
+<h3 id="boolean-logic">
+  Boolean Logic
+  <a class="anchor" href="#boolean-logic">#</a>
+</h3>
+<p>Boolean expressions are equivalent if they have the same truth table. To flip the output of a truth table over, not the result.</p>
+<hr>
+<h2 id="feb-20-2019">
+  Feb 20, 2019
+  <a class="anchor" href="#feb-20-2019">#</a>
+</h2>
+<h3 id="karnaugh-maps">
+  Karnaugh Maps
+  <a class="anchor" href="#karnaugh-maps">#</a>
+</h3>
+<p>How to:</p>
+<ol>
+<li>Get expression into SoP (Sum of products) or DNF (Disjunctive normal form)</li>
+<li>Make grid, label axes, use grade code to fill out any multiple variable columns</li>
+<li>Dot boxes for each term</li>
+<li>Circle adjacent dots
+<ol>
+<li>As big as possible</li>
+<li>Dimensions of circle must be powers of 2</li>
+<li>As few circles as possible to cover all dots</li>
+<li>Overlap circles in order to make them as big as possible</li>
+</ol>
+</li>
+<li>Each circle is a term in the minimized expression</li>
+</ol>
+<h3 id="lab-3-satisfiability">
+  Lab 3: Satisfiability
+  <a class="anchor" href="#lab-3-satisfiability">#</a>
+</h3>
+<p>pseudo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">for x from 0 to 1
+   for y from 0 to 1
+      for x from 0 to 1
+         if x == 0 or y == 1 and z == 1 or y == 0
+            print x, y, z
+</code></pre></div><hr>
+<h2 id="feb-27-2019">
+  Feb 27, 2019
+  <a class="anchor" href="#feb-27-2019">#</a>
+</h2>
+<h3 id="modular-arithmetic-and-cryptography">
+  Modular Arithmetic and Cryptography
+  <a class="anchor" href="#modular-arithmetic-and-cryptography">#</a>
+</h3>
+<p>Overview</p>
+<ul>
+<li>Shift cipher (Caesar)</li>
+<li>Linear cipher</li>
+<li>Vigenere cipher</li>
+<li>Hasing and passwords</li>
+<li>Symmetric key crypto</li>
+<li>Public key crypto</li>
+</ul>
+<p>Encoding is just transforming from one form to another. There isn&rsquo;t any secret information, you just need to know what algorithm is being used. Cryptography uses encoding with some secret information to make the algorithm harder to decode.</p>
+<p><strong>Modular arithmetic</strong></p>
+<blockquote>
+<p>18 + 35 mod 7 = 18
+18 + 35 (mod 7) = 4</p>
+</blockquote>
+<p>These expressions are not the same. The first expression the mod is only applying to the 35, whereas the second expression mods the entire sum of whats on the left before mod. <strong>Congruent numbers</strong> are numbers that land on the same spot in the mod circle.</p>
+<p><strong>Remainder vs modulo</strong></p>
+<p>Remainders can be negative, and modulos is always positive.</p>
+<p><strong>Arithmetic properties</strong></p>
+<p>Sum</p>
+<blockquote>
+<p>123456 + 7891011 (mod 79))
+(a + b) mod n)</p>
+</blockquote>
+<p>To do this on the normal calculator, divide the numbers, minus the quotient, then multiply by the mod number.</p>
+<p>Multiplication</p>
+<blockquote>
+<p>Multiplication</p>
+</blockquote>
+<p>Exponents</p>
+<blockquote>
+<p>456^789 mod 79 = 58
+(456 mod 79)^789 = 58</p>
+</blockquote>
+<p>You can mod the base but not the exponent!</p>
+<p><strong>Preview of RSA</strong></p>
+<ul>
+<li>Plaintext
+<ul>
+<li>the message you want to encrypt</li>
+</ul>
+</li>
+<li>Ciphertext
+<ul>
+<li>the encrypted message</li>
+<li>This is basically the $c = p^{e} mod n$
+<ul>
+<li>c = cihper text</li>
+<li>p = plain text</li>
+<li>e)</li>
+<li>n &gt; p (n can be as big as 400 digits long)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>(40 digits)^(200 digits) mod (400 digits)</p>
+</blockquote>
+<blockquote>
+<p>17^123 (mod 19)  = 17^100 * 17^23 = 17^50 * 17^50 * 17^23</p>
+</blockquote>
+<hr>
+<h2 id="mar-4-2019">
+  Mar 4, 2019
+  <a class="anchor" href="#mar-4-2019">#</a>
+</h2>
+<h3 id="test-1">
+  Test 1
+  <a class="anchor" href="#test-1">#</a>
+</h3>
+<ul>
+<li>Opens Friday 8a, closes Mon 8a</li>
+<li>You have 3 hours to finish once you start
+<ul>
+<li>Most people need about 1 hour</li>
+</ul>
+</li>
+<li>Covers
+<ul>
+<li>Binary</li>
+<li>Signed integers</li>
+<li>Gates and circuits</li>
+<li>Boolean logic</li>
+<li>K-maps</li>
+<li>Floating-point</li>
+</ul>
+</li>
+<li>Work on seperate sheet of paper. Turn in paper next class to get partial credit for problems.</li>
+</ul>
+<h3 id="linear-cipher">
+  Linear cipher
+  <a class="anchor" href="#linear-cipher">#</a>
+</h3>
+<p>Formula</p>
+<ul>
+<li>c)
+<ul>
+<li>n is size of alphabet</li>
+<li>c is cipher text</li>
+<li>p is plaintext</li>
+<li>m is multiplier</li>
+</ul>
+</li>
+</ul>
+<p>In python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">linear(p, m, k):
+   <span style="color:#66d9ef">return</span> (p <span style="color:#f92672">*</span> m <span style="color:#f92672">+</span> k) <span style="color:#f92672">%</span> n
+</code></pre></div><p>The process looks like this, using m = 5 and k = 7</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">C  A  T       plaintext
+02 00 19      coded
+17 07 102     multiplied and shifted
+17 07 24      mod 26
+R  H  Y       ciphertext
+</code></pre></div><p>To decipher</p>
+<ul>
+<li>Must know m and k, and reverse the process</li>
+</ul>
+<p>What makes good numbers for m and k?</p>
+<ul>
+<li>m should be greater then 0 and less than n
+<ul>
+<li>If you multiply by anything over n it is the same as multiplying as numbers that are less then n. Multiplying by n is the same as multiplying by 0</li>
+</ul>
+</li>
+<li>k should be greater than or equal to 0 and less than n
+<ul>
+<li>Anything below 0 or above n is no point</li>
+</ul>
+</li>
+<li><strong>m and n should have no common factors!</strong> (coprime, or relatively prime) This creates non-1:1 mappings!</li>
+</ul>
+<p>An example in python, using m = 22 and k = 24:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">26</span>):
+   c) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span>
+   <span style="color:#66d9ef">print</span>(p, c)
+</code></pre></div><p>This pattern creates repeating numbers that don&rsquo;t map 1:1 anymore with numbers, so it isn&rsquo;t a good choice for a multiplier and shift.</p>
+<p><strong>Field</strong></p>
+<ul>
+<li>A set of values on which the following operations are defined:
+<ul>
+<li>Addition</li>
+<li>Multiplication</li>
+<li>Additive inverse</li>
+<li>Multiplicative inverse</li>
+</ul>
+</li>
+</ul>
+<p><strong>Euler&rsquo;s Totient Function</strong></p>
+<ul>
+<li>How many numbers less the number are coprimes of the number.</li>
+<li>Properties
+<ul>
+<li>If n is prime
+<ul>
+<li>then φ(n) = n-1</li>
+</ul>
+</li>
+<li>If n = a * b, a and b are coprime and a ≠ b
+<ul>
+<li>then φ(n))</li>
+</ul>
+</li>
+<li>If n)
+<ul>
+<li>then φ(n))</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Euler&rsquo;s Theorem</strong></p>
+<ul>
+<li>a^φ(n)), if a and n are coprime</li>
+</ul>
+<hr>
+<h2 id="mar-6-2019">
+  Mar 6, 2019
+  <a class="anchor" href="#mar-6-2019">#</a>
+</h2>
+<h3 id="greatest-common-divisor">
+  Greatest Common Divisor
+  <a class="anchor" href="#greatest-common-divisor">#</a>
+</h3>
+<p>gcd(15, 21) = 3
+gcd(90, 60) = 30</p>
+<p><strong>Euclidean Algorithm</strong></p>
+<ul>
+<li>gcd(a, 0) = a</li>
+<li>gcd(a, b))</li>
+</ul>
+<p>Example:
+gcd(90, 60)) = 30</p>
+<p>gcd(15, 270)) = 15</p>
+<p>In a python function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">gcd</span>(a, b):
+   <span style="color:#66d9ef">if</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+      <span style="color:#66d9ef">return</span> a
+   <span style="color:#66d9ef">else</span>:
+      <span style="color:#66d9ef">return</span> gcd(b, a <span style="color:#f92672">%</span> b)
+</code></pre></div><p><strong>Extended Euclidean Algorithm</strong></p>
+<ul>
+<li>ax + by)
+<ul>
+<li>You give it a and b, it returns x and y</li>
+</ul>
+</li>
+</ul>
+<p>Try:<br>
+a = 60<br>
+b = 90</p>
+<p>60x + 90y)<br>
+60x + 90y = 30<br>
+2x + 3y = 1<br>
+x = -1, y = 1<br>
+x = 2, y = -1<br>
+x = 5, y = -3</p>
+<p>egcd(15, 21)<br>
+15x + 21y)<br>
+15x + 21 y = 3<br>
+5x + 7y = 1<br>
+x = 3, y = -2<br>
+x = -4, y = 3</p>
+<p>egcd(15, 26)<br>
+15x + 26 y)<br>
+15x + 26y = 1<br>
+x = 7, y = -4<br>
+15 * 7 (mod 26) = 1<br>
+<strong>x is the multiplicative inverse of a mod b</strong></p>
+<h3 id="lab-5">
+  Lab 5
+  <a class="anchor" href="#lab-5">#</a>
+</h3>
+<p>Linear cipher</p>
+<ul>
+<li>To encrypt:
+<ul>
+<li><code>c = pm + k % n</code></li>
+</ul>
+</li>
+<li>To decrypt
+<ul>
+<li><code>c) m^-1 % n</code>
+<ul>
+<li><code>m^-1 % n</code> is the multiplicative inverse</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>To calculate multiplicative inverse use the Extended Euclidean Algorithm
+egcd(a, 0))</p>
+<p>egcd(a, b))</p>
+<ul>
+<li>q equals to <code>a//b</code></li>
+<li>r equals <code>a mod b</code></li>
+<li>(s, t))</li>
+</ul>
+<p>In python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">egcd</span>(a, b):
+   <span style="color:#66d9ef">if</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+      <span style="color:#66d9ef">return</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)
+   <span style="color:#66d9ef">else</span>:
+      q <span style="color:#f92672">=</span> a <span style="color:#f92672">//</span> b
+      r <span style="color:#f92672">=</span> a <span style="color:#f92672">%</span> b
+      (s, t))
+      <span style="color:#66d9ef">return</span> (t, s <span style="color:#f92672">-</span> q <span style="color:#f92672">*</span> t)
+</code></pre></div><hr>
+<h2 id="mar-11-2019">
+  Mar 11, 2019
+  <a class="anchor" href="#mar-11-2019">#</a>
+</h2>
+<h3 id="pseudo-random-number-generator-prng">
+  Pseudo Random Number Generator (PRNG)
+  <a class="anchor" href="#pseudo-random-number-generator-prng">#</a>
+</h3>
+<p>In 1946, Von Neumann proposed a random number generator:</p>
+<ul>
+<li>Start with a 4 digit number</li>
+<li>Square it</li>
+<li>Extract the middle 4 digits</li>
+<li>Use this pseudo random number as the seed for the next</li>
+</ul>
+<p>The PRNG gets a seed as input, which is then put through a calculation, and the output is your pseudo random number. The output can then be used as a seed for the next random number.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vn</span>(seed);
+   sq <span style="color:#f92672">=</span> seed <span style="color:#f92672">*</span> seed
+   <span style="color:#75715e"># divide by 100 using integer division to remove the rightmost 2 digits, then mod by 10k to keep the rightmost 4 digits</span>
+   rnd <span style="color:#f92672">=</span> sq <span style="color:#f92672">//</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10000</span>
+   <span style="color:#66d9ef">return</span> rnd
+
+s <span style="color:#f92672">=</span> <span style="color:#ae81ff">4321</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>):
+   r)
+   <span style="color:#66d9ef">print</span>(r)
+   s <span style="color:#f92672">=</span> r
+</code></pre></div><h3 id="linear-congruential-generators-lcg">
+  Linear Congruential Generators (LCG)
+  <a class="anchor" href="#linear-congruential-generators-lcg">#</a>
+</h3>
+<p>The formula: rand)</p>
+<p>Just like our linear cipher, the multiplier and mod number must be <strong>coprime</strong>. N is the length of the cycle. Any seed you pick will be one of the values in the cycle. This is useful for debugging programs that use a random number generator to see if they are working before letting them loose with random seeds. Inside the computer at a random place in memory, the OS keeps whats called a &ldquo;Pool of entropy&rdquo;, which stores random bits to be used as starting points for random seeds, this is replenished by random events such as network activity times or times between keypresses etc.</p>
+<p>Concerning domain and range:</p>
+<ul>
+<li>If every value in the domain has a 1:1 value in the range, this is called bijection (good for crypto).</li>
+<li>If If every value has a many:1 value in the range, this is called a surjection (not good for crypto). This can&rsquo;t be reversed (its a one way function)</li>
+</ul>
+<h3 id="checksums">
+  Checksums
+  <a class="anchor" href="#checksums">#</a>
+</h3>
+<p>A small number calculated from data being sent that is used to verify the integrity of the data. Designed to be very fast to compute, can catch common problems, not to be used for encryption though.</p>
+<p>Luhn algorithm:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">4539 7043 5470 6391        double every other digit
+                           insert other digits
+                           sum up all the resulting single digits
+</code></pre></div><p>If sum is multiple of 10, it&rsquo;s good!
+This is designed to catch common data entry errors.</p>
+<ul>
+<li>Transposing adjacent digits</li>
+<li>Mistyping one digit</li>
+</ul>
+<h3 id="hash">
+  Hash
+  <a class="anchor" href="#hash">#</a>
+</h3>
+<p>A checksum that is much harder to compute, and used to verify the integrity of a file</p>
+<table>
+<thead>
+<tr>
+<th>Hash</th>
+<th>Bits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD5</td>
+<td>128 bits</td>
+</tr>
+<tr>
+<td>SHA256</td>
+<td>256 bits</td>
+</tr>
+<tr>
+<td>SHA512</td>
+<td>512 bits</td>
+</tr>
+<tr>
+<td>RipeMD-160</td>
+<td>160 bits</td>
+</tr>
+</tbody>
+</table>
+<p>These hash values has the same idea as a checksum, but are much bigger. This can be analogous with a coffee grinder. The grinder grinds up a bunch of beans, then a scoop is taken out (the hash). These can&rsquo;t be reversed because only a portion of the &ldquo;beans&rdquo; were used as the hash. If working with a huge file (a bucket of beans), a scoop is taken, grinded, then a scoop of that is taken and added to another scoop of beans, where the process repeats. This gives an even representation of the file.</p>
+<p>Bash:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">echo -n <span style="color:#e6db74">&#34;Hello&#34;</span> | md5
+echo -n <span style="color:#e6db74">&#34;Hola&#34;</span> | md5
+</code></pre></div><p>These hashs work in a chain, and use the last &ldquo;scoop&rdquo; in the next so that the entire data structure is represented. The domain is almost infinity, and the range is 2^ number of bits in hash. The chances of 2 documents having the same checksum is 1 in 2^b where b is the number of bits</p>
+<hr>
+<h2 id="mar-13-2019">
+  Mar 13, 2019
+  <a class="anchor" href="#mar-13-2019">#</a>
+</h2>
+<h3 id="more-hashing">
+  More hashing
+  <a class="anchor" href="#more-hashing">#</a>
+</h3>
+<ul>
+<li>MD5
+<ul>
+<li>Message digest version 5</li>
+</ul>
+</li>
+<li>SHA256
+<ul>
+<li>Secure hashing algorithm</li>
+</ul>
+</li>
+<li>SHA512</li>
+<li>RipeMD-160</li>
+</ul>
+<p>How many possible n-char passwords?</p>
+<ul>
+<li>8 character password (only letters)
+<ul>
+<li>52^8 = 5.3e13</li>
+</ul>
+</li>
+<li>8 character with numbers
+<ul>
+<li>62^8 = 2.2e14</li>
+</ul>
+</li>
+<li>9 character only letters
+<ul>
+<li>52^9 = 2.7e15</li>
+</ul>
+</li>
+</ul>
+<p>What makes a good hashing algorithm?</p>
+<ul>
+<li>Should be computationally expensive, but not too expensive
+<ul>
+<li>MD5 used to be considered a good hash, now it is too easy (fast)</li>
+</ul>
+</li>
+<li>Outputs should be evenly distributed
+<ul>
+<li>Think plotting the on a histogram</li>
+</ul>
+</li>
+<li>Easy to go one way, hard to go the other</li>
+<li>Pre-image resistance
+<ul>
+<li>For a given hash (h) it should be hard to guess the original message (m), such that hash(m) = h</li>
+</ul>
+</li>
+<li>Second pre-image resistance
+<ul>
+<li>For a given message (m1), it&rsquo;s hard to find another message (m2), such that hash(m1))</li>
+</ul>
+</li>
+<li>Collision resistance
+<ul>
+<li>Hard to find two messages (m1, m2) such that hash(m1))</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="mar-18-2019">
+  Mar 18, 2019
+  <a class="anchor" href="#mar-18-2019">#</a>
+</h2>
+<h3 id="symmetric-vs-asymmetric-encryption">
+  Symmetric vs. Asymmetric encryption
+  <a class="anchor" href="#symmetric-vs-asymmetric-encryption">#</a>
+</h3>
+<p><strong>Symmetric:</strong></p>
+<ul>
+<li>Both parties share a secret key</li>
+<li>Faster then asymmetric</li>
+</ul>
+<p>Alice and Bob want to communicate, Eve is the eavesdropper. How do Alice and Bob keep Eve from obtaining the key?</p>
+<p><strong>Public Key Cryptosystems (asymmetric)</strong>:</p>
+<ul>
+<li>This solves the &ldquo;key-exchange&rdquo; problem.</li>
+</ul>
+<h3 id="rsa">
+  RSA
+  <a class="anchor" href="#rsa">#</a>
+</h3>
+<p>R: Rivesst<br>
+S: Shamir<br>
+A: Adelman</p>
+<ol>
+<li>Pick two primes p &amp; q
+<ol>
+<li>p = 13, q = 47</li>
+</ol>
+</li>
+<li>Calculate n)
+<ol>
+<li>n = 611</li>
+</ol>
+</li>
+<li>Calculate totient(n)
+<ol>
+<li>totient(611)) = 552</li>
+</ol>
+</li>
+<li>Find e, such that 1 &lt; e &lt; totient(n) and e &amp; totient(n) are coprime
+<ol>
+<li>These can easily be found using our gcd() function</li>
+<li>271</li>
+</ol>
+</li>
+<li>Find d such that e is the multiplicative inverse of e and totient(n)
+<ol>
+<li>e * d)</li>
+<li>271 * d mod 552 = 1</li>
+<li>d = 55</li>
+</ol>
+</li>
+<li>Throw away p, q, and totient(n)!</li>
+</ol>
+<p>3 Ways to find multiplicative inverse</p>
+<ul>
+<li>Loop</li>
+<li>Extended GCD</li>
+<li>Euler&rsquo;s Theorem</li>
+</ul>
+<p>RSA Formulas:</p>
+<ul>
+<li>c = p^e mod n</li>
+<li>p = c^d mod n</li>
+</ul>
+<p>(e, n) is one key<br>
+(d, n) is another key, you choose which you want to keep private</p>
+<p>For communication:</p>
+<ul>
+<li>Alice and bob want to communicate</li>
+<li>They both independently go through the RSA calculations</li>
+<li>Alice&rsquo;s
+<ul>
+<li>public key Apub)</li>
+<li>private key Apriv (da, na)</li>
+</ul>
+</li>
+<li>Bob&rsquo;s
+<ul>
+<li>public key Bpub)</li>
+<li>private key Bpriv)</li>
+</ul>
+</li>
+<li>Alice wants to send Bob a message such that only Bob can read it.
+<ul>
+<li>A: plain -&gt; Bpub -&gt; cipher</li>
+<li>B: cipher -&gt; Bpriv -&gt; plain</li>
+</ul>
+</li>
+</ul>
+<p>Let&rsquo;s try:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hi!            Alice&#39;s message
+H i !
+72 105 33      Ascii values
+               Using Bob&#39;s public key Alice can encrypt
+474 248 266    e = 271, n = 611
+
+72 105 33      Bob uses his private key to decrypt
+               d = 55, n = 611
+</code></pre></div><p>How can Eve decrypt the message?</p>
+<ul>
+<li>Eve has
+<ul>
+<li>both public keys
+<ul>
+<li>Composed of 2 pieces (e and n)</li>
+</ul>
+</li>
+<li>ciphertext</li>
+<li>Eve needs d to decrypt
+<ul>
+<li>However to calculate the totient of n Eve will need to factor n (it is composed of 2 large prime factors)</li>
+<li>She needs to factor n into p and q</li>
+<li>This is a hard problem</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Quantum computers have Shor&rsquo;s Algorithm that can factor a number quickly</p>
+</blockquote>
+<hr>
+<h2 id="apr-20-2019">
+  Apr 20, 2019
+  <a class="anchor" href="#apr-20-2019">#</a>
+</h2>
+<h3 id="communicating-using-public-private-key-cryptography">
+  Communicating using public-private key cryptography
+  <a class="anchor" href="#communicating-using-public-private-key-cryptography">#</a>
+</h3>
+<p>Alice and Bob both generate independent sets of keys.</p>
+<ul>
+<li>Alice
+<ul>
+<li>Apub</li>
+<li>Apriv</li>
+</ul>
+</li>
+<li>Bob
+<ul>
+<li>Bpub</li>
+<li>Bpriv</li>
+</ul>
+</li>
+</ul>
+<p><strong>Alice wants to send Bob a message so that only Bob can read it.</strong></p>
+<ul>
+<li>She needs to run her plaintext thru Bob&rsquo;s public key to obtain ciphertext.</li>
+<li>A: p -&gt; Bpub -&gt; c</li>
+<li>B: c -&gt; Bpriv -&gt; p</li>
+<li>This gives us security</li>
+</ul>
+<p><strong>Alice wants to send Bob a message such that Bob knows it came from Alice:</strong></p>
+<ul>
+<li>A: p -&gt; Apriv -&gt; cipher</li>
+<li>B: c -&gt; Apub -&gt; plain</li>
+<li>This gives us authenticity</li>
+</ul>
+<p>Combining these gives both authenticity and security</p>
+<ul>
+<li>A: p -&gt; Apriv  -&gt; Bpub -&gt; cipher</li>
+<li>B: c -&gt; Bpriv -&gt; Apub -&gt; plain</li>
+<li>This order matters! Otherwise Eve can unlock the outter &ldquo;box&rdquo; with Alice&rsquo;s public key</li>
+</ul>
+<p><strong>Alice wants to send a message to Bob such that:</strong></p>
+<ul>
+<li>Alice is the sender (authenticity)</li>
+<li>Bob is the recipient (security)</li>
+<li>Message has not been tampered with (integrity)</li>
+<li>A: p -&gt; hash -&gt; h
+<ul>
+<li>p + h -&gt; Apriv -&gt; Bpub -&gt; cipher</li>
+</ul>
+</li>
+<li>B: c -&gt; Bpriv -&gt; Apub -&gt; p + h
+<ul>
+<li>p -&gt; hash -&gt; h</li>
+<li>Compares hashes</li>
+</ul>
+</li>
+<li>This is called &ldquo;signing&rdquo; a document (computing hash, then locking with private key)</li>
+</ul>
+<p>How do Alice and Bob know the public-keys are authentic?</p>
+<ul>
+<li>Public keys are embedded in a digital certificate</li>
+</ul>
+<p>How can Eve decrypt the message?</p>
+<ul>
+<li>Eve knows Apub, Bpub, and ciphertext</li>
+<li>Both public keys are split into
+<ul>
+<li>e</li>
+<li>n</li>
+</ul>
+</li>
+<li>Eve needs d to decrypt e * d)</li>
+<li>To calculate phi Eve must factor into p and q, this is very hard</li>
+</ul>
+<h3 id="the-real-rsa">
+  The Real RSA
+  <a class="anchor" href="#the-real-rsa">#</a>
+</h3>
+<p>OpenSSL</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">openssl genrsa -out keyfile.pem <span style="color:#ae81ff">2048</span>
+openssl rsa -in keyfile.pem -pubout -out key.pub
+more key.pub
+openssl rsa -in keyfile.pem 
+
+vi plaintext.txt
+openssl rsautl -pubin -inkey key.pub -endcrypt -in plaintext.txt -out ciphertext.txt
+</code></pre></div><hr>
+<h2 id="apr-3-2019">
+  Apr 3, 2019
+  <a class="anchor" href="#apr-3-2019">#</a>
+</h2>
+<h3 id="spam-filtering">
+  Spam filtering
+  <a class="anchor" href="#spam-filtering">#</a>
+</h3>
+<p>To a spam filter: a message is just a set of words.</p>
+<ul>
+<li>&ldquo;Hello I will say Hello&rdquo;</li>
+</ul>
+<p>The filter splits the words up and compiles some information about them. It creates a dictionary.</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Occurences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hello</td>
+<td>2</td>
+</tr>
+<tr>
+<td>I</td>
+<td>1</td>
+</tr>
+<tr>
+<td>will</td>
+<td>1</td>
+</tr>
+<tr>
+<td>say</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>P(&ldquo;Hello&rdquo;) = 2/5<br>
+P(&ldquo;will&rdquo;) = 1/5<br>
+P(&ldquo;today&rdquo;) = 0</p>
+<hr>
+<h2 id="apr-10-2019">
+  Apr 10, 2019
+  <a class="anchor" href="#apr-10-2019">#</a>
+</h2>
+<h3 id="graphs">
+  Graphs
+  <a class="anchor" href="#graphs">#</a>
+</h3>
+<p>Planar graph: any graph that can be drawn on flat paper without crossing edges</p>
+<p>The graph coloring problem: also known as the cartographers problem. To find the minimum number of colors needed to color a map. Its proven to be no more then 4, but finding the minimum is known as a &ldquo;intractable problem&rdquo;.</p>
+<p>A lot of problems can be turned into graph problems.</p>
+<ul>
+<li>Shortest path</li>
+<li>Spanning tree
+<ul>
+<li>Connecting cable to a housing development using the least cable possible</li>
+</ul>
+</li>
+<li>Travelling salesmen CEO
+<ul>
+<li>Minimize a metric on a graph (cheapest, shortest, time-spent&hellip;)</li>
+</ul>
+</li>
+</ul>
+<p>Terminology</p>
+<ul>
+<li>Vertex
+<ul>
+<li>point on the graph</li>
+</ul>
+</li>
+<li>Edge
+<ul>
+<li>Normal
+<ul>
+<li>Connects 2 vertex</li>
+</ul>
+</li>
+<li>Directed edge
+<ul>
+<li>Edge that goes one way</li>
+</ul>
+</li>
+<li>Weighted edge
+<ul>
+<li>Has a value associated with the edge (cost, distance&hellip;)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Fully connected graph
+<ul>
+<li>Each vertice is connected to each other</li>
+</ul>
+</li>
+<li>Disconnected graph
+<ul>
+<li>Not all vertices are connected to each other</li>
+</ul>
+</li>
+</ul>
+<h3 id="trees">
+  Trees
+  <a class="anchor" href="#trees">#</a>
+</h3>
+<ul>
+<li>A graph built down from a root with leaves</li>
+<li>Interior nodes are vertices that aren&rsquo;t leaves</li>
+<li>Depth-first traversal
+<ul>
+<li>Search as deep as possible before exploring another branch</li>
+<li>Pre-order depth first traversal
+<ul>
+<li>As soon as you encounter a node, you record it (think binary search tree)</li>
+</ul>
+</li>
+<li>Post-order depth first traversal
+<ul>
+<li>As you encounter a vertex, you record it the <strong>second</strong> time you encounter it</li>
+<li>Could be used to turn high-level language into assembly</li>
+<li>This puts the operation in postfix!</li>
+</ul>
+</li>
+<li>In order depth first traversal
+<ul>
+<li>This puts the operation back to how it was</li>
+<li>This could be used to turn a high-level language into another high-level language (java &lt;-&gt; c)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Breadth-first travesal
+<ul>
+<li>Search all neighbors before going deeper</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="apr-22-2019">
+  Apr 22, 2019
+  <a class="anchor" href="#apr-22-2019">#</a>
+</h2>
+<h3 id="minimal-spanning-tree">
+  Minimal spanning tree
+  <a class="anchor" href="#minimal-spanning-tree">#</a>
+</h3>
+<p>How to</p>
+<ol>
+<li>Initialize the set of visited vertices with any vertext from the graph. Iniialize the set of unvisited vertices to be all but the starting vertex</li>
+<li>Consider each of the unvisited neighbors of the bisited set. Identify the neighbor with the lowest edge weight</li>
+<li>Add the neighbors to the visited set. Remove it from the unvisited set.</li>
+<li>If the unvisited set is empty, we are done. Otherwise go back to step 2.</li>
+</ol>
+<p>Greedy algorithm: Looks at the information it has at the moment, doesn&rsquo;t look ahead.</p>
+<ul>
+<li>Make a decision based on information you have and no more.</li>
+<li>Make best decision and don&rsquo;t change your mind.</li>
+</ul>
+<hr>
+<h2 id="apr-24-2019">
+  Apr 24, 2019
+  <a class="anchor" href="#apr-24-2019">#</a>
+</h2>
+<h3 id="finite-state-machine">
+  Finite State Machine
+  <a class="anchor" href="#finite-state-machine">#</a>
+</h3>
+<p>There is a <strong>starting</strong> or <strong>initial state</strong> and one or more <strong>accepting states</strong>. Vertices are <strong>states</strong>, and edges are <strong>transitions</strong>. <strong>Strings</strong> describe pathes along the machine, and there are an infinte number of strings because of the looping nature of them. The set of all accepting strings is a <strong>language</strong>.</p>
+<h3 id="how-a-program-gets-compiled">
+  How a program gets compiled
+  <a class="anchor" href="#how-a-program-gets-compiled">#</a>
+</h3>
+<p>Scanning</p>
+<ul>
+<li>Goes thru program and finds and identifies tokens</li>
+</ul>
+<hr>
+<h2 id="apr-29-2019">
+  Apr 29, 2019
+  <a class="anchor" href="#apr-29-2019">#</a>
+</h2>
+<h3 id="compilers-continued">
+  Compilers continued
+  <a class="anchor" href="#compilers-continued">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">grammar blub;
+
+program: (assignment | print)* ;
+
+assignment: IDENT ASSIGNOP expr SEMICOLON ;
+
+expr: expr (&#39;*&#39;|&#39;/&#39;) expr | expr (&#39;+&#39;|&#39;-&#39;) expr | IDENT | INT ;
+
+print: &#39;print&#39; expr SEMICOLON ;
+
+IDENT: (&#39;a&#39;..&#39;z&#39;|&#39;A&#39;..&#39;Z&#39;|&#39;_&#39;)(&#39;a&#39;..&#39;z&#39;|&#39;A&#39;..&#39;Z&#39;|&#39;0&#39;..&#39;9&#39;|&#39;_&#39;)* ;
+ASSIGNOP: &#39;=&#39; ;
+SEMICOLON: &#39;;&#39; ;
+
+INT: (&#39;+&#39;|&#39;-&#39;|&#39;0&#39;..&#39;9&#39;)(&#39;0&#39;-&#39;9&#39;)* ;
+
+WS: (&#39; &#39;|&#39;\n&#39;|&#39;\r&#39;|&#39;\t&#39;) -&gt; skip ;
+</code></pre></div><hr>
+<h2 id="may-1-2019">
+  May 1, 2019
+  <a class="anchor" href="#may-1-2019">#</a>
+</h2>
+<h3 id="state-machines-cont">
+  State machines cont.
+  <a class="anchor" href="#state-machines-cont">#</a>
+</h3>
+<p>Deterministic state automaton</p>
+<ul>
+<li>Where each state only has one choice, no ambiguous choices.</li>
+</ul>
+<p>Non-deterministic state automaton</p>
+<ul>
+<li>State machines that have multiple choices for each state (for example one state could have multiple routes labeled &lsquo;x&rsquo;)</li>
+<li>All NFAs can be converted to an equiavlent DFA</li>
+</ul>
+<hr>
+<h2 id="may-6-2019">
+  May 6, 2019
+  <a class="anchor" href="#may-6-2019">#</a>
+</h2>
+<h3 id="nfa-with-epsilon-transition">
+  NFA with epsilon transition
+  <a class="anchor" href="#nfa-with-epsilon-transition">#</a>
+</h3>
+<p>The epsilon transition is basically like a free door that doesn&rsquo;t consume any letters.</p>
+<p>Thompson&rsquo;s constructions are a general (generic) way of converting a regex to NFA without a lot of analysis.</p>
+<hr>
+<h2 id="may-8-2019">
+  May 8, 2019
+  <a class="anchor" href="#may-8-2019">#</a>
+</h2>
+<p>Transform Regex into DFA</p>
+<ol>
+<li>Transform regex into NFA using Thompson&rsquo;s constructions</li>
+<li>Transform into DFA
+<ol>
+<li>Transform NFA into table</li>
+<li>Transform NFA table into DFA table</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="may-13-2019">
+  May 13, 2019
+  <a class="anchor" href="#may-13-2019">#</a>
+</h2>
+<h3 id="mealy-and-moore-machines">
+  Mealy and Moore Machines
+  <a class="anchor" href="#mealy-and-moore-machines">#</a>
+</h3>
+<p>A state machine without a accepting state, it just outputs a stream.</p>
+<p>Takes a input of a string and outputs another string.</p>
+<p>Moore machine is a &ldquo;dual&rdquo; of a Mealy machine. (This means you can turn a Mealy into a Moore and vice versa)</p>
+<p>A Moore machine takes an input, but instead of the output on the transition, the states are the outputs. Moore machines always output something at the first state(the start). If this isn&rsquo;t what you want, the solution is to add an initial state that doesn&rsquo;t output anything.</p>
+<hr>
+<h2 id="may-15-2019">
+  May 15, 2019
+  <a class="anchor" href="#may-15-2019">#</a>
+</h2>
+<h3 id="data-compression-text">
+  Data compression (text)
+  <a class="anchor" href="#data-compression-text">#</a>
+</h3>
+<p>Text compression should be lossless, in that none of the information is actually able to be put back after compressed.</p>
+<p>Huffman encoding</p>
+<p><code>THE CAT IN THE HAT CAME BACK</code></p>
+<p>Start by creating a dictinonary for all the letters</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">T H E C A I N M B K _
+4 3 3 3 4 1 1 1 1 1 6
+</code></pre></div><p>Then order for frequency</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">_ T A H E C I N M B K
+6 4 4 3 3 3 1 1 1 1 1
+</code></pre></div><p>Combine the 2 lowest items</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">_6 T4 A4 H3 E3 C3 BK 2 N1 M1
+_6 T4 A4 H3 E3 C3 NM2 BK2 I1
+_6 T4 A4 H3 E3 C3 BKI3 NM2
+_6 BKINM5 T4 A4 H3 E3 C3
+EC6 _6 BKINM5 T4 A4 H3
+AH7 EC6 _6 BKINM5 T4
+BKINMT9 AH7 EC6 _6
+EC_12 BKINMT9 AH7
+BKINMTAH16 EC_12
+BKINMTAHEC_28
+</code></pre></div><p>Then build a tree out of the combinations of these and assign 0s and 1s to the branches to get the new bitcodes</p>
+<hr>
+<h2 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/zedchance/notes/edit/master/content/CS26/CS26-lecture-notes.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jan-28-2019">Jan 28, 2019</a>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+      </ul>
+    </li>
+    <li><a href="#jan-30-2019">Jan 30, 2019</a>
+      <ul>
+        <li><a href="#binary-numbers">Binary Numbers</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-4-2019">Feb 4, 2019</a>
+      <ul>
+        <li><a href="#signed-integers">Signed Integers</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-6-2019">Feb 6, 2019</a>
+      <ul>
+        <li><a href="#non-integral-numbers">Non-integral numbers</a></li>
+        <li><a href="#fixed-point">Fixed point</a></li>
+        <li><a href="#floating-point">Floating point</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-11-2019">Feb 11, 2019</a>
+      <ul>
+        <li><a href="#gates-and-logic">Gates and Logic</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-13-2019">Feb 13, 2019</a>
+      <ul>
+        <li><a href="#boolean-logic">Boolean Logic</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-20-2019">Feb 20, 2019</a>
+      <ul>
+        <li><a href="#karnaugh-maps">Karnaugh Maps</a></li>
+        <li><a href="#lab-3-satisfiability">Lab 3: Satisfiability</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-27-2019">Feb 27, 2019</a>
+      <ul>
+        <li><a href="#modular-arithmetic-and-cryptography">Modular Arithmetic and Cryptography</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-4-2019">Mar 4, 2019</a>
+      <ul>
+        <li><a href="#test-1">Test 1</a></li>
+        <li><a href="#linear-cipher">Linear cipher</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-6-2019">Mar 6, 2019</a>
+      <ul>
+        <li><a href="#greatest-common-divisor">Greatest Common Divisor</a></li>
+        <li><a href="#lab-5">Lab 5</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-11-2019">Mar 11, 2019</a>
+      <ul>
+        <li><a href="#pseudo-random-number-generator-prng">Pseudo Random Number Generator (PRNG)</a></li>
+        <li><a href="#linear-congruential-generators-lcg">Linear Congruential Generators (LCG)</a></li>
+        <li><a href="#checksums">Checksums</a></li>
+        <li><a href="#hash">Hash</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-13-2019">Mar 13, 2019</a>
+      <ul>
+        <li><a href="#more-hashing">More hashing</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-18-2019">Mar 18, 2019</a>
+      <ul>
+        <li><a href="#symmetric-vs-asymmetric-encryption">Symmetric vs. Asymmetric encryption</a></li>
+        <li><a href="#rsa">RSA</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-20-2019">Apr 20, 2019</a>
+      <ul>
+        <li><a href="#communicating-using-public-private-key-cryptography">Communicating using public-private key cryptography</a></li>
+        <li><a href="#the-real-rsa">The Real RSA</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-3-2019">Apr 3, 2019</a>
+      <ul>
+        <li><a href="#spam-filtering">Spam filtering</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-10-2019">Apr 10, 2019</a>
+      <ul>
+        <li><a href="#graphs">Graphs</a></li>
+        <li><a href="#trees">Trees</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-22-2019">Apr 22, 2019</a>
+      <ul>
+        <li><a href="#minimal-spanning-tree">Minimal spanning tree</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-24-2019">Apr 24, 2019</a>
+      <ul>
+        <li><a href="#finite-state-machine">Finite State Machine</a></li>
+        <li><a href="#how-a-program-gets-compiled">How a program gets compiled</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-29-2019">Apr 29, 2019</a>
+      <ul>
+        <li><a href="#compilers-continued">Compilers continued</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-1-2019">May 1, 2019</a>
+      <ul>
+        <li><a href="#state-machines-cont">State machines cont.</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-6-2019">May 6, 2019</a>
+      <ul>
+        <li><a href="#nfa-with-epsilon-transition">NFA with epsilon transition</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-8-2019">May 8, 2019</a></li>
+    <li><a href="#may-13-2019">May 13, 2019</a>
+      <ul>
+        <li><a href="#mealy-and-moore-machines">Mealy and Moore Machines</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-15-2019">May 15, 2019</a>
+      <ul>
+        <li><a href="#data-compression-text">Data compression (text)</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading"></a></li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/discrete-structures/">discrete structures</a></li>
+  
+      <li><a href="http://zedchance.github.io/tags/python/">python</a></li>
+  
+  </ul>
+</nav>
+
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

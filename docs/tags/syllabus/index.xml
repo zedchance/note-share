@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>syllabus on Notes</title>
+    <link>http://zedchance.github.io/tags/syllabus/</link>
+    <description>Recent content in syllabus on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/syllabus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20200831</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200831/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200831/</guid>
+      <description>Syllabus #  The required text is available for free in the school library
+Both sections will take the exam together
+Module 1 #  Test cases will usually be provided.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210126</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210126/</guid>
+      <description>csc137syl Spring-2021.docx</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210126</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210126/</guid>
+      <description>syllabus_CSC138.pdf</description>
+    </item>
+    
+  </channel>
+</rss>

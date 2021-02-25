@@ -1,0 +1,4893 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CS 39 Lecture notes #  Aug 21, 2018 #  Using ARM assembly language
+RISC - reduced instructions set computer
+ARM is a British company that designs intellectual property, now owned by a japanese company (Softbank).
+Last year there was 14 billion ARM chips produced
+Software you need:
+Keil ARM MDK - software development kit for M-series microcontrollers
+www.keil.com
+(Windows only)
+[X] Download Keil tool [2018-08-23]
+ Aug 23, 2018 #  A diagram of almost everything">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS39-lecture-notes" />
+<meta property="og:description" content="CS 39 Lecture notes #  Aug 21, 2018 #  Using ARM assembly language
+RISC - reduced instructions set computer
+ARM is a British company that designs intellectual property, now owned by a japanese company (Softbank).
+Last year there was 14 billion ARM chips produced
+Software you need:
+Keil ARM MDK - software development kit for M-series microcontrollers
+www.keil.com
+(Windows only)
+[X] Download Keil tool [2018-08-23]
+ Aug 23, 2018 #  A diagram of almost everything" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zedchance.github.io/CS39/CS39-lecture-notes/" />
+
+<title>CS39-lecture-notes | Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
+<script defer src="/en.search.min.7e6ef5189d02a74db84eb4c019c821b289d74a85c2b5286d5dd13c5be3f9c638.js" integrity="sha256-fm71GJ0Cp024TrTAGcghsonXSoXCtShtXdE8W&#43;P5xjg="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</head>
+
+<body dir="ltr">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: true},
+                  {left: "\\(", right: "\\)", display: true}
+              ]
+          }
+      );
+    </script>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e1a1b689fe907f6677087e2d9b539d9" class="toggle"  />
+    <label for="section-6e1a1b689fe907f6677087e2d9b539d9" class="flex justify-between">
+      <a  class="">CS10</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS10/CS10-Processing-labs/" class="">CS10-labs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06677567046f19eb3dacf987145475f" class="toggle"  />
+    <label for="section-d06677567046f19eb3dacf987145475f" class="flex justify-between">
+      <a  class="">CS12</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS12/CS12-lecture-notes/" class="">CS12-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98a455a71c68533365837514b17a9eb9" class="toggle"  />
+    <label for="section-98a455a71c68533365837514b17a9eb9" class="flex justify-between">
+      <a  class="">CS13</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS13/CS13-lecture-notes/" class="">CS13-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9490b93202949ed3704ff9f858ef63c3" class="toggle"  />
+    <label for="section-9490b93202949ed3704ff9f858ef63c3" class="flex justify-between">
+      <a  class="">CS130</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-exercise-solutions-1/" class="">CS130-exercise-solutions-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200831/" class="">CS130-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200902/" class="">CS130-lecture-20200902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200909/" class="">CS130-lecture-20200909</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200914/" class="">CS130-lecture-20200914</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200916/" class="">CS130-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200921/" class="">CS130-lecture-20200921</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200923/" class="">CS130-lecture-20200923</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200928/" class="">CS130-lecture-20200928</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200930/" class="">CS130-lecture-20200930</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201005/" class="">CS130-lecture-20201005</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201007/" class="">CS130-lecture-20201007</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201012/" class="">CS130-lecture-20201012</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201014/" class="">CS130-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201019/" class="">CS130-lecture-20201019</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201021/" class="">CS130-lecture-20201021</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201028/" class="">CS130-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201102/" class="">CS130-lecture-20201102</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201104/" class="">CS130-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201109/" class="">CS130-lecture-20201109</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201116/" class="">CS130-lecture-20201116</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201118/" class="">CS130-lecture-20201118</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201123/" class="">CS130-lecture-20201123</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201125/" class="">CS130-lecture-20201125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201130/" class="">CS130-lecture-20201130</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201202/" class="">CS130-lecture-20201202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201207/" class="">CS130-lecture-20201207</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201209/" class="">CS130-lecture-20201209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-priority-queues/" class="">CS130-priority-queues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-sorting-algorithms/" class="">CS130-sorting-algorithms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7685cd96811cc43c9ecd205128385c1" class="toggle"  />
+    <label for="section-a7685cd96811cc43c9ecd205128385c1" class="flex justify-between">
+      <a  class="">CS131</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200901/" class="">CS131-lecture-20200901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200903/" class="">CS131-lecture-20200903</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200908/" class="">CS131-lecture-20200908</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200910/" class="">CS131-lecture-20200910</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200915/" class="">CS131-lecture-20200915</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200917/" class="">CS131-lecture-20200917</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200922/" class="">CS131-lecture-20200922</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200924/" class="">CS131-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200929/" class="">CS131-lecture-20200929</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201001/" class="">CS131-lecture-20201001</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201006/" class="">CS131-lecture-20201006</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201008/" class="">CS131-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201013/" class="">CS131-lecture-20201013</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201015/" class="">CS131-lecture-20201015</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201020/" class="">CS131-lecture-20201020</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201022/" class="">CS131-lecture-20201022</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201027/" class="">CS131-lecture-20201027</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201029/" class="">CS131-lecture-20201029</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201103/" class="">CS131-lecture-20201103</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201105/" class="">CS131-lecture-20201105</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201110/" class="">CS131-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201112/" class="">CS131-lecture-20201112</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201119/" class="">CS131-lecture-20201119</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201124/" class="">CS131-lecture-20201124</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201201/" class="">CS131-lecture-20201201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201203/" class="">CS131-lecture-20201203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201208/" class="">CS131-lecture-20201208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-1/" class="">CS131-study-guide-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-2/" class="">CS131-study-guide-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-3/" class="">CS131-study-guide-3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-4/" class="">CS131-study-guide-4</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ea6710cf4db85b6757a42f14aedf299" class="toggle"  />
+    <label for="section-9ea6710cf4db85b6757a42f14aedf299" class="flex justify-between">
+      <a  class="">CS133</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210125/" class="">CS133-lecture-20210125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210208/" class="">CS133-lecture-20210208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210210/" class="">CS133-lecture-20210210</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210215/" class="">CS133-lecture-20210215</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210217/" class="">CS133-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6c9e9a90396154c6e5e42bf42955eff" class="toggle"  />
+    <label for="section-f6c9e9a90396154c6e5e42bf42955eff" class="flex justify-between">
+      <a  class="">CS135</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-hw-20210203/" class="">CS135-hw-20210203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210126/" class="">CS135-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210129/" class="">CS135-lecture-20210129</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210201/" class="">CS135-lecture-20210201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210204/" class="">CS135-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210205/" class="">CS135-lecture-20210205</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210209/" class="">CS135-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210216/" class="">CS135-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210217/" class="">CS135-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210218/" class="">CS135-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eaf59c9d6b1b58452cc45e5585dd0717" class="toggle"  />
+    <label for="section-eaf59c9d6b1b58452cc45e5585dd0717" class="flex justify-between">
+      <a  class="">CS137</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210216/" class="">CS137-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210126/" class="">CS137-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210128/" class="">CS137-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210202/" class="">CS137-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210204/" class="">CS137-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210209/" class="">CS137-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210211/" class="">CS137-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210218/" class="">CS137-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e470c63ab7ad9a473e61272e98b3bcce" class="toggle"  />
+    <label for="section-e470c63ab7ad9a473e61272e98b3bcce" class="flex justify-between">
+      <a  class="">CS138</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210126/" class="">CS138-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210128/" class="">CS138-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210202/" class="">CS138-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210204/" class="">CS138-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210209/" class="">CS138-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210211/" class="">CS138-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210216/" class="">CS138-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210218/" class="">CS138-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-356e0128f78fd703af66d8abf4ebf976" class="toggle"  />
+    <label for="section-356e0128f78fd703af66d8abf4ebf976" class="flex justify-between">
+      <a  class="">CS26</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-lecture-notes/" class="">CS26-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-reading-notes/" class="">CS26-reading-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98681ab3e1e8c09eb7daeac8547903e6" class="toggle" checked />
+    <label for="section-98681ab3e1e8c09eb7daeac8547903e6" class="flex justify-between">
+      <a  class="">CS39</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS39/CS39-lecture-notes/" class=" active">CS39-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe80ac56b57c0244f1c986628504841" class="toggle"  />
+    <label for="section-8fe80ac56b57c0244f1c986628504841" class="flex justify-between">
+      <a  class="">CS46</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/CS46-lecture-notes/" class="">CS46-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/luhns.c/" class="">Luhn&#39;s Algorithm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="toggle"  />
+    <label for="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="flex justify-between">
+      <a  class="">CS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="toggle"  />
+    <label for="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="flex justify-between">
+      <a  class="">ENGL1B</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/" class="">ENGL1B-assignment-8</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92d8bad8aa3f85c10048f789591cd9d3" class="toggle"  />
+    <label for="section-92d8bad8aa3f85c10048f789591cd9d3" class="flex justify-between">
+      <a  class="">MATH100</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH100/MATH100-lecture-notes/" class="">MATH100-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0495fd11e1626446d2b1cf0439989d77" class="toggle"  />
+    <label for="section-0495fd11e1626446d2b1cf0439989d77" class="flex justify-between">
+      <a  class="">MATH31</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-comparison-tests/" class="">MATH31-comparison-tests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-integral-test/" class="">MATH31-integral-test</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-series/" class="">MATH31-series</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-1/" class="">MATH31-unit-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-2/" class="">MATH31-unit-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-3/" class="">MATH31-unit-3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d4164ee5c968fdda8d4b42b98383d88" class="toggle"  />
+    <label for="section-1d4164ee5c968fdda8d4b42b98383d88" class="flex justify-between">
+      <a  class="">PHIL103</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/" class="">PHIL103-ec-lecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/" class="">PHIL103-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/" class="">PHIL103-lecture-20200907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/" class="">PHIL103-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/" class="">PHIL103-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/" class="">PHIL103-lecture-20200927</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/" class="">PHIL103-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/" class="">PHIL103-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/" class="">PHIL103-lecture-20201024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/" class="">PHIL103-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/" class="">PHIL103-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/" class="">PHIL103-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/" class="">PHIL103-lecture-20201122</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-71647d44f109da70d5305fe9e01e1a51" class="toggle"  />
+    <label for="section-71647d44f109da70d5305fe9e01e1a51" class="flex justify-between">
+      <a  class="">PHYS105</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-resources/" class="">PHYS105-resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/" class="">PHYS105-lab-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/" class="">PHYS105-lab-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/" class="">PHYS105-lab-20200423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/" class="">PHYS105-lecture-20200319</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/" class="">PHYS105-lecture-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/" class="">PHYS105-lecture-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/" class="">PHYS105-lecture-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/" class="">PHYS105-lecture-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/" class="">PHYS105-lecture-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/" class="">PHYS105-lecture-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/" class="">PHYS105-lecture-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/" class="">PHYS105-lecture-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/" class="">PHYS105-lecture-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/" class="">PHYS105-lecture-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/" class="">PHYS105-lecture-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/" class="">PHYS105-lecture-20200514</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/" class="">PHYS105-recitation-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/" class="">PHYS105-recitation-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/" class="">PHYS105-recitation-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/" class="">PHYS105-recitation-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/" class="">PHYS105-recitation-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/" class="">PHYS105-recitation-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/" class="">PHYS105-recitation-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/" class="">PHYS105-recitation-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/" class="">PHYS105-recitation-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/" class="">PHYS105-recitation-20200514</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2051d762fa29d975e5db96fff6a3c194" class="toggle"  />
+    <label for="section-2051d762fa29d975e5db96fff6a3c194" class="flex justify-between">
+      <a  class="">STATS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/STATS50/STATS50-lecture-notes/" class="">STATS50-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CS39-lecture-notes</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aug-21-2018">Aug 21, 2018</a></li>
+    <li><a href="#aug-23-2018">Aug 23, 2018</a></li>
+    <li><a href="#aug-28-2018">Aug 28, 2018</a>
+      <ul>
+        <li><a href="#mdk-instructions">MDK Instructions</a></li>
+      </ul>
+    </li>
+    <li><a href="#aug-30-2018">Aug 30, 2018</a>
+      <ul>
+        <li><a href="#every-line-of-assembly">Every line of assembly</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-4-2018">Sep 4, 2018</a>
+      <ul>
+        <li><a href="#expression-evaluation">Expression evaluation</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-6-2018">Sep 6, 2018</a></li>
+    <li><a href="#sep-11-2018">Sep 11, 2018</a>
+      <ul>
+        <li><a href="#shifting-bits">Shifting bits</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-18-2018">Sep 18, 2018</a>
+      <ul>
+        <li><a href="#logical-instructions-bitwise">Logical instructions (bitwise)</a></li>
+        <li><a href="#c-asm">C-&gt;asm</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-20-2018">Sep 20, 2018</a>
+      <ul>
+        <li><a href="#embedded-c-programming">Embedded <code>C</code> Programming</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-25-2018">Sep 25, 2018</a>
+      <ul>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="#calculating-the-length-of-a-string">Calculating the length of a String</a></li>
+        <li><a href="#capitalize-first-letter-of-string">Capitalize first letter of string</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-27-2018">Sep 27, 2018</a>
+      <ul>
+        <li><a href="#memory-review">Memory Review</a></li>
+        <li><a href="#more-ifelse-patterns">More if..else patterns</a></li>
+        <li><a href="#mbed-compiler-notes">mbed Compiler Notes</a></li>
+        <li><a href="#arm-architecture">ARM Architecture</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-2-2018">Oct 2, 2018</a>
+      <ul>
+        <li><a href="#multi-word-arithmetic">Multi-word Arithmetic</a></li>
+        <li><a href="#twos-complement">Two&rsquo;s Complement</a></li>
+        <li><a href="#asrs-arithmetic-shift-right"><code>ASRS</code> Arithmetic Shift Right</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-4-2018">Oct 4, 2018</a>
+      <ul>
+        <li><a href="#counting-characters-in-a-string">Counting characters in a string</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-9-2018">Oct 9, 2018</a>
+      <ul>
+        <li><a href="#calculating-arithmetic-mean">Calculating arithmetic mean</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-11-2018">Oct 11, 2018</a>
+      <ul>
+        <li><a href="#10000-foot-view-software-organization">10,000 foot view (software organization)</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-16-2018">Oct 16, 2018</a>
+      <ul>
+        <li><a href="#leds-and-switches">LEDs and Switches</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-18-2018">Oct 18, 2018</a>
+      <ul>
+        <li><a href="#code-conversion">Code conversion</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-23-2018">Oct 23, 2018</a>
+      <ul>
+        <li><a href="#lab-4-32-bit-binary-to-ascii-hex-b32toah">Lab 4: 32-bit Binary to ASCII hex (B32toAH)</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-25-2018">Oct 25, 2018</a>
+      <ul>
+        <li><a href="#more-code-conversion-ascii-decimal---binary">More code conversion: ASCII decimal -&gt; binary</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-30-2018">Oct 30, 2018</a>
+      <ul>
+        <li><a href="#more-code-conversion-binary-to-ascii-binary">More code conversion: Binary to ASCII Binary</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-1-2018">Nov 1, 2018</a>
+      <ul>
+        <li><a href="#lab-5-cipher">Lab 5: Cipher</a></li>
+        <li><a href="#parameter-passing">Parameter passing</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-6-2018">Nov 6, 2018</a>
+      <ul>
+        <li><a href="#alu">ALU</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-13-2018">Nov 13, 2018</a>
+      <ul>
+        <li><a href="#the-assembler">The Assembler</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/assembly/">assembly</a></li>
+  
+  </ul>
+</nav>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cs-39-lecture-notes">
+  CS 39 Lecture notes
+  <a class="anchor" href="#cs-39-lecture-notes">#</a>
+</h1>
+<h2 id="aug-21-2018">
+  Aug 21, 2018
+  <a class="anchor" href="#aug-21-2018">#</a>
+</h2>
+<p>Using ARM assembly language</p>
+<p>RISC - reduced instructions set computer</p>
+<p>ARM is a British company that designs intellectual property, now owned by a japanese company (Softbank).</p>
+<p>Last year there was 14 billion ARM chips produced</p>
+<p>Software you need:<br>
+Keil ARM MDK - software development kit for M-series microcontrollers<br>
+<a href="http://www.keil.com">www.keil.com</a><br>
+(Windows only)</p>
+<p>[X] <del><em>Download Keil tool</em></del> [2018-08-23]</p>
+<hr>
+<h2 id="aug-23-2018">
+  Aug 23, 2018
+  <a class="anchor" href="#aug-23-2018">#</a>
+</h2>
+<p>A diagram of almost everything</p>
+<blockquote>
+<p>World -&gt; Sensors<br>
+Sensors -&gt; Signal conditioning<br>
+Signal conditioning -&gt; Analog to digital<br>
+Analog to digital -&gt; cpu<br>
+cpu &lt;-&gt; memory<br>
+cpu -&gt; output</p>
+</blockquote>
+<p>Place value = ${base}^{position}$<br>
+BYTE = <strong>B</strong>inar<strong>Y TE</strong>rm<br>
+BIT = <strong>B</strong>inary dig<strong>IT</strong></p>
+<p>A byte is the <strong>smallest addressable unit of space in memory</strong>, typically 8 bits in microcomputers.</p>
+<hr>
+<h2 id="aug-28-2018">
+  Aug 28, 2018
+  <a class="anchor" href="#aug-28-2018">#</a>
+</h2>
+<p>Read numbers and codes<br>
+Take numbers and codes quiz</p>
+<p>ASCII (7-bit code, 0-127)<br>
+Unicode (16 bit)</p>
+<p>CPU Instruction Cycle</p>
+<ol>
+<li>Fetch instruction</li>
+<li>Decode the instruction</li>
+<li>Execute</li>
+<li>Repeat</li>
+</ol>
+<p>Inside CPU lives the General Purpose Registers
+Program Counter holes the next instruction to fetch</p>
+<h3 id="mdk-instructions">
+  MDK Instructions
+  <a class="anchor" href="#mdk-instructions">#</a>
+</h3>
+<p>Put project in new folder<br>
+Choose M0 Cortex chip<br>
+Choose CMSIS core<br>
+and Startup Code</p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT __main
+__main
+        MOVS R0, #1
+        MOVS R4, #3
+        ADDS R7, R0, R4
+
+done    B done
+
+        END
+
+</code></pre><p>A simple program that adds 2 numbers, in this case the numbers 1 and 3 are stored in <code>R0</code> and <code>R4</code>. Then it adds them and puts the result in <code>R7</code>​. To end the program and ensure it doesnt run through memory forever, you add a loop that calls back to itself, in this case <code>done</code>. Note that you must put an enter after the <code>END</code>.</p>
+<p>Remember in µVision: Debug using the <strong>simulator</strong> under the magic wand icon.</p>
+<hr>
+<h2 id="aug-30-2018">
+  Aug 30, 2018
+  <a class="anchor" href="#aug-30-2018">#</a>
+</h2>
+<p>Part number for the chip we’re using - NUCLEO-L432KC</p>
+<p>A directive is information for the tool itself. <code>AREA</code> is a directive, it doesn’t produce any machine code technically.</p>
+<p>.s files are just text files, not until they are assembled (by a program) is it then turned into a .o file (object code). These .o files are machine code.</p>
+<p>The memory map of our chip (32 bit machine) starts at <code>0x00000000</code> and goes to <code>0xFFFFFFFF</code>. In the low memory address is program memory (flash), 32kB. At <code>0x20000000</code>​ RAM begins, 8kB. I/O and peripheral devices are below the RAM, such as timer/counters and USB.</p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT __main
+__main
+        ;Code goes here
+    
+done    B done
+
+        END
+    
+</code></pre><p><code>AREA |.text|</code> directive tells the code to go to the .text area. <code>CODE</code> means it is in the code segment of the file. <code>READONLY</code> means it lives in the memory.</p>
+<p><code>EXPORT</code>​ gives it an entry point to the label <code>__main</code>. A label is just a point of reference, a named memory location, labels turn into addresses. Labels go into lines that you need to refer to. <code>done</code> is the label of the loop to end it. <code>B</code> means unconditional branch, meaning you always go to this, never skip it. <code>END</code> means there is no more code to assemble, <strong>it always needs a carriage return after</strong>.</p>
+<h3 id="every-line-of-assembly">
+  Every line of assembly
+  <a class="anchor" href="#every-line-of-assembly">#</a>
+</h3>
+<p><code>​label</code> <em><code>mnemonic</code></em> <em><code>operands</code></em><code>;</code> <em><code>comments</code></em></p>
+<ul>
+<li>label must be against the left side</li>
+<li>mnemonic is our instructions</li>
+<li>operands are the parameters of the mnemonic</li>
+<li>comments come after the semicolon</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Starting file</th>
+<th></th>
+<th></th>
+<th></th>
+<th>ending file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.s</code></td>
+<td>-&gt;</td>
+<td>assembler</td>
+<td>-&gt;</td>
+<td><code>.o</code> (startup files)</td>
+</tr>
+<tr>
+<td><code>.c</code></td>
+<td>-&gt;</td>
+<td>c compiler</td>
+<td>-&gt;</td>
+<td><code>.o</code> (startup files)</td>
+</tr>
+<tr>
+<td><code>.s</code></td>
+<td>-&gt;</td>
+<td>assembler</td>
+<td>-&gt;</td>
+<td><code>.o</code> (our file)</td>
+</tr>
+</tbody>
+</table>
+<p>All of those <code>.o</code> files are then put into a linker, which resolves external references. meaning it looks through all the .o modules and links the references. Generates the <strong>core image</strong> (the actual machine code file that has all the pieces assembled and put together). The core image is then burned into a chip, (or in our case simulated).</p>
+<p>Example variables for arithmetic:</p>
+<blockquote>
+<p>R0 : a<br>
+R1 : b<br>
+R2 : c<br>
+R3 : d<br>
+a + b - c + 3</p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        ADDS R0, R0, R1; adds a + b
+        SUBS R0, R0, R2; (a + b) - c
+        ADDS R0, #3; (a + b - c) + 3
+</code></pre><hr>
+<h2 id="sep-4-2018">
+  Sep 4, 2018
+  <a class="anchor" href="#sep-4-2018">#</a>
+</h2>
+<h3 id="expression-evaluation">
+  Expression evaluation
+  <a class="anchor" href="#expression-evaluation">#</a>
+</h3>
+<blockquote>
+<p>R0 : a<br>
+R1 : b<br>
+R2 : c<br>
+R3 : d</p>
+</blockquote>
+<p>To multiply a by 2, you can write <code>ADDS R0, R0, R0</code></p>
+<blockquote>
+<p>a + b + c * 2</p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        ADDS R2, R2, R2; multiply c by 2
+        ADDS R0, R0, R1; adds a + b
+        ADDS R0, R0, R2; adds (a + b) + (c * 2)
+</code></pre><p>This is a code fragment.</p>
+<p>To write this as a complete program with:</p>
+<blockquote>
+<p>a = 5<br>
+b = 2<br>
+c = 7</p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT __main
+__main
+        MOVS R0, #5; a
+        MOVS R1, #2; b
+        MOVS R2, #7; c
+
+        ADDS R2, R2, R2; multiply c by 2
+        ADDS R0, R0, R1; adds a + b
+        ADDS R0, R0, R2; adds (a + b) + (c * 2)
+    
+        LDR R7,)
+        STR R0, [R7]; store R0 in the location specified by R7
+    
+        LDR R4, [R7]; loads R4 with variable at 0x2000 000 in RAM
+    
+done    B done
+
+        END
+    
+</code></pre><p>When you run out of registers, you can store variables in RAM (<strong>RAM starts at 20 million hex (<code>0x2000 0000</code>)</strong>). When storing something in RAM it takes 2 clock cycles. The chip we are using only supports indexed addressing. This means you need to specify the address you use to specify the address of the RAM (a pointer). Usually use <code>R6</code> and <code>R7</code>. <code>LDR</code> is used to specify registers in RAM. <code>STR</code> can be used to store it in RAM. To load back into a register you can use <code>LDR</code> also. RAM can only use the <code>LDR</code> and <code>STR</code> instructions, if you need to perform arithmetic on a stored variable, you need to load (<code>LDR</code>) it into register to work on it.</p>
+<hr>
+<h2 id="sep-6-2018">
+  Sep 6, 2018
+  <a class="anchor" href="#sep-6-2018">#</a>
+</h2>
+<p><code>MOVS</code> moves data and updates the flags. <code>MOV</code> doesn’t update the flags. Instructions with the S update flags.</p>
+<p>RAM space:
+0x2000 0000 is the beginning of RAM space (32 bits wide)
+0x2000 0004 is the next space</p>
+<p>32 bits = word
+16 bits = half-word
+8 bits = byte</p>
+<p><code>LDR</code> and <code>STR</code> work with 32 bit numbers. On RISC machines you must use indexed addressing.</p>
+<p>To use an offset:<br>
+<code>LDR R5, [R7,#4]</code> uses an offset of 4 to point to the address at <code>0x2000 0004</code> (After specifying the address of the first slot in memory with <code>LDR R7,=0x20000000</code>​)</p>
+<p>Example of C++ code to turn on and off LED and run a function called <code>myFunc</code>, which is defined in the <code>.s</code> file below</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//#include &#34;mbed.h&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">int</span> myFunc(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b, <span style="color:#66d9ef">int</span> c); <span style="color:#75715e">//a b and c correspond to registers R0, R1, R2 respectively
+</span><span style="color:#75715e"></span>
+DigitalOut <span style="color:#a6e22e">myled</span>(LED1);
+
+Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX);
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+  pc.printf(<span style="color:#e6db74">&#34;myFunc);</span>
+  pc.printf(<span style="color:#e6db74">&#34;myFunc);</span>
+  
+  <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>) <span style="color:#75715e">//&#34;Heartbeat&#34;, this turns the LED on and off, a good way to see if the program is running
+</span><span style="color:#75715e"></span>  {
+    myled <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">//LED is ON
+</span><span style="color:#75715e"></span>    wait(<span style="color:#ae81ff">2.0</span>); <span style="color:#75715e">//Wait 2 sec
+</span><span style="color:#75715e"></span>    myled <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//LED is OFF
+</span><span style="color:#75715e"></span>    wait(<span style="color:#ae81ff">1.0</span>); <span style="color:#75715e">//Wait 1 sec
+</span><span style="color:#75715e"></span>  }
+}
+</code></pre></div><p>In another <code>.s</code> file:</p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT myFunc
+
+myFunc
+        ADDS R0, R0, R1; a + b
+        ADDS R0, R0, R2; + c
+    
+        BX LR; branch exchange with link register (return)
+    
+        END
+    
+</code></pre><hr>
+<h2 id="sep-11-2018">
+  Sep 11, 2018
+  <a class="anchor" href="#sep-11-2018">#</a>
+</h2>
+<h3 id="shifting-bits">
+  Shifting bits
+  <a class="anchor" href="#shifting-bits">#</a>
+</h3>
+<p><code>LSLS</code> is a logical shift left. Multiplies by powers of 2. ($2 ^ {bits}$)<br>
+<code>LSRS</code> is a logical shift right. Divides by powers of 2. ($2 ^ {bits}$)<br>
+These commands use a barrel shifter, takes 1 clock cycle. (Takes a lot of hardware real estate though)</p>
+<p><code>LSLS</code> 1 bit shift left example:</p>
+<blockquote>
+<p>0101 = 5 decimal</p>
+</blockquote>
+<ol start="1010">
+<li></li>
+</ol>
+<blockquote>
+<p>0011 = 3 decimal<br>
+0110 = 6 decimal<br>
+1100 = 12 decimal</p>
+</blockquote>
+<p><code>LSLS R0, R0, #2</code> shifts the register <code>R0</code> by 2 to the left, then places the answer back into <code>R0</code>.
+The bit that is shifted &ldquo;off&rdquo; the number is transferred into the carry bit. This makes the <code>LSLS</code> command really useful to shift numbers into the carry flag. If you wanted to print a binary number to the screen you could individually shift numbers into the carry flag, add 0x30 to it and get the ASCII code for 1 and 0.</p>
+<p><code>LSRS</code> 1 bit shift right example:</p>
+<blockquote>
+<p>1100 = 12 decimal<br>
+0110 = 6 decimal</p>
+</blockquote>
+<blockquote>
+<p>0111 = 7 decimal</p>
+</blockquote>
+<ol start="11">
+<li></li>
+</ol>
+<p><code>LSRS R3, R1, #4</code> effectively divides <code>R1</code> by 16 ($2^4$) and puts the answer in <code>R3</code></p>
+<p>Examples:</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R0,=0x00000007 ; loads R0 with 7
+        LSLS R0, R0, #2 ; logical shift left 2 bits, answers 0x0000001C (7 * 4)
+</code></pre><pre><code class="language-arm" data-lang="arm">        LDR R0,=0xC0000000 ; loads R0 with 0xC0000000
+        LSRS R0, R0, #1 ; shifts to the right 1 bit, answers 0x60000000 (half of 0xC)
+</code></pre><hr>
+<h2 id="sep-18-2018">
+  Sep 18, 2018
+  <a class="anchor" href="#sep-18-2018">#</a>
+</h2>
+<h3 id="logical-instructions-bitwise">
+  Logical instructions (bitwise)
+  <a class="anchor" href="#logical-instructions-bitwise">#</a>
+</h3>
+<p><strong>AND gate:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a <code>&amp;&amp;</code> b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><code>ANDS R0, R1</code> is the biwise AND gate to compare two registers. Can be used to isolate a group or a single bits. Typically used to compare a value with a &lsquo;mask&rsquo; value.</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5; input
+        MOVS R1, 0xF; mask
+
+        ANDS R0, R1
+</code></pre><p>Returns <code>0x00000005</code> in the <code>R0</code> register. <code>ANDS</code> basically clears out all the unwanted bits specified by the register <code>R1</code>. (Remember 0xF is 1111 in binary, so the 5 gets passed through).</p>
+<p><strong>OR gate:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a <code>||</code> b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><code>OR</code> turns a bit on if one or the other bit is on.</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5; input
+        LDR R1, =0xF0000000; mask
+
+        ANDS R0, R1; and
+
+        MOVS R2, #3
+        ORRS R0, R2; or
+</code></pre><p>Returns <code>0xA0000003</code> in the <code>R0</code> register. Because the A was left in the register because of the <code>ANDS</code> and then turns on the 3 in the last bit because of the <code>ORRS</code>.</p>
+<p><strong>To clear a bit <code>ANDS</code> it with 0<br>
+To pass a bit <code>ANDS</code> it with a 1<br>
+To set a bit <code>ORRS</code> it with a 1</strong></p>
+<p><strong>NOT gate:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center"><code>!</code>a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-arm" data-lang="arm">        LDR R1, 0xF0000000; mask
+        MVNS R3,R1; not the R1 register
+</code></pre><p>Returns <code>0x0FFFFFFF</code> into the <code>R3</code> register. <code>MVNS</code> is the NOT operator for this chip (move register and not).</p>
+<p><strong>Excluse OR (EOR):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a <code>EOR</code> b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p>One or the other, but not both.</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5
+        LDR R1, =0xA5A5A5A5; mask
+
+        EORS R0, R1;
+</code></pre><p>Returns <code>0x0E684A00</code>. Everything that matchs gets zeroed out. Running the <code>EORS R0, R1</code> command again will return the register to the original. <strong>This can be used to encrypt.</strong></p>
+<h3 id="c-asm">
+  C-&gt;asm
+  <a class="anchor" href="#c-asm">#</a>
+</h3>
+<p>Start using a <code>.c</code> file in microvision.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">myFunc</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b, <span style="color:#66d9ef">int</span> c);
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+{
+    <span style="color:#66d9ef">int</span> x;
+
+    x);
+}
+
+</code></pre></div><p><code>extern</code> means that the function exists in another block of code. Does need a semicolon after this method header because its connected to the <code>extern</code>. <strong>This file also needs a carriage return after the last curly brace.</strong></p>
+<p>In a <code>.s</code> file <strong>(thats named differently then the <code>.c</code> file)</strong></p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|,CODE,READONLY
+        EXPORT myFunc
+myFunc
+        ADDS R0, R0, R1; add a + b
+        SUBS R0, R0, R2; subtract c
+
+        BX LR
+
+        END
+
+</code></pre><p><code>BX LR</code> is the return. The variables in the <code>myFunc.c</code> will coorespond to the registers starting at <code>R0</code> onwards (a).</p>
+<hr>
+<h2 id="sep-20-2018">
+  Sep 20, 2018
+  <a class="anchor" href="#sep-20-2018">#</a>
+</h2>
+<h3 id="embedded-c-programming">
+  Embedded <code>C</code> Programming
+  <a class="anchor" href="#embedded-c-programming">#</a>
+</h3>
+<p>History<br>
+Developed at Bell Labratories in the 70s. Dennis Ritchie and Ken Thompson developed this language. C was derived from the high-level assembly language B. <strong>Major goal of C was systems programming.</strong> The UNIX operating system was re-written in C. Today C is widespread use with a rich standard library of functions. C is the standard language of microcontrollers, this is because C generates small amounts of code compared to other languages (C++ for example).</p>
+<p>Why C?<br>
+Flexible language that imposes few constraints on the programmer. Allows low level access to data, operating system, and hardware. Retains the portability and sophisticated syntax of a high-level language. Supports pointers and bitwise operators. Weak type checking (Good or bad?). Designed for modular programming (for example when we had a <code>.s</code> file and a <code>.c</code> file). Extensive use of libraries. The lingua franca of embedded systems programming. Not object-oriented, but can be used with an &ldquo;object-oriented mindset&rdquo;.</p>
+<p>Simplest embedded program</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><p>This compiles sucessfully but doesn&rsquo;t do anything.</p>
+<p>Slightly more useful program:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//#include &#34;mbed.h&#34; (this line breaks the auto-toc)
+</span><span style="color:#75715e"></span>
+Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX); <span style="color:#75715e">//a little c++
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    pc.printf(<span style="color:#e6db74">&#34;Hello world</span><span style="color:#ae81ff">\n\r</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>); <span style="color:#75715e">//infinite loop
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>Some key elements of a C program:<br>
+<code>;</code></p>
+<ul>
+<li>The semicolon is a statement terminator (just like in Java)</li>
+<li>The simplest expression is a semicolon alone.</li>
+</ul>
+<p><code>{}</code></p>
+<ul>
+<li>Curly braces delineate the beginning and end of a function</li>
+<li>Curly braces also group statements so they are treated as one block</li>
+</ul>
+<p><code>&quot;text&quot;</code></p>
+<ul>
+<li>A string is delineated with double quotes</li>
+</ul>
+<p>comments</p>
+<ul>
+<li><code>//</code> or <code>/* */</code> are comment delimiters</li>
+</ul>
+<p>Identifiers in C:</p>
+<ul>
+<li>An identifier is a name of something in your prograrm
+<ul>
+<li>a function, variable, constant</li>
+</ul>
+</li>
+<li>Identifiers begin with a letter or underscore (_)
+<ul>
+<li>Followed by a sequence of letters, digits, or underscores</li>
+<li>Its not good practice to start a identifier with an underscore, because it is reserved identifiers generated by the compiler</li>
+</ul>
+</li>
+<li>Identifiers are case sensitive</li>
+<li>Identifiers can be any length, <em>but</em>
+<ul>
+<li>some compilers recognize only a limited number of characters (usually 32 characters). This means if 2 identifiers use the same name up to 32 characters they will be treated as the same identifier, even if the characters after are different.</li>
+</ul>
+</li>
+<li>Reserved words cannot be used as identifiers
+<ul>
+<li>What are some reserved words in C?</li>
+<li>i.e. <code>auto</code>, <code>break</code>, <code>case</code>, <code>char</code>, <code>continue</code>, <code>default</code>, <code>extern</code></li>
+</ul>
+</li>
+</ul>
+<p>Variables:<br>
+Variables represent a value that can be changed. Variables are declared by indicating the type followed by an identifier.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> dogs, cats;
+<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> portInput;
+<span style="color:#66d9ef">float</span> price;
+</code></pre></div><p>Variables are stored in the relatively small RAM of the microcontroller. The programmer must declare the type, and therefore the size of each variable.</p>
+<p>Variable scope:<br>
+The scope of a variable is its accessibility within the program.</p>
+<ul>
+<li>Local Variables
+<ul>
+<li>Declared within a function</li>
+<li>Memory space is allocated when a function is entered</li>
+<li>Generally, memory space is released when function exits (returns)</li>
+<li>Can only be accessed from within the function they are declared</li>
+<li>You can use the same local variable declarations in multiple functions since the compiler sees the local in functions independently</li>
+</ul>
+</li>
+<li>Global variables
+<ul>
+<li>Can be accessed by all the functions in a program (unlimited scope)</li>
+<li>Global variables can be modified by any function and will retain their value as long as the program is under execution</li>
+</ul>
+</li>
+</ul>
+<p>Constants:</p>
+<ul>
+<li>Constants are fixed values</li>
+<li>In microcontroller programs, constants are usually stored in read-only memory
+<ul>
+<li>This saves RAM for variables</li>
+</ul>
+</li>
+<li>Consider this assignment
+<ul>
+<li><code>z = rho + 5;</code></li>
+<li>the five is a numeric constant and becomes part of the code that performs the addition.</li>
+</ul>
+</li>
+<li>You can declare a named constant as follows:
+<ul>
+<li><code>const</code> <em><code>type</code></em> <em><code>identifier</code></em> <code>=</code> <em><code>expression</code></em><code>;</code></li>
+<li>i.e. <code>const int myIntConstant = 25;</code></li>
+</ul>
+</li>
+<li>Numeric constants can be declared with base or type</li>
+<li>Decimal is the default base
+<ul>
+<li><code>1695</code></li>
+</ul>
+</li>
+<li>Binary constants begin with <code>0b</code> prefix
+<ul>
+<li><code>0b01000001</code></li>
+</ul>
+</li>
+<li>Hexadecimal prefixed with <code>0x</code>
+<ul>
+<li><code>0x1234ABCD</code></li>
+</ul>
+</li>
+<li>You can specify the type of a numeric constant with a suffix
+<ul>
+<li><code>4000U</code>, U is for unsigned</li>
+<li><code>15.1F</code>, F is for float</li>
+</ul>
+</li>
+<li>Character constants are enclosed in single quotes
+<ul>
+<li><code>'M'</code></li>
+</ul>
+</li>
+</ul>
+<p>Operators and expressions:</p>
+<ul>
+<li>Variables are assigned using the <code>=</code></li>
+<li>A numeric expressions can be on the right side of the assignment operator</li>
+</ul>
+<hr>
+<h2 id="sep-25-2018">
+  Sep 25, 2018
+  <a class="anchor" href="#sep-25-2018">#</a>
+</h2>
+<h3 id="compare">
+  Compare
+  <a class="anchor" href="#compare">#</a>
+</h3>
+<p><code>CMP</code> is the instruction that compares registers. <code>CMP R0, #5</code> compares register <code>R0</code> to the immediate 8 bit number <code>5</code>. It subtracts the register with the number, if the zero flag is turned on then it means that the comparison is &ldquo;true&rdquo;, &ldquo;set&rdquo;, or &ldquo;logic level one&rdquo;. This is often used in conjunction with the branch conditional instruction, <code>Bcc</code> (pg. 34).</p>
+<pre><code class="language-arm" data-lang="arm">        CMP R0, #5; checks if R0 is 5
+        BEQ doStuff; BEQ means branch if equal, checks if the zero flag is 1
+        ;code to skip here
+doStuff
+</code></pre><p><strong><code>Bcc</code> Conditional Branch</strong> </p>
+<table>
+<thead>
+<tr>
+<th>Specific Flag Tests</th>
+<th>Meaning</th>
+<th>Flags affected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BEQ</code></td>
+<td>Branch if equal</td>
+<td><code>z == 1</code></td>
+</tr>
+<tr>
+<td><code>BNE</code></td>
+<td>Branch if not equal</td>
+<td><code>z == 0</code></td>
+</tr>
+<tr>
+<td><code>BCS</code></td>
+<td>Branch if carry is set</td>
+<td><code>c == 1</code></td>
+</tr>
+<tr>
+<td><code>BCC</code></td>
+<td>Branch if carry is clear</td>
+<td><code>c == 0</code></td>
+</tr>
+<tr>
+<td><code>BMI</code></td>
+<td>Branch if minus, negative</td>
+<td><code>n == 1</code></td>
+</tr>
+<tr>
+<td><code>BPL</code></td>
+<td>Branch if plus, positive</td>
+<td><code>n == 0</code></td>
+</tr>
+<tr>
+<td><code>BVS</code></td>
+<td>Branch if overflow</td>
+<td><code>v == 1</code></td>
+</tr>
+<tr>
+<td><code>BVC</code></td>
+<td>Branch if no overflow</td>
+<td><code>v == 0</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Unsigned/signed tests</th>
+<th>Meaning</th>
+<th>Flags affected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BEQ</code></td>
+<td>Branch if equal</td>
+<td><code>z == 1</code></td>
+</tr>
+<tr>
+<td><code>BNE</code></td>
+<td>Branch if not equal</td>
+<td><code>z == 0</code></td>
+</tr>
+<tr>
+<td><code>BHI</code></td>
+<td>Branch if higher</td>
+<td><code>c == 1</code>, <code>z == 1</code></td>
+</tr>
+<tr>
+<td><code>BLO</code></td>
+<td>Branch if lower</td>
+<td><code>c == 0</code></td>
+</tr>
+<tr>
+<td><code>BHS</code></td>
+<td>Branch if higher or the same</td>
+<td><code>c == 1</code></td>
+</tr>
+<tr>
+<td><code>BLS</code></td>
+<td>Branch if lower or same</td>
+<td><code>c == 0</code>, <code>z == 1</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>if statement:</strong><br>
+For example to translate:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  a <span style="color:#f92672">=</span> b <span style="color:#f92672">+</span> 2<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<blockquote>
+<p>a = <code>R0</code><br>
+b = <code>R1</code></p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        CMP R0 #5; compares a to 5
+        BNE endif1; branch if not equal, checks if zero flag is 0
+        MOVS R1, R0; move b into a
+        ADDS R0, #2; b + 2
+
+endif1
+</code></pre><p>Look at the relationship of the high level language and <strong>make the opposite of the comparison</strong>.</p>
+<p><strong>if..else:</strong><br>
+Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">!=</span> b<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  a <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span> <span style="color:#75715e">//a == b
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span>
+  a <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<blockquote>
+<p>a = <code>R0</code><br>
+b = <code>R1</code></p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        CMP R0, R1; a != b ?
+        BEQ else1; branch if equal, checks if zero flag is 1
+
+        MOVS R0, #5; a = 5
+
+        B endif1
+
+else1   
+        MOVS R0, #1; a = 1
+
+endif1
+</code></pre><p><strong>Example with greater than:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;</span> 5<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+  b <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> 2<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<blockquote>
+<p>a = <code>R0</code><br>
+b = <code>R1</code></p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        CMP R0 #5;
+        BLS endif1; branch if lower or equal, checks if carry flag is 0 and zero flag is 1
+        MOVS R1, R0
+        ADDS R1, R1, #2
+
+endif1
+</code></pre><p><strong>One more if..else:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;=</span> b<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    a <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span>
+<span style="color:#f92672">{</span>
+    a <span style="color:#f92672">=</span> 42<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<blockquote>
+<p>a = <code>R0</code><br>
+b = <code>R1</code></p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        CMP R0, R1; a &gt;= b
+        BLO else1; branch if lower, (opposite of &gt;=), checks if the carry flag is 0
+
+        MOVS R0, #0
+        B endif1
+
+else1
+        MOVS R0, #42
+
+endif1
+</code></pre><p><strong>While loop:</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>count <span style="color:#f92672">&lt;</span> 5<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    count<span style="color:#f92672">++;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<blockquote>
+<p>count = <code>R4</code></p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        MOVS R4, #0; initilize count
+while1
+        CMP R4, #5; compare R4 to 5
+        BHS endwhile; unsigned higher or same, checks if carry flag is 1
+
+        ADDS R4, #1; increment count
+
+        B while1; B alone is unconditional branch
+
+endwhile
+</code></pre><h3 id="calculating-the-length-of-a-string">
+  Calculating the length of a String
+  <a class="anchor" href="#calculating-the-length-of-a-string">#</a>
+</h3>
+<p>In the first document <code>LE3C.c</code>, write a function called <code>slen(char s[])</code> that takes a char array (String) as the parameter, (slen is short for string length). Also initialize the char array (String), <code>myString[]</code> and the int <code>x</code>. Then in the <code>main()</code> method set the variable <code>x</code> to the length of the string <code>myString</code>. Both variables are stored in memory because they are global.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">slen</span>( <span style="color:#66d9ef">char</span> s[] )<span style="color:#f92672">:</span>
+
+<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">char</span> myString[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;anything you want.&#34;</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+  x);
+}
+</code></pre></div><p>Then in our <code>LE3asm.s</code> file, we write the assembly to do this:</p>
+<blockquote>
+<p><code>R0</code> is location in memory of <code>myString</code><br>
+<code>R1</code> is char counter<br>
+<code>R2</code> is current character</p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT slen
+slen
+        MOVS R1, #0; char counter = 0
+
+while1
+        LDRB R2, [R0]; current character pointer
+        CMP R2, #0; compare for null terminator
+        BEQ endWhile
+            ADDS R1,#1; increment counter
+            ADDS R0,#1; advance pointer
+        B while1	
+endWhile	
+        MOV R0,R1; put char count in return register
+        
+        BX LR; return
+
+        END
+
+</code></pre><p>The commands after the  <code>BEQ</code> check don&rsquo;t need to be indented (and wouldn&rsquo;t normally), but it helps to better visualize what is inside the loop.</p>
+<h3 id="capitalize-first-letter-of-string">
+  Capitalize first letter of string
+  <a class="anchor" href="#capitalize-first-letter-of-string">#</a>
+</h3>
+<p>Add to our <code>LE3C.c</code> file add a <code>firstToUpper(char s[])</code> method that takes an array of chars (String) as parameter. Note we call that method before our <code>slen</code> method in the <code>main()</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">slen</span>( <span style="color:#66d9ef">char</span> s[] );
+<span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">firstToUpper</span>( <span style="color:#66d9ef">char</span> s[] );
+
+<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">char</span> myString[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;anything you want.&#34;</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    firstToUpper( myString );
+    
+    x);
+}
+
+</code></pre></div><p>In <code>LE3asm.s</code> file, we must add another <code>EXPORT</code> at the top with our new function <code>firstToUpper</code>. Adding <code>firstToUpper</code> label down below the other code is perfectly legal. It must be added after the return (<code>BX LR</code>) of the <code>slen</code> function though. <code>firstToUpper</code> also needs it own new return (<code>BX LR</code>). Only one <code>END</code> with a carriage return is needed.</p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT slen
+        EXPORT firstToUpper
+slen
+        MOVS R1, #0; char counter = 0
+
+while1
+        LDRB R2, [R0]; current character pointer
+        CMP R2, #0; compare for null terminator
+        BEQ endWhile
+            ADDS R1,#1; increment counter
+            ADDS R0,#1; advance pointer
+        B while1	
+endWhile	
+        MOV R0,R1; put char count in return register
+        
+        BX LR; return
+;---------------------------------------------------
+
+firstToUpper
+        LDRB R1, [R0]; load first character from string into R1
+        MOVS R2, #0xDF; mask to clear bit 5
+        
+        ANDS R1, R2; clear bit 5
+        
+        STRB R1, [R0]; put char back in string
+        
+        BX LR; return
+
+        END
+
+</code></pre><p><code>firstToUpper</code> starts by loading the first char (byte) into <code>R1</code> using the <code>LDRB</code> (load byte). We <code>MOVS</code> the hexadecimal number <code>0xDF</code> into <code>R2</code> to be used as a mask. This mask is <code>1101 1111</code> in binary. This allows us to use the <code>ANDS</code> with the mask to minus 32 bit (the 0) from the number (changing it from the ASCII code of the lowercase letter to the ASCII code of the uppercase, 97 - 65).</p>
+<table>
+<thead>
+<tr>
+<th>Decimal</th>
+<th>Hexadecimal</th>
+<th>Binary</th>
+<th>ASCII</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>97</td>
+<td>0x61</td>
+<td>0b0110 0001</td>
+<td>a</td>
+</tr>
+<tr>
+<td>65</td>
+<td>0x41</td>
+<td>0b0100 0001</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>0b01</code><strong><code>1</code></strong><code>0 0001</code> (<code>0x61</code>)<br>
+<code>0b11</code><strong><code>0</code></strong><code>1 1111</code> (<code>0xDF</code> mask)<br>
+AND<br>
+<code>0b01</code><strong><code>0</code></strong><code>0 0001</code> (<code>0x41</code>)</p>
+</blockquote>
+<hr>
+<h2 id="sep-27-2018">
+  Sep 27, 2018
+  <a class="anchor" href="#sep-27-2018">#</a>
+</h2>
+<p>Video lecture notes</p>
+<h3 id="memory-review">
+  Memory Review
+  <a class="anchor" href="#memory-review">#</a>
+</h3>
+<p>Loading a variable from RAM into a General Purpose Register</p>
+<ol>
+<li>Point at the memory location of the variable</li>
+<li>Load the ariable from the pointer register location</li>
+</ol>
+<pre><code class="language-arm" data-lang="arm">LDR R7, =0x20000000; address of variable
+LDR R0, [R7]; copy data addressed by R7 to R0
+</code></pre><p>Storing a variable into RAM from a General Purpose Register</p>
+<ol>
+<li>Point at the memory location of the variable</li>
+<li>Store the register value at the pointer register location</li>
+</ol>
+<pre><code class="language-arm" data-lang="arm">LDR R7, =0x20000000; address of variable
+STR R0, [R7]; copy value in R0 to location addressed by [R7]
+</code></pre><h3 id="more-ifelse-patterns">
+  More if..else patterns
+  <a class="anchor" href="#more-ifelse-patterns">#</a>
+</h3>
+<p>if pattern:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    b <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<pre><code class="language-arm" data-lang="arm">        CMP R0, #5; a == 5?
+        BNE endif1; if a != 5 then branch
+        LDR R7)
+        MOVS R1, #9;
+        STR R1, [R7]
+endif1
+</code></pre><p>if..else pattern:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    b <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">else</span>
+<span style="color:#f92672">{</span>
+    b <span style="color:#f92672">=</span> 7<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>In assembly:</p>
+<pre><code class="language-arm" data-lang="arm">        CMP R0, #5; a == 5?
+        BNE else1; if a != 5 then skip if part
+        LDR R7,)
+        MOVS R1, #9; data to store in R1
+        STR R1, [R7]
+        B endif; skip the else
+else1   
+        LDR R7, =b
+        MOVS R1, #7
+        STR R1, [R7]
+endif
+</code></pre><p>Remember: <strong>use the branch that is opposite the high-level operator</strong></p>
+<p>Summary:</p>
+<ul>
+<li>Load variable before doing comparison</li>
+<li>Use the branch opposite of the relational operator after the comparison
+<ul>
+<li>This will skip the block if the Boolean expression is false</li>
+</ul>
+</li>
+<li>Place an unconditional branch at the bottom of the if-true block in order to skip the else
+<ul>
+<li>The if-block and else-block are mutually exclusive</li>
+</ul>
+</li>
+</ul>
+<h3 id="mbed-compiler-notes">
+  mbed Compiler Notes
+  <a class="anchor" href="#mbed-compiler-notes">#</a>
+</h3>
+<ul>
+<li>Typically, no need to load variables before doing comparison
+<ul>
+<li>mbed compiler passes the first four parameters in <code>R0</code>-<code>R3</code></li>
+<li>The compiler will load the variables before calling your subprogram</li>
+</ul>
+</li>
+<li>In the following function definition, <code>a</code> is passed in <code>R0</code>, <code>b</code> is passed in <code>R1</code> and so on&hellip;<br>
+<code>extern &quot;C&quot; int my_asm(int a, int b, int c);</code><br>
+When you call the function in your C code as follows:<br>
+<code>my_asm(25, x, y + 2);</code><br>
+The compiler will load <code>R0</code> with 25, <code>R1</code> with the value of the variable <code>x</code>, which was declared in the C code, and <code>R2</code> with the value of the C declared variable <code>y</code> plus 2.</li>
+</ul>
+<p>The compiler generates code something like this:</p>
+<pre><code class="language-arm" data-lang="arm">        MOVS R0, #25; first parameter into R0
+        LDR R7,)
+        LDR R1, [R7]; second parameter, x, into R1
+        LDR R7, =y; address of y into R7
+        LDR R2, [R7]; third parameter y into R2
+        ADDS R2, #2; add 2 to y
+
+        BL my_asm; call your function
+</code></pre><p>(<code>=x</code> and <code>=y</code> are placedholders for where it is in memory for the sake of these notes)</p>
+<h3 id="arm-architecture">
+  ARM Architecture
+  <a class="anchor" href="#arm-architecture">#</a>
+</h3>
+<p>Data sizes and instruction sets</p>
+<ul>
+<li>ARM is a RISC architecture
+<ul>
+<li>Most instructions execute in a single cycle, orthogonal register set, load-store architecture</li>
+</ul>
+</li>
+<li>ARM is a 32-bit load-store architecture
+<ul>
+<li>The only memory accesses allowed are loads and stores (<code>LDR</code> and <code>STR</code>)</li>
+<li>Most internal registers are 32-bits wide</li>
+</ul>
+</li>
+<li>When used in relation to the ARM
+<ul>
+<li><em>Word</em> means 32 bits (four bytes)</li>
+<li><em>Halfword</em> means 16 bits (two  bytes)</li>
+<li><em>Doubleword</em> means 64 bits (eight bytes)</li>
+</ul>
+</li>
+<li>Most ARM cores implement two instruction sets
+<ul>
+<li>32-bit ARM Instruction Set</li>
+<li>16/32-bit Thumb Instruction Set</li>
+</ul>
+</li>
+<li>Older cores support 16-bit Thumb Instructions only
+<ul>
+<li>Thumb-2 technology in current cores adds 32-bit instructions</li>
+<li>Maintains code density with increased flexibility</li>
+</ul>
+</li>
+</ul>
+<p>Processor Modes</p>
+<ul>
+<li>Most ARM cores have seven basic operating modes
+<ul>
+<li>Each mode has access to its own stack space and a different subset of registers</li>
+<li>Some operations can only be carried out in a privileged mode</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+<th>Privileged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supervisor (SVC)</td>
+<td>Entered on reset and when a Supervisor call instruction (SVC) is executed</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>FIQ</td>
+<td>Entered when a high priority (fast) interrupt is raised</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>IRQ</td>
+<td>Entered when a normal priority interrupt is raised</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Abort</td>
+<td>Used to handle memory access violations</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Undef</td>
+<td>Used to handle undefined instructions</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>System</td>
+<td>Privileged mode using the same registers as User mode</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>User</td>
+<td>Mode under which most Applications/OS tasks run</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>(These are modes for ARM A and ARM R chips, ARM M chips have 2 modes: User and Handler)</p>
+<p>In ARM M chips:</p>
+<ul>
+<li>13 General purpose registers
+<ul>
+<li>Registers <code>R0</code> - <code>R7</code> (low registers)</li>
+<li>Registers <code>R8</code> - <code>R12</code> (high registers)</li>
+</ul>
+</li>
+<li>3 Registers with special meaning/usage
+<ul>
+<li>Stack Pointer (SP) - <code>R13</code></li>
+<li>Link Register (LR) - <code>R14</code></li>
+<li>Program Counter (PC) - <code>R15</code></li>
+</ul>
+</li>
+<li>Special-purpose registers
+<ul>
+<li>xPSR is the program status register
+<ul>
+<li>Conditional code flags
+<ul>
+<li>N)</li>
+<li>Z)</li>
+<li>C)</li>
+<li>V)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>ARM Instruction Set</p>
+<ul>
+<li>All instructions are 32 bits long</li>
+<li>Most instructions can be conditionally executed</li>
+<li>Load/Store instruction set - no direction manipulation of memory contents</li>
+</ul>
+<hr>
+<h2 id="oct-2-2018">
+  Oct 2, 2018
+  <a class="anchor" href="#oct-2-2018">#</a>
+</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Midterm on Oct 16</em></del> [2018-10-16]</li>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Make midterm notes</em></del> [2018-10-16]<br>
+(Ch. 1 - 5 LCARpi, number conversions, covers instructions we&rsquo;ve used, and can use booklet and one 8.5x11 piece of paper for notes)</li>
+</ul>
+<h3 id="multi-word-arithmetic">
+  Multi-word Arithmetic
+  <a class="anchor" href="#multi-word-arithmetic">#</a>
+</h3>
+<p>Our registers are 32 bits long. The right most position is position 0 and the leftmost is position 31.</p>
+<p>Example:</p>
+<blockquote>
+<p><code>R4</code> = <code>1111 1111 1111 1111 1111 1111 1111 1111</code></p>
+</blockquote>
+<p>Adding 1 to this register will clear all the 1s into 0s and turn on the carry flag and the zero flag (effectively loosing the number).</p>
+<p>To add larger numbers then  our register size ($2^{32}$ (32 bits)) you will need to use 2 registers at a time, one to specify the lower word and one the higher word.</p>
+<p>To demonstrate this:</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R4, =0xFFFFFFFF
+        ADDS R4, #1
+</code></pre><p>This clears <code>R4</code> and turns on the carry and the zero flags.</p>
+<p>To successfully add numbers bigger then 32 bits you must specify a register as the low word and another as the high word. This is a symbolic specification, the registers don&rsquo;t actually get joined, just arithmetic on them can be performed on them individually and thought of them as being joined.</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R4, =0xFFFFFFFF; low word 64 bit first var
+        MOVS R5, #1; high word 64 bit first var
+
+        MOVS R6, #1; low word 64 bit second var
+        MOVS R7, #0; high word of 64 bit second var
+
+        ADDS R6, R4, R6; add low words
+        ADCS R7, R5; add high words and potential carry
+</code></pre><p><code>ADCS</code> is add with carry, takes 2 registers and the carry flag into consideration. To add the first and the second 64-bit variables you must add the low words (with <code>ADDS</code>) then the high words (with <code>ADCS</code>).</p>
+<h3 id="twos-complement">
+  Two&rsquo;s Complement
+  <a class="anchor" href="#twos-complement">#</a>
+</h3>
+<blockquote>
+<p>$2 ^ {(bits - 1)} - 1 = max$<br>
+$-2 ^ {(bits - 1)} = min$</p>
+</blockquote>
+<p>For example in 8 bits:</p>
+<blockquote>
+<p>$2^{(8 - 1)} - 1)$<br>
+$-2^{(8 - 1)})$</p>
+</blockquote>
+<p>(The reason you minus one from the max is to compensate for zero)</p>
+<p>To go from positive to negative (for example in a byte) <strong>invert the bits and add 1</strong><br>
+For example with the decimal number 5:</p>
+<blockquote>
+<p>$0101 = 5_{10}$<br>
+$1010 + 1 = 1011 = -5_{10}$</p>
+</blockquote>
+<p><code>SXTB</code> instruction:</p>
+<pre><code class="language-arm" data-lang="arm">        LDR R7, =0x2000000F; load R7 with first address of RAM
+        LDRB R0, [R7]; loads byte into R0
+</code></pre><p>This returns all 1s in the low byte but 0s in the rest of the register. This means that the signed number (-1) isn&rsquo;t preserved. You must use a <code>SXTB</code> (sign extend) instruction which extends an 8 bit value to 32 bits and writes the result to the same register. Continuing from the above example, to preserve the signed number (-1):</p>
+<pre><code class="language-arm" data-lang="arm">        SXTB R0, R0; sign extend
+</code></pre><p>Effectively changing <code>R0</code> from</p>
+<blockquote>
+<p><code>0000 0000 0000 0000 0000 0000 0000 1111</code></p>
+</blockquote>
+<p>To:</p>
+<blockquote>
+<p><code>1111 1111 1111 1111 1111 1111 1111 1111</code></p>
+</blockquote>
+<p>(Preserving the -1)</p>
+<h3 id="asrs-arithmetic-shift-right">
+  <code>ASRS</code> Arithmetic Shift Right
+  <a class="anchor" href="#asrs-arithmetic-shift-right">#</a>
+</h3>
+<p>The <code>ASRS</code> instruction is like the <code>LSRS</code> (logical shift right) instruction, however instead of always injecting a 0 on the left, it injects the same bit as the most significant bit. This means that if the number is signed it preserves the negative. <strong>Effectively this instruction divides by powers of 2 while preserving the sign.</strong></p>
+<hr>
+<h2 id="oct-4-2018">
+  Oct 4, 2018
+  <a class="anchor" href="#oct-4-2018">#</a>
+</h2>
+<h3 id="counting-characters-in-a-string">
+  Counting characters in a string
+  <a class="anchor" href="#counting-characters-in-a-string">#</a>
+</h3>
+<p>To count how many times a char occurs in a string:</p>
+<p>pseudocode:</p>
+<ul>
+<li>point character pointer at first char in string</li>
+<li>while char isn&rsquo;t null
+<ul>
+<li>read ASCII of current character</li>
+<li>if current character == searched char
+<ul>
+<li>increment count</li>
+</ul>
+</li>
+<li>increment char pointer</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">charCount</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">char</span> c)
+
+<span style="color:#66d9ef">char</span> myString[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aababac&#34;</span>;
+<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">int</span> main
+{
+    x);
+}
+</code></pre></div><p>In assembly:</p>
+<blockquote>
+<p><code>myString</code> will be stored in memory with register <code>R0</code> pointing at it. The character thats being searched for will be stored in <code>R1</code></p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT charCount
+charcount
+        MOVS R2, #0; initalize count
+nextChar
+        LDRB R3, [R0]; get character
+        CMP R3,#0; end of string?
+        BEQ endloop
+
+        CMP R3, R1; is char == c?
+        BNE nextIteration
+        ADDS R2, #1; count++
+
+nextIteration
+        ADDS R0, #1; advance pointer
+        B nextChar
+
+endloop
+        MOV R0, R2; put char count in return register
+        BX LR
+        END
+
+</code></pre><hr>
+<h2 id="oct-9-2018">
+  Oct 9, 2018
+  <a class="anchor" href="#oct-9-2018">#</a>
+</h2>
+<h3 id="calculating-arithmetic-mean">
+  Calculating arithmetic mean
+  <a class="anchor" href="#calculating-arithmetic-mean">#</a>
+</h3>
+<p>Using a 64 cell array, we can calculate the arithmetic mean of the cells. We are concerned with how fast the mean can be calculated. This will be an array that is passed by some c code.</p>
+<p>In <code>statsC.c</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">mean64</span>(<span style="color:#66d9ef">short</span> data[]);
+
+<span style="color:#66d9ef">short</span> myData[<span style="color:#ae81ff">64</span>];
+<span style="color:#66d9ef">int</span> xbar;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i)
+    {
+        myData[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;
+    }
+
+    xbar);
+}
+
+</code></pre></div><p><code>short</code> is a 16 bit data type, so we&rsquo;re working with half words in our registers.</p>
+<p>In <code>statsAsm.s</code>:</p>
+<blockquote>
+<p><code>R0</code> = address of array<br>
+<code>R1</code> = sum of array elements<br>
+<code>R2</code> = current array element<br>
+<code>R3</code> = loop counter</p>
+</blockquote>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT mean64
+mean64
+        MOVS R1, #0;initialize sum
+        MOVS R3, #64;initialize loop count
+
+loop1   LDRH R2, [R0]; get current element
+        ADDS R1, R1, R2; add element to sum
+        ADDS R0, #2; advance pointer
+
+        SUBS R3, #1; loop count - 1
+        BNE loop1; branch if zero flag is on
+
+        ASRS R1, #6; divide by 64 and preserve sign
+        MOVS R0, R1; return result in R0
+
+        BX LR
+        END
+
+</code></pre><p><strong>You must advance the for loop by 2 because we are working with half words.</strong></p>
+<p>Clock cycles:<br>
+512 clock cycles in the loop alone. Clock speed of our chip is 48MHz. To figure out the period $1/f$, where $f$ is the frequency ($1/48MHz$, ~21 nanoseconds). 519 total clocks * 21 nano seconds = 10,899, ~11 micro seconds.</p>
+<hr>
+<h2 id="oct-11-2018">
+  Oct 11, 2018
+  <a class="anchor" href="#oct-11-2018">#</a>
+</h2>
+<h3 id="10000-foot-view-software-organization">
+  10,000 foot view (software organization)
+  <a class="anchor" href="#10000-foot-view-software-organization">#</a>
+</h3>
+<p>Problems and concerns when creating embedded systems. In real time systems the software has time dependencies.</p>
+<ul>
+<li>Soft real time
+<ul>
+<li>Can miss deadlines, doesn&rsquo;t have an extreme consequence (games, game controllers)</li>
+</ul>
+</li>
+<li>Hard real time
+<ul>
+<li>Cannot miss deadlines, if you miss a deadline whatever you were producing is now invalid. May have severe consequences in the system.</li>
+</ul>
+</li>
+</ul>
+<p>Highly reliable software:<br>
+Software that you don&rsquo;t want to fail. Usually real-time. (Autopilots, landing gear deployment, jet engine fuel controllers). A special way to write software.</p>
+<p>Software organization:</p>
+<ul>
+<li>Super loop
+<ul>
+<li>Actions are in a non-stop loop, never ending. (not used in Highly-reliable systems). Used more when timing isn&rsquo;t a concern</li>
+</ul>
+</li>
+<li>Cyclic executive scheduling
+<ul>
+<li>A lightweight scheduling mechanism</li>
+<li>A gold standard for highly reliable systems.</li>
+<li>Small scale projects (automotive industry, dashboard control)</li>
+<li>No distinct scheduling mechanism, can be handled with interrupts</li>
+<li>Used extensively in aerospace, avionics</li>
+<li>Most real-time applications do not require
+<ul>
+<li>general purpose multitasking (or preemption)</li>
+<li>disk access</li>
+<li>printing</li>
+</ul>
+</li>
+<li>Full blown OS not necessary</li>
+<li>Scheduling Frames
+<ul>
+<li>Major/minor frames provide a way to organize repeating &lsquo;processes&rsquo;</li>
+<li>Major frame usually 1 second, but can be any consistent duration</li>
+<li>&lsquo;Process scheduling&rsquo; is defined by what will be computed during each minor frame</li>
+<li>Minor frame rate varies from 4/sec up to 100/sec</li>
+<li>Most important tasks occur first in minor frames, and the less important goes toward the end of the minor frame. Each time the timer goes off the task that is still executing will be cut off and switched to the next minor frame.</li>
+<li>The tasks are usually controlled by a <code>switch</code> statement.</li>
+<li>Frames are usually left with some head room after the tasks, to allow for other interrupts to occur (from a data port for example)</li>
+<li>Sum of subprogram execution times cannot exceed minor frame time limit.</li>
+</ul>
+</li>
+<li>Pros
+<ul>
+<li>Great for periodic systems</li>
+<li>intuitively obvious</li>
+<li>HRT processes not preemptive
+<ul>
+<li>no shared data problem</li>
+</ul>
+</li>
+<li>Lightweight, low overhead scheduler</li>
+<li>Proven technique</li>
+</ul>
+</li>
+<li>Cons
+<ul>
+<li>Difficult to load balance</li>
+<li>Processes rates limited by minor frame</li>
+<li>Time consuming processes must be split into shorter pieces</li>
+<li>Fragile: may break if you add a process, remove a process, or chance process order</li>
+<li>Difficult to incorporate sporadic process</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Real-time OS
+<ul>
+<li>A highly reliable operating system used in real-time systems (however cyclic executive are used more so). (Wind River OS, for example). Allows us to create tasks (functions), and the OS will execute the tasks in turn. (Pre-emptive operating system). The system has a timer that periodically goes off, and the OS will use a context switch (save registers to memory), and go to the next task (and load its registers). One task can supercede another task in a pre-emptive system.</li>
+<li>If a shared variable is being used with multiple tasks, if a task gets pre-empted, the variable might not be fully updated.</li>
+<li>If the code is interrupted in the middle of a task, the instruction is completed and a &lsquo;bookmark&rsquo; is left in the task.</li>
+<li>Instead of turning interrupts off and on after the variable is used, you can use a semafor, a &lsquo;flag&rsquo; that says that the variable is in use in another task and must be completed before it can be used, so the task will pre-empt itself.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="oct-16-2018">
+  Oct 16, 2018
+  <a class="anchor" href="#oct-16-2018">#</a>
+</h2>
+<h3 id="leds-and-switches">
+  LEDs and Switches
+  <a class="anchor" href="#leds-and-switches">#</a>
+</h3>
+<p><strong>Switches</strong></p>
+<table>
+<thead>
+<tr>
+<th>Digital</th>
+<th>Voltage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0 volts (ground)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3.3VDC</td>
+</tr>
+</tbody>
+</table>
+<p>EMF), think of as a pressure.</p>
+<p><strong>LEDs (light emitting diode)</strong></p>
+<p>Diodes let power go one way, consists of anode (+) and cathode (-).</p>
+<p>Ohms Law:</p>
+<blockquote>
+<p>$V = IR$</p>
+</blockquote>
+<p>V is voltage<br>
+I is current<br>
+R is resistance</p>
+<p>Our LEDs use 2ma, so $I).</p>
+<blockquote>
+<p>$R = \frac{ V_{sys} - V_f }{ I_{LED} }$</p>
+</blockquote>
+<hr>
+<h2 id="oct-18-2018">
+  Oct 18, 2018
+  <a class="anchor" href="#oct-18-2018">#</a>
+</h2>
+<h3 id="code-conversion">
+  Code conversion
+  <a class="anchor" href="#code-conversion">#</a>
+</h3>
+<p>Binary -&gt; ASCII hex</p>
+<p>To change the byte <code>0100 0001</code> to ASCII, you&rsquo;d have to run it through some code conversion software. That way the correct number will be shown instead of the ASCII letter &lsquo;A&rsquo;. A dumb terminal can&rsquo;t differentiate what you want to do with certain information, all it does it show the ASCII codes for the binary patterns it receives. So by converting our original 65 into a 6 and a 5 in binary, it will show correctly.</p>
+<p>Some c code to show conversion from a PC to the embedded system and back to PC.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX); <span style="color:#75715e">//tx, rx
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    pc.printf(<span style="color:#e6db74">&#34;Hello world</span><span style="color:#ae81ff">\b\r</span><span style="color:#e6db74">&#34;</span>);
+
+    pc.putc(<span style="color:#ae81ff">65</span>); <span style="color:#75715e">//putc outputs one character
+</span><span style="color:#75715e"></span>    pc.printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\r</span><span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">//flushes buffer with a carriage return and line feed
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>)
+    {
+        pc.putc( pc.getc() ); <span style="color:#75715e">//echo input back to terminal
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><table>
+<thead>
+<tr>
+<th>4 bit number</th>
+<th>ASCII Hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1010</code>, 0xA</td>
+<td><code>0100 0001</code>, 65$_{10}$, 0x41, &lsquo;A&rsquo;</td>
+</tr>
+</tbody>
+</table>
+<p>The best way to convert these numbers into hex is <strong>table lookup</strong>.</p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT BtoAH
+
+BtoAH
+        ;R0 will contain 4 bit number to convert to ASCII hex
+        ;Output: ASCII hex char
+
+        LDR R1,=ASCIIhexTable; address of table into R1
+        LDRB R0, [R1, R0]; copy char into R0 from table using R0 as the offset
+
+        BX LR
+
+ASCIIhexTable
+        DCB &quot;0123456789ABCDEF&quot;; define constant byte
+
+        END
+
+</code></pre><blockquote>
+<p><code>BtoAH</code> stands for binary to ASCII hex</p>
+</blockquote>
+<p>In c:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">char</span> <span style="color:#a6e22e">BtoAH</span>(<span style="color:#66d9ef">int</span> n); <span style="color:#75715e">// 0 to 15
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> asciiChar;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    asciiChar);
+}
+</code></pre></div><hr>
+<h2 id="oct-23-2018">
+  Oct 23, 2018
+  <a class="anchor" href="#oct-23-2018">#</a>
+</h2>
+<h3 id="lab-4-32-bit-binary-to-ascii-hex-b32toah">
+  Lab 4: 32-bit Binary to ASCII hex (B32toAH)
+  <a class="anchor" href="#lab-4-32-bit-binary-to-ascii-hex-b32toah">#</a>
+</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Complete L4</em></del> [2018-10-23]</li>
+</ul>
+<p>Continuing from the code conversion above. This can be possible by using our 4 bit code converter, counted loop, and left and right shifts.</p>
+<p>In <code>B32toAH.c</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">B32toAH</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">char</span> s[]);
+
+<span style="color:#66d9ef">char</span> buff8[<span style="color:#ae81ff">9</span>]; <span style="color:#75715e">//one extra spot for null terminator on end
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    B32toAH(<span style="color:#ae81ff">0xABCDEF01</span>, buff8);
+}
+
+</code></pre></div><p><code>B32toAH</code> returns void, however the second parameter (<code>char s[]</code>) will be the result, we will be modifying it but not returning it technically.</p>
+<p>In <code>B32toAHasm.s</code></p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT B32toAH
+
+B32toAH ; R0 32-bit number to convert ASCII hex, passed by c
+        ; R1 address of string buffer, passed by c
+        ; R2 shift counter and loop count
+        ; R3 preserve original number in R0
+        ; R4 char read from ASCII table
+        ; R5 points to first char in ASCIIhexTab lookup table
+
+        PUSH {R4, R5};        preserve R4 and R5
+
+        MOVS R2, #0;          initialize left shift count and loop count to 0
+        MOVS R3, R0;          preserve R0 into R3
+        LDR R5, =ASCIIhexTab; load R5 with address of lookup table
+
+while1  LSLS R0, R2;          shift left by shift count
+        LSRS R0, #28;         shift most significant byte to least significant byte
+        LDRB R4, [R5, R0];    load low byte into R4
+        STRB R4, [R1];        store byte from R4 into the location of our string in RAM
+
+        ADDS R1, #1;          increment string pointer by 1
+        ADDS R2, #4;          increment shift counter by 4
+        MOVS R0, R3;          restore original number
+
+        CMP R2, #32;          shift count != 32
+        BNE while1
+
+        MOVS R5, #00;         temporarily put 00 in R5
+        STRB R1, [R5];        end string with null terminator
+
+        POP {R4, R5};         restore R4, R5
+        BX LR;                return
+
+ASCIIhexTab
+        DCB &quot;0123456789ABCDEF&quot;
+
+        END
+
+</code></pre><p>First off we&rsquo;ll want to point at the ASCII hex table, then preserve the original string before we start shifting. <strong>Anything above <code>R3</code> must be preserved when the code returns</strong>, so to preserve the higher registers we&rsquo;ll need to use the stack. You want to preserve the registers in the stack first, and restore them once the subprogram has completed. <code>PUSH</code> and <code>POP</code> can be written using hyphens and/or commas (hyphens go thru from the start to the end), and must use curly braces (i.e. <code>PUSH {R4-R6, R10}</code>). <strong>The stacks grows toward low memory.</strong></p>
+<hr>
+<h2 id="oct-25-2018">
+  Oct 25, 2018
+  <a class="anchor" href="#oct-25-2018">#</a>
+</h2>
+<h3 id="more-code-conversion-ascii-decimal---binary">
+  More code conversion: ASCII decimal -&gt; binary
+  <a class="anchor" href="#more-code-conversion-ascii-decimal---binary">#</a>
+</h3>
+<p>For example if the user enters the number &lsquo;25&rsquo; on the keyboard, the ASCII codes for that is technically 0x32 and 0x35, and we want to convert it into 0x00000019 (25 in binary) so we can work on it arithmetically.</p>
+<table>
+<thead>
+<tr>
+<th>ASCII</th>
+<th>Hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lsquo;2&rsquo;</td>
+<td>0x32</td>
+</tr>
+<tr>
+<td>&lsquo;5&rsquo;</td>
+<td>0x35</td>
+</tr>
+</tbody>
+</table>
+<p>If we <strong>minus 0x30 from the ASCII code</strong>, we will end up with the value intended in hex, which will then be converted to binary when compiled.</p>
+<p>In <code>ADtoB.c</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">ADtoB</span>(<span style="color:#66d9ef">char</span> s[]);
+
+<span style="color:#66d9ef">char</span> input[]<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25&#34;</span>;
+<span style="color:#66d9ef">int</span> x;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    x);
+}
+
+</code></pre></div><p>In <code>ADtoBasm.s</code></p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT ADtoB
+ADtoB   ; R0 address of string
+        ; R1 current char being evaluated
+        ; R2 running total, initialized to 0
+        ; R3 holds 10 to be used with multiply instruction
+
+        MOVS R2, #0; total = 0
+        MOVS R3, #10; multiplier = 10
+nextChar
+        LDRB R1, [R0]; get char from string
+        ADDS R0, #1; advance char pointer
+
+        CMP R1, #0; check for null terminator
+        BEQ endLoop1
+
+        SUBS R1, #0x30; strip ASCII
+        MULS R2, R3, R2; multiply by 10 to move the total digit to the left
+
+        ADDS R2, R2, R1; add digit to running total
+        B nextChar
+endLoop1
+        MOV R0, R2; put total into R0
+        BX LR
+
+        END
+
+</code></pre><hr>
+<h2 id="oct-30-2018">
+  Oct 30, 2018
+  <a class="anchor" href="#oct-30-2018">#</a>
+</h2>
+<h3 id="more-code-conversion-binary-to-ascii-binary">
+  More code conversion: Binary to ASCII Binary
+  <a class="anchor" href="#more-code-conversion-binary-to-ascii-binary">#</a>
+</h3>
+<p>We want to convert a 32-bit binary value to ASCII binary. We want to take a binary number and print it in binary on the screen. This will be converted into a 33-byte char array (one for null terminator). This will be possible by left shifting then using a <code>ADCS</code> (add with carry), because the carry flag will contain the digit that we shifted out of the register.</p>
+<p>In <code>BtoAB.c</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">btoab</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">char</span> s[]);
+
+<span style="color:#66d9ef">char</span> ascbin[<span style="color:#ae81ff">33</span>]; <span style="color:#75715e">//one extra space for null terminator
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    btoab(<span style="color:#ae81ff">0xFFFF0000</span>, ascbin);
+}
+</code></pre></div><p>In <code>BtoABasm.s</code></p>
+<pre><code class="language-arm" data-lang="arm">        AREA |.text|,CODE,READONLY
+        EXPORT btoab
+btoab   ; R0 number to convert
+        ; R1 address of first char of the string
+        ; R2 holds 0x30, char to store
+        ; R3 #0
+        ; R4 loop counter
+        
+        PUSH {R4}; 		preserve R4
+        
+        MOVS R3, #0; 	0 to add with carry
+        MOVS R4, #32; 	loop counter
+        
+loop1	MOVS R2,#'0';	reset 0
+
+        LSLS R0, #1;	msb into carry flag
+        ADCS R2, R3;	add carry to R2
+        
+        STRB R2, [R1];	store ascii digit into str
+        ADDS R1, #1;	increment pointer
+        
+        SUBS R4, #1;	decrement loop counter
+        BNE loop1
+
+        MOVS R2, #0
+        STRB R2, [R1];	null terminate string
+        
+        POP {R4};	restore R4
+        BX LR;		return
+        
+        END
+
+</code></pre><hr>
+<h2 id="nov-1-2018">
+  Nov 1, 2018
+  <a class="anchor" href="#nov-1-2018">#</a>
+</h2>
+<h3 id="lab-5-cipher">
+  Lab 5: Cipher
+  <a class="anchor" href="#lab-5-cipher">#</a>
+</h3>
+<p>This is a subsitution cipher. To make this cipher easier, and not run into making mid-string null terminators, we will make the message the same length each time. 16 byte messages plus 1 byte for the null terminator.</p>
+<p>pseudo:</p>
+<ul>
+<li>initialize variables</li>
+<li>loop 16 times
+<ul>
+<li>get text char</li>
+<li>get key char</li>
+<li>if key char is null terminator
+<ul>
+<li>reset key pointer</li>
+<li>get key char</li>
+</ul>
+</li>
+<li>increment key pointer</li>
+<li>EOR text char and key char</li>
+<li>STRB where R0 points</li>
+<li>increment text pointer</li>
+<li>loop test</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">cipher16</span>(<span style="color:#66d9ef">char</span> text[], <span style="color:#66d9ef">char</span> key[]);
+
+<span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">16</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This is a test!!&#34;</span>;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    cipher16(str, <span style="color:#e6db74">&#34;Bob123&#34;</span>);
+    cipher16(str, <span style="color:#e6db74">&#34;Bob123&#34;</span>);
+}
+
+</code></pre></div><pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+        EXPORT cipher16
+cipher16
+        ; R0 address of text
+        ; R1 address of key
+        ; R2 loop counter (16)
+        ; R3 preserve key location
+        ; R4 current text char
+        ; R5 current key char
+
+        PUSH {R4-R5};   preserve registers
+        
+        MOVS R2, #16;   loop counter = 16
+        MOVS R3, R1;    preserving key location
+
+loop1   LDRB R4, [R0];  get text char
+        LDRB R5, [R1];  get key char
+
+        CMP R5, #0;     key char == null terminator?
+        BNE if1;
+        MOVS R1, R3;    reset key
+        LDRB R5, [R1];  reload key
+if1     ADDS R1, #1;    increment key
+
+        EORS R4, R5;    xor operation
+        STRB R4, [R0];  store encrypted char
+
+        ADDS R0, #1;    increment text
+        SUBS R2, #1;    decrement loop counter
+        BNE loop1;      check if end of loop
+        
+        POP {R4-R5};    restore registers
+
+        BX LR;          return
+
+        END
+
+</code></pre><h3 id="parameter-passing">
+  Parameter passing
+  <a class="anchor" href="#parameter-passing">#</a>
+</h3>
+<p>The first 4 parameters of a function are passed thru R0-R3. <strong>Any parameters after the first 4 get pushed onto the stack</strong>. If a variable is passed as a parameter, it will need to go lookup the location of the variable in memory before moving it into a register. When an expression is passed as a parameter</p>
+<hr>
+<h2 id="nov-6-2018">
+  Nov 6, 2018
+  <a class="anchor" href="#nov-6-2018">#</a>
+</h2>
+<h3 id="alu">
+  ALU
+  <a class="anchor" href="#alu">#</a>
+</h3>
+<p>ALU lives inside the CPU, everything else exists to bring data to the ALU.</p>
+<p>Digital logic:<br>
+<strong>AND gate:</strong><br>
+Only true if all inputs are true</p>
+<p><img src="/LogicGates/AND.png" alt="AND" title="AND"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a <code>&amp;&amp;</code> b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OR gate (inclusive):</strong><br>
+True if either input is true. This gate can be made with 3 NANDS.</p>
+<p><img src="/LogicGates/OR.png" alt="OR" title="OR"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a <code>||</code> b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOT gate:</strong><br>
+Returns the opposite of the input. Also known as a inverter</p>
+<p><img src="/LogicGates/NOT.png" alt="NOT" title="NOT"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center"><code>!</code>a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NAND gate:</strong><br>
+NOT AND, returns opposite of a AND gate. <strong>One of two universal gates</strong>. Uses the least resistors. If you tie the two inputs together it turns into a NOT gate (however the propagation delay is slower then a NOT).</p>
+<p><img src="/LogicGates/NAND.png" alt="NAND" title="NAND"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a AND b NOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOR gate:</strong><br>
+NOT OR gate. <strong>One of the two universal gates</strong>. Was the first integrated circuit to be mass produced (Fairchild organization, second silicon valley company, 1961).</p>
+<p><img src="/LogicGates/NOR.png" alt="NOR" title="NOR"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a OR b NOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="nov-13-2018">
+  Nov 13, 2018
+  <a class="anchor" href="#nov-13-2018">#</a>
+</h2>
+<h3 id="the-assembler">
+  The Assembler
+  <a class="anchor" href="#the-assembler">#</a>
+</h3>
+<p>Used to translate our .s files to generate .o files. Object code files are not directly executed, they are prepared to be fed into the linker. The linker hooks all the .o files together and creates the core image (actual executable code). Inside the assembler there are 2 critical things we need to look at. The symbol table (label table), and the location counter. There is also a pass counter. The assembler &ldquo;drinks the characters through a straw&rdquo;, character by character. Lexical analysis. It checks each instruction in it&rsquo;s table and keeps track of the next instruction will be. On the first pass its checking how much room each instruction takes up. The assembler also checks if anything is in column zero ( a label ) and it adds it to the symbol table, and it keeps track of it&rsquo;s address. On the second pass of the assembler it actually makes the machine code for each instruction. It doesn&rsquo;t check labels on the second pass. It looks up each symbol in the symbol table, to look ahead in the code.</p>
+<p>mbed &gt; hardware boards &gt; st microsystems boards &gt; NUCLEO L432KC &gt; Technical references document &gt; Reference manual (RM0394)</p>
+<p>STM32L432KC</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/zedchance/notes/edit/master/content/CS39/CS39-lecture-notes.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#aug-21-2018">Aug 21, 2018</a></li>
+    <li><a href="#aug-23-2018">Aug 23, 2018</a></li>
+    <li><a href="#aug-28-2018">Aug 28, 2018</a>
+      <ul>
+        <li><a href="#mdk-instructions">MDK Instructions</a></li>
+      </ul>
+    </li>
+    <li><a href="#aug-30-2018">Aug 30, 2018</a>
+      <ul>
+        <li><a href="#every-line-of-assembly">Every line of assembly</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-4-2018">Sep 4, 2018</a>
+      <ul>
+        <li><a href="#expression-evaluation">Expression evaluation</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-6-2018">Sep 6, 2018</a></li>
+    <li><a href="#sep-11-2018">Sep 11, 2018</a>
+      <ul>
+        <li><a href="#shifting-bits">Shifting bits</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-18-2018">Sep 18, 2018</a>
+      <ul>
+        <li><a href="#logical-instructions-bitwise">Logical instructions (bitwise)</a></li>
+        <li><a href="#c-asm">C-&gt;asm</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-20-2018">Sep 20, 2018</a>
+      <ul>
+        <li><a href="#embedded-c-programming">Embedded <code>C</code> Programming</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-25-2018">Sep 25, 2018</a>
+      <ul>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="#calculating-the-length-of-a-string">Calculating the length of a String</a></li>
+        <li><a href="#capitalize-first-letter-of-string">Capitalize first letter of string</a></li>
+      </ul>
+    </li>
+    <li><a href="#sep-27-2018">Sep 27, 2018</a>
+      <ul>
+        <li><a href="#memory-review">Memory Review</a></li>
+        <li><a href="#more-ifelse-patterns">More if..else patterns</a></li>
+        <li><a href="#mbed-compiler-notes">mbed Compiler Notes</a></li>
+        <li><a href="#arm-architecture">ARM Architecture</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-2-2018">Oct 2, 2018</a>
+      <ul>
+        <li><a href="#multi-word-arithmetic">Multi-word Arithmetic</a></li>
+        <li><a href="#twos-complement">Two&rsquo;s Complement</a></li>
+        <li><a href="#asrs-arithmetic-shift-right"><code>ASRS</code> Arithmetic Shift Right</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-4-2018">Oct 4, 2018</a>
+      <ul>
+        <li><a href="#counting-characters-in-a-string">Counting characters in a string</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-9-2018">Oct 9, 2018</a>
+      <ul>
+        <li><a href="#calculating-arithmetic-mean">Calculating arithmetic mean</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-11-2018">Oct 11, 2018</a>
+      <ul>
+        <li><a href="#10000-foot-view-software-organization">10,000 foot view (software organization)</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-16-2018">Oct 16, 2018</a>
+      <ul>
+        <li><a href="#leds-and-switches">LEDs and Switches</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-18-2018">Oct 18, 2018</a>
+      <ul>
+        <li><a href="#code-conversion">Code conversion</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-23-2018">Oct 23, 2018</a>
+      <ul>
+        <li><a href="#lab-4-32-bit-binary-to-ascii-hex-b32toah">Lab 4: 32-bit Binary to ASCII hex (B32toAH)</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-25-2018">Oct 25, 2018</a>
+      <ul>
+        <li><a href="#more-code-conversion-ascii-decimal---binary">More code conversion: ASCII decimal -&gt; binary</a></li>
+      </ul>
+    </li>
+    <li><a href="#oct-30-2018">Oct 30, 2018</a>
+      <ul>
+        <li><a href="#more-code-conversion-binary-to-ascii-binary">More code conversion: Binary to ASCII Binary</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-1-2018">Nov 1, 2018</a>
+      <ul>
+        <li><a href="#lab-5-cipher">Lab 5: Cipher</a></li>
+        <li><a href="#parameter-passing">Parameter passing</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-6-2018">Nov 6, 2018</a>
+      <ul>
+        <li><a href="#alu">ALU</a></li>
+      </ul>
+    </li>
+    <li><a href="#nov-13-2018">Nov 13, 2018</a>
+      <ul>
+        <li><a href="#the-assembler">The Assembler</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/assembly/">assembly</a></li>
+  
+  </ul>
+</nav>
+
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

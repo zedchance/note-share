@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shortest path tree on Notes</title>
+    <link>http://zedchance.github.io/tags/shortest-path-tree/</link>
+    <description>Recent content in shortest path tree on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/shortest-path-tree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20201207</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201207/</guid>
+      <description>Exercise solutions #  Single source shortest paths #  TYPO fixed in column 5 relax 4:
+The max space taken by the IndexMinPQ is O(V - 1).
+Decimal to binary, and back
+Is a BST seach a P problem? Yes It is also a NP problem. It is not a NP-Complete problem.</description>
+    </item>
+    
+  </channel>
+</rss>

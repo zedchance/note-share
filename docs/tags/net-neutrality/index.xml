@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>net neutrality on Notes</title>
+    <link>http://zedchance.github.io/tags/net-neutrality/</link>
+    <description>Recent content in net neutrality on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/net-neutrality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHIL103-lecture-20201024</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/</guid>
+      <description>The Law and Economics of Internet Access #  Innovation and Sec 230
+ Develop and offer content without fear of legal liability &amp;ldquo;No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider.&amp;rdquo; Innovation: want to make it likely that we&amp;rsquo;ll have access to more awesome content.  Net neutrality and Title II FCC public utility regulation</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture Notes on Notes</title>
+    <link>http://zedchance.github.io/</link>
+    <description>Recent content in Lecture Notes on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210216/</guid>
+      <description>Ch3.pdf
+Propagation delay is the time delta between the input and the output.
+Design of a full adder #  Carry Propagate Adder (CPA)
+ Full adder is an arithmetic logic unit or circuit to add two single digit numbers with Carry-in It is still combinational circuit with inputs Ax and Bx  Sx is the sum (1 bit) C-in carry in Cx is the carry out   Adder is also called Ripple Carry Adder (RCA) Fundamental circuit for an adder and has longest propagation delay that is proportional to the number of the carry bits  To estimate the propagation delay of an (n)-bit CPA:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-resources/</guid>
+      <description>   Resources      Text book UniversityPhysicsVolume2-OP.pdf   Lab coversheet p105L Lab Coversheet sp17.pdf   Text 3 notes p105 Test 3 notes.pdf       My stuff      Quiz 6 Quiz-6.pdf   Test 2 PHYS105-test2.pdf    </description>
+    </item>
+    
+    <item>
+      <title>CS10-labs</title>
+      <link>http://zedchance.github.io/CS10/CS10-Processing-labs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS10/CS10-Processing-labs/</guid>
+      <description>CS10 Labs #  Lab 1 - My &amp;ldquo;creature&amp;rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &amp;#34;creature&amp;#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&amp;rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&amp;#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y+50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y+40,20,100,10); //was 145/140  rect(x+35,y+40,20,100,10); //was 235/140  //Legs  rect(x-30,y+130,27,100,10); //was 170,230  rect(x+3,y+130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y+90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&amp;#34;:&amp;#34;,minute(),&amp;#34;:&amp;#34;,second(),&amp;#34;-&amp;#34;,&amp;#34;Mouse input detected: Background reset&amp;#34;); } Lab 4 - Launching my &amp;ldquo;creature&amp;rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &amp;#34;creature&amp;#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height + 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y+50,100,20,10); rectMode(CORNER); rect(x-55,y+40,20,100,10); rect(x+35,y+40,20,100,10); //Legs  rect(x-30,y+130,27,100,10); rect(x+3,y+130,27,100,10); //Torso  rectMode(CENTER); rect(x,y+90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y+135,x-35,y+135,x-45,y+160); //Hand jets  triangle(x+55,y+135,x+35,y+135,x+45,y+160); triangle(x-30,y+225,x-5,y+225,x-18,y+255); //Feet jets  triangle(x+30,y+225,x+5,y+225,x+18,y+255); //Blast off!</description>
+    </item>
+    
+    <item>
+      <title>CS12-lecture-notes</title>
+      <link>http://zedchance.github.io/CS12/CS12-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS12/CS12-lecture-notes/</guid>
+      <description>CS 12 Lecture notes #  Aug 20, 2018 #  [X] Download Java JDK and jGRASP [2018-08-20]
+A class is a “blueprint&amp;quot; for objects in object-oriented coding
+ Aug 22, 2018 #  class #  All Java programs are structured in a class. It is a the fundamental part of a Java program. The simplest programs have a main method, which contains all of the code. The actual java library only has around 40 commands, but it has an extensive library of classes that you can use.</description>
+    </item>
+    
+    <item>
+      <title>CS13-lecture-notes</title>
+      <link>http://zedchance.github.io/CS13/CS13-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS13/CS13-lecture-notes/</guid>
+      <description>CS 13 Lecture Notes #  Jan 28, 2019 #   Download BlueJ [2019-01-29]  Weather class #  public class Weather { private double highTemp; private double lowTemp; private String condition; private int rainChain; public Weather (double h, double l, String c, int r) { highTemp = h; lowTemp = l; condition = c; rainChain = r; } public double delta() { return highTemp - lowTemp; } public String toString() { return &amp;#34;High: &amp;#34; + highTemp + &amp;#34;, Low: &amp;#34; + lowTemp + &amp;#34;, Condition: &amp;#34; + condition + &amp;#34;, Chance of rain: &amp;#34; + rainChance; } } Using this class we can make another to populate a forecast</description>
+    </item>
+    
+    <item>
+      <title>CS130-exercise-solutions-1</title>
+      <link>http://zedchance.github.io/CS130/CS130-exercise-solutions-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-exercise-solutions-1/</guid>
+      <description>For example if n = 6:
+[ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
+&amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
+So we have a time complexity of O(n)
+   </description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200831</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200831/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200831/</guid>
+      <description>Syllabus #  The required text is available for free in the school library
+Both sections will take the exam together
+Module 1 #  Test cases will usually be provided.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200902</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200902/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200902/</guid>
+      <description>Concerning the survey from last class #  The differences between an array and a linked list:
+ Access: arrays can access an spot instantly, linked lists need to iterate from the head until they reach the target. Size: arrays are fixed in size, linked lists can become bigger or smaller  Stacks can be implemented using a linked list or an array. FILO
+Queues can be implemented using a linked list or a circular array.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200909</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200909/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200909/</guid>
+      <description>Runtime analysis cont. #  Big Oh notation is pretty much the only asymptotic notation used.
+Initializing arrays of ints in Java initializes everything to 0, so it is a linear process. The if statement has an else with a loop, so at a worse case it is O(n).
+On line 73, you have to count the other functions runtime analysis also.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200914</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200914/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200914/</guid>
+      <description>Annoucements #  New webcam usage survey
+Exercise solutions:
+ Runtime analysis cont. #  Space complexity analysis #  1MB) kB
+Strings have the fields: start address, length, offset, hash
+For example:
+str = &amp;quot;Java&amp;quot;; str1); The space is constant because the sub string isn&amp;rsquo;t copied, just more references are made.
+ c + 4n, so O(n)  32 + 64n)  Normally you don&amp;rsquo;t count the space of the parameters or the return.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200916</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200916/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200916/</guid>
+      <description>Exercise solutions #  For example if n = 6:
+[ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
+&amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
+So we have a time complexity of O(n)
+Space complexity cont. #  Time complexity of this is O(n). Space complexity is O(1).
+Sorting #  Requires 2 smaller arrays already sorted.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200921</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200921/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200921/</guid>
+      <description>Annoucements #  First assignment open
+Mergesort cont. #  Solution to last exercise:
+ The first sort method:
+ space complexity is O(n) running time is  The second method
+ space complexity is O(1) running time is O(nlog(n))  An example of a stable sorting algorithm:
+Unsorted: [3(1), 2, 1, 5, 3(2)] (where the (1) indicates that it is the first 3 in the array)
+Sorted: [1, 2, 3(1), 3(2), 5] this is stable [1, 2, 3(2), 3(1), 5] this is unstable</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200923</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200923/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200923/</guid>
+      <description>Annoucements #  Assignment 1 has unlimited attempts, the last attempt counts.
+Substrings #  Quicksort cont. #  Space complexity is O(1). Running time is O(n).
+Exercise posted:
+Space complexity best case is O(log(n)), and worst case is O(n). Running time best case is O(log(n)), and worst case is O(n).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200928</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200928/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200928/</guid>
+      <description>Dev environment #  JDK 11 JUnit 5 Module with all docs for setup
+Filenames: assignment1_ZedChance.zip
+Quicksort exercise solutions #  Quicksort cont. #  Runningtime is O(n)
+Priority queues #  a is complete b is complete c is incomplete d is not a binary tree e is incomplete f is complete
+a is a height of 0 b-d is a height of 1 e-f is a height of 2</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200930</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200930/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200930/</guid>
+      <description>Regarding quicksort 3-way #  Used for when there is a lot of duplicate keys, for example sorting by US state.
+Heap and priority queues #  Index starts at 1 so the math to find the child or parent works.
+Size starts at 0, but is incremented BEFORE it is used for the pq position.
+Space complexity of swim method is O(1).
+Swap root and highest index and decrement index to break it off</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201005</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201005/</guid>
+      <description>Assignment 1 solutions #  Heapsort #  With the goal of non-decreasing order.
+Sink each parent starting with the last, and working down.
+Now to sort, swap last element, reduce heap size, and sink item down
+The element at the end will be put into place.
+Running time for sink is O(lg(n)) Running time for entire sort is O(nlg(n)) worst case, best case)
+Space complexity for sink is O(1) Space complexity for sort is O(1)</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201007</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201007/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201007/</guid>
+      <description>Running time complexity: 3n + k) Space time complexity: O(n + k) Stable algorithm
+Sort from least significant position to most significant position
+ Runtime of findLargestStrings is O((n+m)log(m)) Space complexity is O(m)</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201012</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201012/</guid>
+      <description>Annoucements #  Midterm exam on 21, unless pushed back to 26th.
+The format is open book, open notes, no webcam. During class time so it will be timed. One question at a time, randomly shuffled, and you can&amp;rsquo;t go back to work on previous questions.
+Radix sort #  In this example: D = 3, K = 10. Sort from the least significant digit to the most significant digit.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201014</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201014/</guid>
+      <description>RE: Midterm exam #  Oct 26, 7p-8:15p
+Make sure to join using SSO.
+One question at a time, can&amp;rsquo;t go back. Open notes, open book.
+Binary search tree cont. #  Solutions for last exercises
+This is invalid
+This is valid
+This is valid
+Best case runtime is O(1). Worst case runtime is O(n).
+Best case space complexity is O(1). Worst case space complexity is O(n).
+Best case runtime for put method is O(1).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201019</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201019/</guid>
+      <description>BST cont. #  Running time is O(n). Space complexity best case is O(lgn). Space complexity worst case is O(n).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201021</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201021/</guid>
+      <description>Midterm review #  MidTermReview.txt
+Contents Everything covered from Module 1 to Module 6
+Analysis of algorithm
+ Asymptotic notations Best-case, average-case, worst-case Be able to provide time and space analysis for an given algorithm  Memory of a process
+ What are the four sections? (code, data, heap, stack) What does each section contain? Understand function call and stack-based memory allocation  Recursion
+ Base case Recursive vs. iterative approach, every recursive method can be implemented iteratively Consider stack-based memory allocation in space analysis  Sorting Algorithms</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201028</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201028/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201028/</guid>
+      <description>2-3 Tree #   An empty tree is a 2-3 A BST is a 2-3 search tree no is yes  Search miss
+Worst case running time for 2-3 tree search is O(lgn). Remember the height of a 2-3 tree is between (floor(\log_3 N)) and (floor(log_2 N)). So in the worst case it searches the entire height of the tree + 1.
+It inserts it into the 3 node to preserve the balance of the 2-3 tree.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201102</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201102/</guid>
+      <description>One line is black, 2 lines is red
+is false  Runtime of rotateLeft is O(1). Space complexity is O(1).
+Our definition is left leaning so it needs to be rotated left.
+The runtime of put is O(lgn). Space complexity is O(lgn).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201104</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201104/</guid>
+      <description>Midterm solutions #  Red-black BST exercise solution #  M is the number of children per node.
+Each non-leaf node has between 3 and 5 children for above example. Each leaf node has between 3 and 5 data items.
+Unordered symbol tables #  </description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201109</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201109/</guid>
+      <description>Hash codes should use all of the fields.
+Any perms of strings with the same letters will have the same hashcode, therefore this is a bad hash function.
+The worst case runtime for put is O(n). The best case runtime for put is O(1). Space complexity for put is O(1).
+Best case runtime for get is O(1) and worst case is O(n). Space complexity for get is O(1).
+The load factor is the number of key value pairs (N) divided by the table size (M), so (\frac{10}{5}).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201116</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201116/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201116/</guid>
+      <description>C goes to the next open value because they collide
+resize is called if the table is &amp;gt;= being half full.
+The first 8 insertions before the resize:
+Put the existing keys (they rehash), then continue putting the rest of the list
+A is true B is false C is true (another case of A basically) D is false (another case of B)
+For get: best case runtime is O(1), worst case is O(n).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201118</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201118/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201118/</guid>
+      <description>Suppose: n = inputs.length m)`
+Average runtime is O(n + m). Space complexity is O(m).
+Module 9, Ch 1.5 #  CORRECTION: Count should be decremented each time thru</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201123</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201123/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201123/</guid>
+      <description>Quick union example
+   index 0 1 2 3 4 5 6 7 8 9     id 1 1 1 8 3 0 5 1 8 8       id 0 1 2 3 4     id 1 2 3 4 4    O(n^2) runtime if unioning linear items.
+Weighted union example
+   id 0 1 2 3 4 5 6 7 8 9     id 6 2 6 4 4 6 6 2 4 4    CORRECTION: 0 should be the root.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201125</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201125/</guid>
+      <description>Answer: ( \frac{2E}{V}) avg number of degree.
+If you have V, no self loop, no parallel edges, what is maximum edges?
+Answer: ( \frac{V(V-1)}{2} )
+So if you have (V), considered sparse.
+Adjacency lists represent each edge twice, so the number of spaces taken (number of nodes) is (2E). So the full space used by this is (V + 2E), so our space complexity is O(E + V).
+(V - 1)  Depth-first search trace on whiteboard:</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201130</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201130/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201130/</guid>
+      <description>Exercise solns #  Graph cont. #  Gets shortest path because it starts by searching all edges that are 1 away, then 2 away, and so forth.
+Tracing the BFS implementation
+Enter the loop
+Path tree on right ^
+Performance:
+ Worst case runtime is O(E) or O(V+E) Worst case space complexity O(V), when every vertice is added to the queue   There is a maximum of (V(V-1)) vertices in a digraph with no parallel or self-loops.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201202</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201202/</guid>
+      <description>Exercise solutions #  On the whiteboard:
+Start on vertex 0
+Move onto vertex 2, need to exhaust all vertices
+Move onto vertex 7
+The reverse post order is : 8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4
+Graph cont. #  These are considered strongly connected. Also considered a strongly connected digraph.
+5 strongly connected components.
+Reversed graphs are still strongly connected in the same components.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201207</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201207/</guid>
+      <description>Exercise solutions #  Single source shortest paths #  TYPO fixed in column 5 relax 4:
+The max space taken by the IndexMinPQ is O(V - 1).
+Decimal to binary, and back
+Is a BST seach a P problem? Yes It is also a NP problem. It is not a NP-Complete problem.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201209</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201209/</guid>
+      <description>Review #  Assignment 5 solutions #  8:
+9:
+CORRECTION: 8 is a weight of 78, the picture is correct but the table shows 82.
+11:
+Assignment 4 solutions #  Rest of code in solutions on canvas
+Final review #  </description>
+    </item>
+    
+    <item>
+      <title>CS130-priority-queues</title>
+      <link>http://zedchance.github.io/CS130/CS130-priority-queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-priority-queues/</guid>
+      <description>Maxpq #  MaxPQ.java
+/** * MaxPQ (maximum priority queue) implemented from Algorithms (Sedgewick, Wayne) * pg. 318 */ public class MaxPQ&amp;lt;Key extends Comparable&amp;lt;Key&amp;gt;&amp;gt; { private Key[] pq; // heap-ordered complete binary tree  private int n = 0; // pq[0] is unused, heap uses pq[1..n]  /** * Create new empty max priority queue. * Useful if inserting one by one, where each element * is inserting at the end and &amp;#34;swims&amp;#34; up into place.</description>
+    </item>
+    
+    <item>
+      <title>CS130-sorting-algorithms</title>
+      <link>http://zedchance.github.io/CS130/CS130-sorting-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-sorting-algorithms/</guid>
+      <description>Merge #  Merge.java
+/** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200901</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200901/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200901/</guid>
+      <description>Syllabus #  CSC131Syllabus_Penn.pdf
+Send email prior to office hours, makes it easier.
+A team project will happen.
+Notes are allowed during quizes! Don&amp;rsquo;t miss a quiz!
+https://padlet.com/azizipenn/cuj51f9q36w079ko
+What is computer engineering? #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200903</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200903/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200903/</guid>
+      <description>HW 1 #  Article on Boeing 737 MAX disaster. Due next week.
+How do we create software? #  This is the &amp;ldquo;original approach&amp;rdquo; to software engineering:
+Deployments can be done by the developers, or a separate team. Maintenance is typically done by developers, original or not.
+SLDC Models #  Waterfall Model #  The completed output from one phase is the necessary input to the next level.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200908</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200908/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200908/</guid>
+      <description>Agile cont. #  The generic model for &amp;ldquo;doing&amp;rdquo; agile
+We will be using Scrum for this class.
+A daily standup is a timed event where the whole team gathers and stands together and checks in with each other.
+Retrospectives: at the end of a piece of work you will look back and try to improve.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200910</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200910/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200910/</guid>
+      <description>Breakout room exercise #  Our group is thinking waterfall.
+Agile
+Spiral
+ Agile frameworks #  An example of a Trello board</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200915</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200915/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200915/</guid>
+      <description>Annoucements #  First quiz at the end of next week, covers the first 4 weeks. It&amp;rsquo;ll be open over the weekend. Use case homework has been published. Going to hold off on discussion on the 737 MAX HW until case study is finished. Team survey is open!
+Software requirements #  How do you translate all of the elicited data into requirements?
+ In-Class_and_HW_Activity 3_Use Case Description.pdf
+Business Use Case Name: International flight check-in</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200917</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200917/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200917/</guid>
+      <description>Use case template recap #  Traditional requirements #  Agile requirements #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200922</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200922/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200922/</guid>
+      <description>3Cs #  https://docs.google.com/presentation/d/1zvpwRAHGJwOE9QqhNkLQHHftV6guk7rNxwDQ6RuYhZA/edit#slide=id.g998494e7fd_0_119
+https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/;WWWSESSIONID=C67B13698C795B1642BC5FB95C52D8F8.www1</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200924</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200924/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200924/</guid>
+      <description>Annoucements #  Quiz opens up tonight at midnight
+User stories cont #  Scrum #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20200929</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20200929/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200929/</guid>
+      <description>Annoucements #  HW4 is due Oct 5 Team assignment 1 agreement is posted
+3C examples #  A good example:
+A &amp;ldquo;cloudy&amp;rdquo; example:
+Another good example:
+&amp;ldquo;Kinda cloudy&amp;rdquo; example:
+Human computer interation concepts #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201001</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201001/</guid>
+      <description>HCI cont. #  ProjectDesc-OscarsProject.pdf
+Some questions we might want to ask:
+  How do the users usually watch movies
+ tv with streaming service pc with streaming service x3    how often do you watch movies
+  How far through the movies do you usually watch
+  What language do they speak
+  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201006</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201006/</guid>
+      <description>737 Boeing disaster #  Unexpected by the pilots, the engineers knew.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201008</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201008/</guid>
+      <description>HCI finished #  Accessability slide
+ </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201013</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201013/</guid>
+      <description>Project, sprint 0 #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201015</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201015/</guid>
+      <description>Git #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201020</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201020/</guid>
+      <description>Annoucements #  Our next quiz is next fri 30
+REST #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201022</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201022/</guid>
+      <description>Software architecture #  Architecture has styles, and this can be translated to software terms also
+CRC (Class responsibility collaboration) #  CRC Cards are a brainstorming technique to help you think about the design of your application.
+Like the 3C&amp;rsquo;s card, its meant to be done on a 3x5 card. The assumption is its not permanent, you&amp;rsquo;re not locked in.
+Classes should only be responsible for its own information. It shouldn&amp;rsquo;t be responsible for keeping track of or holding another class&amp;rsquo;s data.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201027</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201027/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201027/</guid>
+      <description>Sprint 0 Review and Retrospective #  The review is about the product.
+The retrospective is about the process. Make some concrete goals for the next sprint. Instead of &amp;ldquo;improve communication&amp;rdquo;, make it something concrete like &amp;ldquo;We agree to communicate via X and respond within Y time.&amp;rdquo;
+1. What went well in the sprint? #  Our team was able to create a persona from the contextual inquiry of multiple people.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201029</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201029/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201029/</guid>
+      <description>Reminder #  Quiz opens at fri and closes mon at midnight. 35 min to complete 17 questions.
+Architecture cont. #  SOA: Service oriented architecture</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201103</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201103/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201103/</guid>
+      <description>https://www.youtube.com/watch?v=UI6lqHOVHic</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201105</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201105/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201105/</guid>
+      <description>A solution
+&amp;ldquo;Design specs&amp;rdquo; aren&amp;rsquo;t a part of the agile process, but this basic idea holds in sprint plannings.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201110</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201110/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201110/</guid>
+      <description>Correction from UML lectures #  Correction: there is no distinction between a filled in triangle between inheritance when inheriting from abstract or concrete.
+SOLID cont. #  Code Design #  Singleton pattern #  Factory pattern #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201112</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201112/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201112/</guid>
+      <description>Architecture
+ Application – layers – what do the layers do Where do the different components live Whats the interface between layers  Design principles
+ Symptoms of bad design – rigid, fragile, easier to modify with hacks (viscosity) SOLID – employed by frameworks  Design patterns
+ Used in frameworks – a lot employ the factory pattern May be used ourselves, iterator pattern? Singleton?  On tuesday we need a diagram of the application structure.</description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201119</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201119/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201119/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201124</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201124/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201124/</guid>
+      <description>Final will be essay and same format as other exams. May be cumulative.
+Project management #  Verification and validation #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201201</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201201/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201201/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201203</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201203/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201203/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CS131-lecture-20201208</title>
+      <link>http://zedchance.github.io/CS131/CS131-lecture-20201208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201208/</guid>
+      <description>DevOps #  </description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-1</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-1/</guid>
+      <description>Study guide 1 #  Fall2020-Quiz 01 Study Guide_Revised.pdf
+1. Know one of the definitions of software engineering presented in class. #  2. Be able to identify an SDLC model given a diagram and/or it’s unique characteristics #  Waterfall #  The completed output from one phase is the necessary input to the next level.
+Prototype model #  Spiral model #  Adhoc model #  Agile #  3.</description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-2</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-2/</guid>
+      <description>Study guide 2 #  1. Know the main purpose and general process of conducting a Contextual Inquiry. #  2. Know what is a persona. #  3. Be able to describe the flow of an Activity Diagram. #  4. Know Scrum roles, artifacts and events. #    Understand their definition/purpose/responsibilities.
+  Know the Scrum lifecycle and order of events.
+  5. Know the 3C’s(Card, Conversation, Confirmation).</description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-3</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-3/</guid>
+      <description>Software Architecture #  1. Given an architecture diagram or description, identify the architecture style. #  2. Know 1 advantage and disadvantage of: #    Client-Server
+  Layered &amp;amp; Mutli-tiered
+  Model-View-Controller
+  Pipe and filter
+  3. Given a class diagram, answer some questions about relationships/properties. #  4. Name and explain(brief) some symptoms of poor design. #  5. Name and explain(brief) three general design principles.</description>
+    </item>
+    
+    <item>
+      <title>CS131-study-guide-4</title>
+      <link>http://zedchance.github.io/CS131/CS131-study-guide-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS131/CS131-study-guide-4/</guid>
+      <description>CS131-study-guide-1 #   Software engineering definitions SDLC lifecycles SDLC phases Pros and cons of each SDLC model Top agile techniques Agile frameworks, characteristics Scrum roles/responsibilities Requirements, properties of good requirements IEEE quality attributes Use case 3C&amp;rsquo;s User stories, how to break them up  CS131-study-guide-2 #   Contextual inquiry Persona Scrum roles, artifacts, events 3C&amp;rsquo;s Mockups, wireframe, story board Design elements, SAC, CAP FeVER XML, JSON 200, 404, 500 HTTP codes Git commands, basic  CS131-study-guide-3 #   Architecture style, monolith, client-server, layered, pipe/filter, event driven, model-view-controller, service based, microservice Advantages and disadvantages of architectures Class diagrams Symptoms of poor design Design principles, SOLID, KISS, YAGNI etc SOLID principles in detail Coupling and cohesion Why use design patterns?</description>
+    </item>
+    
+    <item>
+      <title>CS133-lecture-20210125</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210125/</guid>
+      <description>Abstraction #   A generalization of something too complext to be dealt with in its entirety For humans not computers  It is a techinque we use to compensate for the relatively puny capacity of our brains There aren&amp;rsquo;t enough neurons (or connections) in our brain to process the rich detail around us during a single moment in time   Successful designers developer abstractions and hierarchies of abstractions for complex entities and move up and down this hierarchy with splendid ease.</description>
+    </item>
+    
+    <item>
+      <title>CS133-lecture-20210208</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210208/</guid>
+      <description>UML #  Since there isn&amp;rsquo;t a way to pass a new DisplayPanel object into the constructor, it is a composition.
+Example CRC card building
+Clean code #  Design principles #  &amp;ldquo;The Art of Clean Code&amp;rdquo; video #  Summary:
+Victor Rentea&amp;rsquo;s clean code video had a lot of amazing information for making sure that the code you write is considered &amp;ldquo;clean.&amp;rdquo; I think that clean code is a very important part of being a good programmer because it conveys the sense that you care about your team&amp;rsquo;s ability to read your code.</description>
+    </item>
+    
+    <item>
+      <title>CS133-lecture-20210210</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210210/</guid>
+      <description>Inheritance #  Replace inheritance with delegation #  Polymorphism #  Interfaces #  Extending multiple interfaces only applies to other interfaces</description>
+    </item>
+    
+    <item>
+      <title>CS133-lecture-20210215</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210215/</guid>
+      <description>CN1 #  Components #  Layout managers #  Building the GUI #  </description>
+    </item>
+    
+    <item>
+      <title>CS133-lecture-20210217</title>
+      <link>http://zedchance.github.io/CS133/CS133-lecture-20210217/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210217/</guid>
+      <description>Event driven #  laidOut() is called once the component is fully &amp;ldquo;laid out&amp;rdquo; (once it&amp;rsquo;s drawn after the show() method is called).
+Command design pattern #  Observer design pattern #  The old way of doing it: #  </description>
+    </item>
+    
+    <item>
+      <title>CS135-hw-20210203</title>
+      <link>http://zedchance.github.io/CS135/CS135-hw-20210203/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-hw-20210203/</guid>
+      <description>FSM #  Alphabets: {a, b} or {0, 1}
+  Strings which begin and end with a different letter
+#alphabet a b #states 0 aa ab ba bb #initial 0 #accepting ab ba #transitions 0:a&amp;gt;aa 0:b&amp;gt;bb aa:a&amp;gt;aa aa:b&amp;gt;ab bb:b&amp;gt;bb bb:a&amp;gt;ba ab:b&amp;gt;ab ab:a&amp;gt;aa ba:a&amp;gt;ba ba:b&amp;gt;bb   Strings with at least 2 occurences of ab
+#alphabet a b #states 0 s1 1 s2 2 #initial 0 #accepting 2 #transitions 0:a&amp;gt;s1 0:b&amp;gt;0 s1:a&amp;gt;s1 s1:b&amp;gt;1 1:a&amp;gt;s2 1:b&amp;gt;1 s2:a&amp;gt;s2 s2:b&amp;gt;2 2:a&amp;gt;2 2:b&amp;gt;2   Strings with exactly one 0 and at least one 1</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210126</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210126/</guid>
+      <description>http://athena.ecs.csus.edu/~mei/135/index.html
+CT = Computing theory
+Resources on the Prof&amp;rsquo;s website for Set Theory to review
+This is not correct:</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210129</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210129/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210129/</guid>
+      <description>dfa.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210201</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210201/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210201/</guid>
+      <description>http://krovetz.net/135/module_reg/fa_design.html
+This FSM keeps track of whether there are an even or odd number of a&amp;rsquo;s.
+#alphabet a b #states even odd #initial even #accepting odd #transitions even:a&amp;gt;odd even:b&amp;gt;even odd:a&amp;gt;even odd:b&amp;gt;odd FSM Design advice #   Have a meaning for each state, its the only memory a FA has First write just the part that accepts good strings Make sure your FA is legal. Double check that every state has an arrow out for each alphabet symbol and that their&amp;rsquo;s a start state Try to break your solutions.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210204</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210204/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210204/</guid>
+      <description>re.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210205</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210205/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210205/</guid>
+      <description>DFA, RE, and NFA have equal expressive power.
+ Every DFA can be converted into an equivalent RE Every RE can be converted into an equivalent NFA Every NFA can be converted into an equivalent DFA  Today we will take a NFA and convert it into a DFA.
+abba will leave you in states 1 and 3.
+Our NFA:
+#states empty 13 2 23 3 123 #initial 13 #accepting 13 123 #alphabet a b #transitions 13:a&amp;gt;13 13:b&amp;gt;2 2:a&amp;gt;23 2:b&amp;gt;3 23:a&amp;gt;123 23:b&amp;gt;3 3:a&amp;gt;13 3:b&amp;gt;empty 123:a&amp;gt;123 123:b&amp;gt;23 empty:a&amp;gt;empty empty:b&amp;gt;empty This is now a legal DFA, except the accept state.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210209</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210209/</guid>
+      <description>How to show what a finite atomata can&amp;rsquo;t do #  Pumping Lemma for regular languages #  Let   \(M\)  be a DFA with  \(p\)  states. Let  \(s \in L(M)\)  , and  \(|s| \geq p\)  , &amp;ldquo;the length of  \(s\)  is greater than or equal to the number of states.&amp;rdquo;
+At one point we reach a state that is going to be visited twice first, we can call this &amp;ldquo;the first state that gets repeated.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210216</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210216/</guid>
+      <description>Regular languages #  Any language specifiable by regular expression or finite automata.
+RE to NFA #  Building blocks
+Example #  (0+1)*1</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210217</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210217/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210217/</guid>
+      <description>Example proofs for pumping lemma #  1 #  Let   \(L\)  be the set of all strings with an equal number of 0 and 1 over the alphabet {0,1}. i.e. { \(\lambda\)  , 01, 10, 0011, 0101, 0110, 1001 &amp;hellip;}
+Theorem:  \(L\)  is not regular.
+Proof:
+For purposes of contradicition assume  \(L\)  is regular. Because  \(L\)  is regular there must be a pumping length  \(p\)  .</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210218</title>
+      <link>http://zedchance.github.io/CS135/CS135-lecture-20210218/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210218/</guid>
+      <description>Immutability #  Strings in Java are an example of immutability.
+Something like
+s = s + &amp;#34;abc&amp;#34;; Actually creates a new object with the 2 new strings, and the reference to s is updated, but actual strings are immutable.
+Lists #  In Java a popular List class is LinkedList.
+A change to either a or b will change both!
+a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) cons stands for &amp;ldquo;construct new list from old.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210126</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210126/</guid>
+      <description>csc137syl Spring-2021.docx</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210128</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210128/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210128/</guid>
+      <description>Ch1.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210202</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210202/</guid>
+      <description>CSc 137 Presentation -Topics-1-1.docx
+How to convert 5.375 to a floating point representation using IEEE 754:
+ Convert the number to a binary representation Start with the whole part: 5 101 Then do the fractional part: .375 Using successive multiplication [0.375 * 2 = 0 + .75 \
+0.75 * 2 = 1 + .5 \ 0.5 * 5 = 1 + .0 ] So .375 = .011 So 5.375 = 101.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210204</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210204/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210204/</guid>
+      <description>Continued from last lecture:
+How to convert 5.375 to a floating point representation using IEEE 754:
+  Convert the number to a binary representation Start with the whole part: 5 = 101. Then do the fractional part: .375 Using successive multiplication
+  \[ \begin{aligned} 0.375 * 2 = 0 &amp;#43; .75 \\ 0.75 * 2 = 1 &amp;#43; .5 \\ 0.5 * 5 = 1 &amp;#43; .0 \end{aligned} \]  So .</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210209</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210209/</guid>
+      <description>Ch2.pdf
+LUT = lookup table
+SOP = sum of products
+DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together is the same as the two terms inverted and OR&amp;rsquo;d  Two or more variables NOR&amp;rsquo;d together is the same as the two variables inverted and AND&amp;rsquo;d together   Lets show this via tables for these two equations:
+  \[\begin{aligned} F1 &amp;amp;= F2 \\ \neg(A \cdot B) &amp;amp;= \neg A &amp;#43; \neg B \end{aligned}\]  Here is a table for  \(F1\)  :</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210211</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210211/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210211/</guid>
+      <description>A Karnaugh map is a graphical representation of a logic function. The map for   \(n\)  -input logic function is an array with  \(2^n\)  cells, (one for each possible input combination). To represent a logic function in a k-map, we copy the 1s from the truth table to the corresponding cells. Implicants are squares or rectangles made up of minterms Pairs of adjacent 1 cells in the k-map have minterms that differ in ONLY 1 variable The minterm pairs can be combined into a single product term using the generalization of theorem T10:  T10) = term   Thus, we can use k-maps to simplify the sum of the function.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210218</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210218/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210218/</guid>
+      <description>CPA cont. #  Design a 1-bit full adder #     Ax Bx C-in Sx C-out     0 0 0 0 0   0 0 1 1 0   0 1 0 1 0   0 1 1 0 1   1 0 0 1 0   1 0 1 0 1   1 1 0 0 1   1 1 1 1 1    We can reduce the diagonals in Sx: note that Sx is true if only 1 of the inputs is on, or all are on (this is XOR).</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210223</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210223/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210223/</guid>
+      <description>CS137-lecture-20210223 #  DeMorgan&amp;rsquo;s Theorem #  Theorem 1: \(\neg(x \cdot y) = \neg x + \neg y\)
+Theorem 2: \(\neg(x + y) = \neg x \cdot \neg y\)
+Steps to convert to all NAND gates:
+  Replace each NOT gate with its equivalent NAND gate. Connecting the inputs of a NAND gate makes a NOT gate.
+  Place two NOT gates on each of signals going into the final OR.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210126</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210126/</guid>
+      <description>syllabus_CSC138.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210128</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210128/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210128/</guid>
+      <description>Chapter_1_Intorduction to Computer Networks and the Internet.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210202</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210202/</guid>
+      <description>NAT = network address translator
+The packet transmission delay is the delay that it takes your computer to send the packet to the link. (Your car from the garage to the driveway).
+HFC = hybrid fiber coax
+Without fiber optic cable we could not span networks across oceans.
+Between the source and destination, what if there are N routers?
+((N+1) \frac{L}{R})
+The entire packet must fully arrive at the router before being transmitted.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210204</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210204/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210204/</guid>
+      <description>FDM = frequency division multiplexer TDM = time division multiplexer</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210209</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210209/</guid>
+      <description>The jump from 11 to 12 is crossing the atlantic ocean.
+So the answer is min(Rs, Rc).
+Layering can be harmful because each layer is only responsible for its own job, so if the presentation layer doesn&amp;rsquo;t encrypt, no other layers job to do that.
+Internet protocol stack is a practical perspective, ISO/OSI reference model is a reference perspective. The missing layers (presentation, session) must be implemented in the application layer if needed.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210211</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210211/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210211/</guid>
+      <description>RE: Wireshark lab 1. This is an intro to the wireshark software.
+observe that the en0 has activity. Double click the card with activity to start packet analyzing.
+ Hl), Hn = IP address, Ht = port number
+Each time the packet goes thru a router, it must go up to the network layer and back down.
+At the destination, the layers are removed on the way up to the application layer.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210216</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210216/</guid>
+      <description>Broadcast can only be based on UDP, because you don&amp;rsquo;t know where to make a connection.
+11 tcp connections are needed in total
+RTT = round trip time</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210218</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210218/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210218/</guid>
+      <description>https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/http-delay-estimation/index.html
+In piplining, the object requests are &amp;ldquo;back to back&amp;rdquo;
+The proxy server can have a web cache copy so it doesn&amp;rsquo;t have to request the origin again.
+Cache
+ hit, the request was cached miss, the request was not cached  </description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210223</title>
+      <link>http://zedchance.github.io/CS138/CS138-lecture-20210223/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210223/</guid>
+      <description>Average rate to browsers:
+  \[\begin{aligned} 100\text{ K } \cdot 15/\text{ sec } = 1.5 \text{ MBps } \end{aligned}\]  So our LAN utilization is:
+ \[\begin{aligned} \frac{1.5 \text{ Mbps }}{10 \text{ Mbps}} = 15\% \end{aligned}\]  And the access link utilization is:
+ \[\begin{aligned} \frac{1.5 \text{ Mbps }}{1.54 \text{ Mbps}} = 99\% \end{aligned}\]  Access link utilization:
+ \[\begin{aligned} 99\% \cdot 0.6 = 58\% \end{aligned}\]  Total delay:</description>
+    </item>
+    
+    <item>
+      <title>CS26-lecture-notes</title>
+      <link>http://zedchance.github.io/CS26/CS26-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS26/CS26-lecture-notes/</guid>
+      <description>CS 26 Lecture Notes #  Jan 28, 2019 #  Introduction #  Discrete: Not &amp;ldquo;discreet&amp;rdquo;, opposite of continuous, goes in steps. The graphs we worked with can only be expanded in steps, you can&amp;rsquo;t add a half edge or half vertex.
+Structure: a set of related values and the operations on them. (integers, graphs).
+Like a venn diagram of math and computer science, discrete structures is the combination.</description>
+    </item>
+    
+    <item>
+      <title>CS26-reading-notes</title>
+      <link>http://zedchance.github.io/CS26/CS26-reading-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS26/CS26-reading-notes/</guid>
+      <description>CS 26 Reading Notes #   Ch. 1 Number Representations  Ch. 1 Number Representations #  Theorem 1
+Let b be an integer greater than 1. Then if n is a positive integer, n can be expressed uniquely in the form
+ $n=a_k ·b^k +a_{k−1} ·b^{k−1} +···+a_1 ·b^1 +a_0 ·b^0$
+ where $k$ is a nonnegative integer, $a0, a1, · · · , ak$ are nonnegative integers less than $b$ and $ak ≠ 0$.</description>
+    </item>
+    
+    <item>
+      <title>CS39-lecture-notes</title>
+      <link>http://zedchance.github.io/CS39/CS39-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS39/CS39-lecture-notes/</guid>
+      <description>CS 39 Lecture notes #  Aug 21, 2018 #  Using ARM assembly language
+RISC - reduced instructions set computer
+ARM is a British company that designs intellectual property, now owned by a japanese company (Softbank).
+Last year there was 14 billion ARM chips produced
+Software you need:
+Keil ARM MDK - software development kit for M-series microcontrollers
+www.keil.com
+(Windows only)
+[X] Download Keil tool [2018-08-23]
+ Aug 23, 2018 #  A diagram of almost everything</description>
+    </item>
+    
+    <item>
+      <title>CS46-lecture-notes</title>
+      <link>http://zedchance.github.io/CS46/CS46-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS46/CS46-lecture-notes/</guid>
+      <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() { for (int i) { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } } #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Enter your agge: &amp;#34;); int age; scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7; printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
+    </item>
+    
+    <item>
+      <title>ENGL1B-assignment-8</title>
+      <link>http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/</guid>
+      <description>Assignment 8 Notes #  Walt Whitman video notes #   Seems that Whitman is more appreciated later in life Started as a printer when he was 12 His journalistic exposure led to his view on america Whitman wrote poetry that dealt with the world he knew, not normal feudal concepts that were out of reach to most Whitman brought in the everyday particulars &amp;ldquo;An American Bard&amp;rdquo;, but to be a bard you needed to see what was really around you, this included the new american world He loved american slang, the phrase &amp;ldquo;so long&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Luhn&#39;s Algorithm</title>
+      <link>http://zedchance.github.io/CS46/luhns.c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS46/luhns.c/</guid>
+      <description>&lt;h1 id=&#34;luhns-algorithm&#34;&gt;
+  Luhn&amp;rsquo;s Algorithm
+  &lt;a class=&#34;anchor&#34; href=&#34;#luhns-algorithm&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;An implementation of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Luhn_algorithm&#34;&gt;Luhn algorithm&lt;/a&gt; in the C language.&lt;/p&gt;
+&lt;p&gt;This algorithm is used for verification of credit card numbers. It is a simple to follow process that generates the last digit of the credit card (the checksum).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MATH100-lecture-notes</title>
+      <link>http://zedchance.github.io/MATH100/MATH100-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH100/MATH100-lecture-notes/</guid>
+      <description>Incomplete
+master.pdf</description>
+    </item>
+    
+    <item>
+      <title>MATH31-comparison-tests</title>
+      <link>http://zedchance.github.io/MATH31/MATH31-comparison-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH31/MATH31-comparison-tests/</guid>
+      <description>Comparison tests #  Idea: Compare one series to another with a known convergence/divergence (geometric, harmonic, p-series, etc).
+Suppose we have two series   \(\sum a_n\)  and  \(\sum b_n\)  with positive terms:
+ If  \(a_b &amp;lt; b_n\)  for all  \(n\)  , and  \(\sum b_n\)  converges, then  \(\sum a_n\)  also converges. If  \(a_b &amp;gt; b_n\)  for all  \(n\)  , and  \(\sum b_n\)  diverges, then  \(\sum a_n\)  also diverges.</description>
+    </item>
+    
+    <item>
+      <title>MATH31-integral-test</title>
+      <link>http://zedchance.github.io/MATH31/MATH31-integral-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH31/MATH31-integral-test/</guid>
+      <description>Integral test #  For   \(f(n))\)  is continous, positive, and decreasing, then we can use the integral to show convergence/divergence of our series.
+So:
+$$ \sum_{n=1}^\infty \text{ and } \int_1^\infty f(x)\ dx $$
+will have the same result (either converge or diverge).
+ This can tell you convergence/divergence, but does not necessarily give the sum of the series. Convergence is not affected by the addition or subtraction of a finite number of terms from our series.</description>
+    </item>
+    
+    <item>
+      <title>MATH31-series</title>
+      <link>http://zedchance.github.io/MATH31/MATH31-series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH31/MATH31-series/</guid>
+      <description>Series and sequences #  What is a series #  To evaluate series, first find the partial sum:
+  \[\begin{aligned} \sum_{n=1}^\infty n \\ S_n = 1 &amp;#43; 2 &amp;#43; 3 &amp;#43;\ ...\ &amp;#43; n \end{aligned}\]  Find the formula for  \(S_n\)  $$ S_n= \frac{n(n+1)}{2} $$
+Take the limit as  \(n \rightarrow \infty\)  $$ \lim_{n \rightarrow \infty} \frac{n(n+1)}{2} = \infty $$
+Telescoping #  These series look like two repeating fractions that end up canceling everything except something from the first term and something from the last.</description>
+    </item>
+    
+    <item>
+      <title>MATH31-unit-1</title>
+      <link>http://zedchance.github.io/MATH31/MATH31-unit-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH31/MATH31-unit-1/</guid>
+      <description>Unit 1 #  Notes #  Math 31 Exam 1 SOLN Fall 2018.pdf
+Exam stuff #  Math 31 Exam 1 SOLNS Spring 2018.pdf Math 31 Exam 1 SOLNS Spring 2019.pdf Math 31 Fall 2019 LN UNIT 1.pdf</description>
+    </item>
+    
+    <item>
+      <title>MATH31-unit-2</title>
+      <link>http://zedchance.github.io/MATH31/MATH31-unit-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH31/MATH31-unit-2/</guid>
+      <description>Unit 2 #  Notes #     Unit 2      Base notes Math 31 LN Differential Equations CH 9 REVISED Spring 2019.pdf    Math 31 LN UNIT 2 Chapter 6 Fall 2019.pdf    Math 31 UNIT 2 LN (part 2) Spring 2019.pdf   Exam stuff Math 31 Exam 2 SOLNS Spring 2019.pdf    Math 31 Exam 2 Spring 2020.</description>
+    </item>
+    
+    <item>
+      <title>MATH31-unit-3</title>
+      <link>http://zedchance.github.io/MATH31/MATH31-unit-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/MATH31/MATH31-unit-3/</guid>
+      <description>Unit 3 #  Notes: calculus.pdf
+ Math 31 Sequences and Series Part I Spring 2020.pdf Chance Zed Chapter 11 Assignment part 1.pdf
+Math 31 Series Assignment Part 2 Spring 2020.pdf Chance Zachary Chapter 11 Assignment Part 2.pdf
+Math 31 Chapter 11 Exam 3 Spring 2020.pdf Chance Zachary Exam 3.pdf</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-ec-lecture</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/</guid>
+      <description>Marybeth Gasman: Are we ready to educate a diverse nation? #  The landscape of higher education
+ 2014, for the first time the nation&amp;rsquo;s study body, K-12, was majority students of color 2019, almost half (45%) of the nation&amp;rsquo;s college students are students of color 2050, census data predicts that the US will be majority people of color  Faculty
+  88% of faculty at 60 top research universities is White</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20200831</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/</guid>
+      <description>Applied ethics #   Bioethics, medical ethics, environmental, animal, business, political, sexual, population&amp;hellip;  Why study applied ethics?
+ Philosophers are supposed to have a comparative advantage in argument and analysis Ethics is inherently something to apply  Philosphy
+ What is involved in doing philosophy well? Pursue the truth Better: present good reasons for thinking one has got things right How good to the reasons have to be? Philosophy isn&amp;rsquo;t supposed to be a game where different sides choose their favorite argument Supposed to avoid idealogical advocacy  Applied ethics and philosophy</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20200907</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/</guid>
+      <description>Lecture &amp;ldquo;In which I defend capitalism&amp;rdquo; #  Capitalism (the ideology) says:
+ Anything thats peaceful Voluntary trading. not war; not empire  Lecture on causes of wealth and nature #  </description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20200916</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/</guid>
+      <description>Capitalism socialism lecture #   Welfare economics #  7. econ2.pptx</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20200924</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/</guid>
+      <description>lockean property rights-revised.pdf Posner-IP.pdf</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20200927</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201008</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/</guid>
+      <description>Why are we &amp;ldquo;creeped out&amp;rdquo; when someone we don&amp;rsquo;t know knows something about us?
+Another example: a jointly authored book
+The question is: How free and open should it be?</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201014</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/</guid>
+      <description>a-short-introduction-to-the-world-of-cryptocurrencies.pdf</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201024</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/</guid>
+      <description>The Law and Economics of Internet Access #  Innovation and Sec 230
+ Develop and offer content without fear of legal liability &amp;ldquo;No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider.&amp;rdquo; Innovation: want to make it likely that we&amp;rsquo;ll have access to more awesome content.  Net neutrality and Title II FCC public utility regulation</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201028</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/</guid>
+      <description>Corporate Social Responsibility #  Markets, recap&amp;hellip; #   Market mechanisms vs political mechanisms for resource allocation You get (more!) effecient coordination without central direction in a system of property, contract, and consent. Private vices translate into public benefits Social obligations?  CSR #   Friedman&amp;rsquo;s main complain: &amp;ldquo;socially responsible&amp;rdquo; business amounts to a kind of fraud A violation of the fiduciary relatioinship between principal (owners, shareholders) and agent (CEO, management).</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201104</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/</guid>
+      <description>Market and government failures #  What is a market failure? #   A (n unregulated) market failed to generate an efficient outcome Not all the costs associated with a private transaction are internalized. For example: pollution. Or, certain goods/services will tend to be under-provided by the market because of a lack of incentives. For example: a lighthouse. An institution failed in some way: the market.  Typical argument #   Idealized perfectly competitive economic model of a market would achieve some socially optimal (or Pareto efficient) outcome Real world markets sometimes fail to achieve that outcome: &amp;ldquo;Market failure!</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201110</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/</guid>
+      <description>How to be a better person #  How can we manage for better behavior? #   Successful morality interventions need to be based on the correct model of moral psychology. The way to induce better behavior depends on how people make decisions.  Moral psychology #   A study to determine how people (fail to) make moral decisions. Behavioral ethics. Distinct from normative ethics: a study to determine what the moral (i.</description>
+    </item>
+    
+    <item>
+      <title>PHIL103-lecture-20201122</title>
+      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/</guid>
+      <description>Why be moral? #  Two questions
+ Descriptive: would you be moral if you could always get away with immorality? Normative: should you be moral if you could always get away with immorality? Normativity clarification: this is a rational should, not a moral should. Is morality rational?  Rational choice theory
+ People have a stable, ordered set of preferences. Actions have utility insofar as they satisfy these preferences. Rational agents always choose the action that has the highest expected utility in light of their preferences.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lab-20200326</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/</guid>
+      <description>Centripetal force lab #  The string holds the bob, and the entire mechanism spins in a circle to cause the bob to extend outward and hit the tape marker.
+Time for 20 revolutions
+Data measured is from inside to center of L
+Should be percent difference not % error
+Write a brief conclusion after the lab. Usually we try to make our experiments have a small percent error, but until now its been hard to tell if it is indeed small.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lab-20200402</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/</guid>
+      <description>Due in 3 weeks.
+The Ballistic Pendulum #  2 different ways to measure a projectile
+Watch the youtube video
+For the theory section: #  How to find initial velocity:
+Measure the total height
+And the length in the x direction
+Kinematics
+Then find total time
+Solve for t
+Plug back in
+To make the calculations:
+Horizontal measurements
+Both of these together is x total
+Then measure vertical
+Add both together to get y total</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lab-20200423</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/</guid>
+      <description>Today #  Lab 8 #  Gas pressure arises from the thermal energy of the gas molecules
+Pressure on the y axis, temp on x axis
+Graph the data, find the x intercept, and that should be near absolute zero. Compare that to the accepted absolute zero for percent diff.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200319</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/</guid>
+      <description>Announcements #   CH 8 HWs due tomorrow Quiz 6 due tomorrow  PDF   Power and Energy Lab due tomorrow Can come to either recitation meetings  Test 2 #   Tuesday 11a - 1p Given in docx and PDF Info posted in Course Info folder Just like in class, only use your big powerful brain and the crib sheet No outside help permitted Please do not post test on Cheggs or other websites, academic misconduct  </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200326</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/</guid>
+      <description>Anouncements #   HW 12 CH6 due tues HW 13 Office hour tomorrow at 11am We will meet for lab today (either meeting) Spring break is coming  Clicker question notes #  $$ \Sigma F = ma \
+\Sigma F = -mgy $$
+In circular motion the direction of the velocity is tangent to the circle.
+Circular motion and Gravity #  Major topics
+ Uniform circular motion Centripetal acceleration Gravitation  Circular motion #  Objects moving in a circular path are accelerating.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200331</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/</guid>
+      <description>Annoucements #   HW 13 due tonight HW 14 due fri Quiz 7 posted due 4/16 Centripetal force lab due Fri Recitation today: attend either session Lab on Thurs: attend either session Schedule update by thurs  Today #   More centripetal force  Clicker questions #  Problems #   Ball hanging from pendulum inside moving car turning at 10 mph, what is the radius of the turn?</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200402</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/</guid>
+      <description>Announcements #   HW 13 Ch 6 due tomorrow Quiz 7 due 4/14 Lab due tomorrow New lab today Revised schedule posted Office hour tomorrow @ 11am  Today #  Clicker questions #  Gravitational force is always attractive.
+To find the net force equaling 0, solve this for x:
+Lecture #  $G$ is really small, so for it to be appreciable at least one of the masses needs to be big (for instance Earth).</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200414</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/</guid>
+      <description>Anouncements #  Todays new material #  Clicker questions #  The mass of the satellites actually don&amp;rsquo;t matter
+The smaller the radius the faster the satelite.
+ The bigger the radius the longer the period.
+  Discussion #  Last chapter we introduced centripetal acceleration. We briefly introduced what happens when the speed doesn&amp;rsquo;t change. The tangenital component makes the accelerate faster in a circle.
+How do we get things spinning in a circle in the first place?</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200416</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/</guid>
+      <description>Announcements #  Today #  Clicker questions #     Discussion #  Weight of the beam is in the middle because it is uniform, and the center of mass is in the exact center.
+Two conditions for equilibrium, x is positive to right y is positive to up.
+Two equations and three unknowns. To get to the solution we need to use the sum of the torques = 0 also.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200421</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/</guid>
+      <description>Announcements #  No graphing exercises on upcoming test despite containing some kinematics.
+Today #  Clicker questions #  Radians are unitless. The 1/2 second doesn&amp;rsquo;t have anything to do with the problem.
+ Use the first equation
+You can also use this equation:
+ Use the third equation from above
+What is the initial tangential speed $v_{oT}$ and the tangential acceleration $a_T$?
+Its slowing down quite fast!
+ Discussion #  1:1 correspondence between transational motion and rotational motion.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200428</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/</guid>
+      <description>Announcements #  Test scores
+Probably cancel today&amp;rsquo;s recitation.
+Today #  Microscopid mechanics will have macroscopic ramifications. We&amp;rsquo;ll have to go over:
+ Heat Temperature Internal energy Thermal energy  Temperature #  Prof Harris will almost always use (U) for internal energy instead of (E).
+Temperature affects the vibrational energy (E_{vib}), rotational energy (E_{rot}), and the kinetic energy (KE).
+Thermal energy
+The aspects of the internal energy that is affected by thermal processes.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200430</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/</guid>
+      <description>Announcements #  Today #  Clickers #    Remember temperature is the average kinetic energy of the system.
+Discussion #   Note: Ability to derive this next part isn&amp;rsquo;t included in the test.
+ Look at a box with one particle:
+Now lets add a lot more particles:
+These don&amp;rsquo;t need to be derived, but understood. Will be useful on the next exam.
+The degree of freedom is the &amp;ldquo;number of boxes&amp;rdquo; you can divide the energy into.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200505</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/</guid>
+      <description>Announcements #  Class postponed until recitation.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200507</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/</guid>
+      <description>Announcements #  Clickers #    Discussion #  Convection:
+The warm air is pushed up by the cold air underneath it. Same as buoyant force! This is where the term &amp;ldquo;heat rises&amp;rdquo; comes from.
+Then the hot air cools and cycles down.
+Radiation:
+Infrared heat. Wavelengths that are longer than visible light.
+The emissivaty of 1 radiates a lot (like a black surface). Emissivaty of 0 radiates nothing.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200512</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/</guid>
+      <description>Announcements #  The open ended question on the exam will almost certainly be a heat engine problem.
+Today #  There will be recitation this afternoon.
+Clickers #    Quick review of thermal processes #  Isobaric (constant pressure)
+Isometric (constant volume)
+Isothermal (constant temperature)
+Adiabatic ((q)
+Remember:
+Discussion #  According to the second law of thermodynamics, there is no perfect heat engine.
+   </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-lecture-20200514</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/</guid>
+      <description>Announcements #  Today #  Clickers #   Clockwise around the PV diagram is negative work done on the gas.
+Discussion #  Container on the left contains 3 times the thermal energy because it has 3 times the amount of particles, even tho the temperatures are the same.
+The disorder is proportional to the number of available states (boxes that you can divide each curve into). More temp = more disordered state.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200331</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/</guid>
+      <description>Angular motion questions #  HW Questions #  1
+5
+Since traveling less than ideal speed the car slides down the bank.
+6
+Another problem #  A pendulum swings back and forth with a given length 2m. (Similar to quiz)
+It is moving tangenital at 8 m/s
+ What is the radial or centripetal acceleration?  What is the tangential acceleration?  What is the tension in the string?</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200414</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/</guid>
+      <description>Anouncements #  Quiz 7 #  Part 1 #  The shape made by swinging the string makes a cone.
+To find the angle look at the second equation.
+The radius of the circle is $lsin \theta$
+Solve for $v$.
+Part 2 #  Vertical circle
+We&amp;rsquo;re interested in the ball at three different points.
+Part A
+Solve for $v$
+Part B
+Solve for $v$
+Part C
+ HW #  2 #  Positive torque clockwise, negative torque CCW.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200416</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/</guid>
+      <description>This is usually lab time but today it will be recitation.
+Announcements #   Spine problem
+To find these unknowns we use the sum of the torques
+Fill out distances
+Find perpendicular components
+Solve for $F_m$
+Back muscle exerts 2.3 times your weight to hold you up!
+Total force
+Just bending over the force you put on your spine is 2.5 times your body weight.
+ Kinematics problem
+Final angular velocity will be 0</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200421</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/</guid>
+      <description>Quiz 8 #  Part 1
+What is the tension $T_L$?
+Part 2
+Because the disc is spinning you must add in the rotational component. $I$ Will be given.
+Doesn&amp;rsquo;t depend on mass.
+ Topics to be covered on exam #  Rotational translation
+Centripetal acceleration
+Gravitational laws
+Angular velocity
+If something is rolling
+ HW #  6 #  Convert to seconds
+Use the period around the sun to find the speed</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200428</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/</guid>
+      <description>Announcements #  Clicker #   The only thing that doesn&amp;rsquo;t change with temperature is mass.
+ Atoms are also mostly empty space.
+ Ideal gas law #  Molecules of a gas bouncing off the walls of a container on average is the gas pressure.
+Gas pressure arises from the temperature of the gas molecules.
+Increasing the temp increases the pressure. Increasing the number of molecules also increases the temperature.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200430</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/</guid>
+      <description>HW #  2 #  A
+B
+Solve for (K)
+5 #  7 #  Part b asks for the same thing but with water, then you find the difference in the overflows.
+Next HW #  For the next HW assignment we need to define gauge pressure.
+The gauge pressure is like what you measure when you measure your tire pressure. Its not the pressure of the gas inside, its the pressure of the gas inside above normal atmosphere.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200505</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/</guid>
+      <description>Announcements #  Today #  Discussion #  The melting process is breaking the bonds
+The temp stays the same while changing from liquid to gas also.
+Melting and evaporating are cooling processes.
+Freezizng and condensating are warming processes.
+ The system is the ice, aluminum, and the water. Isolated from the environment.
+There are three possible cases:
+We know the water and liquid will cool, but we&amp;rsquo;re letting the sign take care of it.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200507</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/</guid>
+      <description>Announcements #  Discussion #  N means no change C means change on this summary.
+  If you travel around a PV diagram in the clockwise direction the net work will be negative. If counterclockwise, the work done on the gas is positive.
+HW #  5 tonights #  7 tomorrows #  </description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200512</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/</guid>
+      <description>Announcements #  HW #  3 #  4 #  7 #   Other questions #  It is reflecting all colors because of its crystal structure, so it is not absorbing a lot of heat.  It adds a lot of thermal mass so it takes a lot more energy to cool down the entire room.
+Air is a worse conductor of heat than water.
+Shiney side will reflect more, so shiny side in lets heat thru then traps it inside.</description>
+    </item>
+    
+    <item>
+      <title>PHYS105-recitation-20200514</title>
+      <link>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/</guid>
+      <description>HW 22 #  4 #  Solve for (T_H)
+10 #  HW 21 #  2 #  Quiz 11 #  Calculate the value (P_A) and the circled empty values of the table:</description>
+    </item>
+    
+    <item>
+      <title>STATS50-lecture-notes</title>
+      <link>http://zedchance.github.io/STATS50/STATS50-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/STATS50/STATS50-lecture-notes/</guid>
+      <description>lecture_notes.pdf</description>
+    </item>
+    
+  </channel>
+</rss>

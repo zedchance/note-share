@@ -1,0 +1,3948 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CS 13 Lecture Notes #  Jan 28, 2019 #   Download BlueJ [2019-01-29]  Weather class #  public class Weather { private double highTemp; private double lowTemp; private String condition; private int rainChain; public Weather (double h, double l, String c, int r) { highTemp = h; lowTemp = l; condition = c; rainChain = r; } public double delta() { return highTemp - lowTemp; } public String toString() { return &#34;High: &#34; &#43; highTemp &#43; &#34;, Low: &#34; &#43; lowTemp &#43; &#34;, Condition: &#34; &#43; condition &#43; &#34;, Chance of rain: &#34; &#43; rainChance; } } Using this class we can make another to populate a forecast">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS13-lecture-notes" />
+<meta property="og:description" content="CS 13 Lecture Notes #  Jan 28, 2019 #   Download BlueJ [2019-01-29]  Weather class #  public class Weather { private double highTemp; private double lowTemp; private String condition; private int rainChain; public Weather (double h, double l, String c, int r) { highTemp = h; lowTemp = l; condition = c; rainChain = r; } public double delta() { return highTemp - lowTemp; } public String toString() { return &#34;High: &#34; &#43; highTemp &#43; &#34;, Low: &#34; &#43; lowTemp &#43; &#34;, Condition: &#34; &#43; condition &#43; &#34;, Chance of rain: &#34; &#43; rainChance; } } Using this class we can make another to populate a forecast" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zedchance.github.io/CS13/CS13-lecture-notes/" />
+
+<title>CS13-lecture-notes | Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
+<script defer src="/en.search.min.7e6ef5189d02a74db84eb4c019c821b289d74a85c2b5286d5dd13c5be3f9c638.js" integrity="sha256-fm71GJ0Cp024TrTAGcghsonXSoXCtShtXdE8W&#43;P5xjg="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</head>
+
+<body dir="ltr">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: true},
+                  {left: "\\(", right: "\\)", display: true}
+              ]
+          }
+      );
+    </script>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e1a1b689fe907f6677087e2d9b539d9" class="toggle"  />
+    <label for="section-6e1a1b689fe907f6677087e2d9b539d9" class="flex justify-between">
+      <a  class="">CS10</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS10/CS10-Processing-labs/" class="">CS10-labs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06677567046f19eb3dacf987145475f" class="toggle"  />
+    <label for="section-d06677567046f19eb3dacf987145475f" class="flex justify-between">
+      <a  class="">CS12</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS12/CS12-lecture-notes/" class="">CS12-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98a455a71c68533365837514b17a9eb9" class="toggle" checked />
+    <label for="section-98a455a71c68533365837514b17a9eb9" class="flex justify-between">
+      <a  class="">CS13</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS13/CS13-lecture-notes/" class=" active">CS13-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9490b93202949ed3704ff9f858ef63c3" class="toggle"  />
+    <label for="section-9490b93202949ed3704ff9f858ef63c3" class="flex justify-between">
+      <a  class="">CS130</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-exercise-solutions-1/" class="">CS130-exercise-solutions-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200831/" class="">CS130-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200902/" class="">CS130-lecture-20200902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200909/" class="">CS130-lecture-20200909</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200914/" class="">CS130-lecture-20200914</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200916/" class="">CS130-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200921/" class="">CS130-lecture-20200921</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200923/" class="">CS130-lecture-20200923</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200928/" class="">CS130-lecture-20200928</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20200930/" class="">CS130-lecture-20200930</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201005/" class="">CS130-lecture-20201005</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201007/" class="">CS130-lecture-20201007</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201012/" class="">CS130-lecture-20201012</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201014/" class="">CS130-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201019/" class="">CS130-lecture-20201019</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201021/" class="">CS130-lecture-20201021</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201028/" class="">CS130-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201102/" class="">CS130-lecture-20201102</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201104/" class="">CS130-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201109/" class="">CS130-lecture-20201109</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201116/" class="">CS130-lecture-20201116</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201118/" class="">CS130-lecture-20201118</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201123/" class="">CS130-lecture-20201123</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201125/" class="">CS130-lecture-20201125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201130/" class="">CS130-lecture-20201130</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201202/" class="">CS130-lecture-20201202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201207/" class="">CS130-lecture-20201207</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-lecture-20201209/" class="">CS130-lecture-20201209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-priority-queues/" class="">CS130-priority-queues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS130/CS130-sorting-algorithms/" class="">CS130-sorting-algorithms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7685cd96811cc43c9ecd205128385c1" class="toggle"  />
+    <label for="section-a7685cd96811cc43c9ecd205128385c1" class="flex justify-between">
+      <a  class="">CS131</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200901/" class="">CS131-lecture-20200901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200903/" class="">CS131-lecture-20200903</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200908/" class="">CS131-lecture-20200908</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200910/" class="">CS131-lecture-20200910</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200915/" class="">CS131-lecture-20200915</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200917/" class="">CS131-lecture-20200917</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200922/" class="">CS131-lecture-20200922</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200924/" class="">CS131-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20200929/" class="">CS131-lecture-20200929</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201001/" class="">CS131-lecture-20201001</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201006/" class="">CS131-lecture-20201006</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201008/" class="">CS131-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201013/" class="">CS131-lecture-20201013</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201015/" class="">CS131-lecture-20201015</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201020/" class="">CS131-lecture-20201020</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201022/" class="">CS131-lecture-20201022</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201027/" class="">CS131-lecture-20201027</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201029/" class="">CS131-lecture-20201029</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201103/" class="">CS131-lecture-20201103</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201105/" class="">CS131-lecture-20201105</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201110/" class="">CS131-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201112/" class="">CS131-lecture-20201112</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201119/" class="">CS131-lecture-20201119</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201124/" class="">CS131-lecture-20201124</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201201/" class="">CS131-lecture-20201201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201203/" class="">CS131-lecture-20201203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-lecture-20201208/" class="">CS131-lecture-20201208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-1/" class="">CS131-study-guide-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-2/" class="">CS131-study-guide-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-3/" class="">CS131-study-guide-3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS131/CS131-study-guide-4/" class="">CS131-study-guide-4</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ea6710cf4db85b6757a42f14aedf299" class="toggle"  />
+    <label for="section-9ea6710cf4db85b6757a42f14aedf299" class="flex justify-between">
+      <a  class="">CS133</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210125/" class="">CS133-lecture-20210125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210208/" class="">CS133-lecture-20210208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210210/" class="">CS133-lecture-20210210</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210215/" class="">CS133-lecture-20210215</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS133/CS133-lecture-20210217/" class="">CS133-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6c9e9a90396154c6e5e42bf42955eff" class="toggle"  />
+    <label for="section-f6c9e9a90396154c6e5e42bf42955eff" class="flex justify-between">
+      <a  class="">CS135</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-hw-20210203/" class="">CS135-hw-20210203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210126/" class="">CS135-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210129/" class="">CS135-lecture-20210129</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210201/" class="">CS135-lecture-20210201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210204/" class="">CS135-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210205/" class="">CS135-lecture-20210205</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210209/" class="">CS135-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210216/" class="">CS135-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210217/" class="">CS135-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS135/CS135-lecture-20210218/" class="">CS135-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eaf59c9d6b1b58452cc45e5585dd0717" class="toggle"  />
+    <label for="section-eaf59c9d6b1b58452cc45e5585dd0717" class="flex justify-between">
+      <a  class="">CS137</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210216/" class="">CS137-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210126/" class="">CS137-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210128/" class="">CS137-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210202/" class="">CS137-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210204/" class="">CS137-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210209/" class="">CS137-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210211/" class="">CS137-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210218/" class="">CS137-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e470c63ab7ad9a473e61272e98b3bcce" class="toggle"  />
+    <label for="section-e470c63ab7ad9a473e61272e98b3bcce" class="flex justify-between">
+      <a  class="">CS138</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210126/" class="">CS138-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210128/" class="">CS138-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210202/" class="">CS138-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210204/" class="">CS138-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210209/" class="">CS138-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210211/" class="">CS138-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210216/" class="">CS138-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210218/" class="">CS138-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-356e0128f78fd703af66d8abf4ebf976" class="toggle"  />
+    <label for="section-356e0128f78fd703af66d8abf4ebf976" class="flex justify-between">
+      <a  class="">CS26</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-lecture-notes/" class="">CS26-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS26/CS26-reading-notes/" class="">CS26-reading-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98681ab3e1e8c09eb7daeac8547903e6" class="toggle"  />
+    <label for="section-98681ab3e1e8c09eb7daeac8547903e6" class="flex justify-between">
+      <a  class="">CS39</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS39/CS39-lecture-notes/" class="">CS39-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe80ac56b57c0244f1c986628504841" class="toggle"  />
+    <label for="section-8fe80ac56b57c0244f1c986628504841" class="flex justify-between">
+      <a  class="">CS46</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/CS46-lecture-notes/" class="">CS46-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/CS46/luhns.c/" class="">Luhn&#39;s Algorithm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="toggle"  />
+    <label for="section-822f50bdfc15aab405fdfeb8c8dcccf6" class="flex justify-between">
+      <a  class="">CS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="toggle"  />
+    <label for="section-8f5ae0830ad131b6d50d8214d82f2c4e" class="flex justify-between">
+      <a  class="">ENGL1B</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/ENGL1B/ENGL1B-assignment-8/" class="">ENGL1B-assignment-8</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92d8bad8aa3f85c10048f789591cd9d3" class="toggle"  />
+    <label for="section-92d8bad8aa3f85c10048f789591cd9d3" class="flex justify-between">
+      <a  class="">MATH100</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH100/MATH100-lecture-notes/" class="">MATH100-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0495fd11e1626446d2b1cf0439989d77" class="toggle"  />
+    <label for="section-0495fd11e1626446d2b1cf0439989d77" class="flex justify-between">
+      <a  class="">MATH31</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-comparison-tests/" class="">MATH31-comparison-tests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-integral-test/" class="">MATH31-integral-test</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-series/" class="">MATH31-series</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-1/" class="">MATH31-unit-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-2/" class="">MATH31-unit-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/MATH31/MATH31-unit-3/" class="">MATH31-unit-3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d4164ee5c968fdda8d4b42b98383d88" class="toggle"  />
+    <label for="section-1d4164ee5c968fdda8d4b42b98383d88" class="flex justify-between">
+      <a  class="">PHIL103</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-ec-lecture/" class="">PHIL103-ec-lecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200831/" class="">PHIL103-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200907/" class="">PHIL103-lecture-20200907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200916/" class="">PHIL103-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200924/" class="">PHIL103-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20200927/" class="">PHIL103-lecture-20200927</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201008/" class="">PHIL103-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201014/" class="">PHIL103-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201024/" class="">PHIL103-lecture-20201024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201028/" class="">PHIL103-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/" class="">PHIL103-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201110/" class="">PHIL103-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/" class="">PHIL103-lecture-20201122</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-71647d44f109da70d5305fe9e01e1a51" class="toggle"  />
+    <label for="section-71647d44f109da70d5305fe9e01e1a51" class="flex justify-between">
+      <a  class="">PHYS105</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-resources/" class="">PHYS105-resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200326/" class="">PHYS105-lab-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200402/" class="">PHYS105-lab-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lab-20200423/" class="">PHYS105-lab-20200423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200319/" class="">PHYS105-lecture-20200319</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200326/" class="">PHYS105-lecture-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200331/" class="">PHYS105-lecture-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200402/" class="">PHYS105-lecture-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200414/" class="">PHYS105-lecture-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200416/" class="">PHYS105-lecture-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200421/" class="">PHYS105-lecture-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200428/" class="">PHYS105-lecture-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200430/" class="">PHYS105-lecture-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200505/" class="">PHYS105-lecture-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200507/" class="">PHYS105-lecture-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200512/" class="">PHYS105-lecture-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-lecture-20200514/" class="">PHYS105-lecture-20200514</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200331/" class="">PHYS105-recitation-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200414/" class="">PHYS105-recitation-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200416/" class="">PHYS105-recitation-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200421/" class="">PHYS105-recitation-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200428/" class="">PHYS105-recitation-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200430/" class="">PHYS105-recitation-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200505/" class="">PHYS105-recitation-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200507/" class="">PHYS105-recitation-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200512/" class="">PHYS105-recitation-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/PHYS105/PHYS105-recitation-20200514/" class="">PHYS105-recitation-20200514</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2051d762fa29d975e5db96fff6a3c194" class="toggle"  />
+    <label for="section-2051d762fa29d975e5db96fff6a3c194" class="flex justify-between">
+      <a  class="">STATS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/STATS50/STATS50-lecture-notes/" class="">STATS50-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CS13-lecture-notes</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jan-28-2019">Jan 28, 2019</a>
+      <ul>
+        <li><a href="#weather-class">Weather class</a></li>
+      </ul>
+    </li>
+    <li><a href="#jan-30-2019">Jan 30, 2019</a>
+      <ul>
+        <li><a href="#constructors">Constructors</a></li>
+        <li><a href="#about-this-class">About this class</a></li>
+        <li><a href="#arrays">Arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-4-2019">Feb 4, 2019</a>
+      <ul>
+        <li><a href="#expanding-arrays">Expanding arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-6-2019">Feb 6, 2019</a>
+      <ul>
+        <li><a href="#more-methods-for-our-metaarray-class">More methods for our MetaArray class</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-11-2019">Feb 11, 2019</a>
+      <ul>
+        <li><a href="#generic-data-types">Generic data types</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-13-2019">Feb 13, 2019</a>
+      <ul>
+        <li><a href="#evens-game">&ldquo;Evens&rdquo; game</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-20-2019">Feb 20, 2019</a>
+      <ul>
+        <li><a href="#linked-lists">Linked lists</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-25-2019">Feb 25, 2019</a>
+      <ul>
+        <li><a href="#llist-continued">LList continued</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-27-2019">Feb 27, 2019</a>
+      <ul>
+        <li><a href="#speed-of-our-metaarray-and-llist">Speed of our MetaArray and LList</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-4-2019">Mar 4, 2019</a>
+      <ul>
+        <li><a href="#stacks">Stacks</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-6-2019">Mar 6, 2019</a>
+      <ul>
+        <li><a href="#dog-class">Dog class</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-11-2019">Mar 11, 2019</a>
+      <ul>
+        <li><a href="#llist-unit-tests">LList unit tests</a></li>
+        <li><a href="#postfix-notation">Postfix notation</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-13-2019">Mar 13, 2019</a>
+      <ul>
+        <li><a href="#postfix-stack">Postfix stack</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-18-2019">Apr 18, 2019</a>
+      <ul>
+        <li><a href="#javafx">JavaFX</a></li>
+      </ul>
+    </li>
+    <li><a href="#smoot-calc">Smoot calc</a></li>
+    <li><a href="#mar-27-2019">Mar 27, 2019</a>
+      <ul>
+        <li><a href="#git">Git</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-22-2019">Apr 22, 2019</a>
+      <ul>
+        <li><a href="#json-data-from-java-class">JSON data from Java class</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-24-2019">Apr 24, 2019</a>
+      <ul>
+        <li><a href="#sanitizing-data">Sanitizing data</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-15-2019">May 15, 2019</a></li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/java/">java</a></li>
+  
+  </ul>
+</nav>
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cs-13-lecture-notes">
+  CS 13 Lecture Notes
+  <a class="anchor" href="#cs-13-lecture-notes">#</a>
+</h1>
+<h2 id="jan-28-2019">
+  Jan 28, 2019
+  <a class="anchor" href="#jan-28-2019">#</a>
+</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Download BlueJ</em></del> [2019-01-29]</li>
+</ul>
+<h3 id="weather-class">
+  Weather class
+  <a class="anchor" href="#weather-class">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Weather</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> highTemp<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> lowTemp<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> String condition<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> rainChain<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Weather</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> h<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> l<span style="color:#f92672">,</span> String c<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> r<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      highTemp <span style="color:#f92672">=</span> h<span style="color:#f92672">;</span>
+      lowTemp <span style="color:#f92672">=</span> l<span style="color:#f92672">;</span>
+      condition <span style="color:#f92672">=</span> c<span style="color:#f92672">;</span>
+      rainChain <span style="color:#f92672">=</span> r<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">delta</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> highTemp <span style="color:#f92672">-</span> lowTemp<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;High: &#34;</span> <span style="color:#f92672">+</span> highTemp <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Low: &#34;</span> <span style="color:#f92672">+</span> lowTemp <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Condition: &#34;</span> <span style="color:#f92672">+</span> condition <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Chance of rain: &#34;</span> <span style="color:#f92672">+</span> rainChance<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Using this class we can make another to populate a forecast</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Forecast</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> Weather days<span style="color:#f92672">[];</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> nextDay<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Forecast</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      days <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Weather<span style="color:#f92672">[</span>4<span style="color:#f92672">];</span>
+      nextDay <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addDay</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> h<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> l<span style="color:#f92672">,</span> String c<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> r<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      Weather w<span style="color:#f92672">);</span>
+      days<span style="color:#f92672">[</span>nextDay<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> w<span style="color:#f92672">;</span>
+      nextDay<span style="color:#f92672">++;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>days<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+      <span style="color:#f92672">}</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="jan-30-2019">
+  Jan 30, 2019
+  <a class="anchor" href="#jan-30-2019">#</a>
+</h2>
+<h3 id="constructors">
+  Constructors
+  <a class="anchor" href="#constructors">#</a>
+</h3>
+<p>Purpose of the constructor: Initialize variables, and do any other work necessary to get the object usable. The <code>new</code> keyboard actually makes the object, not the constructor.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Weather w<span style="color:#f92672">);</span>
+</code></pre></div><p>The <code>new</code> keyboard happens first, which allocates memory for the object. Then the constructor is called and the object is filled with the parameters. Then finally the address set aside by <code>new</code> is set to the <code>w</code> variable.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Weather x <span style="color:#f92672">=</span> w<span style="color:#f92672">;</span>
+</code></pre></div><p><code>x</code> will contain the same address that <code>w</code> contains.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Forecast f<span style="color:#f92672">);</span>
+</code></pre></div><p><code>f</code> points at the address of a new <code>Forecast</code> object, which has another pointer to an array filled with nulls.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">f<span style="color:#f92672">.</span><span style="color:#a6e22e">addDay</span><span style="color:#f92672">(</span>60<span style="color:#f92672">,</span> 40<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Cloudy&#34;</span><span style="color:#f92672">,</span> 10<span style="color:#f92672">);</span>
+</code></pre></div><p>This creates a weather object that then gets filled with the parameters from the constructor. The address that is inside the <code>w</code> object is then copied to the first slot in the array. The <code>w</code> object then dies when it leaves the scope of the method.</p>
+<h3 id="about-this-class">
+  About this class
+  <a class="anchor" href="#about-this-class">#</a>
+</h3>
+<p>First half:</p>
+<ul>
+<li>Builds upon CS12 (variables, loops, conditionals, objects, classes)</li>
+<li>Starts to look at more complicated data structures</li>
+</ul>
+<p>Second half:</p>
+<ul>
+<li>Larger projects</li>
+<li>Team work, collaboration</li>
+<li>Version control</li>
+<li>Communication tools</li>
+</ul>
+<h3 id="arrays">
+  Arrays
+  <a class="anchor" href="#arrays">#</a>
+</h3>
+<p><code>int[] a = new int[10];</code> is valid</p>
+<p><code>int b[10];</code> is not valid in Java</p>
+<p><code>a[5] = 6;</code> is valid because they are both array.</p>
+<p><code>a[6] = &quot;Hello&quot;;</code> is not valid because it is a type mismatch.</p>
+<p><code>a[a[5]] = 8;</code> is valid, <code>a[5]</code> evaluates to an integer, so it puts 8 into <code>a[6]</code>. Whatever is inside the square brackets must evaluate to an integer.</p>
+<p>Limitations:</p>
+<ul>
+<li>Can&rsquo;t change the size of an array once declared.</li>
+<li>Can&rsquo;t access out of bounds</li>
+<li>Can&rsquo;t delete an element</li>
+<li>Can&rsquo;t search for an element</li>
+<li>Can&rsquo;t sort them</li>
+</ul>
+<hr>
+<h2 id="feb-4-2019">
+  Feb 4, 2019
+  <a class="anchor" href="#feb-4-2019">#</a>
+</h2>
+<p>Why do classes/objects exist?</p>
+<ul>
+<li>A class lets us group related data together</li>
+<li>Attach code (methods) to the data</li>
+<li>Structurally encapsulate things to organize larger projects</li>
+</ul>
+<p>The purpose of a class is to package data together and provide methods to manipulate the data.</p>
+<p>For example in a class called Player for the super mario bros game:
+Data</p>
+<ul>
+<li>size</li>
+<li>color</li>
+<li>speed</li>
+<li>x</li>
+<li>y</li>
+<li>isSolid</li>
+<li>score</li>
+<li>lives</li>
+</ul>
+<p>Actions (methods)</p>
+<ul>
+<li>run</li>
+<li>jump</li>
+<li>fall</li>
+<li>duck</li>
+<li>die</li>
+<li>slideDown</li>
+<li>goToNextLevel</li>
+<li>shoot</li>
+<li>spawn</li>
+<li>pause</li>
+</ul>
+<h3 id="expanding-arrays">
+  Expanding arrays
+  <a class="anchor" href="#expanding-arrays">#</a>
+</h3>
+<p><code>String[] arr)];</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ElastArray</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> String arr<span style="color:#f92672">[];</span>
+   <span style="color:#66d9ef">int</span> size<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ElastArray</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[</span>5<span style="color:#f92672">];</span>
+      size <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>size<span style="color:#f92672">)</span> <span style="color:#75715e">//array full
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span>
+         String<span style="color:#f92672">[]</span> arr2<span style="color:#f92672">)];</span> <span style="color:#75715e">//create expanded array
+</span><span style="color:#75715e"></span>
+         <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span> <span style="color:#75715e">//copy old values
+</span><span style="color:#75715e"></span>         <span style="color:#f92672">{</span>
+            arr2<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+         <span style="color:#f92672">}</span>
+
+         arr <span style="color:#f92672">=</span> arr2<span style="color:#f92672">;</span> <span style="color:#75715e">//point old array to new
+</span><span style="color:#75715e"></span>         arr<span style="color:#f92672">[</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> s<span style="color:#f92672">;</span> <span style="color:#75715e">//add string
+</span><span style="color:#75715e"></span>         size<span style="color:#f92672">++;</span>
+      <span style="color:#f92672">}</span>
+      <span style="color:#66d9ef">else</span>
+      <span style="color:#f92672">{</span>
+         arr<span style="color:#f92672">[</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> s<span style="color:#f92672">;</span> <span style="color:#75715e">//add string
+</span><span style="color:#75715e"></span>         size<span style="color:#f92672">++;</span>
+      <span style="color:#f92672">}</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="feb-6-2019">
+  Feb 6, 2019
+  <a class="anchor" href="#feb-6-2019">#</a>
+</h2>
+<h3 id="more-methods-for-our-metaarray-class">
+  More methods for our MetaArray class
+  <a class="anchor" href="#more-methods-for-our-metaarray-class">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e">* Clear out entire array
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clear</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Delete an element from the array, reducing its size
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Replace the element at index with new string
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">,</span> String s<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Return the element at a given index
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Insert a new element into array
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">,</span> String s<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Return how many items in the array
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">()</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Search the array for the target. Return the index
+</span><span style="color:#75715e">* of the first occurrence.
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span>String target<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* Returns true if the array contains the string
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>String target<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Insert method</p>
+<ul>
+<li>Should insert object into the index, and shift everything else down.</li>
+<li>How to:
+<ul>
+<li>Must start at the right and shift things down while greater then the index.</li>
+</ul>
+</li>
+</ul>
+<p>Exception:
+A catastrophic error occurred. Causes program to terminate. Goes &ldquo;around' the normal return channel. When exceptions are generated, they are thrown. The caller will catch it.</p>
+<hr>
+<h2 id="feb-11-2019">
+  Feb 11, 2019
+  <a class="anchor" href="#feb-11-2019">#</a>
+</h2>
+<h3 id="generic-data-types">
+  Generic data types
+  <a class="anchor" href="#generic-data-types">#</a>
+</h3>
+<p>To specify a data type that can be a variable, you can use angle brackets after the class name.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Box</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">{</span>
+    T x<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Box</span><span style="color:#f92672">()</span>
+    <span style="color:#f92672">{</span>
+        x <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Box</span><span style="color:#f92672">(</span>T o<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        x <span style="color:#f92672">=</span> o<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>T value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>x <span style="color:#f92672">=</span> value<span style="color:#f92672">;}</span>
+    <span style="color:#66d9ef">public</span> T <span style="color:#a6e22e">get</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x<span style="color:#f92672">;}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The <code>&lt;T&gt;</code> after the class name makes the actual data type that a Box object is made of a variable. That way you can make a Box that holds any data type, but only that data type.</p>
+<p>When creating the object, you must specify the data type in angle brackets:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Box<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> b<span style="color:#f92672">);</span>
+</code></pre></div><hr>
+<h2 id="feb-13-2019">
+  Feb 13, 2019
+  <a class="anchor" href="#feb-13-2019">#</a>
+</h2>
+<h3 id="evens-game">
+  &ldquo;Evens&rdquo; game
+  <a class="anchor" href="#evens-game">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Evens</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> pile<span style="color:#f92672">,</span> p1<span style="color:#f92672">,</span> p2<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> String p1name<span style="color:#f92672">,</span> p2name<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> turn<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Evens</span><span style="color:#f92672">(</span>String p1n<span style="color:#f92672">,</span> String p2n<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      p1name <span style="color:#f92672">=</span> p1n<span style="color:#f92672">;</span>
+      p2name <span style="color:#f92672">=</span> p2n<span style="color:#f92672">;</span>
+      pile <span style="color:#f92672">=</span> 15<span style="color:#f92672">;</span>
+      p1 <span style="color:#f92672">=</span> p2 <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+      turn <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">take</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;</span> pile <span style="color:#f92672">||</span> a <span style="color:#f92672">&gt;</span> 3 <span style="color:#f92672">||</span> a <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">||</span> isGameOver<span style="color:#f92672">())</span>
+       <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalMoveException<span style="color:#f92672">();</span>
+       <span style="color:#f92672">}</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>turn <span style="color:#f92672">%</span> 2<span style="color:#f92672">)</span> <span style="color:#75715e">//player 1s turn
+</span><span style="color:#75715e"></span>       <span style="color:#f92672">{</span>
+           p1 <span style="color:#f92672">=</span> p1 <span style="color:#f92672">+</span> a<span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+       <span style="color:#66d9ef">else</span>
+       <span style="color:#f92672">{</span>
+           p2 <span style="color:#f92672">=</span> p2 <span style="color:#f92672">+</span> a<span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+       pile <span style="color:#f92672">=</span> pile <span style="color:#f92672">-</span> a<span style="color:#f92672">;</span>
+       turn<span style="color:#f92672">++;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isGameOver</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>pile<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">whoWon</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>p1 <span style="color:#f92672">%</span> 2<span style="color:#f92672">)</span>
+       <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> p1name<span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+       <span style="color:#66d9ef">else</span>
+       <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> p2name<span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Pile: &#34;</span> <span style="color:#f92672">+</span> pile <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">+</span> p1name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> p1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> p2name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> p2<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The point of the game is to have an even number of chips left. This can be tested using a test code file and JUnit</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import static</span> org.junit.Assert.*<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.junit.After<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.junit.Before<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Test class EvensTest.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EvensTest</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testGame</span><span style="color:#f92672">()</span>
+    <span style="color:#f92672">{</span>
+        Evens e<span style="color:#f92672">);</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Pile: 15, A:0, B:0&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Pile: 12, A:3, B:0&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Pile: 10, A:3, B:2&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Pile: 9, A:4, B:2&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">isGameOver</span><span style="color:#f92672">());</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">isGameOver</span><span style="color:#f92672">());</span>
+        assertEquals<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;B&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">whoWon</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Test</span> <span style="color:#f92672">(</span>expected<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testEvil</span><span style="color:#f92672">()</span>
+    <span style="color:#f92672">{</span>
+        Evens e<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Test</span> <span style="color:#f92672">(</span>expected<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testEvil2</span><span style="color:#f92672">()</span>
+    <span style="color:#f92672">{</span>
+        Evens e<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(-</span>1<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Test</span> <span style="color:#f92672">(</span>expected<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testEvil3</span><span style="color:#f92672">()</span>
+    <span style="color:#f92672">{</span>
+        Evens e<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+        e<span style="color:#f92672">.</span><span style="color:#a6e22e">take</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The <code>@Test</code> annotation right before the method header is called an <em>annotation</em>. This is how you &ldquo;tag&rdquo; methods to be tested. <code>(expected)</code> to make sure its playing properly.</p>
+<p>Model-View-Controller</p>
+<ul>
+<li>Model is the math underlying the program</li>
+<li>View is how it appears on the screen</li>
+<li>Controller is how you interact with the two</li>
+</ul>
+<p>Test-Driven-Development</p>
+<ul>
+<li>Writing code to pass the tests and writing tests to break the code.</li>
+</ul>
+<p>Refactoring</p>
+<ul>
+<li>Making changes to the code without changing its behavior.</li>
+</ul>
+<hr>
+<h2 id="feb-20-2019">
+  Feb 20, 2019
+  <a class="anchor" href="#feb-20-2019">#</a>
+</h2>
+<h3 id="linked-lists">
+  Linked lists
+  <a class="anchor" href="#linked-lists">#</a>
+</h3>
+<p>Analogy: A train. Each car can only hold one thing and each car is hooked up to the one following it. Each train car is called a node.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>
+<span style="color:#f92672">{</span>
+   Object item<span style="color:#f92672">;</span>
+   Node next<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>This is a self-referential class. Each node will hold both the item you want it to contain and the address of the next node. Also note that everything in this class is public.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Node a<span style="color:#f92672">);</span>
+a<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alpha&#34;</span><span style="color:#f92672">;</span>
+
+Node b<span style="color:#f92672">);</span>
+b<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Beta&#34;</span><span style="color:#f92672">;</span>
+
+<span style="color:#75715e">//Hook together
+</span><span style="color:#75715e"></span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> b<span style="color:#f92672">;</span>
+
+Node c<span style="color:#f92672">);</span>
+c<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Gamma&#34;</span><span style="color:#f92672">;</span>
+
+b<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">a<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#75715e">//shows item in c
+</span></code></pre></div><p>Attaching things to the end of the &lsquo;train&rsquo; gets longer and longer. If you hook things to the front of the linked list it will be faster.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Node n<span style="color:#f92672">);</span>
+n<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alpha&#34;</span><span style="color:#f92672">;</span>
+
+Node m<span style="color:#f92672">);</span>
+m<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#e6db74">&#34;Beta&#34;</span><span style="color:#f92672">;</span>
+m<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+
+Node t<span style="color:#f92672">);</span>
+t<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Gamma&#34;</span><span style="color:#f92672">;</span>
+t<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> m<span style="color:#f92672">;</span>
+</code></pre></div><p>You can reuse the variables. This means you&rsquo;re essentially adding a car to the front of the train and calling that the new first car.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Node n<span style="color:#f92672">);</span>
+n<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Alpha&#34;</span><span style="color:#f92672">;</span>
+
+Node p<span style="color:#f92672">);</span>
+p<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Beta&#34;</span><span style="color:#f92672">;</span>
+p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+n <span style="color:#f92672">=</span> p<span style="color:#f92672">;</span>
+</code></pre></div><p>In a new class:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LList</span>
+<span style="color:#f92672">{</span>
+   Node first<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">LList</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      first <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addFirst</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      Node p<span style="color:#f92672">);</span> <span style="color:#75715e">//new node with object
+</span><span style="color:#75715e"></span>      p<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> o<span style="color:#f92672">;</span>
+      p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span> <span style="color:#75715e">//make new node point at first
+</span><span style="color:#75715e"></span>      first <span style="color:#f92672">=</span> p<span style="color:#f92672">;</span> <span style="color:#75715e">//make p new first
+</span><span style="color:#75715e"></span>   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>first<span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+         <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+      <span style="color:#f92672">}</span>
+      Node temp <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span> <span style="color:#75715e">//not creating a new object, just pointing
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>temp<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+         count<span style="color:#f92672">++;</span>
+         temp <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+      <span style="color:#f92672">}</span>
+      <span style="color:#66d9ef">return</span> count<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="feb-25-2019">
+  Feb 25, 2019
+  <a class="anchor" href="#feb-25-2019">#</a>
+</h2>
+<h3 id="llist-continued">
+  LList continued
+  <a class="anchor" href="#llist-continued">#</a>
+</h3>
+<p>Get
+To get contents of a Node, you must use a loop and &ldquo;hop&rdquo; along each car until you get to where you want to be.</p>
+<p>The &ldquo;locomotive&rdquo; in the train can keep track of both first and last which can make adding things to the end of the train a lot faster as it becomes bigger.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>object o<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+   Node n<span style="color:#f92672">);</span>
+   n<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> o<span style="color:#f92672">;</span>
+   last<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+   n<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+   last <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="feb-27-2019">
+  Feb 27, 2019
+  <a class="anchor" href="#feb-27-2019">#</a>
+</h2>
+<h3 id="speed-of-our-metaarray-and-llist">
+  Speed of our MetaArray and LList
+  <a class="anchor" href="#speed-of-our-metaarray-and-llist">#</a>
+</h3>
+<p>Adding to LList is called an O(1) operation. Means order of 1 operation to add something onto the LList.</p>
+<p>Adding to the MetaArray is grows by an percentage, however, if you average the times of this operation out it is still an O(1) operation. Adding to the MetaArray using a constant amount ( not a percentage ) then adding a successive element to the array becomes longer and longer, this is called an O(n) operation.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>addFirst</th>
+<th>addLast</th>
+<th>insert (middle)</th>
+<th>remove (end)</th>
+<th>size</th>
+<th>toString</th>
+<th>clear</th>
+<th>indexOf</th>
+<th>get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArrayList</td>
+<td>O(1)</td>
+<td>amortized O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>LinkedList</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>o(1)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mar-4-2019">
+  Mar 4, 2019
+  <a class="anchor" href="#mar-4-2019">#</a>
+</h2>
+<h3 id="stacks">
+  Stacks
+  <a class="anchor" href="#stacks">#</a>
+</h3>
+<p>A data structure (like a stack of paper)</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>push(o)</code></td>
+<td>adds item <code>o</code> to stack</td>
+</tr>
+<tr>
+<td><code>pop()</code></td>
+<td>returns the item on top of the stack, then removes it</td>
+</tr>
+<tr>
+<td><code>peek()</code></td>
+<td>shows item on top of stack</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>clears stack</td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td>returns true if stack is empty</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span><span style="color:#f92672">&lt;</span>X<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> LinkedList<span style="color:#f92672">&lt;</span>X<span style="color:#f92672">&gt;</span> s<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Stack</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      s<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>X o<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      s<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>o<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> X <span style="color:#a6e22e">pop</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      X temp<span style="color:#f92672">);</span>
+      s<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">return</span> temp<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">clear</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      s<span style="color:#f92672">.</span><span style="color:#a6e22e">clear</span><span style="color:#f92672">();</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> X <span style="color:#a6e22e">peek</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>When using <code>extends</code></p>
+<ul>
+<li>This sets up a <em>is-a</em> relationship, for example, <code>Stack</code> <em>is-a</em> <code>LinkedList</code></li>
+<li>This makes <code>Stack</code> have all the methods that <code>LinkedList</code> has</li>
+</ul>
+<p>When encapsulating inside the class</p>
+<ul>
+<li>This sets up a <em>has-a</em> relationship</li>
+<li><code>Stack</code> <em>has-a</em> <code>LinkedList</code> inside of it</li>
+</ul>
+<blockquote>
+<p><em>Sidenote</em>:
+When you can&rsquo;t think of a placeholder name, use: <em>foo</em>, <em>bar</em>, <em>baz</em>, <em>qux</em>, <em>quux</em> &hellip;</p>
+</blockquote>
+<hr>
+<h2 id="mar-6-2019">
+  Mar 6, 2019
+  <a class="anchor" href="#mar-6-2019">#</a>
+</h2>
+<h3 id="dog-class">
+  Dog class
+  <a class="anchor" href="#dog-class">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Corgi</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Corgi</span><span style="color:#f92672">(</span>String n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> a<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      name <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+      age <span style="color:#f92672">=</span> a<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">sleep</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Zzzzzz&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">eat</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Chomp chomp!&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">bark</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Woof!&#34;</span><span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> age<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">birthday</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      age<span style="color:#f92672">++;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>2 more classes (Shiba and Dachshund)</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Kennel</span>
+<span style="color:#f92672">{</span>
+   ArrayList<span style="color:#f92672">&lt;</span>Corgi<span style="color:#f92672">&gt;</span> corgis<span style="color:#f92672">;</span>
+   ArrayList<span style="color:#f92672">&lt;</span>Shiba<span style="color:#f92672">&gt;</span> shibas<span style="color:#f92672">;</span>
+   ArrayList<span style="color:#f92672">&lt;</span>Dachshund<span style="color:#f92672">&gt;</span> dachshund<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Kennel</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      corgis<span style="color:#f92672">);</span>
+      shibas<span style="color:#f92672">);</span>
+      dachshunds<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addCorgi</span><span style="color:#f92672">(</span>Corgi c<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      corgis<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addShiba</span><span style="color:#f92672">(</span>Shiba s<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      shibas<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addDachshund</span><span style="color:#f92672">(</span>Dachshund d<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      dachshunds<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>d<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Scaling this up becomes problematic because everytime you want to add another breed of dog you need to add methods and arraylists for it. To generalize this, we will make a Dog interface.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Dog</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">eat</span><span style="color:#f92672">();</span>
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">bark</span><span style="color:#f92672">();</span>
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">sleep</span><span style="color:#f92672">();</span>
+   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">birthday</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Interfaces list all the methods that you want all Dogs to do.</p>
+<p>Now in Corgi class add the word <code>implements</code> after the class</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Corgi</span> <span style="color:#66d9ef">implements</span> Dog
+<span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>You can then make new dogs like this:
+<code>Dog d);</code>
+This makes the only the methods available to Dog available in variable <code>d</code>, it can be cast as a Corgi to gain access all the methods that Dog doesn&rsquo;t have but Corgi does.</p>
+<hr>
+<h2 id="mar-11-2019">
+  Mar 11, 2019
+  <a class="anchor" href="#mar-11-2019">#</a>
+</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <del><em>Midterm is wednesday (4/20)</em></del> [2019-05-06]</li>
+</ul>
+<h3 id="llist-unit-tests">
+  LList unit tests
+  <a class="anchor" href="#llist-unit-tests">#</a>
+</h3>
+<p>Concerning Rigorous test 2:
+Problem is usually with remove() method, make 4 cases:</p>
+<ul>
+<li>List with 1 item</li>
+<li>Remove last item</li>
+<li>Remove first item</li>
+<li>Remove from middle</li>
+</ul>
+<h3 id="postfix-notation">
+  Postfix notation
+  <a class="anchor" href="#postfix-notation">#</a>
+</h3>
+<p>Infix notation puts the operations in between the numbers. Postfix puts the operator after the operands (numbers).</p>
+<p>If its a number: <strong>Push onto stack</strong>
+If its a operator <strong>Pop 2 and perform the operation then push</strong></p>
+<blockquote>
+<p>20 3 4 + + = 27<br>
+6 8 2 + - = -4</p>
+</blockquote>
+<p>4 + 2 * 3 - 8 / 6 + 7 + 9<br>
+4 + <code>2 3 *</code> - 8 / 6 + 7 + 9<br>
+4 + <code>2 3 *</code> - <code>8 6 /</code> + 7 + 9<br>
+<code>4 2 3 * +</code> - <code>8 6 /</code> + 7 + 9<br>
+<code>4 2 3 * + 8 6 / -</code> + 7 + 9<br>
+<code>4 2 3 * + 8 6 / - 7 +</code> + 9<br>
+<code>4 2 3 * + 8 6 / - 7 + 9 +</code></p>
+<hr>
+<h2 id="mar-13-2019">
+  Mar 13, 2019
+  <a class="anchor" href="#mar-13-2019">#</a>
+</h2>
+<h3 id="postfix-stack">
+  Postfix stack
+  <a class="anchor" href="#postfix-stack">#</a>
+</h3>
+<p>When splitting a string into pieces (using split), the split pieces are called &ldquo;tokens&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Stack<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Postfix</span>
+<span style="color:#f92672">{</span>
+    String expr<span style="color:#f92672">;</span>
+    Stack<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">&gt;</span> stack<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Postfix</span><span style="color:#f92672">(</span>String e<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        expr <span style="color:#f92672">=</span> e<span style="color:#f92672">;</span>
+        stack<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">eval</span><span style="color:#f92672">()</span>
+    <span style="color:#f92672">{</span>
+        String<span style="color:#f92672">[]</span> tokens<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String token <span style="color:#f92672">:</span> tokens<span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>token<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;+&#34;</span><span style="color:#f92672">))</span>
+            <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">double</span> a<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">double</span> b<span style="color:#f92672">);</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>a <span style="color:#f92672">+</span> b<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>token<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">))</span>
+            <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">double</span> a<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">double</span> b<span style="color:#f92672">);</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>b <span style="color:#f92672">-</span> a<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#75715e">// Must be a number
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">try</span>
+                <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">double</span> n<span style="color:#f92672">);</span>
+                    stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">NumberFormatException</span> n<span style="color:#f92672">)</span>
+                <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> UnknownToken<span style="color:#f92672">();</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>New java shortcut, the for each loop:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String token <span style="color:#f92672">:</span> tokens<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>tokens</code> is the array you are walking thru, and <code>token</code> is a variable that refers to each element of the array. This is a for each loop. (This is like <code>for i in list:</code> in python)</p>
+<hr>
+<h2 id="apr-18-2019">
+  Apr 18, 2019
+  <a class="anchor" href="#apr-18-2019">#</a>
+</h2>
+<h3 id="javafx">
+  JavaFX
+  <a class="anchor" href="#javafx">#</a>
+</h3>
+<p>Terminology</p>
+<ul>
+<li>Stage
+<ul>
+<li>A window</li>
+</ul>
+</li>
+<li>Scene
+<ul>
+<li>A container to put things in</li>
+<li>Can have more then one scene per window</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javafx.application.Application<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.stage.Stage<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.layout.Pane<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.Scene<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.shape.Circle<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">First</span> <span style="color:#66d9ef">extends</span> Application
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">start</span><span style="color:#f92672">(</span>Stage window<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">setTitle</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;First!&#34;</span><span style="color:#f92672">);</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">setSize</span><span style="color:#f92672">(</span>600<span style="color:#f92672">,</span> 400<span style="color:#f92672">);</span>
+
+      Pane canvas<span style="color:#f92672">);</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">setScene</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Scene<span style="color:#f92672">(</span>canvas<span style="color:#f92672">,</span> 600<span style="color:#f92672">,</span> 400<span style="color:#f92672">));</span>
+
+      Circle c<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h2 id="smoot-calc">
+  Smoot calc
+  <a class="anchor" href="#smoot-calc">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Distance</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">double</span> feet<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Distance</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> f<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      feet <span style="color:#f92672">=</span> f<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#75715e">/**
+</span><span style="color:#75715e">   1 smooth equals 5 foot 7 inches
+</span><span style="color:#75715e">   */</span>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">toSmoots</span><span style="color:#f92672">()</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> feet <span style="color:#f92672">/</span> <span style="color:#f92672">(</span>5 <span style="color:#f92672">+</span> 7<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">/</span>12<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javafx.application.Application<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.stage.Stage<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.Scene<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.layout.Pane<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.control.Label<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.control.TextField<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.scene.control.Button<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javafx.event.ActionEvent<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UI</span> <span style="color:#66d9ef">extends</span> Application
+<span style="color:#f92672">{</span>
+   TextField feetField<span style="color:#f92672">;</span>
+   TextField smootField<span style="color:#f92672">;</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">start</span><span style="color:#f92672">(</span>Stage window<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">setTitle</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Smoot Calc&#34;</span><span style="color:#f92672">);</span>
+
+      Pane canvas<span style="color:#f92672">);</span>
+      Scene myScene<span style="color:#f92672">);</span>
+      window<span style="color:#f92672">.</span><span style="color:#a6e22e">setScene</span><span style="color:#f92672">(</span>myScene<span style="color:#f92672">);</span>
+
+      Label feetLabel<span style="color:#f92672">);</span>
+      Label smootLabel<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>feetLabel<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>smootLabel<span style="color:#f92672">);</span>
+      feetLabel<span style="color:#f92672">.</span><span style="color:#a6e22e">relocate</span><span style="color:#f92672">(</span>20<span style="color:#f92672">,</span> 50<span style="color:#f92672">);</span>
+      smootLabel<span style="color:#f92672">.</span><span style="color:#a6e22e">relocate</span><span style="color:#f92672">(</span>20<span style="color:#f92672">,</span> 100<span style="color:#f92672">);</span>
+
+      feetField<span style="color:#f92672">);</span>
+      smootField<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>feetField<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>smootField<span style="color:#f92672">);</span>
+      feetField<span style="color:#f92672">.</span><span style="color:#a6e22e">relocate</span><span style="color:#f92672">(</span>80<span style="color:#f92672">,</span> 48<span style="color:#f92672">);</span>
+      smootField<span style="color:#f92672">.</span><span style="color:#a6e22e">relocate</span><span style="color:#f92672">(</span>80<span style="color:#f92672">,</span> 98<span style="color:#f92672">);</span>
+
+      Button goButton<span style="color:#f92672">);</span>
+      Button clearButton<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>goButton<span style="color:#f92672">);</span>
+      canvas<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildren</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>clearButton<span style="color:#f92672">);</span>
+      goButton<span style="color:#f92672">.</span><span style="color:#a6e22e">relocate</span><span style="color:#f92672">(</span>80<span style="color:#f92672">,</span> 150<span style="color:#f92672">);</span>
+      clearButton<span style="color:#f92672">.</span><span style="color:#a6e22e">relocate</span><span style="color:#f92672">(</span>150<span style="color:#f92672">,</span> 150<span style="color:#f92672">);</span>
+
+      goButton<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnAction</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>handleGoButton<span style="color:#f92672">);</span>
+      clearButton<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnAction</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">::</span>handleClearButton<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleGoButton</span><span style="color:#f92672">(</span>ActionEvent ae<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#75715e">//Get feet from feetField
+</span><span style="color:#75715e"></span>      String feet<span style="color:#f92672">);</span>
+
+      <span style="color:#75715e">//Create distance object
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">double</span> dfeet<span style="color:#f92672">);</span>
+      Distance d<span style="color:#f92672">);</span>
+
+      <span style="color:#75715e">//Convert
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">double</span> smoots<span style="color:#f92672">);</span>
+
+      <span style="color:#75715e">//Output to smootField
+</span><span style="color:#75715e"></span>      smootField<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">+</span> smoots<span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleClearButton</span><span style="color:#f92672">(</span>ActionEvent ae<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      feetField<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+      smootField<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The <code>::</code> in the <code>setOnAction()</code> method refers to which class the method to call is in. (<code>class::method</code>)</p>
+<hr>
+<h2 id="mar-27-2019">
+  Mar 27, 2019
+  <a class="anchor" href="#mar-27-2019">#</a>
+</h2>
+<h3 id="git">
+  Git
+  <a class="anchor" href="#git">#</a>
+</h3>
+<p>Terminology:</p>
+<ul>
+<li>Working directory
+<ul>
+<li>Where you edit, compile, run program</li>
+</ul>
+</li>
+<li>Repository
+<ul>
+<li>Where the backups are kept</li>
+<li>Local
+<ul>
+<li>On your local machine</li>
+</ul>
+</li>
+<li>Remote
+<ul>
+<li>On a server</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Commit
+<ul>
+<li>Make a backup</li>
+</ul>
+</li>
+<li>Push
+<ul>
+<li>Upload local repo to remote repo</li>
+</ul>
+</li>
+<li>Pull
+<ul>
+<li>Download remote repo to local repo</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="apr-22-2019">
+  Apr 22, 2019
+  <a class="anchor" href="#apr-22-2019">#</a>
+</h2>
+<h3 id="json-data-from-java-class">
+  JSON data from Java class
+  <a class="anchor" href="#json-data-from-java-class">#</a>
+</h3>
+<p>URL consists of 4 parts</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">https://www.sierracollege.edu/student-services/financial-aid.php
+^ protocol  ^ host            ^ path
+</code></pre></div><p>newsapi.org</p>
+<p>To call the newsapi:</p>
+<p><a href="https://newsapi.org/v2/everything/?q=whattosearchfor&amp;apiKey=">https://newsapi.org/v2/everything/?q=whattosearchfor&amp;apiKey=</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">News</span>
+<span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+   <span style="color:#f92672">{</span>
+      <span style="color:#75715e">// Prompt
+</span><span style="color:#75715e"></span>      Scanner in<span style="color:#f92672">);</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Enter query: &#34;</span><span style="color:#f92672">);</span>
+      
+      String keyword<span style="color:#f92672">);</span>
+      
+      <span style="color:#75715e">// URL with keyword
+</span><span style="color:#75715e"></span>      String urlString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://newsapi.org/v2/everything?q=&#34;</span> <span style="color:#f92672">+</span> keyword <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&amp;apiKey=&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">//TODO add apiKey
+</span><span style="color:#75715e"></span>
+      <span style="color:#66d9ef">try</span>
+      <span style="color:#f92672">{</span>
+         <span style="color:#75715e">// Make URL object
+</span><span style="color:#75715e"></span>         URL url<span style="color:#f92672">);</span>
+         
+         <span style="color:#75715e">// Open stream readers for incoming data
+</span><span style="color:#75715e"></span>         InputStream is<span style="color:#f92672">);</span>
+         InputStreamReader isr<span style="color:#f92672">);</span>
+         BufferedReader br<span style="color:#f92672">);</span>
+
+         <span style="color:#75715e">// 
+</span><span style="color:#75715e"></span>         JsonParser parser<span style="color:#f92672">);</span>
+         JsonElement results<span style="color:#f92672">);</span>
+
+         <span style="color:#75715e">// Show title of article 0
+</span><span style="color:#75715e"></span>         String title<span style="color:#f92672">)</span>
+                               <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsJsonArray</span><span style="color:#f92672">().</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>
+                               <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsJsonObject</span><span style="color:#f92672">().</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;title&#34;</span><span style="color:#f92672">)</span>
+                               <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsString</span><span style="color:#f92672">();</span>
+         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>title<span style="color:#f92672">);</span>
+         
+         <span style="color:#75715e">// Print out all titles
+</span><span style="color:#75715e"></span>         JsonArray titles<span style="color:#f92672">)</span>
+                                   <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsJsonArray</span><span style="color:#f92672">();</span>
+         <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span>
+         <span style="color:#f92672">{</span>
+            String title<span style="color:#f92672">)</span>
+                                 <span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;title&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">getAsString</span><span style="color:#f92672">();</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> title<span style="color:#f92672">);</span>
+         <span style="color:#f92672">}</span>
+      <span style="color:#f92672">}</span>
+      <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>MalformedURLException e<span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+         e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span>
+      <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+         e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+      <span style="color:#f92672">}</span>
+      
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Make a new directory called <code>libs</code> inside idea project. Put gson-2.8.5.jar inside, then choose &ldquo;Add As Library&rdquo; from right click menu</p>
+<hr>
+<h2 id="apr-24-2019">
+  Apr 24, 2019
+  <a class="anchor" href="#apr-24-2019">#</a>
+</h2>
+<h3 id="sanitizing-data">
+  Sanitizing data
+  <a class="anchor" href="#sanitizing-data">#</a>
+</h3>
+<p>Clean up data before submitting</p>
+<hr>
+<h2 id="may-15-2019">
+  May 15, 2019
+  <a class="anchor" href="#may-15-2019">#</a>
+</h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/zedchance/notes/edit/master/content/CS13/CS13-lecture-notes.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#jan-28-2019">Jan 28, 2019</a>
+      <ul>
+        <li><a href="#weather-class">Weather class</a></li>
+      </ul>
+    </li>
+    <li><a href="#jan-30-2019">Jan 30, 2019</a>
+      <ul>
+        <li><a href="#constructors">Constructors</a></li>
+        <li><a href="#about-this-class">About this class</a></li>
+        <li><a href="#arrays">Arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-4-2019">Feb 4, 2019</a>
+      <ul>
+        <li><a href="#expanding-arrays">Expanding arrays</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-6-2019">Feb 6, 2019</a>
+      <ul>
+        <li><a href="#more-methods-for-our-metaarray-class">More methods for our MetaArray class</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-11-2019">Feb 11, 2019</a>
+      <ul>
+        <li><a href="#generic-data-types">Generic data types</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-13-2019">Feb 13, 2019</a>
+      <ul>
+        <li><a href="#evens-game">&ldquo;Evens&rdquo; game</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-20-2019">Feb 20, 2019</a>
+      <ul>
+        <li><a href="#linked-lists">Linked lists</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-25-2019">Feb 25, 2019</a>
+      <ul>
+        <li><a href="#llist-continued">LList continued</a></li>
+      </ul>
+    </li>
+    <li><a href="#feb-27-2019">Feb 27, 2019</a>
+      <ul>
+        <li><a href="#speed-of-our-metaarray-and-llist">Speed of our MetaArray and LList</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-4-2019">Mar 4, 2019</a>
+      <ul>
+        <li><a href="#stacks">Stacks</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-6-2019">Mar 6, 2019</a>
+      <ul>
+        <li><a href="#dog-class">Dog class</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-11-2019">Mar 11, 2019</a>
+      <ul>
+        <li><a href="#llist-unit-tests">LList unit tests</a></li>
+        <li><a href="#postfix-notation">Postfix notation</a></li>
+      </ul>
+    </li>
+    <li><a href="#mar-13-2019">Mar 13, 2019</a>
+      <ul>
+        <li><a href="#postfix-stack">Postfix stack</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-18-2019">Apr 18, 2019</a>
+      <ul>
+        <li><a href="#javafx">JavaFX</a></li>
+      </ul>
+    </li>
+    <li><a href="#smoot-calc">Smoot calc</a></li>
+    <li><a href="#mar-27-2019">Mar 27, 2019</a>
+      <ul>
+        <li><a href="#git">Git</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-22-2019">Apr 22, 2019</a>
+      <ul>
+        <li><a href="#json-data-from-java-class">JSON data from Java class</a></li>
+      </ul>
+    </li>
+    <li><a href="#apr-24-2019">Apr 24, 2019</a>
+      <ul>
+        <li><a href="#sanitizing-data">Sanitizing data</a></li>
+      </ul>
+    </li>
+    <li><a href="#may-15-2019">May 15, 2019</a></li>
+  </ul>
+</nav>
+<nav>
+    Tags
+  <ul>
+  
+      <li><a href="http://zedchance.github.io/tags/java/">java</a></li>
+  
+  </ul>
+</nav>
+
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

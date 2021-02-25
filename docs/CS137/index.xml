@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS137 on Notes</title>
+    <link>http://zedchance.github.io/CS137/</link>
+    <description>Recent content in CS137 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/CS137/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210216/</guid>
+      <description>Ch3.pdf
+Propagation delay is the time delta between the input and the output.
+Design of a full adder #  Carry Propagate Adder (CPA)
+ Full adder is an arithmetic logic unit or circuit to add two single digit numbers with Carry-in It is still combinational circuit with inputs Ax and Bx  Sx is the sum (1 bit) C-in carry in Cx is the carry out   Adder is also called Ripple Carry Adder (RCA) Fundamental circuit for an adder and has longest propagation delay that is proportional to the number of the carry bits  To estimate the propagation delay of an (n)-bit CPA:</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210126</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210126/</guid>
+      <description>csc137syl Spring-2021.docx</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210128</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210128/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210128/</guid>
+      <description>Ch1.pdf</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210202</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210202/</guid>
+      <description>CSc 137 Presentation -Topics-1-1.docx
+How to convert 5.375 to a floating point representation using IEEE 754:
+ Convert the number to a binary representation Start with the whole part: 5 101 Then do the fractional part: .375 Using successive multiplication [0.375 * 2 = 0 + .75 \
+0.75 * 2 = 1 + .5 \ 0.5 * 5 = 1 + .0 ] So .375 = .011 So 5.375 = 101.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210204</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210204/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210204/</guid>
+      <description>Continued from last lecture:
+How to convert 5.375 to a floating point representation using IEEE 754:
+  Convert the number to a binary representation Start with the whole part: 5 = 101. Then do the fractional part: .375 Using successive multiplication
+  \[ \begin{aligned} 0.375 * 2 = 0 &amp;#43; .75 \\ 0.75 * 2 = 1 &amp;#43; .5 \\ 0.5 * 5 = 1 &amp;#43; .0 \end{aligned} \]  So .</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210209</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210209/</guid>
+      <description>Ch2.pdf
+LUT = lookup table
+SOP = sum of products
+DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together is the same as the two terms inverted and OR&amp;rsquo;d  Two or more variables NOR&amp;rsquo;d together is the same as the two variables inverted and AND&amp;rsquo;d together   Lets show this via tables for these two equations:
+  \[\begin{aligned} F1 &amp;amp;= F2 \\ \neg(A \cdot B) &amp;amp;= \neg A &amp;#43; \neg B \end{aligned}\]  Here is a table for  \(F1\)  :</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210211</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210211/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210211/</guid>
+      <description>A Karnaugh map is a graphical representation of a logic function. The map for   \(n\)  -input logic function is an array with  \(2^n\)  cells, (one for each possible input combination). To represent a logic function in a k-map, we copy the 1s from the truth table to the corresponding cells. Implicants are squares or rectangles made up of minterms Pairs of adjacent 1 cells in the k-map have minterms that differ in ONLY 1 variable The minterm pairs can be combined into a single product term using the generalization of theorem T10:  T10) = term   Thus, we can use k-maps to simplify the sum of the function.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210218</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210218/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210218/</guid>
+      <description>CPA cont. #  Design a 1-bit full adder #     Ax Bx C-in Sx C-out     0 0 0 0 0   0 0 1 1 0   0 1 0 1 0   0 1 1 0 1   1 0 0 1 0   1 0 1 0 1   1 1 0 0 1   1 1 1 1 1    We can reduce the diagonals in Sx: note that Sx is true if only 1 of the inputs is on, or all are on (this is XOR).</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210223</title>
+      <link>http://zedchance.github.io/CS137/CS137-lecture-20210223/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210223/</guid>
+      <description>CS137-lecture-20210223 #  DeMorgan&amp;rsquo;s Theorem #  Theorem 1: \(\neg(x \cdot y) = \neg x + \neg y\)
+Theorem 2: \(\neg(x + y) = \neg x \cdot \neg y\)
+Steps to convert to all NAND gates:
+  Replace each NOT gate with its equivalent NAND gate. Connecting the inputs of a NAND gate makes a NOT gate.
+  Place two NOT gates on each of signals going into the final OR.</description>
+    </item>
+    
+  </channel>
+</rss>

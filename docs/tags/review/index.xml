@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>review on Notes</title>
+    <link>http://zedchance.github.io/tags/review/</link>
+    <description>Recent content in review on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-lecture-20201021</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201021/</guid>
+      <description>Midterm review #  MidTermReview.txt
+Contents Everything covered from Module 1 to Module 6
+Analysis of algorithm
+ Asymptotic notations Best-case, average-case, worst-case Be able to provide time and space analysis for an given algorithm  Memory of a process
+ What are the four sections? (code, data, heap, stack) What does each section contain? Understand function call and stack-based memory allocation  Recursion
+ Base case Recursive vs. iterative approach, every recursive method can be implemented iteratively Consider stack-based memory allocation in space analysis  Sorting Algorithms</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201209</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201209/</guid>
+      <description>Review #  Assignment 5 solutions #  8:
+9:
+CORRECTION: 8 is a weight of 78, the picture is correct but the table shows 82.
+11:
+Assignment 4 solutions #  Rest of code in solutions on canvas
+Final review #  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS130 on Notes</title>
+    <link>http://zedchance.github.io/CS130/</link>
+    <description>Recent content in CS130 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/CS130/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS130-exercise-solutions-1</title>
+      <link>http://zedchance.github.io/CS130/CS130-exercise-solutions-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-exercise-solutions-1/</guid>
+      <description>For example if n = 6:
+[ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
+&amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
+So we have a time complexity of O(n)
+   </description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200831</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200831/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200831/</guid>
+      <description>Syllabus #  The required text is available for free in the school library
+Both sections will take the exam together
+Module 1 #  Test cases will usually be provided.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200902</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200902/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200902/</guid>
+      <description>Concerning the survey from last class #  The differences between an array and a linked list:
+ Access: arrays can access an spot instantly, linked lists need to iterate from the head until they reach the target. Size: arrays are fixed in size, linked lists can become bigger or smaller  Stacks can be implemented using a linked list or an array. FILO
+Queues can be implemented using a linked list or a circular array.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200909</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200909/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200909/</guid>
+      <description>Runtime analysis cont. #  Big Oh notation is pretty much the only asymptotic notation used.
+Initializing arrays of ints in Java initializes everything to 0, so it is a linear process. The if statement has an else with a loop, so at a worse case it is O(n).
+On line 73, you have to count the other functions runtime analysis also.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200914</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200914/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200914/</guid>
+      <description>Annoucements #  New webcam usage survey
+Exercise solutions:
+ Runtime analysis cont. #  Space complexity analysis #  1MB) kB
+Strings have the fields: start address, length, offset, hash
+For example:
+str = &amp;quot;Java&amp;quot;; str1); The space is constant because the sub string isn&amp;rsquo;t copied, just more references are made.
+ c + 4n, so O(n)  32 + 64n)  Normally you don&amp;rsquo;t count the space of the parameters or the return.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200916</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200916/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200916/</guid>
+      <description>Exercise solutions #  For example if n = 6:
+[ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
+&amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
+So we have a time complexity of O(n)
+Space complexity cont. #  Time complexity of this is O(n). Space complexity is O(1).
+Sorting #  Requires 2 smaller arrays already sorted.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200921</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200921/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200921/</guid>
+      <description>Annoucements #  First assignment open
+Mergesort cont. #  Solution to last exercise:
+ The first sort method:
+ space complexity is O(n) running time is  The second method
+ space complexity is O(1) running time is O(nlog(n))  An example of a stable sorting algorithm:
+Unsorted: [3(1), 2, 1, 5, 3(2)] (where the (1) indicates that it is the first 3 in the array)
+Sorted: [1, 2, 3(1), 3(2), 5] this is stable [1, 2, 3(2), 3(1), 5] this is unstable</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200923</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200923/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200923/</guid>
+      <description>Annoucements #  Assignment 1 has unlimited attempts, the last attempt counts.
+Substrings #  Quicksort cont. #  Space complexity is O(1). Running time is O(n).
+Exercise posted:
+Space complexity best case is O(log(n)), and worst case is O(n). Running time best case is O(log(n)), and worst case is O(n).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200928</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200928/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200928/</guid>
+      <description>Dev environment #  JDK 11 JUnit 5 Module with all docs for setup
+Filenames: assignment1_ZedChance.zip
+Quicksort exercise solutions #  Quicksort cont. #  Runningtime is O(n)
+Priority queues #  a is complete b is complete c is incomplete d is not a binary tree e is incomplete f is complete
+a is a height of 0 b-d is a height of 1 e-f is a height of 2</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20200930</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20200930/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200930/</guid>
+      <description>Regarding quicksort 3-way #  Used for when there is a lot of duplicate keys, for example sorting by US state.
+Heap and priority queues #  Index starts at 1 so the math to find the child or parent works.
+Size starts at 0, but is incremented BEFORE it is used for the pq position.
+Space complexity of swim method is O(1).
+Swap root and highest index and decrement index to break it off</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201005</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201005/</guid>
+      <description>Assignment 1 solutions #  Heapsort #  With the goal of non-decreasing order.
+Sink each parent starting with the last, and working down.
+Now to sort, swap last element, reduce heap size, and sink item down
+The element at the end will be put into place.
+Running time for sink is O(lg(n)) Running time for entire sort is O(nlg(n)) worst case, best case)
+Space complexity for sink is O(1) Space complexity for sort is O(1)</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201007</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201007/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201007/</guid>
+      <description>Running time complexity: 3n + k) Space time complexity: O(n + k) Stable algorithm
+Sort from least significant position to most significant position
+ Runtime of findLargestStrings is O((n+m)log(m)) Space complexity is O(m)</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201012</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201012/</guid>
+      <description>Annoucements #  Midterm exam on 21, unless pushed back to 26th.
+The format is open book, open notes, no webcam. During class time so it will be timed. One question at a time, randomly shuffled, and you can&amp;rsquo;t go back to work on previous questions.
+Radix sort #  In this example: D = 3, K = 10. Sort from the least significant digit to the most significant digit.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201014</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201014/</guid>
+      <description>RE: Midterm exam #  Oct 26, 7p-8:15p
+Make sure to join using SSO.
+One question at a time, can&amp;rsquo;t go back. Open notes, open book.
+Binary search tree cont. #  Solutions for last exercises
+This is invalid
+This is valid
+This is valid
+Best case runtime is O(1). Worst case runtime is O(n).
+Best case space complexity is O(1). Worst case space complexity is O(n).
+Best case runtime for put method is O(1).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201019</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201019/</guid>
+      <description>BST cont. #  Running time is O(n). Space complexity best case is O(lgn). Space complexity worst case is O(n).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201021</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201021/</guid>
+      <description>Midterm review #  MidTermReview.txt
+Contents Everything covered from Module 1 to Module 6
+Analysis of algorithm
+ Asymptotic notations Best-case, average-case, worst-case Be able to provide time and space analysis for an given algorithm  Memory of a process
+ What are the four sections? (code, data, heap, stack) What does each section contain? Understand function call and stack-based memory allocation  Recursion
+ Base case Recursive vs. iterative approach, every recursive method can be implemented iteratively Consider stack-based memory allocation in space analysis  Sorting Algorithms</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201028</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201028/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201028/</guid>
+      <description>2-3 Tree #   An empty tree is a 2-3 A BST is a 2-3 search tree no is yes  Search miss
+Worst case running time for 2-3 tree search is O(lgn). Remember the height of a 2-3 tree is between (floor(\log_3 N)) and (floor(log_2 N)). So in the worst case it searches the entire height of the tree + 1.
+It inserts it into the 3 node to preserve the balance of the 2-3 tree.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201102</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201102/</guid>
+      <description>One line is black, 2 lines is red
+is false  Runtime of rotateLeft is O(1). Space complexity is O(1).
+Our definition is left leaning so it needs to be rotated left.
+The runtime of put is O(lgn). Space complexity is O(lgn).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201104</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201104/</guid>
+      <description>Midterm solutions #  Red-black BST exercise solution #  M is the number of children per node.
+Each non-leaf node has between 3 and 5 children for above example. Each leaf node has between 3 and 5 data items.
+Unordered symbol tables #  </description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201109</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201109/</guid>
+      <description>Hash codes should use all of the fields.
+Any perms of strings with the same letters will have the same hashcode, therefore this is a bad hash function.
+The worst case runtime for put is O(n). The best case runtime for put is O(1). Space complexity for put is O(1).
+Best case runtime for get is O(1) and worst case is O(n). Space complexity for get is O(1).
+The load factor is the number of key value pairs (N) divided by the table size (M), so (\frac{10}{5}).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201116</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201116/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201116/</guid>
+      <description>C goes to the next open value because they collide
+resize is called if the table is &amp;gt;= being half full.
+The first 8 insertions before the resize:
+Put the existing keys (they rehash), then continue putting the rest of the list
+A is true B is false C is true (another case of A basically) D is false (another case of B)
+For get: best case runtime is O(1), worst case is O(n).</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201118</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201118/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201118/</guid>
+      <description>Suppose: n = inputs.length m)`
+Average runtime is O(n + m). Space complexity is O(m).
+Module 9, Ch 1.5 #  CORRECTION: Count should be decremented each time thru</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201123</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201123/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201123/</guid>
+      <description>Quick union example
+   index 0 1 2 3 4 5 6 7 8 9     id 1 1 1 8 3 0 5 1 8 8       id 0 1 2 3 4     id 1 2 3 4 4    O(n^2) runtime if unioning linear items.
+Weighted union example
+   id 0 1 2 3 4 5 6 7 8 9     id 6 2 6 4 4 6 6 2 4 4    CORRECTION: 0 should be the root.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201125</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201125/</guid>
+      <description>Answer: ( \frac{2E}{V}) avg number of degree.
+If you have V, no self loop, no parallel edges, what is maximum edges?
+Answer: ( \frac{V(V-1)}{2} )
+So if you have (V), considered sparse.
+Adjacency lists represent each edge twice, so the number of spaces taken (number of nodes) is (2E). So the full space used by this is (V + 2E), so our space complexity is O(E + V).
+(V - 1)  Depth-first search trace on whiteboard:</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201130</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201130/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201130/</guid>
+      <description>Exercise solns #  Graph cont. #  Gets shortest path because it starts by searching all edges that are 1 away, then 2 away, and so forth.
+Tracing the BFS implementation
+Enter the loop
+Path tree on right ^
+Performance:
+ Worst case runtime is O(E) or O(V+E) Worst case space complexity O(V), when every vertice is added to the queue   There is a maximum of (V(V-1)) vertices in a digraph with no parallel or self-loops.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201202</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201202/</guid>
+      <description>Exercise solutions #  On the whiteboard:
+Start on vertex 0
+Move onto vertex 2, need to exhaust all vertices
+Move onto vertex 7
+The reverse post order is : 8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4
+Graph cont. #  These are considered strongly connected. Also considered a strongly connected digraph.
+5 strongly connected components.
+Reversed graphs are still strongly connected in the same components.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201207</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201207/</guid>
+      <description>Exercise solutions #  Single source shortest paths #  TYPO fixed in column 5 relax 4:
+The max space taken by the IndexMinPQ is O(V - 1).
+Decimal to binary, and back
+Is a BST seach a P problem? Yes It is also a NP problem. It is not a NP-Complete problem.</description>
+    </item>
+    
+    <item>
+      <title>CS130-lecture-20201209</title>
+      <link>http://zedchance.github.io/CS130/CS130-lecture-20201209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201209/</guid>
+      <description>Review #  Assignment 5 solutions #  8:
+9:
+CORRECTION: 8 is a weight of 78, the picture is correct but the table shows 82.
+11:
+Assignment 4 solutions #  Rest of code in solutions on canvas
+Final review #  </description>
+    </item>
+    
+    <item>
+      <title>CS130-priority-queues</title>
+      <link>http://zedchance.github.io/CS130/CS130-priority-queues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-priority-queues/</guid>
+      <description>Maxpq #  MaxPQ.java
+/** * MaxPQ (maximum priority queue) implemented from Algorithms (Sedgewick, Wayne) * pg. 318 */ public class MaxPQ&amp;lt;Key extends Comparable&amp;lt;Key&amp;gt;&amp;gt; { private Key[] pq; // heap-ordered complete binary tree  private int n = 0; // pq[0] is unused, heap uses pq[1..n]  /** * Create new empty max priority queue. * Useful if inserting one by one, where each element * is inserting at the end and &amp;#34;swims&amp;#34; up into place.</description>
+    </item>
+    
+    <item>
+      <title>CS130-sorting-algorithms</title>
+      <link>http://zedchance.github.io/CS130/CS130-sorting-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/CS130/CS130-sorting-algorithms/</guid>
+      <description>Merge #  Merge.java
+/** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
+    </item>
+    
+  </channel>
+</rss>
