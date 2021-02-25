@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>agile on Notes</title>
-    <link>http://zedchance.github.io/tags/agile/</link>
+    <link>http://zedchance.github.io/notes/tags/agile/</link>
     <description>Recent content in agile on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/agile/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20200903</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200903/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200903/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200903/</guid>
       <description>HW 1 #  Article on Boeing 737 MAX disaster. Due next week.
 How do we create software? #  This is the &amp;ldquo;original approach&amp;rdquo; to software engineering:
 Deployments can be done by the developers, or a separate team. Maintenance is typically done by developers, original or not.
@@ -20,10 +20,10 @@ SLDC Models #  Waterfall Model #  The completed output from one phase is the nec
     
     <item>
       <title>CS131-lecture-20200908</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200908/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200908/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200908/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200908/</guid>
       <description>Agile cont. #  The generic model for &amp;ldquo;doing&amp;rdquo; agile
 We will be using Scrum for this class.
 A daily standup is a timed event where the whole team gathers and stands together and checks in with each other.
@@ -32,10 +32,10 @@ Retrospectives: at the end of a piece of work you will look back and try to impr
     
     <item>
       <title>CS131-lecture-20200910</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200910/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200910/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200910/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200910/</guid>
       <description>Breakout room exercise #  Our group is thinking waterfall.
 Agile
 Spiral
@@ -44,10 +44,10 @@ Spiral
     
     <item>
       <title>CS131-lecture-20200917</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200917/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200917/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200917/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200917/</guid>
       <description>Use case template recap #  Traditional requirements #  Agile requirements #  </description>
     </item>
     

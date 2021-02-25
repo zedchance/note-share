@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MATH100 on Notes</title>
-    <link>http://zedchance.github.io/MATH100/</link>
+    <link>http://zedchance.github.io/notes/MATH100/</link>
     <description>Recent content in MATH100 on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/MATH100/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/MATH100/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MATH100-lecture-notes</title>
-      <link>http://zedchance.github.io/MATH100/MATH100-lecture-notes/</link>
+      <link>http://zedchance.github.io/notes/MATH100/MATH100-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/MATH100/MATH100-lecture-notes/</guid>
+      <guid>http://zedchance.github.io/notes/MATH100/MATH100-lecture-notes/</guid>
       <description>Incomplete
 master.pdf</description>
     </item>

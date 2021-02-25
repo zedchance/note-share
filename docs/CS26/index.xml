@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CS26 on Notes</title>
-    <link>http://zedchance.github.io/CS26/</link>
+    <link>http://zedchance.github.io/notes/CS26/</link>
     <description>Recent content in CS26 on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/CS26/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/CS26/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS26-lecture-notes</title>
-      <link>http://zedchance.github.io/CS26/CS26-lecture-notes/</link>
+      <link>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS26/CS26-lecture-notes/</guid>
+      <guid>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</guid>
       <description>CS 26 Lecture Notes #  Jan 28, 2019 #  Introduction #  Discrete: Not &amp;ldquo;discreet&amp;rdquo;, opposite of continuous, goes in steps. The graphs we worked with can only be expanded in steps, you can&amp;rsquo;t add a half edge or half vertex.
 Structure: a set of related values and the operations on them. (integers, graphs).
 Like a venn diagram of math and computer science, discrete structures is the combination.</description>
@@ -19,10 +19,10 @@ Like a venn diagram of math and computer science, discrete structures is the com
     
     <item>
       <title>CS26-reading-notes</title>
-      <link>http://zedchance.github.io/CS26/CS26-reading-notes/</link>
+      <link>http://zedchance.github.io/notes/CS26/CS26-reading-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS26/CS26-reading-notes/</guid>
+      <guid>http://zedchance.github.io/notes/CS26/CS26-reading-notes/</guid>
       <description>CS 26 Reading Notes #   Ch. 1 Number Representations  Ch. 1 Number Representations #  Theorem 1
 Let b be an integer greater than 1. Then if n is a positive integer, n can be expressed uniquely in the form
  $n=a_k ·b^k +a_{k−1} ·b^{k−1} +···+a_1 ·b^1 +a_0 ·b^0$

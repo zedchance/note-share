@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IEEE754 on Notes</title>
-    <link>http://zedchance.github.io/tags/IEEE754/</link>
+    <link>http://zedchance.github.io/notes/tags/IEEE754/</link>
     <description>Recent content in IEEE754 on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/IEEE754/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/IEEE754/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS137-lecture-20210202</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210202/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210202/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210202/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210202/</guid>
       <description>CSc 137 Presentation -Topics-1-1.docx
 How to convert 5.375 to a floating point representation using IEEE 754:
  Convert the number to a binary representation Start with the whole part: 5 101 Then do the fractional part: .375 Using successive multiplication [0.375 * 2 = 0 + .75 \
@@ -20,10 +20,10 @@ How to convert 5.375 to a floating point representation using IEEE 754:
     
     <item>
       <title>CS137-lecture-20210204</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210204/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210204/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210204/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210204/</guid>
       <description>Continued from last lecture:
 How to convert 5.375 to a floating point representation using IEEE 754:
   Convert the number to a binary representation Start with the whole part: 5 = 101. Then do the fractional part: .375 Using successive multiplication

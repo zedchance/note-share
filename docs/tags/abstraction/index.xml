@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>abstraction on Notes</title>
-    <link>http://zedchance.github.io/tags/abstraction/</link>
+    <link>http://zedchance.github.io/notes/tags/abstraction/</link>
     <description>Recent content in abstraction on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/abstraction/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/abstraction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS133-lecture-20210125</title>
-      <link>http://zedchance.github.io/CS133/CS133-lecture-20210125/</link>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210125/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210125/</guid>
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210125/</guid>
       <description>Abstraction #   A generalization of something too complext to be dealt with in its entirety For humans not computers  It is a techinque we use to compensate for the relatively puny capacity of our brains There aren&amp;rsquo;t enough neurons (or connections) in our brain to process the rich detail around us during a single moment in time   Successful designers developer abstractions and hierarchies of abstractions for complex entities and move up and down this hierarchy with splendid ease.</description>
     </item>
     

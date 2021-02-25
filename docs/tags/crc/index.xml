@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>crc on Notes</title>
-    <link>http://zedchance.github.io/tags/crc/</link>
+    <link>http://zedchance.github.io/notes/tags/crc/</link>
     <description>Recent content in crc on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/crc/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/crc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20201022</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20201022/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20201022/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201022/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20201022/</guid>
       <description>Software architecture #  Architecture has styles, and this can be translated to software terms also
 CRC (Class responsibility collaboration) #  CRC Cards are a brainstorming technique to help you think about the design of your application.
 Like the 3C&amp;rsquo;s card, its meant to be done on a 3x5 card. The assumption is its not permanent, you&amp;rsquo;re not locked in.

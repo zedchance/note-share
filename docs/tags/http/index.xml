@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>http on Notes</title>
-    <link>http://zedchance.github.io/tags/http/</link>
+    <link>http://zedchance.github.io/notes/tags/http/</link>
     <description>Recent content in http on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/http/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS138-lecture-20210216</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210216/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210216/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210216/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210216/</guid>
       <description>Broadcast can only be based on UDP, because you don&amp;rsquo;t know where to make a connection.
 11 tcp connections are needed in total
 RTT = round trip time</description>
@@ -19,10 +19,10 @@ RTT = round trip time</description>
     
     <item>
       <title>CS138-lecture-20210218</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210218/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210218/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210218/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210218/</guid>
       <description>https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/http-delay-estimation/index.html
 In piplining, the object requests are &amp;ldquo;back to back&amp;rdquo;
 The proxy server can have a web cache copy so it doesn&amp;rsquo;t have to request the origin again.

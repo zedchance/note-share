@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>user stories on Notes</title>
-    <link>http://zedchance.github.io/tags/user-stories/</link>
+    <link>http://zedchance.github.io/notes/tags/user-stories/</link>
     <description>Recent content in user stories on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/user-stories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/user-stories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20200924</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200924/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200924/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200924/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200924/</guid>
       <description>Annoucements #  Quiz opens up tonight at midnight
 User stories cont #  Scrum #  </description>
     </item>

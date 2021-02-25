@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>market failures on Notes</title>
-    <link>http://zedchance.github.io/tags/market-failures/</link>
+    <link>http://zedchance.github.io/notes/tags/market-failures/</link>
     <description>Recent content in market failures on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/market-failures/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/market-failures/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHIL103-lecture-20201104</title>
-      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/</link>
+      <link>http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201104/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201104/</guid>
+      <guid>http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201104/</guid>
       <description>Market and government failures #  What is a market failure? #   A (n unregulated) market failed to generate an efficient outcome Not all the costs associated with a private transaction are internalized. For example: pollution. Or, certain goods/services will tend to be under-provided by the market because of a lack of incentives. For example: a lighthouse. An institution failed in some way: the market.  Typical argument #   Idealized perfectly competitive economic model of a market would achieve some socially optimal (or Pareto efficient) outcome Real world markets sometimes fail to achieve that outcome: &amp;ldquo;Market failure!</description>
     </item>
     

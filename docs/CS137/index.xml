@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CS137 on Notes</title>
-    <link>http://zedchance.github.io/CS137/</link>
+    <link>http://zedchance.github.io/notes/CS137/</link>
     <description>Recent content in CS137 on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/CS137/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/CS137/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210216/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210216/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</guid>
       <description>Ch3.pdf
 Propagation delay is the time delta between the input and the output.
 Design of a full adder #  Carry Propagate Adder (CPA)
@@ -20,28 +20,28 @@ Design of a full adder #  Carry Propagate Adder (CPA)
     
     <item>
       <title>CS137-lecture-20210126</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210126/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210126/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</guid>
       <description>csc137syl Spring-2021.docx</description>
     </item>
     
     <item>
       <title>CS137-lecture-20210128</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210128/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210128/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210128/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210128/</guid>
       <description>Ch1.pdf</description>
     </item>
     
     <item>
       <title>CS137-lecture-20210202</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210202/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210202/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210202/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210202/</guid>
       <description>CSc 137 Presentation -Topics-1-1.docx
 How to convert 5.375 to a floating point representation using IEEE 754:
  Convert the number to a binary representation Start with the whole part: 5 101 Then do the fractional part: .375 Using successive multiplication [0.375 * 2 = 0 + .75 \
@@ -50,10 +50,10 @@ How to convert 5.375 to a floating point representation using IEEE 754:
     
     <item>
       <title>CS137-lecture-20210204</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210204/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210204/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210204/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210204/</guid>
       <description>Continued from last lecture:
 How to convert 5.375 to a floating point representation using IEEE 754:
   Convert the number to a binary representation Start with the whole part: 5 = 101. Then do the fractional part: .375 Using successive multiplication
@@ -62,10 +62,10 @@ How to convert 5.375 to a floating point representation using IEEE 754:
     
     <item>
       <title>CS137-lecture-20210209</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210209/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210209/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210209/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210209/</guid>
       <description>Ch2.pdf
 LUT = lookup table
 SOP = sum of products
@@ -75,28 +75,28 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
     
     <item>
       <title>CS137-lecture-20210211</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210211/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210211/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210211/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210211/</guid>
       <description>A Karnaugh map is a graphical representation of a logic function. The map for   \(n\)  -input logic function is an array with  \(2^n\)  cells, (one for each possible input combination). To represent a logic function in a k-map, we copy the 1s from the truth table to the corresponding cells. Implicants are squares or rectangles made up of minterms Pairs of adjacent 1 cells in the k-map have minterms that differ in ONLY 1 variable The minterm pairs can be combined into a single product term using the generalization of theorem T10:  T10) = term   Thus, we can use k-maps to simplify the sum of the function.</description>
     </item>
     
     <item>
       <title>CS137-lecture-20210218</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210218/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210218/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210218/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210218/</guid>
       <description>CPA cont. #  Design a 1-bit full adder #     Ax Bx C-in Sx C-out     0 0 0 0 0   0 0 1 1 0   0 1 0 1 0   0 1 1 0 1   1 0 0 1 0   1 0 1 0 1   1 1 0 0 1   1 1 1 1 1    We can reduce the diagonals in Sx: note that Sx is true if only 1 of the inputs is on, or all are on (this is XOR).</description>
     </item>
     
     <item>
       <title>CS137-lecture-20210223</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210223/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210223/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/</guid>
       <description>CS137-lecture-20210223 #  DeMorgan&amp;rsquo;s Theorem #  Theorem 1: \(\neg(x \cdot y) = \neg x + \neg y\)
 Theorem 2: \(\neg(x + y) = \neg x \cdot \neg y\)
 Steps to convert to all NAND gates:

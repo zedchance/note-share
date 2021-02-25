@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code design on Notes</title>
-    <link>http://zedchance.github.io/tags/code-design/</link>
+    <link>http://zedchance.github.io/notes/tags/code-design/</link>
     <description>Recent content in code design on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/code-design/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/code-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20201110</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20201110/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20201110/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201110/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20201110/</guid>
       <description>Correction from UML lectures #  Correction: there is no distinction between a filled in triangle between inheritance when inheriting from abstract or concrete.
 SOLID cont. #  Code Design #  Singleton pattern #  Factory pattern #  </description>
     </item>
     
     <item>
       <title>CS131-lecture-20201112</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20201112/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20201112/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201112/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20201112/</guid>
       <description>Architecture
  Application – layers – what do the layers do Where do the different components live Whats the interface between layers  Design principles
  Symptoms of bad design – rigid, fragile, easier to modify with hacks (viscosity) SOLID – employed by frameworks  Design patterns

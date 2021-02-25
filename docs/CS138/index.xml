@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CS138 on Notes</title>
-    <link>http://zedchance.github.io/CS138/</link>
+    <link>http://zedchance.github.io/notes/CS138/</link>
     <description>Recent content in CS138 on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/CS138/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/CS138/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS138-lecture-20210126</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210126/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210126/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</guid>
       <description>syllabus_CSC138.pdf</description>
     </item>
     
     <item>
       <title>CS138-lecture-20210128</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210128/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210128/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210128/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210128/</guid>
       <description>Chapter_1_Intorduction to Computer Networks and the Internet.pdf</description>
     </item>
     
     <item>
       <title>CS138-lecture-20210202</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210202/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210202/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210202/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210202/</guid>
       <description>NAT = network address translator
 The packet transmission delay is the delay that it takes your computer to send the packet to the link. (Your car from the garage to the driveway).
 HFC = hybrid fiber coax
@@ -41,19 +41,19 @@ The entire packet must fully arrive at the router before being transmitted.</des
     
     <item>
       <title>CS138-lecture-20210204</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210204/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210204/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210204/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210204/</guid>
       <description>FDM = frequency division multiplexer TDM = time division multiplexer</description>
     </item>
     
     <item>
       <title>CS138-lecture-20210209</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210209/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210209/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210209/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210209/</guid>
       <description>The jump from 11 to 12 is crossing the atlantic ocean.
 So the answer is min(Rs, Rc).
 Layering can be harmful because each layer is only responsible for its own job, so if the presentation layer doesn&amp;rsquo;t encrypt, no other layers job to do that.
@@ -62,10 +62,10 @@ Internet protocol stack is a practical perspective, ISO/OSI reference model is a
     
     <item>
       <title>CS138-lecture-20210211</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210211/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210211/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</guid>
       <description>RE: Wireshark lab 1. This is an intro to the wireshark software.
 observe that the en0 has activity. Double click the card with activity to start packet analyzing.
  Hl), Hn = IP address, Ht = port number
@@ -75,10 +75,10 @@ At the destination, the layers are removed on the way up to the application laye
     
     <item>
       <title>CS138-lecture-20210216</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210216/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210216/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210216/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210216/</guid>
       <description>Broadcast can only be based on UDP, because you don&amp;rsquo;t know where to make a connection.
 11 tcp connections are needed in total
 RTT = round trip time</description>
@@ -86,10 +86,10 @@ RTT = round trip time</description>
     
     <item>
       <title>CS138-lecture-20210218</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210218/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210218/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210218/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210218/</guid>
       <description>https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/http-delay-estimation/index.html
 In piplining, the object requests are &amp;ldquo;back to back&amp;rdquo;
 The proxy server can have a web cache copy so it doesn&amp;rsquo;t have to request the origin again.
@@ -99,10 +99,10 @@ Cache
     
     <item>
       <title>CS138-lecture-20210223</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210223/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210223/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210223/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210223/</guid>
       <description>Average rate to browsers:
   \[\begin{aligned} 100\text{ K } \cdot 15/\text{ sec } = 1.5 \text{ MBps } \end{aligned}\]  So our LAN utilization is:
  \[\begin{aligned} \frac{1.5 \text{ Mbps }}{10 \text{ Mbps}} = 15\% \end{aligned}\]  And the access link utilization is:

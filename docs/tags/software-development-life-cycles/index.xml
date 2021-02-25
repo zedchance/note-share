@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software development life cycles on Notes</title>
-    <link>http://zedchance.github.io/tags/software-development-life-cycles/</link>
+    <link>http://zedchance.github.io/notes/tags/software-development-life-cycles/</link>
     <description>Recent content in software development life cycles on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/software-development-life-cycles/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/software-development-life-cycles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20200903</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200903/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200903/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200903/</guid>
       <description>HW 1 #  Article on Boeing 737 MAX disaster. Due next week.
 How do we create software? #  This is the &amp;ldquo;original approach&amp;rdquo; to software engineering:
 Deployments can be done by the developers, or a separate team. Maintenance is typically done by developers, original or not.

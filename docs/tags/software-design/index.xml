@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software design on Notes</title>
-    <link>http://zedchance.github.io/tags/software-design/</link>
+    <link>http://zedchance.github.io/notes/tags/software-design/</link>
     <description>Recent content in software design on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/software-design/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/software-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20201105</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20201105/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20201105/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201105/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20201105/</guid>
       <description>A solution
 &amp;ldquo;Design specs&amp;rdquo; aren&amp;rsquo;t a part of the agile process, but this basic idea holds in sprint plannings.</description>
     </item>
     
     <item>
       <title>CS131-lecture-20201110</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20201110/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20201110/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201110/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20201110/</guid>
       <description>Correction from UML lectures #  Correction: there is no distinction between a filled in triangle between inheritance when inheriting from abstract or concrete.
 SOLID cont. #  Code Design #  Singleton pattern #  Factory pattern #  </description>
     </item>
     
     <item>
       <title>CS133-lecture-20210208</title>
-      <link>http://zedchance.github.io/CS133/CS133-lecture-20210208/</link>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210208/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS133/CS133-lecture-20210208/</guid>
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210208/</guid>
       <description>UML #  Since there isn&amp;rsquo;t a way to pass a new DisplayPanel object into the constructor, it is a composition.
 Example CRC card building
 Clean code #  Design principles #  &amp;ldquo;The Art of Clean Code&amp;rdquo; video #  Summary:

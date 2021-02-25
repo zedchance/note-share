@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>demorgan&#39;s theorem on Notes</title>
-    <link>http://zedchance.github.io/tags/demorgans-theorem/</link>
+    <link>http://zedchance.github.io/notes/tags/demorgans-theorem/</link>
     <description>Recent content in demorgan&#39;s theorem on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/demorgans-theorem/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/demorgans-theorem/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS137-lecture-20210209</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210209/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210209/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210209/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210209/</guid>
       <description>Ch2.pdf
 LUT = lookup table
 SOP = sum of products
@@ -21,10 +21,10 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
     
     <item>
       <title>CS137-lecture-20210223</title>
-      <link>http://zedchance.github.io/CS137/CS137-lecture-20210223/</link>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS137/CS137-lecture-20210223/</guid>
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/</guid>
       <description>CS137-lecture-20210223 #  DeMorgan&amp;rsquo;s Theorem #  Theorem 1: \(\neg(x \cdot y) = \neg x + \neg y\)
 Theorem 2: \(\neg(x + y) = \neg x \cdot \neg y\)
 Steps to convert to all NAND gates:

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>protocol layers on Notes</title>
-    <link>http://zedchance.github.io/tags/protocol-layers/</link>
+    <link>http://zedchance.github.io/notes/tags/protocol-layers/</link>
     <description>Recent content in protocol layers on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/protocol-layers/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/protocol-layers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS138-lecture-20210211</title>
-      <link>http://zedchance.github.io/CS138/CS138-lecture-20210211/</link>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS138/CS138-lecture-20210211/</guid>
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</guid>
       <description>RE: Wireshark lab 1. This is an intro to the wireshark software.
 observe that the en0 has activity. Double click the card with activity to start packet analyzing.
  Hl), Hn = IP address, Ht = port number

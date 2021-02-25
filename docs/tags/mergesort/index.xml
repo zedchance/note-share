@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mergesort on Notes</title>
-    <link>http://zedchance.github.io/tags/mergesort/</link>
+    <link>http://zedchance.github.io/notes/tags/mergesort/</link>
     <description>Recent content in mergesort on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/mergesort/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/mergesort/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20200916</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20200916/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20200916/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200916/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200916/</guid>
       <description>Exercise solutions #  For example if n = 6:
 [ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
 &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
@@ -22,10 +22,10 @@ Sorting #  Requires 2 smaller arrays already sorted.</description>
     
     <item>
       <title>CS130-lecture-20200921</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20200921/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20200921/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200921/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200921/</guid>
       <description>Annoucements #  First assignment open
 Mergesort cont. #  Solution to last exercise:
  The first sort method:
@@ -37,10 +37,10 @@ Sorted: [1, 2, 3(1), 3(2), 5] this is stable [1, 2, 3(2), 3(1), 5] this is unsta
     
     <item>
       <title>CS130-sorting-algorithms</title>
-      <link>http://zedchance.github.io/CS130/CS130-sorting-algorithms/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-sorting-algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-sorting-algorithms/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-sorting-algorithms/</guid>
       <description>Merge #  Merge.java
 /** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
     </item>

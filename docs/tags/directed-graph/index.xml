@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>directed graph on Notes</title>
-    <link>http://zedchance.github.io/tags/directed-graph/</link>
+    <link>http://zedchance.github.io/notes/tags/directed-graph/</link>
     <description>Recent content in directed graph on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/directed-graph/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/directed-graph/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20201130</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201130/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201130/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201130/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201130/</guid>
       <description>Exercise solns #  Graph cont. #  Gets shortest path because it starts by searching all edges that are 1 away, then 2 away, and so forth.
 Tracing the BFS implementation
 Enter the loop

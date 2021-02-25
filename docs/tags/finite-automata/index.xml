@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>finite automata on Notes</title>
-    <link>http://zedchance.github.io/tags/finite-automata/</link>
+    <link>http://zedchance.github.io/notes/tags/finite-automata/</link>
     <description>Recent content in finite automata on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/finite-automata/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/finite-automata/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS135-lecture-20210129</title>
-      <link>http://zedchance.github.io/CS135/CS135-lecture-20210129/</link>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210129/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210129/</guid>
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210129/</guid>
       <description>dfa.pdf</description>
     </item>
     
     <item>
       <title>CS135-lecture-20210201</title>
-      <link>http://zedchance.github.io/CS135/CS135-lecture-20210201/</link>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210201/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210201/</guid>
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210201/</guid>
       <description>http://krovetz.net/135/module_reg/fa_design.html
 This FSM keeps track of whether there are an even or odd number of a&amp;rsquo;s.
 #alphabet a b #states even odd #initial even #accepting odd #transitions even:a&amp;gt;odd even:b&amp;gt;even odd:a&amp;gt;even odd:b&amp;gt;odd FSM Design advice #   Have a meaning for each state, its the only memory a FA has First write just the part that accepts good strings Make sure your FA is legal. Double check that every state has an arrow out for each alphabet symbol and that their&amp;rsquo;s a start state Try to break your solutions.</description>
@@ -28,10 +28,10 @@ This FSM keeps track of whether there are an even or odd number of a&amp;rsquo;s
     
     <item>
       <title>CS135-lecture-20210205</title>
-      <link>http://zedchance.github.io/CS135/CS135-lecture-20210205/</link>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210205/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210205/</guid>
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210205/</guid>
       <description>DFA, RE, and NFA have equal expressive power.
  Every DFA can be converted into an equivalent RE Every RE can be converted into an equivalent NFA Every NFA can be converted into an equivalent DFA  Today we will take a NFA and convert it into a DFA.
 abba will leave you in states 1 and 3.
@@ -41,10 +41,10 @@ Our NFA:
     
     <item>
       <title>CS135-lecture-20210216</title>
-      <link>http://zedchance.github.io/CS135/CS135-lecture-20210216/</link>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210216/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS135/CS135-lecture-20210216/</guid>
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210216/</guid>
       <description>Regular languages #  Any language specifiable by regular expression or finite automata.
 RE to NFA #  Building blocks
 Example #  (0+1)*1</description>

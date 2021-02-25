@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>symbol table on Notes</title>
-    <link>http://zedchance.github.io/tags/symbol-table/</link>
+    <link>http://zedchance.github.io/notes/tags/symbol-table/</link>
     <description>Recent content in symbol table on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/symbol-table/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/symbol-table/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20201012</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201012/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201012/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201012/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201012/</guid>
       <description>Annoucements #  Midterm exam on 21, unless pushed back to 26th.
 The format is open book, open notes, no webcam. During class time so it will be timed. One question at a time, randomly shuffled, and you can&amp;rsquo;t go back to work on previous questions.
 Radix sort #  In this example: D = 3, K = 10. Sort from the least significant digit to the most significant digit.</description>
@@ -19,10 +19,10 @@ Radix sort #  In this example: D = 3, K = 10. Sort from the least significant di
     
     <item>
       <title>CS130-lecture-20201118</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201118/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201118/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201118/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201118/</guid>
       <description>Suppose: n = inputs.length m)`
 Average runtime is O(n + m). Space complexity is O(m).
 Module 9, Ch 1.5 #  CORRECTION: Count should be decremented each time thru</description>

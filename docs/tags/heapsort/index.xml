@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>heapsort on Notes</title>
-    <link>http://zedchance.github.io/tags/heapsort/</link>
+    <link>http://zedchance.github.io/notes/tags/heapsort/</link>
     <description>Recent content in heapsort on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/heapsort/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/heapsort/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20200930</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20200930/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20200930/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200930/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200930/</guid>
       <description>Regarding quicksort 3-way #  Used for when there is a lot of duplicate keys, for example sorting by US state.
 Heap and priority queues #  Index starts at 1 so the math to find the child or parent works.
 Size starts at 0, but is incremented BEFORE it is used for the pq position.
@@ -21,10 +21,10 @@ Swap root and highest index and decrement index to break it off</description>
     
     <item>
       <title>CS130-lecture-20201005</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201005/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201005/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201005/</guid>
       <description>Assignment 1 solutions #  Heapsort #  With the goal of non-decreasing order.
 Sink each parent starting with the last, and working down.
 Now to sort, swap last element, reduce heap size, and sink item down
@@ -35,10 +35,10 @@ Space complexity for sink is O(1) Space complexity for sort is O(1)</description
     
     <item>
       <title>CS130-lecture-20201007</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201007/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201007/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201007/</guid>
       <description>Running time complexity: 3n + k) Space time complexity: O(n + k) Stable algorithm
 Sort from least significant position to most significant position
  Runtime of findLargestStrings is O((n+m)log(m)) Space complexity is O(m)</description>

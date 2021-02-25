@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>review on Notes</title>
-    <link>http://zedchance.github.io/tags/review/</link>
+    <link>http://zedchance.github.io/notes/tags/review/</link>
     <description>Recent content in review on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20201021</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201021/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201021/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201021/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201021/</guid>
       <description>Midterm review #  MidTermReview.txt
 Contents Everything covered from Module 1 to Module 6
 Analysis of algorithm
@@ -22,10 +22,10 @@ Analysis of algorithm
     
     <item>
       <title>CS130-lecture-20201209</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20201209/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20201209/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20201209/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20201209/</guid>
       <description>Review #  Assignment 5 solutions #  8:
 9:
 CORRECTION: 8 is a weight of 78, the picture is correct but the table shows 82.

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>use case on Notes</title>
-    <link>http://zedchance.github.io/tags/use-case/</link>
+    <link>http://zedchance.github.io/notes/tags/use-case/</link>
     <description>Recent content in use case on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/use-case/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/use-case/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20200915</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200915/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200915/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200915/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200915/</guid>
       <description>Annoucements #  First quiz at the end of next week, covers the first 4 weeks. It&amp;rsquo;ll be open over the weekend. Use case homework has been published. Going to hold off on discussion on the 737 MAX HW until case study is finished. Team survey is open!
 Software requirements #  How do you translate all of the elicited data into requirements?
  In-Class_and_HW_Activity 3_Use Case Description.pdf

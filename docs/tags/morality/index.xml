@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>morality on Notes</title>
-    <link>http://zedchance.github.io/tags/morality/</link>
+    <link>http://zedchance.github.io/notes/tags/morality/</link>
     <description>Recent content in morality on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/morality/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/morality/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHIL103-lecture-20201122</title>
-      <link>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/</link>
+      <link>http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201122/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/PHIL103/PHIL103-lecture-20201122/</guid>
+      <guid>http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201122/</guid>
       <description>Why be moral? #  Two questions
  Descriptive: would you be moral if you could always get away with immorality? Normative: should you be moral if you could always get away with immorality? Normativity clarification: this is a rational should, not a moral should. Is morality rational?  Rational choice theory
  People have a stable, ordered set of preferences. Actions have utility insofar as they satisfy these preferences. Rational agents always choose the action that has the highest expected utility in light of their preferences.</description>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>recursion on Notes</title>
-    <link>http://zedchance.github.io/tags/recursion/</link>
+    <link>http://zedchance.github.io/notes/tags/recursion/</link>
     <description>Recent content in recursion on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20200902</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20200902/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20200902/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200902/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200902/</guid>
       <description>Concerning the survey from last class #  The differences between an array and a linked list:
  Access: arrays can access an spot instantly, linked lists need to iterate from the head until they reach the target. Size: arrays are fixed in size, linked lists can become bigger or smaller  Stacks can be implemented using a linked list or an array. FILO
 Queues can be implemented using a linked list or a circular array.</description>

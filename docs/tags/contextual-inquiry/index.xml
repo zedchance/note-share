@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>contextual inquiry on Notes</title>
-    <link>http://zedchance.github.io/tags/contextual-inquiry/</link>
+    <link>http://zedchance.github.io/notes/tags/contextual-inquiry/</link>
     <description>Recent content in contextual inquiry on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/contextual-inquiry/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/contextual-inquiry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS131-lecture-20200922</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200922/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200922/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200922/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200922/</guid>
       <description>3Cs #  https://docs.google.com/presentation/d/1zvpwRAHGJwOE9QqhNkLQHHftV6guk7rNxwDQ6RuYhZA/edit#slide=id.g998494e7fd_0_119
 https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/;WWWSESSIONID=C67B13698C795B1642BC5FB95C52D8F8.www1</description>
     </item>
     
     <item>
       <title>CS131-lecture-20200929</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20200929/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20200929/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20200929/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20200929/</guid>
       <description>Annoucements #  HW4 is due Oct 5 Team assignment 1 agreement is posted
 3C examples #  A good example:
 A &amp;ldquo;cloudy&amp;rdquo; example:
@@ -32,10 +32,10 @@ Human computer interation concepts #  </description>
     
     <item>
       <title>CS131-lecture-20201001</title>
-      <link>http://zedchance.github.io/CS131/CS131-lecture-20201001/</link>
+      <link>http://zedchance.github.io/notes/CS131/CS131-lecture-20201001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS131/CS131-lecture-20201001/</guid>
+      <guid>http://zedchance.github.io/notes/CS131/CS131-lecture-20201001/</guid>
       <description>HCI cont. #  ProjectDesc-OscarsProject.pdf
 Some questions we might want to ask:
   How do the users usually watch movies

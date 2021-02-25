@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>space complexity on Notes</title>
-    <link>http://zedchance.github.io/tags/space-complexity/</link>
+    <link>http://zedchance.github.io/notes/tags/space-complexity/</link>
     <description>Recent content in space complexity on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/space-complexity/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/space-complexity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS130-lecture-20200909</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20200909/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20200909/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200909/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200909/</guid>
       <description>Runtime analysis cont. #  Big Oh notation is pretty much the only asymptotic notation used.
 Initializing arrays of ints in Java initializes everything to 0, so it is a linear process. The if statement has an else with a loop, so at a worse case it is O(n).
 On line 73, you have to count the other functions runtime analysis also.</description>
@@ -19,10 +19,10 @@ On line 73, you have to count the other functions runtime analysis also.</descri
     
     <item>
       <title>CS130-lecture-20200914</title>
-      <link>http://zedchance.github.io/CS130/CS130-lecture-20200914/</link>
+      <link>http://zedchance.github.io/notes/CS130/CS130-lecture-20200914/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS130/CS130-lecture-20200914/</guid>
+      <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200914/</guid>
       <description>Annoucements #  New webcam usage survey
 Exercise solutions:
  Runtime analysis cont. #  Space complexity analysis #  1MB) kB

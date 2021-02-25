@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>assembly on Notes</title>
-    <link>http://zedchance.github.io/tags/assembly/</link>
+    <link>http://zedchance.github.io/notes/tags/assembly/</link>
     <description>Recent content in assembly on Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://zedchance.github.io/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CS39-lecture-notes</title>
-      <link>http://zedchance.github.io/CS39/CS39-lecture-notes/</link>
+      <link>http://zedchance.github.io/notes/CS39/CS39-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/CS39/CS39-lecture-notes/</guid>
+      <guid>http://zedchance.github.io/notes/CS39/CS39-lecture-notes/</guid>
       <description>CS 39 Lecture notes #  Aug 21, 2018 #  Using ARM assembly language
 RISC - reduced instructions set computer
 ARM is a British company that designs intellectual property, now owned by a japanese company (Softbank).
