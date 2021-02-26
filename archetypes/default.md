@@ -1,11 +1,10 @@
 ---
-title: "{{ replace .Name ".md" "" | title }}"
-date: {{ .Date }}
+title: "{{ replace .Name ".md" "" }}"
+# date: {{ .Date }}
 draft: false
+bookToc: true
 tags: []
 ---
 
-# {{ replace .Name ".md" "" | title }}
-
-## 
+# 
 
