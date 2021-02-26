@@ -15,5 +15,19 @@
       <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() { for (int i) { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } } #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Enter your agge: &amp;#34;); int age; scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7; printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
     </item>
     
+    <item>
+      <title>Luhn&#39;s Algorithm</title>
+      <link>http://zedchance.github.io/notes/CS46/luhns.c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS46/luhns.c/</guid>
+      <description>&lt;h1 id=&#34;luhns-algorithm&#34;&gt;
+  Luhn&amp;rsquo;s Algorithm
+  &lt;a class=&#34;anchor&#34; href=&#34;#luhns-algorithm&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;An implementation of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Luhn_algorithm&#34;&gt;Luhn algorithm&lt;/a&gt; in the C language.&lt;/p&gt;
+&lt;p&gt;This algorithm is used for verification of credit card numbers. It is a simple to follow process that generates the last digit of the credit card (the checksum).&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

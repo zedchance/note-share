@@ -20,15 +20,6 @@ one Voluptatem sunt ut asperiores. Quis iusto non et aut omnis officiis tempora.
     </item>
     
     <item>
-      <title>Test</title>
-      <link>http://zedchance.github.io/notes/CS137/test/</link>
-      <pubDate>Wed, 24 Feb 2021 21:52:57 -0800</pubDate>
-      
-      <guid>http://zedchance.github.io/notes/CS137/test/</guid>
-      <description>A test title #  </description>
-    </item>
-    
-    <item>
       <title></title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -85,9 +76,7 @@ A class is a “blueprint&amp;quot; for objects in object-oriented coding
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-exercise-solutions-1/</guid>
       <description>For example if n = 6:
-[ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
-&amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
-So we have a time complexity of O(n)
+  \[\begin{aligned} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\ &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}} \end{aligned}\]  So we have a time complexity of O(n)
    </description>
     </item>
     
@@ -947,7 +936,20 @@ Something like
 s = s + &amp;#34;abc&amp;#34;; Actually creates a new object with the 2 new strings, and the reference to s is updated, but actual strings are immutable.
 Lists #  In Java a popular List class is LinkedList.
 A change to either a or b will change both!
-a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) cons stands for &amp;ldquo;construct new list from old.</description>
+a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b = a.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210225</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/</guid>
+      <description>Tail recursion and accumulators #  Tail recursion #  Claim: recursive overhead is expensive.
+Not always the case.
+For example:
+We have a function foo(x) that takes a parameter x.
+foo(x): if (x == 0) return answer else // do stuff, then make recursive call return foo(x - 1) The value of x is being decremented, and being passed in as the new x in the next call. Once the base case is returned there isn&amp;rsquo;t any more work that needs to be done.</description>
     </item>
     
     <item>
@@ -1032,6 +1034,16 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
       <description>CS137-lecture-20210223 #  DeMorgan&amp;rsquo;s Theorem #  Theorem 1:   \(\neg(x \cdot y) = \neg x &amp;#43; \neg y\)  Theorem 2:  \(\neg(x &amp;#43; y) = \neg x \cdot \neg y\)  Steps to convert to all NAND gates:
   Replace each NOT gate with its equivalent NAND gate. Connecting the inputs of a NAND gate makes a NOT gate.
   Place two NOT gates on each of signals going into the final OR.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210225</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/</guid>
+      <description>Multiplexers #  An everyday example of a multiplexer is a TV remote.
+ Selecting of data or information is a critical function in a digital system and computers. A multiplexer (mux for short) is a digital switch. Mux is a circuit used to select and route any of the several inputs to an output signal. Mux is a combination circuit, it has the following:     \( 2^n \)  inputs  \( n \)  control inputs, selector signals one set of output   For a mux, the value of the control inputs (selector signal) determines the data input that is selected.</description>
     </item>
     
     <item>
@@ -1136,6 +1148,17 @@ Cache
  \[\begin{aligned} \frac{1.5 \text{ Mbps }}{10 \text{ Mbps}} = 15\% \end{aligned}\]  And the access link utilization is:
  \[\begin{aligned} \frac{1.5 \text{ Mbps }}{1.54 \text{ Mbps}} = 99\% \end{aligned}\]  Access link utilization:
  \[\begin{aligned} 99\% \cdot 0.6 = 58\% \end{aligned}\]  Total delay:</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210225</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/</guid>
+      <description>Domain name system #  DNS is a application layer service, it is run at the network edge.
+ ttl = &amp;ldquo;time to leave&amp;rdquo;, expiration time NS = name server, this is the point of contact CNAME = canonical name, this is where you can specify a smaller name for a long name MX = mailserver  Query and response are the same format.
+dig asks for the IP address of a site.</description>
     </item>
     
     <item>

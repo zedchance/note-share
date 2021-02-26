@@ -7,15 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://zedchance.github.io/notes/CS137/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>http://zedchance.github.io/notes/CS137/test/</link>
-      <pubDate>Wed, 24 Feb 2021 21:52:57 -0800</pubDate>
-      
-      <guid>http://zedchance.github.io/notes/CS137/test/</guid>
-      <description>A test title #  </description>
-    </item>
-    
-    <item>
       <title></title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -109,6 +100,16 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
       <description>CS137-lecture-20210223 #  DeMorgan&amp;rsquo;s Theorem #  Theorem 1:   \(\neg(x \cdot y) = \neg x &amp;#43; \neg y\)  Theorem 2:  \(\neg(x &amp;#43; y) = \neg x \cdot \neg y\)  Steps to convert to all NAND gates:
   Replace each NOT gate with its equivalent NAND gate. Connecting the inputs of a NAND gate makes a NOT gate.
   Place two NOT gates on each of signals going into the final OR.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210225</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/</guid>
+      <description>Multiplexers #  An everyday example of a multiplexer is a TV remote.
+ Selecting of data or information is a critical function in a digital system and computers. A multiplexer (mux for short) is a digital switch. Mux is a circuit used to select and route any of the several inputs to an output signal. Mux is a combination circuit, it has the following:     \( 2^n \)  inputs  \( n \)  control inputs, selector signals one set of output   For a mux, the value of the control inputs (selector signal) determines the data input that is selected.</description>
     </item>
     
   </channel>

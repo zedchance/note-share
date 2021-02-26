@@ -1,5 +1,6 @@
 ---
 title: "Luhn's Algorithm"
+tags: ["C"]
 ---
 
 # Luhn's Algorithm
@@ -18,7 +19,7 @@ If the total modulo 10 is equal to 0 (**if the total ends in zero**) then the nu
 
 So with a number, say `4539704354706391`, we can check the number like so:
 
-```text
+```
 4  5  3  9  7  0  4  3  5  4  7  0  6  3  9  1 original number
 8  5  6  9 14  0  8  3 10  4 14  0 12  3 18  1 double every other
 8 +5 +6+ 9+1+4+0 +8 +3+1+0+4+1+4+0+1+2+3+1+8+1 add all digits

@@ -7,5 +7,3 @@ bookFlatSection: false
 
 Sharing my notes!
 
----
-

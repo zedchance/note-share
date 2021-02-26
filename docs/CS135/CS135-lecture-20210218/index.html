@@ -10,14 +10,14 @@ Something like
 s = s &#43; &#34;abc&#34;; Actually creates a new object with the 2 new strings, and the reference to s is updated, but actual strings are immutable.
 Lists #  In Java a popular List class is LinkedList.
 A change to either a or b will change both!
-a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) cons stands for &ldquo;construct new list from old.">
+a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b = a.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS135-lecture-20210218" />
 <meta property="og:description" content="Immutability #  Strings in Java are an example of immutability.
 Something like
 s = s &#43; &#34;abc&#34;; Actually creates a new object with the 2 new strings, and the reference to s is updated, but actual strings are immutable.
 Lists #  In Java a popular List class is LinkedList.
 A change to either a or b will change both!
-a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) cons stands for &ldquo;construct new list from old." />
+a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b = a." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS135/CS135-lecture-20210218/" />
 <meta property="article:modified_time" content="2021-02-24T17:42:17-08:00" />
@@ -25,7 +25,7 @@ a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) 
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.44110be292c9f873dbe57bd8895d52b387519bad9a89a86ed5c3705e11d6b0d5.css" integrity="sha256-RBEL4pLJ&#43;HPb5XvYiV1Ss4dRm62aiahu1cNwXhHWsNU=">
-<script defer src="/notes/en.search.min.3ffced10f93c72971a74a297c6312884734167d6a1cfdafc67f61af7ce44cfc9.js" integrity="sha256-P/ztEPk8cpcadKKXxjEohHNBZ9ahz9r8Z/Ya985Ez8k="></script>
+<script defer src="/notes/en.search.min.7ee20fba30bd8ba1f1b57eb92da8ffb2fd6e546726ed2eb28c531ea536ccb361.js" integrity="sha256-fuIPujC9i6HxtX65Laj/sv1uVGcm7S6yjFMepTbMs2E="></script>
 
 <script defer src="/notes/sw.min.2ab779ae2b5d50aeddfdd9ec3d03b41a76a3dc7461eedf8a74bbc49ef33e61e8.js" integrity="sha256-Krd5ritdUK7d/dnsPQO0Gnaj3HRh7t&#43;KdLvEnvM&#43;Yeg="></script>
 <!--
@@ -1273,6 +1273,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/" class="">CS135-lecture-20210225</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1294,19 +1307,6 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
-    
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://zedchance.github.io/notes/CS137/test/" class="">Test</a>
-  
-
-        </li>
-      
     
       
         <li>
@@ -1420,6 +1420,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/" class="">CS137-lecture-20210225</a>
   
 
         </li>
@@ -1559,6 +1572,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/" class="">CS138-lecture-20210225</a>
   
 
         </li>
@@ -2603,16 +2629,16 @@ b<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span
 </h3>
 <pre><code>a = new List
 </code></pre><p><img src="/notes/AB5270595F5BC0F61454E65CCEF9E1A3.jpg" alt="IMAGE" /></p>
-<pre><code>b)
+<pre><code>b = a.cons(1)
 </code></pre><p><code>cons</code> stands for &ldquo;construct new list from old.&rdquo;</p>
 <p><img src="/notes/D3F21DE0EC704DE7C18804A804C47768.jpg" alt="IMAGE" /></p>
-<pre><code>c)
+<pre><code>c = b.cons(2)
 </code></pre><p><img src="/notes/06E43ACE451142E1B3B6CBF0DE563ADE.jpg" alt="IMAGE" /></p>
 <p>This &ldquo;creates a new view&rdquo; of the list, without disturbing any older views of the list.</p>
-<pre><code>d)
+<pre><code>d = b.cons(3)
 </code></pre><p><img src="/notes/3549B950A2440770410F085360481F64.jpg" alt="IMAGE" /></p>
 <p>So <code>a = []</code>, <code>b = [1]</code>, <code>c = [2,1]</code>, <code>d = [3,1]</code>.</p>
-<pre><code>e)
+<pre><code>e = d.rest()
 </code></pre><p><code>rest</code> gives back the list without the first element, so <code>e = [1]</code></p>
 <p>For efficiency and to keep views from changing, changes only happen at the front of the list.</p>
 <hr>
@@ -2691,15 +2717,7 @@ else
 (listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>))          <span style="color:#75715e">; 2</span>
 </code></pre></div></article>
  
-      <nav>
-  
-  <a href="http://zedchance.github.io/notes/tags/immutability/"><code>immutability</code></a><br>
-  
-  <a href="http://zedchance.github.io/notes/tags/racket/"><code>racket</code></a><br>
-  
-</nav>
-
-
+      
 
       <footer class="book-footer">
         
@@ -2725,7 +2743,16 @@ else
 </div>
 
  
-        
+        <br>
+<nav>
+  
+  <a href="http://zedchance.github.io/notes/tags/immutability/"><code>immutability</code></a><br>
+  
+  <a href="http://zedchance.github.io/notes/tags/racket/"><code>racket</code></a><br>
+  
+</nav>
+
+
       </footer>
 
       

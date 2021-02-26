@@ -34,6 +34,15 @@
     </item>
     
     <item>
+      <title>accumulators</title>
+      <link>http://zedchance.github.io/notes/tags/accumulators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/accumulators/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>agile</title>
       <link>http://zedchance.github.io/notes/tags/agile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -399,6 +408,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/division-of-labor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>http://zedchance.github.io/notes/tags/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/dns/</guid>
       <description></description>
     </item>
     
@@ -772,6 +790,15 @@
     </item>
     
     <item>
+      <title>multiplexers</title>
+      <link>http://zedchance.github.io/notes/tags/multiplexers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/multiplexers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>net neutrality</title>
       <link>http://zedchance.github.io/notes/tags/net-neutrality/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1128,6 +1155,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/symbol-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tail recursion</title>
+      <link>http://zedchance.github.io/notes/tags/tail-recursion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/tail-recursion/</guid>
       <description></description>
     </item>
     

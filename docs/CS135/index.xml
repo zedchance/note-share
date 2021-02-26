@@ -116,7 +116,20 @@ Something like
 s = s + &amp;#34;abc&amp;#34;; Actually creates a new object with the 2 new strings, and the reference to s is updated, but actual strings are immutable.
 Lists #  In Java a popular List class is LinkedList.
 A change to either a or b will change both!
-a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) cons stands for &amp;ldquo;construct new list from old.</description>
+a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b = a.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210225</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/</guid>
+      <description>Tail recursion and accumulators #  Tail recursion #  Claim: recursive overhead is expensive.
+Not always the case.
+For example:
+We have a function foo(x) that takes a parameter x.
+foo(x): if (x == 0) return answer else // do stuff, then make recursive call return foo(x - 1) The value of x is being decremented, and being passed in as the new x in the next call. Once the base case is returned there isn&amp;rsquo;t any more work that needs to be done.</description>
     </item>
     
   </channel>

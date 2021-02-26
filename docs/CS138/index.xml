@@ -110,5 +110,16 @@ Cache
  \[\begin{aligned} 99\% \cdot 0.6 = 58\% \end{aligned}\]  Total delay:</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210225</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/</guid>
+      <description>Domain name system #  DNS is a application layer service, it is run at the network edge.
+ ttl = &amp;ldquo;time to leave&amp;rdquo;, expiration time NS = name server, this is the point of contact CNAME = canonical name, this is where you can specify a smaller name for a long name MX = mailserver  Query and response are the same format.
+dig asks for the IP address of a site.</description>
+    </item>
+    
   </channel>
 </rss>

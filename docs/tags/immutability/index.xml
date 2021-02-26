@@ -17,7 +17,7 @@ Something like
 s = s + &amp;#34;abc&amp;#34;; Actually creates a new object with the 2 new strings, and the reference to s is updated, but actual strings are immutable.
 Lists #  In Java a popular List class is LinkedList.
 A change to either a or b will change both!
-a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b) cons stands for &amp;ldquo;construct new list from old.</description>
+a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b = a.</description>
     </item>
     
   </channel>

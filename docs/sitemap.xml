@@ -99,12 +99,7 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/sample/</loc>
-    <lastmod>2021-02-24T22:10:59-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zedchance.github.io/notes/CS137/test/</loc>
-    <lastmod>2021-02-24T21:52:57-08:00</lastmod>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
   </url>
   
   <url>
@@ -130,6 +125,10 @@
   <url>
     <loc>http://zedchance.github.io/notes/tags/abstraction/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zedchance.github.io/notes/tags/accumulators/</loc>
   </url>
   
   <url>
@@ -306,7 +305,7 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/CS13/CS13-lecture-notes/</loc>
-    <lastmod>2021-02-24T17:22:01-08:00</lastmod>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
   </url>
   
   <url>
@@ -690,6 +689,10 @@
   </url>
   
   <url>
+    <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/</loc>
+  </url>
+  
+  <url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url>
@@ -726,7 +729,11 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/</loc>
-    <lastmod>2021-02-24T17:22:01-08:00</lastmod>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/</loc>
   </url>
   
   <url>
@@ -775,6 +782,10 @@
   </url>
   
   <url>
+    <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/</loc>
+  </url>
+  
+  <url>
     <loc>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url>
@@ -801,7 +812,7 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/tags/demorgans-theorem/</loc>
-    <lastmod>2021-02-24T17:42:17-08:00</lastmod>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
   </url>
   
   <url>
@@ -837,6 +848,10 @@
   <url>
     <loc>http://zedchance.github.io/notes/tags/division-of-labor/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zedchance.github.io/notes/tags/dns/</loc>
   </url>
   
   <url>
@@ -981,7 +996,7 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/tags/java/</loc>
-    <lastmod>2021-02-24T17:22:01-08:00</lastmod>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
   </url>
   
   <url>
@@ -1011,7 +1026,7 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/</loc>
-    <lastmod>2021-02-24T17:22:01-08:00</lastmod>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
   </url>
   
   <url>
@@ -1092,6 +1107,10 @@
   <url>
     <loc>http://zedchance.github.io/notes/tags/morality/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zedchance.github.io/notes/tags/multiplexers/</loc>
   </url>
   
   <url>
@@ -1496,6 +1515,11 @@
   
   <url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
+    <lastmod>2021-02-24T22:12:41-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url>
   

@@ -8,12 +8,12 @@ tags:
 
 For example if n = 6:
 
-\[
-\begin{align}
-t(n) &= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\
-&= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}}
-\end{align}
-\]
+{{< katex display >}}
+\begin{aligned}
+    t(n) &= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\
+    &= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}}
+\end{aligned}
+{{< /katex >}}
 
 So we have a time complexity of O(n)
 
