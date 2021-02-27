@@ -132,5 +132,17 @@ We have a function foo(x) that takes a parameter x.
 foo(x): if (x == 0) return answer else // do stuff, then make recursive call return foo(x - 1) The value of x is being decremented, and being passed in as the new x in the next call. Once the base case is returned there isn&amp;rsquo;t any more work that needs to be done.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210227</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210227/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210227/</guid>
+      <description>Functional Programming #  Other functions may write to this.sum, so this could be incorrect in the future.
+Any loop can be turned into a recursively structured function.
+Example of pow #  int pow(int x, int y) if (very small) solve directly else solve with smaller_pow So when is exponentiation very small? This is the base case, where y = 0.
+int pow(int x, int y) if (y == 0) return 1 else solve with smaller_pow Now we need to figure out the else branch, we know that x^y = x^(y-1) * x.</description>
+    </item>
+    
   </channel>
 </rss>

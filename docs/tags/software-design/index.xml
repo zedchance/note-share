@@ -38,5 +38,19 @@ Clean code #  Design principles #  &amp;ldquo;The Art of Clean Code&amp;rdquo; v
 Victor Rentea&amp;rsquo;s clean code video had a lot of amazing information for making sure that the code you write is considered &amp;ldquo;clean.&amp;rdquo; I think that clean code is a very important part of being a good programmer because it conveys the sense that you care about your team&amp;rsquo;s ability to read your code.</description>
     </item>
     
+    <item>
+      <title>CS133-lecture-20210227</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210227/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210227/</guid>
+      <description>Design Patterns #  Strategy pattern #  An example in codename one
+Composite pattern #  An example of the &amp;ldquo;wrong way to do things&amp;rdquo;
+A refactored way:
+Decorator pattern #  As a reminder, this is not the same as the composite pattern:
+State pattern #  Pree&amp;rsquo;s metapatterns #  Concerning the state pattern vs the strategy pattern
+Singleton pattern #  Note the synchronize keyword in the method header, this makes the method thread safe.</description>
+    </item>
+    
   </channel>
 </rss>
