@@ -1,0 +1,13 @@
+#!/bin/bash
+# script to make a new entry
+
+if [[ $# -eq 0 ]]
+then
+    echo "No classname given"
+    exit
+fi
+
+CLASS=$1
+FILENAME="$CLASS"-lecture-$(date +%Y%m%d).md
+
+hugo new --editor vim "$CLASS"/"$FILENAME"
