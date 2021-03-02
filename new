@@ -1,13 +1,20 @@
 #!/bin/bash
 # script to make a new entry
 
+# class name
 if [[ $# -eq 0 ]]
 then
-    echo "No classname given"
+    echo "Usage: $0 class [type]"
     exit
 fi
-
 CLASS=$1
-FILENAME="$CLASS"-lecture-$(date +%Y%m%d).md
+
+# filename
+TYPE=$2
+if [[ $TYPE == "" ]]
+then
+    TYPE=lecture
+fi
+FILENAME="$CLASS"-"$TYPE"-$(date +%Y%m%d).md
 
 hugo new --editor vim "$CLASS"/"$FILENAME"
