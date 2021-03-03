@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sequential circuits on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/sequential-circuits/</link>
+    <description>Recent content in sequential circuits on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/sequential-circuits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS137-lecture-20210302</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210302/</guid>
+      <description>Sequential Circuits #  In combinational circuits, the outputs are only dependent on the inputs. In sequential circuits, the outputs depend on the inputs, and the previous state of the circuit.
+Core modules #  S-R Latches
+ Latches are basic building blocks of flip-flops (basic memory unit) A 1 bit latch will store 1 bit, 4 bit latch stores 4 bits, and so forth &amp;hellip; Two types of memory elements based on the type of trigger that is suitable to operate Latches, asynchronous Latches operate with an enable signal, which is level sensitive  D flip-flop</description>
+    </item>
+    
+  </channel>
+</rss>

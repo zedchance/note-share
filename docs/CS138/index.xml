@@ -121,5 +121,16 @@ Cache
 dig asks for the IP address of a site.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210302</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210302/</guid>
+      <description>DNS cont. #  For a backup authoritative DNS server (secondary), resource records inserted into .com TLD DNS server, by DNS registrar:
+(networkutopia.com, dns2.networkutopia.com, NS, TTL) (dns2.networkutopia.com, 212.212.212.2, A, TTL) In your company&amp;rsquo;s authoritative DNS server, you should have the following resource records for web server, email server (etc):
+(www.networkutopia.com, somethingelse.networkutopia.com, CNAME, TTL) (somethingelse.networkutopia.com, 212.212.212.56, A, TTL) (networkutopia.com, mailserver.networkutopia.com, MX, TTL) (mailserver.networkutopia.com, 212.212.212.89, A, TTL) DNS Poisoning #  Lets say its the first time that we are visiting a site, we will first ask the local DNS &amp;hellip;</description>
+    </item>
+    
   </channel>
 </rss>

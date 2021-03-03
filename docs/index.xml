@@ -841,6 +841,18 @@ Singleton pattern #  Note the synchronize keyword in the method header, this mak
     </item>
     
     <item>
+      <title>CS133-lecture-20210301</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210301/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210301/</guid>
+      <description>Visitor pattern #  This becomes hard to maintain, and violates the open closed principle.
+The concrete visitors are the extensible operations we can perform to add more features to the concrete elements.
+Why the visitor pattern? #  Single vs double dispatch (polymorphism). Java supports single dispatch out of the box, but double isn&amp;rsquo;t supported out of the box.
+Animal dog = new Dog(); Animal cat = new Cat(); Double dispatch is not openly supported, in other words you can&amp;rsquo;t have unique interactions between 2 different classes dynamically.</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1073,6 +1085,17 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
     </item>
     
     <item>
+      <title>CS137-lecture-20210302</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210302/</guid>
+      <description>Sequential Circuits #  In combinational circuits, the outputs are only dependent on the inputs. In sequential circuits, the outputs depend on the inputs, and the previous state of the circuit.
+Core modules #  S-R Latches
+ Latches are basic building blocks of flip-flops (basic memory unit) A 1 bit latch will store 1 bit, 4 bit latch stores 4 bits, and so forth &amp;hellip; Two types of memory elements based on the type of trigger that is suitable to operate Latches, asynchronous Latches operate with an enable signal, which is level sensitive  D flip-flop</description>
+    </item>
+    
+    <item>
       <title>CS138-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1185,6 +1208,17 @@ Cache
       <description>Domain name system #  DNS is a application layer service, it is run at the network edge.
  ttl = &amp;ldquo;time to leave&amp;rdquo;, expiration time NS = name server, this is the point of contact CNAME = canonical name, this is where you can specify a smaller name for a long name MX = mailserver  Query and response are the same format.
 dig asks for the IP address of a site.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210302</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210302/</guid>
+      <description>DNS cont. #  For a backup authoritative DNS server (secondary), resource records inserted into .com TLD DNS server, by DNS registrar:
+(networkutopia.com, dns2.networkutopia.com, NS, TTL) (dns2.networkutopia.com, 212.212.212.2, A, TTL) In your company&amp;rsquo;s authoritative DNS server, you should have the following resource records for web server, email server (etc):
+(www.networkutopia.com, somethingelse.networkutopia.com, CNAME, TTL) (somethingelse.networkutopia.com, 212.212.212.56, A, TTL) (networkutopia.com, mailserver.networkutopia.com, MX, TTL) (mailserver.networkutopia.com, 212.212.212.89, A, TTL) DNS Poisoning #  Lets say its the first time that we are visiting a site, we will first ask the local DNS &amp;hellip;</description>
     </item>
     
     <item>
