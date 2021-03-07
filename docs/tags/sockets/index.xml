@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sockets on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/sockets/</link>
+    <description>Recent content in sockets on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/sockets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210304</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/</guid>
+      <description>Socket programming #  UDP Client in Python #  SOCK_DGRAM means it will use UDP. The server&amp;rsquo;s socket is always open.
+UDPClient.py:
+from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPClient.py
+from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
+    </item>
+    
+  </channel>
+</rss>

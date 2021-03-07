@@ -853,6 +853,15 @@ Animal dog = new Dog(); Animal cat = new Cat(); Double dispatch is not openly su
     </item>
     
     <item>
+      <title>CS133-lecture-20210307</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210307/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210307/</guid>
+      <description>Make your code suck less #  12. Schedule time to lower technical debt #  11. Favor high cohesion #  10. Favor loosing coupling #  9. Program with intention #  8. Avoid primitive obsession #  7. Prefer clear code over clever code #  6. Apply Zinsser&amp;rsquo;s principle on writing #  5. Comment why, not what #  4. Avoid long methods – Apply SLAP #  3.</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -862,6 +871,16 @@ Animal dog = new Dog(); Animal cat = new Cat(); Double dispatch is not openly su
   Strings which begin and end with a different letter
 #alphabet a b #states 0 aa ab ba bb #initial 0 #accepting ab ba #transitions 0:a&amp;gt;aa 0:b&amp;gt;bb aa:a&amp;gt;aa aa:b&amp;gt;ab bb:b&amp;gt;bb bb:a&amp;gt;ba ab:b&amp;gt;ab ab:a&amp;gt;aa ba:a&amp;gt;ba ba:b&amp;gt;bb   Strings with at least 2 occurences of ab
 #alphabet a b #states 0 s1 1 s2 2 #initial 0 #accepting 2 #transitions 0:a&amp;gt;s1 0:b&amp;gt;0 s1:a&amp;gt;s1 s1:b&amp;gt;1 1:a&amp;gt;s2 1:b&amp;gt;1 s2:a&amp;gt;s2 s2:b&amp;gt;2 2:a&amp;gt;2 2:b&amp;gt;2   Strings with exactly one 0 and at least one 1</description>
+    </item>
+    
+    <item>
+      <title>CS135-hw-20210302</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</guid>
+      <description>Old MM2 hw #  1 Write a recursive Racket function &amp;ldquo;sum-alternate&amp;rdquo; that takes a positive integer x as a parameter. The function should return the sum of all the integers x, x-2, x-4, x-6, etc, as long as the numbers are positive. For example, (sum-alternate 5) should evaluate to 5+3+1, and (sum-alternate 6) should evaluate to 6+4+2.
+(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))   2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
     </item>
     
     <item>
@@ -991,6 +1010,17 @@ int pow(int x, int y) if (y == 0) return 1 else solve with smaller_pow Now we ne
     </item>
     
     <item>
+      <title>CS135-lecture-20210307</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</guid>
+      <description>Mergesort in Racket #  Mergesort breaks the list in half and sorts each half recursively.
+Some pseudo:
+ms(list) front = front half of list back = back half of list ms(front) ms(back) return merge(front, back) In racket, there is a function called drop that takes a list and a number. It drops the numbers off the list. There is also take, that takes the first number of elements of the list and returns them.</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1093,6 +1123,15 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
       <description>Sequential Circuits #  In combinational circuits, the outputs are only dependent on the inputs. In sequential circuits, the outputs depend on the inputs, and the previous state of the circuit.
 Core modules #  S-R Latches
  Latches are basic building blocks of flip-flops (basic memory unit) A 1 bit latch will store 1 bit, 4 bit latch stores 4 bits, and so forth &amp;hellip; Two types of memory elements based on the type of trigger that is suitable to operate Latches, asynchronous Latches operate with an enable signal, which is level sensitive  D flip-flop</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210304</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210304/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210304/</guid>
+      <description>Sequential circuits cont. #  Creating the S-R latch cont. #        \( S \)    \( R \)    \( Q_t \)    \( Q_{t&amp;#43;1} \)       0 0  \( Q_t \)    \( Q_t \)     0 1 0 0   1 0 1 1   1 1  Undefined     \( Q_{t &amp;#43; 1} \)  is the &#34;</description>
     </item>
     
     <item>
@@ -1222,6 +1261,18 @@ dig asks for the IP address of a site.</description>
     </item>
     
     <item>
+      <title>CS138-lecture-20210304</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/</guid>
+      <description>Socket programming #  UDP Client in Python #  SOCK_DGRAM means it will use UDP. The server&amp;rsquo;s socket is always open.
+UDPClient.py:
+from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPClient.py
+from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
+    </item>
+    
+    <item>
       <title>CS26-lecture-notes</title>
       <link>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1300,8 +1351,9 @@ www.keil.com
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/MATH100/MATH100-lecture-notes/</guid>
-      <description>Incomplete
-master.pdf</description>
+      <description>Math 100 lecture notes #  Incomplete
+master.pdf
+ </description>
     </item>
     
     <item>
@@ -1861,7 +1913,7 @@ Shiney side will reflect more, so shiny side in lets heat thru then traps it ins
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/STATS50/STATS50-lecture-notes/</guid>
-      <description>lecture_notes.pdf</description>
+      <description>STATS 50 lecture notes #  lecture_notes.pdf</description>
     </item>
     
   </channel>

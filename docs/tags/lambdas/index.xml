@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lambdas on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/lambdas/</link>
+    <description>Recent content in lambdas on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/lambdas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS135-lecture-20210307</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</guid>
+      <description>Mergesort in Racket #  Mergesort breaks the list in half and sorts each half recursively.
+Some pseudo:
+ms(list) front = front half of list back = back half of list ms(front) ms(back) return merge(front, back) In racket, there is a function called drop that takes a list and a number. It drops the numbers off the list. There is also take, that takes the first number of elements of the list and returns them.</description>
+    </item>
+    
+  </channel>
+</rss>

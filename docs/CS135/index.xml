@@ -19,6 +19,16 @@
     </item>
     
     <item>
+      <title>CS135-hw-20210302</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</guid>
+      <description>Old MM2 hw #  1 Write a recursive Racket function &amp;ldquo;sum-alternate&amp;rdquo; that takes a positive integer x as a parameter. The function should return the sum of all the integers x, x-2, x-4, x-6, etc, as long as the numbers are positive. For example, (sum-alternate 5) should evaluate to 5+3+1, and (sum-alternate 6) should evaluate to 6+4+2.
+(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))   2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
+    </item>
+    
+    <item>
       <title>CS135-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -142,6 +152,17 @@ foo(x): if (x == 0) return answer else // do stuff, then make recursive call ret
 Any loop can be turned into a recursively structured function.
 Example of pow #  int pow(int x, int y) if (very small) solve directly else solve with smaller_pow So when is exponentiation very small? This is the base case, where y = 0.
 int pow(int x, int y) if (y == 0) return 1 else solve with smaller_pow Now we need to figure out the else branch, we know that x^y = x^(y-1) * x.</description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210307</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</guid>
+      <description>Mergesort in Racket #  Mergesort breaks the list in half and sorts each half recursively.
+Some pseudo:
+ms(list) front = front half of list back = back half of list ms(front) ms(back) return merge(front, back) In racket, there is a function called drop that takes a list and a number. It drops the numbers off the list. There is also take, that takes the first number of elements of the list and returns them.</description>
     </item>
     
   </channel>

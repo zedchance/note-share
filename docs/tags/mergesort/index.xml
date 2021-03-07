@@ -45,5 +45,16 @@ Sorted: [1, 2, 3(1), 3(2), 5] this is stable [1, 2, 3(2), 3(1), 5] this is unsta
 /** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210307</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/</guid>
+      <description>Mergesort in Racket #  Mergesort breaks the list in half and sorts each half recursively.
+Some pseudo:
+ms(list) front = front half of list back = back half of list ms(front) ms(back) return merge(front, back) In racket, there is a function called drop that takes a list and a number. It drops the numbers off the list. There is also take, that takes the first number of elements of the list and returns them.</description>
+    </item>
+    
   </channel>
 </rss>

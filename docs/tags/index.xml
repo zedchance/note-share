@@ -223,6 +223,15 @@
     </item>
     
     <item>
+      <title>closure</title>
+      <link>http://zedchance.github.io/notes/tags/closure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/closure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>code design</title>
       <link>http://zedchance.github.io/notes/tags/code-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -736,6 +745,15 @@
     </item>
     
     <item>
+      <title>lambdas</title>
+      <link>http://zedchance.github.io/notes/tags/lambdas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/lambdas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>linear algebra</title>
       <link>http://zedchance.github.io/notes/tags/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1069,6 +1087,15 @@
     </item>
     
     <item>
+      <title>s-r latch</title>
+      <link>http://zedchance.github.io/notes/tags/s-r-latch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/s-r-latch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>scrum</title>
       <link>http://zedchance.github.io/notes/tags/scrum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1101,6 +1128,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/shortest-path-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sockets</title>
+      <link>http://zedchance.github.io/notes/tags/sockets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/sockets/</guid>
       <description></description>
     </item>
     
