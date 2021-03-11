@@ -134,12 +134,8 @@ str = &amp;quot;Java&amp;quot;; str1); The space is constant because the sub str
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-lecture-20200916/</guid>
-      <description>Exercise solutions #  For example if n = 6:
-[ \begin{align} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \
-&amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} ,n, \text{times}} \end{align} ]
-So we have a time complexity of O(n)
-Space complexity cont. #  Time complexity of this is O(n). Space complexity is O(1).
-Sorting #  Requires 2 smaller arrays already sorted.</description>
+      <description>Exercise solutions #  For example if   \( n = 6 \)  :
+ \[\begin{aligned} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\ &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}} \end{aligned}\]  So we have a time complexity of  \( O(n) \)  Space complexity cont. #  Time complexity of this is  \( O(n) \)  .</description>
     </item>
     
     <item>
@@ -862,6 +858,17 @@ Animal dog = new Dog(); Animal cat = new Cat(); Double dispatch is not openly su
     </item>
     
     <item>
+      <title>CS133-lecture-20210310</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210310/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210310/</guid>
+      <description>Basic color theory #  RGB is an additive color model.
+CMYK is a subtractive color model.
+Refresh rates, frame buffers, v-sync #  Video game aesthetics #  </description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1021,6 +1028,28 @@ ms(list) front = front half of list back = back half of list ms(front) ms(back) 
     </item>
     
     <item>
+      <title>CS135-lecture-20210309</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</guid>
+      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs)))))This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+Invariant: acc + sum of xs is desired answer.
+(define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (+ acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &amp;#39;(1 2 3 4)) ; 10 </description>
+    </item>
+    
+    <item>
+      <title>CS135-lecture-20210310</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210310/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210310/</guid>
+      <description>Context-free grammars #  Recall, for regular languages: regular expressions are generators, and finite automata are recognizers. Context-free grammars are the recognizers of context free languages.
+Any string we can make in this process is in the language. Any string we can&amp;rsquo;t make in this process is not in the language.
+So   \( \{a^n b^n: \text{n is integer}\} \)  is context free. Remember, we couldn&amp;rsquo;t describe this language using regular expressions because finite automata don&amp;rsquo;t have memory.</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1132,6 +1161,15 @@ Core modules #  S-R Latches
       
       <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210304/</guid>
       <description>Sequential circuits cont. #  Creating the S-R latch cont. #        \( S \)    \( R \)    \( Q_t \)    \( Q_{t&amp;#43;1} \)       0 0  \( Q_t \)    \( Q_t \)     0 1 0 0   1 0 1 1   1 1  Undefined     \( Q_{t &amp;#43; 1} \)  is the &#34;</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210309</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210309/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210309/</guid>
+      <description>Exam 1 review #  </description>
     </item>
     
     <item>
@@ -1270,6 +1308,16 @@ dig asks for the IP address of a site.</description>
 UDPClient.py:
 from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPClient.py
 from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210309</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</guid>
+      <description>Transport Layer #  Transport services #   Application Layer  App &amp;lt;-&amp;gt; app such as Outlook (email)   Transport layer  Process &amp;lt;-&amp;gt; process Data -&amp;gt; segments/datagrams Segment contains transport header + data portions from email   Network layer  Machine &amp;lt;-&amp;gt; machine Network header + segment    Rectangle = app, Diamond = socket, Circle = process
+Multiplexing/demultiplexing #  Connectionless transport: UDP #  </description>
     </item>
     
     <item>

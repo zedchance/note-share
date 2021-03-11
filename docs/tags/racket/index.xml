@@ -66,5 +66,16 @@ Some pseudo:
 ms(list) front = front half of list back = back half of list ms(front) ms(back) return merge(front, back) In racket, there is a function called drop that takes a list and a number. It drops the numbers off the list. There is also take, that takes the first number of elements of the list and returns them.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210309</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</guid>
+      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs)))))This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+Invariant: acc + sum of xs is desired answer.
+(define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (+ acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &amp;#39;(1 2 3 4)) ; 10 </description>
+    </item>
+    
   </channel>
 </rss>

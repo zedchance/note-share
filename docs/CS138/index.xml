@@ -144,5 +144,15 @@ from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 
 from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210309</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</guid>
+      <description>Transport Layer #  Transport services #   Application Layer  App &amp;lt;-&amp;gt; app such as Outlook (email)   Transport layer  Process &amp;lt;-&amp;gt; process Data -&amp;gt; segments/datagrams Segment contains transport header + data portions from email   Network layer  Machine &amp;lt;-&amp;gt; machine Network header + segment    Rectangle = app, Diamond = socket, Circle = process
+Multiplexing/demultiplexing #  Connectionless transport: UDP #  </description>
+    </item>
+    
   </channel>
 </rss>

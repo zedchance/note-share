@@ -259,6 +259,15 @@
     </item>
     
     <item>
+      <title>color theory</title>
+      <link>http://zedchance.github.io/notes/tags/color-theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/color-theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>combinational circuits</title>
       <link>http://zedchance.github.io/notes/tags/combinational-circuits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -273,6 +282,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/command-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>context-free grammar</title>
+      <link>http://zedchance.github.io/notes/tags/context-free-grammar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/context-free-grammar/</guid>
       <description></description>
     </item>
     
@@ -988,6 +1006,15 @@
     </item>
     
     <item>
+      <title>push-down automata</title>
+      <link>http://zedchance.github.io/notes/tags/push-down-automata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/push-down-automata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>python</title>
       <link>http://zedchance.github.io/notes/tags/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1285,11 +1312,29 @@
     </item>
     
     <item>
+      <title>transport layer</title>
+      <link>http://zedchance.github.io/notes/tags/transport-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/transport-layer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>turning machine</title>
       <link>http://zedchance.github.io/notes/tags/turning-machine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/turning-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UDP</title>
+      <link>http://zedchance.github.io/notes/tags/UDP/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/UDP/</guid>
       <description></description>
     </item>
     

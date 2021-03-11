@@ -15,5 +15,16 @@
       <description>CN1 #  Components #  Layout managers #  Building the GUI #  </description>
     </item>
     
+    <item>
+      <title>CS133-lecture-20210310</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210310/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210310/</guid>
+      <description>Basic color theory #  RGB is an additive color model.
+CMYK is a subtractive color model.
+Refresh rates, frame buffers, v-sync #  Video game aesthetics #  </description>
+    </item>
+    
   </channel>
 </rss>

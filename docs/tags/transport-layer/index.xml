@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>transport layer on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/transport-layer/</link>
+    <description>Recent content in transport layer on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/transport-layer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210309</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</guid>
+      <description>Transport Layer #  Transport services #   Application Layer  App &amp;lt;-&amp;gt; app such as Outlook (email)   Transport layer  Process &amp;lt;-&amp;gt; process Data -&amp;gt; segments/datagrams Segment contains transport header + data portions from email   Network layer  Machine &amp;lt;-&amp;gt; machine Network header + segment    Rectangle = app, Diamond = socket, Circle = process
+Multiplexing/demultiplexing #  Connectionless transport: UDP #  </description>
+    </item>
+    
+  </channel>
+</rss>

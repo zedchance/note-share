@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>context-free grammar on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/context-free-grammar/</link>
+    <description>Recent content in context-free grammar on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/context-free-grammar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS135-lecture-20210310</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210310/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210310/</guid>
+      <description>Context-free grammars #  Recall, for regular languages: regular expressions are generators, and finite automata are recognizers. Context-free grammars are the recognizers of context free languages.
+Any string we can make in this process is in the language. Any string we can&amp;rsquo;t make in this process is not in the language.
+So   \( \{a^n b^n: \text{n is integer}\} \)  is context free. Remember, we couldn&amp;rsquo;t describe this language using regular expressions because finite automata don&amp;rsquo;t have memory.</description>
+    </item>
+    
+  </channel>
+</rss>
