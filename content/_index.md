@@ -7,3 +7,5 @@ bookFlatSection: false
 
 Sharing my notes!
 
+{{<section>}}
+
