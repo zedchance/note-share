@@ -3,6 +3,7 @@ title: "Sample"
 date: 2021-02-24T22:10:59-08:00
 draft: true
 bookToc: true
+bookHidden: true
 tags: []
 ---
 

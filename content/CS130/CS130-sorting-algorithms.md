@@ -165,5 +165,6 @@ public class Quick
 
 Algorithm | Running time complexity | Space complexity
 --- | --- | ---
-Merge | **O(nlog(n))** | **O(n)**
-Quick | Best: **O(nlog(n))** Worst: **O(n^2)** | Best: **O(log(n))** Worst: **O(n)**
+Merge | {{<k>}} O(nlog(n)) {{</k>}} | {{<k>}} O(n) {{</k>}}
+Quick | Best: {{<k>}} O(nlog(n)) {{</k>}} Worst: {{<k>}} O(n^2) {{</k>}} | Best: {{<k>}} O(log(n)) {{</k>}} Worst: {{<k>}} O(n) {{</k>}}
+

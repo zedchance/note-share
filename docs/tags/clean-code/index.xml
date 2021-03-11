@@ -18,5 +18,14 @@ Clean code #  Design principles #  &amp;ldquo;The Art of Clean Code&amp;rdquo; v
 Victor Rentea&amp;rsquo;s clean code video had a lot of amazing information for making sure that the code you write is considered &amp;ldquo;clean.&amp;rdquo; I think that clean code is a very important part of being a good programmer because it conveys the sense that you care about your team&amp;rsquo;s ability to read your code.</description>
     </item>
     
+    <item>
+      <title>CS133-lecture-20210307</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210307/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210307/</guid>
+      <description>Make your code suck less #  12. Schedule time to lower technical debt #  11. Favor high cohesion #  10. Favor loosing coupling #  9. Program with intention #  8. Avoid primitive obsession #  7. Prefer clear code over clever code #  6. Apply Zinsser&amp;rsquo;s principle on writing #  5. Comment why, not what #  4. Avoid long methods – Apply SLAP #  3.</description>
+    </item>
+    
   </channel>
 </rss>

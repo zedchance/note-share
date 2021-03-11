@@ -187,5 +187,16 @@ Any string we can make in this process is in the language. Any string we can&amp
 So   \( \{a^n b^n: \text{n is integer}\} \)  is context free. Remember, we couldn&amp;rsquo;t describe this language using regular expressions because finite automata don&amp;rsquo;t have memory.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210311</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210311/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210311/</guid>
+      <description>Introduction to push-down automata #  A push-down automata is a finite automata with memory, more than what state its currently in. It is a non-deterministic finite automata with a stack for memory. Since it is drawn very similarly to drawing finite automata, we will just notate how the stack is being manipulated on the transitions.
+Drawing transitions for PDAs #  Each arrow has a triple: a,b,c, where
+ a is the char to consume from input (or   \( \lambda \)  ) b is the char to pop from the top of the stack, b is always popped when following this transition c is a string to push onto the stack (from right to left)  An arrow can be followed if and only if:</description>
+    </item>
+    
   </channel>
 </rss>

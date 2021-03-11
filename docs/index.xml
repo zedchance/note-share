@@ -62,8 +62,8 @@ A class is a “blueprint&amp;quot; for objects in object-oriented coding
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-exercise-solutions-1/</guid>
-      <description>For example if n = 6:
-  \[\begin{aligned} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\ &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}} \end{aligned}\]  So we have a time complexity of O(n)
+      <description>For example if   \( n = 6 \)  :
+ \[\begin{aligned} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\ &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens } n \text{ times}} \end{aligned}\]  So we have a time complexity of  \( O(n) \)  .
    </description>
     </item>
     
@@ -1037,6 +1037,17 @@ So   \( \{a^n b^n: \text{n is integer}\} \)  is context free. Remember, we could
     </item>
     
     <item>
+      <title>CS135-lecture-20210311</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210311/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210311/</guid>
+      <description>Introduction to push-down automata #  A push-down automata is a finite automata with memory, more than what state its currently in. It is a non-deterministic finite automata with a stack for memory. Since it is drawn very similarly to drawing finite automata, we will just notate how the stack is being manipulated on the transitions.
+Drawing transitions for PDAs #  Each arrow has a triple: a,b,c, where
+ a is the char to consume from input (or   \( \lambda \)  ) b is the char to pop from the top of the stack, b is always popped when following this transition c is a string to push onto the stack (from right to left)  An arrow can be followed if and only if:</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1308,6 +1319,20 @@ Multiplexing/demultiplexing #  Connectionless transport: UDP #  </description>
     </item>
     
     <item>
+      <title>CS138-lecture-20210311</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210311/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210311/</guid>
+      <description>UDP cont. #  Principles of reliable data transfer #  Expected features
+ No bit errors No loss of data   Problems
+ Bit error Data loss   Solutions
+ Error detection (checksum) Data recovery    So how do we do recovery? We learn from human to human conversation, &amp;ldquo;pardon?&amp;quot; to recover data loss in the conversation.
+Feedback: ACK for positive, NAK for negative.
+So the receiver will send an ACK if the packet was received without loss, otherwise it&amp;rsquo;ll send NAK.</description>
+    </item>
+    
+    <item>
       <title>CS26-lecture-notes</title>
       <link>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1355,15 +1380,6 @@ www.keil.com
       
       <guid>http://zedchance.github.io/notes/CS46/CS46-lecture-notes/</guid>
       <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() { for (int i) { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } } #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Enter your agge: &amp;#34;); int age; scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7; printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
-    </item>
-    
-    <item>
-      <title>ENGL1B-assignment-8</title>
-      <link>http://zedchance.github.io/notes/ENGL1B/ENGL1B-assignment-8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://zedchance.github.io/notes/ENGL1B/ENGL1B-assignment-8/</guid>
-      <description>Assignment 8 Notes #  Walt Whitman video notes #   Seems that Whitman is more appreciated later in life Started as a printer when he was 12 His journalistic exposure led to his view on america Whitman wrote poetry that dealt with the world he knew, not normal feudal concepts that were out of reach to most Whitman brought in the everyday particulars &amp;ldquo;An American Bard&amp;rdquo;, but to be a bard you needed to see what was really around you, this included the new american world He loved american slang, the phrase &amp;ldquo;so long&amp;rdquo;.</description>
     </item>
     
     <item>

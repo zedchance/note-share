@@ -6,16 +6,16 @@ tags:
 ![72F6E1281BFBD89B0B423172C055D5B5-annotated.jpg](/notes/68152D3F4C9C983C922ABFDE4991969D.jpg)
 ![IMAGE](/notes/42802F0CEFC96038C9D01EB2F0FA0ECB.jpg)
 
-For example if n = 6:
+For example if {{<k>}} n = 6 {{</k>}}:
 
 {{< katex display >}}
 \begin{aligned}
     t(n) &= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\
-    &= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}}
+    &= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens } n \text{ times}}
 \end{aligned}
 {{< /katex >}}
 
-So we have a time complexity of O(n)
+So we have a time complexity of {{<k>}} O(n) {{</k>}}.
 
 ---
 
@@ -30,3 +30,4 @@ So we have a time complexity of O(n)
 
 
 ![7F7AE5D7CEDB82541183A389658C1A11-annotated.jpg](/notes/84AFC70D22F86CBB836D20380991322E.jpg)
+

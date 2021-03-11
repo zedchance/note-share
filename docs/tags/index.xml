@@ -493,15 +493,6 @@
     </item>
     
     <item>
-      <title>english</title>
-      <link>http://zedchance.github.io/notes/tags/english/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://zedchance.github.io/notes/tags/english/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>entropy</title>
       <link>http://zedchance.github.io/notes/tags/entropy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1321,11 +1312,11 @@
     </item>
     
     <item>
-      <title>turning machine</title>
-      <link>http://zedchance.github.io/notes/tags/turning-machine/</link>
+      <title>turing machine</title>
+      <link>http://zedchance.github.io/notes/tags/turing-machine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/notes/tags/turning-machine/</guid>
+      <guid>http://zedchance.github.io/notes/tags/turing-machine/</guid>
       <description></description>
     </item>
     

@@ -41,9 +41,6 @@
     <loc>http://zedchance.github.io/notes/CS50/</loc>
     <lastmod>2021-03-10T18:37:55-08:00</lastmod>
   </url><url>
-    <loc>http://zedchance.github.io/notes/ENGL1B/</loc>
-    <lastmod>2021-03-10T18:37:55-08:00</lastmod>
-  </url><url>
     <loc>http://zedchance.github.io/notes/MATH100/</loc>
     <lastmod>2021-03-10T18:37:55-08:00</lastmod>
   </url><url>
@@ -136,7 +133,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/clean-code/</loc>
-    <lastmod>2021-02-24T17:42:17-08:00</lastmod>
+    <lastmod>2021-03-07T11:44:52-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/closure/</loc>
     <lastmod>2021-03-07T11:44:52-08:00</lastmod>
@@ -449,6 +446,8 @@
     <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210310/</loc>
     <lastmod>2021-03-10T17:24:34-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210311/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
@@ -524,6 +523,8 @@
     <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/</loc>
     <lastmod>2021-03-10T17:24:34-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210311/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
@@ -580,12 +581,6 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/encapsulation/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
-  </url><url>
-    <loc>http://zedchance.github.io/notes/ENGL1B/ENGL1B-assignment-8/</loc>
-    <lastmod>2021-02-24T17:22:01-08:00</lastmod>
-  </url><url>
-    <loc>http://zedchance.github.io/notes/tags/english/</loc>
-    <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/entropy/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -1010,7 +1005,7 @@
     <loc>http://zedchance.github.io/notes/tags/transport-layer/</loc>
     <lastmod>2021-03-10T17:24:34-08:00</lastmod>
   </url><url>
-    <loc>http://zedchance.github.io/notes/tags/turning-machine/</loc>
+    <loc>http://zedchance.github.io/notes/tags/turing-machine/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/UDP/</loc>

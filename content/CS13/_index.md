@@ -4,5 +4,7 @@ bookCollapseSection: true
 weight: 1
 ---
 
+# CS13 – Programming Concepts and Methods II
+
 {{<section>}}
 

@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-exercise-solutions-1/</guid>
-      <description>For example if n = 6:
-  \[\begin{aligned} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\ &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens} \,n\, \text{times}} \end{aligned}\]  So we have a time complexity of O(n)
+      <description>For example if   \( n = 6 \)  :
+ \[\begin{aligned} t(n) &amp;amp;= t(n) \cdot t(n-1) \cdot t(n-2) \cdot t(n-3) \cdot t(n-4) \cdot t(n-5) \\ &amp;amp;= \underbrace{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}_{\text{this happens } n \text{ times}} \end{aligned}\]  So we have a time complexity of  \( O(n) \)  .
    </description>
     </item>
     

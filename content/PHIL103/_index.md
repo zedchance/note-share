@@ -4,4 +4,6 @@ bookCollapseSection: true
 weight: 1
 ---
 
+# PHIL103 – Business and Computer Ethics
+
 {{<section>}}
