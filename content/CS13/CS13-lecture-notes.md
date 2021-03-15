@@ -90,7 +90,7 @@ Weather x = w;
 `x` will contain the same address that `w` contains.
 
 ```java
-Forecast f);
+Forecast f = new Forecast();
 ```
 
 `f` points at the address of a new `Forecast` object, which has another pointer to an array filled with nulls.

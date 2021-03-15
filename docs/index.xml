@@ -8,18 +8,6 @@
     <language>en-us</language><atom:link href="http://zedchance.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</guid>
-      <description>Ch3.pdf
-Propagation delay is the time delta between the input and the output.
-Design of a full adder #  Carry Propagate Adder (CPA)
- Full adder is an arithmetic logic unit or circuit to add two single digit numbers with Carry-in It is still combinational circuit with inputs Ax and Bx  Sx is the sum (1 bit) C-in carry in Cx is the carry out   Adder is also called Ripple Carry Adder (RCA) Fundamental circuit for an adder and has longest propagation delay that is proportional to the number of the carry bits  To estimate the propagation delay of an (n)-bit CPA:</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>http://zedchance.github.io/notes/PHYS105/PHYS105-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -856,6 +844,16 @@ Refresh rates, frame buffers, v-sync #  Video game aesthetics #  </description>
     </item>
     
     <item>
+      <title>CS133-lecture-20210314</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210314/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210314/</guid>
+      <description>GUI Basics #  CN1 Component example #  In DigitalClockComponent:
+Then in AppMain:</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1073,8 +1071,7 @@ Drawing transitions for PDAs #  Each arrow has a triple: a,b,c, where
       <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210202/</guid>
       <description>CSc 137 Presentation -Topics-1-1.docx
 How to convert 5.375 to a floating point representation using IEEE 754:
- Convert the number to a binary representation Start with the whole part: 5 101 Then do the fractional part: .375 Using successive multiplication [0.375 * 2 = 0 + .75 \
-0.75 * 2 = 1 + .5 \ 0.5 * 5 = 1 + .0 ] So .375 = .011 So 5.375 = 101.</description>
+ Convert the number to a binary representation Start with the whole part: 5 101 Then do the fractional part: .375 Using successive multiplication   \[0.375 * 2 = 0 &amp;#43; .75 \\ 0.75 * 2 = 1 &amp;#43; .5 \\ 0.5 * 5 = 1 &amp;#43; .0 \]  So .375 = .</description>
     </item>
     
     <item>
@@ -1109,6 +1106,18 @@ DeMorgan&amp;rsquo;s theorem #   Two or more variables NAND&amp;rsquo;d together
       
       <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210211/</guid>
       <description>A Karnaugh map is a graphical representation of a logic function. The map for   \(n\)  -input logic function is an array with  \(2^n\)  cells, (one for each possible input combination). To represent a logic function in a k-map, we copy the 1s from the truth table to the corresponding cells. Implicants are squares or rectangles made up of minterms Pairs of adjacent 1 cells in the k-map have minterms that differ in ONLY 1 variable The minterm pairs can be combined into a single product term using the generalization of theorem T10:  T10) = term   Thus, we can use k-maps to simplify the sum of the function.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210216</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/</guid>
+      <description>Ch3.pdf
+Propagation delay is the time delta between the input and the output.
+Design of a full adder #  Carry Propagate Adder (CPA)
+ Full adder is an arithmetic logic unit or circuit to add two single digit numbers with Carry-in It is still combinational circuit with inputs Ax and Bx  Sx is the sum (1 bit) C-in carry in Cx is the carry out   Adder is also called Ripple Carry Adder (RCA) Fundamental circuit for an adder and has longest propagation delay that is proportional to the number of the carry bits  To estimate the propagation delay of an   \( n \)  -bit CPA:</description>
     </item>
     
     <item>
@@ -1351,8 +1360,7 @@ Like a venn diagram of math and computer science, discrete structures is the com
       <guid>http://zedchance.github.io/notes/CS26/CS26-reading-notes/</guid>
       <description>CS 26 Reading Notes #   Ch. 1 Number Representations  Ch. 1 Number Representations #  Theorem 1
 Let b be an integer greater than 1. Then if n is a positive integer, n can be expressed uniquely in the form
- $n=a_k ·b^k +a_{k−1} ·b^{k−1} +···+a_1 ·b^1 +a_0 ·b^0$
- where $k$ is a nonnegative integer, $a0, a1, · · · , ak$ are nonnegative integers less than $b$ and $ak ≠ 0$.</description>
+  \(n=a_k ·b^k &amp;#43;a_{k−1} ·b^{k−1} &amp;#43;···&amp;#43;a_1 ·b^1 &amp;#43;a_0 ·b^0 \)  where  \(k\)  is a nonnegative integer,  \(a0, a1, · · · , ak\)  are nonnegative integers less than  \(b\)  and  \(ak ≠ 0\)  .</description>
     </item>
     
     <item>

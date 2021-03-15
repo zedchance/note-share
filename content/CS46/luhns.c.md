@@ -49,7 +49,7 @@ The next number is just added to the sum, and not doubled. This continues until 
 ```c
 while(number)
 {
-    int temp) * 2;  // get rightmost digit and double
+    int temp = (number % 10) * 2;  // get rightmost digit and double
     if (temp > 9)                  // if 2 digit number add digits together
     {
         temp = temp - 9;
@@ -170,7 +170,7 @@ int validate(long n)
     number = number / 10;              // chop checksum off
     while(number)
     {
-        int temp) * 2;  // get rightmost digit and double
+        int temp = (number % 10) * 2;  // get rightmost digit and double
         if (temp > 9)                  // if 2 digit number add digits together
         {
             temp = temp - 9;
