@@ -168,5 +168,20 @@ Feedback: ACK for positive, NAK for negative.
 So the receiver will send an ACK if the packet was received without loss, otherwise it&amp;rsquo;ll send NAK.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210316</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210316/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210316/</guid>
+      <description>Review for exam #  Example question set for Ch 1-2 #    What are the layers in TCP/IP protocol stack?
+Application, transport, network, link, physical
+  What are layers in OSI reference model?
+Extra 2 layers are presentation and
+  What is the major difference between packet switching and circuit switching?
+Circuit reserves some resources, packet switchings allows sharing
+  What is the difference between routing and forwarding?</description>
+    </item>
+    
   </channel>
 </rss>

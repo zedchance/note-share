@@ -26,5 +26,15 @@ Core modules #  S-R Latches
       <description>Sequential circuits cont. #  Creating the S-R latch cont. #        \( S \)    \( R \)    \( Q_t \)    \( Q_{t&amp;#43;1} \)       0 0  \( Q_t \)    \( Q_t \)     0 1 0 0   1 0 1 1   1 1  Undefined     \( Q_{t &amp;#43; 1} \)  is the &#34;</description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210316</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210316/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210316/</guid>
+      <description>Sequential circuits #  Ch5.pdf
+ All small and large sequential circuits are made of flip-flops and set of combinational circuits. Contrary to combinational circuits, a sequential circuit design has states and transitions from current state to next state. A sequential circuit design problem is typically modeled as a finite state diagram (FSD). An FSD consists of circles as states and arrows as transitions, which specifies the behavior of the system.</description>
+    </item>
+    
   </channel>
 </rss>

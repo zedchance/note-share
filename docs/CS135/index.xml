@@ -198,5 +198,16 @@ Drawing transitions for PDAs #  Each arrow has a triple: a,b,c, where
  a is the char to consume from input (or   \( \lambda \)  ) b is the char to pop from the top of the stack, b is always popped when following this transition c is a string to push onto the stack (from right to left)  An arrow can be followed if and only if:</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210315</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210315/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210315/</guid>
+      <description>Parse trees and Ambiguity #  Parse trees are graphical representations of what each non-terminal produces during a derivation.
+An example of a parse tree:
+  \( S \to AB \\ A \to aaA \mid \lambda \\ B \to bbB \mid b\)  This grammar produces all strings that have an even number of  \( a \)  &amp;rsquo;s and an odd number of  \( b \)  &amp;rsquo;s.</description>
+    </item>
+    
   </channel>
 </rss>
