@@ -10,16 +10,14 @@ The packet transmission delay is the delay that it takes your computer to send t
 HFC = hybrid fiber coax
 Without fiber optic cable we could not span networks across oceans.
 Between the source and destination, what if there are N routers?
-((N&#43;1) \frac{L}{R})
-The entire packet must fully arrive at the router before being transmitted.">
+  \( (N&#43;1) \frac{L}{R} \)  The entire packet must fully arrive at the router before being transmitted.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS138-lecture-20210202" />
 <meta property="og:description" content="NAT = network address translator
 The packet transmission delay is the delay that it takes your computer to send the packet to the link. (Your car from the garage to the driveway).
 HFC = hybrid fiber coax
 Without fiber optic cable we could not span networks across oceans.
 Between the source and destination, what if there are N routers?
-((N&#43;1) \frac{L}{R})
-The entire packet must fully arrive at the router before being transmitted." />
+  \( (N&#43;1) \frac{L}{R} \)  The entire packet must fully arrive at the router before being transmitted." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS138/CS138-lecture-20210202/" /><meta property="article:section" content="CS138" />
 
@@ -29,7 +27,7 @@ The entire packet must fully arrive at the router before being transmitted." />
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/notes/en.search.min.1448ffdc2e7b9337b67946a9671960be5721c86358c86c216f6041ee188c8305.js" integrity="sha256-FEj/3C57kze2eUapZxlgvlchyGNYyGwhb2BB7hiMgwU="></script>
+<script defer src="/notes/en.search.min.22a88f8bc829510a23fc80aa14332798a7d139135b9d2560bfd69503ddb936e1.js" integrity="sha256-IqiPi8gpUQoj/ICqFDMnmKfRORNbnSVgv9aVA925NuE="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1446,6 +1444,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210318/" class="">CS135-lecture-20210318</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1645,6 +1656,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210316/" class="">CS137-lecture-20210316</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210318/" class="">CS137-lecture-20210318</a>
   
 
         </li>
@@ -2814,7 +2838,13 @@ https://github.com/alex-shpak/hugo-book
 <img src="/notes/F305B59DCA20CB11037CA9835BEE957B.jpg" alt="IMAGE" />
 <img src="/notes/185021269D621ADB87C31FFC3808B58B.jpg" alt="IMAGE" /></p>
 <p>Between the source and destination, what if there are N routers?</p>
-<p>((N+1) \frac{L}{R})</p>
+
+<link rel="stylesheet" href="/notes/katex/katex.min.css" />
+<script defer src="/notes/katex/katex.min.js"></script>
+<script defer src="/notes/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \( (N&#43;1) \frac{L}{R} \)
+</span>
+
 <p>The entire packet must fully arrive at the router before being transmitted. The packet holds the information on where it needs to go, so it needs to be fully stored before being forwarded.</p>
 <p><img src="/notes/28BAEEBD8D81B3BE26116E3FC52B123B.jpg" alt="IMAGE" /></p>
 <p>Queue = &ldquo;waiting in line&rdquo;</p>

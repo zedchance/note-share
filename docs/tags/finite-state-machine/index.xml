@@ -16,5 +16,14 @@
  All small and large sequential circuits are made of flip-flops and set of combinational circuits. Contrary to combinational circuits, a sequential circuit design has states and transitions from current state to next state. A sequential circuit design problem is typically modeled as a finite state diagram (FSD). An FSD consists of circles as states and arrows as transitions, which specifies the behavior of the system.</description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210318</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210318/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210318/</guid>
+      <description>FSM cont. #  Design rules #   If we cannot determine function(s) of combinational circuit(s) in advance:  Model FSM as FSD  May need to design bit-slice 1st   Determine number of flip flops (dependent on the number of states you need) Convert the FSD to truth table Find minimal expressions for next state variable(s) and output(s) Draw the complete circuit with flip-flops   Otherwise  Use bit-serial design with known modules Or, bit-parallel design with known modules    Example #  Lets design a Moore state machine that accepts the string   \( 101 \)  .</description>
+    </item>
+    
   </channel>
 </rss>

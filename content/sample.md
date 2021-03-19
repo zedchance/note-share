@@ -216,6 +216,7 @@ sequenceDiagram
 {{< mermaid class="text-center" >}}
 sequenceDiagram
     Client ->> Server: GET /index
+    Note right of Server: The server receives the request, and responds
     Server ->> Client: OK 200
 {{< /mermaid >}}
 

@@ -35,8 +35,7 @@ The packet transmission delay is the delay that it takes your computer to send t
 HFC = hybrid fiber coax
 Without fiber optic cable we could not span networks across oceans.
 Between the source and destination, what if there are N routers?
-((N+1) \frac{L}{R})
-The entire packet must fully arrive at the router before being transmitted.</description>
+  \( (N&amp;#43;1) \frac{L}{R} \)  The entire packet must fully arrive at the router before being transmitted.</description>
     </item>
     
     <item>
@@ -68,7 +67,7 @@ Internet protocol stack is a practical perspective, ISO/OSI reference model is a
       <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</guid>
       <description>RE: Wireshark lab 1. This is an intro to the wireshark software.
 observe that the en0 has activity. Double click the card with activity to start packet analyzing.
- Hl), Hn = IP address, Ht = port number
+ Hl = MAC address, Hn = IP address, Ht = port number
 Each time the packet goes thru a router, it must go up to the network layer and back down.
 At the destination, the layers are removed on the way up to the application layer.</description>
     </item>

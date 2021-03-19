@@ -1066,6 +1066,17 @@ An example of a parse tree:
     </item>
     
     <item>
+      <title>CS135-lecture-20210318</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210318/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210318/</guid>
+      <description>Pumping lemma for CFL #  PL for RL
+Given   \( RL, L \)  there exists  \( p \)  such that if  \( w \in L \)  and  \( |w| \geq p \)  then there exists  \( w = xyz \)  where
+  \( |y| &amp;gt; 0 \)    \( |xy| \leq p \)    \( xy^iz \in L \)    We consume  \( w \)  and we get to a state that is the first repeated state.</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1210,6 +1221,15 @@ Core modules #  S-R Latches
     </item>
     
     <item>
+      <title>CS137-lecture-20210318</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210318/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210318/</guid>
+      <description>FSM cont. #  Design rules #   If we cannot determine function(s) of combinational circuit(s) in advance:  Model FSM as FSD  May need to design bit-slice 1st   Determine number of flip flops (dependent on the number of states you need) Convert the FSD to truth table Find minimal expressions for next state variable(s) and output(s) Draw the complete circuit with flip-flops   Otherwise  Use bit-serial design with known modules Or, bit-parallel design with known modules    Example #  Lets design a Moore state machine that accepts the string   \( 101 \)  .</description>
+    </item>
+    
+    <item>
       <title>CS138-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1238,8 +1258,7 @@ The packet transmission delay is the delay that it takes your computer to send t
 HFC = hybrid fiber coax
 Without fiber optic cable we could not span networks across oceans.
 Between the source and destination, what if there are N routers?
-((N+1) \frac{L}{R})
-The entire packet must fully arrive at the router before being transmitted.</description>
+  \( (N&amp;#43;1) \frac{L}{R} \)  The entire packet must fully arrive at the router before being transmitted.</description>
     </item>
     
     <item>
@@ -1271,7 +1290,7 @@ Internet protocol stack is a practical perspective, ISO/OSI reference model is a
       <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</guid>
       <description>RE: Wireshark lab 1. This is an intro to the wireshark software.
 observe that the en0 has activity. Double click the card with activity to start packet analyzing.
- Hl), Hn = IP address, Ht = port number
+ Hl = MAC address, Hn = IP address, Ht = port number
 Each time the packet goes thru a router, it must go up to the network layer and back down.
 At the destination, the layers are removed on the way up to the application layer.</description>
     </item>

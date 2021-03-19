@@ -14,7 +14,7 @@
       <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/</guid>
       <description>RE: Wireshark lab 1. This is an intro to the wireshark software.
 observe that the en0 has activity. Double click the card with activity to start packet analyzing.
- Hl), Hn = IP address, Ht = port number
+ Hl = MAC address, Hn = IP address, Ht = port number
 Each time the packet goes thru a router, it must go up to the network layer and back down.
 At the destination, the layers are removed on the way up to the application layer.</description>
     </item>

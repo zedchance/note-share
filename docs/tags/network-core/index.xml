@@ -17,8 +17,7 @@ The packet transmission delay is the delay that it takes your computer to send t
 HFC = hybrid fiber coax
 Without fiber optic cable we could not span networks across oceans.
 Between the source and destination, what if there are N routers?
-((N+1) \frac{L}{R})
-The entire packet must fully arrive at the router before being transmitted.</description>
+  \( (N&amp;#43;1) \frac{L}{R} \)  The entire packet must fully arrive at the router before being transmitted.</description>
     </item>
     
     <item>
