@@ -45,5 +45,15 @@ Core modules #  S-R Latches
       <description>FSM cont. #  Design rules #   If we cannot determine function(s) of combinational circuit(s) in advance:  Model FSM as FSD  May need to design bit-slice 1st   Determine number of flip flops (dependent on the number of states you need) Convert the FSD to truth table Find minimal expressions for next state variable(s) and output(s) Draw the complete circuit with flip-flops   Otherwise  Use bit-serial design with known modules Or, bit-parallel design with known modules    Example #  Lets design a Moore state machine that accepts the string   \( 101 \)  .</description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210330</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</guid>
+      <description>Finite state machine design cont. #  Moore machines #   Output depends only upon present state If input changes, output does not change More number of states are required There is more hardware requirement They react slower to inputs (one clock cycle later) Synchronous output and state generation Output is placed on states Easy to design  Step 1: create a FSD
+Step 2: determine the minimum number of states/bits required to store states</description>
+    </item>
+    
   </channel>
 </rss>

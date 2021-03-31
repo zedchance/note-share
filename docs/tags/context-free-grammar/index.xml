@@ -28,5 +28,17 @@ An example of a parse tree:
   \( S \to AB \\ A \to aaA \mid \lambda \\ B \to bbB \mid b\)  This grammar produces all strings that have an even number of  \( a \)  &amp;rsquo;s and an odd number of  \( b \)  &amp;rsquo;s.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210329</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210329/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210329/</guid>
+      <description>CFG to PDA algorithm #  Starting from a CFG and going to a PDA is a lot easier than going the other way.
+Lets start out with this grammar:
+  \( S \to AB \\ A \to aA \mid \lambda \\ B \to bB \mid \lambda\)  We can start our PDA by drawing 3 states, one start and one accept.
+The first transition triple is  \( \lambda, \empty, S \empty \)  , and the second transition is  \( \lambda, \empty, \empty \)  .</description>
+    </item>
+    
   </channel>
 </rss>

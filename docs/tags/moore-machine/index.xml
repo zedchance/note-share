@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>moore machine on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/moore-machine/</link>
+    <description>Recent content in moore machine on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/moore-machine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS137-lecture-20210330</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</guid>
+      <description>Finite state machine design cont. #  Moore machines #   Output depends only upon present state If input changes, output does not change More number of states are required There is more hardware requirement They react slower to inputs (one clock cycle later) Synchronous output and state generation Output is placed on states Easy to design  Step 1: create a FSD
+Step 2: determine the minimum number of states/bits required to store states</description>
+    </item>
+    
+  </channel>
+</rss>

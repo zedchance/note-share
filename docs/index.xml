@@ -1077,6 +1077,18 @@ Given   \( RL, L \)  there exists  \( p \)  such that if  \( w \in L \)  and  \(
     </item>
     
     <item>
+      <title>CS135-lecture-20210329</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210329/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210329/</guid>
+      <description>CFG to PDA algorithm #  Starting from a CFG and going to a PDA is a lot easier than going the other way.
+Lets start out with this grammar:
+  \( S \to AB \\ A \to aA \mid \lambda \\ B \to bB \mid \lambda\)  We can start our PDA by drawing 3 states, one start and one accept.
+The first transition triple is  \( \lambda, \empty, S \empty \)  , and the second transition is  \( \lambda, \empty, \empty \)  .</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1230,6 +1242,16 @@ Core modules #  S-R Latches
     </item>
     
     <item>
+      <title>CS137-lecture-20210330</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</guid>
+      <description>Finite state machine design cont. #  Moore machines #   Output depends only upon present state If input changes, output does not change More number of states are required There is more hardware requirement They react slower to inputs (one clock cycle later) Synchronous output and state generation Output is placed on states Easy to design  Step 1: create a FSD
+Step 2: determine the minimum number of states/bits required to store states</description>
+    </item>
+    
+    <item>
       <title>CS138-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1362,7 +1384,7 @@ dig asks for the IP address of a site.</description>
       <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/</guid>
       <description>Socket programming #  UDP Client in Python #  SOCK_DGRAM means it will use UDP. The server&amp;rsquo;s socket is always open.
 UDPClient.py:
-from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPClient.py
+from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPServer.py
 from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
     </item>
     
@@ -1403,6 +1425,17 @@ Extra 2 layers are presentation and
   What is the major difference between packet switching and circuit switching?
 Circuit reserves some resources, packet switchings allows sharing
   What is the difference between routing and forwarding?</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210330</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210330/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210330/</guid>
+      <description>Piplined protocols #  Go-back-n #  unacked = unacknowledged = no ACK response, not confirmed for success yet.
+The number of bits needed for a   \( k \)  -bit sequence numbers is  \( 2^k - 1 \)  . The window size is  \( N = 2^k \)  .
+The packet number that can be used for cumulative ack should be the largest number before any gap.</description>
     </item>
     
     <item>

@@ -14,7 +14,7 @@
       <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/</guid>
       <description>Socket programming #  UDP Client in Python #  SOCK_DGRAM means it will use UDP. The server&amp;rsquo;s socket is always open.
 UDPClient.py:
-from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPClient.py
+from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPServer.py
 from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
     </item>
     
