@@ -1252,6 +1252,17 @@ Step 2: determine the minimum number of states/bits required to store states</de
     </item>
     
     <item>
+      <title>CS137-lecture-20210401</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210401/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210401/</guid>
+      <description>Finite state machine design cont. #  Moore machine design cont. #  Recall
+  \[\begin{aligned} d_0 &amp;amp;= x \\ d_1 &amp;amp;= \overline{x} q_0 &amp;#43; x q_1 \overline{q_0} \\ Z &amp;amp;= q_0 q_1 \end{aligned}\]  Step 5: Circuit diagram
+Mealy machine design #   Output depends on present state as well as present input If input changes, output also changes Less number of states are required There is less hardware requirements They react faster to inputs Asynchronous output generation Output is placed on transitions It is difficult to design  We will design a Mealy machine that detects the same overlapping &amp;ldquo;101&amp;rdquo;.</description>
+    </item>
+    
+    <item>
       <title>CS138-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1436,6 +1447,18 @@ Circuit reserves some resources, packet switchings allows sharing
       <description>Piplined protocols #  Go-back-n #  unacked = unacknowledged = no ACK response, not confirmed for success yet.
 The number of bits needed for a   \( k \)  -bit sequence numbers is  \( 2^k - 1 \)  . The window size is  \( N = 2^k \)  .
 The packet number that can be used for cumulative ack should be the largest number before any gap.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210401</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210401/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210401/</guid>
+      <description>Connection oriented transport: TCP #  Entire header size is   \( 32 \text{ bits } \cdot 5 = 160 \text{ bits } = 20 \text{ bytes } \)  . The receive window is used for flow control.
+Sequence number example:
+Both sides randomize the sequence number they will use at the beginning.
+Reliable data transfer #  Flow control #  The difference between flow control and congestion control:</description>
     </item>
     
     <item>

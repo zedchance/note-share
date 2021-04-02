@@ -35,5 +35,16 @@
 Step 2: determine the minimum number of states/bits required to store states</description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210401</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210401/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210401/</guid>
+      <description>Finite state machine design cont. #  Moore machine design cont. #  Recall
+  \[\begin{aligned} d_0 &amp;amp;= x \\ d_1 &amp;amp;= \overline{x} q_0 &amp;#43; x q_1 \overline{q_0} \\ Z &amp;amp;= q_0 q_1 \end{aligned}\]  Step 5: Circuit diagram
+Mealy machine design #   Output depends on present state as well as present input If input changes, output also changes Less number of states are required There is less hardware requirements They react faster to inputs Asynchronous output generation Output is placed on transitions It is difficult to design  We will design a Mealy machine that detects the same overlapping &amp;ldquo;101&amp;rdquo;.</description>
+    </item>
+    
   </channel>
 </rss>

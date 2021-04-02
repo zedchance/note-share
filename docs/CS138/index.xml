@@ -193,5 +193,17 @@ The number of bits needed for a   \( k \)  -bit sequence numbers is  \( 2^k - 1 
 The packet number that can be used for cumulative ack should be the largest number before any gap.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210401</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210401/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210401/</guid>
+      <description>Connection oriented transport: TCP #  Entire header size is   \( 32 \text{ bits } \cdot 5 = 160 \text{ bits } = 20 \text{ bytes } \)  . The receive window is used for flow control.
+Sequence number example:
+Both sides randomize the sequence number they will use at the beginning.
+Reliable data transfer #  Flow control #  The difference between flow control and congestion control:</description>
+    </item>
+    
   </channel>
 </rss>
