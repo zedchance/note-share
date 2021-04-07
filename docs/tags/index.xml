@@ -295,6 +295,15 @@
     </item>
     
     <item>
+      <title>compilers</title>
+      <link>http://zedchance.github.io/notes/tags/compilers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/compilers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>context-free grammar</title>
       <link>http://zedchance.github.io/notes/tags/context-free-grammar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -799,6 +808,15 @@
     </item>
     
     <item>
+      <title>lexers</title>
+      <link>http://zedchance.github.io/notes/tags/lexers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/lexers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>linear algebra</title>
       <link>http://zedchance.github.io/notes/tags/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -966,6 +984,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/parse-trees/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>parsers</title>
+      <link>http://zedchance.github.io/notes/tags/parsers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/parsers/</guid>
       <description></description>
     </item>
     

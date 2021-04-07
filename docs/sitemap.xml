@@ -156,6 +156,8 @@
     <loc>http://zedchance.github.io/notes/tags/command-design/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/compilers/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/context-free-grammar/</loc>
     <lastmod>2021-03-30T19:53:34-07:00</lastmod>
   </url><url>
@@ -464,6 +466,8 @@
     <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210329/</loc>
     <lastmod>2021-03-30T19:53:34-07:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
@@ -510,9 +514,12 @@
     <lastmod>2021-03-18T20:08:55-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210401/</loc>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -560,9 +567,12 @@
     <lastmod>2021-03-16T20:18:10-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210330/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210401/</loc>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -634,7 +644,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/finite-state-machine/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/ftp/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -649,7 +659,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/go-back-n/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/graph/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -720,6 +730,8 @@
     <loc>http://zedchance.github.io/notes/</loc>
     <lastmod>2021-03-10T18:37:55-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/lexers/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/linear-algebra/</loc>
     <lastmod>2021-03-07T11:44:52-08:00</lastmod>
   </url><url>
@@ -757,6 +769,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/mealy-machine/</loc>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/mergesort/</loc>
     <lastmod>2021-03-11T14:16:36-08:00</lastmod>
@@ -768,7 +781,7 @@
     <lastmod>2021-03-16T20:18:10-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/moore-machine/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/morality/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -799,6 +812,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/parse-trees/</loc>
     <lastmod>2021-03-16T20:18:10-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/parsers/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/PHIL103/PHIL103-ec-lecture/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -918,7 +933,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/piplined-protocols/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/polymorphism/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -993,10 +1008,10 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/selective-repeat/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/sequential-circuits/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/series/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -1041,12 +1056,13 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
-    <lastmod>2021-03-30T19:53:34-07:00</lastmod>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-03-10T17:24:34-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/TCP/</loc>
+    <lastmod>2021-04-01T20:13:30-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/thermodynamics/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>

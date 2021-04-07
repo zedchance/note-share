@@ -55,5 +55,15 @@ Core modules #  S-R Latches
 Step 2: determine the minimum number of states/bits required to store states</description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210406</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/</guid>
+      <description>Mealy machine design cont. #  Recall:
+  \[\begin{aligned} d_0 &amp;amp;= x \\ d_1 &amp;amp;= q_0 \\ Z &amp;amp;= q_1 x \end{aligned}\]  Sequential circuits: large design #  </description>
+    </item>
+    
   </channel>
 </rss>

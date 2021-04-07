@@ -1089,6 +1089,15 @@ The first transition triple is  \( \lambda, \empty, S \empty \)  , and the secon
     </item>
     
     <item>
+      <title>CS135-lecture-20210405</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/</guid>
+      <description>Introduction to Compilers #  Structure of a compiler #  The economy of programming languages #  Lexical analysis #  Lexical examples #  Lexical specification #  Introduction to parsing #  Predictive parsing #  </description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1260,6 +1269,16 @@ Step 2: determine the minimum number of states/bits required to store states</de
       <description>Finite state machine design cont. #  Moore machine design cont. #  Recall
   \[\begin{aligned} d_0 &amp;amp;= x \\ d_1 &amp;amp;= \overline{x} q_0 &amp;#43; x q_1 \overline{q_0} \\ Z &amp;amp;= q_0 q_1 \end{aligned}\]  Step 5: Circuit diagram
 Mealy machine design #   Output depends on present state as well as present input If input changes, output also changes Less number of states are required There is less hardware requirements They react faster to inputs Asynchronous output generation Output is placed on transitions It is difficult to design  We will design a Mealy machine that detects the same overlapping &amp;ldquo;101&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210406</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/</guid>
+      <description>Mealy machine design cont. #  Recall:
+  \[\begin{aligned} d_0 &amp;amp;= x \\ d_1 &amp;amp;= q_0 \\ Z &amp;amp;= q_1 x \end{aligned}\]  Sequential circuits: large design #  </description>
     </item>
     
     <item>
@@ -1459,6 +1478,17 @@ The packet number that can be used for cumulative ack should be the largest numb
 Sequence number example:
 Both sides randomize the sequence number they will use at the beginning.
 Reliable data transfer #  Flow control #  The difference between flow control and congestion control:</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210406</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</guid>
+      <description>TCP Cont. #  Flow control #  rwnd = receive window
+Connection management #  TCP 3-way handshake steps:
+ SYN = 1, ACK = 0: SYN packet SYN = 1, ACK = 1: SYNACK packet SYN = 0, ACK = 1: ACK packet. This packet can contain real data from client to server.  Principles of congestion control #  In a perfect world:   \( \lambda_{\text{in} } = \lambda_{\text{out} } \)  , however this is not usually the case.</description>
     </item>
     
     <item>

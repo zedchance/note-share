@@ -232,5 +232,14 @@ Lets start out with this grammar:
 The first transition triple is  \( \lambda, \empty, S \empty \)  , and the second transition is  \( \lambda, \empty, \empty \)  .</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210405</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/</guid>
+      <description>Introduction to Compilers #  Structure of a compiler #  The economy of programming languages #  Lexical analysis #  Lexical examples #  Lexical specification #  Introduction to parsing #  Predictive parsing #  </description>
+    </item>
+    
   </channel>
 </rss>
