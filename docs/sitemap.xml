@@ -159,6 +159,9 @@
     <loc>http://zedchance.github.io/notes/tags/compilers/</loc>
     <lastmod>2021-04-06T22:22:59-07:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/congestion-control/</loc>
+    <lastmod>2021-04-06T22:22:59-07:00</lastmod>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/context-free-grammar/</loc>
     <lastmod>2021-03-30T19:53:34-07:00</lastmod>
   </url><url>
@@ -408,6 +411,7 @@
     <lastmod>2021-03-15T14:52:22-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS133/CS133-lecture-20210407/</loc>
+    <lastmod>2021-04-07T12:49:19-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -472,6 +476,8 @@
     <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/</loc>
     <lastmod>2021-04-06T22:22:59-07:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/CS135/CS135-lecture-20210407/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
@@ -525,6 +531,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/</loc>
     <lastmod>2021-04-06T22:22:59-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS137/CS137-lecture-20210408/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -580,6 +588,10 @@
     <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</loc>
     <lastmod>2021-04-06T22:22:59-07:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
@@ -591,6 +603,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/CS46/CS46-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/datagrams/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/delay/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -650,6 +664,9 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/finite-state-machine/</loc>
+    <lastmod>2021-04-06T22:22:59-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/flow-control/</loc>
     <lastmod>2021-04-06T22:22:59-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/ftp/</loc>
@@ -807,6 +824,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/network-history/</loc>
     <lastmod>2021-03-18T20:08:55-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/network-layer/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/network-security/</loc>
     <lastmod>2021-03-18T20:08:55-07:00</lastmod>
@@ -1064,7 +1083,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
-    <lastmod>2021-04-06T22:22:59-07:00</lastmod>
+    <lastmod>2021-04-07T12:49:19-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-03-10T17:24:34-08:00</lastmod>
@@ -1088,6 +1107,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/transformations/</loc>
+    <lastmod>2021-04-07T12:49:19-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/transport-layer/</loc>
     <lastmod>2021-03-10T17:24:34-08:00</lastmod>
@@ -1117,6 +1137,8 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/verification/validation/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/virtual-circuits/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/web-caching/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>

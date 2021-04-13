@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flow control on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/flow-control/</link>
+    <description>Recent content in flow control on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/flow-control/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210406</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</guid>
+      <description>TCP Cont. #  Flow control #  rwnd = receive window
+Connection management #  TCP 3-way handshake steps:
+ SYN = 1, ACK = 0: SYN packet SYN = 1, ACK = 1: SYNACK packet SYN = 0, ACK = 1: ACK packet. This packet can contain real data from client to server.  Principles of congestion control #  In a perfect world:   \( \lambda_{\text{in} } = \lambda_{\text{out} } \)  , however this is not usually the case.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>congestion control on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/congestion-control/</link>
+    <description>Recent content in congestion control on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/congestion-control/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210406</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/</guid>
+      <description>TCP Cont. #  Flow control #  rwnd = receive window
+Connection management #  TCP 3-way handshake steps:
+ SYN = 1, ACK = 0: SYN packet SYN = 1, ACK = 1: SYNACK packet SYN = 0, ACK = 1: ACK packet. This packet can contain real data from client to server.  Principles of congestion control #  In a perfect world:   \( \lambda_{\text{in} } = \lambda_{\text{out} } \)  , however this is not usually the case.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210408</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</guid>
+      <description>SMTP socket programming assignment #  TCP cont. #  Congestion control #  https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/tcp-congestion/index.html
+Throughput #  Fairness #  Network layer #  Quick review
+ The application layer is app to app. Transport layer is process to process Network layer is device to device (machine to machine), including routers  ATM = asynchronous transfer model
+For internet
+ Connection is at transport layer (TCP) Datagrams (network connectionless)   ATM/X.</description>
+    </item>
+    
+  </channel>
+</rss>

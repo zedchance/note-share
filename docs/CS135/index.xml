@@ -241,5 +241,16 @@ The first transition triple is  \( \lambda, \empty, S \empty \)  , and the secon
       <description>Introduction to Compilers #  Structure of a compiler #  The economy of programming languages #  Lexical analysis #  Lexical examples #  Lexical specification #  Introduction to parsing #  Predictive parsing #  </description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210407</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210407/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210407/</guid>
+      <description>Compiler front end #  Compilers are presented with source code, and that goes through the front end of the compiler. This front end builds a parse tree and sends that to the back end of the compiler. The back end produces an executable.
+The front end is composed of multiple steps
+ Lexical analysis, sometimes called the scanner. This takes the source code and produces tokens. Syntactic analysis, called a parser.</description>
+    </item>
+    
   </channel>
 </rss>

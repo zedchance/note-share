@@ -304,6 +304,15 @@
     </item>
     
     <item>
+      <title>congestion control</title>
+      <link>http://zedchance.github.io/notes/tags/congestion-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/congestion-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>context-free grammar</title>
       <link>http://zedchance.github.io/notes/tags/context-free-grammar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -381,6 +390,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/crc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datagrams</title>
+      <link>http://zedchance.github.io/notes/tags/datagrams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/datagrams/</guid>
       <description></description>
     </item>
     
@@ -561,6 +579,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/finite-state-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flow control</title>
+      <link>http://zedchance.github.io/notes/tags/flow-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/flow-control/</guid>
       <description></description>
     </item>
     
@@ -948,6 +975,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/network-history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network layer</title>
+      <link>http://zedchance.github.io/notes/tags/network-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/network-layer/</guid>
       <description></description>
     </item>
     
@@ -1515,6 +1551,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/verification/validation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual circuits</title>
+      <link>http://zedchance.github.io/notes/tags/virtual-circuits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/virtual-circuits/</guid>
       <description></description>
     </item>
     

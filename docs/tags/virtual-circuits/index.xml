@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>virtual circuits on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/virtual-circuits/</link>
+    <description>Recent content in virtual circuits on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/virtual-circuits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210413</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/</guid>
+      <description>Review #   Devices, links, packet switches Protocols define format and order of messages sent and received among network entities Routers Routing and forwarding Packet switching   Worms do not need user&amp;rsquo;s interaction, viruses do Distributed denial of service. TLD name servers are easier to attack Recording packets passing through network Sends a packet with a forced source address Sends bogus replies to the DNS servers   P2P is more scalable IP address and port number TCP, because it is reliable TCP SSL is implemented at the app layer   Persistent allows multiple objects to be sent over a single connection set-cookie cookie Database or back end Cookie file managed by browser   host to IP mapping, host nick name, mail server nick name, load distribution iterative and recursive (fruit.</description>
+    </item>
+    
+  </channel>
+</rss>

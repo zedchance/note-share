@@ -27,5 +27,18 @@ Layering can be harmful because each layer is only responsible for its own job, 
 Internet protocol stack is a practical perspective, ISO/OSI reference model is a reference perspective. The missing layers (presentation, session) must be implemented in the application layer if needed.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210408</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</guid>
+      <description>SMTP socket programming assignment #  TCP cont. #  Congestion control #  https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/tcp-congestion/index.html
+Throughput #  Fairness #  Network layer #  Quick review
+ The application layer is app to app. Transport layer is process to process Network layer is device to device (machine to machine), including routers  ATM = asynchronous transfer model
+For internet
+ Connection is at transport layer (TCP) Datagrams (network connectionless)   ATM/X.</description>
+    </item>
+    
   </channel>
 </rss>

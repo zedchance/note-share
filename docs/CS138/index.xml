@@ -216,5 +216,27 @@ Connection management #  TCP 3-way handshake steps:
  SYN = 1, ACK = 0: SYN packet SYN = 1, ACK = 1: SYNACK packet SYN = 0, ACK = 1: ACK packet. This packet can contain real data from client to server.  Principles of congestion control #  In a perfect world:   \( \lambda_{\text{in} } = \lambda_{\text{out} } \)  , however this is not usually the case.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210408</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/</guid>
+      <description>SMTP socket programming assignment #  TCP cont. #  Congestion control #  https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/content/interactiveanimations/tcp-congestion/index.html
+Throughput #  Fairness #  Network layer #  Quick review
+ The application layer is app to app. Transport layer is process to process Network layer is device to device (machine to machine), including routers  ATM = asynchronous transfer model
+For internet
+ Connection is at transport layer (TCP) Datagrams (network connectionless)   ATM/X.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210413</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/</guid>
+      <description>Review #   Devices, links, packet switches Protocols define format and order of messages sent and received among network entities Routers Routing and forwarding Packet switching   Worms do not need user&amp;rsquo;s interaction, viruses do Distributed denial of service. TLD name servers are easier to attack Recording packets passing through network Sends a packet with a forced source address Sends bogus replies to the DNS servers   P2P is more scalable IP address and port number TCP, because it is reliable TCP SSL is implemented at the app layer   Persistent allows multiple objects to be sent over a single connection set-cookie cookie Database or back end Cookie file managed by browser   host to IP mapping, host nick name, mail server nick name, load distribution iterative and recursive (fruit.</description>
+    </item>
+    
   </channel>
 </rss>

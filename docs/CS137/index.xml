@@ -190,5 +190,15 @@ Mealy machine design #   Output depends on present state as well as present inpu
   \[\begin{aligned} d_0 &amp;amp;= x \\ d_1 &amp;amp;= q_0 \\ Z &amp;amp;= q_1 x \end{aligned}\]  Sequential circuits: large design #  </description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210408</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210408/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210408/</guid>
+      <description>Large design sequential circuits #  RTN (register transfer notation) is used to describe an operation of a data path
+ Formally describes the data path operation  </description>
+    </item>
+    
   </channel>
 </rss>
