@@ -1118,6 +1118,19 @@ The front end is composed of multiple steps
     </item>
     
     <item>
+      <title>CS135-lecture-20210419</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210419/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210419/</guid>
+      <description>Lexical specification to DFA #  WORD: aa+aaa OTHER: aa* Heres an NFA for each regular expression:
+So now we can take the NFA and make a DFA out of it. Recall, the scanner will need to use a DFA.
+Then we can label the accept states with the lexeme types:
+So for example, to scan this sequence:
+a aa aaa aaaa Nullablity #  A non-terminal, or a sequence of non-terminals, is nullable if the empty string can be derived from it.</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1309,6 +1322,28 @@ Mealy machine design #   Output depends on present state as well as present inpu
       <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210408/</guid>
       <description>Large design sequential circuits #  RTN (register transfer notation) is used to describe an operation of a data path
  Formally describes the data path operation  </description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210413</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/</guid>
+      <description>Sequential circuits, large design cont. #   Data path contains two adder modules and one adder/subtractor module The single mode controls the functions of the adder/subtractor modules    Data path that computes either of these:   \[\begin{aligned} &amp;amp;A &amp;#43; B &amp;#43; C &amp;#43; D \\ &amp;amp;A &amp;#43; B &amp;#43; C - D \end{aligned}\]    Equation that estimates the minimum clock period ( \( \tau \)  ) required to run the data path</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210415</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/</guid>
+      <description>Memory technology #  IM = instruction memory, DM = data memory
+RAM = random access memory, ROM = read only memory
+EEPROM = electrically erasable programmable read only memory
+SRAM = static RAM, DRAM = dynamic RAM
+Peak memory bandwidth example #     \( 32\text{ bits} \cdot \frac{1\text{ byte} }{8\text{ bits} } = 4 \text{ bytes} \\ \)   \( 1\text{ MB} = 1,000,000 \text{ bytes} \\ \)   \( 1 \text{ Hz} = 1 \text{ cycle/second}\\ \)   \( 1 \text{ MHz} = 1,000,000 \text{ cycles/second} \\\)   \( 100 \text{ MHz} = 100,000,000 \text{ cycles/second} \\\)  So,</description>
     </item>
     
     <item>
@@ -1541,6 +1576,19 @@ For internet
       
       <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/</guid>
       <description>Review #   Devices, links, packet switches Protocols define format and order of messages sent and received among network entities Routers Routing and forwarding Packet switching   Worms do not need user&amp;rsquo;s interaction, viruses do Distributed denial of service. TLD name servers are easier to attack Recording packets passing through network Sends a packet with a forced source address Sends bogus replies to the DNS servers   P2P is more scalable IP address and port number TCP, because it is reliable TCP SSL is implemented at the app layer   Persistent allows multiple objects to be sent over a single connection set-cookie cookie Database or back end Cookie file managed by browser   host to IP mapping, host nick name, mail server nick name, load distribution iterative and recursive (fruit.</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210415</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210415/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210415/</guid>
+      <description>Network layer cont. #  Switching fabrics #  Since data can flow bidirectionally, inputs can become outputs, and vice versa.
+Output ports #  Input port queueing #  IP: Internet Protocol #  ICMP = internet control message protocol
+Datagram format #  The header is 20 bytes long.
+Upper layer can be TCP or UDP, or ICMP
+A type could be multimedia, satellite signal etc, used for priority.</description>
     </item>
     
     <item>

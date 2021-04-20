@@ -75,5 +75,14 @@ Step 2: determine the minimum number of states/bits required to store states</de
  Formally describes the data path operation  </description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210413</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/</guid>
+      <description>Sequential circuits, large design cont. #   Data path contains two adder modules and one adder/subtractor module The single mode controls the functions of the adder/subtractor modules    Data path that computes either of these:   \[\begin{aligned} &amp;amp;A &amp;#43; B &amp;#43; C &amp;#43; D \\ &amp;amp;A &amp;#43; B &amp;#43; C - D \end{aligned}\]    Equation that estimates the minimum clock period ( \( \tau \)  ) required to run the data path</description>
+    </item>
+    
   </channel>
 </rss>

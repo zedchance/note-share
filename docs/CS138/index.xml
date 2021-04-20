@@ -238,5 +238,18 @@ For internet
       <description>Review #   Devices, links, packet switches Protocols define format and order of messages sent and received among network entities Routers Routing and forwarding Packet switching   Worms do not need user&amp;rsquo;s interaction, viruses do Distributed denial of service. TLD name servers are easier to attack Recording packets passing through network Sends a packet with a forced source address Sends bogus replies to the DNS servers   P2P is more scalable IP address and port number TCP, because it is reliable TCP SSL is implemented at the app layer   Persistent allows multiple objects to be sent over a single connection set-cookie cookie Database or back end Cookie file managed by browser   host to IP mapping, host nick name, mail server nick name, load distribution iterative and recursive (fruit.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210415</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210415/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210415/</guid>
+      <description>Network layer cont. #  Switching fabrics #  Since data can flow bidirectionally, inputs can become outputs, and vice versa.
+Output ports #  Input port queueing #  IP: Internet Protocol #  ICMP = internet control message protocol
+Datagram format #  The header is 20 bytes long.
+Upper layer can be TCP or UDP, or ICMP
+A type could be multimedia, satellite signal etc, used for priority.</description>
+    </item>
+    
   </channel>
 </rss>

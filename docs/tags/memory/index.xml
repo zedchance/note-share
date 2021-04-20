@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>memory on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/memory/</link>
+    <description>Recent content in memory on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS137-lecture-20210415</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/</guid>
+      <description>Memory technology #  IM = instruction memory, DM = data memory
+RAM = random access memory, ROM = read only memory
+EEPROM = electrically erasable programmable read only memory
+SRAM = static RAM, DRAM = dynamic RAM
+Peak memory bandwidth example #     \( 32\text{ bits} \cdot \frac{1\text{ byte} }{8\text{ bits} } = 4 \text{ bytes} \\ \)   \( 1\text{ MB} = 1,000,000 \text{ bytes} \\ \)   \( 1 \text{ Hz} = 1 \text{ cycle/second}\\ \)   \( 1 \text{ MHz} = 1,000,000 \text{ cycles/second} \\\)   \( 100 \text{ MHz} = 100,000,000 \text{ cycles/second} \\\)  So,</description>
+    </item>
+    
+  </channel>
+</rss>

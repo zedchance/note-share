@@ -200,5 +200,27 @@ Mealy machine design #   Output depends on present state as well as present inpu
  Formally describes the data path operation  </description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210413</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/</guid>
+      <description>Sequential circuits, large design cont. #   Data path contains two adder modules and one adder/subtractor module The single mode controls the functions of the adder/subtractor modules    Data path that computes either of these:   \[\begin{aligned} &amp;amp;A &amp;#43; B &amp;#43; C &amp;#43; D \\ &amp;amp;A &amp;#43; B &amp;#43; C - D \end{aligned}\]    Equation that estimates the minimum clock period ( \( \tau \)  ) required to run the data path</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210415</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/</guid>
+      <description>Memory technology #  IM = instruction memory, DM = data memory
+RAM = random access memory, ROM = read only memory
+EEPROM = electrically erasable programmable read only memory
+SRAM = static RAM, DRAM = dynamic RAM
+Peak memory bandwidth example #     \( 32\text{ bits} \cdot \frac{1\text{ byte} }{8\text{ bits} } = 4 \text{ bytes} \\ \)   \( 1\text{ MB} = 1,000,000 \text{ bytes} \\ \)   \( 1 \text{ Hz} = 1 \text{ cycle/second}\\ \)   \( 1 \text{ MHz} = 1,000,000 \text{ cycles/second} \\\)   \( 100 \text{ MHz} = 100,000,000 \text{ cycles/second} \\\)  So,</description>
+    </item>
+    
   </channel>
 </rss>
