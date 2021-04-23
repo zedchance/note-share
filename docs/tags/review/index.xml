@@ -44,6 +44,15 @@ Final review #  </description>
     </item>
     
     <item>
+      <title>CS137-lecture-20210420</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210420/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210420/</guid>
+      <description>Exam 2 review #  Sequential circuit small design #   All small and large sequential circuits are made of flip flops and sets of combination circuits Contrary to CC (combination circuits), a sequential circuit design has states and transitions from a current state to the next state A sequential circuit design problem is typically modeled as a finite state diagram FSD consists of circles as states and arcs (arrows) as transitions, which specifies the behavior of a sequential circuit FSD is systematically converted into circuit called finite state machine Finite state machines designs categorized into Mealy, Moore, or hybrid Mealy is a FSM whose output values are determined by its current e state and input.</description>
+    </item>
+    
+    <item>
       <title>CS138-lecture-20210316</title>
       <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210316/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

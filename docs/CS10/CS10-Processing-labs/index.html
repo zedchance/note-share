@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.82.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140  //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y&#43;50,100,20,10); rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); rect(x&#43;35,y&#43;40,20,100,10); //Legs  rect(x-30,y&#43;130,27,100,10); rect(x&#43;3,y&#43;130,27,100,10); //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160); triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255); //Blast off!">
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.a6e33eff9fca295dda99115dabc387fd12b0e1282a347b6e4de6e73b19c96d91.css" integrity="sha256-puM&#43;/5/KKV3amRFdq8OH/RKw4SgqNHtuTebnOxnJbZE=">
-<script defer src="/notes/en.search.min.059489acf545dbe4846d520a64a98e2db962beb3a53fb888ee491f1b2f25973c.js" integrity="sha256-BZSJrPVF2&#43;SEbVIKZKmOLblivrOlP7iI7kkfGy8llzw="></script>
+<script defer src="/notes/en.search.min.34d39affea38872062a785187100688e198de4a3bb065d09f33b0b6cc4723e7f.js" integrity="sha256-NNOa/&#43;o4hyBip4UYcQBojhmN5KO7Bl0J8zsLbMRyPn8="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1191,6 +1191,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210423/" class="">CS133-lecture-20210423</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -1807,6 +1820,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210420/" class="">CS137-lecture-20210420</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2097,6 +2123,32 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210415/" class="">CS138-lecture-20210415</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210420/" class="">CS138-lecture-20210420</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210422/" class="">CS138-lecture-20210422</a>
   
 
         </li>

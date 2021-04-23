@@ -18,5 +18,17 @@ Decimal to binary, and back
 Is a BST seach a P problem? Yes It is also a NP problem. It is not a NP-Complete problem.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210422</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210422/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210422/</guid>
+      <description>Routing algorithms #  Graph abstraction #  Algorithm classifications #  Dijkstra&amp;rsquo;s algorithm #  Hierarchical routing #  There can be multiple links between regions.
+Routing the internet #  OSPF #  Link state algorithms, because they are global, works perfect for smaller networks.
+BGP #  To help remember: iBGP = internal border gateway protocol, eBGP = external border gateway protocol
+Broadcast and multicast routing #  </description>
+    </item>
+    
   </channel>
 </rss>

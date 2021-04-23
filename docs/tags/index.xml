@@ -70,6 +70,15 @@
     </item>
     
     <item>
+      <title>animation</title>
+      <link>http://zedchance.github.io/notes/tags/animation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/animation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>application layer</title>
       <link>http://zedchance.github.io/notes/tags/application-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -165,6 +174,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/breadth-first-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>broadcast/multicast</title>
+      <link>http://zedchance.github.io/notes/tags/broadcast/multicast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/broadcast/multicast/</guid>
       <description></description>
     </item>
     
@@ -448,6 +466,15 @@
     </item>
     
     <item>
+      <title>DHCP</title>
+      <link>http://zedchance.github.io/notes/tags/DHCP/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/DHCP/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>dijkstra&#39;s algorithm</title>
       <link>http://zedchance.github.io/notes/tags/dijkstras-algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -709,6 +736,15 @@
     </item>
     
     <item>
+      <title>ICMP</title>
+      <link>http://zedchance.github.io/notes/tags/ICMP/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/ICMP/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ideal gas law</title>
       <link>http://zedchance.github.io/notes/tags/ideal-gas-law/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -723,6 +759,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/IEEE754/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IGP</title>
+      <link>http://zedchance.github.io/notes/tags/IGP/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/IGP/</guid>
       <description></description>
     </item>
     
@@ -781,11 +826,29 @@
     </item>
     
     <item>
+      <title>intra-as</title>
+      <link>http://zedchance.github.io/notes/tags/intra-as/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/intra-as/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>IPv4</title>
       <link>http://zedchance.github.io/notes/tags/IPv4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/IPv4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IPv6</title>
+      <link>http://zedchance.github.io/notes/tags/IPv6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/IPv6/</guid>
       <description></description>
     </item>
     
@@ -961,11 +1024,29 @@
     </item>
     
     <item>
+      <title>multiple dispatch</title>
+      <link>http://zedchance.github.io/notes/tags/multiple-dispatch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/multiple-dispatch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>multiplexers</title>
       <link>http://zedchance.github.io/notes/tags/multiplexers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/multiplexers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NAT</title>
+      <link>http://zedchance.github.io/notes/tags/NAT/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/NAT/</guid>
       <description></description>
     </item>
     
@@ -1276,6 +1357,15 @@
     </item>
     
     <item>
+      <title>routing algorithms</title>
+      <link>http://zedchance.github.io/notes/tags/routing-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/routing-algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>s-r latch</title>
       <link>http://zedchance.github.io/notes/tags/s-r-latch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1371,6 +1461,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sound</title>
+      <link>http://zedchance.github.io/notes/tags/sound/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/sound/</guid>
       <description></description>
     </item>
     

@@ -120,5 +120,14 @@ Then in AppMain:</description>
       <description>Graphics #  Transformations #  Transformations using matrices #  Applying transformation with matrices #  Active matrix areas #  Concatenation of transformations #  Images within 2D games #  Image characteristics #  Image repository #  Alpha blending #  Alpha compositing #  Additive blending #  </description>
     </item>
     
+    <item>
+      <title>CS133-lecture-20210423</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210423/</guid>
+      <description>Animation #  Frame based #  Collision detection #  ICollider interface #  Handling collision #  Sound #  Playing sounds in CN1 #  Looping sounds #  Multiple dispatch #  </description>
+    </item>
+    
   </channel>
 </rss>
