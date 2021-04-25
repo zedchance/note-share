@@ -18,5 +18,15 @@ Decimal to binary, and back
 Is a BST seach a P problem? Yes It is also a NP problem. It is not a NP-Complete problem.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210423</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210423/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210423/</guid>
+      <description>Introduction to Turing machines #  Note: See text book readings for formal history of the Turing machine.  A Turing machine has a tape that is infinitely long in both directions. The machine has a tape head that can read and write to the tape.
+The control unit of the Turing machine is an automata. Each transition has a pair   \( x,y \)  , follow the arrow if the tape head is over  \( x \)  , and do operation  \( y \)  .</description>
+    </item>
+    
   </channel>
 </rss>
