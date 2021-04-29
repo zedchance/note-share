@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>instruction set architecture on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/instruction-set-architecture/</link>
+    <description>Recent content in instruction set architecture on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/instruction-set-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS137-lecture-20210427</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210427/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210427/</guid>
+      <description>Instruction set architectures #   SIMD = single instruction multiple data RISC = reduced instruction set computer CISC = complex instruction set computer ACC = accumulator  Types of instructions #  AES = advanced encryption standard
+High level language program to execution #  Instruction cycle #  Data path has four main tasks
+ fetch decode execute  may access data memory (another cache)   write  </description>
+    </item>
+    
+  </channel>
+</rss>

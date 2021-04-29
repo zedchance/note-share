@@ -412,6 +412,24 @@
     </item>
     
     <item>
+      <title>CSMA</title>
+      <link>http://zedchance.github.io/notes/tags/CSMA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/CSMA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cyclic redundancy check</title>
+      <link>http://zedchance.github.io/notes/tags/cyclic-redundancy-check/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/cyclic-redundancy-check/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>datagrams</title>
       <link>http://zedchance.github.io/notes/tags/datagrams/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -799,6 +817,15 @@
     </item>
     
     <item>
+      <title>instruction set architecture</title>
+      <link>http://zedchance.github.io/notes/tags/instruction-set-architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/instruction-set-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>integration</title>
       <link>http://zedchance.github.io/notes/tags/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -943,6 +970,15 @@
     </item>
     
     <item>
+      <title>link layer</title>
+      <link>http://zedchance.github.io/notes/tags/link-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/link-layer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>loss</title>
       <link>http://zedchance.github.io/notes/tags/loss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1020,6 +1056,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/morality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multiple access protocols</title>
+      <link>http://zedchance.github.io/notes/tags/multiple-access-protocols/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/multiple-access-protocols/</guid>
       <description></description>
     </item>
     
@@ -1308,6 +1353,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/red-black-BST/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reductions</title>
+      <link>http://zedchance.github.io/notes/tags/reductions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/reductions/</guid>
       <description></description>
     </item>
     

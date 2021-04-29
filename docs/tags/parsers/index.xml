@@ -28,5 +28,16 @@ So for example, to scan this sequence:
 a aa aaa aaaa Nullablity #  A non-terminal, or a sequence of non-terminals, is nullable if the empty string can be derived from it.</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210426</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210426/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210426/</guid>
+      <description>Parsing using Java #  Consider
+  \( S&amp;#39; \to S\$ \\ S \to aSx \mid bSx \mid \lambda \)  Heres the predictor table
+   Production  \( \text{First (right hand side)} \)   If nullable,  \( \text{Follow(left hand side)} \)        \( S \to aSx \)    \( a \)       \( S \to bSx \)    \( b \)       \( S \to \lambda \)     \( x,\$ \)      In code:</description>
+    </item>
+    
   </channel>
 </rss>

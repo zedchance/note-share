@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>link layer on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/link-layer/</link>
+    <description>Recent content in link layer on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/link-layer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210427</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210427/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210427/</guid>
+      <description>Note: We skipped the slides on multicast last lecture.  Link layer #  Link layer services #  MAC = media access control, MAC addresses are 48 bits.
+Where the link layer is implemented #  rdt = reliable data transfer
+Error detection/correction #     \( G \)  can be any sequence as long as the sender and receiver use the same sequence.
+So if we pad the right side of  \( D \)  with  \( R = 011 \)  , we will get a remainder of  \( 0 \)  when the receiver performs the division.</description>
+    </item>
+    
+  </channel>
+</rss>

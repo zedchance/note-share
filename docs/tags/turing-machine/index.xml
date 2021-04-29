@@ -28,5 +28,15 @@ Is a BST seach a P problem? Yes It is also a NP problem. It is not a NP-Complete
 The control unit of the Turing machine is an automata. Each transition has a pair   \( x,y \)  , follow the arrow if the tape head is over  \( x \)  , and do operation  \( y \)  .</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210428</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210428/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210428/</guid>
+      <description>Acceptance algorithm #  Decision problems #  A decision problem is a problem that has a binary answer, true or false (or accept and reject). A decision problem may be something like: &amp;ldquo;given   \( x \)  , is  \( x \)  prime?&amp;rdquo; We can use decision problems to prove the limitations for Turing machines, because there isn&amp;rsquo;t a pumping lemma for Turing machines.
+If we can show that a decision problem can&amp;rsquo;t be solved, then we can show that computers can&amp;rsquo;t solve the same problem.</description>
+    </item>
+    
   </channel>
 </rss>
