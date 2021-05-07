@@ -242,5 +242,24 @@ High level language program to execution #  Instruction cycle #  Data path has f
  fetch decode execute  may access data memory (another cache)   write  </description>
     </item>
     
+    <item>
+      <title>CS137-lecture-20210429</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210429/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210429/</guid>
+      <description>ISA cont. #  Stack architecture #  Example stack style assembly to compute A = B * (C + D)
+PUSH (C) ; stack &amp;lt;- M[C] PUSH (D) ; stack &amp;lt;- M[D] ADD ; stack &amp;lt;- (C) + (D) ; values popped, added, result pushed PUSH (B) ; stack &amp;lt;- M[B] MUL ; stack &amp;lt;- ((C) + (D)) * (B) ; values popped, multiplied, result pushed POP (A) ; M[A] &amp;lt;- (((C) + (D)) * (B)) ; value popped and stored in memory Accumulator architecture #  LD = load</description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210506</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210506/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210506/</guid>
+      <description>ISA cont. #  RISC – reduced instruction set computer #  Some RISC style assembly to calculate   \( A = B \cdot (C &amp;#43; D) \)  LD R1, (C) ; R1 &amp;lt;- M[C] LD R2, (D) ; R2 &amp;lt;- M[D] ADD R3, R1, R2 ; R3 &amp;lt;- R1 + R2 LD R4, (B) ; R4 &amp;lt;- M[B] MUL R5, R3, R4 ; R5 &amp;lt;- R3 * R4 ST (A), R5 ; M[A] &amp;lt;- R5 Design example: Accumulator ISA #  </description>
+    </item>
+    
   </channel>
 </rss>

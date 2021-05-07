@@ -18,5 +18,19 @@ Error detection/correction #     \( G \)  can be any sequence as long as the sen
 So if we pad the right side of  \( D \)  with  \( R = 011 \)  , we will get a remainder of  \( 0 \)  when the receiver performs the division.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210429</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210429/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210429/</guid>
+      <description>Multiple access protocols cont. #  CSMA cont. #  CSMA/CD is used by ethernet.
+CD = collision detection, CA = collision avoidance
+It is not easy to detect collision (because of signal strength) in wireless LAN.
+CSMA/CD algorithm #  NIC = network interface card
+Binary backoff:
+After the   \( m \)  th collision, we choose  \( K \)  randomly in the range of  \( \{0, 1, 2, \ldots, 2^m - 1\} \)  .</description>
+    </item>
+    
   </channel>
 </rss>

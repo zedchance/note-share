@@ -19,5 +19,16 @@ Each time the packet goes thru a router, it must go up to the network layer and 
 At the destination, the layers are removed on the way up to the application layer.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210506</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210506/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210506/</guid>
+      <description>Network security #  What is network security? #  Cryptography #  RSA #  + = public, - = private
+Given the public key   \( K_{pub} \)  and the private key  \( K_{priv} \)  , we can decrypt anything encrypted by the public key, and vice versa.
+Alice invents a symmetric key, and sends it to Bob using RSA encryption. That way the computationally slow RSA algorithm can be used to send the symmetric key, and the symmetric key can be used for continual encryption.</description>
+    </item>
+    
   </channel>
 </rss>

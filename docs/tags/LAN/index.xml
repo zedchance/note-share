@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LAN on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/LAN/</link>
+    <description>Recent content in LAN on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/LAN/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210429</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210429/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210429/</guid>
+      <description>Multiple access protocols cont. #  CSMA cont. #  CSMA/CD is used by ethernet.
+CD = collision detection, CA = collision avoidance
+It is not easy to detect collision (because of signal strength) in wireless LAN.
+CSMA/CD algorithm #  NIC = network interface card
+Binary backoff:
+After the   \( m \)  th collision, we choose  \( K \)  randomly in the range of  \( \{0, 1, 2, \ldots, 2^m - 1\} \)  .</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210504</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210504/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210504/</guid>
+      <description>LAN cont. #  Switches vs routers #  VLAN #  VLAN = virtual local area network
+Data center networks #  TOR = top of rack
+A day in the life of a web request #  DHCP (UDP) &amp;gt; ARP (BGP) &amp;gt; DNS &amp;gt; HTTP (TCP)
+Summary #  Review #    What is the difference between network and transport layer? Network is machine to machine, transport is process to process</description>
+    </item>
+    
+  </channel>
+</rss>
