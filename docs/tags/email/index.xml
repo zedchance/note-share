@@ -19,5 +19,16 @@
  \[\begin{aligned} 99\% \cdot 0.6 = 58\% \end{aligned}\]  Total delay:</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210511</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210511/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210511/</guid>
+      <description>Network security cont. #  RSA cont. #  Authentication #  ap = authentication protocol (fictional)
+Challenge-response mechanism for authentication:
+ Using symmetric shared key,   \( K_{ab} \)   Alice sends the message to bob saying &amp;ldquo;I am alice&amp;rdquo; Bob generates a random one-time use nonce, and encrypts it with the shared key  \( R = K_{ab}(\text{nonce}) \)   Alice decrypts  \( R \)  based on the symmetric key  \( K_{ab} \)  .</description>
+    </item>
+    
   </channel>
 </rss>

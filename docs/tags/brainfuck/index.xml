@@ -19,5 +19,16 @@ There is a tape and a pointer to that tape. The tape holds data, and its infinit
 The program is a sequence of characters. The legal characters are</description>
     </item>
     
+    <item>
+      <title>CS135-lecture-20210511</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210511/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210511/</guid>
+      <description>More reduction examples #  Recap on reductions: A reduction is simply a hypothetical algorithm.
+ASolver(a) ... BSolver(...) ... ASolver relies on the existence of BSolver. So ASolver reduces to BSolver. So if BSolver exists, then ASolver exists.
+Acceptance problem #  If we have an algorithm accept(m,x), we are wondering if we run the algorithm m on input x, it will either output &amp;ldquo;accept&amp;rdquo; or &amp;ldquo;reject&amp;rdquo;. The claim is there is no algorithm that can produce this on all inputs (m,x).</description>
+    </item>
+    
   </channel>
 </rss>

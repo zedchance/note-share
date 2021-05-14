@@ -890,6 +890,15 @@ Then in AppMain:</description>
     </item>
     
     <item>
+      <title>CS133-lecture-20210513</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210513/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210513/</guid>
+      <description>Multitasking #  Threads vs processes #  Java threads #  Counter thread example #  Concurrent output example #  Multiple user threads example #  Priorities and synchronization #  Overview of Thread methods #  Common uses #  </description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1193,6 +1202,17 @@ The program is a sequence of characters. The legal characters are</description>
     </item>
     
     <item>
+      <title>CS135-lecture-20210511</title>
+      <link>http://zedchance.github.io/notes/CS135/CS135-lecture-20210511/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210511/</guid>
+      <description>More reduction examples #  Recap on reductions: A reduction is simply a hypothetical algorithm.
+ASolver(a) ... BSolver(...) ... ASolver relies on the existence of BSolver. So ASolver reduces to BSolver. So if BSolver exists, then ASolver exists.
+Acceptance problem #  If we have an algorithm accept(m,x), we are wondering if we run the algorithm m on input x, it will either output &amp;ldquo;accept&amp;rdquo; or &amp;ldquo;reject&amp;rdquo;. The claim is there is no algorithm that can produce this on all inputs (m,x).</description>
+    </item>
+    
+    <item>
       <title>CS137-lecture-20210126</title>
       <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1445,6 +1465,24 @@ PUSH (C) ; stack &amp;lt;- M[C] PUSH (D) ; stack &amp;lt;- M[D] ADD ; stack &amp
       
       <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210506/</guid>
       <description>ISA cont. #  RISC – reduced instruction set computer #  Some RISC style assembly to calculate   \( A = B \cdot (C &amp;#43; D) \)  LD R1, (C) ; R1 &amp;lt;- M[C] LD R2, (D) ; R2 &amp;lt;- M[D] ADD R3, R1, R2 ; R3 &amp;lt;- R1 + R2 LD R4, (B) ; R4 &amp;lt;- M[B] MUL R5, R3, R4 ; R5 &amp;lt;- R3 * R4 ST (A), R5 ; M[A] &amp;lt;- R5 Design example: Accumulator ISA #  </description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210511</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210511/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210511/</guid>
+      <description>ISA cont. #  Accumulator ISA cont. #  .code ; start of program code LD 0 ; initialize ACC &amp;lt;- 0 ST (sum) ; M[sum] &amp;lt;- ACC ST (i) ; M[i] &amp;lt;- ACC L1: CMP 7 ; i &amp;gt; 7? JGT L2 ; jump to L2 if greater flag is on MVX ; get next index, X &amp;lt;- ACC LD X(array) ; get next array element, ACC &amp;lt;- M[array + x] ADD (sum) ; add i to running sum, ACC &amp;lt;- ACC + M[sum] ST (sum) ; store running sum, M[sum] &amp;lt;- ACC LD (i) ; get i, ACC &amp;lt;- M[i] ADD 1 ; i++ ST (i) ; M[i] &amp;lt;- ACC JMP L1 L2: </description>
+    </item>
+    
+    <item>
+      <title>CS137-lecture-20210513</title>
+      <link>http://zedchance.github.io/notes/CS137/CS137-lecture-20210513/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS137/CS137-lecture-20210513/</guid>
+      <description>Review #   Boolean expressions, combinational circuit design IEEE754 example Sequential circuit design Finite state machine design Finite state machine examples Memory technology Instruction set architectures  </description>
     </item>
     
     <item>
@@ -1766,6 +1804,31 @@ Alice invents a symmetric key, and sends it to Bob using RSA encryption. That wa
     </item>
     
     <item>
+      <title>CS138-lecture-20210511</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210511/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210511/</guid>
+      <description>Network security cont. #  RSA cont. #  Authentication #  ap = authentication protocol (fictional)
+Challenge-response mechanism for authentication:
+ Using symmetric shared key,   \( K_{ab} \)   Alice sends the message to bob saying &amp;ldquo;I am alice&amp;rdquo; Bob generates a random one-time use nonce, and encrypts it with the shared key  \( R = K_{ab}(\text{nonce}) \)   Alice decrypts  \( R \)  based on the symmetric key  \( K_{ab} \)  .</description>
+    </item>
+    
+    <item>
+      <title>CS138-lecture-20210513</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210513/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210513/</guid>
+      <description>Network security cont. #  Note: These following topics will not be on the final  TLS – transport layer security #  TLS is implemented at application layer.
+IPSec – network layer security #  VPN = virtual private network
+IKE = internet key exchange, ESP = encapsulating security payloads
+Read more on kerberos
+Firewalls #  IDS = intrusion detection system
+IDS – intrusion detection systems #  Network security summary #  </description>
+    </item>
+    
+    <item>
       <title>CS26-lecture-notes</title>
       <link>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1834,9 +1897,7 @@ www.keil.com
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/MATH100/MATH100-lecture-notes/</guid>
-      <description>Math 100 lecture notes #  Incomplete
-master.pdf
- </description>
+      <description>Math 100 lecture notes #   master.pdf  </description>
     </item>
     
     <item>

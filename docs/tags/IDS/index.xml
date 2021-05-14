@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IDS on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/IDS/</link>
+    <description>Recent content in IDS on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/IDS/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS138-lecture-20210513</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210513/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210513/</guid>
+      <description>Network security cont. #  Note: These following topics will not be on the final  TLS – transport layer security #  TLS is implemented at application layer.
+IPSec – network layer security #  VPN = virtual private network
+IKE = internet key exchange, ESP = encapsulating security payloads
+Read more on kerberos
+Firewalls #  IDS = intrusion detection system
+IDS – intrusion detection systems #  Network security summary #  </description>
+    </item>
+    
+  </channel>
+</rss>

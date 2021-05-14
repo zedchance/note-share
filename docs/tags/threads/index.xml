@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>threads on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/threads/</link>
+    <description>Recent content in threads on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/threads/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS133-lecture-20210513</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210513/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210513/</guid>
+      <description>Multitasking #  Threads vs processes #  Java threads #  Counter thread example #  Concurrent output example #  Multiple user threads example #  Priorities and synchronization #  Overview of Thread methods #  Common uses #  </description>
+    </item>
+    
+  </channel>
+</rss>
