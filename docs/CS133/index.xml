@@ -147,5 +147,14 @@ Then in AppMain:</description>
       <description>Multitasking #  Threads vs processes #  Java threads #  Counter thread example #  Concurrent output example #  Multiple user threads example #  Priorities and synchronization #  Overview of Thread methods #  Common uses #  </description>
     </item>
     
+    <item>
+      <title>CS133-lecture-20210519</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210519/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210519/</guid>
+      <description>Mobile development – App distribution #  Certificates, UDID, signing authorities #  Signing and distribution #  Building native apps using CN1 #  Downloading/installing native apps #  </description>
+    </item>
+    
   </channel>
 </rss>

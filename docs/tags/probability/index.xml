@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>probability on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/probability/</link>
+    <description>Recent content in probability on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210601</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</guid>
+      <description>Course orientation #  Syllabus #  152-syllabus.pdf  Notes during orientation #   Programming will be required in each module, programming intensive Brush up on probability of simple events, simple conditional events Shallow introduction into groups and fields Class is only 5 weeks and 2 days long, so extremely accelerated, at least 20 hrs/week needed Hybrid class, half videos posted, and half live. Class will start at 1, and go until lecture finishes, then unrecorded open office hour 5 modules, starts on thursdays  Permutation functions and C programming Symmetric encryption Hashing and authentication Asymmetric cryptography and algorithms on large number Crytographic systems   Exams on week 3 and 5 Group quizzes on tuesdays, in breakout rooms on Zoom Last day is comprehensive final Take all assignments seriously, nothing is dropped  Brief introduction to cryptography #   Communication in the presence of adversaries</description>
+    </item>
+    
+  </channel>
+</rss>

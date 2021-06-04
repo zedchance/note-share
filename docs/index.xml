@@ -899,6 +899,48 @@ Then in AppMain:</description>
     </item>
     
     <item>
+      <title>CS133-lecture-20210519</title>
+      <link>http://zedchance.github.io/notes/CS133/CS133-lecture-20210519/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS133/CS133-lecture-20210519/</guid>
+      <description>Mobile development – App distribution #  Certificates, UDID, signing authorities #  Signing and distribution #  Building native apps using CN1 #  Downloading/installing native apps #  </description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210601</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210601/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210601/</guid>
+      <description>Course orientation #  Syllabus #  134Sy_Summer2021.pdf  Notes during orientation #   5 assignments, 5 weekly homeworks Effort may be taken into account during assignment grading Assignments build upon the previous assignment Midterm on June 22, and final on last day  Introduction to database management systems #  Files
+ persistent on disk easy to work with   DBMS
+ needs knowledge of software needs to design database structure can handle more complex situations    Imagine we have 2 different files: student_info and grade_record</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210602</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210602/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210602/</guid>
+      <description>DBMS cont. #  Database users #  If we&amp;rsquo;re storing student information in a database, we&amp;rsquo;ll have fields such as
+ age birthdate  If we want to store one in the database, which should we pick? Why only one?
+We should choose the birthdate because
+ we can derive the age birthdate is also more accurate of a measure of age we won&amp;rsquo;t need to increment the age in the database every year  What is the disadvantage of saving both?</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210603</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210603/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210603/</guid>
+      <description>ER model cont. #  Structure constraint cont. #  The reason we have both   \( M \)  and  \( N \)  is because they are are both in the same association. It is okay to reuse  \( M \)  in other places in the diagram.
+Note: The double line from employee to works_for indicates the total participation.  Weak entity #  Entity has</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1826,6 +1868,24 @@ IKE = internet key exchange, ESP = encapsulating security payloads
 Read more on kerberos
 Firewalls #  IDS = intrusion detection system
 IDS – intrusion detection systems #  Network security summary #  </description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210601</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</guid>
+      <description>Course orientation #  Syllabus #  152-syllabus.pdf  Notes during orientation #   Programming will be required in each module, programming intensive Brush up on probability of simple events, simple conditional events Shallow introduction into groups and fields Class is only 5 weeks and 2 days long, so extremely accelerated, at least 20 hrs/week needed Hybrid class, half videos posted, and half live. Class will start at 1, and go until lecture finishes, then unrecorded open office hour 5 modules, starts on thursdays  Permutation functions and C programming Symmetric encryption Hashing and authentication Asymmetric cryptography and algorithms on large number Crytographic systems   Exams on week 3 and 5 Group quizzes on tuesdays, in breakout rooms on Zoom Last day is comprehensive final Take all assignments seriously, nothing is dropped  Brief introduction to cryptography #   Communication in the presence of adversaries</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210603</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/</guid>
+      <description>Data programming #  Count the number of even chars #  in C #  #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &amp;lt; nitems; i++) if (p32[i] % 2 == 0) acc = acc + 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&amp;#34;%d\n&amp;#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.</description>
     </item>
     
     <item>

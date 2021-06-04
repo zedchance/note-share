@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DBMS on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/DBMS/</link>
+    <description>Recent content in DBMS on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/DBMS/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS134-lecture-20210601</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210601/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210601/</guid>
+      <description>Course orientation #  Syllabus #  134Sy_Summer2021.pdf  Notes during orientation #   5 assignments, 5 weekly homeworks Effort may be taken into account during assignment grading Assignments build upon the previous assignment Midterm on June 22, and final on last day  Introduction to database management systems #  Files
+ persistent on disk easy to work with   DBMS
+ needs knowledge of software needs to design database structure can handle more complex situations    Imagine we have 2 different files: student_info and grade_record</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210602</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210602/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210602/</guid>
+      <description>DBMS cont. #  Database users #  If we&amp;rsquo;re storing student information in a database, we&amp;rsquo;ll have fields such as
+ age birthdate  If we want to store one in the database, which should we pick? Why only one?
+We should choose the birthdate because
+ we can derive the age birthdate is also more accurate of a measure of age we won&amp;rsquo;t need to increment the age in the database every year  What is the disadvantage of saving both?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -19,5 +19,23 @@ SRAM = static RAM, DRAM = dynamic RAM
 Peak memory bandwidth example #     \( 32\text{ bits} \cdot \frac{1\text{ byte} }{8\text{ bits} } = 4 \text{ bytes} \\ \)   \( 1\text{ MB} = 1,000,000 \text{ bytes} \\ \)   \( 1 \text{ Hz} = 1 \text{ cycle/second}\\ \)   \( 1 \text{ MHz} = 1,000,000 \text{ cycles/second} \\\)   \( 100 \text{ MHz} = 100,000,000 \text{ cycles/second} \\\)  So,</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210601</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</guid>
+      <description>Course orientation #  Syllabus #  152-syllabus.pdf  Notes during orientation #   Programming will be required in each module, programming intensive Brush up on probability of simple events, simple conditional events Shallow introduction into groups and fields Class is only 5 weeks and 2 days long, so extremely accelerated, at least 20 hrs/week needed Hybrid class, half videos posted, and half live. Class will start at 1, and go until lecture finishes, then unrecorded open office hour 5 modules, starts on thursdays  Permutation functions and C programming Symmetric encryption Hashing and authentication Asymmetric cryptography and algorithms on large number Crytographic systems   Exams on week 3 and 5 Group quizzes on tuesdays, in breakout rooms on Zoom Last day is comprehensive final Take all assignments seriously, nothing is dropped  Brief introduction to cryptography #   Communication in the presence of adversaries</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210603</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/</guid>
+      <description>Data programming #  Count the number of even chars #  in C #  #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &amp;lt; nitems; i++) if (p32[i] % 2 == 0) acc = acc + 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&amp;#34;%d\n&amp;#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.</description>
+    </item>
+    
   </channel>
 </rss>

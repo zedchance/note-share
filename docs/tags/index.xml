@@ -79,6 +79,15 @@
     </item>
     
     <item>
+      <title>app distribution</title>
+      <link>http://zedchance.github.io/notes/tags/app-distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/app-distribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>application layer</title>
       <link>http://zedchance.github.io/notes/tags/application-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -457,11 +466,29 @@
     </item>
     
     <item>
+      <title>data flow</title>
+      <link>http://zedchance.github.io/notes/tags/data-flow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/data-flow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>datagrams</title>
       <link>http://zedchance.github.io/notes/tags/datagrams/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/datagrams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DBMS</title>
+      <link>http://zedchance.github.io/notes/tags/DBMS/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/DBMS/</guid>
       <description></description>
     </item>
     
@@ -610,6 +637,15 @@
     </item>
     
     <item>
+      <title>endianness</title>
+      <link>http://zedchance.github.io/notes/tags/endianness/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/endianness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>entropy</title>
       <link>http://zedchance.github.io/notes/tags/entropy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -624,6 +660,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/equilibrium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ER model</title>
+      <link>http://zedchance.github.io/notes/tags/ER-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/ER-model/</guid>
       <description></description>
     </item>
     
@@ -696,6 +741,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functions</title>
+      <link>http://zedchance.github.io/notes/tags/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/functions/</guid>
       <description></description>
     </item>
     
@@ -1258,6 +1312,15 @@
     </item>
     
     <item>
+      <title>permutations</title>
+      <link>http://zedchance.github.io/notes/tags/permutations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/permutations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>piplined protocols</title>
       <link>http://zedchance.github.io/notes/tags/piplined-protocols/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1299,6 +1362,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probability</title>
+      <link>http://zedchance.github.io/notes/tags/probability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/probability/</guid>
       <description></description>
     </item>
     
@@ -1470,6 +1542,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rotation</title>
+      <link>http://zedchance.github.io/notes/tags/rotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/rotation/</guid>
       <description></description>
     </item>
     

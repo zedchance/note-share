@@ -85,5 +85,17 @@ Circuit reserves some resources, packet switchings allows sharing
       <description>Review #   Devices, links, packet switches Protocols define format and order of messages sent and received among network entities Routers Routing and forwarding Packet switching   Worms do not need user&amp;rsquo;s interaction, viruses do Distributed denial of service. TLD name servers are easier to attack Recording packets passing through network Sends a packet with a forced source address Sends bogus replies to the DNS servers   P2P is more scalable IP address and port number TCP, because it is reliable TCP SSL is implemented at the app layer   Persistent allows multiple objects to be sent over a single connection set-cookie cookie Database or back end Cookie file managed by browser   host to IP mapping, host nick name, mail server nick name, load distribution iterative and recursive (fruit.</description>
     </item>
     
+    <item>
+      <title>CS138-lecture-20210504</title>
+      <link>http://zedchance.github.io/notes/CS138/CS138-lecture-20210504/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS138/CS138-lecture-20210504/</guid>
+      <description>LAN cont. #  Switches vs routers #  VLAN #  VLAN = virtual local area network
+Data center networks #  TOR = top of rack
+A day in the life of a web request #  DHCP (UDP) &amp;gt; ARP (BGP) &amp;gt; DNS &amp;gt; HTTP (TCP)
+Summary #  Review #    What is the difference between network and transport layer? Network is machine to machine, transport is process to process</description>
+    </item>
+    
   </channel>
 </rss>
