@@ -1,0 +1,4104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.83.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bitwise manipulations #  File: Slides  Data is a sequence of bytes in memory, whether we receive it from a file or network. We will use unsigned int types to avoid sign extension. These manipulations are powerful in cryptography.
+We can also move the bits back and forth using left/right shifts. Bits that shift off the end are gone for good, and 0s are added on the opposite end (in unsigned types).">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS152-lecture-20210604" />
+<meta property="og:description" content="Bitwise manipulations #  File: Slides  Data is a sequence of bytes in memory, whether we receive it from a file or network. We will use unsigned int types to avoid sign extension. These manipulations are powerful in cryptography.
+We can also move the bits back and forth using left/right shifts. Bits that shift off the end are gone for good, and 0s are added on the opposite end (in unsigned types)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zedchance.github.io/notes/CS152/CS152-lecture-20210604/" /><meta property="article:section" content="CS152" />
+
+
+
+<title>CS152-lecture-20210604 | Notes</title>
+<link rel="manifest" href="/notes/manifest.json">
+<link rel="icon" href="/notes/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
+<script defer src="/notes/en.search.min.caaf4e463d15a51385dcb48590a6e85f2cc470f04e451eee4e1ede7a0d0dab04.js" integrity="sha256-yq9ORj0VpROF3LSFkKboXyzEcPBORR7uTh7eeg0NqwQ="></script>
+
+<script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</head>
+
+<body dir="ltr">
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: true},
+                  {left: "\\(", right: "\\)", display: true}
+              ]
+          }
+      );
+    </script>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/notes"><span>Notes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e1a1b689fe907f6677087e2d9b539d9" class="toggle"  />
+    <label for="section-6e1a1b689fe907f6677087e2d9b539d9" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS10/" class="">CS10</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS10/CS10-Processing-labs/" class="">CS10-labs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06677567046f19eb3dacf987145475f" class="toggle"  />
+    <label for="section-d06677567046f19eb3dacf987145475f" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS12/" class="">CS12</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS12/CS12-lecture-notes/" class="">CS12-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98a455a71c68533365837514b17a9eb9" class="toggle"  />
+    <label for="section-98a455a71c68533365837514b17a9eb9" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS13/" class="">CS13</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS13/CS13-lecture-notes/" class="">CS13-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9490b93202949ed3704ff9f858ef63c3" class="toggle"  />
+    <label for="section-9490b93202949ed3704ff9f858ef63c3" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS130/" class="">CS130</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-exercise-solutions-1/" class="">CS130-exercise-solutions-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200831/" class="">CS130-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200902/" class="">CS130-lecture-20200902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200909/" class="">CS130-lecture-20200909</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200914/" class="">CS130-lecture-20200914</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200916/" class="">CS130-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200921/" class="">CS130-lecture-20200921</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200923/" class="">CS130-lecture-20200923</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200928/" class="">CS130-lecture-20200928</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20200930/" class="">CS130-lecture-20200930</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201005/" class="">CS130-lecture-20201005</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201007/" class="">CS130-lecture-20201007</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201012/" class="">CS130-lecture-20201012</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201014/" class="">CS130-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201019/" class="">CS130-lecture-20201019</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201021/" class="">CS130-lecture-20201021</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201028/" class="">CS130-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201102/" class="">CS130-lecture-20201102</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201104/" class="">CS130-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201109/" class="">CS130-lecture-20201109</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201116/" class="">CS130-lecture-20201116</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201118/" class="">CS130-lecture-20201118</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201123/" class="">CS130-lecture-20201123</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201125/" class="">CS130-lecture-20201125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201130/" class="">CS130-lecture-20201130</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201202/" class="">CS130-lecture-20201202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201207/" class="">CS130-lecture-20201207</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-lecture-20201209/" class="">CS130-lecture-20201209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-priority-queues/" class="">CS130-priority-queues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS130/CS130-sorting-algorithms/" class="">CS130-sorting-algorithms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a7685cd96811cc43c9ecd205128385c1" class="toggle"  />
+    <label for="section-a7685cd96811cc43c9ecd205128385c1" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS131/" class="">CS131</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200901/" class="">CS131-lecture-20200901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200903/" class="">CS131-lecture-20200903</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200908/" class="">CS131-lecture-20200908</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200910/" class="">CS131-lecture-20200910</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200915/" class="">CS131-lecture-20200915</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200917/" class="">CS131-lecture-20200917</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200922/" class="">CS131-lecture-20200922</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200924/" class="">CS131-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20200929/" class="">CS131-lecture-20200929</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201001/" class="">CS131-lecture-20201001</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201006/" class="">CS131-lecture-20201006</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201008/" class="">CS131-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201013/" class="">CS131-lecture-20201013</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201015/" class="">CS131-lecture-20201015</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201020/" class="">CS131-lecture-20201020</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201022/" class="">CS131-lecture-20201022</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201027/" class="">CS131-lecture-20201027</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201029/" class="">CS131-lecture-20201029</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201103/" class="">CS131-lecture-20201103</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201105/" class="">CS131-lecture-20201105</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201110/" class="">CS131-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201112/" class="">CS131-lecture-20201112</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201119/" class="">CS131-lecture-20201119</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201124/" class="">CS131-lecture-20201124</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201201/" class="">CS131-lecture-20201201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201203/" class="">CS131-lecture-20201203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-lecture-20201208/" class="">CS131-lecture-20201208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-study-guide-1/" class="">CS131-study-guide-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-study-guide-2/" class="">CS131-study-guide-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-study-guide-3/" class="">CS131-study-guide-3</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS131/CS131-study-guide-4/" class="">CS131-study-guide-4</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ea6710cf4db85b6757a42f14aedf299" class="toggle"  />
+    <label for="section-9ea6710cf4db85b6757a42f14aedf299" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS133/" class="">CS133</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210125/" class="">CS133-lecture-20210125</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210208/" class="">CS133-lecture-20210208</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210210/" class="">CS133-lecture-20210210</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210215/" class="">CS133-lecture-20210215</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210217/" class="">CS133-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210227/" class="">CS133-lecture-20210227</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210301/" class="">CS133-lecture-20210301</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210307/" class="">CS133-lecture-20210307</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210310/" class="">CS133-lecture-20210310</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210314/" class="">CS133-lecture-20210314</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210407/" class="">CS133-lecture-20210407</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210423/" class="">CS133-lecture-20210423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210504/" class="">CS133-lecture-20210504</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210513/" class="">CS133-lecture-20210513</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS133/CS133-lecture-20210519/" class="">CS133-lecture-20210519</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0409022248036b67eafded0a445f99e6" class="toggle"  />
+    <label for="section-0409022248036b67eafded0a445f99e6" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS134/" class="">CS134</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210601/" class="">CS134-lecture-20210601</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210602/" class="">CS134-lecture-20210602</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210603/" class="">CS134-lecture-20210603</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210607/" class="">CS134-lecture-20210607</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6c9e9a90396154c6e5e42bf42955eff" class="toggle"  />
+    <label for="section-f6c9e9a90396154c6e5e42bf42955eff" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS135/" class="">CS135</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-hw-20210203/" class="">CS135-hw-20210203</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-hw-20210302/" class="">CS135-hw-20210302</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210126/" class="">CS135-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210129/" class="">CS135-lecture-20210129</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210201/" class="">CS135-lecture-20210201</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210204/" class="">CS135-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210205/" class="">CS135-lecture-20210205</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210209/" class="">CS135-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210216/" class="">CS135-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210217/" class="">CS135-lecture-20210217</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210218/" class="">CS135-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210225/" class="">CS135-lecture-20210225</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210227/" class="">CS135-lecture-20210227</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210307/" class="">CS135-lecture-20210307</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/" class="">CS135-lecture-20210309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210310/" class="">CS135-lecture-20210310</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210311/" class="">CS135-lecture-20210311</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210315/" class="">CS135-lecture-20210315</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210318/" class="">CS135-lecture-20210318</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210329/" class="">CS135-lecture-20210329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210405/" class="">CS135-lecture-20210405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210407/" class="">CS135-lecture-20210407</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210419/" class="">CS135-lecture-20210419</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210423/" class="">CS135-lecture-20210423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210426/" class="">CS135-lecture-20210426</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210428/" class="">CS135-lecture-20210428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210505/" class="">CS135-lecture-20210505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS135/CS135-lecture-20210511/" class="">CS135-lecture-20210511</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eaf59c9d6b1b58452cc45e5585dd0717" class="toggle"  />
+    <label for="section-eaf59c9d6b1b58452cc45e5585dd0717" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS137/" class="">CS137</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210126/" class="">CS137-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210128/" class="">CS137-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210202/" class="">CS137-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210204/" class="">CS137-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210209/" class="">CS137-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210211/" class="">CS137-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210216/" class="">CS137-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210218/" class="">CS137-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210223/" class="">CS137-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210225/" class="">CS137-lecture-20210225</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210302/" class="">CS137-lecture-20210302</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210304/" class="">CS137-lecture-20210304</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210309/" class="">CS137-lecture-20210309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210316/" class="">CS137-lecture-20210316</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210318/" class="">CS137-lecture-20210318</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210330/" class="">CS137-lecture-20210330</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210401/" class="">CS137-lecture-20210401</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210406/" class="">CS137-lecture-20210406</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210408/" class="">CS137-lecture-20210408</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210413/" class="">CS137-lecture-20210413</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210415/" class="">CS137-lecture-20210415</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210420/" class="">CS137-lecture-20210420</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210427/" class="">CS137-lecture-20210427</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210429/" class="">CS137-lecture-20210429</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210506/" class="">CS137-lecture-20210506</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210511/" class="">CS137-lecture-20210511</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS137/CS137-lecture-20210513/" class="">CS137-lecture-20210513</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e470c63ab7ad9a473e61272e98b3bcce" class="toggle"  />
+    <label for="section-e470c63ab7ad9a473e61272e98b3bcce" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS138/" class="">CS138</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210126/" class="">CS138-lecture-20210126</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210128/" class="">CS138-lecture-20210128</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210202/" class="">CS138-lecture-20210202</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210204/" class="">CS138-lecture-20210204</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210209/" class="">CS138-lecture-20210209</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210211/" class="">CS138-lecture-20210211</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210216/" class="">CS138-lecture-20210216</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210218/" class="">CS138-lecture-20210218</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210223/" class="">CS138-lecture-20210223</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210225/" class="">CS138-lecture-20210225</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210302/" class="">CS138-lecture-20210302</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210304/" class="">CS138-lecture-20210304</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210309/" class="">CS138-lecture-20210309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210311/" class="">CS138-lecture-20210311</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210316/" class="">CS138-lecture-20210316</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210330/" class="">CS138-lecture-20210330</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210401/" class="">CS138-lecture-20210401</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210406/" class="">CS138-lecture-20210406</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210408/" class="">CS138-lecture-20210408</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210413/" class="">CS138-lecture-20210413</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210415/" class="">CS138-lecture-20210415</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210420/" class="">CS138-lecture-20210420</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210422/" class="">CS138-lecture-20210422</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210427/" class="">CS138-lecture-20210427</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210429/" class="">CS138-lecture-20210429</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210504/" class="">CS138-lecture-20210504</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210506/" class="">CS138-lecture-20210506</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210511/" class="">CS138-lecture-20210511</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS138/CS138-lecture-20210513/" class="">CS138-lecture-20210513</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-372b41ece90e00f1931c9d5cb9e9fa95" class="toggle"  />
+    <label for="section-372b41ece90e00f1931c9d5cb9e9fa95" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS139/" class="">CS139</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-036d9a80637e8cf6df8546376268444f" class="toggle"  />
+    <label for="section-036d9a80637e8cf6df8546376268444f" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS140/" class="">CS140</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bcdebf46ecdc10339bbeb2a4992dbdd4" class="toggle" checked />
+    <label for="section-bcdebf46ecdc10339bbeb2a4992dbdd4" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS152/" class="">CS152</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/" class="">CS152-lecture-20210601</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/" class="">CS152-lecture-20210603</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210604/" class=" active">CS152-lecture-20210604</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210607/" class="">CS152-lecture-20210607</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1e2db2b9daa210aefa5d12e881832920" class="toggle"  />
+    <label for="section-1e2db2b9daa210aefa5d12e881832920" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS190/" class="">CS190</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-322aab8e09c075fd019b6a3ef3800697" class="toggle"  />
+    <label for="section-322aab8e09c075fd019b6a3ef3800697" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS192/" class="">CS192</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-356e0128f78fd703af66d8abf4ebf976" class="toggle"  />
+    <label for="section-356e0128f78fd703af66d8abf4ebf976" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS26/" class="">CS26</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS26/CS26-lecture-notes/" class="">CS26-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS26/CS26-reading-notes/" class="">CS26-reading-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-98681ab3e1e8c09eb7daeac8547903e6" class="toggle"  />
+    <label for="section-98681ab3e1e8c09eb7daeac8547903e6" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS39/" class="">CS39</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS39/CS39-lecture-notes/" class="">CS39-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8fe80ac56b57c0244f1c986628504841" class="toggle"  />
+    <label for="section-8fe80ac56b57c0244f1c986628504841" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/CS46/" class="">CS46</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS46/CS46-lecture-notes/" class="">CS46-lecture-notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS46/luhns.c/" class="">Luhn&#39;s Algorithm</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-92d8bad8aa3f85c10048f789591cd9d3" class="toggle"  />
+    <label for="section-92d8bad8aa3f85c10048f789591cd9d3" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/MATH100/" class="">MATH100</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH100/MATH100-lecture-notes/" class="">MATH100-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-39670f3bed43181dd994c25248af2a7b" class="toggle"  />
+    <label for="section-39670f3bed43181dd994c25248af2a7b" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/MATH170/" class="">MATH170</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0495fd11e1626446d2b1cf0439989d77" class="toggle"  />
+    <label for="section-0495fd11e1626446d2b1cf0439989d77" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/MATH31/" class="">MATH31</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH31/MATH31-comparison-tests/" class="">MATH31-comparison-tests</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH31/MATH31-integral-test/" class="">MATH31-integral-test</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH31/MATH31-series/" class="">MATH31-series</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH31/MATH31-unit-1/" class="">MATH31-unit-1</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH31/MATH31-unit-2/" class="">MATH31-unit-2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH31/MATH31-unit-3/" class="">MATH31-unit-3</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1d4164ee5c968fdda8d4b42b98383d88" class="toggle"  />
+    <label for="section-1d4164ee5c968fdda8d4b42b98383d88" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/PHIL103/" class="">PHIL103</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-ec-lecture/" class="">PHIL103-ec-lecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20200831/" class="">PHIL103-lecture-20200831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20200907/" class="">PHIL103-lecture-20200907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20200916/" class="">PHIL103-lecture-20200916</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20200924/" class="">PHIL103-lecture-20200924</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20200927/" class="">PHIL103-lecture-20200927</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201008/" class="">PHIL103-lecture-20201008</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201014/" class="">PHIL103-lecture-20201014</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201024/" class="">PHIL103-lecture-20201024</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201028/" class="">PHIL103-lecture-20201028</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201104/" class="">PHIL103-lecture-20201104</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201110/" class="">PHIL103-lecture-20201110</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHIL103/PHIL103-lecture-20201122/" class="">PHIL103-lecture-20201122</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-71647d44f109da70d5305fe9e01e1a51" class="toggle"  />
+    <label for="section-71647d44f109da70d5305fe9e01e1a51" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/PHYS105/" class="">PHYS105</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-resources/" class="">PHYS105-resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lab-20200326/" class="">PHYS105-lab-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lab-20200402/" class="">PHYS105-lab-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lab-20200423/" class="">PHYS105-lab-20200423</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200319/" class="">PHYS105-lecture-20200319</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200326/" class="">PHYS105-lecture-20200326</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200331/" class="">PHYS105-lecture-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200402/" class="">PHYS105-lecture-20200402</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200414/" class="">PHYS105-lecture-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200416/" class="">PHYS105-lecture-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200421/" class="">PHYS105-lecture-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200428/" class="">PHYS105-lecture-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200430/" class="">PHYS105-lecture-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200505/" class="">PHYS105-lecture-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200507/" class="">PHYS105-lecture-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200512/" class="">PHYS105-lecture-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200514/" class="">PHYS105-lecture-20200514</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200331/" class="">PHYS105-recitation-20200331</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200414/" class="">PHYS105-recitation-20200414</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200416/" class="">PHYS105-recitation-20200416</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200421/" class="">PHYS105-recitation-20200421</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200428/" class="">PHYS105-recitation-20200428</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200430/" class="">PHYS105-recitation-20200430</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200505/" class="">PHYS105-recitation-20200505</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200507/" class="">PHYS105-recitation-20200507</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200512/" class="">PHYS105-recitation-20200512</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200514/" class="">PHYS105-recitation-20200514</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2051d762fa29d975e5db96fff6a3c194" class="toggle"  />
+    <label for="section-2051d762fa29d975e5db96fff6a3c194" class="flex justify-between">
+      <a href="http://zedchance.github.io/notes/STATS50/" class="">STATS50</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/STATS50/STATS50-lecture-notes/" class="">STATS50-lecture-notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>CS152-lecture-20210604</strong>
+
+  <label for="toc-control">
+    
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bitwise-manipulations">Bitwise manipulations</a>
+      <ul>
+        <li><a href="#common-uses">Common uses</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-allocation">Array allocation</a>
+      <ul>
+        <li><a href="#reverse-array-example">Reverse array example</a></li>
+        <li><a href="#obtaining-memory-addresses">Obtaining memory addresses</a></li>
+      </ul>
+    </li>
+    <li><a href="#inverse-techniques-in-c">Inverse techniques in C</a>
+      <ul>
+        <li><a href="#axr--add-xor-rotate">AXR – add, XOR, rotate</a></li>
+        <li><a href="#feistel">Feistel</a></li>
+      </ul>
+    </li>
+    <li><a href="#composing-simple-ciphers">Composing simple ciphers</a>
+      <ul>
+        <li><a href="#caesar-cipher">Caesar cipher</a></li>
+        <li><a href="#multiplicative-cipher">Multiplicative cipher</a></li>
+        <li><a href="#composing-ciphers">Composing ciphers</a></li>
+        <li><a href="#example-of-a-non-linear-simple-cipher">Example of a non-linear simple cipher</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="bitwise-manipulations">
+  Bitwise manipulations
+  <a class="anchor" href="#bitwise-manipulations">#</a>
+</h2>
+<blockquote class="book-hint info">
+  File: <a href="/notes/C_review_bits.pdf"><em>Slides</em></a>
+</blockquote>
+
+<p><img src="/notes/image_2021-06-04-09-27-48.png" alt="image_2021-06-04-09-27-48" /></p>
+<p>Data is a sequence of bytes in memory, whether we receive it from a file or network.
+We will use unsigned int types to avoid sign extension.
+These manipulations are powerful in cryptography.</p>
+<p><img src="/notes/image_2021-06-04-09-47-08.png" alt="image_2021-06-04-09-47-08" /></p>
+<p>We can also move the bits back and forth using left/right shifts.
+Bits that shift off the end are gone for good, and 0s are added on the opposite end (in unsigned types).</p>
+<h3 id="common-uses">
+  Common uses
+  <a class="anchor" href="#common-uses">#</a>
+</h3>
+<p><img src="/notes/image_2021-06-04-09-49-27.png" alt="image_2021-06-04-09-49-27" />
+<img src="/notes/image_2021-06-04-09-51-47.png" alt="image_2021-06-04-09-51-47" /></p>
+<blockquote class="book-hint warning">
+  <p>Correction: we are clearing bit position 7 in the above slide.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">x <span style="color:#f92672">=</span> x <span style="color:#f92672">&amp;</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">7</span>);
+</code></pre></div>
+</blockquote>
+
+<p><img src="/notes/image_2021-06-04-09-53-44.png" alt="image_2021-06-04-09-53-44" /></p>
+<blockquote class="book-hint warning">
+  <p>Correction: above slide should shift right 7.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;</span> (x <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">7</span>);
+</code></pre></div>
+</blockquote>
+
+<p><img src="/notes/image_2021-06-04-09-54-51.png" alt="image_2021-06-04-09-54-51" /></p>
+<p>Rotations are very common in encryption.</p>
+<p><img src="/notes/image_2021-06-04-09-59-12.png" alt="image_2021-06-04-09-59-12" /></p>
+<p>Here, <code>(x &amp; 0x000000FF)</code> is called a mask.
+It masks everything except the last 8 bits.</p>
+<p><img src="/notes/image_2021-06-04-10-04-26.png" alt="image_2021-06-04-10-04-26" /></p>
+<p>On Intel CPUs, the return value is left in <code>%eax</code>.</p>
+<h2 id="array-allocation">
+  Array allocation
+  <a class="anchor" href="#array-allocation">#</a>
+</h2>
+<blockquote class="book-hint info">
+  File: <a href="/notes/C_review_arrays.pdf"><em>Slides</em></a>
+</blockquote>
+
+<p><img src="/notes/image_2021-06-04-10-08-52.png" alt="image_2021-06-04-10-08-52" /></p>
+<p>Auto allocated memory only exists in scope, you can&rsquo;t have long lived memory this way.</p>
+<p><img src="/notes/image_2021-06-04-10-12-16.png" alt="image_2021-06-04-10-12-16" /></p>
+<p>Remember, <code>malloc</code> takes the number of bytes you want, not the number of elements.
+If <code>malloc</code> is unsuccessful, it will return <code>0</code> (<code>NULL</code>).</p>
+<p><img src="/notes/image_2021-06-04-10-15-02.png" alt="image_2021-06-04-10-15-02" /></p>
+<h3 id="reverse-array-example">
+  Reverse array example
+  <a class="anchor" href="#reverse-array-example">#</a>
+</h3>
+<p><img src="/notes/image_2021-06-04-10-16-25.png" alt="image_2021-06-04-10-16-25" /></p>
+<p>This could crash if you have less than 400B on the stack available.</p>
+<p><img src="/notes/image_2021-06-04-10-19-40.png" alt="image_2021-06-04-10-19-40" /></p>
+<p>This uses 
+<link rel="stylesheet" href="/notes/katex/katex.min.css" />
+<script defer src="/notes/katex/katex.min.js"></script>
+<script defer src="/notes/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \( O(n) \)
+</span>
+ space
+complexity.</p>
+<p><img src="/notes/image_2021-06-04-10-22-33.png" alt="image_2021-06-04-10-22-33" /></p>
+<h3 id="obtaining-memory-addresses">
+  Obtaining memory addresses
+  <a class="anchor" href="#obtaining-memory-addresses">#</a>
+</h3>
+<p><img src="/notes/image_2021-06-04-10-23-23.png" alt="image_2021-06-04-10-23-23" /></p>
+<h2 id="inverse-techniques-in-c">
+  Inverse techniques in C
+  <a class="anchor" href="#inverse-techniques-in-c">#</a>
+</h2>
+<h3 id="axr--add-xor-rotate">
+  AXR – add, XOR, rotate
+  <a class="anchor" href="#axr--add-xor-rotate">#</a>
+</h3>
+<p>We can write an invertible functions using these 3 operations.</p>
+<ul>
+<li>add</li>
+<li>xor</li>
+<li>rotation</li>
+</ul>
+<p>Consider something like</p>
+<pre><code>x = x + y;
+</code></pre><p>This can be &ldquo;undone&rdquo; via</p>
+<pre><code>x = x - y;
+</code></pre><p>These work with the other operations, i.e.</p>
+<pre><code>x = x ^ y;
+x = x ^ y;      // xor is its own inverse
+</code></pre><blockquote class="book-hint info">
+  <p>Note: XOR is associative:</p>
+<pre><code>(x ^ y) ^ y = x ^ (y ^ y)
+</code></pre>
+</blockquote>
+
+<p>Rotation (we&rsquo;ll use <code>&lt;&lt;&lt;</code> to indicate left rotate):</p>
+<pre><code>x = x &lt;&lt;&lt; y;
+x = x &gt;&gt;&gt; y;    // or x = x &lt;&lt;&lt; (32 - y)
+</code></pre><blockquote class="book-hint info">
+  Note: You can either rotate back, or continue to rotate the entire width.
+Here we are assuming that <code>x</code> is a 32 bit value
+</blockquote>
+
+<p>We can compose these 3 operators to scramble bits (and is invertible):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">uint32_t <span style="color:#a6e22e">scramble</span>(uint32_t x)
+{
+    x <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> <span style="color:#ae81ff">0x1AFE9B3A</span>; <span style="color:#75715e">// xor by random constant
+</span><span style="color:#75715e"></span>    x <span style="color:#f92672">=</span> x <span style="color:#f92672">&lt;&lt;&lt;</span> <span style="color:#ae81ff">12</span>;
+    x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x2783AFBC</span>; <span style="color:#75715e">// add random constant
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> x;
+}
+</code></pre></div><p>We could easily write the invertible function to undo these operations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">uint32_t <span style="color:#a6e22e">unscramble</span>(uint32_t x)
+{
+    x <span style="color:#f92672">=</span> x <span style="color:#f92672">-</span> <span style="color:#ae81ff">0x2783AFBC</span>; <span style="color:#75715e">// sub random constant
+</span><span style="color:#75715e"></span>    x <span style="color:#f92672">=</span> x <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#ae81ff">12</span>;
+    x <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> <span style="color:#ae81ff">0x1AFE9B3A</span>; <span style="color:#75715e">// xor by random constant
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> x;
+}
+</code></pre></div><p>The operations just have to happen in the opposite order of <code>scramble</code>.</p>
+<h3 id="feistel">
+  Feistel
+  <a class="anchor" href="#feistel">#</a>
+</h3>
+<p>Another way to write an invertible function in C is to use a Feistel construction.
+The idea is that the construction itself is invertible, and not the components.</p>
+<p>We can take an input and break it into 2 pieces, and use one half to cause a scrambling of the other half.</p>
+<p>An abstract example in C, (here <code>f</code> doesn&rsquo;t exist).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">// x points to an array of two uint32_t
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fscramble</span>(uint32_t <span style="color:#f92672">*</span> x)
+{
+    x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">^</span> f(x[<span style="color:#ae81ff">1</span>])   <span style="color:#75715e">// f returns random looking uint32_t
+</span><span style="color:#75715e"></span>    x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">^</span> f(x[<span style="color:#ae81ff">0</span>])   <span style="color:#75715e">// f returns random looking uint32_t
+</span><span style="color:#75715e"></span>}
+</code></pre></div><blockquote class="book-hint info">
+  Note: Here, <code>f</code> is some kind of scrambling function.
+</blockquote>
+
+<p>To undo these operations, we just need to do the original operations in reverse order:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">// x points to an array of two uint32_t
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">funscramble</span>(uint32_t <span style="color:#f92672">*</span> x)
+{
+    x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">^</span> f(x[<span style="color:#ae81ff">0</span>])   <span style="color:#75715e">// f returns random looking uint32_t
+</span><span style="color:#75715e"></span>    x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">^</span> f(x[<span style="color:#ae81ff">1</span>])   <span style="color:#75715e">// f returns random looking uint32_t
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>What is interesting about these Feistel structures, is that <code>f</code> itself does NOT need to be invertible.</p>
+<p>A concrete example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">// x points to an array of two uint32_t
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fscramble</span>(uint32_t <span style="color:#f92672">*</span> x)
+{
+    x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">^</span> (x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> x[<span style="color:#ae81ff">1</span>]) <span style="color:#75715e">// square and add
+</span><span style="color:#75715e"></span>    x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">^</span> (x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#ae81ff">0</span>]) <span style="color:#75715e">// square and add
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#75715e">// x points to an array of two uint32_t
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">funscramble</span>(uint32_t <span style="color:#f92672">*</span> x)
+{
+    x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">^</span> (x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#ae81ff">0</span>]) <span style="color:#75715e">// square and add
+</span><span style="color:#75715e"></span>    x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">^</span> (x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> x[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> x[<span style="color:#ae81ff">1</span>]) <span style="color:#75715e">// square and add
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="composing-simple-ciphers">
+  Composing simple ciphers
+  <a class="anchor" href="#composing-simple-ciphers">#</a>
+</h2>
+<p>We will make a simple function that is invertible, but simple to create.
+Historically, cryptography uses permutations the most for ciphers.</p>
+<h3 id="caesar-cipher">
+  Caesar cipher
+  <a class="anchor" href="#caesar-cipher">#</a>
+</h3>
+<p>One of the oldest uses of cryptography was used in Roman times, the Caesar cipher.
+They selected a number to be used as a fixed key.
+So long as the key wasn&rsquo;t leaked, it provided adequate privacy.</p>
+<p>It is a simple shift of the alphabet, so <span>
+  \( A \to D, B \to E \)
+</span>
+, etc.
+At the end you wrap around, <span>
+  \( Z \to C \)
+</span>
+.</p>
+<p>So if we are encrypting the word <code>BAD</code>, and are shifting by 3:</p>
+<pre><code>B A D
+E D G   add 3
+B A D   sub 3 to get original
+</code></pre><p>This is known as a shift cipher.</p>
+<pre><code>shift(x):
+    ciphertext = x + 3 mod 26
+</code></pre><p>We can make this more flexible and more secure by using the key and the character:</p>
+<pre><code>shift(x, k):
+    ciphertext = x + k mod 26
+</code></pre><p>So we can get the plaintext by doing the opposite:</p>
+<pre><code>plaintext = y - k mod 26
+          // or
+          = y + (26 - k) mod 26
+</code></pre><p>This is working in the field <span>
+  \( Z_{26} \)
+</span>
+, meaning we use <code>mod 26</code>.</p>
+<p>The goal of this is to have the ciphertext and the function to look very random.</p>
+<p>So if we encrypt using a key of <code>k</code>, and are in the field <span>
+  \( Z_5 \)
+</span>
+.</p>
+<pre><code>k = 3
+encrypt(k, x) = x + k mod 5
+</code></pre><p>This is a permutation function, and all it does is add 3 to each of its inputs.</p>
+<p><img src="/notes/image_2021-06-04-11-01-34.png" alt="image_2021-06-04-11-01-34" /></p>
+<p>This doesn&rsquo;t &ldquo;look random&rdquo;, as it seems that all of the arrows are parallel.
+However, it is secure as long as <code>k</code> is picked at random, and we only encrypt a <strong>single</strong> <code>x</code>.
+Each of the outputs are equally likely, therefore the ciphertext is secure.</p>
+<p>Normally however, we don&rsquo;t usually encrypt a single character.
+We want our permutation that we are going to use to be more random so we can encrypt more than 1 char at a time.</p>
+<h3 id="multiplicative-cipher">
+  Multiplicative cipher
+  <a class="anchor" href="#multiplicative-cipher">#</a>
+</h3>
+<p>Here instead of using addition (like the shift cipher), we will use multiplication.</p>
+<p>So if we are in <span>
+  \( Z_{26} \)
+</span>
+.</p>
+<span>
+  \[\begin{aligned}
+    e(k,x) &amp;= xk \mod 26 \\
+    d(k,y) &amp;= y k^{-1} \mod 26
+\end{aligned}\]
+</span>
+
+<p>This only works if the multiplicative inverse <span>
+  \( k^{-1} \)
+</span>
+ exists in <span>
+  \( Z_{26} \)
+</span>
+.
+The inverse of <span>
+  \( k \)
+</span>
+ has to be an element in <span>
+  \( Z_{26} \)
+</span>
+, normally people think of fractions as inverses.</p>
+<p>Note that not all values in <span>
+  \( Z_{26} \)
+</span>
+ have an inverse.</p>
+<p><span>
+  \( k^{-1} \)
+</span>
+ exists iff <span>
+  \( gcd(k,26) = 1 \)
+</span>
+.</p>
+<p>If <span>
+  \( k \)
+</span>
+ and <span>
+  \( 26 \)
+</span>
+ share no factors, then it has a multiplicative inverse.</p>
+<p>The easiest way to find candidates for <span>
+  \( k \)
+</span>
+ is:</p>
+<ol>
+<li>Go through all of the numbers in <span>
+  \( Z_{26} \)
+</span>
+ and throw out
+the prime factors that have 26.</li>
+</ol>
+<p>So 26 has two prime factors: <span>
+  \( 26 = 2 * 13 \)
+</span>
+.</p>
+<p>So we throw out all the ones that have a multiple of 2 or 13, whats left is the numbers that have a multiplicative inverse, i.e.</p>
+<span>
+  \[ k = 1,3,5,7,9,11,15,17,19,21 \]
+</span>
+
+<p>So lets see how random the multiplicative cipher looks compared to the shift cipher:</p>
+<p>If <span>
+  \( k = 3 \)
+</span>
+ and <span>
+  \( Z_5 \to Z_5 \)
+</span>
+:</p>
+<span>
+  \( E(k,x) = kx \mod 5 \)
+</span>
+
+<table>
+<thead>
+<tr>
+<th><code>x</code></th>
+<th>E(3,x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/notes/image_2021-06-04-11-17-04.png" alt="image_2021-06-04-11-17-04" /></p>
+<p>This looks a lot more random than the shift cipher.
+However, it looks like 0 will always map to 0 in a multiplicative cipher.
+Also, even though the arrows aren&rsquo;t parallel, they still have some regularity to them.
+So we can do better.</p>
+<h3 id="composing-ciphers">
+  Composing ciphers
+  <a class="anchor" href="#composing-ciphers">#</a>
+</h3>
+<blockquote class="book-hint warning">
+  Principle: Composing simple ciphers of different structures yields a more random looking cipher.
+</blockquote>
+
+<p>If we compose 2 invertible functions, the composition will still be invertible.</p>
+<p>For example, if we start with a shift cipher, and then use a multiplicative cipher:</p>
+<p><img src="/notes/image_2021-06-04-11-22-52.png" alt="image_2021-06-04-11-22-52" /></p>
+<blockquote class="book-hint warning">
+  Correction: On right, 2 goes to 2, and 4 goes to 3.
+</blockquote>
+
+<p>You need to alternate between different ciphers to add security.
+(Composing 2 shifts wouldn&rsquo;t add any additional security than 1).</p>
+<h3 id="example-of-a-non-linear-simple-cipher">
+  Example of a non-linear simple cipher
+  <a class="anchor" href="#example-of-a-non-linear-simple-cipher">#</a>
+</h3>
+<p>An example of a non-linear cipher is a transposition cipher.</p>
+<p>It considers the data to be in chunks, it doesn&rsquo;t scramble the characters, but rearranges them:</p>
+<p><img src="/notes/image_2021-06-04-11-27-51.png" alt="image_2021-06-04-11-27-51" /></p>
+<p>It is a simple cipher (because it is reversible), and it is a permutation (domain and codomain are same).
+It is non-linear because it cannot be represented by the sum of product terms.</p>
+<blockquote class="book-hint info">
+  <p>Connection to AXR operations:</p>
+<ul>
+<li>add is a shift cipher in \( Z_{2^n} \)</li>
+<li>xor is a shift cipher in \( Z_2 \), for example \(a \oplus b = a + b \mod 2\)</li>
+<li>rotate is a transposition.</li>
+</ul>
+
+</blockquote>
+
+<p>We usually don&rsquo;t use multiplication because it is more computationally expensive.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/zedchance/notes/edit/master/content/CS152/CS152-lecture-20210604.md" target="_blank" rel="noopener">
+      <img src="/notes/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        <br>
+<nav>
+  
+  <a href="http://zedchance.github.io/notes/tags/bitwise/"><code>bitwise</code></a><br>
+  
+  <a href="http://zedchance.github.io/notes/tags/memory-allocation/"><code>memory allocation</code></a><br>
+  
+  <a href="http://zedchance.github.io/notes/tags/AXR/"><code>AXR</code></a><br>
+  
+  <a href="http://zedchance.github.io/notes/tags/feistel/"><code>feistel</code></a><br>
+  
+  <a href="http://zedchance.github.io/notes/tags/ciphers/"><code>ciphers</code></a><br>
+  
+</nav>
+
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#bitwise-manipulations">Bitwise manipulations</a>
+      <ul>
+        <li><a href="#common-uses">Common uses</a></li>
+      </ul>
+    </li>
+    <li><a href="#array-allocation">Array allocation</a>
+      <ul>
+        <li><a href="#reverse-array-example">Reverse array example</a></li>
+        <li><a href="#obtaining-memory-addresses">Obtaining memory addresses</a></li>
+      </ul>
+    </li>
+    <li><a href="#inverse-techniques-in-c">Inverse techniques in C</a>
+      <ul>
+        <li><a href="#axr--add-xor-rotate">AXR – add, XOR, rotate</a></li>
+        <li><a href="#feistel">Feistel</a></li>
+      </ul>
+    </li>
+    <li><a href="#composing-simple-ciphers">Composing simple ciphers</a>
+      <ul>
+        <li><a href="#caesar-cipher">Caesar cipher</a></li>
+        <li><a href="#multiplicative-cipher">Multiplicative cipher</a></li>
+        <li><a href="#composing-ciphers">Composing ciphers</a></li>
+        <li><a href="#example-of-a-non-linear-simple-cipher">Example of a non-linear simple cipher</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

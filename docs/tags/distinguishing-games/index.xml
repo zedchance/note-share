@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>distinguishing games on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/distinguishing-games/</link>
+    <description>Recent content in distinguishing games on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/distinguishing-games/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210607</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210607/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210607/</guid>
+      <description>Distinguishing games #  File: Distinguishing.pdf  Cryptography used to be based on both the pedigree of the creator, and the amount of time it takes until someone can crack it. With modern cryptography, crytographers can prove that their algorithms work. The attack can be skipped if its proven that there are no weaknesses.
+When we encrypt a plaintext, we want the ciphertext to look like random bits.
+How do we know that the cipher is a good cipher?</description>
+    </item>
+    
+  </channel>
+</rss>
