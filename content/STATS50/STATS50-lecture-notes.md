@@ -5,4 +5,7 @@ tags: ["stats"]
 
 # STATS 50 lecture notes
 
-[lecture_notes.pdf](/notes/3FFBC447387C48B238279FB3AA3BD0A3.pdf)
+{{< hint info >}}
+File: [*STATS50-lecture-notes.pdf*](/notes/STATS50-lecture-notes.pdf)
+{{< /hint >}}
+

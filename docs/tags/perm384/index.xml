@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>perm384 on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/perm384/</link>
+    <description>Recent content in perm384 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/perm384/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210608</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210608/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210608/</guid>
+      <description>How are permutations made? #  To create a permutation we will
+ Compose simple steps, each with a different mathematical structure, providing confusion and diffusion.  we can use add, because it is in   \( Z_{2^{32}} \)   xor, because it is in  \( Z_{2} \)   and rotate, because it is non-linear (not represented by a linear equation)    Adding on its own makes a predictable structure, but if we xor after and then rotate we can get a much more confusing structure.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -394,6 +394,15 @@
     </item>
     
     <item>
+      <title>confusion</title>
+      <link>http://zedchance.github.io/notes/tags/confusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/confusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>congestion control</title>
       <link>http://zedchance.github.io/notes/tags/congestion-control/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -588,6 +597,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/DHCP/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diffusion</title>
+      <link>http://zedchance.github.io/notes/tags/diffusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/diffusion/</guid>
       <description></description>
     </item>
     
@@ -1069,6 +1087,15 @@
     </item>
     
     <item>
+      <title>keys</title>
+      <link>http://zedchance.github.io/notes/tags/keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/keys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kinematics</title>
       <link>http://zedchance.github.io/notes/tags/kinematics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1384,6 +1411,15 @@
     </item>
     
     <item>
+      <title>perm384</title>
+      <link>http://zedchance.github.io/notes/tags/perm384/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/perm384/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>permutations</title>
       <link>http://zedchance.github.io/notes/tags/permutations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1600,11 +1636,11 @@
     </item>
     
     <item>
-      <title>relational database</title>
-      <link>http://zedchance.github.io/notes/tags/relational-database/</link>
+      <title>relational model</title>
+      <link>http://zedchance.github.io/notes/tags/relational-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/notes/tags/relational-database/</guid>
+      <guid>http://zedchance.github.io/notes/tags/relational-model/</guid>
       <description></description>
     </item>
     

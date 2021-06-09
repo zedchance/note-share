@@ -45,5 +45,15 @@ When we encrypt a plaintext, we want the ciphertext to look like random bits.
 How do we know that the cipher is a good cipher?</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210608</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210608/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210608/</guid>
+      <description>How are permutations made? #  To create a permutation we will
+ Compose simple steps, each with a different mathematical structure, providing confusion and diffusion.  we can use add, because it is in   \( Z_{2^{32}} \)   xor, because it is in  \( Z_{2} \)   and rotate, because it is non-linear (not represented by a linear equation)    Adding on its own makes a predictable structure, but if we xor after and then rotate we can get a much more confusing structure.</description>
+    </item>
+    
   </channel>
 </rss>
