@@ -52,6 +52,15 @@
     </item>
     
     <item>
+      <title>AES</title>
+      <link>http://zedchance.github.io/notes/tags/AES/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/AES/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>agile</title>
       <link>http://zedchance.github.io/notes/tags/agile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -210,6 +219,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/bitwise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>block cipher</title>
+      <link>http://zedchance.github.io/notes/tags/block-cipher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/block-cipher/</guid>
       <description></description>
     </item>
     
@@ -831,6 +849,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>galois fields</title>
+      <link>http://zedchance.github.io/notes/tags/galois-fields/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/galois-fields/</guid>
       <description></description>
     </item>
     
@@ -1636,6 +1663,15 @@
     </item>
     
     <item>
+      <title>relational algebra</title>
+      <link>http://zedchance.github.io/notes/tags/relational-algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/relational-algebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>relational model</title>
       <link>http://zedchance.github.io/notes/tags/relational-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1708,11 +1744,29 @@
     </item>
     
     <item>
+      <title>schema</title>
+      <link>http://zedchance.github.io/notes/tags/schema/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/schema/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>scrum</title>
       <link>http://zedchance.github.io/notes/tags/scrum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/scrum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>http://zedchance.github.io/notes/tags/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/security/</guid>
       <description></description>
     </item>
     
@@ -1866,6 +1920,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/symbol-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>symmetric encryption</title>
+      <link>http://zedchance.github.io/notes/tags/symmetric-encryption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/symmetric-encryption/</guid>
       <description></description>
     </item>
     

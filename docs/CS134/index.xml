@@ -58,5 +58,29 @@ Note: The double line from employee to works_for indicates the total participati
 Relational model cont. #  State cont. #  R(color, bit) dom(color) = {blue, green, red} dom(bit) = {0, 1}    color bit     blue 0   blue 1   green 0   green 1   red 0   red 1    This is all the possible combinations, but lets say we have a state like</description>
     </item>
     
+    <item>
+      <title>CS134-lecture-20210609</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210609/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210609/</guid>
+      <description>Relational database schemas #  IC = integrity constraints
+Recall, a state is a collection of all the instances.
+Example of schema and state #  Valid/invalid state #  Update operations on relations #  Whenever we do any of these update operations, there is a chance that the constraints may be violated. These violations may propagate to other tables.
+REJECT is the most common action taken. CASCADE is also common, but requires setup in DBMS.</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210610</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210610/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210610/</guid>
+      <description>Relational model cont. #  Weak entity #  Notice that the employee will be the owner of the depending weak entity. The primary key will be part of the foreign key and the weak attribute.
+Remember,
+ primary keys are underlined foreign keys have arrows pointing to the other reference  Multivalues attributes #  Consider this ER-diagram,
+We can handle this in our relational model by creating another table called dept_locations,</description>
+    </item>
+    
   </channel>
 </rss>

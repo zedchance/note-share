@@ -960,6 +960,30 @@ Relational model cont. #  State cont. #  R(color, bit) dom(color) = {blue, green
     </item>
     
     <item>
+      <title>CS134-lecture-20210609</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210609/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210609/</guid>
+      <description>Relational database schemas #  IC = integrity constraints
+Recall, a state is a collection of all the instances.
+Example of schema and state #  Valid/invalid state #  Update operations on relations #  Whenever we do any of these update operations, there is a chance that the constraints may be violated. These violations may propagate to other tables.
+REJECT is the most common action taken. CASCADE is also common, but requires setup in DBMS.</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210610</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210610/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210610/</guid>
+      <description>Relational model cont. #  Weak entity #  Notice that the employee will be the owner of the depending weak entity. The primary key will be part of the foreign key and the weak attribute.
+Remember,
+ primary keys are underlined foreign keys have arrows pointing to the other reference  Multivalues attributes #  Consider this ER-diagram,
+We can handle this in our relational model by creating another table called dept_locations,</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1936,6 +1960,18 @@ How do we know that the cipher is a good cipher?</description>
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210608/</guid>
       <description>How are permutations made? #  To create a permutation we will
  Compose simple steps, each with a different mathematical structure, providing confusion and diffusion.  we can use add, because it is in   \( Z_{2^{32}} \)   xor, because it is in  \( Z_{2} \)   and rotate, because it is non-linear (not represented by a linear equation)    Adding on its own makes a predictable structure, but if we xor after and then rotate we can get a much more confusing structure.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210610</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210610/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210610/</guid>
+      <description>Symmetric encryption #  Files:
+ Intro to SSE programming https://www.crypto-textbook.com/download/Understanding-Cryptography-Chapter4.pdf   Recall that encryption is to be used for private communication. Before a message is encrypted its called a plaintext, and after its been encrypted its called a ciphertext. The ciphertext is then decrypted to get the plaintext.
+Recall that we defined
+perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random permutation, so its not enough for secrecy.</description>
     </item>
     
     <item>

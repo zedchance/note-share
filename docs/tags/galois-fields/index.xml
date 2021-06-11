@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>galois fields on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/galois-fields/</link>
+    <description>Recent content in galois fields on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/galois-fields/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210610</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210610/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210610/</guid>
+      <description>Symmetric encryption #  Files:
+ Intro to SSE programming https://www.crypto-textbook.com/download/Understanding-Cryptography-Chapter4.pdf   Recall that encryption is to be used for private communication. Before a message is encrypted its called a plaintext, and after its been encrypted its called a ciphertext. The ciphertext is then decrypted to get the plaintext.
+Recall that we defined
+perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random permutation, so its not enough for secrecy.</description>
+    </item>
+    
+  </channel>
+</rss>

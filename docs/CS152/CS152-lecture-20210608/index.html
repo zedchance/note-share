@@ -13,13 +13,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS152/CS152-lecture-20210608/" /><meta property="article:section" content="CS152" />
 
-
+<meta property="article:modified_time" content="2021-06-08T18:22:03-07:00" />
 
 <title>CS152-lecture-20210608 | Notes</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.1270da57bc0d8a3406b5cdf8eb99d012572f2d001861b442004294a159ea00cb.js" integrity="sha256-EnDaV7wNijQGtc3465nQElcvLQAYYbRCAEKUoVnqAMs="></script>
+<script defer src="/notes/en.search.min.d29b3703b6cfaf162dbf9a0c9ae29819cac17edc83cab78c43024b48e53d130a.js" integrity="sha256-0ps3A7bPrxYtv5oMmuKYGcrBftyDyreMQwJLSOU9Ewo="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1332,6 +1332,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210609/" class="">CS134-lecture-20210609</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210610/" class="">CS134-lecture-20210610</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2621,6 +2647,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210610/" class="">CS152-lecture-20210610</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3802,23 +3841,27 @@ if x == y:
     output &quot;perm384&quot;
 else:
     output &quot;random permutation&quot;
-</code></pre><span>
-  \[\begin{aligned}
-    \text{advantage} &amp;= P(\text{ guess perm384 } \mid \text{ is perm384 }) - P(\text{ guess perm384 } \mid \text{ is } g) \\
-    &amp;= 1 - \frac{1}{2^{384}}
-\end{aligned}\]
-</span>
-
-<blockquote class="book-hint info">
+</code></pre><blockquote class="book-hint info">
   Note on notation: <code>&lt;0&gt;_384</code> means 0 represented in 384 bits.
 <code>&lt;x&gt;_n</code> means <code>x</code> represented in <code>n</code> bits.
 </blockquote>
+
+<span>
+  \[\begin{aligned}
+    \text{advantage} &amp;= P(\text{ guess perm384 } \mid \text{ is perm384 }) - P(\text{ guess perm384 } \mid \text{ is } g) \\
+    &amp;= 1 - \frac{1}{2^{384}} \\
+    &amp;\approx 1
+\end{aligned}\]
+</span>
 
 <p>With an advantage of effectively 1, the distinguisher wins.
 So <code>perm384</code> is not a good permutation for encryption on its own.</p>
 <hr>
 <p>So how do we do better?</p>
-<p>Lets choose 2 new worlds:</p>
+<p>Lets choose 2 new worlds and this time we&rsquo;ll use a key <span>
+  \( k \)
+</span>
+:</p>
 <ul>
 <li>world 1:
 <ul>
@@ -3865,7 +3908,9 @@ else:
 
 <hr>
 <p>One last time:</p>
-<p>If we have 2 worlds:</p>
+<p>If we have 2 worlds</p>
+<ul>
+<li>world 1
 <ul>
 <li>let <span>
   \( k \)
@@ -3874,6 +3919,13 @@ else:
 <li><span>
   \( f(x) = (k || &lt;0&gt;_{128}) \oplus \text{ perm384 }(x \oplus (k || &lt;0&gt;_{128}))  \)
 </span>
+</li>
+</ul>
+</li>
+<li>world 2
+<ul>
+<li>same as previous</li>
+</ul>
 </li>
 </ul>
 <p>So we&rsquo;re xoring the output with the key <span>
@@ -3896,6 +3948,12 @@ else:
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/zedchance/notes/commit/da3163e4f1fbb270fa8f61d284ec0a922c91d3d8" title='Last modified by Zed Chance | Jun 8, 2021' target="_blank" rel="noopener">
+      <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jun 8, 2021</span>
+    </a>
+  </div>
 
 
 
