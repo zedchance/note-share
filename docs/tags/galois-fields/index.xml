@@ -18,5 +18,15 @@ Recall that we defined
 perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random permutation, so its not enough for secrecy.</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210611</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210611/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210611/</guid>
+      <description>Fields #  A field is
+ A collection of   \( F \)  objects Two binary operations  \( \times \)  and  \( &amp;#43; \)  closed on  \( F \)  .  \( F \)  contains multiplicative identity 1 where  \( (1 \times y) = y \)  for all  \( y \)  in  \( F \)  .</description>
+    </item>
+    
   </channel>
 </rss>

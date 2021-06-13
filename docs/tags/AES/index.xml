@@ -18,5 +18,16 @@ Recall that we defined
 perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random permutation, so its not enough for secrecy.</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210613</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210613/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210613/</guid>
+      <description>Block cipher encryption mode examples #  For these examples, consider
+    \( E: \{0,1\}^6 \to \{0,1\}^6 \)    \( E(x) = \text{ROTL } (x,2) \)   If needed   \( \text{nonce} = 101 \)    \( \text{IV} = 110111 \)   Counters start at &amp;lt;1&amp;gt; 10* padding    Encrypt the following
+0000 1111 0000 1111 ECB #  Since we are using block sizes of 6 bits, we are encrypting</description>
+    </item>
+    
   </channel>
 </rss>
