@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>padding on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/padding/</link>
+    <description>Recent content in padding on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/padding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210611</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210611/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210611/</guid>
+      <description>Fields #  A field is
+ A collection of   \( F \)  objects Two binary operations  \( \times \)  and  \( &amp;#43; \)  closed on  \( F \)  .  \( F \)  contains multiplicative identity 1 where  \( (1 \times y) = y \)  for all  \( y \)  in  \( F \)  .</description>
+    </item>
+    
+  </channel>
+</rss>

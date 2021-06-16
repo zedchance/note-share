@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CHACHA20 on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/CHACHA20/</link>
+    <description>Recent content in CHACHA20 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/CHACHA20/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210615</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210615/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210615/</guid>
+      <description>Stream ciphers #  A stream cipher is a function that takes
+ a key   \( k \)   a nonce  \( n \)     \[\begin{aligned} \underbrace{\{0,1\}^k}_\text{key} \times \underbrace{\{0,1\}^n}_\text{nonce} \to \underbrace{\{0,1\}^*}_\text{key stream} \end{aligned}\]  Note on notation: a set raised to an asterisk  ( * )  the strings 0 or more length that can be made from the set items.  Our ciphertext is acquired via</description>
+    </item>
+    
+  </channel>
+</rss>

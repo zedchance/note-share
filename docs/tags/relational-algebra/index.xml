@@ -18,5 +18,29 @@ Remember,
 We can handle this in our relational model by creating another table called dept_locations,</description>
     </item>
     
+    <item>
+      <title>CS134-lecture-20210614</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210614/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210614/</guid>
+      <description>Announcements
+ Assignment 2 is posted   Relational algebra cont. #  SELECT cont. #  When cascaded: the conditions can be in different order but they will produce the same output. The conditions can be connected by logical and.
+If we compose 2 select operations
+  \[\begin{aligned} \sigma_{\text{salary } &amp;gt; 7300} ( \sigma_{\text{dno = } 5 } (\text{ employee })) \end{aligned}\]  We can combine the 2 conditions with a logical and</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210615</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210615/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210615/</guid>
+      <description>Assignment 1 solution #  Relational algebra cont. #  Intersection #  They must be union compatible.
+  \[\begin{aligned} a \leftarrow \text{student} \cap \text{instructor} \end{aligned}\]  Include in weekly homework.  Set difference #  Must be union compatible.
+The result is a new relation with the same schema.
+ \[\begin{aligned} a \leftarrow \text{student} - \text{instructor} \end{aligned}\]   \[\begin{aligned} a \leftarrow \text{instructor} - \text{student} \end{aligned}\]  This returns only John Smith.</description>
+    </item>
+    
   </channel>
 </rss>

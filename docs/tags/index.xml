@@ -304,6 +304,15 @@
     </item>
     
     <item>
+      <title>CHACHA20</title>
+      <link>http://zedchance.github.io/notes/tags/CHACHA20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/CHACHA20/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ciphers</title>
       <link>http://zedchance.github.io/notes/tags/ciphers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1438,6 +1447,15 @@
     </item>
     
     <item>
+      <title>padding</title>
+      <link>http://zedchance.github.io/notes/tags/padding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/padding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>parse trees</title>
       <link>http://zedchance.github.io/notes/tags/parse-trees/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1929,6 +1947,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/stats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stream ciphers</title>
+      <link>http://zedchance.github.io/notes/tags/stream-ciphers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/stream-ciphers/</guid>
       <description></description>
     </item>
     
