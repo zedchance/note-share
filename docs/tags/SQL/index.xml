@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/SQL/</link>
+    <description>Recent content in SQL on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/SQL/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS134-lecture-20210617</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210617/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210617/</guid>
+      <description>Notes on upcoming exam #  The join symbol on canvas will be represented as
+SQL #  File: SQL Slides  We can use SQL to implement our relational models in code.
+History #  We will be covering the SQL core.
+ DDL = data definition language, this corresponds to our relational model. insert, delete, update query  DBMS should implement all of the SQL standards, but they may not in some places.</description>
+    </item>
+    
+  </channel>
+</rss>

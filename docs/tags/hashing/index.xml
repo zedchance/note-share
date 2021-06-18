@@ -33,5 +33,14 @@ A is true B is false C is true (another case of A basically) D is false (another
 For get: best case runtime is O(1), worst case is O(n).</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210617</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210617/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210617/</guid>
+      <description>OpenSSL example from previous lecture, finished #  cbc_encrypt.c #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;openssl/evp.h&amp;gt; #define BLK_LEN 16 #define BUF_LEN 512  // NOTE!! For clarity&amp;#39;s sake, this example has no error checking. // In real code you need to test for errors and handle them.  int main(int argc, const char* argv[]) { int len, bytes_read; char passphrase[256]; unsigned char key[32]; // Receive SHA-2-256 hash of user pass phrase  unsigned char iv[BLK_LEN]; unsigned char in_buf[BUF_LEN]; unsigned char out_buf[BUF_LEN+BLK_LEN]; EVP_MD_CTX *mdctx; if (argc !</description>
+    </item>
+    
   </channel>
 </rss>
