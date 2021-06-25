@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="generator" content="Hugo 0.84.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Mergesort in Racket #  Mergesort breaks the list in half and sorts each half recursively.
@@ -21,7 +21,7 @@ ms(list) front = front half of list back = back half of list ms(front) ms(back) 
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.6739be83ff0e412edc712d1b511f4b1b4ffba5e771c6453c6f61fae41f397b1d.js" integrity="sha256-Zzm&#43;g/8OQS7ccS0bUR9LG0/7pedxxkU8b2H65B85ex0="></script>
+<script defer src="/notes/en.search.min.03b3d15579433c48e717bb6ce718ab0bc45401485d8b867c0c34bee7e0d42c26.js" integrity="sha256-A7PRVXlDPEjnF7ts5xirC8RUAUhdi4Z8DDS&#43;5&#43;DULCY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1412,6 +1412,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/" class="">CS134-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210623/" class="">CS134-lecture-20210623</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/" class="">CS134-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2766,6 +2805,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/" class="">CS152-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/" class="">CS152-lecture-20210622</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/" class="">CS152-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3805,14 +3883,14 @@ There is also <code>take</code>, that takes the first number of elements of the 
     (<span style="color:#66d9ef">if</span> (&lt; (length xs) <span style="color:#ae81ff">2</span>)
         xs
         (merge (ms (take xs (quotient (length xs) <span style="color:#ae81ff">2</span>)))
-               (ms (drop xs (quotient (length xs) <span style="color:#ae81ff">2</span>))))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>However, we haven&rsquo;t defined <code>merge</code> yet, so:</p>
+               (ms (drop xs (quotient (length xs) <span style="color:#ae81ff">2</span>))))))
+</code></pre></div><p>However, we haven&rsquo;t defined <code>merge</code> yet, so:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (merge xs ys)
     (<span style="color:#66d9ef">cond</span> ((empty? xs) ys)
           ((empty? ys) xs)
           ((&lt; (first xs) (first ys)) (cons (first xs) (merge (rest xs) ys)))
-          (<span style="color:#66d9ef">else</span> (cons (first ys) (merge (rest ys) xs)))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So we can test this:</p>
+          (<span style="color:#66d9ef">else</span> (cons (first ys) (merge (rest ys) xs)))))
+</code></pre></div><p>So we can test this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(ms <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span>))                   <span style="color:#75715e">; &#39;(1 2 3 4 5 6)</span>
 </code></pre></div><h2 id="higher-order-functions">
   Higher-order functions
@@ -3842,8 +3920,8 @@ The <code>l</code> in <code>foldl</code> means that it is going from left to rig
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(map add1 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                   <span style="color:#75715e">; &#39;(2 3 4 5)</span>
 </code></pre></div><p>We can use our own functions in <code>map</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (double x)
-    (+ x x))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(map double <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                 <span style="color:#75715e">; &#39;(2 4 6 8)</span>
+    (+ x x))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(map double <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                 <span style="color:#75715e">; &#39;(2 4 6 8)</span>
 </code></pre></div><p>Lets take a look at <code>filter</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(filter even? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))             <span style="color:#75715e">; &#39;(2 4)</span>
 </code></pre></div><h3 id="designing-filter">
@@ -3863,8 +3941,8 @@ When we are calling the function recursively, we will have to use <code>rest</co
         empty
         (<span style="color:#66d9ef">if</span> (f (first xs)) <span style="color:#75715e">; remember f is a function</span>
             (cons (first xs) (my-filter f (rest xs)))
-            (my-filter f (rest xs)))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So:</p>
+            (my-filter f (rest xs)))))
+</code></pre></div><p>So:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(my-filter even? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))          <span style="color:#75715e">; &#39;(2 4)</span>
 </code></pre></div><h3 id="designing-foldl">
   Designing <code>foldl</code>
@@ -3878,8 +3956,8 @@ When we are calling the function recursively, we will have to use <code>rest</co
 (<span style="color:#66d9ef">define</span> (my-foldl f acc xs)
     (<span style="color:#66d9ef">if</span> (empty? xs)
         acc
-        (my-foldl f (f acc (first xs)) (rest xs))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So lets test it:</p>
+        (my-foldl f (f acc (first xs)) (rest xs))))
+</code></pre></div><p>So lets test it:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(my-foldl + <span style="color:#ae81ff">0</span> <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))               <span style="color:#75715e">; 10</span>
 </code></pre></div><h2 id="lambda-functions">
   Lambda functions
@@ -3887,8 +3965,8 @@ When we are calling the function recursively, we will have to use <code>rest</co
 </h2>
 <p>Lambdas are nameless (anonymous) functions.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">lambda</span> (x y)
-    (+ x y))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>How can we call this function if it doesn&rsquo;t have a name?
+    (+ x y))
+</code></pre></div><p>How can we call this function if it doesn&rsquo;t have a name?
 There are many uses, we can define an operation without writing the full definition.</p>
 <p>For example, to double all the numbers of a list:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (double-all xs)
@@ -3928,8 +4006,8 @@ Their main use is for one time application for a simple functions in a higher or
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#75715e">; g(f(x))</span>
 (<span style="color:#66d9ef">define</span> (composer g f)
     (<span style="color:#66d9ef">lambda</span> (x)
-        (g (f x))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>We can test out this function:</p>
+        (g (f x))))
+</code></pre></div><p>We can test out this function:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#75715e">; using double function from earlier</span>
 (<span style="color:#66d9ef">define</span> double-add1 (composer add1 double))
 
@@ -3942,8 +4020,8 @@ Their main use is for one time application for a simple functions in a higher or
 We can make a higher order function that creates a tester for a specific interval.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (interval-factory x y)
     (<span style="color:#66d9ef">lambda</span> (z)
-        (<span style="color:#66d9ef">and</span> (&lt; x z) (&gt; y z))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>This returns a customized function based on the values we pass <code>x</code> and <code>y</code>.
+        (<span style="color:#66d9ef">and</span> (&lt; x z) (&gt; y z))))
+</code></pre></div><p>This returns a customized function based on the values we pass <code>x</code> and <code>y</code>.
 We can define the 1-100 interval like so:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> in-1-100 (interval-factory <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">100</span>))
 (in-1-100 <span style="color:#ae81ff">50</span>)                           <span style="color:#75715e">; #t</span>

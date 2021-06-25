@@ -133,6 +133,15 @@
     </item>
     
     <item>
+      <title>asymmetric encryption</title>
+      <link>http://zedchance.github.io/notes/tags/asymmetric-encryption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/asymmetric-encryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>asymptotic notation</title>
       <link>http://zedchance.github.io/notes/tags/asymptotic-notation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -192,6 +201,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/bellman-ford-algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BIGNUM</title>
+      <link>http://zedchance.github.io/notes/tags/BIGNUM/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/BIGNUM/</guid>
       <description></description>
     </item>
     
@@ -1519,6 +1537,15 @@
     </item>
     
     <item>
+      <title>primes</title>
+      <link>http://zedchance.github.io/notes/tags/primes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/primes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>priority queues</title>
       <link>http://zedchance.github.io/notes/tags/priority-queues/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1906,6 +1933,15 @@
     </item>
     
     <item>
+      <title>sponge construction</title>
+      <link>http://zedchance.github.io/notes/tags/sponge-construction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/sponge-construction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sprint review</title>
       <link>http://zedchance.github.io/notes/tags/sprint-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2001,6 +2037,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/symmetric-encryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag generators</title>
+      <link>http://zedchance.github.io/notes/tags/tag-generators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/tag-generators/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sponge construction on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/sponge-construction/</link>
+    <description>Recent content in sponge construction on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/sponge-construction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210621</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</guid>
+      <description>Cryptographic hash functions #  Hashing takes a very large domain and maps it to a smaller codomain. For this to scale nicely,
+ the hash function must be fast the outputs must be fairly random in distribution  A hash function can be defined as   \( H : \{0,1\}^* \to \{0,1\}^b \)  , where  \( b \)  is the output block length.
+Recall: a set raised to an asterisk means the set of all strings made from that set.</description>
+    </item>
+    
+  </channel>
+</rss>

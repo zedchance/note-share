@@ -42,5 +42,16 @@ For get: best case runtime is O(1), worst case is O(n).</description>
       <description>OpenSSL example from previous lecture, finished #  cbc_encrypt.c #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;openssl/evp.h&amp;gt; #define BLK_LEN 16 #define BUF_LEN 512  // NOTE!! For clarity&amp;#39;s sake, this example has no error checking. // In real code you need to test for errors and handle them.  int main(int argc, const char* argv[]) { int len, bytes_read; char passphrase[256]; unsigned char key[32]; // Receive SHA-2-256 hash of user pass phrase  unsigned char iv[BLK_LEN]; unsigned char in_buf[BUF_LEN]; unsigned char out_buf[BUF_LEN+BLK_LEN]; EVP_MD_CTX *mdctx; if (argc !</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210621</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</guid>
+      <description>Cryptographic hash functions #  Hashing takes a very large domain and maps it to a smaller codomain. For this to scale nicely,
+ the hash function must be fast the outputs must be fairly random in distribution  A hash function can be defined as   \( H : \{0,1\}^* \to \{0,1\}^b \)  , where  \( b \)  is the output block length.
+Recall: a set raised to an asterisk means the set of all strings made from that set.</description>
+    </item>
+    
   </channel>
 </rss>

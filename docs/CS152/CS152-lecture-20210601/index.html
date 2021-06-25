@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="generator" content="Hugo 0.84.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Course orientation #  Syllabus #  152-syllabus.pdf  Notes during orientation #   Programming will be required in each module, programming intensive Brush up on probability of simple events, simple conditional events Shallow introduction into groups and fields Class is only 5 weeks and 2 days long, so extremely accelerated, at least 20 hrs/week needed Hybrid class, half videos posted, and half live. Class will start at 1, and go until lecture finishes, then unrecorded open office hour 5 modules, starts on thursdays  Permutation functions and C programming Symmetric encryption Hashing and authentication Asymmetric cryptography and algorithms on large number Crytographic systems   Exams on week 3 and 5 Group quizzes on tuesdays, in breakout rooms on Zoom Last day is comprehensive final Take all assignments seriously, nothing is dropped  Brief introduction to cryptography #   Communication in the presence of adversaries">
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.6739be83ff0e412edc712d1b511f4b1b4ffba5e771c6453c6f61fae41f397b1d.js" integrity="sha256-Zzm&#43;g/8OQS7ccS0bUR9LG0/7pedxxkU8b2H65B85ex0="></script>
+<script defer src="/notes/en.search.min.03b3d15579433c48e717bb6ce718ab0bc45401485d8b867c0c34bee7e0d42c26.js" integrity="sha256-A7PRVXlDPEjnF7ts5xirC8RUAUhdi4Z8DDS&#43;5&#43;DULCY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1408,6 +1408,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/" class="">CS134-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210623/" class="">CS134-lecture-20210623</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/" class="">CS134-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2757,6 +2796,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210617/" class="">CS152-lecture-20210617</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/" class="">CS152-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/" class="">CS152-lecture-20210622</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/" class="">CS152-lecture-20210624</a>
   
 
         </li>
@@ -4199,7 +4277,7 @@ The span of the rectangle is the amount of memory allocated (the length).</p>
 It is a memory address with no associated type.</p>
 <p>Another interface may be:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">foo</span>(uint8_t <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">foo</span>(<span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes);
 </code></pre></div><p><code>uintN_t</code>, where <code>N</code> is either 8, 16, 32, or 64, each being <code>N</code> bits, can be used to specify the size needed.
 <code>uint8_t</code> is the exact same as <code>char</code>, both being the smallest addressable unit (1 byte).</p>
 <h3 id="accessing-memory-in-c">
@@ -4221,9 +4299,9 @@ We cannot do this on a <code>void *</code>, because it doesn&rsquo;t know the si
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
-uint8_t <span style="color:#a6e22e">xor_buf</span>(uint8_t <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
+<span style="color:#66d9ef">uint8_t</span> <span style="color:#a6e22e">xor_buf</span>(<span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
 {
-    uint8_t acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">uint8_t</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nbytes; i<span style="color:#f92672">++</span>)
         acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">^</span> p[i];
     <span style="color:#66d9ef">return</span> acc;
@@ -4231,10 +4309,10 @@ uint8_t <span style="color:#a6e22e">xor_buf</span>(uint8_t <span style="color:#f
 
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
-    uint8_t buf[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>};
+    <span style="color:#66d9ef">uint8_t</span> buf[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>};
     <span style="color:#75715e">// at this point memory looks like this in hex:
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 01 02 03 04
-</span><span style="color:#75715e"></span>    uint8_t result <span style="color:#f92672">=</span> xor_buf(buf, <span style="color:#ae81ff">4</span>);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint8_t</span> result <span style="color:#f92672">=</span> xor_buf(buf, <span style="color:#ae81ff">4</span>);
     printf(<span style="color:#e6db74">&#34;%x</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }

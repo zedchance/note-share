@@ -27,5 +27,16 @@ ASolver(a) ... BSolver(...) ... ASolver relies on the existence of BSolver. So A
 Acceptance problem #  If we have an algorithm accept(m,x), we are wondering if we run the algorithm m on input x, it will either output &amp;ldquo;accept&amp;rdquo; or &amp;ldquo;reject&amp;rdquo;. The claim is there is no algorithm that can produce this on all inputs (m,x).</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210621</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</guid>
+      <description>Cryptographic hash functions #  Hashing takes a very large domain and maps it to a smaller codomain. For this to scale nicely,
+ the hash function must be fast the outputs must be fairly random in distribution  A hash function can be defined as   \( H : \{0,1\}^* \to \{0,1\}^b \)  , where  \( b \)  is the output block length.
+Recall: a set raised to an asterisk means the set of all strings made from that set.</description>
+    </item>
+    
   </channel>
 </rss>

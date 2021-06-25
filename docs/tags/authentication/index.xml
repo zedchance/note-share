@@ -17,5 +17,20 @@ Challenge-response mechanism for authentication:
  Using symmetric shared key,   \( K_{ab} \)   Alice sends the message to bob saying &amp;ldquo;I am alice&amp;rdquo; Bob generates a random one-time use nonce, and encrypts it with the shared key  \( R = K_{ab}(\text{nonce}) \)   Alice decrypts  \( R \)  based on the symmetric key  \( K_{ab} \)  .</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210622</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</guid>
+      <description>Authentication #  We can authenticate our messages using hashing.
+Recall that there are two types of hashing
+Cryptographic hashing
+ more secure preimage/2nd preimage/collision resistance slower   Universal hashing
+ no guarantees collision is probability based faster    There are authentication schemes that are built using each of these 2 types of hashing.
+The idea behind authentication is
+ If Bob receives a message from Alice, Bob would like to trust that the message is  truly from Alice hasn&amp;rsquo;t been tampered with   Alice will generate a tag   \( t \)  (sometimes called a MAC) using a tag generator  \[ t = \text{TagGen(k, m)} \]   Alice sends the message and the tag to Bob Bob can verify that the tag was generated with the specific key  \( k \)  and message  \( m \)    This verifies that Alice knows the key  \( k \)  , which gives Bob trust (because we&amp;rsquo;re assuming that only Alice and Bob have that secret key.</description>
+    </item>
+    
   </channel>
 </rss>

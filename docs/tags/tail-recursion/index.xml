@@ -36,7 +36,7 @@ foo(x): if (x == 0) return answer else // do stuff, then make recursive call ret
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</guid>
-      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs)))))This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs))))) This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
 Invariant: acc + sum of xs is desired answer.
 (define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (+ acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &amp;#39;(1 2 3 4)) ; 10 </description>
     </item>

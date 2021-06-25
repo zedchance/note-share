@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag generators on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/tag-generators/</link>
+    <description>Recent content in tag generators on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/tag-generators/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210622</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</guid>
+      <description>Authentication #  We can authenticate our messages using hashing.
+Recall that there are two types of hashing
+Cryptographic hashing
+ more secure preimage/2nd preimage/collision resistance slower   Universal hashing
+ no guarantees collision is probability based faster    There are authentication schemes that are built using each of these 2 types of hashing.
+The idea behind authentication is
+ If Bob receives a message from Alice, Bob would like to trust that the message is  truly from Alice hasn&amp;rsquo;t been tampered with   Alice will generate a tag   \( t \)  (sometimes called a MAC) using a tag generator  \[ t = \text{TagGen(k, m)} \]   Alice sends the message and the tag to Bob Bob can verify that the tag was generated with the specific key  \( k \)  and message  \( m \)    This verifies that Alice knows the key  \( k \)  , which gives Bob trust (because we&amp;rsquo;re assuming that only Alice and Bob have that secret key.</description>
+    </item>
+    
+  </channel>
+</rss>

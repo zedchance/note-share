@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="generator" content="Hugo 0.84.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &lt;stdio.h&gt;#include &lt;stdint.h&gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &lt; nitems; i&#43;&#43;) if (p32[i] % 2 == 0) acc = acc &#43; 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&#34;%d\n&#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.">
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.6739be83ff0e412edc712d1b511f4b1b4ffba5e771c6453c6f61fae41f397b1d.js" integrity="sha256-Zzm&#43;g/8OQS7ccS0bUR9LG0/7pedxxkU8b2H65B85ex0="></script>
+<script defer src="/notes/en.search.min.03b3d15579433c48e717bb6ce718ab0bc45401485d8b867c0c34bee7e0d42c26.js" integrity="sha256-A7PRVXlDPEjnF7ts5xirC8RUAUhdi4Z8DDS&#43;5&#43;DULCY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1408,6 +1408,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/" class="">CS134-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210623/" class="">CS134-lecture-20210623</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/" class="">CS134-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2762,6 +2801,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/" class="">CS152-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/" class="">CS152-lecture-20210622</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/" class="">CS152-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3796,7 +3874,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
 {
-    uint32_t <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (uint32_t <span style="color:#f92672">*</span>) p;
+    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
     <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
     <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nitems; i<span style="color:#f92672">++</span>)
@@ -3807,20 +3885,20 @@ https://github.com/alex-shpak/hugo-book
 
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
-    uint8_t buf[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>};
+    <span style="color:#66d9ef">uint8_t</span> buf[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>};
     printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, num_even(buf, <span style="color:#ae81ff">8</span>));
     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
 </code></pre></div><p>Depending on the endian, the output is either <code>0</code> or <code>2</code>.</p>
 <p>We can not depend on the endianness of the CPU by using a helper function to load in the bytes little endian always:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">uint32_t <span style="color:#a6e22e">load_uint32_little</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">load_uint32_little</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p)
 {
-    uint8_t <span style="color:#f92672">*</span> p8 <span style="color:#f92672">=</span> (uint8_t <span style="color:#f92672">*</span>) p;
+    <span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span> p8 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span>) p;
     <span style="color:#75715e">// extract bytes
-</span><span style="color:#75715e"></span>    uint32_t a <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">0</span>];
-    uint32_t b <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">1</span>];
-    uint32_t c <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">2</span>];
-    uint32_t d <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">3</span>];
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> a <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">0</span>];
+    <span style="color:#66d9ef">uint32_t</span> b <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">1</span>];
+    <span style="color:#66d9ef">uint32_t</span> c <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">2</span>];
+    <span style="color:#66d9ef">uint32_t</span> d <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">3</span>];
     <span style="color:#75715e">// reassmble
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> (d <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">24</span>) <span style="color:#f92672">|</span> (c <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">16</span>) <span style="color:#f92672">|</span> (b <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> a;
 }
@@ -3831,12 +3909,12 @@ https://github.com/alex-shpak/hugo-book
 </code></pre></div><p>So we can polish our <code>num_even</code> function to handle the different endianness of CPUs:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
 {
-    uint32_t <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (uint32_t <span style="color:#f92672">*</span>) p;
+    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
     <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
     <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nitems; i<span style="color:#f92672">++</span>)
     {
-        uint32_t tmp <span style="color:#f92672">=</span> load_uint32_little(p32 <span style="color:#f92672">+</span> i);
+        <span style="color:#66d9ef">uint32_t</span> tmp <span style="color:#f92672">=</span> load_uint32_little(p32 <span style="color:#f92672">+</span> i);
         <span style="color:#66d9ef">if</span> (tmp <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
             acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
     }

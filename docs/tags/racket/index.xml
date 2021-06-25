@@ -13,7 +13,7 @@
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</guid>
       <description>Old MM2 hw #  1 Write a recursive Racket function &amp;ldquo;sum-alternate&amp;rdquo; that takes a positive integer x as a parameter. The function should return the sum of all the integers x, x-2, x-4, x-6, etc, as long as the numbers are positive. For example, (sum-alternate 5) should evaluate to 5+3+1, and (sum-alternate 6) should evaluate to 6+4+2.
-(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))   2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
+(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))    2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@ ms(list) front = front half of list back = back half of list ms(front) ms(back) 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</guid>
-      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs)))))This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs))))) This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
 Invariant: acc + sum of xs is desired answer.
 (define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (+ acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &amp;#39;(1 2 3 4)) ; 10 </description>
     </item>

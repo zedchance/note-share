@@ -107,5 +107,42 @@ perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random pe
       <description>OpenSSL example from previous lecture, finished #  cbc_encrypt.c #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;openssl/evp.h&amp;gt; #define BLK_LEN 16 #define BUF_LEN 512  // NOTE!! For clarity&amp;#39;s sake, this example has no error checking. // In real code you need to test for errors and handle them.  int main(int argc, const char* argv[]) { int len, bytes_read; char passphrase[256]; unsigned char key[32]; // Receive SHA-2-256 hash of user pass phrase  unsigned char iv[BLK_LEN]; unsigned char in_buf[BUF_LEN]; unsigned char out_buf[BUF_LEN+BLK_LEN]; EVP_MD_CTX *mdctx; if (argc !</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210621</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</guid>
+      <description>Cryptographic hash functions #  Hashing takes a very large domain and maps it to a smaller codomain. For this to scale nicely,
+ the hash function must be fast the outputs must be fairly random in distribution  A hash function can be defined as   \( H : \{0,1\}^* \to \{0,1\}^b \)  , where  \( b \)  is the output block length.
+Recall: a set raised to an asterisk means the set of all strings made from that set.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210622</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</guid>
+      <description>Authentication #  We can authenticate our messages using hashing.
+Recall that there are two types of hashing
+Cryptographic hashing
+ more secure preimage/2nd preimage/collision resistance slower   Universal hashing
+ no guarantees collision is probability based faster    There are authentication schemes that are built using each of these 2 types of hashing.
+The idea behind authentication is
+ If Bob receives a message from Alice, Bob would like to trust that the message is  truly from Alice hasn&amp;rsquo;t been tampered with   Alice will generate a tag   \( t \)  (sometimes called a MAC) using a tag generator  \[ t = \text{TagGen(k, m)} \]   Alice sends the message and the tag to Bob Bob can verify that the tag was generated with the specific key  \( k \)  and message  \( m \)    This verifies that Alice knows the key  \( k \)  , which gives Bob trust (because we&amp;rsquo;re assuming that only Alice and Bob have that secret key.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210624</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/</guid>
+      <description>Asymmetric encryption #  A very useful type of encryption where encryption and decryption is done using key pairs, one public and one private. This can solve the key exchange problem, and also can be used to digitally sign messages.
+Now most cryptography is symmetric, only a small amount of CPU cycles are spent on asymmetric cryptography.
+RSA #  A revolutionary cryptosystem designed by Rivest, Shamir, Adleman at MIT in the 1970s.</description>
+    </item>
+    
   </channel>
 </rss>

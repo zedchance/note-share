@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="generator" content="Hugo 0.84.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Functional Programming #  Other functions may write to this.sum, so this could be incorrect in the future.
@@ -23,7 +23,7 @@ int pow(int x, int y) if (y == 0) return 1 else solve with smaller_pow Now we ne
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.6739be83ff0e412edc712d1b511f4b1b4ffba5e771c6453c6f61fae41f397b1d.js" integrity="sha256-Zzm&#43;g/8OQS7ccS0bUR9LG0/7pedxxkU8b2H65B85ex0="></script>
+<script defer src="/notes/en.search.min.03b3d15579433c48e717bb6ce718ab0bc45401485d8b867c0c34bee7e0d42c26.js" integrity="sha256-A7PRVXlDPEjnF7ts5xirC8RUAUhdi4Z8DDS&#43;5&#43;DULCY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1414,6 +1414,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/" class="">CS134-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210623/" class="">CS134-lecture-20210623</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/" class="">CS134-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2768,6 +2807,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/" class="">CS152-lecture-20210621</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/" class="">CS152-lecture-20210622</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/" class="">CS152-lecture-20210624</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3836,15 +3914,15 @@ This is the base case, where <code>y = 0</code>.</p>
 <p>Racket is a form of scheme, and scheme is a form of Lisp.</p>
 <p>A method definition (which just calls the built-in <code>sting-append</code>).</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (my-concat s1 s2)
-    (string-append s1 s2))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So we can call this function like:</p>
+    (string-append s1 s2))
+</code></pre></div><p>So we can call this function like:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(my-concat <span style="color:#e6db74">&#34;abc&#34;</span> <span style="color:#e6db74">&#34;def&#34;</span>)     <span style="color:#75715e">; &#34;abcdef&#34;</span>
 </code></pre></div><p>Lets define a <code>strlen</code> function:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (strlen s)
     (<span style="color:#66d9ef">if</span> (= <span style="color:#ae81ff">0</span> (string-length s))
         <span style="color:#ae81ff">0</span>
-        (+ <span style="color:#ae81ff">1</span> (strlen (substring s <span style="color:#ae81ff">1</span>)))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>Yes, this is calling a built in string length function, but its just displaying how a recursively called function is setup.</p>
+        (+ <span style="color:#ae81ff">1</span> (strlen (substring s <span style="color:#ae81ff">1</span>)))))
+</code></pre></div><p>Yes, this is calling a built in string length function, but its just displaying how a recursively called function is setup.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(strlen <span style="color:#e6db74">&#34;&#34;</span>)         <span style="color:#75715e">; 0</span>
 (strlen <span style="color:#e6db74">&#34;a&#34;</span>)        <span style="color:#75715e">; 1</span>
 (strlen <span style="color:#e6db74">&#34;abc&#34;</span>)      <span style="color:#75715e">; 3</span>
@@ -3860,8 +3938,8 @@ This is the base case, where <code>y = 0</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (fact n)
     (<span style="color:#66d9ef">if</span> (= n <span style="color:#ae81ff">0</span>)
         <span style="color:#ae81ff">1</span>
-        (* n (fact (-n <span style="color:#ae81ff">1</span>)))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(fact <span style="color:#ae81ff">0</span>)        <span style="color:#75715e">; 1</span>
+        (* n (fact (-n <span style="color:#ae81ff">1</span>)))))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(fact <span style="color:#ae81ff">0</span>)        <span style="color:#75715e">; 1</span>
 (fact <span style="color:#ae81ff">1</span>)        <span style="color:#75715e">; 1</span>
 (fact <span style="color:#ae81ff">2</span>)        <span style="color:#75715e">; 2</span>
 (fact <span style="color:#ae81ff">10</span>)       <span style="color:#75715e">; 3628800</span>
@@ -3873,8 +3951,8 @@ This is the base case, where <code>y = 0</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">cond</span> (bool expr)
       (bool expr)
       <span style="color:#66d9ef">...</span>
-      (<span style="color:#66d9ef">else</span> expr))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>This is equivalent to a nested if.
+      (<span style="color:#66d9ef">else</span> expr))
+</code></pre></div><p>This is equivalent to a nested if.
 <code>cond</code> goes one by one and checks each boolean expression, and if true it replaces with <code>expr</code>.
 The <code>...</code> means that there can be any number of expressions to check, this is like a switch.
 As soon as it finds the first true it executes the replacement then ends.
@@ -3882,8 +3960,8 @@ At least one thing has to evaluate to true otherwise you&rsquo;ll get a runtime 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (fib n)
     (<span style="color:#66d9ef">cond</span> ((= n <span style="color:#ae81ff">0</span>) <span style="color:#ae81ff">1</span>)
           ((= n <span style="color:#ae81ff">1</span>) <span style="color:#ae81ff">1</span>)
-          (<span style="color:#66d9ef">else</span> (+ (fib (- n <span style="color:#ae81ff">1</span>)) (fib (- n <span style="color:#ae81ff">2</span>))))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So we can test this:</p>
+          (<span style="color:#66d9ef">else</span> (+ (fib (- n <span style="color:#ae81ff">1</span>)) (fib (- n <span style="color:#ae81ff">2</span>))))))
+</code></pre></div><p>So we can test this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(fib <span style="color:#ae81ff">0</span>)         <span style="color:#75715e">; 1</span>
 (fib <span style="color:#ae81ff">1</span>)         <span style="color:#75715e">; 1</span>
 (fib <span style="color:#ae81ff">2</span>)         <span style="color:#75715e">; 2</span>
@@ -3900,15 +3978,15 @@ We can use <code>substring</code> to cut the string down, and <code>string-appen
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (strev s)
     (<span style="color:#66d9ef">if</span> (string=? s <span style="color:#e6db74">&#34;&#34;</span>)
         s
-        (string-append (strev (substring s <span style="color:#ae81ff">1</span>)) (substring s <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>We can test now:</p>
+        (string-append (strev (substring s <span style="color:#ae81ff">1</span>)) (substring s <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>))))
+</code></pre></div><p>We can test now:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(strev <span style="color:#e6db74">&#34;&#34;</span>)      <span style="color:#75715e">; &#34;&#34;</span>
 (strev <span style="color:#e6db74">&#34;a&#34;</span>)     <span style="color:#75715e">; &#34;a&#34;</span>
 (strev <span style="color:#e6db74">&#34;ab&#34;</span>)    <span style="color:#75715e">; &#34;ba&#34;</span>
 (strev <span style="color:#e6db74">&#34;abc&#34;</span>)   <span style="color:#75715e">; &#34;cba&#34;</span>
 </code></pre></div><p>There is a built in called <code>check-expect</code>, which we can use to test.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(check-expect (strev <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#e6db74">&#34;cba&#34;</span>)<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>When you run this, if you see nothing then it works correctly.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(check-expect (strev <span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#e6db74">&#34;cba&#34;</span>)
+</code></pre></div><p>When you run this, if you see nothing then it works correctly.
 If it fails you will see the explanation in the output.</p>
 <h3 id="writesequence-problem-from-practiceit">
   <code>writeSequence</code> problem from practiceit
@@ -3920,8 +3998,8 @@ We can explicitly change the number to a string with <code>number-&gt;string</co
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (ws n)
     (<span style="color:#66d9ef">cond</span> ((= n <span style="color:#ae81ff">1</span>) <span style="color:#e6db74">&#34;1&#34;</span>)
           ((= n <span style="color:#ae81ff">2</span>) <span style="color:#e6db74">&#34;11&#34;</span>)
-          (<span style="color:#66d9ef">else</span> (string-append (number-&gt;string (ceiling (/ n <span style="color:#ae81ff">2</span>))) (ws (- n <span style="color:#ae81ff">2</span>)) (number-&gt;string (ceiling (- n <span style="color:#ae81ff">2</span>)))))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>So we can test this to see if its working:</p>
+          (<span style="color:#66d9ef">else</span> (string-append (number-&gt;string (ceiling (/ n <span style="color:#ae81ff">2</span>))) (ws (- n <span style="color:#ae81ff">2</span>)) (number-&gt;string (ceiling (- n <span style="color:#ae81ff">2</span>)))))))
+</code></pre></div><p>So we can test this to see if its working:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(ws <span style="color:#ae81ff">1</span>)          <span style="color:#75715e">; &#34;1&#34;</span>
 (ws <span style="color:#ae81ff">2</span>)          <span style="color:#75715e">; &#34;11&#34;</span>
 (ws <span style="color:#ae81ff">3</span>)          <span style="color:#75715e">; &#34;212&#34;</span>
@@ -3938,17 +4016,17 @@ This is easy to think about with single value definitions, like <code>(define n 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (listlen xs)
     (<span style="color:#66d9ef">if</span> (empty? xs)
         <span style="color:#ae81ff">0</span>
-        (= <span style="color:#ae81ff">1</span> ( listlen (rest xs)))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>And you call the function like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p><code>listlen</code> is actually being replaced with:</p>
+        (= <span style="color:#ae81ff">1</span> ( listlen (rest xs)))))
+</code></pre></div><p>And you call the function like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))
+</code></pre></div><p><code>listlen</code> is actually being replaced with:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">if</span> (empty? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))
     <span style="color:#ae81ff">0</span>
-    (+ <span style="color:#ae81ff">1</span> (listlen (rest <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>Which is then replaced by</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(+ <span style="color:#ae81ff">1</span> (listlen (rest <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(+ <span style="color:#ae81ff">1</span> (listlen <span style="color:#f92672">`</span>(<span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)))<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>and so forth.</p>
+    (+ <span style="color:#ae81ff">1</span> (listlen (rest <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)))))
+</code></pre></div><p>Which is then replaced by</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(+ <span style="color:#ae81ff">1</span> (listlen (rest <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(+ <span style="color:#ae81ff">1</span> (listlen <span style="color:#f92672">`</span>(<span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)))
+</code></pre></div><p>and so forth.</p>
 <h3 id="debugging-in-drracket">
   Debugging in DrRacket
   <a class="anchor" href="#debugging-in-drracket">#</a>

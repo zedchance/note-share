@@ -1031,6 +1031,39 @@ History #  We will be covering the SQL core.
     </item>
     
     <item>
+      <title>CS134-lecture-20210621</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/</guid>
+      <description>Assignment 2 solution #  Assignment 3 solutions #  SQL cont. #  INSERT #  The attributes (VALUES) are listed one by one in the same order as when the table was declared. If they are put in the wrong order the attributes will go into the wrong places (or violate domain constraints). You can specify the attributes and their order is
+INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO) VALUES (&amp;#39;Richard&amp;#39;, &amp;#39;Marini&amp;#39;, &amp;#39;1932914921&amp;#39;, 4) The attributes that are not null must be specified in the command.</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210623</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210623/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210623/</guid>
+      <description>MySQL assignment 4 #  Note
+ Login to MySQL server using csus username (ssh) MySQL on this server is case sensitive  SQL cont. #  Aliases #  Aliases are other names for a table.
+Consider our normal company schema,
+SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D, DEPT_LOCATION AS L WHERE D.DNUMBER=L.DNUMBER; Here
+ D is an alias for DEPARTMENT L is an alias for DEPT_LOCATION  To make 2 aliases of one entity:</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210624</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/</guid>
+      <description>SQL cont. #  Comparison operators #  To list all the names of employees whose salary is greater than the salary of all the employees in department 5:
+SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELECT e.salary FROM employee AS e WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &amp;gt; some (..., it doesn&amp;rsquo;t need to be greater than all items in bag, just some (1 is enough).</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1049,7 +1082,7 @@ History #  We will be covering the SQL core.
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</guid>
       <description>Old MM2 hw #  1 Write a recursive Racket function &amp;ldquo;sum-alternate&amp;rdquo; that takes a positive integer x as a parameter. The function should return the sum of all the integers x, x-2, x-4, x-6, etc, as long as the numbers are positive. For example, (sum-alternate 5) should evaluate to 5+3+1, and (sum-alternate 6) should evaluate to 6+4+2.
-(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))   2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
+(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))    2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
     </item>
     
     <item>
@@ -1195,7 +1228,7 @@ ms(list) front = front half of list back = back half of list ms(front) ms(back) 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</guid>
-      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs)))))This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs))))) This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
 Invariant: acc + sum of xs is desired answer.
 (define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (+ acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &amp;#39;(1 2 3 4)) ; 10 </description>
     </item>
@@ -2059,6 +2092,43 @@ perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random pe
       
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210617/</guid>
       <description>OpenSSL example from previous lecture, finished #  cbc_encrypt.c #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;openssl/evp.h&amp;gt; #define BLK_LEN 16 #define BUF_LEN 512  // NOTE!! For clarity&amp;#39;s sake, this example has no error checking. // In real code you need to test for errors and handle them.  int main(int argc, const char* argv[]) { int len, bytes_read; char passphrase[256]; unsigned char key[32]; // Receive SHA-2-256 hash of user pass phrase  unsigned char iv[BLK_LEN]; unsigned char in_buf[BUF_LEN]; unsigned char out_buf[BUF_LEN+BLK_LEN]; EVP_MD_CTX *mdctx; if (argc !</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210621</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210621/</guid>
+      <description>Cryptographic hash functions #  Hashing takes a very large domain and maps it to a smaller codomain. For this to scale nicely,
+ the hash function must be fast the outputs must be fairly random in distribution  A hash function can be defined as   \( H : \{0,1\}^* \to \{0,1\}^b \)  , where  \( b \)  is the output block length.
+Recall: a set raised to an asterisk means the set of all strings made from that set.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210622</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210622/</guid>
+      <description>Authentication #  We can authenticate our messages using hashing.
+Recall that there are two types of hashing
+Cryptographic hashing
+ more secure preimage/2nd preimage/collision resistance slower   Universal hashing
+ no guarantees collision is probability based faster    There are authentication schemes that are built using each of these 2 types of hashing.
+The idea behind authentication is
+ If Bob receives a message from Alice, Bob would like to trust that the message is  truly from Alice hasn&amp;rsquo;t been tampered with   Alice will generate a tag   \( t \)  (sometimes called a MAC) using a tag generator  \[ t = \text{TagGen(k, m)} \]   Alice sends the message and the tag to Bob Bob can verify that the tag was generated with the specific key  \( k \)  and message  \( m \)    This verifies that Alice knows the key  \( k \)  , which gives Bob trust (because we&amp;rsquo;re assuming that only Alice and Bob have that secret key.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210624</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210624/</guid>
+      <description>Asymmetric encryption #  A very useful type of encryption where encryption and decryption is done using key pairs, one public and one private. This can solve the key exchange problem, and also can be used to digitally sign messages.
+Now most cryptography is symmetric, only a small amount of CPU cycles are spent on asymmetric cryptography.
+RSA #  A revolutionary cryptosystem designed by Rivest, Shamir, Adleman at MIT in the 1970s.</description>
     </item>
     
     <item>
