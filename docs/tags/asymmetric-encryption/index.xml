@@ -17,5 +17,19 @@ Now most cryptography is symmetric, only a small amount of CPU cycles are spent 
 RSA #  A revolutionary cryptosystem designed by Rivest, Shamir, Adleman at MIT in the 1970s.</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210626</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210626/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210626/</guid>
+      <description>Intro to asymmetric encryption #  Until now, we&amp;rsquo;ve been using symmetric cryptography. This means that both Alice and Bob are sharing a secret key.
+In asymmetric cryptography, Alice and Bob have their own secret keys. They also both have public keys.
+Both public and private keys are created at the same time.
+We want to provide these services using asymmetric cryptography:
+Encryption
+ Alice encrypts a message to be sent to Bob using Bob&amp;rsquo;s public key    \[\begin{aligned} A \to \text{Encrypt}(B_\text{pub}, x) \to B \end{aligned}\]   Bob decrypts this message using his private key   Authentication</description>
+    </item>
+    
   </channel>
 </rss>

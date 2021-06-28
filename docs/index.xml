@@ -2132,6 +2132,30 @@ RSA #  A revolutionary cryptosystem designed by Rivest, Shamir, Adleman at MIT i
     </item>
     
     <item>
+      <title>CS152-lecture-20210626</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210626/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210626/</guid>
+      <description>Intro to asymmetric encryption #  Until now, we&amp;rsquo;ve been using symmetric cryptography. This means that both Alice and Bob are sharing a secret key.
+In asymmetric cryptography, Alice and Bob have their own secret keys. They also both have public keys.
+Both public and private keys are created at the same time.
+We want to provide these services using asymmetric cryptography:
+Encryption
+ Alice encrypts a message to be sent to Bob using Bob&amp;rsquo;s public key    \[\begin{aligned} A \to \text{Encrypt}(B_\text{pub}, x) \to B \end{aligned}\]   Bob decrypts this message using his private key   Authentication</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210627</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210627/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210627/</guid>
+      <description>Problems with RSA #  RSA has some problems, namely
+ RSA can be distinguished easily  a black box is either a RSA encryption scheme or random bits it is easy to distinguish between these 2 worlds by sending a 0 bit (or a 1) to the box and see what comes back, and so in the RSA box   \[ \begin{aligned} 0^e = 0 \end{aligned} \]   if we restrict the numbers to large inputs then this becomes better   RSA leaks information  \[\begin{aligned} y_1 = \text{RSA}(x_1) \\ y_2 = \text{RSA}(x_2) \end{aligned}\]  If  \( y_1 = y_2 \)  then  \( x_1 = x_2 \)  .</description>
+    </item>
+    
+    <item>
       <title>CS26-lecture-notes</title>
       <link>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
