@@ -1064,6 +1064,28 @@ SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELE
     </item>
     
     <item>
+      <title>CS134-lecture-20210628</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/</guid>
+      <description>SQL cont. #  Aggregate functions cont. #  Include in weekly assignment.  List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.
+SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 AND (SELECT COUNT(*) FROM dependent AS dep WHERE e.ssn=dep.essn AND dep.relationship=&amp;#39;daughter&amp;#39;) &amp;gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210629</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210629/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210629/</guid>
+      <description>SQL cont. #  Subqueries can be used inside insert statements:
+This insert statement will update the numbers dynamically based on the response from the subquery. The next time an employee is inserted, we can run this insert statement to update DEPTS_INFO using a trigger.
+Or, we can use views&amp;hellip;
+Virtual table view #  CREATE VIEW dept_info_view AS SELECT dname, COUNT(*) AS no_of_emps, SUM(salary) AS total_sal FROM department, employee WHERE dnumber=dno GROUP BY dname; This results in a self updating table, called a view:</description>
+    </item>
+    
+    <item>
       <title>CS135-hw-20210203</title>
       <link>http://zedchance.github.io/notes/CS135/CS135-hw-20210203/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2153,6 +2175,29 @@ Encryption
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210627/</guid>
       <description>Problems with RSA #  RSA has some problems, namely
  RSA can be distinguished easily  a black box is either a RSA encryption scheme or random bits it is easy to distinguish between these 2 worlds by sending a 0 bit (or a 1) to the box and see what comes back, and so in the RSA box   \[ \begin{aligned} 0^e = 0 \end{aligned} \]   if we restrict the numbers to large inputs then this becomes better   RSA leaks information  \[\begin{aligned} y_1 = \text{RSA}(x_1) \\ y_2 = \text{RSA}(x_2) \end{aligned}\]  If  \( y_1 = y_2 \)  then  \( x_1 = x_2 \)  .</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210629</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210629/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210629/</guid>
+      <description>Alternatives to RSA #  RSA was invented in the 1970s and patented it. Alternatives came about because of the licensing fees that RSA used to require.
+Recall that the RSA problem is
+ Given   \( x^e \mod n \)  ,  \( e \)  , and  \( n \)  , find  \( x \)  . This is hard, and thats why RSA is secure.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210701</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210701/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210701/</guid>
+      <description>Groups #  Diffie-Hellman is secure against any passive adversary using groups where the discrete log problem is hard.
+A group is a simplification of a field, as it only has 1 operation (instead of 2).
+In summary, a group
+ is a set of objects (usually numbers)   \( G \)   has one operation (binary) that is closed,  \( G \times G \to G \)   this is usually addition or multiplication   has an identity  usually 0 in an additive group usually 1 in a multiplicative group   have invereses,  \( \forall x \in G, \exists y \in G \)  such that  \( x \text{ op } y = \text{identity} \)   is associative, and commutative  Some examples of infinite groups</description>
     </item>
     
     <item>

@@ -162,5 +162,27 @@ SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D, DEPT_LOCATION AS L WHERE D.DNUMB
 SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELECT e.salary FROM employee AS e WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &amp;gt; some (..., it doesn&amp;rsquo;t need to be greater than all items in bag, just some (1 is enough).</description>
     </item>
     
+    <item>
+      <title>CS134-lecture-20210628</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/</guid>
+      <description>SQL cont. #  Aggregate functions cont. #  Include in weekly assignment.  List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.
+SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 AND (SELECT COUNT(*) FROM dependent AS dep WHERE e.ssn=dep.essn AND dep.relationship=&amp;#39;daughter&amp;#39;) &amp;gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210629</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210629/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210629/</guid>
+      <description>SQL cont. #  Subqueries can be used inside insert statements:
+This insert statement will update the numbers dynamically based on the response from the subquery. The next time an employee is inserted, we can run this insert statement to update DEPTS_INFO using a trigger.
+Or, we can use views&amp;hellip;
+Virtual table view #  CREATE VIEW dept_info_view AS SELECT dname, COUNT(*) AS no_of_emps, SUM(salary) AS total_sal FROM department, employee WHERE dnumber=dno GROUP BY dname; This results in a self updating table, called a view:</description>
+    </item>
+    
   </channel>
 </rss>

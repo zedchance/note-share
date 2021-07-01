@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>groups on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/groups/</link>
+    <description>Recent content in groups on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/groups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS152-lecture-20210629</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210629/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210629/</guid>
+      <description>Alternatives to RSA #  RSA was invented in the 1970s and patented it. Alternatives came about because of the licensing fees that RSA used to require.
+Recall that the RSA problem is
+ Given   \( x^e \mod n \)  ,  \( e \)  , and  \( n \)  , find  \( x \)  . This is hard, and thats why RSA is secure.</description>
+    </item>
+    
+    <item>
+      <title>CS152-lecture-20210701</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210701/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210701/</guid>
+      <description>Groups #  Diffie-Hellman is secure against any passive adversary using groups where the discrete log problem is hard.
+A group is a simplification of a field, as it only has 1 operation (instead of 2).
+In summary, a group
+ is a set of objects (usually numbers)   \( G \)   has one operation (binary) that is closed,  \( G \times G \to G \)   this is usually addition or multiplication   has an identity  usually 0 in an additive group usually 1 in a multiplicative group   have invereses,  \( \forall x \in G, \exists y \in G \)  such that  \( x \text{ op } y = \text{identity} \)   is associative, and commutative  Some examples of infinite groups</description>
+    </item>
+    
+  </channel>
+</rss>
