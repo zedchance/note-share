@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>storage on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/storage/</link>
+    <description>Recent content in storage on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS134-lecture-20210702</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210702/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210702/</guid>
+      <description>Normalization cont. #  We can also use an alternate notation to indicate dependencies:
+If we remove the ssn then the dependency is no longer true.
+Second normal form #  An attribute that is part of any candidate key is a prime attribute. If we have a relation   \[\begin{aligned} R(a, b, c, d, e) \end{aligned}\]  and our candidate keys are  \( \{a,b\} \)  and  \( c \)  , that means our prime attributes are  \( a,b,c \)  .</description>
+    </item>
+    
+    <item>
+      <title>CS134-lecture-20210707</title>
+      <link>http://zedchance.github.io/notes/CS134/CS134-lecture-20210707/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210707/</guid>
+      <description>Storage cont. #  Sorted files cont. #  Since inserting into a ordered structure is expensive, we keep track of new inserts in a separate file.
+Master files are ordered, overflow file are unordered.
+New inserts go to the overflow file.
+When we search:
+ Start by searching the ordered master file,   \( O(\lg n) \)   If we don&amp;rsquo;t find it, it is possible that it is in the overflow file   Search the unordered overflow file,  \( O(n) \)  however it is a small file  If at any point during the search process we find a match, the search returns.</description>
+    </item>
+    
+  </channel>
+</rss>

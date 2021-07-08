@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.84.0" />
+  <meta name="generator" content="Hugo 0.84.4" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Groups #  Diffie-Hellman is secure against any passive adversary using groups where the discrete log problem is hard.
@@ -17,13 +17,13 @@ In summary, a group
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS152/CS152-lecture-20210701/" /><meta property="article:section" content="CS152" />
 
-
+<meta property="article:modified_time" content="2021-07-01T12:50:19-07:00" />
 
 <title>CS152-lecture-20210701 | Notes</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.2d0cc2ffb7d6f63c0430b382e3c9416d2b4f5232656de39caffd26f148353534.js" integrity="sha256-LQzC/7fW9jwEMLOC48lBbStPUjJlbeOcr/0m8Ug1NTQ="></script>
+<script defer src="/notes/en.search.min.a5b93219bb00d035ed91639bf2fd6ad153cd1a1f2f3343e78f61aefe7e32ea18.js" integrity="sha256-pbkyGbsA0DXtkWOb8v1q0VPNGh8vM0Pnj2Gu/n4y6hg="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -1479,6 +1479,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210702/" class="">CS134-lecture-20210702</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS134/CS134-lecture-20210707/" class="">CS134-lecture-20210707</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2924,6 +2950,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS152/CS152-lecture-20210706/" class="">CS152-lecture-20210706</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3920,6 +3959,14 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#diffie-hellman-using-elliptic-curve-groups">Diffie-Hellman using elliptic curve groups</a></li>
       </ul>
     </li>
+    <li><a href="#cryptographic-systems">Cryptographic systems</a>
+      <ul>
+        <li><a href="#random-number-generation">Random number generation</a></li>
+        <li><a href="#fortuna-2003">Fortuna (2003)</a></li>
+        <li><a href="#entropy">Entropy</a></li>
+        <li><a href="#entropy-collection">Entropy collection</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -4381,7 +4428,292 @@ Multiplication can be done via a combination of doubling and adding (both define
         if b[i] = 1
             acc = acc + a
     return acc
-</code></pre></article>
+</code></pre><h2 id="cryptographic-systems">
+  Cryptographic systems
+  <a class="anchor" href="#cryptographic-systems">#</a>
+</h2>
+<h3 id="random-number-generation">
+  Random number generation
+  <a class="anchor" href="#random-number-generation">#</a>
+</h3>
+<p>Random number generation might be the number one use of cryptography.
+Random number generation is used a lot in</p>
+<ul>
+<li>Games</li>
+<li>Simulation
+<ul>
+<li>Simulations run with a lot of random inputs and get a lot of outputs.</li>
+</ul>
+</li>
+<li>Randomized algorithms
+<ul>
+<li>For something like quicksort, the worst case can be <span>
+  \( O(n^2) \)
+</span>
+ when the array is already sorted.
+We can pick pivot points randomly to solve the worst case.</li>
+</ul>
+</li>
+</ul>
+<p>All of these uses need a high quality random number generator.
+If there is any bias, then the outputs will be bias.
+So we want our random number generators to be indistinguishable from truly random.</p>
+<p>The cryptographic security model provides this indistinguishability we need.</p>
+<h3 id="fortuna-2003">
+  Fortuna (2003)
+  <a class="anchor" href="#fortuna-2003">#</a>
+</h3>
+<p>Fortuna is a pseudo-random number generator (PRNG).
+Used in FreeBSD and Apple operating systems.</p>
+<p>Fortuna is made up of 2 parts</p>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <p>Random generator</p>
+<ul>
+<li>produces random output</li>
+</ul>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <p>Entropy collector</p>
+<ul>
+<li>collects unpredictable data from things like:
+<ul>
+<li>key presses</li>
+<li>mouse clicks</li>
+<li>network activity</li>
+<li>memory contents</li>
+<li>time/date</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  
+</div>
+
+<p>The random generator&rsquo;s algorithm has</p>
+<ul>
+<li>a state <span>
+  \( (k,c) \)
+</span>
+ where
+<ul>
+<li><span>
+  \( k \)
+</span>
+ is a 32 byte key</li>
+<li><span>
+  \( c \)
+</span>
+ is a 16 byte counter</li>
+</ul>
+</li>
+<li>a block cipher <span>
+  \( E \)
+</span>
+, we&rsquo;ll use AES-256</li>
+<li>a cryptographic hash function <span>
+  \( H \)
+</span>
+, we&rsquo;ll use SHA-256</li>
+</ul>
+<pre><code>GenRand(n):
+    for i from 1 to ceiling(n/16):
+        output E(k, c)
+        c = c + 1
+    k = E(k, c) || E(k, c + 1) // key update
+    c = c + 2
+</code></pre><ul>
+<li><code>// key update</code> line avoids birthday bound issues, and gives backward security, because this step is non-invertible</li>
+<li>The key is the start of the algorithm, so it must be random. So where the key come from?</li>
+</ul>
+<p>The entropy collector</p>
+<pre><code>// s is a string with some entropy
+Reseed(s):
+    k = H(k || s)
+    c = c + 1
+</code></pre><ul>
+<li>The entropy of <span>
+  \( k || s \)
+</span>
+ is the sum of the entropy of <span>
+  \( k \)
+</span>
+ and the entropy of <span>
+  \( s \)
+</span>
+</li>
+<li><span>
+  \( k \)
+</span>
+&rsquo;s entropy will be <span>
+  \( \text{min} (\text{entropy} (k||s), 256) \)
+</span>
+</li>
+<li>Notice that the counter is incremented at the end of the entropy collection.</li>
+<li>The string <span>
+  \( s \)
+</span>
+ comes from something like mouse clicks or keyboard taps</li>
+<li><span>
+  \( k \)
+</span>
+ is only as uncertain as <span>
+  \( k || s \)
+</span>
+
+<ul>
+<li>If <span>
+  \( k || s \)
+</span>
+ is as unpredictable as a random 256 bit string and <span>
+  \( H \)
+</span>
+ behaves like a public random function, then <span>
+  \( k \)
+</span>
+ is uniform.</li>
+</ul>
+</li>
+</ul>
+<blockquote class="book-hint info">
+  Note: Entropy (unpredictable data) is additive.
+</blockquote>
+
+<p>So, a lot of entropy should be collected and <span>
+  \( H \)
+</span>
+ should be a good hash function.
+The string <span>
+  \( s \)
+</span>
+ is produced via unpredictable events like mouse clicks and keyboard taps.</p>
+<h3 id="entropy">
+  Entropy
+  <a class="anchor" href="#entropy">#</a>
+</h3>
+<p>A measure of uncertainty.</p>
+<p>A process with <span>
+  \( t \)
+</span>
+ bits of entropy is as uncertain as a random <span>
+  \( t \)
+</span>
+ bit string.</p>
+<p>For example</p>
+<ul>
+<li>A coin flip, can be heads or tails, has the same uncertainty of a 1 bit string: <span>
+  \( 0 \)
+</span>
+ or <span>
+  \( 1 \)
+</span>
+
+<ul>
+<li>1 bit of entropy</li>
+</ul>
+</li>
+<li>A sequence of 2 coin flips, HH HT TH TT, has an uncertainty of 2 bits</li>
+<li>A six sided die, can be 1 2 3 4 5 or 6, all equally likely.
+More uncertain than a 2 bit string, but less uncertain than a 3 bit string.
+<ul>
+<li>So, it has in between 2 and 3 bits of entropy</li>
+<li>If <span>
+  \( x \)
+</span>
+ is a random variable with <span>
+  \( k \)
+</span>
+ equally likely outcomes, then <span>
+  \( x \)
+</span>
+ has <span>
+  \( \log_2 k \)
+</span>
+ bits of entropy.</li>
+<li>So, <span>
+  \( \log_2 6 \approx 2.6 \)
+</span>
+ bits of entropy</li>
+</ul>
+</li>
+</ul>
+<p>If we have 3 different groups of people that all want different snacks, with this probability:</p>
+<p><img src="/notes/image_2021-07-01-15-41-07.png" alt="image_2021-07-01-15-41-07" /></p>
+<p>There is less entropy if there is an outcome that is more likely.
+The most entropy possible is when each outcome&rsquo;s chance is all the same.</p>
+<ul>
+<li>If all outcomes had <span>
+  \( \frac{1}{2} \)
+</span>
+ probability, then there is 2 possible outcomes, so 1 bit of entropy</li>
+<li>If all outcomes had <span>
+  \( \frac{1}{4} \)
+</span>
+ probability, then there is 2 bits of entropy</li>
+<li>Then take a weighted average, <span>
+  \( \frac{1}{2} &#43; \frac{1}{4} \cdot 2 &#43; \frac{1}{4} \cdot 2 = \frac{3}{2} \)
+</span>
+</li>
+<li>So out snack scenario has the same entropy has a 1.5 bit string</li>
+</ul>
+<blockquote>
+<p>Entropy is defined as
+<span>
+  \[\begin{aligned}
+    \text{entropy} = - \sum_{x \in X} P(X=x) \log_2 P(X=x)
+\end{aligned}\]
+</span>
+</p>
+</blockquote>
+<h3 id="entropy-collection">
+  Entropy collection
+  <a class="anchor" href="#entropy-collection">#</a>
+</h3>
+<p>The second part of Fortuna requires that the key is seeded with a string with high entropy.
+The entropy collector is made up of</p>
+<ul>
+<li>A state, with pools <span>
+  \( P_0, \ldots, P_{31} \)
+</span>
+ each empty (pools are strings).</li>
+<li>Sources, <span>
+  \( s_1, \ldots, s_i   \)
+</span>
+,
+copy data from unpredictable sources, like mouse clicks and key presses, to pools in a round robin fashion.</li>
+<li>A reseed counter, starting at 0</li>
+</ul>
+<p>These pools are being replenished via the sources as a background process, so when the random generator needs a key it is ready.
+The first thing that the random generator checks if a reseed is needed.</p>
+<pre><code>if P[0] has enough data and last reseed &gt; 100ms ago
+    s = &quot;&quot;
+    reseed counter += 1
+    for i from 0 to 31
+        if 2^i divides reseed counter
+            s = s || p[i]
+            p[i] = &quot;&quot;
+    Reseed(s)
+</code></pre><ul>
+<li>the check if <code>2^i divides reseed counter</code> means that pool <span>
+  \( p_0 \)
+</span>
+ participates in every reseed, but pool <span>
+  \( p_1 \)
+</span>
+ participate every other reseed, pool <span>
+  \( p_2 \)
+</span>
+ will participate in reseeds 1,2
+&hellip;</li>
+</ul>
+<p>This helps thwart an adversary to flood a system with events with low entropy.</p>
+<p>Forward security comes from entropy.
+Entropy keeps the adversary from knowing the future.</p>
+</article>
  
       
 
@@ -4390,6 +4722,12 @@ Multiplication can be done via a combination of doubling and adding (both define
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/zedchance/notes/commit/da5bc15e7488072955fd0af9e28e885c1f9379d1" title='Last modified by Zed Chance | Jul 1, 2021' target="_blank" rel="noopener">
+      <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>Jul 1, 2021</span>
+    </a>
+  </div>
 
 
 
@@ -4411,6 +4749,8 @@ Multiplication can be done via a combination of doubling and adding (both define
   <a href="http://zedchance.github.io/notes/tags/elliptic-curve-groups/"><code>elliptic curve groups</code></a><br>
   
   <a href="http://zedchance.github.io/notes/tags/Diffie-Hellman/"><code>Diffie-Hellman</code></a><br>
+  
+  <a href="http://zedchance.github.io/notes/tags/fortuna/"><code>fortuna</code></a><br>
   
 </nav>
 
@@ -4441,6 +4781,14 @@ Multiplication can be done via a combination of doubling and adding (both define
         <li><a href="#elliptic-curve-groups">Elliptic curve groups</a></li>
         <li><a href="#facts-about-groups">Facts about groups</a></li>
         <li><a href="#diffie-hellman-using-elliptic-curve-groups">Diffie-Hellman using elliptic curve groups</a></li>
+      </ul>
+    </li>
+    <li><a href="#cryptographic-systems">Cryptographic systems</a>
+      <ul>
+        <li><a href="#random-number-generation">Random number generation</a></li>
+        <li><a href="#fortuna-2003">Fortuna (2003)</a></li>
+        <li><a href="#entropy">Entropy</a></li>
+        <li><a href="#entropy-collection">Entropy collection</a></li>
       </ul>
     </li>
   </ul>
