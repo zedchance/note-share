@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interrupts on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/interrupts/</link>
+    <description>Recent content in interrupts on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/interrupts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20210907</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/</guid>
+      <description>Introduction cont #  Parallel systems #  Intrachip transfer is much faster than interchip transfer.
+Distributed systems #  Real-time and embedded systems #  Other systems #  Organization #   PC = program counter, the address of the next instruction IR = instruction register, the address of the current instruction MAR = memory address register, address of the next memory IO MBR = memory buffer register, actual data to be read/written to/from memory I/O AR = input output address I/O BR = input output buffer register, the data  Memory is an array of bytes, each with its own address.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20210909</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210909/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210909/</guid>
+      <description>Organization cont #  Interrupts cont #  During a IO request:
+ Device driver loads the registers in the device controller Device controller examines content Device controller starts the transfer of data Once the transfer is done, the device controller informs the operating system that the transfer is complete. Driver gives control back to the OS  Handling interrupts #  When calling a interrupt routine, we have 2 methods:</description>
+    </item>
+    
+  </channel>
+</rss>

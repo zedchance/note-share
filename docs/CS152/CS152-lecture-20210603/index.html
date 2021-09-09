@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &lt;stdio.h&gt;#include &lt;stdint.h&gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &lt; nitems; i&#43;&#43;) if (p32[i] % 2 == 0) acc = acc &#43; 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&#34;%d\n&#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.">
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.a5b93219bb00d035ed91639bf2fd6ad153cd1a1f2f3343e78f61aefe7e32ea18.js" integrity="sha256-pbkyGbsA0DXtkWOb8v1q0VPNGh8vM0Pnj2Gu/n4y6hg="></script>
+<script defer src="/notes/en.search.min.d0eecc8da73feee4da9ae2f771837bbef6667fcc32fb725ebe4db02719c49446.js" integrity="sha256-0O7Mjac/7uTamuL3cYN7vvZmf8wy&#43;3Jevk2wJxnElEY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -2679,6 +2679,58 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210831/" class="">CS139-lecture-20210831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/" class="">CS139-lecture-20210902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/" class="">CS139-lecture-20210907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210909/" class="">CS139-lecture-20210909</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2700,6 +2752,45 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/" class="">CS140-lecture-20210830</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210901/" class="">CS140-lecture-20210901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210907/" class="">CS140-lecture-20210907</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -2979,6 +3070,19 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/" class="">CS190-lecture-20210830</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3000,6 +3104,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/" class="">CS192-lecture-20210903</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -3188,6 +3305,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/" class="">MATH170-lecture-20210831</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -3986,7 +4116,7 @@ https://github.com/alex-shpak/hugo-book
   in C
   <a class="anchor" href="#in-c">#</a>
 </h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
@@ -4008,7 +4138,7 @@ https://github.com/alex-shpak/hugo-book
 }
 </code></pre></div><p>Depending on the endian, the output is either <code>0</code> or <code>2</code>.</p>
 <p>We can not depend on the endianness of the CPU by using a helper function to load in the bytes little endian always:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">load_uint32_little</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">load_uint32_little</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p)
 {
     <span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span> p8 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span>) p;
     <span style="color:#75715e">// extract bytes
@@ -4020,11 +4150,11 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> (d <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">24</span>) <span style="color:#f92672">|</span> (c <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">16</span>) <span style="color:#f92672">|</span> (b <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> a;
 }
 </code></pre></div><p>Good compilers will optimize this on an x86 machine to</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm">_load_uint32_little:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm">_load_uint32_little:
   <span style="color:#a6e22e">movl</span>  (%rdi), %eax
   <span style="color:#a6e22e">ret</span>
 </code></pre></div><p>So we can polish our <code>num_even</code> function to handle the different endianness of CPUs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
 {
     <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
     <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
@@ -4042,7 +4172,7 @@ https://github.com/alex-shpak/hugo-book
   in Java
   <a class="anchor" href="#in-java">#</a>
 </h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lect2</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lect2</span>
 <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">load_uint32_little</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> offset<span style="color:#f92672">)</span>
     <span style="color:#f92672">{</span>
@@ -4076,7 +4206,7 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">}</span>
 </code></pre></div><p>This can be done in a much nicer way using Java&rsquo;s library, replacing the <code>load_uint32_little</code> method.
 We can do this using <code>ByteBuffer</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.nio.*<span style="color:#f92672">;</span> <span style="color:#75715e">// for ByteBuffer
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.nio.*<span style="color:#f92672">;</span> <span style="color:#75715e">// for ByteBuffer
 </span><span style="color:#75715e">// no longer need the load_uint32_little method
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
@@ -4102,13 +4232,13 @@ We can do this using <code>ByteBuffer</code>.</p>
   <a class="anchor" href="#big-vs-little-endian">#</a>
 </h2>
 <p>If we&rsquo;re loading</p>
-<pre><code>FF 00 FF 00 FF 00 FF 00
+<pre tabindex="0"><code>FF 00 FF 00 FF 00 FF 00
 </code></pre><p>from memory, the byte are transferred from memory to a register.</p>
 <p>If our register is 32 bits long, and we read using a big endian computer, our register will look like:</p>
-<pre><code>FF 00 FF 00 FF 00 FF 00
+<pre tabindex="0"><code>FF 00 FF 00 FF 00 FF 00
 </code></pre><p>The bytes are read in from the big side first.</p>
 <p>On a little endian computer, our register will look like this:</p>
-<pre><code>00 FF 00 FF 00 FF 00 FF
+<pre tabindex="0"><code>00 FF 00 FF 00 FF 00 FF
 </code></pre><p>The bytes are read in from the little side first.</p>
 <h2 id="rotation">
   Rotation
@@ -4126,10 +4256,10 @@ So they turn out to be a common building block for writing cryptographic functio
 Both add and xor are operators in C, but for rotate we have to write our own function.
 The compiler will recognize the rotate function and turn it into the assembly instruction.</p>
 <p>Lets say we want to rotate this register to the left 4</p>
-<pre><code>before      1111 0000 1100 0011
+<pre tabindex="0"><code>before      1111 0000 1100 0011
 rotl 4      0000 1100 0011 1111
 </code></pre><p>We can piece this operation together using bitwise operations</p>
-<pre><code>rotl(x, n):
+<pre tabindex="0"><code>rotl(x, n):
     return (x &lt;&lt; n) | (x &gt;&gt; (16 - n))
 </code></pre><h2 id="data-flow">
   Data flow

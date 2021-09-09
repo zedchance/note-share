@@ -47,12 +47,39 @@ Module 1 #  Test cases will usually be provided.</description>
     </item>
     
     <item>
+      <title>CS139-lecture-20210831</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210831/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210831/</guid>
+      <description>Course orientation #  File: 139-syllabus.pdf  Notes during orientation #   We will be looking at operating systems from a conceptual level, not any specific OS Files will be submitted as .tar.gz, NOT .zip  Introduction #  File: csc139-fall21-part0-logistics.pdf  </description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20210830</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</guid>
+      <description>Course orientation #  Syllabus #  File: 140-syllabus.pdf  Notes during orientation #   Regular quizzes 2 exams Modules has prerecorded lectures Homework assignments not graded Can watch videos during Zoom meeting, or prior Generally 1 quiz per lecture (calendar at end of syllabus), given at the first class after the last day of the lecture Turn in work as single PDF file  Methods of proof #  File: 140-methods_of_proof.</description>
+    </item>
+    
+    <item>
       <title>CS152-lecture-20210601</title>
       <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</guid>
       <description>Course orientation #  Syllabus #  152-syllabus.pdf  Notes during orientation #   Programming will be required in each module, programming intensive Brush up on probability of simple events, simple conditional events Shallow introduction into groups and fields Class is only 5 weeks and 2 days long, so extremely accelerated, at least 20 hrs/week needed Hybrid class, half videos posted, and half live. Class will start at 1, and go until lecture finishes, then unrecorded open office hour 5 modules, starts on thursdays  Permutation functions and C programming Symmetric encryption Hashing and authentication Asymmetric cryptography and algorithms on large number Crytographic systems   Exams on week 3 and 5 Group quizzes on tuesdays, in breakout rooms on Zoom Last day is comprehensive final Take all assignments seriously, nothing is dropped  Brief introduction to cryptography #   Communication in the presence of adversaries</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20210831</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/</guid>
+      <description>Course orientation #  File: m170-syllabus.pdf  Notes during orientation #   Will be some technology, matlab, wolfram alpha Lectures all online, synchronous Async videos may be posted  </description>
     </item>
     
   </channel>

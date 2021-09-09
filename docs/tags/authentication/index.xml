@@ -32,5 +32,15 @@ The idea behind authentication is
  If Bob receives a message from Alice, Bob would like to trust that the message is  truly from Alice hasn&amp;rsquo;t been tampered with   Alice will generate a tag   \( t \)  (sometimes called a MAC) using a tag generator  \[ t = \text{TagGen(k, m)} \]   Alice sends the message and the tag to Bob Bob can verify that the tag was generated with the specific key  \( k \)  and message  \( m \)    This verifies that Alice knows the key  \( k \)  , which gives Bob trust (because we&amp;rsquo;re assuming that only Alice and Bob have that secret key.</description>
     </item>
     
+    <item>
+      <title>CS152-lecture-20210627</title>
+      <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210627/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210627/</guid>
+      <description>Problems with RSA #  RSA has some problems, namely
+ RSA can be distinguished easily  a black box is either a RSA encryption scheme or random bits it is easy to distinguish between these 2 worlds by sending a 0 bit (or a 1) to the box and see what comes back, and so in the RSA box   \[ \begin{aligned} 0^e = 0 \end{aligned} \]   if we restrict the numbers to large inputs then this becomes better   RSA leaks information  \[\begin{aligned} y_1 = \text{RSA}(x_1) \\ y_2 = \text{RSA}(x_2) \end{aligned}\]  If  \( y_1 = y_2 \)  then  \( x_1 = x_2 \)  .</description>
+    </item>
+    
   </channel>
 </rss>

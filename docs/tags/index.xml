@@ -142,6 +142,15 @@
     </item>
     
     <item>
+      <title>asymptotic analysis</title>
+      <link>http://zedchance.github.io/notes/tags/asymptotic-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/asymptotic-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>asymptotic notation</title>
       <link>http://zedchance.github.io/notes/tags/asymptotic-notation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -763,6 +772,15 @@
     </item>
     
     <item>
+      <title>ElGamal</title>
+      <link>http://zedchance.github.io/notes/tags/ElGamal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/ElGamal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>elliptic curve groups</title>
       <link>http://zedchance.github.io/notes/tags/elliptic-curve-groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1195,6 +1213,15 @@
     </item>
     
     <item>
+      <title>interrupts</title>
+      <link>http://zedchance.github.io/notes/tags/interrupts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/interrupts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>intra-as</title>
       <link>http://zedchance.github.io/notes/tags/intra-as/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1582,6 +1609,24 @@
     </item>
     
     <item>
+      <title>operating system structure</title>
+      <link>http://zedchance.github.io/notes/tags/operating-system-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/operating-system-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>operating system types</title>
+      <link>http://zedchance.github.io/notes/tags/operating-system-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/operating-system-types/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>p2p</title>
       <link>http://zedchance.github.io/notes/tags/p2p/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1713,6 +1758,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/project-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proof</title>
+      <link>http://zedchance.github.io/notes/tags/proof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/proof/</guid>
       <description></description>
     </item>
     

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="CS 39 Lecture notes #  Aug 21, 2018 #  Using ARM assembly language
@@ -35,7 +35,7 @@ www.keil.com
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.a5b93219bb00d035ed91639bf2fd6ad153cd1a1f2f3343e78f61aefe7e32ea18.js" integrity="sha256-pbkyGbsA0DXtkWOb8v1q0VPNGh8vM0Pnj2Gu/n4y6hg="></script>
+<script defer src="/notes/en.search.min.d0eecc8da73feee4da9ae2f771837bbef6667fcc32fb725ebe4db02719c49446.js" integrity="sha256-0O7Mjac/7uTamuL3cYN7vvZmf8wy&#43;3Jevk2wJxnElEY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -2697,6 +2697,58 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210831/" class="">CS139-lecture-20210831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/" class="">CS139-lecture-20210902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/" class="">CS139-lecture-20210907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210909/" class="">CS139-lecture-20210909</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2718,6 +2770,45 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/" class="">CS140-lecture-20210830</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210901/" class="">CS140-lecture-20210901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210907/" class="">CS140-lecture-20210907</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -2997,6 +3088,19 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/" class="">CS190-lecture-20210830</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3018,6 +3122,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/" class="">CS192-lecture-20210903</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -3206,6 +3323,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/" class="">MATH170-lecture-20210831</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -4148,7 +4278,7 @@ Program Counter holes the next instruction to fetch</p>
 Choose M0 Cortex chip<br>
 Choose CMSIS core<br>
 and Startup Code</p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT __main
 __main
         MOVS R0, #1
@@ -4170,7 +4300,7 @@ done    B done
 <p>A directive is information for the tool itself. <code>AREA</code> is a directive, it doesn’t produce any machine code technically.</p>
 <p>.s files are just text files, not until they are assembled (by a program) is it then turned into a .o file (object code). These .o files are machine code.</p>
 <p>The memory map of our chip (32 bit machine) starts at <code>0x00000000</code> and goes to <code>0xFFFFFFFF</code>. In the low memory address is program memory (flash), 32kB. At <code>0x20000000</code>​ RAM begins, 8kB. I/O and peripheral devices are below the RAM, such as timer/counters and USB.</p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT __main
 __main
         ;Code goes here
@@ -4235,7 +4365,7 @@ R2 : c<br>
 R3 : d<br>
 a + b - c + 3</p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        ADDS R0, R0, R1; adds a + b
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        ADDS R0, R0, R1; adds a + b
         SUBS R0, R0, R2; (a + b) - c
         ADDS R0, #3; (a + b - c) + 3
 </code></pre><hr>
@@ -4257,7 +4387,7 @@ R3 : d</p>
 <blockquote>
 <p>a + b + c * 2</p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        ADDS R2, R2, R2; multiply c by 2
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        ADDS R2, R2, R2; multiply c by 2
         ADDS R0, R0, R1; adds a + b
         ADDS R0, R0, R2; adds (a + b) + (c * 2)
 </code></pre><p>This is a code fragment.</p>
@@ -4267,7 +4397,7 @@ R3 : d</p>
 b = 2<br>
 c = 7</p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT __main
 __main
         MOVS R0, #5; a
@@ -4304,7 +4434,7 @@ done    B done
 <p>To use an offset:<br>
 <code>LDR R5, [R7,#4]</code> uses an offset of 4 to point to the address at <code>0x2000 0004</code> (After specifying the address of the first slot in memory with <code>LDR R7,=0x20000000</code>​)</p>
 <p>Example of C++ code to turn on and off LED and run a function called <code>myFunc</code>, which is defined in the <code>.s</code> file below</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//#include &#34;mbed.h&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//#include &#34;mbed.h&#34;
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">int</span> myFunc(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b, <span style="color:#66d9ef">int</span> c); <span style="color:#75715e">//a b and c correspond to registers R0, R1, R2 respectively
 </span><span style="color:#75715e"></span>
@@ -4326,7 +4456,7 @@ Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX);
 </span><span style="color:#75715e"></span>  }
 }
 </code></pre></div><p>In another <code>.s</code> file:</p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT myFunc
 
 myFunc
@@ -4376,9 +4506,9 @@ The bit that is shifted &ldquo;off&rdquo; the number is transferred into the car
 </ol>
 <p><code>LSRS R3, R1, #4</code> effectively divides <code>R1</code> by 16 ($2^4$) and puts the answer in <code>R3</code></p>
 <p>Examples:</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R0,=0x00000007 ; loads R0 with 7
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R0,=0x00000007 ; loads R0 with 7
         LSLS R0, R0, #2 ; logical shift left 2 bits, answers 0x0000001C (7 * 4)
-</code></pre><pre><code class="language-arm" data-lang="arm">        LDR R0,=0xC0000000 ; loads R0 with 0xC0000000
+</code></pre><pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R0,=0xC0000000 ; loads R0 with 0xC0000000
         LSRS R0, R0, #1 ; shifts to the right 1 bit, answers 0x60000000 (half of 0xC)
 </code></pre><hr>
 <h2 id="sep-18-2018">
@@ -4422,7 +4552,7 @@ The bit that is shifted &ldquo;off&rdquo; the number is transferred into the car
 </tbody>
 </table>
 <p><code>ANDS R0, R1</code> is the biwise AND gate to compare two registers. Can be used to isolate a group or a single bits. Typically used to compare a value with a &lsquo;mask&rsquo; value.</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5; input
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5; input
         MOVS R1, 0xF; mask
 
         ANDS R0, R1
@@ -4435,7 +4565,7 @@ The bit that is shifted &ldquo;off&rdquo; the number is transferred into the car
 | 1     | 0     | 1        |
 | 1     | 1     | 1        |</p>
 <p><code>OR</code> turns a bit on if one or the other bit is on.</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5; input
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5; input
         LDR R1, =0xF0000000; mask
 
         ANDS R0, R1; and
@@ -4465,7 +4595,7 @@ To set a bit <code>ORRS</code> it with a 1</strong></p>
 </tr>
 </tbody>
 </table>
-<pre><code class="language-arm" data-lang="arm">        LDR R1, 0xF0000000; mask
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R1, 0xF0000000; mask
         MVNS R3,R1; not the R1 register
 </code></pre><p>Returns <code>0x0FFFFFFF</code> into the <code>R3</code> register. <code>MVNS</code> is the NOT operator for this chip (move register and not).</p>
 <p><strong>Excluse OR (EOR):</strong></p>
@@ -4501,7 +4631,7 @@ To set a bit <code>ORRS</code> it with a 1</strong></p>
 </tbody>
 </table>
 <p>One or the other, but not both.</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R0, =0xABCDEFA5
         LDR R1, =0xA5A5A5A5; mask
 
         EORS R0, R1;
@@ -4511,7 +4641,7 @@ To set a bit <code>ORRS</code> it with a 1</strong></p>
   <a class="anchor" href="#c-asm">#</a>
 </h3>
 <p>Start using a <code>.c</code> file in microvision.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">myFunc</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b, <span style="color:#66d9ef">int</span> c);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">myFunc</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b, <span style="color:#66d9ef">int</span> c);
 
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
 {
@@ -4522,7 +4652,7 @@ To set a bit <code>ORRS</code> it with a 1</strong></p>
 
 </code></pre></div><p><code>extern</code> means that the function exists in another block of code. Does need a semicolon after this method header because its connected to the <code>extern</code>. <strong>This file also needs a carriage return after the last curly brace.</strong></p>
 <p>In a <code>.s</code> file <strong>(thats named differently then the <code>.c</code> file)</strong></p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|,CODE,READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|,CODE,READONLY
         EXPORT myFunc
 myFunc
         ADDS R0, R0, R1; add a + b
@@ -4547,13 +4677,13 @@ Developed at Bell Labratories in the 70s. Dennis Ritchie and Ken Thompson develo
 <p>Why C?<br>
 Flexible language that imposes few constraints on the programmer. Allows low level access to data, operating system, and hardware. Retains the portability and sophisticated syntax of a high-level language. Supports pointers and bitwise operators. Weak type checking (Good or bad?). Designed for modular programming (for example when we had a <code>.s</code> file and a <code>.c</code> file). Extensive use of libraries. The lingua franca of embedded systems programming. Not object-oriented, but can be used with an &ldquo;object-oriented mindset&rdquo;.</p>
 <p>Simplest embedded program</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
     <span style="color:#66d9ef">while</span>(<span style="color:#ae81ff">1</span>);
 }
 </code></pre></div><p>This compiles sucessfully but doesn&rsquo;t do anything.</p>
 <p>Slightly more useful program:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//#include &#34;mbed.h&#34; (this line breaks the auto-toc)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//#include &#34;mbed.h&#34; (this line breaks the auto-toc)
 </span><span style="color:#75715e"></span>
 Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX); <span style="color:#75715e">//a little c++
 </span><span style="color:#75715e"></span>
@@ -4609,7 +4739,7 @@ Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX); <span style="color:#
 </ul>
 <p>Variables:<br>
 Variables represent a value that can be changed. Variables are declared by indicating the type followed by an identifier.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> dogs, cats;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> dogs, cats;
 <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> portInput;
 <span style="color:#66d9ef">float</span> price;
 </code></pre></div><p>Variables are stored in the relatively small RAM of the microcontroller. The programmer must declare the type, and therefore the size of each variable.</p>
@@ -4695,7 +4825,7 @@ The scope of a variable is its accessibility within the program.</p>
   <a class="anchor" href="#compare">#</a>
 </h3>
 <p><code>CMP</code> is the instruction that compares registers. <code>CMP R0, #5</code> compares register <code>R0</code> to the immediate 8 bit number <code>5</code>. It subtracts the register with the number, if the zero flag is turned on then it means that the comparison is &ldquo;true&rdquo;, &ldquo;set&rdquo;, or &ldquo;logic level one&rdquo;. This is often used in conjunction with the branch conditional instruction, <code>Bcc</code> (pg. 34).</p>
-<pre><code class="language-arm" data-lang="arm">        CMP R0, #5; checks if R0 is 5
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0, #5; checks if R0 is 5
         BEQ doStuff; BEQ means branch if equal, checks if the zero flag is 1
         ;code to skip here
 doStuff
@@ -4794,7 +4924,7 @@ doStuff
 </table>
 <p><strong>if statement:</strong><br>
 For example to translate:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
   a <span style="color:#f92672">=</span> b <span style="color:#f92672">+</span> 2<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -4803,7 +4933,7 @@ For example to translate:</p>
 <p>a = <code>R0</code><br>
 b = <code>R1</code></p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        CMP R0 #5; compares a to 5
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0 #5; compares a to 5
         BNE endif1; branch if not equal, checks if zero flag is 0
         MOVS R1, R0; move b into a
         ADDS R0, #2; b + 2
@@ -4812,7 +4942,7 @@ endif1
 </code></pre><p>Look at the relationship of the high level language and <strong>make the opposite of the comparison</strong>.</p>
 <p><strong>if..else:</strong><br>
 Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">!=</span> b<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">!=</span> b<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
   a <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -4825,7 +4955,7 @@ Example:</p>
 <p>a = <code>R0</code><br>
 b = <code>R1</code></p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        CMP R0, R1; a != b ?
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0, R1; a != b ?
         BEQ else1; branch if equal, checks if zero flag is 1
 
         MOVS R0, #5; a = 5
@@ -4837,7 +4967,7 @@ else1
 
 endif1
 </code></pre><p><strong>Example with greater than:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;</span> 5<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;</span> 5<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
   b <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> 2<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -4846,14 +4976,14 @@ endif1
 <p>a = <code>R0</code><br>
 b = <code>R1</code></p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        CMP R0 #5;
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0 #5;
         BLS endif1; branch if lower or equal, checks if carry flag is 0 and zero flag is 1
         MOVS R1, R0
         ADDS R1, R1, #2
 
 endif1
 </code></pre><p><strong>One more if..else:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;=</span> b<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;=</span> b<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
     a <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -4866,7 +4996,7 @@ endif1
 <p>a = <code>R0</code><br>
 b = <code>R1</code></p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        CMP R0, R1; a &gt;= b
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0, R1; a &gt;= b
         BLO else1; branch if lower, (opposite of &gt;=), checks if the carry flag is 0
 
         MOVS R0, #0
@@ -4877,7 +5007,7 @@ else1
 
 endif1
 </code></pre><p><strong>While loop:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>count <span style="color:#f92672">&lt;</span> 5<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
@@ -4887,7 +5017,7 @@ endif1
 <blockquote>
 <p>count = <code>R4</code></p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        MOVS R4, #0; initilize count
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        MOVS R4, #0; initilize count
 while1
         CMP R4, #5; compare R4 to 5
         BHS endwhile; unsigned higher or same, checks if carry flag is 1
@@ -4902,7 +5032,7 @@ endwhile
   <a class="anchor" href="#calculating-the-length-of-a-string">#</a>
 </h3>
 <p>In the first document <code>LE3C.c</code>, write a function called <code>slen(char s[])</code> that takes a char array (String) as the parameter, (slen is short for string length). Also initialize the char array (String), <code>myString[]</code> and the int <code>x</code>. Then in the <code>main()</code> method set the variable <code>x</code> to the length of the string <code>myString</code>. Both variables are stored in memory because they are global.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">slen</span>( <span style="color:#66d9ef">char</span> s[] )<span style="color:#f92672">:</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">slen</span>( <span style="color:#66d9ef">char</span> s[] )<span style="color:#f92672">:</span>
 
 <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#66d9ef">char</span> myString[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;anything you want.&#34;</span>;
@@ -4917,7 +5047,7 @@ endwhile
 <code>R1</code> is char counter<br>
 <code>R2</code> is current character</p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT slen
 slen
         MOVS R1, #0; char counter = 0
@@ -4942,7 +5072,7 @@ endWhile
   <a class="anchor" href="#capitalize-first-letter-of-string">#</a>
 </h3>
 <p>Add to our <code>LE3C.c</code> file add a <code>firstToUpper(char s[])</code> method that takes an array of chars (String) as parameter. Note we call that method before our <code>slen</code> method in the <code>main()</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">slen</span>( <span style="color:#66d9ef">char</span> s[] );
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">slen</span>( <span style="color:#66d9ef">char</span> s[] );
 <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">firstToUpper</span>( <span style="color:#66d9ef">char</span> s[] );
 
 <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
@@ -4956,7 +5086,7 @@ endWhile
 }
 
 </code></pre></div><p>In <code>LE3asm.s</code> file, we must add another <code>EXPORT</code> at the top with our new function <code>firstToUpper</code>. Adding <code>firstToUpper</code> label down below the other code is perfectly legal. It must be added after the return (<code>BX LR</code>) of the <code>slen</code> function though. <code>firstToUpper</code> also needs it own new return (<code>BX LR</code>). Only one <code>END</code> with a carriage return is needed.</p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT slen
         EXPORT firstToUpper
 slen
@@ -5033,33 +5163,33 @@ AND<br>
 <li>Point at the memory location of the variable</li>
 <li>Load the ariable from the pointer register location</li>
 </ol>
-<pre><code class="language-arm" data-lang="arm">LDR R7, =0x20000000; address of variable
+<pre tabindex="0"><code class="language-arm" data-lang="arm">LDR R7, =0x20000000; address of variable
 LDR R0, [R7]; copy data addressed by R7 to R0
 </code></pre><p>Storing a variable into RAM from a General Purpose Register</p>
 <ol>
 <li>Point at the memory location of the variable</li>
 <li>Store the register value at the pointer register location</li>
 </ol>
-<pre><code class="language-arm" data-lang="arm">LDR R7, =0x20000000; address of variable
+<pre tabindex="0"><code class="language-arm" data-lang="arm">LDR R7, =0x20000000; address of variable
 STR R0, [R7]; copy value in R0 to location addressed by [R7]
 </code></pre><h3 id="more-ifelse-patterns">
   More if..else patterns
   <a class="anchor" href="#more-ifelse-patterns">#</a>
 </h3>
 <p>if pattern:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
     b <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>In assembly:</p>
-<pre><code class="language-arm" data-lang="arm">        CMP R0, #5; a == 5?
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0, #5; a == 5?
         BNE endif1; if a != 5 then branch
         LDR R7)
         MOVS R1, #9;
         STR R1, [R7]
 endif1
 </code></pre><p>if..else pattern:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">)</span>
 <span style="color:#f92672">{</span>
     b <span style="color:#f92672">=</span> 9<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
@@ -5068,7 +5198,7 @@ endif1
     b <span style="color:#f92672">=</span> 7<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>In assembly:</p>
-<pre><code class="language-arm" data-lang="arm">        CMP R0, #5; a == 5?
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        CMP R0, #5; a == 5?
         BNE else1; if a != 5 then skip if part
         LDR R7,)
         MOVS R1, #9; data to store in R1
@@ -5112,7 +5242,7 @@ When you call the function in your C code as follows:<br>
 The compiler will load <code>R0</code> with 25, <code>R1</code> with the value of the variable <code>x</code>, which was declared in the C code, and <code>R2</code> with the value of the C declared variable <code>y</code> plus 2.</li>
 </ul>
 <p>The compiler generates code something like this:</p>
-<pre><code class="language-arm" data-lang="arm">        MOVS R0, #25; first parameter into R0
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        MOVS R0, #25; first parameter into R0
         LDR R7,)
         LDR R1, [R7]; second parameter, x, into R1
         LDR R7, =y; address of y into R7
@@ -5274,11 +5404,11 @@ The compiler will load <code>R0</code> with 25, <code>R1</code> with the value o
 <p>Adding 1 to this register will clear all the 1s into 0s and turn on the carry flag and the zero flag (effectively loosing the number).</p>
 <p>To add larger numbers then  our register size ($2^{32}$ (32 bits)) you will need to use 2 registers at a time, one to specify the lower word and one the higher word.</p>
 <p>To demonstrate this:</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R4, =0xFFFFFFFF
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R4, =0xFFFFFFFF
         ADDS R4, #1
 </code></pre><p>This clears <code>R4</code> and turns on the carry and the zero flags.</p>
 <p>To successfully add numbers bigger then 32 bits you must specify a register as the low word and another as the high word. This is a symbolic specification, the registers don&rsquo;t actually get joined, just arithmetic on them can be performed on them individually and thought of them as being joined.</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R4, =0xFFFFFFFF; low word 64 bit first var
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R4, =0xFFFFFFFF; low word 64 bit first var
         MOVS R5, #1; high word 64 bit first var
 
         MOVS R6, #1; low word 64 bit second var
@@ -5308,10 +5438,10 @@ For example with the decimal number 5:</p>
 $1010 + 1 = 1011 = -5_{10}$</p>
 </blockquote>
 <p><code>SXTB</code> instruction:</p>
-<pre><code class="language-arm" data-lang="arm">        LDR R7, =0x2000000F; load R7 with first address of RAM
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        LDR R7, =0x2000000F; load R7 with first address of RAM
         LDRB R0, [R7]; loads byte into R0
 </code></pre><p>This returns all 1s in the low byte but 0s in the rest of the register. This means that the signed number (-1) isn&rsquo;t preserved. You must use a <code>SXTB</code> (sign extend) instruction which extends an 8 bit value to 32 bits and writes the result to the same register. Continuing from the above example, to preserve the signed number (-1):</p>
-<pre><code class="language-arm" data-lang="arm">        SXTB R0, R0; sign extend
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        SXTB R0, R0; sign extend
 </code></pre><p>Effectively changing <code>R0</code> from</p>
 <blockquote>
 <p><code>0000 0000 0000 0000 0000 0000 0000 1111</code></p>
@@ -5351,7 +5481,7 @@ $1010 + 1 = 1011 = -5_{10}$</p>
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">charCount</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">char</span> c)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">charCount</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">char</span> c)
 
 <span style="color:#66d9ef">char</span> myString[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;aababac&#34;</span>;
 <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
@@ -5364,7 +5494,7 @@ $1010 + 1 = 1011 = -5_{10}$</p>
 <blockquote>
 <p><code>myString</code> will be stored in memory with register <code>R0</code> pointing at it. The character thats being searched for will be stored in <code>R1</code></p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT charCount
 charcount
         MOVS R2, #0; initalize count
@@ -5397,7 +5527,7 @@ endloop
 </h3>
 <p>Using a 64 cell array, we can calculate the arithmetic mean of the cells. We are concerned with how fast the mean can be calculated. This will be an array that is passed by some c code.</p>
 <p>In <code>statsC.c</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">mean64</span>(<span style="color:#66d9ef">short</span> data[]);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">mean64</span>(<span style="color:#66d9ef">short</span> data[]);
 
 <span style="color:#66d9ef">short</span> myData[<span style="color:#ae81ff">64</span>];
 <span style="color:#66d9ef">int</span> xbar;
@@ -5420,7 +5550,7 @@ endloop
 <code>R2</code> = current array element<br>
 <code>R3</code> = loop counter</p>
 </blockquote>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT mean64
 mean64
         MOVS R1, #0;initialize sum
@@ -5587,7 +5717,7 @@ R is resistance</p>
 <p>Binary -&gt; ASCII hex</p>
 <p>To change the byte <code>0100 0001</code> to ASCII, you&rsquo;d have to run it through some code conversion software. That way the correct number will be shown instead of the ASCII letter &lsquo;A&rsquo;. A dumb terminal can&rsquo;t differentiate what you want to do with certain information, all it does it show the ASCII codes for the binary patterns it receives. So by converting our original 65 into a 6 and a 5 in binary, it will show correctly.</p>
 <p>Some c code to show conversion from a PC to the embedded system and back to PC.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX); <span style="color:#75715e">//tx, rx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">Serial <span style="color:#a6e22e">pc</span>(USBTX, USBRX); <span style="color:#75715e">//tx, rx
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
@@ -5616,7 +5746,7 @@ R is resistance</p>
 </tbody>
 </table>
 <p>The best way to convert these numbers into hex is <strong>table lookup</strong>.</p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT BtoAH
 
 BtoAH
@@ -5637,7 +5767,7 @@ ASCIIhexTable
 <p><code>BtoAH</code> stands for binary to ASCII hex</p>
 </blockquote>
 <p>In c:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">char</span> <span style="color:#a6e22e">BtoAH</span>(<span style="color:#66d9ef">int</span> n); <span style="color:#75715e">// 0 to 15
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">char</span> <span style="color:#a6e22e">BtoAH</span>(<span style="color:#66d9ef">int</span> n); <span style="color:#75715e">// 0 to 15
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> asciiChar;
 
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
@@ -5658,7 +5788,7 @@ ASCIIhexTable
 </ul>
 <p>Continuing from the code conversion above. This can be possible by using our 4 bit code converter, counted loop, and left and right shifts.</p>
 <p>In <code>B32toAH.c</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">B32toAH</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">char</span> s[]);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">B32toAH</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">char</span> s[]);
 
 <span style="color:#66d9ef">char</span> buff8[<span style="color:#ae81ff">9</span>]; <span style="color:#75715e">//one extra spot for null terminator on end
 </span><span style="color:#75715e"></span>
@@ -5669,7 +5799,7 @@ ASCIIhexTable
 
 </code></pre></div><p><code>B32toAH</code> returns void, however the second parameter (<code>char s[]</code>) will be the result, we will be modifying it but not returning it technically.</p>
 <p>In <code>B32toAHasm.s</code></p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT B32toAH
 
 B32toAH ; R0 32-bit number to convert ASCII hex, passed by c
@@ -5739,7 +5869,7 @@ ASCIIhexTab
 </table>
 <p>If we <strong>minus 0x30 from the ASCII code</strong>, we will end up with the value intended in hex, which will then be converted to binary when compiled.</p>
 <p>In <code>ADtoB.c</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">ADtoB</span>(<span style="color:#66d9ef">char</span> s[]);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">ADtoB</span>(<span style="color:#66d9ef">char</span> s[]);
 
 <span style="color:#66d9ef">char</span> input[]<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25&#34;</span>;
 <span style="color:#66d9ef">int</span> x;
@@ -5750,7 +5880,7 @@ ASCIIhexTab
 }
 
 </code></pre></div><p>In <code>ADtoBasm.s</code></p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT ADtoB
 ADtoB   ; R0 address of string
         ; R1 current char being evaluated
@@ -5788,7 +5918,7 @@ endLoop1
 </h3>
 <p>We want to convert a 32-bit binary value to ASCII binary. We want to take a binary number and print it in binary on the screen. This will be converted into a 33-byte char array (one for null terminator). This will be possible by left shifting then using a <code>ADCS</code> (add with carry), because the carry flag will contain the digit that we shifted out of the register.</p>
 <p>In <code>BtoAB.c</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">btoab</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">char</span> s[]);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">btoab</span>(<span style="color:#66d9ef">int</span> n, <span style="color:#66d9ef">char</span> s[]);
 
 <span style="color:#66d9ef">char</span> ascbin[<span style="color:#ae81ff">33</span>]; <span style="color:#75715e">//one extra space for null terminator
 </span><span style="color:#75715e"></span>
@@ -5797,7 +5927,7 @@ endLoop1
     btoab(<span style="color:#ae81ff">0xFFFF0000</span>, ascbin);
 }
 </code></pre></div><p>In <code>BtoABasm.s</code></p>
-<pre><code class="language-arm" data-lang="arm">        AREA |.text|,CODE,READONLY
+<pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|,CODE,READONLY
         EXPORT btoab
 btoab   ; R0 number to convert
         ; R1 address of first char of the string
@@ -5860,7 +5990,7 @@ loop1	MOVS R2,#'0';	reset 0
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">cipher16</span>(<span style="color:#66d9ef">char</span> text[], <span style="color:#66d9ef">char</span> key[]);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">cipher16</span>(<span style="color:#66d9ef">char</span> text[], <span style="color:#66d9ef">char</span> key[]);
 
 <span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">16</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This is a test!!&#34;</span>;
 
@@ -5870,7 +6000,7 @@ loop1	MOVS R2,#'0';	reset 0
     cipher16(str, <span style="color:#e6db74">&#34;Bob123&#34;</span>);
 }
 
-</code></pre></div><pre><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
+</code></pre></div><pre tabindex="0"><code class="language-arm" data-lang="arm">        AREA |.text|, CODE, READONLY
         EXPORT cipher16
 cipher16
         ; R0 address of text

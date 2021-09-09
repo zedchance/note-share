@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
@@ -27,7 +27,7 @@ This algorithm is used for verification of credit card numbers. It is a simple t
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.a5b93219bb00d035ed91639bf2fd6ad153cd1a1f2f3343e78f61aefe7e32ea18.js" integrity="sha256-pbkyGbsA0DXtkWOb8v1q0VPNGh8vM0Pnj2Gu/n4y6hg="></script>
+<script defer src="/notes/en.search.min.d0eecc8da73feee4da9ae2f771837bbef6667fcc32fb725ebe4db02719c49446.js" integrity="sha256-0O7Mjac/7uTamuL3cYN7vvZmf8wy&#43;3Jevk2wJxnElEY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -2689,6 +2689,58 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210831/" class="">CS139-lecture-20210831</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/" class="">CS139-lecture-20210902</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/" class="">CS139-lecture-20210907</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS139/CS139-lecture-20210909/" class="">CS139-lecture-20210909</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -2710,6 +2762,45 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/" class="">CS140-lecture-20210830</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210901/" class="">CS140-lecture-20210901</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS140/CS140-lecture-20210907/" class="">CS140-lecture-20210907</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -2989,6 +3080,19 @@ https://github.com/alex-shpak/hugo-book
           
   <ul>
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/" class="">CS190-lecture-20210830</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3010,6 +3114,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/" class="">CS192-lecture-20210903</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -3198,6 +3315,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/" class="">MATH170-lecture-20210831</a>
+  
+
+        </li>
+      
     
   </ul>
 
@@ -3985,7 +4115,7 @@ If the total modulo 10 is equal to 0 (<strong>if the total ends in zero</strong>
 </ul>
 </blockquote>
 <p>So with a number, say <code>4539704354706391</code>, we can check the number like so:</p>
-<pre><code>4  5  3  9  7  0  4  3  5  4  7  0  6  3  9  1 original number
+<pre tabindex="0"><code>4  5  3  9  7  0  4  3  5  4  7  0  6  3  9  1 original number
 8  5  6  9 14  0  8  3 10  4 14  0 12  3 18  1 double every other
 8 +5 +6+ 9+1+4+0 +8 +3+1+0+4+1+4+0+1+2+3+1+8+1 add all digits
                                           = 70 valid card
@@ -3994,14 +4124,14 @@ If the total modulo 10 is equal to 0 (<strong>if the total ends in zero</strong>
   <a class="anchor" href="#implementing-the-algorithm">#</a>
 </h2>
 <p>Let <code>n</code> be the card number we&rsquo;re checking, we&rsquo;ll store this off in a long called <code>number</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">long</span> number <span style="color:#f92672">=</span> n;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">long</span> number <span style="color:#f92672">=</span> n;
 </code></pre></div><p>We&rsquo;ll start a running <code>sum</code> at 0. We can extract the rightmost digit by modding the <code>number</code> with 10 (<code>% 10</code>), then add it to our <code>sum</code>. Then we can chop off the digit by dividing by 10.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 sum <span style="color:#f92672">=</span> number <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;                 <span style="color:#75715e">// add checksum
 </span><span style="color:#75715e"></span>number <span style="color:#f92672">=</span> number <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;              <span style="color:#75715e">// chop checksum off
 </span></code></pre></div><p>Next while the number is positive we&rsquo;ll extract the rightmost digit with a mod 10 and double it. If it is a double digit number we&rsquo;ll subtract 9 from it. (i.e. for the number 18: `1 + 8). It is then added to the running sum, and chopped off.</p>
 <p>The next number is just added to the sum, and not doubled. This continues until all the digits have been processed.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span>(number)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span>(number)
 {
     <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> (number <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;  <span style="color:#75715e">// get rightmost digit and double
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (temp <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">9</span>)                  <span style="color:#75715e">// if 2 digit number add digits together
@@ -4015,12 +4145,12 @@ sum <span style="color:#f92672">=</span> number <span style="color:#f92672">%</s
 </span><span style="color:#75715e"></span>    number <span style="color:#f92672">=</span> number <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;          <span style="color:#75715e">// chop right digit off
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>The function will return the leftmost digit of the card number to determine which company. That&rsquo;s simply dividing the number by 10 until its a one digit number</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span> (n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>)                     <span style="color:#75715e">// get leftmost digit
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">while</span> (n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>)                     <span style="color:#75715e">// get leftmost digit
 </span><span style="color:#75715e"></span>{
     n <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>;
 }
 </code></pre></div><p>If the sum after all of this ends in a 0, then the card is valid. If it isn&rsquo;t a <code>-1</code> is returned indicating an invalid card number.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">if</span> (sum <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)                      <span style="color:#75715e">// invalid card number
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">if</span> (sum <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)                      <span style="color:#75715e">// invalid card number
 </span><span style="color:#75715e"></span>{
     <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
 }
@@ -4029,7 +4159,7 @@ sum <span style="color:#f92672">=</span> number <span style="color:#f92672">%</s
   Visualizing the algorithm
   <a class="anchor" href="#visualizing-the-algorithm">#</a>
 </h2>
-<pre><code class="language-flow" data-lang="flow">st=&gt;start: start with credit card number
+<pre tabindex="0"><code class="language-flow" data-lang="flow">st=&gt;start: start with credit card number
 valid=&gt;end: valid number
 return leftmost digit
 invalid=&gt;end: invalid number
@@ -4060,7 +4190,7 @@ isvalid(no)-&gt;invalid
   <a class="anchor" href="#the-working-example">#</a>
 </h2>
 <p>Here&rsquo;s an <a href="https://gist.github.com/zedchance/b6480f6ed49793440bccd34ad560b3fc">entire</a> working example (the algorithm is in the <code>validate</code> function):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">// Luhn&#39;s algorithm for checking credit card numbers
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">// Luhn&#39;s algorithm for checking credit card numbers
 </span><span style="color:#75715e">// 4539704354706391 should have a sum of 70 (valid)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt; </span><span style="color:#75715e">

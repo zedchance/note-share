@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>operating system types on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/operating-system-types/</link>
+    <description>Recent content in operating system types on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/operating-system-types/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20210902</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/</guid>
+      <description>Introduction to Operating systems #  What is an OS? #  The OS is the intermediary between the hardware and the software.
+Possibly the most famous test program in C:
+#include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Hello, world!\n&amp;#34;); exit 0; } Which is compiled via
+gcc hello.c -o hello which creates the executable hello.
+We can run this via
+./hello we can run this with 2 instances like
+./hello &amp;amp; .</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20210907</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210907/</guid>
+      <description>Introduction cont #  Parallel systems #  Intrachip transfer is much faster than interchip transfer.
+Distributed systems #  Real-time and embedded systems #  Other systems #  Organization #   PC = program counter, the address of the next instruction IR = instruction register, the address of the current instruction MAR = memory address register, address of the next memory IO MBR = memory buffer register, actual data to be read/written to/from memory I/O AR = input output address I/O BR = input output buffer register, the data  Memory is an array of bytes, each with its own address.</description>
+    </item>
+    
+  </channel>
+</rss>
