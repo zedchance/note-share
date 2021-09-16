@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backtracking on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/backtracking/</link>
+    <description>Recent content in backtracking on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS140-lecture-20210913</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210913/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210913/</guid>
+      <description>Backtracking #  Recursive programming can be divided into two categories. One category creates the solution, and the other searches for the solution.
+When searching, we want to consider backtracking.
+We can search these decision trees for our solution in the solution space. When looking for a solution, if we ever reach a subtree that doesn&amp;rsquo;t meet our criteria, we can backtrack.
+Strategies #  Examples #  Pretend that our maze is represented with 0 and 1, a 2D array where 0 is a wall and 1 is not, something like this:</description>
+    </item>
+    
+  </channel>
+</rss>

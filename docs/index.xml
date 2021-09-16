@@ -2084,6 +2084,17 @@ Distributed systems #  Real-time and embedded systems #  Other systems #  Organi
     </item>
     
     <item>
+      <title>CS139-lecture-20210914</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210914/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210914/</guid>
+      <description>Structure cont #  Simple structure #  Layered structure #  A 5 layered approach:
+5. operator 4. user programs 3. IO management 2. communication 1. memory management 0. CPU, support for multi program This is easier to construct and debug, however there is a communication overhead. It is impractical to divide the kernel into layers.
+Microkernel structure #  Microkernels are easier to extend, but there is a lot of communication overhead.</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2113,6 +2124,29 @@ Methods of proof cont. #  An easy starting example #  Suppose that   \( x &amp;g
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210907/</guid>
       <description>Asymptotic notation cont #  Big Omega #  Omega is lower bound (where Big O is upper bound).
 Examples #     \[\begin{aligned} 5n^2 = \Omega(n) \end{aligned}\]   \( \exists c,n_0 \)  such that  \( 0 \leq c_n \leq 5 n^2 \)  So,  \[\begin{aligned} c \leq 5n \end{aligned}\]  so  \( c = 1 \)  and  \( n_0 = 1 \)  .</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20210913</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210913/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210913/</guid>
+      <description>Backtracking #  Recursive programming can be divided into two categories. One category creates the solution, and the other searches for the solution.
+When searching, we want to consider backtracking.
+We can search these decision trees for our solution in the solution space. When looking for a solution, if we ever reach a subtree that doesn&amp;rsquo;t meet our criteria, we can backtrack.
+Strategies #  Examples #  Pretend that our maze is represented with 0 and 1, a 2D array where 0 is a wall and 1 is not, something like this:</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20210915</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210915/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210915/</guid>
+      <description>Recursion #  Recursive tracing #  m(648) m(72) m(9) return 9 My trace
+m(348) a = m(34) a = m(3) return 33 a = 33 b = m(4) return 44 b = 44 return 3344 a = 3344 b = m(8) return 88 b = 88 return 334488 pow example #  My solution
+pow(b, e): if e == 0: return 1 return b * pow(b, e - 1) Trace</description>
     </item>
     
     <item>
@@ -2320,12 +2354,30 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS190-lecture-20210913</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210913/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20210913/</guid>
+      <description>More information on project #  </description>
+    </item>
+    
+    <item>
       <title>CS192-lecture-20210903</title>
       <link>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</guid>
       <description>Course orientation #   12 seminars, on schedule  Must attend 10, and submit feedback 6 seminars are pure CS, 6 are leadership oriented   Evaluations are full or no points, attend and complete 10 to pass (no problem with attending/completing all 12). Typical 30-45 min run time, with Q&amp;amp;A at the end  </description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20210910</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20210910/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20210910/</guid>
+      <description>Career Success Factors #  Speaker: Cameron Law</description>
     </item>
     
     <item>

@@ -29,5 +29,16 @@ Example of pow #  int pow(int x, int y) if (very small) solve directly else solv
 int pow(int x, int y) if (y == 0) return 1 else solve with smaller_pow Now we need to figure out the else branch, we know that x^y = x^(y-1) * x.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20210915</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210915/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210915/</guid>
+      <description>Recursion #  Recursive tracing #  m(648) m(72) m(9) return 9 My trace
+m(348) a = m(34) a = m(3) return 33 a = 33 b = m(4) return 44 b = 44 return 3344 a = 3344 b = m(8) return 88 b = 88 return 334488 pow example #  My solution
+pow(b, e): if e == 0: return 1 return b * pow(b, e - 1) Trace</description>
+    </item>
+    
   </channel>
 </rss>
