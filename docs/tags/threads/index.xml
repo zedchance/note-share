@@ -15,5 +15,15 @@
       <description>Multitasking #  Threads vs processes #  Java threads #  Counter thread example #  Concurrent output example #  Multiple user threads example #  Priorities and synchronization #  Overview of Thread methods #  Common uses #  </description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20210923</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210923/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210923/</guid>
+      <description>Processes cont. #  Using fork and execl #  Consider this code
+pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&amp;#34;I am parent %d; child is %d\n&amp;#34;,getpid(),pid1); pid2=wait3(&amp;amp;status, 0, &amp;amp;usage); printf(&amp;#34;exit code for %d is %d\n&amp;#34;, pid2, status); } else { execl(&amp;#34;/bin/cat&amp;#34;, &amp;#34;/bin/cat&amp;#34;, &amp;#34;/csc/139/news/0001.txt&amp;#34;, NULL); printf(&amp;#34;we should never get here!\n&amp;#34;); } execl loads cat into the child&amp;rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf.</description>
+    </item>
+    
   </channel>
 </rss>

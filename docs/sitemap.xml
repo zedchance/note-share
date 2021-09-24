@@ -141,6 +141,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/backtracking/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/ballistic-pendulum/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -820,9 +821,16 @@
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210909/</loc>
-    <lastmod>2021-09-09T14:48:47-07:00</lastmod>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210914/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210916/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210921/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210923/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -834,8 +842,10 @@
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210913/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210915/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</loc>
     <lastmod>2021-06-07T15:47:49-07:00</lastmod>
@@ -895,11 +905,15 @@
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS190/CS190-lecture-20210913/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS190/CS190-lecture-20210920/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS192/CS192-seminar-20210910/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -1123,6 +1137,8 @@
     <loc>http://zedchance.github.io/notes/tags/integration/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/inter-process-communication/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/interfaces/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
@@ -1130,7 +1146,7 @@
     <lastmod>2021-04-19T21:04:44-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/interrupts/</loc>
-    <lastmod>2021-09-09T14:48:47-07:00</lastmod>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/intra-as/</loc>
     <lastmod>2021-04-23T10:44:47-07:00</lastmod>
@@ -1151,7 +1167,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/kernel/</loc>
-    <lastmod>2021-09-09T14:48:47-07:00</lastmod>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/keys/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -1175,6 +1191,7 @@
     <lastmod>2021-06-03T18:00:57-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/leadership/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/</loc>
     <lastmod>2021-03-10T18:37:55-08:00</lastmod>
@@ -1297,7 +1314,7 @@
     <lastmod>2021-07-07T20:01:48-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/operating-system-structure/</loc>
-    <lastmod>2021-09-09T14:48:47-07:00</lastmod>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/operating-system-types/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -1459,8 +1476,12 @@
     <lastmod>2021-06-07T15:47:49-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/process-control-block/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/process-termination/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/processes/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/processing/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -1499,7 +1520,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/recursion/</loc>
-    <lastmod>2021-02-27T14:47:25-08:00</lastmod>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/recursive-descent-predictive-parsing/</loc>
     <lastmod>2021-04-23T10:44:47-07:00</lastmod>
@@ -1544,6 +1565,7 @@
     <lastmod>2021-03-07T11:44:52-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/scheduling/</loc>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/schema/</loc>
     <lastmod>2021-06-10T17:34:25-07:00</lastmod>
@@ -1633,7 +1655,7 @@
     <lastmod>2021-06-25T07:13:07-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
-    <lastmod>2021-09-09T14:48:47-07:00</lastmod>
+    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-06-03T18:00:57-07:00</lastmod>

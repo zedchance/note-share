@@ -1204,6 +1204,15 @@
     </item>
     
     <item>
+      <title>inter-process communication</title>
+      <link>http://zedchance.github.io/notes/tags/inter-process-communication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/inter-process-communication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>interfaces</title>
       <link>http://zedchance.github.io/notes/tags/interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1776,6 +1785,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/process-control-block/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>process termination</title>
+      <link>http://zedchance.github.io/notes/tags/process-termination/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/process-termination/</guid>
       <description></description>
     </item>
     

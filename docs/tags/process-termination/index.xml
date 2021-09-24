@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>process termination on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/process-termination/</link>
+    <description>Recent content in process termination on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/process-termination/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20210921</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210921/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210921/</guid>
+      <description>Processes cont. #  Termination #  A parent cannot wait on a grandchild.
+Inter-process communication #  Message passing
+ uses send and receieve API calls slower, more expensive small amount of data distributed   Shared memory
+ process A sets aside some memory for process B restrictions must be lifted by kernel faster and cheaper because minimal kernel involvement doesn&amp;rsquo;t work for distributed systems (2 processes on remote machines)    Shared memory communication #  This uses a circular buffer:</description>
+    </item>
+    
+  </channel>
+</rss>
