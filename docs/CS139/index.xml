@@ -94,5 +94,30 @@ Inter-process communication #  Message passing
 pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&amp;#34;I am parent %d; child is %d\n&amp;#34;,getpid(),pid1); pid2=wait3(&amp;amp;status, 0, &amp;amp;usage); printf(&amp;#34;exit code for %d is %d\n&amp;#34;, pid2, status); } else { execl(&amp;#34;/bin/cat&amp;#34;, &amp;#34;/bin/cat&amp;#34;, &amp;#34;/csc/139/news/0001.txt&amp;#34;, NULL); printf(&amp;#34;we should never get here!\n&amp;#34;); } execl loads cat into the child&amp;rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf.</description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20210928</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210928/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210928/</guid>
+      <description>Threads cont. #  How TCBs are mapped to the processes address space.
+User-level threads #  Multithreading models #  The bottleneck created by the many-to-one model can be alleviated in the one-to-one model.
+The M:M model maintains slightly more user threads than kernel threads.
+So why do the biggest OSes use the one-to-one model? More cores in CPUs, more CPUs in general.
+Thread libraries #  Implicit threading #  Issues #  Single threaded  Multi-threaded has 2 possibilities The child can either have 1 thread (the invoking thread), or all.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20210930</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210930/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210930/</guid>
+      <description>CPU scheduling #  Long term scheduling
+ job scheduling decides which process should enter the ready state   Short term scheduling
+ cpu scheduling decides which ready process should run next on the CPU    Recall the overall state diagram for a process:
+Non-preemptive vs preemptive scheduling #  Preemptive here basically means &amp;ldquo;pause&amp;rdquo;. So the non-preemptive scheduling can only work in cases 1 and 4 (from prior slides).</description>
+    </item>
+    
   </channel>
 </rss>

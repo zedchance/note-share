@@ -141,7 +141,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/backtracking/</loc>
-    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/ballistic-pendulum/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -827,10 +827,17 @@
     <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210916/</loc>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210921/</loc>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210923/</loc>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210928/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS139/CS139-lecture-20210930/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -842,10 +849,14 @@
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210913/</loc>
-    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210915/</loc>
     <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</loc>
     <lastmod>2021-06-07T15:47:49-07:00</lastmod>
@@ -866,7 +877,7 @@
     <lastmod>2021-06-13T13:31:44-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS152/CS152-lecture-20210611/</loc>
-    <lastmod>2021-06-15T17:47:51-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS152/CS152-lecture-20210613/</loc>
     <lastmod>2021-06-18T10:39:43-07:00</lastmod>
@@ -908,12 +919,19 @@
     <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS190/CS190-lecture-20210920/</loc>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS190/CS190-lecture-20210927/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS192/CS192-seminar-20210910/</loc>
     <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS192/CS192-seminar-20210924/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS192/CS192-seminar-20211001/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -1033,7 +1051,7 @@
     <lastmod>2021-06-08T18:22:03-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/fields/</loc>
-    <lastmod>2021-06-15T17:47:51-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/finite-automata/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -1066,7 +1084,7 @@
     <lastmod>2021-06-07T15:47:49-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/galois-fields/</loc>
-    <lastmod>2021-06-15T17:47:51-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/GCD/</loc>
     <lastmod>2021-06-28T09:09:47-07:00</lastmod>
@@ -1138,6 +1156,7 @@
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/inter-process-communication/</loc>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/interfaces/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -1323,7 +1342,7 @@
     <lastmod>2021-03-02T20:30:55-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/padding/</loc>
-    <lastmod>2021-06-15T17:47:51-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/parse-trees/</loc>
     <lastmod>2021-03-16T20:18:10-07:00</lastmod>
@@ -1479,9 +1498,10 @@
     <lastmod>2021-09-15T19:58:25-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/process-termination/</loc>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/processes/</loc>
-    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/processing/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
@@ -1565,7 +1585,7 @@
     <lastmod>2021-03-07T11:44:52-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/scheduling/</loc>
-    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/schema/</loc>
     <lastmod>2021-06-10T17:34:25-07:00</lastmod>
@@ -1655,7 +1675,7 @@
     <lastmod>2021-06-25T07:13:07-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
-    <lastmod>2021-09-15T19:58:25-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-06-03T18:00:57-07:00</lastmod>
@@ -1667,7 +1687,7 @@
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/threads/</loc>
-    <lastmod>2021-05-14T14:33:08-07:00</lastmod>
+    <lastmod>2021-09-23T17:12:32-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/throughput/</loc>
     <lastmod>2021-04-13T10:11:21-07:00</lastmod>

@@ -56,5 +56,15 @@ a is a height of 0 b-d is a height of 1 e-f is a height of 2</description>
 /** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20210929</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</guid>
+      <description>Quicksort #  The way that the array is divided matters.
+Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward the right until it reaches a element that is bigger or equal to the pivot point. j will move to the right until it finds a element that is less thatn or equal to the pivot point. i and j will swap as long as the pointers haven&amp;rsquo;t crossed paths.</description>
+    </item>
+    
   </channel>
 </rss>

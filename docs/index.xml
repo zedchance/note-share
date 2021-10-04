@@ -2128,6 +2128,31 @@ pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&
     </item>
     
     <item>
+      <title>CS139-lecture-20210928</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210928/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210928/</guid>
+      <description>Threads cont. #  How TCBs are mapped to the processes address space.
+User-level threads #  Multithreading models #  The bottleneck created by the many-to-one model can be alleviated in the one-to-one model.
+The M:M model maintains slightly more user threads than kernel threads.
+So why do the biggest OSes use the one-to-one model? More cores in CPUs, more CPUs in general.
+Thread libraries #  Implicit threading #  Issues #  Single threaded  Multi-threaded has 2 possibilities The child can either have 1 thread (the invoking thread), or all.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20210930</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20210930/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210930/</guid>
+      <description>CPU scheduling #  Long term scheduling
+ job scheduling decides which process should enter the ready state   Short term scheduling
+ cpu scheduling decides which ready process should run next on the CPU    Recall the overall state diagram for a process:
+Non-preemptive vs preemptive scheduling #  Preemptive here basically means &amp;ldquo;pause&amp;rdquo;. So the non-preemptive scheduling can only work in cases 1 and 4 (from prior slides).</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2180,6 +2205,26 @@ Strategies #  Examples #  Pretend that our maze is represented with 0 and 1, a 2
       <description>Recursion #  Recursive tracing #  m(648) m(72) m(9) return 9 My trace
 m(348) a = m(34) a = m(3) return 33 a = 33 b = m(4) return 44 b = 44 return 3344 a = 3344 b = m(8) return 88 b = 88 return 334488 pow example #  My solution
 pow(b, e): if e == 0: return 1 return b * pow(b, e - 1) Trace</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20210927</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</guid>
+      <description>Divide and conquer #    \[\begin{aligned} T(n) &amp;amp;= 2T \left( \frac{n}{2} \right) &amp;#43; \Theta (n) \\ &amp;amp;= \Theta(n\log n) &amp;amp;\text{divide and conquer}\\ T(n) &amp;amp;= T(n-1) &amp;#43; \Theta(n) \\ &amp;amp;= \Theta(n^2) &amp;amp;\text{naive approach} \end{aligned}\]  A problem divided into any ratio, with the rest of the problem a complement of the original input, the overall complexity will still be  \( \Theta(n \lg n) \)  .
+Mergesort #  Mergesort does not sort in place.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20210929</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</guid>
+      <description>Quicksort #  The way that the array is divided matters.
+Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward the right until it reaches a element that is bigger or equal to the pivot point. j will move to the right until it finds a element that is less thatn or equal to the pivot point. i and j will swap as long as the pointers haven&amp;rsquo;t crossed paths.</description>
     </item>
     
     <item>
@@ -2405,6 +2450,18 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS190-lecture-20210927</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210927/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20210927/</guid>
+      <description>Sprint 1 notes #  Planning assignment
+ Can be a screenshot of our Jira page instead of spread sheet  Execution report
+ A retrospective of the end of the sprint  Client review meeting
+ Submit some artifacts  Context diagram Business event table    Goals #  </description>
+    </item>
+    
+    <item>
       <title>CS192-lecture-20210903</title>
       <link>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2420,6 +2477,24 @@ The key must be random and private, but the tweak is non-random and public.</des
       
       <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20210910/</guid>
       <description>Career Success Factors #  Speaker: Cameron Law</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20210924</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20210924/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20210924/</guid>
+      <description>Seeing the Big Picture: Preparing for Leadership in the Data Age #  Speaker: Professor Joseph Taylor</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20211001</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211001/</guid>
+      <description>Accenture Info Session #  Speaker: Jason Francis</description>
     </item>
     
     <item>

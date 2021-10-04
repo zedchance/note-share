@@ -52,5 +52,15 @@ Some pseudo:
 ms(list) front = front half of list back = back half of list ms(front) ms(back) return merge(front, back) In racket, there is a function called drop that takes a list and a number. It drops the numbers off the list. There is also take, that takes the first number of elements of the list and returns them.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20210927</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</guid>
+      <description>Divide and conquer #    \[\begin{aligned} T(n) &amp;amp;= 2T \left( \frac{n}{2} \right) &amp;#43; \Theta (n) \\ &amp;amp;= \Theta(n\log n) &amp;amp;\text{divide and conquer}\\ T(n) &amp;amp;= T(n-1) &amp;#43; \Theta(n) \\ &amp;amp;= \Theta(n^2) &amp;amp;\text{naive approach} \end{aligned}\]  A problem divided into any ratio, with the rest of the problem a complement of the original input, the overall complexity will still be  \( \Theta(n \lg n) \)  .
+Mergesort #  Mergesort does not sort in place.</description>
+    </item>
+    
   </channel>
 </rss>
