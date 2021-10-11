@@ -2153,6 +2153,28 @@ Non-preemptive vs preemptive scheduling #  Preemptive here basically means &amp;
     </item>
     
     <item>
+      <title>CS139-lecture-20211005</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211005/</guid>
+      <description>CPU scheduling cont. #  I/O Bursts #  Round robin #  Round robin strives on optimizing average response time.
+If we make the value of   \( q \)  too small, we will have a lot of overhead due to context switches.
+Priority scheduling #  Technically, shortest job first is a type of priority scheduling (prioritizing shortest burst time).
+Multilevel queue #  Scheduling in Linux (CFS) #  Priority levels are 0-139.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211007</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211007/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211007/</guid>
+      <description>Scheduling cont. #  CFS cont. #  Recall that vruntime is a function, not the actual runtime of the process. The progress rate depends on the priority of the process.
+ faster progress rate for low priority process slower progress for high priority process  Since we are always looking for the leftmost node in the process run queue, we can maintain a pointer to get the min value in constant time.</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2225,6 +2247,17 @@ Mergesort #  Mergesort does not sort in place.</description>
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</guid>
       <description>Quicksort #  The way that the array is divided matters.
 Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward the right until it reaches a element that is bigger or equal to the pivot point. j will move to the right until it finds a element that is less thatn or equal to the pivot point. i and j will swap as long as the pointers haven&amp;rsquo;t crossed paths.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211006</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211006/</guid>
+      <description>Common divide and conquer problems #  Counting Inversions #  Inversions are the number of out of order pairs in an array of numbers. We can use the amount of inversions as a ranking for multiple arrays.
+If we consider the first array as sorted (the indices), we can use the second array&amp;rsquo;s indices as a rank to compare.
+When we try and count inversions, we are given an array of   \( n \)  numbers.</description>
     </item>
     
     <item>
@@ -2462,6 +2495,15 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS190-lecture-20211004</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20211004/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20211004/</guid>
+      <description>SCRUM #  </description>
+    </item>
+    
+    <item>
       <title>CS192-lecture-20210903</title>
       <link>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2495,6 +2537,15 @@ The key must be random and private, but the tweak is non-random and public.</des
       
       <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211001/</guid>
       <description>Accenture Info Session #  Speaker: Jason Francis</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20211008</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211008/</guid>
+      <description>Introduction to Adaptive Leadership #  Speaker: Rabbil Green</description>
     </item>
     
     <item>

@@ -81,5 +81,16 @@ Mergesort #  Mergesort does not sort in place.</description>
 Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward the right until it reaches a element that is bigger or equal to the pivot point. j will move to the right until it finds a element that is less thatn or equal to the pivot point. i and j will swap as long as the pointers haven&amp;rsquo;t crossed paths.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20211006</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211006/</guid>
+      <description>Common divide and conquer problems #  Counting Inversions #  Inversions are the number of out of order pairs in an array of numbers. We can use the amount of inversions as a ranking for multiple arrays.
+If we consider the first array as sorted (the indices), we can use the second array&amp;rsquo;s indices as a rank to compare.
+When we try and count inversions, we are given an array of   \( n \)  numbers.</description>
+    </item>
+    
   </channel>
 </rss>

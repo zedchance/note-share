@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>divide and conquer on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/divide-and-conquer/</link>
+    <description>Recent content in divide and conquer on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/divide-and-conquer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS140-lecture-20210927</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210927/</guid>
+      <description>Divide and conquer #    \[\begin{aligned} T(n) &amp;amp;= 2T \left( \frac{n}{2} \right) &amp;#43; \Theta (n) \\ &amp;amp;= \Theta(n\log n) &amp;amp;\text{divide and conquer}\\ T(n) &amp;amp;= T(n-1) &amp;#43; \Theta(n) \\ &amp;amp;= \Theta(n^2) &amp;amp;\text{naive approach} \end{aligned}\]  A problem divided into any ratio, with the rest of the problem a complement of the original input, the overall complexity will still be  \( \Theta(n \lg n) \)  .
+Mergesort #  Mergesort does not sort in place.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20210929</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20210929/</guid>
+      <description>Quicksort #  The way that the array is divided matters.
+Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward the right until it reaches a element that is bigger or equal to the pivot point. j will move to the right until it finds a element that is less thatn or equal to the pivot point. i and j will swap as long as the pointers haven&amp;rsquo;t crossed paths.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211006</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211006/</guid>
+      <description>Common divide and conquer problems #  Counting Inversions #  Inversions are the number of out of order pairs in an array of numbers. We can use the amount of inversions as a ranking for multiple arrays.
+If we consider the first array as sorted (the indices), we can use the second array&amp;rsquo;s indices as a rank to compare.
+When we try and count inversions, we are given an array of   \( n \)  numbers.</description>
+    </item>
+    
+  </channel>
+</rss>

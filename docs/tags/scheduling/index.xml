@@ -40,5 +40,27 @@ Note: Read more on medium term scheduling in the text.</description>
 Non-preemptive vs preemptive scheduling #  Preemptive here basically means &amp;ldquo;pause&amp;rdquo;. So the non-preemptive scheduling can only work in cases 1 and 4 (from prior slides).</description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20211005</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211005/</guid>
+      <description>CPU scheduling cont. #  I/O Bursts #  Round robin #  Round robin strives on optimizing average response time.
+If we make the value of   \( q \)  too small, we will have a lot of overhead due to context switches.
+Priority scheduling #  Technically, shortest job first is a type of priority scheduling (prioritizing shortest burst time).
+Multilevel queue #  Scheduling in Linux (CFS) #  Priority levels are 0-139.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211007</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211007/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211007/</guid>
+      <description>Scheduling cont. #  CFS cont. #  Recall that vruntime is a function, not the actual runtime of the process. The progress rate depends on the priority of the process.
+ faster progress rate for low priority process slower progress for high priority process  Since we are always looking for the leftmost node in the process run queue, we can maintain a pointer to get the min value in constant time.</description>
+    </item>
+    
   </channel>
 </rss>
