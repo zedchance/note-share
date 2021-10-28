@@ -141,5 +141,25 @@ Multilevel queue #  Scheduling in Linux (CFS) #  Priority levels are 0-139.</des
  faster progress rate for low priority process slower progress for high priority process  Since we are always looking for the leftmost node in the process run queue, we can maintain a pointer to get the min value in constant time.</description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20211021</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211021/</guid>
+      <description>Process synchronization #  Race condition #  Critical selection and mutual exclusion #  In the above code examples, the counter++ and counter-- are considered a critical section.
+How to implement mutual exclusion #  Note: This solution isn&amp;rsquo;t fully correct.  producer: while (lock == 0) lock = 1 put lock = 0 consumer: while (lock == 0) lock = 1 fetch lock = 0 The problem with this code is that if the OS does a context switch during a critical section, it can create an error.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211026</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211026/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211026/</guid>
+      <description>Synchronization cont. #  Since these could output in any order, we can setup semaphores to ensure the run order.
+Bounded buffer problem #   full and empty are counting semaphores.  full notifies consumers how many items are there empty notifies producers how many empty slots available   mutex is a binary semaphore.   mutex starts at 1, &amp;ldquo;unlocked&amp;rdquo;, so the first process can have mutual exclusion full is set to 0, and empty is set to n, because all slots are available   The first wait(empty) checks if there is an empty slot wait(mutex) checks if there is a process accessing the shared buffer wait(full) checks if there is any items to consume  Consider switching the order of the first to wait functions, to:</description>
+    </item>
+    
   </channel>
 </rss>

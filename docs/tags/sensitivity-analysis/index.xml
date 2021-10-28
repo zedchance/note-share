@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sensitivity analysis on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/sensitivity-analysis/</link>
+    <description>Recent content in sensitivity analysis on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/sensitivity-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH170-lecture-20211021</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211021/</guid>
+      <description>Two phase procedure cont. #  Last problem finished #  Detecting a non feasible region #  Can we recognize a non-feasible region using the two phase method?
+Phase one completes because we have all negative coefficients in the last row, but since   \( w \not = 0 \)  , there is no solution. We could solve this using Big M method where  \( s_4 &amp;gt; 0 \)  , and  \( z&amp;#39; = z &amp;#43; M s_4 \)  .</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211026</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211026/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211026/</guid>
+      <description>Sensitivity analysis cont. #  By increasing the right hand side of the   \( c_1 \)  constraint by 1 unit, we obtain a new  \( \tilde{z} \)  value of  \( \frac{108}{7} \)  .
+So the shadow price is  \( z - \tilde{z} = \frac{22}{7} \)  .
+Next, identify shadow prices from a completed simplex tableau:
+Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&#39; C=[-7 -6]&#39; lb=[0 0]&#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
+    </item>
+    
+  </channel>
+</rss>

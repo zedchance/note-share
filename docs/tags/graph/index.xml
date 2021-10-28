@@ -50,5 +50,16 @@ Graph cont. #  These are considered strongly connected. Also considered a strong
 Reversed graphs are still strongly connected in the same components.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20211025</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211025/</guid>
+      <description>Graph basics #  In basic graphs, self loops and multiple edges between vertices are not considered. The number of edges are calculated by
+  \[\begin{aligned} |E| = \binom{n}{2} = \frac{n(n-1)}{2} = \Theta(n^2) \end{aligned}\]  A directed graph is
+ strongly connected if there is a path from any vertex to any other vertex in the direction of edges unilaterally connected if for any 2 vertices there is a directed path to and from each vertices weakly connected if there is a path from any vertex to any other vertex, but not in the direction of edges  Representing graphs #  Adjacency lists #  Note: The total length of linked lists for directed graph is less than the total length of linked lists for the undirected graph in this example.</description>
+    </item>
+    
   </channel>
 </rss>

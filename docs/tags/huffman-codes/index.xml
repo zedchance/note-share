@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>huffman codes on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/huffman-codes/</link>
+    <description>Recent content in huffman codes on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/huffman-codes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS140-lecture-20211027</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211027/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211027/</guid>
+      <description>Variable length encoding #  If we want to compress a file, we need to represent each symbol with a string of binary digits. If our strings are variable length, then that means the representation for any symbol should not be the prefix of the representation of another symbol.
+Huffman codes #  The value at each node is the frequency of symbols in the subtree. The leaves represent symbols, and each left or right child represents a 0 or 1.</description>
+    </item>
+    
+  </channel>
+</rss>

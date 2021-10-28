@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MATLAB on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/MATLAB/</link>
+    <description>Recent content in MATLAB on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/MATLAB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH170-lecture-20211012</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211012/</guid>
+      <description>MATLAB #  An introduction #  File: m170-matlab-linprog.pdf  For example, lets define a vector
+x = [1 2 3] If we want to transpose x, we can use the &#39;:
+x&#39; Or we can define a column vector like:
+y=[1 2 3] which can also be defined with ;:
+y=[1;2;3] So, to define an entire matrix we can use a combination of both:
+A=[1 2 3; 4 5 6; 7 8 9] We can do some matrix multiplication:</description>
+    </item>
+    
+  </channel>
+</rss>

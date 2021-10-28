@@ -66,5 +66,16 @@ a is a height of 0 b-d is a height of 1 e-f is a height of 2</description>
 Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward the right until it reaches a element that is bigger or equal to the pivot point. j will move to the right until it finds a element that is less thatn or equal to the pivot point. i and j will swap as long as the pointers haven&amp;rsquo;t crossed paths.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20211014</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211014/</guid>
+      <description>Recurrences cont #  Recursion tree method #  Another method to solve recurrences is to draw a recursion tree, where each node gets a cost. The cost of each node is the additional work done on each recursive call (not recursive call itself).
+The leaf nodes are the base cases. The idea is to identify a pattern, and use a known series to evaluate that pattern.
+Then, after identifying the sum of each level of the tree, you then sum all the level&amp;rsquo;s themselves (except the base level, the leaves).</description>
+    </item>
+    
   </channel>
 </rss>

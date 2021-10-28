@@ -2175,6 +2175,26 @@ Multilevel queue #  Scheduling in Linux (CFS) #  Priority levels are 0-139.</des
     </item>
     
     <item>
+      <title>CS139-lecture-20211021</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211021/</guid>
+      <description>Process synchronization #  Race condition #  Critical selection and mutual exclusion #  In the above code examples, the counter++ and counter-- are considered a critical section.
+How to implement mutual exclusion #  Note: This solution isn&amp;rsquo;t fully correct.  producer: while (lock == 0) lock = 1 put lock = 0 consumer: while (lock == 0) lock = 1 fetch lock = 0 The problem with this code is that if the OS does a context switch during a critical section, it can create an error.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211026</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211026/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211026/</guid>
+      <description>Synchronization cont. #  Since these could output in any order, we can setup semaphores to ensure the run order.
+Bounded buffer problem #   full and empty are counting semaphores.  full notifies consumers how many items are there empty notifies producers how many empty slots available   mutex is a binary semaphore.   mutex starts at 1, &amp;ldquo;unlocked&amp;rdquo;, so the first process can have mutual exclusion full is set to 0, and empty is set to n, because all slots are available   The first wait(empty) checks if there is an empty slot wait(mutex) checks if there is a process accessing the shared buffer wait(full) checks if there is any items to consume  Consider switching the order of the first to wait functions, to:</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2258,6 +2278,38 @@ Partitioning the array using Hoare&amp;rsquo;s partition #  i will move toward t
       <description>Common divide and conquer problems #  Counting Inversions #  Inversions are the number of out of order pairs in an array of numbers. We can use the amount of inversions as a ranking for multiple arrays.
 If we consider the first array as sorted (the indices), we can use the second array&amp;rsquo;s indices as a rank to compare.
 When we try and count inversions, we are given an array of   \( n \)  numbers.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211014</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211014/</guid>
+      <description>Recurrences cont #  Recursion tree method #  Another method to solve recurrences is to draw a recursion tree, where each node gets a cost. The cost of each node is the additional work done on each recursive call (not recursive call itself).
+The leaf nodes are the base cases. The idea is to identify a pattern, and use a known series to evaluate that pattern.
+Then, after identifying the sum of each level of the tree, you then sum all the level&amp;rsquo;s themselves (except the base level, the leaves).</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211025</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211025/</guid>
+      <description>Graph basics #  In basic graphs, self loops and multiple edges between vertices are not considered. The number of edges are calculated by
+  \[\begin{aligned} |E| = \binom{n}{2} = \frac{n(n-1)}{2} = \Theta(n^2) \end{aligned}\]  A directed graph is
+ strongly connected if there is a path from any vertex to any other vertex in the direction of edges unilaterally connected if for any 2 vertices there is a directed path to and from each vertices weakly connected if there is a path from any vertex to any other vertex, but not in the direction of edges  Representing graphs #  Adjacency lists #  Note: The total length of linked lists for directed graph is less than the total length of linked lists for the undirected graph in this example.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211027</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211027/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211027/</guid>
+      <description>Variable length encoding #  If we want to compress a file, we need to represent each symbol with a string of binary digits. If our strings are variable length, then that means the representation for any symbol should not be the prefix of the representation of another symbol.
+Huffman codes #  The value at each node is the frequency of symbols in the subtree. The leaves represent symbols, and each left or right child represents a 0 or 1.</description>
     </item>
     
     <item>
@@ -2504,6 +2556,24 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS190-lecture-20211011</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20211011/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20211011/</guid>
+      <description>Agile examples #  </description>
+    </item>
+    
+    <item>
+      <title>CS190-lecture-20211025</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20211025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20211025/</guid>
+      <description>Prototyping #  </description>
+    </item>
+    
+    <item>
       <title>CS192-lecture-20210903</title>
       <link>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2546,6 +2616,15 @@ The key must be random and private, but the tweak is non-random and public.</des
       
       <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211008/</guid>
       <description>Introduction to Adaptive Leadership #  Speaker: Rabbil Green</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20211022</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211022/</guid>
+      <description>Leadership in a non-profit organization, when people, passion, and innovation make for good business #  Speaker: Tiffani Fink, Paratransit Inc.</description>
     </item>
     
     <item>
@@ -2627,6 +2706,51 @@ www.keil.com
       
       <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/</guid>
       <description>Course orientation #  File: m170-syllabus.pdf  Notes during orientation #   Will be some technology, matlab, wolfram alpha Lectures all online, synchronous Async videos may be posted  </description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211012</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211012/</guid>
+      <description>MATLAB #  An introduction #  File: m170-matlab-linprog.pdf  For example, lets define a vector
+x = [1 2 3] If we want to transpose x, we can use the &#39;:
+x&#39; Or we can define a column vector like:
+y=[1 2 3] which can also be defined with ;:
+y=[1;2;3] So, to define an entire matrix we can use a combination of both:
+A=[1 2 3; 4 5 6; 7 8 9] We can do some matrix multiplication:</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211020</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211020/</guid>
+      <description>Two phase procedure #  Unbounded LP problem example #  </description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211021</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211021/</guid>
+      <description>Two phase procedure cont. #  Last problem finished #  Detecting a non feasible region #  Can we recognize a non-feasible region using the two phase method?
+Phase one completes because we have all negative coefficients in the last row, but since   \( w \not = 0 \)  , there is no solution. We could solve this using Big M method where  \( s_4 &amp;gt; 0 \)  , and  \( z&amp;#39; = z &amp;#43; M s_4 \)  .</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211026</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211026/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211026/</guid>
+      <description>Sensitivity analysis cont. #  By increasing the right hand side of the   \( c_1 \)  constraint by 1 unit, we obtain a new  \( \tilde{z} \)  value of  \( \frac{108}{7} \)  .
+So the shadow price is  \( z - \tilde{z} = \frac{22}{7} \)  .
+Next, identify shadow prices from a completed simplex tableau:
+Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&#39; C=[-7 -6]&#39; lb=[0 0]&#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
     </item>
     
     <item>

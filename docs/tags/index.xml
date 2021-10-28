@@ -1060,6 +1060,15 @@
     </item>
     
     <item>
+      <title>greedy algorithms</title>
+      <link>http://zedchance.github.io/notes/tags/greedy-algorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/greedy-algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>groups</title>
       <link>http://zedchance.github.io/notes/tags/groups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1110,6 +1119,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>huffman codes</title>
+      <link>http://zedchance.github.io/notes/tags/huffman-codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/huffman-codes/</guid>
       <description></description>
     </item>
     
@@ -1443,6 +1461,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/market-failures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MATLAB</title>
+      <link>http://zedchance.github.io/notes/tags/MATLAB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/MATLAB/</guid>
       <description></description>
     </item>
     
@@ -2122,6 +2149,24 @@
     </item>
     
     <item>
+      <title>semaphores</title>
+      <link>http://zedchance.github.io/notes/tags/semaphores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/semaphores/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sensitivity analysis</title>
+      <link>http://zedchance.github.io/notes/tags/sensitivity-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/sensitivity-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sequential circuits</title>
       <link>http://zedchance.github.io/notes/tags/sequential-circuits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2329,6 +2374,15 @@
     </item>
     
     <item>
+      <title>synchronization</title>
+      <link>http://zedchance.github.io/notes/tags/synchronization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/synchronization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tag generators</title>
       <link>http://zedchance.github.io/notes/tags/tag-generators/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2446,6 +2500,15 @@
     </item>
     
     <item>
+      <title>two phase procedure</title>
+      <link>http://zedchance.github.io/notes/tags/two-phase-procedure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/two-phase-procedure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>UDP</title>
       <link>http://zedchance.github.io/notes/tags/UDP/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2505,6 +2568,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/user-stories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variable length encoding</title>
+      <link>http://zedchance.github.io/notes/tags/variable-length-encoding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/variable-length-encoding/</guid>
       <description></description>
     </item>
     
