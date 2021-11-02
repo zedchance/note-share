@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynamic programming on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/dynamic-programming/</link>
+    <description>Recent content in dynamic programming on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS140-lecture-20211101</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211101/</guid>
+      <description>Dynamic programming #  Dynamic programming is an algorithm design technique. In dynamic programming, you solve the problem bottom-up (as opposed to top-down in divide and conquer).
+Another trait of dynamic programming is that when a sub problem is solved, it is only solved once (which may not be the case in divide and conquer).
+ Notice that multiple sub problems are solved multipled times  Assembly line scheduling problem #      \( e_n \)  is the arrival time in assembly line  \( n \)    \( a_{i,j} \)  is the time it takes at station  \( j \)  in assembly line  \( i \)    \( t_{i,j} \)  is the transfer time  \( x_n \)  is the exit times for assembly line  \( n \)     the idea is that  \( a_{1,j} \)  has the optimal subproblem solution to  \( a_{1,j-1} \)  and the optimal subproblem solution to  \( a_{2,j-1} \)  in it  So in general</description>
+    </item>
+    
+  </channel>
+</rss>

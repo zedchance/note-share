@@ -60,5 +60,25 @@ Next, identify shadow prices from a completed simplex tableau:
 Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&#39; C=[-7 -6]&#39; lb=[0 0]&#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
     </item>
     
+    <item>
+      <title>MATH170-lecture-20211028</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211028/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211028/</guid>
+      <description>Sensitivity analysis cont. #  Recall previous example #  So how can we identify the shadow price when we have artificial variables by looking at the last row of the simplex tableau?
+Notice that moving the upper constraint up does not change the optimal solution at point   \( C \)  . But if you move the lower constraint up the optimal point will change.
+Correction:  \( x_5 \)  replaced  \( x_2 \)  , so the left hand side BV is labeled incorrect.</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-notes</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-notes/</guid>
+      <description>MATH170 lecture notes #  File: m170-lecture-notes.pdf  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -124,5 +124,16 @@ Then, after identifying the sum of each level of the tree, you then sum all the 
 Huffman codes #  The value at each node is the frequency of symbols in the subtree. The leaves represent symbols, and each left or right child represents a 0 or 1.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20211101</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211101/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211101/</guid>
+      <description>Dynamic programming #  Dynamic programming is an algorithm design technique. In dynamic programming, you solve the problem bottom-up (as opposed to top-down in divide and conquer).
+Another trait of dynamic programming is that when a sub problem is solved, it is only solved once (which may not be the case in divide and conquer).
+ Notice that multiple sub problems are solved multipled times  Assembly line scheduling problem #      \( e_n \)  is the arrival time in assembly line  \( n \)    \( a_{i,j} \)  is the time it takes at station  \( j \)  in assembly line  \( i \)    \( t_{i,j} \)  is the transfer time  \( x_n \)  is the exit times for assembly line  \( n \)     the idea is that  \( a_{1,j} \)  has the optimal subproblem solution to  \( a_{1,j-1} \)  and the optimal subproblem solution to  \( a_{2,j-1} \)  in it  So in general</description>
+    </item>
+    
   </channel>
 </rss>

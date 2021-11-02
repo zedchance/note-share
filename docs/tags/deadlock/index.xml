@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deadlock on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/deadlock/</link>
+    <description>Recent content in deadlock on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/deadlock/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20211028</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211028/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211028/</guid>
+      <description>Synchronization cont. #  Weakness of the semaphore #  In class exercises #   2 semaphores, 1 mutex semaphore allowing access to laoding zone, and 1 counting semaphore checking if there is a car waiting mutex initialized to 1 (unlocked) car counting semaphore initialized to   \( n \)     2 binary semaphores, with ping&amp;rsquo;s semaphore being set to 1 initially, and pong&amp;rsquo;s being set to 0.</description>
+    </item>
+    
+  </channel>
+</rss>
