@@ -39,5 +39,16 @@ Notice that moving the upper constraint up does not change the optimal solution 
 Correction:  \( x_5 \)  replaced  \( x_2 \)  , so the left hand side BV is labeled incorrect.</description>
     </item>
     
+    <item>
+      <title>MATH170-lecture-20211102</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211102/</guid>
+      <description>Sensitivity analysis using Delta method #  Since our new feasible region is smaller, we are getting a sub optimal result (because we are minimizing).
+For this impact of   \( \tilde{c_4} \)  on  \( z \)  , we need  \( \Delta \leq -20 \)  .
+ At  \( \Delta = -20 \)  ,  \( C=(10,20) \)  is still the optimal solution.</description>
+    </item>
+    
   </channel>
 </rss>

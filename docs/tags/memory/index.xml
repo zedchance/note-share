@@ -20,6 +20,15 @@ Peak memory bandwidth example #     \( 32\text{ bits} \cdot \frac{1\text{ byte} 
     </item>
     
     <item>
+      <title>CS139-lecture-20211109</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211109/</guid>
+      <description>Memory Management #   recall, CPU does not have direct access to the disk, it must use the bus   note that the OS itself is a program residing in memory  Addresses #   notice that logically, the address 99 and 100 are next to each other in the purple program. However, physically they are not adjacent (non contiguous).  There are other types of addresses:</description>
+    </item>
+    
+    <item>
       <title>CS152-lecture-20210601</title>
       <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -2204,6 +2204,37 @@ Bounded buffer problem #   full and empty are counting semaphores.  full notifie
     </item>
     
     <item>
+      <title>CS139-lecture-20211102</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211102/</guid>
+      <description>Deadlocks cont. #  Resource allocation graph cont. #     \( P_2 \)  and  \( P_4 \)  have the ability to exit, so the resources they hold will be allocated elsewhere. No deadlock.
+We can use a depth first search to look for cycles, to detect the possibility of deadlock.
+Methods for handling deadlocks #   to impose total order: if we have multiple resources, force process requests for resources in an increasing order of enumeration  So, from the example before, if we swap the order in which each thread obtains lock (so they request the locks in the same order), we eliminate the deadlock:</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211104</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211104/</guid>
+      <description>Deadlocks cont #  Banker&amp;rsquo;s algorithm cont. #  Recall that the safety subroutine simulates allocating all resources, and if able to if returns true (because it is considered a safe state). If it is unable to simulate allocating all resources, it will return false.
+The second subroutine of the Banker&amp;rsquo;s algorithm is the resource request:
+ simulates allocating resource requests by modifying the state of the process if safe, the resources can be allocated otherwise, it has to wait  Example using Banker&amp;rsquo;s algorithm #  So first we run the safety algorithm:</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211109</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211109/</guid>
+      <description>Memory Management #   recall, CPU does not have direct access to the disk, it must use the bus   note that the OS itself is a program residing in memory  Addresses #   notice that logically, the address 99 and 100 are next to each other in the purple program. However, physically they are not adjacent (non contiguous).  There are other types of addresses:</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2330,6 +2361,25 @@ Huffman codes #  The value at each node is the frequency of symbols in the subtr
       <description>Dynamic programming #  Dynamic programming is an algorithm design technique. In dynamic programming, you solve the problem bottom-up (as opposed to top-down in divide and conquer).
 Another trait of dynamic programming is that when a sub problem is solved, it is only solved once (which may not be the case in divide and conquer).
  Notice that multiple sub problems are solved multipled times  Assembly line scheduling problem #      \( e_n \)  is the arrival time in assembly line  \( n \)    \( a_{i,j} \)  is the time it takes at station  \( j \)  in assembly line  \( i \)    \( t_{i,j} \)  is the transfer time  \( x_n \)  is the exit times for assembly line  \( n \)     the idea is that  \( a_{1,j} \)  has the optimal subproblem solution to  \( a_{1,j-1} \)  and the optimal subproblem solution to  \( a_{2,j-1} \)  in it  So in general</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211108</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211108/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211108/</guid>
+      <description>Matrix-chain multiplication #   total time complexity of   \( \Theta(mnp) \)    Optimal parenthesization #   this results in exponential complexity  So let&amp;rsquo;s use dynamic programming:
+ make sure to start with the base case, when i = j, the main diagonal of the array   then, we can start to fill in the spaces to the top right of each base case.</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211110</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211110/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211110/</guid>
+      <description>Memoization #  Elements of dynamic programming #  Longest common subsequence #  </description>
     </item>
     
     <item>
@@ -2603,6 +2653,15 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS190-lecture-20211108</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20211108/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20211108/</guid>
+      <description>Day to day in software #  </description>
+    </item>
+    
+    <item>
       <title>CS192-lecture-20210903</title>
       <link>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2663,6 +2722,24 @@ The key must be random and private, but the tweak is non-random and public.</des
       
       <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211029/</guid>
       <description>Career Planning #  Speaker: Greg Kiefer</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20211105</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211105/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211105/</guid>
+      <description>Change management #  Speaker: Jessica Bagger, PhD</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20211112</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211112/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211112/</guid>
+      <description>Cyber Security: Career Opportunities #  Speaker: Shoba Mallarapu and Srinivas Atluri, Anvaya Solutions Inc.</description>
     </item>
     
     <item>
@@ -2800,6 +2877,40 @@ Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&#39; C=[-7 -6]&#39; lb=[0 0]&
       <description>Sensitivity analysis cont. #  Recall previous example #  So how can we identify the shadow price when we have artificial variables by looking at the last row of the simplex tableau?
 Notice that moving the upper constraint up does not change the optimal solution at point   \( C \)  . But if you move the lower constraint up the optimal point will change.
 Correction:  \( x_5 \)  replaced  \( x_2 \)  , so the left hand side BV is labeled incorrect.</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211102</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211102/</guid>
+      <description>Sensitivity analysis using Delta method #  Since our new feasible region is smaller, we are getting a sub optimal result (because we are minimizing).
+For this impact of   \( \tilde{c_4} \)  on  \( z \)  , we need  \( \Delta \leq -20 \)  .
+ At  \( \Delta = -20 \)  ,  \( C=(10,20) \)  is still the optimal solution.</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211104</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211104/</guid>
+      <description>Unrestricted variables in constraints #  In some scenarios, we may allow variables to be negative (like overdrawing an account).
+For example:
+Now we can solve this new extended problem using the simplex algorithm.</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211109</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211109/</guid>
+      <description>Duality #  So lets find the dual of a previous problem:
+This is the primal problem, so lets look at the corresponding dual problem:
+A dual problem is: another LP problem that is related to the primal problem with different constraints and objective function.
+ This will be a minimization problem (for a maximization primal problem) Two constraints of the primal yield two decision variables fo rthe dual, say   \( y_1 \)  and  \( y_2 \)   To determine the coefficients of the objective function, ie minimize  \[ v= ?</description>
     </item>
     
     <item>

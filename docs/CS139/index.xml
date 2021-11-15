@@ -170,5 +170,36 @@ Bounded buffer problem #   full and empty are counting semaphores.  full notifie
       <description>Synchronization cont. #  Weakness of the semaphore #  In class exercises #   2 semaphores, 1 mutex semaphore allowing access to laoding zone, and 1 counting semaphore checking if there is a car waiting mutex initialized to 1 (unlocked) car counting semaphore initialized to   \( n \)     2 binary semaphores, with ping&amp;rsquo;s semaphore being set to 1 initially, and pong&amp;rsquo;s being set to 0.</description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20211102</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211102/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211102/</guid>
+      <description>Deadlocks cont. #  Resource allocation graph cont. #     \( P_2 \)  and  \( P_4 \)  have the ability to exit, so the resources they hold will be allocated elsewhere. No deadlock.
+We can use a depth first search to look for cycles, to detect the possibility of deadlock.
+Methods for handling deadlocks #   to impose total order: if we have multiple resources, force process requests for resources in an increasing order of enumeration  So, from the example before, if we swap the order in which each thread obtains lock (so they request the locks in the same order), we eliminate the deadlock:</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211104</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211104/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211104/</guid>
+      <description>Deadlocks cont #  Banker&amp;rsquo;s algorithm cont. #  Recall that the safety subroutine simulates allocating all resources, and if able to if returns true (because it is considered a safe state). If it is unable to simulate allocating all resources, it will return false.
+The second subroutine of the Banker&amp;rsquo;s algorithm is the resource request:
+ simulates allocating resource requests by modifying the state of the process if safe, the resources can be allocated otherwise, it has to wait  Example using Banker&amp;rsquo;s algorithm #  So first we run the safety algorithm:</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211109</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211109/</guid>
+      <description>Memory Management #   recall, CPU does not have direct access to the disk, it must use the bus   note that the OS itself is a program residing in memory  Addresses #   notice that logically, the address 99 and 100 are next to each other in the purple program. However, physically they are not adjacent (non contiguous).  There are other types of addresses:</description>
+    </item>
+    
   </channel>
 </rss>

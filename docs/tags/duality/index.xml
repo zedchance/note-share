@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>duality on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/duality/</link>
+    <description>Recent content in duality on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/duality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH170-lecture-20211109</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211109/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211109/</guid>
+      <description>Duality #  So lets find the dual of a previous problem:
+This is the primal problem, so lets look at the corresponding dual problem:
+A dual problem is: another LP problem that is related to the primal problem with different constraints and objective function.
+ This will be a minimization problem (for a maximization primal problem) Two constraints of the primal yield two decision variables fo rthe dual, say   \( y_1 \)  and  \( y_2 \)   To determine the coefficients of the objective function, ie minimize  \[ v= ?</description>
+    </item>
+    
+  </channel>
+</rss>
