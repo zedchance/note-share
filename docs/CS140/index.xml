@@ -151,7 +151,16 @@ Another trait of dynamic programming is that when a sub problem is solved, it is
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211110/</guid>
-      <description>Memoization #  Elements of dynamic programming #  Longest common subsequence #  </description>
+      <description>Memoization #  Elements of dynamic programming #  Longest common subsequence #   base cases along left and top edge   see which subproblems are needed to solve current sub problem   our next level after base cases is the top left corner   nested loops   another order to solve   can also go by columns   overall runtime is   \( \Theta(n) \)  where  \( n = i &amp;#43; j \)  , the sum of the 2 sequences  My solution in Python  Output</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211117</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</guid>
+      <description>Some more dynamic programming examples #  Segmented least squares #   if we connected all points between each other, there would be zero error we want a trade off between accuracy and number of segments   imagine connecting the last 2 points, and then attaching it to the rest of the optimal solution or connecting the last 3 points and attaching it to the rest of the optimal solutions and so on&amp;hellip;  Weighted activity selection #      \( O(n \lg n) \)  complexity (sort)  The knapsack problem revisited #  Automated memoization #  Flow network #   notation is &amp;ldquo;capacity / flow&amp;rdquo;  Max flow #  Ford-Fulkerson method #   can increase flow by 5   lower path is not an augmenting edge, flow cannot increase   there is no augmenting path left (can&amp;rsquo;t find path from source to sink), so the max flow of the previous graph is the answer   the max flow of the network will be less than or equal to a cut   the max flow is the min cut  Edmonds-Karp algorithm #  Multiple sources or sinks #  Bipartite matching #  </description>
     </item>
     
   </channel>

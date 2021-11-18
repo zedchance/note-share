@@ -2235,6 +2235,17 @@ The second subroutine of the Banker&amp;rsquo;s algorithm is the resource reques
     </item>
     
     <item>
+      <title>CS139-lecture-20211116</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211116/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211116/</guid>
+      <description>Memory cont. #  Fragmentation #  The small 2B chunk will never be able to be used, and the sum of all of these small gaps in memory is wasted, called internal fragmentation.
+Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  One of the methods of implementing non-contiguous memory is segmentation.
+ an address may be something like &amp;lt;3, 14&amp;gt;, which represents segment 3 with a 14 byte offset another table keeps track of the segment&amp;rsquo;s addresses and lengths  Paging #   similar to segmentation, except that everything is divided into equal size blocks  Addressing #  VPN = &amp;ldquo;virtual page number&amp;rdquo;, PFN = &amp;ldquo;physical frame number&amp;rdquo;</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2379,7 +2390,16 @@ Another trait of dynamic programming is that when a sub problem is solved, it is
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211110/</guid>
-      <description>Memoization #  Elements of dynamic programming #  Longest common subsequence #  </description>
+      <description>Memoization #  Elements of dynamic programming #  Longest common subsequence #   base cases along left and top edge   see which subproblems are needed to solve current sub problem   our next level after base cases is the top left corner   nested loops   another order to solve   can also go by columns   overall runtime is   \( \Theta(n) \)  where  \( n = i &amp;#43; j \)  , the sum of the 2 sequences  My solution in Python  Output</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211117</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</guid>
+      <description>Some more dynamic programming examples #  Segmented least squares #   if we connected all points between each other, there would be zero error we want a trade off between accuracy and number of segments   imagine connecting the last 2 points, and then attaching it to the rest of the optimal solution or connecting the last 3 points and attaching it to the rest of the optimal solutions and so on&amp;hellip;  Weighted activity selection #      \( O(n \lg n) \)  complexity (sort)  The knapsack problem revisited #  Automated memoization #  Flow network #   notation is &amp;ldquo;capacity / flow&amp;rdquo;  Max flow #  Ford-Fulkerson method #   can increase flow by 5   lower path is not an augmenting edge, flow cannot increase   there is no augmenting path left (can&amp;rsquo;t find path from source to sink), so the max flow of the previous graph is the answer   the max flow of the network will be less than or equal to a cut   the max flow is the min cut  Edmonds-Karp algorithm #  Multiple sources or sinks #  Bipartite matching #  </description>
     </item>
     
     <item>
@@ -2662,6 +2682,15 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS190-lecture-20211115</title>
+      <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20211115/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20211115/</guid>
+      <description>Working as a software dev cont. #  </description>
+    </item>
+    
+    <item>
       <title>CS192-lecture-20210903</title>
       <link>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2911,6 +2940,15 @@ Now we can solve this new extended problem using the simplex algorithm.</descrip
 This is the primal problem, so lets look at the corresponding dual problem:
 A dual problem is: another LP problem that is related to the primal problem with different constraints and objective function.
  This will be a minimization problem (for a maximization primal problem) Two constraints of the primal yield two decision variables fo rthe dual, say   \( y_1 \)  and  \( y_2 \)   To determine the coefficients of the objective function, ie minimize  \[ v= ?</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211116</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211116/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211116/</guid>
+      <description>Duality cont. #   and   \( A \to A^T \)    Facts, properties, principals #   Observe that there is a connection between shadow prices and the dual problem. An optimal solution to the symmetric dual of a primal LP problem Let  \( \hat{x} \)  be a feasible solution to a primal problem in normal form with objective function  \[ z = \bar{C}^T \bar{x} \]  Let  \( \hat{y} \)  be a feasible solution to its symmetric dual problem with the objective function  \[ v=\bar{b}^T \bar{y} \]  Let  \[ \hat{z} = \bar{C}^T \bar{x} \]  and  \[ \hat{v} = \bar{b}^T \hat{y} \]  If  \( \hat{z} = \hat{v} \)  , then  \( \hat{x} \)  and  \( \hat{y} \)  are optimal solutions to their respective LP problem, and  \( \hat{z} = \hat{v} \)  is the optimal value for both problems.</description>
     </item>
     
     <item>

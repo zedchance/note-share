@@ -201,5 +201,16 @@ The second subroutine of the Banker&amp;rsquo;s algorithm is the resource reques
       <description>Memory Management #   recall, CPU does not have direct access to the disk, it must use the bus   note that the OS itself is a program residing in memory  Addresses #   notice that logically, the address 99 and 100 are next to each other in the purple program. However, physically they are not adjacent (non contiguous).  There are other types of addresses:</description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20211116</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211116/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211116/</guid>
+      <description>Memory cont. #  Fragmentation #  The small 2B chunk will never be able to be used, and the sum of all of these small gaps in memory is wasted, called internal fragmentation.
+Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  One of the methods of implementing non-contiguous memory is segmentation.
+ an address may be something like &amp;lt;3, 14&amp;gt;, which represents segment 3 with a 14 byte offset another table keeps track of the segment&amp;rsquo;s addresses and lengths  Paging #   similar to segmentation, except that everything is divided into equal size blocks  Addressing #  VPN = &amp;ldquo;virtual page number&amp;rdquo;, PFN = &amp;ldquo;physical frame number&amp;rdquo;</description>
+    </item>
+    
   </channel>
 </rss>

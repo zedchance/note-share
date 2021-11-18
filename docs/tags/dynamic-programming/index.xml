@@ -27,5 +27,14 @@ Another trait of dynamic programming is that when a sub problem is solved, it is
  make sure to start with the base case, when i = j, the main diagonal of the array   then, we can start to fill in the spaces to the top right of each base case.</description>
     </item>
     
+    <item>
+      <title>CS140-lecture-20211117</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</guid>
+      <description>Some more dynamic programming examples #  Segmented least squares #   if we connected all points between each other, there would be zero error we want a trade off between accuracy and number of segments   imagine connecting the last 2 points, and then attaching it to the rest of the optimal solution or connecting the last 3 points and attaching it to the rest of the optimal solutions and so on&amp;hellip;  Weighted activity selection #      \( O(n \lg n) \)  complexity (sort)  The knapsack problem revisited #  Automated memoization #  Flow network #   notation is &amp;ldquo;capacity / flow&amp;rdquo;  Max flow #  Ford-Fulkerson method #   can increase flow by 5   lower path is not an augmenting edge, flow cannot increase   there is no augmenting path left (can&amp;rsquo;t find path from source to sink), so the max flow of the previous graph is the answer   the max flow of the network will be less than or equal to a cut   the max flow is the min cut  Edmonds-Karp algorithm #  Multiple sources or sinks #  Bipartite matching #  </description>
+    </item>
+    
   </channel>
 </rss>
