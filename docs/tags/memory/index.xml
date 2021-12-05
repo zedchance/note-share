@@ -40,6 +40,15 @@ Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  On
     </item>
     
     <item>
+      <title>CS139-lecture-20211118</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</guid>
+      <description>Memory cont. #  Page tables / addressing cont. #   the more hierarchy you have, the more memory accesses you need  Hashed page tables #   we can use either method of resolving collision in the hash table: chaining or linear probing  Inverted page table #   instead of keep track of logical pages, we keep track of physical pages notice that we add a new field to the logical address: pid a linear search is involved at worst case, so the page table can be improved by using a hash table  Virtual memory #  Memory for the point of view of the program.</description>
+    </item>
+    
+    <item>
       <title>CS152-lecture-20210601</title>
       <link>http://zedchance.github.io/notes/CS152/CS152-lecture-20210601/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

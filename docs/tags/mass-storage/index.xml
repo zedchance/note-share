@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mass storage on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/mass-storage/</link>
+    <description>Recent content in mass storage on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/mass-storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20211202</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211202/</guid>
+      <description>Mass storage #  Magnetic disks #   we want to keep the same rate of data moving under the head.   a track is 2D but the entire disk is 3D  Watch: Inside of a hard disk drive  Disk performance #   seek and rotate times dominate the total latency hard disks are at the milisecond level  Disk history #  Solid state disks #   SSDs are generally faster because they do not have any moving parts, thus no seek and rotate times, this greatly speeds up the total latency SSDs are at the microsecond level  Magnetic tape #   magnetic tape remains in use today as a tertiary storage ideal for backup/logs  Disks vs memory #  Disk scheduling #  The one component of disk latency that we have the ability to optimize is the seek time.</description>
+    </item>
+    
+  </channel>
+</rss>

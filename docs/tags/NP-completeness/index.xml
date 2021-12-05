@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NP-completeness on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/NP-completeness/</link>
+    <description>Recent content in NP-completeness on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/NP-completeness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS140-lecture-20211129</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</guid>
+      <description>NP-completeness #  Hamiltonian cycles #  An example of a problem that cannot be solved in polynomial time.
+P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  </description>
+    </item>
+    
+  </channel>
+</rss>

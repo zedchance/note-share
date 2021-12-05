@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>virtual memory on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/virtual-memory/</link>
+    <description>Recent content in virtual memory on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/virtual-memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20211118</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</guid>
+      <description>Memory cont. #  Page tables / addressing cont. #   the more hierarchy you have, the more memory accesses you need  Hashed page tables #   we can use either method of resolving collision in the hash table: chaining or linear probing  Inverted page table #   instead of keep track of logical pages, we keep track of physical pages notice that we add a new field to the logical address: pid a linear search is involved at worst case, so the page table can be improved by using a hash table  Virtual memory #  Memory for the point of view of the program.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211123</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211123/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211123/</guid>
+      <description>Virtual memory cont. #  Page replacement algorithms cont. #  Recall:
+ FIFO looks at the time the page was initially brought in LRU looks at the last time the page was accessed  Implementing LRU (least recently used)
+ counter implementation has an exhaustive search, so   \( \Theta(n) \)  runtime stack implementation has the least recently used at the bottom of the stack, each update is expensive because items are moved to the top of the stack when replaced   circles indicate page fault top shows 3 frame memory, bottom shows 4 frame memory, for comparison   second chance is like a warning before an eviction  </description>
+    </item>
+    
+  </channel>
+</rss>

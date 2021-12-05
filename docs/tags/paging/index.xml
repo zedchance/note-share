@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>paging on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/paging/</link>
+    <description>Recent content in paging on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/paging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS139-lecture-20211116</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211116/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211116/</guid>
+      <description>Memory cont. #  Fragmentation #  The small 2B chunk will never be able to be used, and the sum of all of these small gaps in memory is wasted, called internal fragmentation.
+Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  One of the methods of implementing non-contiguous memory is segmentation.
+ an address may be something like &amp;lt;3, 14&amp;gt;, which represents segment 3 with a 14 byte offset another table keeps track of the segment&amp;rsquo;s addresses and lengths  Paging #   similar to segmentation, except that everything is divided into equal size blocks  Addressing #  VPN = &amp;ldquo;virtual page number&amp;rdquo;, PFN = &amp;ldquo;physical frame number&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211118</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</guid>
+      <description>Memory cont. #  Page tables / addressing cont. #   the more hierarchy you have, the more memory accesses you need  Hashed page tables #   we can use either method of resolving collision in the hash table: chaining or linear probing  Inverted page table #   instead of keep track of logical pages, we keep track of physical pages notice that we add a new field to the logical address: pid a linear search is involved at worst case, so the page table can be improved by using a hash table  Virtual memory #  Memory for the point of view of the program.</description>
+    </item>
+    
+  </channel>
+</rss>

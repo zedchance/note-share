@@ -27,5 +27,15 @@ A dual problem is: another LP problem that is related to the primal problem with
       <description>Duality cont. #   and   \( A \to A^T \)    Facts, properties, principals #   Observe that there is a connection between shadow prices and the dual problem. An optimal solution to the symmetric dual of a primal LP problem Let  \( \hat{x} \)  be a feasible solution to a primal problem in normal form with objective function  \[ z = \bar{C}^T \bar{x} \]  Let  \( \hat{y} \)  be a feasible solution to its symmetric dual problem with the objective function  \[ v=\bar{b}^T \bar{y} \]  Let  \[ \hat{z} = \bar{C}^T \bar{x} \]  and  \[ \hat{v} = \bar{b}^T \hat{y} \]  If  \( \hat{z} = \hat{v} \)  , then  \( \hat{x} \)  and  \( \hat{y} \)  are optimal solutions to their respective LP problem, and  \( \hat{z} = \hat{v} \)  is the optimal value for both problems.</description>
     </item>
     
+    <item>
+      <title>MATH170-lecture-20211130</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211130/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211130/</guid>
+      <description>The group assignment is related to the example we&amp;rsquo;ll discuss today.
+Duality finished up #  Auto trailers example #   the shadow prices of the primal problem are the optimal solution to the dual problem   since   \( \bar{x_1} \)  and  \( \bar{x_2} \)  are non-zero,  \( \bar{c_1} \)  and  \( \bar{c_3} \)  hold with equality  Another example #  Network models #   9 nodes 10 arcs  An example with two sources and three sinks #  Next time:</description>
+    </item>
+    
   </channel>
 </rss>

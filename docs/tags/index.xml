@@ -664,15 +664,6 @@
     </item>
     
     <item>
-      <title>deadlocks</title>
-      <link>http://zedchance.github.io/notes/tags/deadlocks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://zedchance.github.io/notes/tags/deadlocks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>delay</title>
       <link>http://zedchance.github.io/notes/tags/delay/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1537,6 +1528,15 @@
     </item>
     
     <item>
+      <title>mass storage</title>
+      <link>http://zedchance.github.io/notes/tags/mass-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/mass-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>MATLAB</title>
       <link>http://zedchance.github.io/notes/tags/MATLAB/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1726,6 +1726,15 @@
     </item>
     
     <item>
+      <title>network models</title>
+      <link>http://zedchance.github.io/notes/tags/network-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/network-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>network security</title>
       <link>http://zedchance.github.io/notes/tags/network-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1740,6 +1749,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/normalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NP-completeness</title>
+      <link>http://zedchance.github.io/notes/tags/NP-completeness/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/NP-completeness/</guid>
       <description></description>
     </item>
     
@@ -1803,6 +1821,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/padding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paging</title>
+      <link>http://zedchance.github.io/notes/tags/paging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/paging/</guid>
       <description></description>
     </item>
     
@@ -2676,6 +2703,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/tags/virtual-circuits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual memory</title>
+      <link>http://zedchance.github.io/notes/tags/virtual-memory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/tags/virtual-memory/</guid>
       <description></description>
     </item>
     

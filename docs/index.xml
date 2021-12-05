@@ -2246,6 +2246,35 @@ Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  On
     </item>
     
     <item>
+      <title>CS139-lecture-20211118</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211118/</guid>
+      <description>Memory cont. #  Page tables / addressing cont. #   the more hierarchy you have, the more memory accesses you need  Hashed page tables #   we can use either method of resolving collision in the hash table: chaining or linear probing  Inverted page table #   instead of keep track of logical pages, we keep track of physical pages notice that we add a new field to the logical address: pid a linear search is involved at worst case, so the page table can be improved by using a hash table  Virtual memory #  Memory for the point of view of the program.</description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211123</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211123/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211123/</guid>
+      <description>Virtual memory cont. #  Page replacement algorithms cont. #  Recall:
+ FIFO looks at the time the page was initially brought in LRU looks at the last time the page was accessed  Implementing LRU (least recently used)
+ counter implementation has an exhaustive search, so   \( \Theta(n) \)  runtime stack implementation has the least recently used at the bottom of the stack, each update is expensive because items are moved to the top of the stack when replaced   circles indicate page fault top shows 3 frame memory, bottom shows 4 frame memory, for comparison   second chance is like a warning before an eviction  </description>
+    </item>
+    
+    <item>
+      <title>CS139-lecture-20211202</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211202/</guid>
+      <description>Mass storage #  Magnetic disks #   we want to keep the same rate of data moving under the head.   a track is 2D but the entire disk is 3D  Watch: Inside of a hard disk drive  Disk performance #   seek and rotate times dominate the total latency hard disks are at the milisecond level  Disk history #  Solid state disks #   SSDs are generally faster because they do not have any moving parts, thus no seek and rotate times, this greatly speeds up the total latency SSDs are at the microsecond level  Magnetic tape #   magnetic tape remains in use today as a tertiary storage ideal for backup/logs  Disks vs memory #  Disk scheduling #  The one component of disk latency that we have the ability to optimize is the seek time.</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2400,6 +2429,16 @@ Another trait of dynamic programming is that when a sub problem is solved, it is
       
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211117/</guid>
       <description>Some more dynamic programming examples #  Segmented least squares #   if we connected all points between each other, there would be zero error we want a trade off between accuracy and number of segments   imagine connecting the last 2 points, and then attaching it to the rest of the optimal solution or connecting the last 3 points and attaching it to the rest of the optimal solutions and so on&amp;hellip;  Weighted activity selection #      \( O(n \lg n) \)  complexity (sort)  The knapsack problem revisited #  Automated memoization #  Flow network #   notation is &amp;ldquo;capacity / flow&amp;rdquo;  Max flow #  Ford-Fulkerson method #   can increase flow by 5   lower path is not an augmenting edge, flow cannot increase   there is no augmenting path left (can&amp;rsquo;t find path from source to sink), so the max flow of the previous graph is the answer   the max flow of the network will be less than or equal to a cut   the max flow is the min cut  Edmonds-Karp algorithm #  Multiple sources or sinks #  Bipartite matching #  </description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211129</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</guid>
+      <description>NP-completeness #  Hamiltonian cycles #  An example of a problem that cannot be solved in polynomial time.
+P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  </description>
     </item>
     
     <item>
@@ -2772,6 +2811,25 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS192-seminar-20211119</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211119/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211119/</guid>
+      <description>Unleashing the Leadership Qualities Within You #  Speaker: Liana Bailey-Crimmins</description>
+    </item>
+    
+    <item>
+      <title>CS192-seminar-20211203</title>
+      <link>http://zedchance.github.io/notes/CS192/CS192-seminar-20211203/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS192/CS192-seminar-20211203/</guid>
+      <description>Conversational AI #  Speaker: Venky Krishnawamy
+ can a virtual assistant resolve the customer&amp;rsquo;s problem?   can CSRs be assisted or trained so they can provide better service?  </description>
+    </item>
+    
+    <item>
       <title>CS26-lecture-notes</title>
       <link>http://zedchance.github.io/notes/CS26/CS26-lecture-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2949,6 +3007,25 @@ A dual problem is: another LP problem that is related to the primal problem with
       
       <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211116/</guid>
       <description>Duality cont. #   and   \( A \to A^T \)    Facts, properties, principals #   Observe that there is a connection between shadow prices and the dual problem. An optimal solution to the symmetric dual of a primal LP problem Let  \( \hat{x} \)  be a feasible solution to a primal problem in normal form with objective function  \[ z = \bar{C}^T \bar{x} \]  Let  \( \hat{y} \)  be a feasible solution to its symmetric dual problem with the objective function  \[ v=\bar{b}^T \bar{y} \]  Let  \[ \hat{z} = \bar{C}^T \bar{x} \]  and  \[ \hat{v} = \bar{b}^T \hat{y} \]  If  \( \hat{z} = \hat{v} \)  , then  \( \hat{x} \)  and  \( \hat{y} \)  are optimal solutions to their respective LP problem, and  \( \hat{z} = \hat{v} \)  is the optimal value for both problems.</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211130</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211130/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211130/</guid>
+      <description>The group assignment is related to the example we&amp;rsquo;ll discuss today.
+Duality finished up #  Auto trailers example #   the shadow prices of the primal problem are the optimal solution to the dual problem   since   \( \bar{x_1} \)  and  \( \bar{x_2} \)  are non-zero,  \( \bar{c_1} \)  and  \( \bar{c_3} \)  hold with equality  Another example #  Network models #   9 nodes 10 arcs  An example with two sources and three sinks #  Next time:</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211202</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211202/</guid>
+      <description>Network models cont. #  Compressor shipment example #   note that this problem only has equality constraints, which makes it a bit easier for us to use technology   as we can see, this is very involved when trying the simplex method with this dimension  There are other approaches to simplify the simplex tableaus (procedures), at least in obtaining a more efficient initial BFS which is somewhat close to the optimal solution.</description>
     </item>
     
     <item>
@@ -3218,8 +3295,7 @@ Graph the data, find the x intercept, and that should be near absolute zero. Com
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/PHYS105/PHYS105-lecture-20200326/</guid>
-      <description>Anouncements #   HW 12 CH6 due tues HW 13 Office hour tomorrow at 11am We will meet for lab today (either meeting) Spring break is coming  Clicker question notes #  $$ \Sigma F = ma \
-\Sigma F = -mgy $$
+      <description>Anouncements #   HW 12 CH6 due tues HW 13 Office hour tomorrow at 11am We will meet for lab today (either meeting) Spring break is coming  Clicker question notes #  $$ \Sigma F = ma \ \Sigma F = -mgy $$
 In circular motion the direction of the velocity is tangent to the circle.
 Circular motion and Gravity #  Major topics
  Uniform circular motion Centripetal acceleration Gravitation  Circular motion #  Objects moving in a circular path are accelerating.</description>

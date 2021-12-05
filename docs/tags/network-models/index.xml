@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>network models on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/network-models/</link>
+    <description>Recent content in network models on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/network-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH170-lecture-20211130</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211130/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211130/</guid>
+      <description>The group assignment is related to the example we&amp;rsquo;ll discuss today.
+Duality finished up #  Auto trailers example #   the shadow prices of the primal problem are the optimal solution to the dual problem   since   \( \bar{x_1} \)  and  \( \bar{x_2} \)  are non-zero,  \( \bar{c_1} \)  and  \( \bar{c_3} \)  hold with equality  Another example #  Network models #   9 nodes 10 arcs  An example with two sources and three sinks #  Next time:</description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211202</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211202/</guid>
+      <description>Network models cont. #  Compressor shipment example #   note that this problem only has equality constraints, which makes it a bit easier for us to use technology   as we can see, this is very involved when trying the simplex method with this dimension  There are other approaches to simplify the simplex tableaus (procedures), at least in obtaining a more efficient initial BFS which is somewhat close to the optimal solution.</description>
+    </item>
+    
+  </channel>
+</rss>
