@@ -2275,6 +2275,16 @@ Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  On
     </item>
     
     <item>
+      <title>CS139-lecture-20211207</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211207/</guid>
+      <description>Disk scheduling exercise #  File systems #  The file system is an abstraction of the collection of disk blocks.
+Requirements on data #  Files #  File names #   inode = index node  Interface to file system #  Directories #   requires unique filenames   requires unique pathnames   this allows multiple users to work on the same file (groups) recall &amp;ldquo;acyclic&amp;rdquo; means the graph does not contain a cycle  Directory operations #  </description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2438,7 +2448,18 @@ Another trait of dynamic programming is that when a sub problem is solved, it is
       
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</guid>
       <description>NP-completeness #  Hamiltonian cycles #  An example of a problem that cannot be solved in polynomial time.
-P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  </description>
+P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  Reduction examples #  Directed hamiltonian cycle to undirected hamiltonian cycle #  It is easier to go the other way (for any undirected edge, we just make it directed in both directions).</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211207</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211207/</guid>
+      <description>More reduction examples #  The SAT problem #  One of the first problems to be proved NP-Complete.
+Both parts highlighted in red must be true. It is easy to make the right side false by setting   \( x_2 \)  to false.
+Note that the red circled part cannot be true, and since it is being OR&amp;rsquo;d we need to make sure that the left side is true.</description>
     </item>
     
     <item>
@@ -2902,6 +2923,15 @@ www.keil.com
     </item>
     
     <item>
+      <title>MATH170-latex-notes</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-latex-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-latex-notes/</guid>
+      <description>MATH170 lecture notes #  File: m170-lecture-notes.pdf  </description>
+    </item>
+    
+    <item>
       <title>MATH170-lecture-20210831</title>
       <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3029,12 +3059,13 @@ Duality finished up #  Auto trailers example #   the shadow prices of the primal
     </item>
     
     <item>
-      <title>MATH170-lecture-notes</title>
-      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-notes/</link>
+      <title>MATH170-lecture-20211207</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211207/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-notes/</guid>
-      <description>MATH170 lecture notes #  File: m170-lecture-notes.pdf  </description>
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211207/</guid>
+      <description>Last problem #  Recall the problem we worked on using &amp;ldquo;northwest corner&amp;rdquo; method to get the BFS:
+ similar to northwest corner, except that we choose the lowest cost cells first  Shortest path problem #  </description>
     </item>
     
     <item>

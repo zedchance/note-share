@@ -170,7 +170,18 @@ Another trait of dynamic programming is that when a sub problem is solved, it is
       
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</guid>
       <description>NP-completeness #  Hamiltonian cycles #  An example of a problem that cannot be solved in polynomial time.
-P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  </description>
+P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  Reduction examples #  Directed hamiltonian cycle to undirected hamiltonian cycle #  It is easier to go the other way (for any undirected edge, we just make it directed in both directions).</description>
+    </item>
+    
+    <item>
+      <title>CS140-lecture-20211207</title>
+      <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20211207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211207/</guid>
+      <description>More reduction examples #  The SAT problem #  One of the first problems to be proved NP-Complete.
+Both parts highlighted in red must be true. It is easy to make the right side false by setting   \( x_2 \)  to false.
+Note that the red circled part cannot be true, and since it is being OR&amp;rsquo;d we need to make sure that the left side is true.</description>
     </item>
     
   </channel>

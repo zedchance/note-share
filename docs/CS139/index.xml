@@ -241,5 +241,15 @@ Compaction #   compaction is expensive to invoke  Swapping #  Segmentation #  On
       <description>Mass storage #  Magnetic disks #   we want to keep the same rate of data moving under the head.   a track is 2D but the entire disk is 3D  Watch: Inside of a hard disk drive  Disk performance #   seek and rotate times dominate the total latency hard disks are at the milisecond level  Disk history #  Solid state disks #   SSDs are generally faster because they do not have any moving parts, thus no seek and rotate times, this greatly speeds up the total latency SSDs are at the microsecond level  Magnetic tape #   magnetic tape remains in use today as a tertiary storage ideal for backup/logs  Disks vs memory #  Disk scheduling #  The one component of disk latency that we have the ability to optimize is the seek time.</description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20211207</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211207/</guid>
+      <description>Disk scheduling exercise #  File systems #  The file system is an abstraction of the collection of disk blocks.
+Requirements on data #  Files #  File names #   inode = index node  Interface to file system #  Directories #   requires unique filenames   requires unique pathnames   this allows multiple users to work on the same file (groups) recall &amp;ldquo;acyclic&amp;rdquo; means the graph does not contain a cycle  Directory operations #  </description>
+    </item>
+    
   </channel>
 </rss>

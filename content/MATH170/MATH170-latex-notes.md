@@ -1,5 +1,5 @@
 ---
-title: "MATH170-lecture-notes"
+title: "MATH170-latex-notes"
 # date: 2021-10-28T14:46:56-07:00
 draft: false
 bookToc: true

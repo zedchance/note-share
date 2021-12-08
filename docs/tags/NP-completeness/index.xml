@@ -13,7 +13,7 @@
       
       <guid>http://zedchance.github.io/notes/CS140/CS140-lecture-20211129/</guid>
       <description>NP-completeness #  Hamiltonian cycles #  An example of a problem that cannot be solved in polynomial time.
-P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  </description>
+P and NP #  Terminology #  Reduction #   should first show that   \( P \in NP \)    NP-Hard #   NP-Hard problems are at least as hard as NP-Complete problems  Why prove NP-completeness? #  NP-Complete Examples #  Reduction examples #  Directed hamiltonian cycle to undirected hamiltonian cycle #  It is easier to go the other way (for any undirected edge, we just make it directed in both directions).</description>
     </item>
     
   </channel>
