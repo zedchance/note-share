@@ -16,5 +16,17 @@
 Requirements on data #  Files #  File names #   inode = index node  Interface to file system #  Directories #   requires unique filenames   requires unique pathnames   this allows multiple users to work on the same file (groups) recall &amp;ldquo;acyclic&amp;rdquo; means the graph does not contain a cycle  Directory operations #  </description>
     </item>
     
+    <item>
+      <title>CS139-lecture-20211209</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211209/</guid>
+      <description>File systems cont. #  Protection #  These permissions are implemented as an ACL (access control list). This keeps track of the capability of every object.
+Other systems keep track of the capability of every subject.
+Why do most OS choose ACL? (Associating permission with the object, compared to associating permission with the subjects).
+Organization #  Note: The linear list implementation can be done using a B+ tree.  Allocation #   Contiguous allocation works well with spinning disk memory (no giant leaps) but suffers greatly from external fragmentation   this is the file system used by linux   linked files is a non-contiguous allocation no more external fragmentation sequential access is easy random access is still a linear operation lots of physical movement for spinnning disks   maintain head and tail (to add to end)   File-Allocation Table = FAT, an example of the linked allocation.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -2285,6 +2285,18 @@ Requirements on data #  Files #  File names #   inode = index node  Interface to
     </item>
     
     <item>
+      <title>CS139-lecture-20211209</title>
+      <link>http://zedchance.github.io/notes/CS139/CS139-lecture-20211209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211209/</guid>
+      <description>File systems cont. #  Protection #  These permissions are implemented as an ACL (access control list). This keeps track of the capability of every object.
+Other systems keep track of the capability of every subject.
+Why do most OS choose ACL? (Associating permission with the object, compared to associating permission with the subjects).
+Organization #  Note: The linear list implementation can be done using a B+ tree.  Allocation #   Contiguous allocation works well with spinning disk memory (no giant leaps) but suffers greatly from external fragmentation   this is the file system used by linux   linked files is a non-contiguous allocation no more external fragmentation sequential access is easy random access is still a linear operation lots of physical movement for spinnning disks   maintain head and tail (to add to end)   File-Allocation Table = FAT, an example of the linked allocation.</description>
+    </item>
+    
+    <item>
       <title>CS140-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS140/CS140-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3066,6 +3078,15 @@ Duality finished up #  Auto trailers example #   the shadow prices of the primal
       <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211207/</guid>
       <description>Last problem #  Recall the problem we worked on using &amp;ldquo;northwest corner&amp;rdquo; method to get the BFS:
  similar to northwest corner, except that we choose the lowest cost cells first  Shortest path problem #  </description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211209</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211209/</guid>
+      <description>Shortest path problem cont. #  Example from mock final #   the dummy line is to balance the supply/demand  The runtime complexity of this method is   \( O(2^n) \)  , there are some faster methods:</description>
     </item>
     
     <item>

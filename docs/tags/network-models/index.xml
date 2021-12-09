@@ -25,5 +25,24 @@ Duality finished up #  Auto trailers example #   the shadow prices of the primal
       <description>Network models cont. #  Compressor shipment example #   note that this problem only has equality constraints, which makes it a bit easier for us to use technology   as we can see, this is very involved when trying the simplex method with this dimension  There are other approaches to simplify the simplex tableaus (procedures), at least in obtaining a more efficient initial BFS which is somewhat close to the optimal solution.</description>
     </item>
     
+    <item>
+      <title>MATH170-lecture-20211207</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211207/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211207/</guid>
+      <description>Last problem #  Recall the problem we worked on using &amp;ldquo;northwest corner&amp;rdquo; method to get the BFS:
+ similar to northwest corner, except that we choose the lowest cost cells first  Shortest path problem #  </description>
+    </item>
+    
+    <item>
+      <title>MATH170-lecture-20211209</title>
+      <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211209/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211209/</guid>
+      <description>Shortest path problem cont. #  Example from mock final #   the dummy line is to balance the supply/demand  The runtime complexity of this method is   \( O(2^n) \)  , there are some faster methods:</description>
+    </item>
+    
   </channel>
 </rss>
