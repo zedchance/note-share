@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CS177 on Notes</title>
+    <link>http://zedchance.github.io/notes/CS177/</link>
+    <description>Recent content in CS177 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/CS177/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS177-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220125/</guid>
+      <description>Data Mining #  Syllabus #  File: 177-syllabus.pdf  Notes during orientation #   Programming assignments will be in Python Most of the programming assignments are from past TAs Fundamental machine learning Slides are in files on canvas Book resources Lab attendance is required, .ipynb files on canvas  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220127</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220127/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220127/</guid>
+      <description>Exploring data #  Ultimately, any machine learning is just optimizing error in a graph, then deriving a function that fits to the data.
+Read more about John Tukey
+Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Statistics definitions #   ordinal means that the data can be ordered continuous means that the values are floating point      \( \text{AAD} (x) \)  is the absolute distance  \( \text{MAD} (x) \)  is the median dependent value  Visualization #  </description>
+    </item>
+    
+  </channel>
+</rss>

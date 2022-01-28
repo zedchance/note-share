@@ -74,6 +74,34 @@ Module 1 #  Test cases will usually be provided.</description>
     </item>
     
     <item>
+      <title>CS177-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220125/</guid>
+      <description>Data Mining #  Syllabus #  File: 177-syllabus.pdf  Notes during orientation #   Programming assignments will be in Python Most of the programming assignments are from past TAs Fundamental machine learning Slides are in files on canvas Book resources Lab attendance is required, .ipynb files on canvas  </description>
+    </item>
+    
+    <item>
+      <title>CS191-lecture-20220126</title>
+      <link>http://zedchance.github.io/notes/CS191/CS191-lecture-20220126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220126/</guid>
+      <description>Senior Project, Part 2 #  Syllabus #  File: 191-syllabus.pdf  Notes during orientation #   attend either Zoom lecture  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220125/</guid>
+      <description>Number Theory #  Syllabus #  File: math102-syllabus.pdf  Notes during orientation #   No complex numbers in this class If we use the variable   \( n \)  , it is assumed it is an integer  \( p \)  assumes a prime number  Warm up #  Breakdown according to oldest age:
+ note that 36 appears twice, since Mary needs more time to figure it out it must be this value When Rafael talks about his &amp;ldquo;eldest&amp;rdquo; son that means that one son is older than the rest, so the answer is 9 2 2  Important sets #    \( \mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, 3, \ldots\} \)  , the set of all integers.</description>
+    </item>
+    
+    <item>
       <title>MATH170-lecture-20210831</title>
       <link>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20210831/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

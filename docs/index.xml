@@ -2180,7 +2180,7 @@ Multilevel queue #  Scheduling in Linux (CFS) #  Priority levels are 0-139.</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20211021/</guid>
-      <description>Process synchronization #  Race condition #  Critical selection and mutual exclusion #  In the above code examples, the counter++ and counter-- are considered a critical section.
+      <description>Process synchronization #  Race condition #  Critical section and mutual exclusion #  In the above code examples, the counter++ and counter-- are considered a critical section.
 How to implement mutual exclusion #  Note: This solution isn&amp;rsquo;t fully correct.  producer: while (lock == 0) lock = 1 put lock = 0 consumer: while (lock == 0) lock = 1 fetch lock = 0 The problem with this code is that if the OS does a context switch during a critical section, it can create an error.</description>
     </item>
     
@@ -2670,6 +2670,26 @@ The key must be random and private, but the tweak is non-random and public.</des
     </item>
     
     <item>
+      <title>CS177-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220125/</guid>
+      <description>Data Mining #  Syllabus #  File: 177-syllabus.pdf  Notes during orientation #   Programming assignments will be in Python Most of the programming assignments are from past TAs Fundamental machine learning Slides are in files on canvas Book resources Lab attendance is required, .ipynb files on canvas  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220127</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220127/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220127/</guid>
+      <description>Exploring data #  Ultimately, any machine learning is just optimizing error in a graph, then deriving a function that fits to the data.
+Read more about John Tukey
+Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Statistics definitions #   ordinal means that the data can be ordered continuous means that the values are floating point      \( \text{AAD} (x) \)  is the absolute distance  \( \text{MAD} (x) \)  is the median dependent value  Visualization #  </description>
+    </item>
+    
+    <item>
       <title>CS190-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2760,6 +2780,15 @@ The key must be random and private, but the tweak is non-random and public.</des
       
       <guid>http://zedchance.github.io/notes/CS190/CS190-lecture-20211115/</guid>
       <description>Working as a software dev cont. #  </description>
+    </item>
+    
+    <item>
+      <title>CS191-lecture-20220126</title>
+      <link>http://zedchance.github.io/notes/CS191/CS191-lecture-20220126/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220126/</guid>
+      <description>Senior Project, Part 2 #  Syllabus #  File: 191-syllabus.pdf  Notes during orientation #   attend either Zoom lecture  </description>
     </item>
     
     <item>
@@ -2932,6 +2961,26 @@ www.keil.com
       
       <guid>http://zedchance.github.io/notes/MATH100/MATH100-lecture-notes/</guid>
       <description>Math 100 lecture notes #  File: MATH100-lecture-notes.pdf  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220125/</guid>
+      <description>Number Theory #  Syllabus #  File: math102-syllabus.pdf  Notes during orientation #   No complex numbers in this class If we use the variable   \( n \)  , it is assumed it is an integer  \( p \)  assumes a prime number  Warm up #  Breakdown according to oldest age:
+ note that 36 appears twice, since Mary needs more time to figure it out it must be this value When Rafael talks about his &amp;ldquo;eldest&amp;rdquo; son that means that one son is older than the rest, so the answer is 9 2 2  Important sets #    \( \mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, 3, \ldots\} \)  , the set of all integers.</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220127</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220127/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220127/</guid>
+      <description>The language of divisibility #  The following 7 statements are equivalent:
+ 18 is divisible by 6 18 is a multiple of 6 6 is a factor or divisor of 18 6 goes into 18, or 6 divides 18    \( \frac{18}{6} \)  is a whole number 18 is equal to 6 times a whole number, which is the same as saying there is  \( 18 = 6k \)  for some  \( k \in \mathbb{Z} \)   In the long division of 18 by 6, the remainder is 0.</description>
     </item>
     
     <item>
@@ -3639,6 +3688,15 @@ Shiney side will reflect more, so shiny side in lets heat thru then traps it ins
       <guid>http://zedchance.github.io/notes/PHYS105/PHYS105-recitation-20200514/</guid>
       <description>HW 22 #  4 #  Solve for (T_H)
 10 #  HW 21 #  2 #  Quiz 11 #  Calculate the value (P_A) and the circled empty values of the table:</description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220125/</guid>
+      <description>Leisure, the Individual, and Contemporary Society #  Syllabus #  File: rpta125-syllabus.pdf  Notes during orientation #   the greyed out rows on the tentative schedule in the syllabus are weeks when we don&amp;rsquo;t meet via Zoom   minimum of 5000 words total for the class broken up into smaller assignments 2 large papers, several smaller papers, several discussions  </description>
     </item>
     
     <item>

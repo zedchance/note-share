@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MATH102 on Notes</title>
+    <link>http://zedchance.github.io/notes/MATH102/</link>
+    <description>Recent content in MATH102 on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/MATH102/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH102-lecture-20220125</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220125/</guid>
+      <description>Number Theory #  Syllabus #  File: math102-syllabus.pdf  Notes during orientation #   No complex numbers in this class If we use the variable   \( n \)  , it is assumed it is an integer  \( p \)  assumes a prime number  Warm up #  Breakdown according to oldest age:
+ note that 36 appears twice, since Mary needs more time to figure it out it must be this value When Rafael talks about his &amp;ldquo;eldest&amp;rdquo; son that means that one son is older than the rest, so the answer is 9 2 2  Important sets #    \( \mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, 3, \ldots\} \)  , the set of all integers.</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220127</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220127/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220127/</guid>
+      <description>The language of divisibility #  The following 7 statements are equivalent:
+ 18 is divisible by 6 18 is a multiple of 6 6 is a factor or divisor of 18 6 goes into 18, or 6 divides 18    \( \frac{18}{6} \)  is a whole number 18 is equal to 6 times a whole number, which is the same as saying there is  \( 18 = 6k \)  for some  \( k \in \mathbb{Z} \)   In the long division of 18 by 6, the remainder is 0.</description>
+    </item>
+    
+  </channel>
+</rss>
