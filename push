@@ -1,7 +1,9 @@
+#!/bin/bash
 # Helper script to push notes
 set -e
 hugo -d docs --cleanDestinationDir
 git status -sb
 git add content docs
-git commit -m "Update `date`"
+git commit -m "Update $(date)"
 git push
+
