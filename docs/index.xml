@@ -2690,6 +2690,24 @@ Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Stati
     </item>
     
     <item>
+      <title>CS177-lecture-20220202</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220202/</guid>
+      <description>Exploratory analysis cont. #  Representing data cont. #  Analyzing data #  Mining introduction #  Tasks #   anomaly detection is relatively new  Classification #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220203</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220203/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220203/</guid>
+      <description>Data exploration cont. #  Classification cont. #  Regression #  Clustering #  Association #  Deviation / anomaly / change detection #  Challenges #   the concept of neural networks has been around for a long time, however only because of recent computational power has it become widely used  What is data? #  </description>
+    </item>
+    
+    <item>
       <title>CS190-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2789,6 +2807,15 @@ Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Stati
       
       <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220126/</guid>
       <description>Senior Project, Part 2 #  Syllabus #  File: 191-syllabus.pdf  Notes during orientation #   attend either Zoom lecture  </description>
+    </item>
+    
+    <item>
+      <title>CS191-lecture-20220202</title>
+      <link>http://zedchance.github.io/notes/CS191/CS191-lecture-20220202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220202/</guid>
+      <description>Agile development #  SCRUM #  git #  </description>
     </item>
     
     <item>
@@ -2981,6 +3008,25 @@ www.keil.com
       <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220127/</guid>
       <description>The language of divisibility #  The following 7 statements are equivalent:
  18 is divisible by 6 18 is a multiple of 6 6 is a factor or divisor of 18 6 goes into 18, or 6 divides 18    \( \frac{18}{6} \)  is a whole number 18 is equal to 6 times a whole number, which is the same as saying there is  \( 18 = 6k \)  for some  \( k \in \mathbb{Z} \)   In the long division of 18 by 6, the remainder is 0.</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220201</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220201/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220201/</guid>
+      <description>Divisibility cont. #  There are many ways to represent 24, but there is only 1 way to represent it as a product of primes.
+Theorem. Whenever we add a number to itself, the sum will be even.  Proof. Let first number be   \( k \)  , let the second number be  \( k \)  . So if  \[\begin{aligned} k &amp;#43; k = 2k \end{aligned}\]  and  \( 2 | 2k \)   \( \square \)   Example Prove that if  \( 10 | a \)  and  \( 10 | b \)  , then  \( 10 | ma \pm nb \)  , where  \( a, b, m, n \in \mathbb{Z} \)  .</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220203</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220203/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220203/</guid>
+      <description>Divisibility cont. #  Example Find a number with the amount of divisors of   \( N \)  to be  \( 4 \cdot 6 \cdot 3 \)  .  \[\begin{aligned} N = 7^3 \cdot 11^5 \cdot 41^2 \end{aligned}\]    Theorem. Consider the 4 digit number  \( n = \overline{abcd} \)  .  \( n \)  is divisible by 9 if the sum of its digits  \( a &amp;#43; b &amp;#43; c &amp;#43; d \)  is divisible by 9.</description>
     </item>
     
     <item>
@@ -3697,6 +3743,16 @@ Shiney side will reflect more, so shiny side in lets heat thru then traps it ins
       
       <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220125/</guid>
       <description>Leisure, the Individual, and Contemporary Society #  Syllabus #  File: rpta125-syllabus.pdf  Notes during orientation #   the greyed out rows on the tentative schedule in the syllabus are weeks when we don&amp;rsquo;t meet via Zoom   minimum of 5000 words total for the class broken up into smaller assignments 2 large papers, several smaller papers, several discussions  </description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220201</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220201/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220201/</guid>
+      <description>Overview of Leisure #  To endure rather than to enjoy means: trying to make a living, just to get by. I plan on being able to balance work life with leisure to not burn out.
+What is leisure? #  Leisure as a state of mind #  Leisure is political #  </description>
     </item>
     
     <item>
