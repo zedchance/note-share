@@ -44,5 +44,37 @@ Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Stati
       <description>Data exploration cont. #  Classification cont. #  Regression #  Clustering #  Association #  Deviation / anomaly / change detection #  Challenges #   the concept of neural networks has been around for a long time, however only because of recent computational power has it become widely used  What is data? #  </description>
     </item>
     
+    <item>
+      <title>CS177-lecture-20220210</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220210/</guid>
+      <description>NumPy #  We can use NumPy with
+import numpy as np We can create new arrays with
+a = np.array([1, 5, 7]) We can specify number of dimensions or data types:
+b = np.array([1, 2, 3], ndim=2) c = np.array([1, 2, 3, 4], dtype=complex) We can see the shape of an array via
+print(a) print(a.shape) You can set the shape of an array
+d = np.array([1, 2, 3], [4, 5, 6]) d.</description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220215</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220215/</guid>
+      <description>What is data? #  Attributes #  Difference between ratio and interval #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220217</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220217/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220217/</guid>
+      <description>Data preprocessing cont. #  Attributes cont. #  Types of data sets #  Data quality #  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>numpy on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/numpy/</link>
+    <description>Recent content in numpy on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS177-lecture-20220210</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220210/</guid>
+      <description>NumPy #  We can use NumPy with
+import numpy as np We can create new arrays with
+a = np.array([1, 5, 7]) We can specify number of dimensions or data types:
+b = np.array([1, 2, 3], ndim=2) c = np.array([1, 2, 3, 4], dtype=complex) We can see the shape of an array via
+print(a) print(a.shape) You can set the shape of an array
+d = np.array([1, 2, 3], [4, 5, 6]) d.</description>
+    </item>
+    
+  </channel>
+</rss>

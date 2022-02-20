@@ -45,5 +45,33 @@ Theorem. Whenever we add a number to itself, the sum will be even.  Proof. Let f
       <description>Divisibility cont. #  Example Find a number with the amount of divisors of   \( N \)  to be  \( 4 \cdot 6 \cdot 3 \)  .  \[\begin{aligned} N = 7^3 \cdot 11^5 \cdot 41^2 \end{aligned}\]    Theorem. Consider the 4 digit number  \( n = \overline{abcd} \)  .  \( n \)  is divisible by 9 if the sum of its digits  \( a &amp;#43; b &amp;#43; c &amp;#43; d \)  is divisible by 9.</description>
     </item>
     
+    <item>
+      <title>MATH102-lecture-20220208</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220208/</guid>
+      <description>Returning to an old problem #  Quiz 1 sols #  2Th review #  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220210</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220210/</guid>
+      <description>3T solutions #  Least common multiples #  Consider   \( a = 2^2 \cdot 5^4 \cdot 7 \cdot 41^{10} \)  and  \( b = 5^2 \cdot 19 \cdot 41 \cdot 47^2 \)  .
+If  \( M \)  is a common multiple of  \( a \)  and  \( b \)  , that means that  \( a | M \)  and also  \( b | M \)  .</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220215</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220215/</guid>
+      <description>Quiz 2 solns #  3Th solns #  Some word problems #   Yes No    \( \text{gcd} (220,308) \)    </description>
+    </item>
+    
   </channel>
 </rss>

@@ -2708,6 +2708,38 @@ Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Stati
     </item>
     
     <item>
+      <title>CS177-lecture-20220210</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220210/</guid>
+      <description>NumPy #  We can use NumPy with
+import numpy as np We can create new arrays with
+a = np.array([1, 5, 7]) We can specify number of dimensions or data types:
+b = np.array([1, 2, 3], ndim=2) c = np.array([1, 2, 3, 4], dtype=complex) We can see the shape of an array via
+print(a) print(a.shape) You can set the shape of an array
+d = np.array([1, 2, 3], [4, 5, 6]) d.</description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220215</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220215/</guid>
+      <description>What is data? #  Attributes #  Difference between ratio and interval #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220217</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220217/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220217/</guid>
+      <description>Data preprocessing cont. #  Attributes cont. #  Types of data sets #  Data quality #  </description>
+    </item>
+    
+    <item>
       <title>CS190-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2816,6 +2848,15 @@ Iris sample data set #   http://www.ics.uci.edu/~mlearn/MLRepository.html  Stati
       
       <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220202/</guid>
       <description>Agile development #  SCRUM #  git #  </description>
+    </item>
+    
+    <item>
+      <title>CS191-lecture-20220216</title>
+      <link>http://zedchance.github.io/notes/CS191/CS191-lecture-20220216/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220216/</guid>
+      <description>Project showcase #  JIRA/Flying donut #  Assignments #  </description>
     </item>
     
     <item>
@@ -3027,6 +3068,34 @@ Theorem. Whenever we add a number to itself, the sum will be even.  Proof. Let f
       
       <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220203/</guid>
       <description>Divisibility cont. #  Example Find a number with the amount of divisors of   \( N \)  to be  \( 4 \cdot 6 \cdot 3 \)  .  \[\begin{aligned} N = 7^3 \cdot 11^5 \cdot 41^2 \end{aligned}\]    Theorem. Consider the 4 digit number  \( n = \overline{abcd} \)  .  \( n \)  is divisible by 9 if the sum of its digits  \( a &amp;#43; b &amp;#43; c &amp;#43; d \)  is divisible by 9.</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220208</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220208/</guid>
+      <description>Returning to an old problem #  Quiz 1 sols #  2Th review #  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220210</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220210/</guid>
+      <description>3T solutions #  Least common multiples #  Consider   \( a = 2^2 \cdot 5^4 \cdot 7 \cdot 41^{10} \)  and  \( b = 5^2 \cdot 19 \cdot 41 \cdot 47^2 \)  .
+If  \( M \)  is a common multiple of  \( a \)  and  \( b \)  , that means that  \( a | M \)  and also  \( b | M \)  .</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220215</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220215/</guid>
+      <description>Quiz 2 solns #  3Th solns #  Some word problems #   Yes No    \( \text{gcd} (220,308) \)    </description>
     </item>
     
     <item>
@@ -3753,6 +3822,24 @@ Shiney side will reflect more, so shiny side in lets heat thru then traps it ins
       <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220201/</guid>
       <description>Overview of Leisure #  To endure rather than to enjoy means: trying to make a living, just to get by. I plan on being able to balance work life with leisure to not burn out.
 What is leisure? #  Leisure as a state of mind #  Leisure is political #  </description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220208</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220208/</guid>
+      <description>Recreation and Play #   social capital = network of relationships  Definition #  Play #  Types #  Definitions #  Reminders #  </description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220215</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220215/</guid>
+      <description>Reminders #  History of leisure #  </description>
     </item>
     
     <item>

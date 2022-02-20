@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>least common multiple on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/least-common-multiple/</link>
+    <description>Recent content in least common multiple on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/least-common-multiple/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH102-lecture-20220210</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220210/</guid>
+      <description>3T solutions #  Least common multiples #  Consider   \( a = 2^2 \cdot 5^4 \cdot 7 \cdot 41^{10} \)  and  \( b = 5^2 \cdot 19 \cdot 41 \cdot 47^2 \)  .
+If  \( M \)  is a common multiple of  \( a \)  and  \( b \)  , that means that  \( a | M \)  and also  \( b | M \)  .</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220215</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220215/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220215/</guid>
+      <description>Quiz 2 solns #  3Th solns #  Some word problems #   Yes No    \( \text{gcd} (220,308) \)    </description>
+    </item>
+    
+  </channel>
+</rss>

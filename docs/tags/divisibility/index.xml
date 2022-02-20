@@ -35,5 +35,14 @@ Theorem. Whenever we add a number to itself, the sum will be even.  Proof. Let f
       <description>Divisibility cont. #  Example Find a number with the amount of divisors of   \( N \)  to be  \( 4 \cdot 6 \cdot 3 \)  .  \[\begin{aligned} N = 7^3 \cdot 11^5 \cdot 41^2 \end{aligned}\]    Theorem. Consider the 4 digit number  \( n = \overline{abcd} \)  .  \( n \)  is divisible by 9 if the sum of its digits  \( a &amp;#43; b &amp;#43; c &amp;#43; d \)  is divisible by 9.</description>
     </item>
     
+    <item>
+      <title>MATH102-lecture-20220208</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220208/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220208/</guid>
+      <description>Returning to an old problem #  Quiz 1 sols #  2Th review #  </description>
+    </item>
+    
   </channel>
 </rss>
