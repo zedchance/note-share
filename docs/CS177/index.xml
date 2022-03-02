@@ -76,5 +76,33 @@ d = np.array([1, 2, 3], [4, 5, 6]) d.</description>
       <description>Data preprocessing cont. #  Attributes cont. #  Types of data sets #  Data quality #  </description>
     </item>
     
+    <item>
+      <title>CS177-lecture-20220222</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220222/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220222/</guid>
+      <description>Data quality cont. #  Distance #  Similarity #  Correlation #  Measures #  Density #  Preprocessing #  Sampling #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220224</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220224/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220224/</guid>
+      <description>Common procedures for preprocessing #   Aggregation Dimension Reduction Standardization Missing values Bad data (noise reduction) Translation (log) Feature extraction Removing outliers  Classification #  Hunt&amp;rsquo;s algorithm #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220301</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220301/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220301/</guid>
+      <description>To reduce dimensions #  Use PCA and SVD.
+Classification cont. #  Methods of splitting #  How to determine the best split #  </description>
+    </item>
+    
   </channel>
 </rss>

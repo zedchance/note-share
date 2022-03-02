@@ -15,5 +15,17 @@
       <description>Course orientation #  Syllabus #  152-syllabus.pdf  Notes during orientation #   Programming will be required in each module, programming intensive Brush up on probability of simple events, simple conditional events Shallow introduction into groups and fields Class is only 5 weeks and 2 days long, so extremely accelerated, at least 20 hrs/week needed Hybrid class, half videos posted, and half live. Class will start at 1, and go until lecture finishes, then unrecorded open office hour 5 modules, starts on thursdays  Permutation functions and C programming Symmetric encryption Hashing and authentication Asymmetric cryptography and algorithms on large number Crytographic systems   Exams on week 3 and 5 Group quizzes on tuesdays, in breakout rooms on Zoom Last day is comprehensive final Take all assignments seriously, nothing is dropped  Brief introduction to cryptography #   Communication in the presence of adversaries</description>
     </item>
     
+    <item>
+      <title>MATH102-lecture-20220301</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220301/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220301/</guid>
+      <description>Functions #  Basic terminology
+If   \( f(x) = 2x^3 &amp;#43; 4 \)  Then,  \( f(1) = 2(1)^3 &amp;#43; 4 = 6 \)  So,  \( f(1) = 6 \)  . When input is 1, output is 6.
+ \( f(10) = 2(10)^3 &amp;#43; 4 = 2004 \)  . So, when input is 10, output is 2004.
+The operations are what make a function, not the symbols.</description>
+    </item>
+    
   </channel>
 </rss>
