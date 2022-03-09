@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linear regression on Notes</title>
+    <link>http://zedchance.github.io/notes/tags/linear-regression/</link>
+    <description>Recent content in linear regression on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://zedchance.github.io/notes/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS177-lecture-20220308</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220308/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220308/</guid>
+      <description>Linear regression #  Best practices #  </description>
+    </item>
+    
+  </channel>
+</rss>

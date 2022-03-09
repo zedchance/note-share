@@ -2768,6 +2768,24 @@ Classification cont. #  Methods of splitting #  How to determine the best split 
     </item>
     
     <item>
+      <title>CS177-lecture-20220303</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220303/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220303/</guid>
+      <description>Classification cont. #  Splitting cont. #  Decision tree based classification #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220308</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220308/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220308/</guid>
+      <description>Linear regression #  Best practices #  </description>
+    </item>
+    
+    <item>
       <title>CS190-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2894,6 +2912,15 @@ Classification cont. #  Methods of splitting #  How to determine the best split 
       
       <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220223/</guid>
       <description>Testing #  </description>
+    </item>
+    
+    <item>
+      <title>CS191-lecture-20220302</title>
+      <link>http://zedchance.github.io/notes/CS191/CS191-lecture-20220302/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220302/</guid>
+      <description>Acceptance testing cont. #  Course updates #  Unit testing #  </description>
     </item>
     
     <item>
@@ -3145,6 +3172,24 @@ If  \( M \)  is a common multiple of  \( a \)  and  \( b \)  , that means that  
 If   \( f(x) = 2x^3 &amp;#43; 4 \)  Then,  \( f(1) = 2(1)^3 &amp;#43; 4 = 6 \)  So,  \( f(1) = 6 \)  . When input is 1, output is 6.
  \( f(10) = 2(10)^3 &amp;#43; 4 = 2004 \)  . So, when input is 10, output is 2004.
 The operations are what make a function, not the symbols.</description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220303</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220303/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220303/</guid>
+      <description>Quiz 4 solns #  6T solns #  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220308</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220308/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220308/</guid>
+      <description>6Th solns #  Complete residue system questions #  </description>
     </item>
     
     <item>
@@ -3898,6 +3943,15 @@ What is leisure? #  Leisure as a state of mind #  Leisure is political #  </desc
       
       <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220301/</guid>
       <description>Assignment overview #  Theories related to the meaning and practice of leisure #  Leisure, Media Consumption and Representation #  </description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220308</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220308/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220308/</guid>
+      <description>Recap #  Media and consumption cont. #  Media consumption paper (1000 words) #  Helpful links #   https://library.csus.edu EBSCO Statista  </description>
     </item>
     
     <item>
