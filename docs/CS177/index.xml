@@ -122,5 +122,14 @@ Classification cont. #  Methods of splitting #  How to determine the best split 
       <description>Linear regression #  Best practices #  </description>
     </item>
     
+    <item>
+      <title>CS177-lecture-20220310</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220310/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220310/</guid>
+      <description>Overfitting #  Reasons for overfitting #  Model selection #  </description>
+    </item>
+    
   </channel>
 </rss>
