@@ -1049,6 +1049,9 @@
     <lastmod>2022-03-08T19:15:49-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS177/CS177-lecture-20220310/</loc>
+    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS177/CS177-lecture-20220315/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -1096,6 +1099,7 @@
     <lastmod>2022-03-08T19:15:49-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/</loc>
+    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -1527,6 +1531,11 @@
     <lastmod>2022-03-08T19:15:49-08:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220310/</loc>
+    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220315/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/MATH170/MATH170-latex-notes/</loc>
     <lastmod>2021-12-07T20:20:09-08:00</lastmod>
@@ -1685,6 +1694,7 @@
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/overfitting/</loc>
+    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/p2p/</loc>
     <lastmod>2021-03-02T20:30:55-08:00</lastmod>
@@ -2068,7 +2078,7 @@
     <lastmod>2021-06-25T07:13:07-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
-    <lastmod>2022-03-08T19:15:49-08:00</lastmod>
+    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-06-03T18:00:57-07:00</lastmod>
