@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Lexical specification to DFA #  WORD: aa&#43;aaa OTHER: aa* Heres an NFA for each regular expression:
@@ -25,7 +25,7 @@ a aa aaa aaaa Nullablity #  A non-terminal, or a sequence of non-terminals, is n
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3702,6 +3702,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3949,6 +3988,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4471,6 +4523,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5457,6 +5548,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5518,7 +5635,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5978,75 +6095,75 @@ We have to determine the first sets and follow sets of both <span>
 S \to aSz \mid bSy \mid \lambda\)
 </span>
 
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#f92672">#lang </span>racket
-<span style="color:#75715e">; next : list -&gt; string or false</span>
-<span style="color:#75715e">; if list not empty and first item a string, eval to first item, else false</span>
-<span style="color:#75715e">; Examples:</span>
-<span style="color:#75715e">;   (next &#39;(&#34;a&#34; &#34;b&#34; &#34;c&#34;))   -&gt; &#34;a&#34;</span>
-<span style="color:#75715e">;   (next &#39;(&#34;a&#34; 2 3))       -&gt; &#34;a&#34;</span>
-<span style="color:#75715e">;   (next &#39;(1 &#34;b&#34; &#34;c&#34;))     -&gt; false</span>
-<span style="color:#75715e">;   (next &#34;a&#34;)              -&gt; false</span>
-<span style="color:#75715e">;   (next &#39;())              -&gt; false</span>
-(<span style="color:#66d9ef">define</span> (next toks)
-  (<span style="color:#66d9ef">cond</span> ((empty? toks) <span style="color:#66d9ef">false</span>)
-        ((not (list? toks)) <span style="color:#66d9ef">false</span>)
-        ((string? (first toks)) (first toks))
-        (<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>)))
-
-(next <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>))
-(next <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))
-(next <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>))
-(next <span style="color:#e6db74">&#34;a&#34;</span>)
-(next <span style="color:#f92672">&#39;</span>())
-
-<span style="color:#75715e">; match : list item -&gt; list or false</span>
-<span style="color:#75715e">; if first item of list equals item return rest of list, else false</span>
-<span style="color:#75715e">; Examples:</span>
-<span style="color:#75715e">;   (match &#39;(&#34;a&#34; &#34;b&#34; &#34;c&#34;) &#34;a&#34;)  -&gt; &#39;(&#34;b&#34; &#34;c&#34;)</span>
-<span style="color:#75715e">;   (match &#39;(&#34;a&#34; &#34;b&#34; &#34;c&#34;) &#34;b&#34;)  -&gt; false</span>
-<span style="color:#75715e">;   (match &#39;(&#34;a&#34;) &#34;a&#34;)          -&gt; &#39;()</span>
-<span style="color:#75715e">;   (match &#39;() &#34;a&#34;)             -&gt; false</span>
-<span style="color:#75715e">;   (match false &#34;a&#34;)           -&gt; false</span>
-(<span style="color:#66d9ef">define</span> (<span style="color:#66d9ef">match</span> toks tok)
-  (<span style="color:#66d9ef">cond</span> ((empty? toks) <span style="color:#66d9ef">false</span>)
-        ((not (list? toks)) <span style="color:#66d9ef">false</span>)
-        ((equal? tok (first toks)) (rest toks))
-        (<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>)))
-
-(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>) <span style="color:#e6db74">&#34;a&#34;</span>)
-(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>) <span style="color:#e6db74">&#34;b&#34;</span>)
-(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#e6db74">&#34;a&#34;</span>)
-(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>() <span style="color:#e6db74">&#34;a&#34;</span>)
-(<span style="color:#66d9ef">match</span> <span style="color:#66d9ef">false</span> <span style="color:#e6db74">&#34;a&#34;</span>)
-
-<span style="color:#75715e">; S&#39; → S$</span>
-<span style="color:#75715e">; S → aSz | bSy | λ</span>
-
-(<span style="color:#66d9ef">define</span> (parseS toks)
-  (<span style="color:#66d9ef">cond</span> ((not (list? toks)) <span style="color:#66d9ef">false</span>)
-        ((empty? toks) toks)
-        ((equal? (first toks) <span style="color:#e6db74">&#34;a&#34;</span>) (<span style="color:#66d9ef">match</span> (parseS (<span style="color:#66d9ef">match</span> toks <span style="color:#e6db74">&#34;a&#34;</span>)) <span style="color:#e6db74">&#34;z&#34;</span>))
-        ((equal? (first toks) <span style="color:#e6db74">&#34;b&#34;</span>) (<span style="color:#66d9ef">match</span> (parseS (<span style="color:#66d9ef">match</span> toks <span style="color:#e6db74">&#34;b&#34;</span>)) <span style="color:#e6db74">&#34;y&#34;</span>))
-        (<span style="color:#66d9ef">else</span> toks)))
-
-<span style="color:#75715e">; First(S&#39;) = {a,b,$}. On any of these three, (parseS toks) and verify result is end-of-input.</span>
-(<span style="color:#66d9ef">define</span> (parseSprime toks)
-  (<span style="color:#66d9ef">cond</span> ((not (list? toks)) <span style="color:#66d9ef">false</span>)
-        ((empty? toks) (equal? (parseS toks) empty))             <span style="color:#75715e">; $ predicts S&#39; -&gt; S$</span>
-        ((equal? (next toks) <span style="color:#e6db74">&#34;a&#34;</span>) (equal? (parseS toks) empty))  <span style="color:#75715e">; a predicts S&#39; -&gt; S$</span>
-        ((equal? (next toks) <span style="color:#e6db74">&#34;b&#34;</span>) (equal? (parseS toks) empty))  <span style="color:#75715e">; b predicts S&#39; -&gt; S$</span>
-        (<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>)))
-
-<span style="color:#75715e">; these should be true</span>
-(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;y&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span>))
-(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span>))
-(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span>))
-(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;y&#34;</span>))
-
-<span style="color:#75715e">; these should be false</span>
-(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span>))
-(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span>))
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span><span style="color:#f92672">#lang </span>racket
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; next : list -&gt; string or false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; if list not empty and first item a string, eval to first item, else false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; Examples:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (next &#39;(&#34;a&#34; &#34;b&#34; &#34;c&#34;))   -&gt; &#34;a&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (next &#39;(&#34;a&#34; 2 3))       -&gt; &#34;a&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (next &#39;(1 &#34;b&#34; &#34;c&#34;))     -&gt; false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (next &#34;a&#34;)              -&gt; false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (next &#39;())              -&gt; false</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (next toks)
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">cond</span> ((empty? toks) <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>        ((not (list? toks)) <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>        ((string? (first toks)) (first toks))
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(next <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>))
+</span></span><span style="display:flex;"><span>(next <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))
+</span></span><span style="display:flex;"><span>(next <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>))
+</span></span><span style="display:flex;"><span>(next <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>(next <span style="color:#f92672">&#39;</span>())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; match : list item -&gt; list or false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; if first item of list equals item return rest of list, else false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; Examples:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (match &#39;(&#34;a&#34; &#34;b&#34; &#34;c&#34;) &#34;a&#34;)  -&gt; &#39;(&#34;b&#34; &#34;c&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (match &#39;(&#34;a&#34; &#34;b&#34; &#34;c&#34;) &#34;b&#34;)  -&gt; false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (match &#39;(&#34;a&#34;) &#34;a&#34;)          -&gt; &#39;()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (match &#39;() &#34;a&#34;)             -&gt; false</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;   (match false &#34;a&#34;)           -&gt; false</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (<span style="color:#66d9ef">match</span> toks tok)
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">cond</span> ((empty? toks) <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>        ((not (list? toks)) <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>        ((equal? tok (first toks)) (rest toks))
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>) <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;c&#34;</span>) <span style="color:#e6db74">&#34;b&#34;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">match</span> <span style="color:#f92672">&#39;</span>() <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">match</span> <span style="color:#66d9ef">false</span> <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; S&#39; → S$</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; S → aSz | bSy | λ</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (parseS toks)
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">cond</span> ((not (list? toks)) <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>        ((empty? toks) toks)
+</span></span><span style="display:flex;"><span>        ((equal? (first toks) <span style="color:#e6db74">&#34;a&#34;</span>) (<span style="color:#66d9ef">match</span> (parseS (<span style="color:#66d9ef">match</span> toks <span style="color:#e6db74">&#34;a&#34;</span>)) <span style="color:#e6db74">&#34;z&#34;</span>))
+</span></span><span style="display:flex;"><span>        ((equal? (first toks) <span style="color:#e6db74">&#34;b&#34;</span>) (<span style="color:#66d9ef">match</span> (parseS (<span style="color:#66d9ef">match</span> toks <span style="color:#e6db74">&#34;b&#34;</span>)) <span style="color:#e6db74">&#34;y&#34;</span>))
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">else</span> toks)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; First(S&#39;) = {a,b,$}. On any of these three, (parseS toks) and verify result is end-of-input.</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (parseSprime toks)
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">cond</span> ((not (list? toks)) <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>        ((empty? toks) (equal? (parseS toks) empty))             <span style="color:#75715e">; $ predicts S&#39; -&gt; S$</span>
+</span></span><span style="display:flex;"><span>        ((equal? (next toks) <span style="color:#e6db74">&#34;a&#34;</span>) (equal? (parseS toks) empty))  <span style="color:#75715e">; a predicts S&#39; -&gt; S$</span>
+</span></span><span style="display:flex;"><span>        ((equal? (next toks) <span style="color:#e6db74">&#34;b&#34;</span>) (equal? (parseS toks) empty))  <span style="color:#75715e">; b predicts S&#39; -&gt; S$</span>
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">false</span>)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; these should be true</span>
+</span></span><span style="display:flex;"><span>(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;y&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span>))
+</span></span><span style="display:flex;"><span>(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span>))
+</span></span><span style="display:flex;"><span>(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;z&#34;</span>))
+</span></span><span style="display:flex;"><span>(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;y&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; these should be false</span>
+</span></span><span style="display:flex;"><span>(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span>))
+</span></span><span style="display:flex;"><span>(parseSprime <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#e6db74">&#34;b&#34;</span>))
+</span></span></code></pre></div></article>
  
       
 

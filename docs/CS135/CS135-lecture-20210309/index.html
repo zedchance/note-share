@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (&#43; (first xs) (sum (rest xs))))) This isn&rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+<meta name="description" content="Tail recursive sum #  (define (sum xs)  (if (empty? xs)  0  (&#43; (first xs) (sum (rest xs))))) This isn&rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
 Invariant: acc &#43; sum of xs is desired answer.
-(define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (&#43; acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &#39;(1 2 3 4)) ; 10 ">
+(define (sum-helper acc xs)  (if (empty? xs)  acc  (sum-helper (&#43; acc (first xs)) (rest xs))))  (define (sum xs)  (sum-helper 0 xs))  (sum &#39;(1 2 3 4)) ; 10 ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS135-lecture-20210309" />
-<meta property="og:description" content="Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (&#43; (first xs) (sum (rest xs))))) This isn&rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+<meta property="og:description" content="Tail recursive sum #  (define (sum xs)  (if (empty? xs)  0  (&#43; (first xs) (sum (rest xs))))) This isn&rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
 Invariant: acc &#43; sum of xs is desired answer.
-(define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (&#43; acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &#39;(1 2 3 4)) ; 10 " />
+(define (sum-helper acc xs)  (if (empty? xs)  acc  (sum-helper (&#43; acc (first xs)) (rest xs))))  (define (sum xs)  (sum-helper 0 xs))  (sum &#39;(1 2 3 4)) ; 10 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/" /><meta property="article:section" content="CS135" />
 
@@ -21,7 +21,7 @@ Invariant: acc &#43; sum of xs is desired answer.
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3698,6 +3698,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3945,6 +3984,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4467,6 +4519,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5453,6 +5544,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5514,7 +5631,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5563,25 +5680,25 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#tail-recursive-sum">#</a>
 </h2>
 <p><img src="/notes/image_2021-03-09-13-25-08.png" alt="image_2021-03-09-13-25-08" /></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (sum xs)
-    (<span style="color:#66d9ef">if</span> (empty? xs)
-        <span style="color:#ae81ff">0</span>
-        (+ (first xs) (sum (rest xs)))))
-</code></pre></div><p>This isn&rsquo;t tail recursive however.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (sum xs)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">if</span> (empty? xs)
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        (+ (first xs) (sum (rest xs)))))
+</span></span></code></pre></div><p>This isn&rsquo;t tail recursive however.
 The recursive call must be the last call in the function.
 Lets define it tail recursively, we can use an accumulator:</p>
 <p><img src="/notes/image_2021-03-09-13-28-52.png" alt="image_2021-03-09-13-28-52" /></p>
 <p>Invariant: acc + sum of xs is desired answer.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (sum-helper acc xs)
-    (<span style="color:#66d9ef">if</span> (empty? xs)
-        acc
-        (sum-helper (+ acc (first xs)) (rest xs))))
-
-(<span style="color:#66d9ef">define</span> (sum xs)
-    (sum-helper <span style="color:#ae81ff">0</span> xs))
-
-(sum <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))        <span style="color:#75715e">; 10</span>
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (sum-helper acc xs)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">if</span> (empty? xs)
+</span></span><span style="display:flex;"><span>        acc
+</span></span><span style="display:flex;"><span>        (sum-helper (+ acc (first xs)) (rest xs))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (sum xs)
+</span></span><span style="display:flex;"><span>    (sum-helper <span style="color:#ae81ff">0</span> xs))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(sum <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))        <span style="color:#75715e">; 10</span>
+</span></span></code></pre></div></article>
  
       
 

@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &lt;stdio.h&gt;#include &lt;stdint.h&gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &lt; nitems; i&#43;&#43;) if (p32[i] % 2 == 0) acc = acc &#43; 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&#34;%d\n&#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.">
+<meta name="description" content="Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &lt;stdio.h&gt;#include &lt;stdint.h&gt; int num_even(void * p, int nbytes) {  uint32_t * p32 = (uint32_t *) p;  int nitems = nbytes / 4;  int acc = 0;  for (int i = 0; i &lt; nitems; i&#43;&#43;)  if (p32[i] % 2 == 0)  acc = acc &#43; 1;  return acc; }  int main() {  uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};  printf(&#34;%d\n&#34;, num_even(buf, 8));  return 0; } Depending on the endian, the output is either 0 or 2.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS152-lecture-20210603" />
-<meta property="og:description" content="Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &lt;stdio.h&gt;#include &lt;stdint.h&gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &lt; nitems; i&#43;&#43;) if (p32[i] % 2 == 0) acc = acc &#43; 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&#34;%d\n&#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2." />
+<meta property="og:description" content="Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &lt;stdio.h&gt;#include &lt;stdint.h&gt; int num_even(void * p, int nbytes) {  uint32_t * p32 = (uint32_t *) p;  int nitems = nbytes / 4;  int acc = 0;  for (int i = 0; i &lt; nitems; i&#43;&#43;)  if (p32[i] % 2 == 0)  acc = acc &#43; 1;  return acc; }  int main() {  uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};  printf(&#34;%d\n&#34;, num_even(buf, 8));  return 0; } Depending on the endian, the output is either 0 or 2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/" /><meta property="article:section" content="CS152" />
 
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3694,6 +3694,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3941,6 +3980,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4463,6 +4515,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5449,6 +5540,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5510,7 +5627,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5582,114 +5699,114 @@ https://github.com/alex-shpak/hugo-book
   in C
   <a class="anchor" href="#in-c">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
-{
-    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
-    <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
-    <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nitems; i<span style="color:#f92672">++</span>)
-        <span style="color:#66d9ef">if</span> (p32[i] <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">return</span> acc;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-{
-    <span style="color:#66d9ef">uint8_t</span> buf[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>};
-    printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, num_even(buf, <span style="color:#ae81ff">8</span>));
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><p>Depending on the endian, the output is either <code>0</code> or <code>2</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdint.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nitems; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (p32[i] <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> acc;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint8_t</span> buf[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>, <span style="color:#ae81ff">0xFF</span>, <span style="color:#ae81ff">0x00</span>};
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, num_even(buf, <span style="color:#ae81ff">8</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Depending on the endian, the output is either <code>0</code> or <code>2</code>.</p>
 <p>We can not depend on the endianness of the CPU by using a helper function to load in the bytes little endian always:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">load_uint32_little</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p)
-{
-    <span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span> p8 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span>) p;
-    <span style="color:#75715e">// extract bytes
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> a <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">0</span>];
-    <span style="color:#66d9ef">uint32_t</span> b <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">1</span>];
-    <span style="color:#66d9ef">uint32_t</span> c <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">2</span>];
-    <span style="color:#66d9ef">uint32_t</span> d <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">3</span>];
-    <span style="color:#75715e">// reassmble
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> (d <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">24</span>) <span style="color:#f92672">|</span> (c <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">16</span>) <span style="color:#f92672">|</span> (b <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> a;
-}
-</code></pre></div><p>Good compilers will optimize this on an x86 machine to</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm">_load_uint32_little:
-  <span style="color:#a6e22e">movl</span>  (%rdi), %eax
-  <span style="color:#a6e22e">ret</span>
-</code></pre></div><p>So we can polish our <code>num_even</code> function to handle the different endianness of CPUs:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
-{
-    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
-    <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
-    <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nitems; i<span style="color:#f92672">++</span>)
-    {
-        <span style="color:#66d9ef">uint32_t</span> tmp <span style="color:#f92672">=</span> load_uint32_little(p32 <span style="color:#f92672">+</span> i);
-        <span style="color:#66d9ef">if</span> (tmp <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-    }
-    <span style="color:#66d9ef">return</span> acc;
-}
-</code></pre></div><p>and now we get <code>0</code> for output both times.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">load_uint32_little</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span> p8 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint8_t</span> <span style="color:#f92672">*</span>) p;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// extract bytes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> a <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> b <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> c <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> d <span style="color:#f92672">=</span> p8[<span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// reassmble
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> (d <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">24</span>) <span style="color:#f92672">|</span> (c <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">16</span>) <span style="color:#f92672">|</span> (b <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> a;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Good compilers will optimize this on an x86 machine to</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span>_load_uint32_little:
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">movl</span>  (%rdi), %eax
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">ret</span>
+</span></span></code></pre></div><p>So we can polish our <code>num_even</code> function to handle the different endianness of CPUs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> p, <span style="color:#66d9ef">int</span> nbytes)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> p32 <span style="color:#f92672">=</span> (<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span>) p;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> nbytes <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nitems; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">uint32_t</span> tmp <span style="color:#f92672">=</span> load_uint32_little(p32 <span style="color:#f92672">+</span> i);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (tmp <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> acc;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>and now we get <code>0</code> for output both times.</p>
 <h3 id="in-java">
   in Java
   <a class="anchor" href="#in-java">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lect2</span>
-<span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">load_uint32_little</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> offset<span style="color:#f92672">)</span>
-    <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// extract bytes
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>0 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>1 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>2 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">int</span> d <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>3 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
-        <span style="color:#75715e">// reassmble
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>d <span style="color:#f92672">&lt;&lt;</span> 24<span style="color:#f92672">)</span> <span style="color:#f92672">|</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">&lt;&lt;</span> 16<span style="color:#f92672">)</span> <span style="color:#f92672">|</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">&lt;&lt;</span> 8<span style="color:#f92672">)</span> <span style="color:#f92672">|</span> a<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">)</span>
-    <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 4<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nitems<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
-        <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> load_uint32_little<span style="color:#f92672">(</span>p<span style="color:#f92672">,</span> i <span style="color:#f92672">*</span> 4<span style="color:#f92672">);</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tmp <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
-                acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">return</span> acc<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
-    <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buf <span style="color:#f92672">=</span> <span style="color:#f92672">{-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">};</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%d\n&#34;</span><span style="color:#f92672">,</span> num_even<span style="color:#f92672">(</span>buf<span style="color:#f92672">));</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>This can be done in a much nicer way using Java&rsquo;s library, replacing the <code>load_uint32_little</code> method.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Lect2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">load_uint32_little</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> offset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// extract bytes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>0 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>1 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>2 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> d <span style="color:#f92672">=</span> p<span style="color:#f92672">[</span>3 <span style="color:#f92672">+</span> offset<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// reassmble
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>d <span style="color:#f92672">&lt;&lt;</span> 24<span style="color:#f92672">)</span> <span style="color:#f92672">|</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">&lt;&lt;</span> 16<span style="color:#f92672">)</span> <span style="color:#f92672">|</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">&lt;&lt;</span> 8<span style="color:#f92672">)</span> <span style="color:#f92672">|</span> a<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 4<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nitems<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> load_uint32_little<span style="color:#f92672">(</span>p<span style="color:#f92672">,</span> i <span style="color:#f92672">*</span> 4<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tmp <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> acc<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buf <span style="color:#f92672">=</span> <span style="color:#f92672">{-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 0x00<span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%d\n&#34;</span><span style="color:#f92672">,</span> num_even<span style="color:#f92672">(</span>buf<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>This can be done in a much nicer way using Java&rsquo;s library, replacing the <code>load_uint32_little</code> method.
 We can do this using <code>ByteBuffer</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.nio.*<span style="color:#f92672">;</span> <span style="color:#75715e">// for ByteBuffer
-</span><span style="color:#75715e">// no longer need the load_uint32_little method
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">)</span>
-<span style="color:#f92672">{</span>
-    ByteBuffer bb <span style="color:#f92672">=</span> ByteBuffer<span style="color:#f92672">.</span><span style="color:#a6e22e">wrap</span><span style="color:#f92672">(</span>p<span style="color:#f92672">);</span>
-    bb<span style="color:#f92672">.</span><span style="color:#a6e22e">order</span><span style="color:#f92672">(</span>ByteOrder<span style="color:#f92672">.</span><span style="color:#a6e22e">LITTLE_ENDIAN</span><span style="color:#f92672">);</span>
-    IntBuffer ib <span style="color:#f92672">=</span> bb<span style="color:#f92672">.</span><span style="color:#a6e22e">asIntBuffer</span><span style="color:#f92672">();</span>
-    <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 4<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nitems<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
-    <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> ib<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tmp <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
-            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">return</span> acc<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote class="book-hint info">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.nio.*<span style="color:#f92672">;</span> <span style="color:#75715e">// for ByteBuffer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// no longer need the load_uint32_little method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">num_even</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> p<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ByteBuffer bb <span style="color:#f92672">=</span> ByteBuffer<span style="color:#f92672">.</span><span style="color:#a6e22e">wrap</span><span style="color:#f92672">(</span>p<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    bb<span style="color:#f92672">.</span><span style="color:#a6e22e">order</span><span style="color:#f92672">(</span>ByteOrder<span style="color:#f92672">.</span><span style="color:#a6e22e">LITTLE_ENDIAN</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    IntBuffer ib <span style="color:#f92672">=</span> bb<span style="color:#f92672">.</span><span style="color:#a6e22e">asIntBuffer</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> nitems <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 4<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> acc <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nitems<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> ib<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tmp <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            acc <span style="color:#f92672">=</span> acc <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> acc<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote class="book-hint info">
   Note: We need to change the endianness of <code>ByteBuffer</code> because in Java it defaults to big.
 </blockquote>
 

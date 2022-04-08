@@ -14,11 +14,10 @@
       <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/</guid>
       <description>Introduction to Operating systems #  What is an OS? #  The OS is the intermediary between the hardware and the software.
 Possibly the most famous test program in C:
-#include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Hello, world!\n&amp;#34;); exit 0; } Which is compiled via
+#include &amp;lt;stdio.h&amp;gt; int main() {  printf(&amp;#34;Hello, world!\n&amp;#34;);  exit 0; } Which is compiled via
 gcc hello.c -o hello which creates the executable hello.
 We can run this via
-./hello we can run this with 2 instances like
-./hello &amp;amp; .</description>
+./hello we can run this with 2 instances like</description>
     </item>
     
     <item>

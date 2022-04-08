@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS46/CS46-lecture-notes/</guid>
-      <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() { for (int i) { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } } #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Enter your agge: &amp;#34;); int age; scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7; printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
+      <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() {  printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() {  for (int i)  {  printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;);  } } #include &amp;lt;stdio.h&amp;gt; int main() {  printf(&amp;#34;Enter your agge: &amp;#34;);  int age;  scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7;  printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
     </item>
     
     <item>

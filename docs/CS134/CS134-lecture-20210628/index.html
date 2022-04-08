@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SQL cont. #  Aggregate functions cont. #  Include in weekly assignment.  List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.
-SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &lt; 60000 AND (SELECT COUNT(*) FROM dependent AS dep WHERE e.ssn=dep.essn AND dep.relationship=&#39;daughter&#39;) &gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.">
+SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &lt; 60000 AND  (SELECT COUNT(*)  FROM dependent AS dep  WHERE e.ssn=dep.essn AND  dep.relationship=&#39;daughter&#39;) &gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS134-lecture-20210628" />
 <meta property="og:description" content="SQL cont. #  Aggregate functions cont. #  Include in weekly assignment.  List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.
-SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &lt; 60000 AND (SELECT COUNT(*) FROM dependent AS dep WHERE e.ssn=dep.essn AND dep.relationship=&#39;daughter&#39;) &gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups." />
+SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &lt; 60000 AND  (SELECT COUNT(*)  FROM dependent AS dep  WHERE e.ssn=dep.essn AND  dep.relationship=&#39;daughter&#39;) &gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/" /><meta property="article:section" content="CS134" />
 
@@ -19,7 +19,7 @@ SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &lt; 60000 AND 
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3696,6 +3696,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3943,6 +3982,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4465,6 +4517,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5451,6 +5542,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5512,7 +5629,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5579,14 +5696,14 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 <p>List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> e.ssn, e.fname, e.lname
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
-<span style="color:#66d9ef">WHERE</span> e.salary <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">60000</span> <span style="color:#66d9ef">AND</span>
-      (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
-       <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> dep
-       <span style="color:#66d9ef">WHERE</span> e.ssn<span style="color:#f92672">=</span>dep.essn <span style="color:#66d9ef">AND</span>
-             dep.relationship<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;daughter&#39;</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>;
-</code></pre></div><h3 id="group-by-clause">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e.ssn, e.fname, e.lname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> e.salary <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">60000</span> <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>      (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> dep
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">WHERE</span> e.ssn<span style="color:#f92672">=</span>dep.essn <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>             dep.relationship<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;daughter&#39;</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>;
+</span></span></code></pre></div><h3 id="group-by-clause">
   <code>GROUP BY</code> clause
   <a class="anchor" href="#group-by-clause">#</a>
 </h3>
@@ -5594,14 +5711,14 @@ https://github.com/alex-shpak/hugo-book
 <p>A clause <code>GROUP BY</code> is used to create sub groups.
 This allows us to do some operations within a specific sub group.</p>
 <p>The attributes being grouped by must appear in the select clause:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> x, y
-<span style="color:#75715e">-- from ...
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> x, y
-</code></pre></div><p>For each department, retrieve the department number, the number of employees in the department, and their average salary.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> dno, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>), <span style="color:#66d9ef">AVG</span>(salary)
-<span style="color:#66d9ef">FROM</span> employee
-<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dno
-</code></pre></div><p><img src="/notes/image_2021-06-28-14-15-30.png" alt="image_2021-06-28-14-15-30" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> x, y
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- from ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> x, y
+</span></span></code></pre></div><p>For each department, retrieve the department number, the number of employees in the department, and their average salary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> dno, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>), <span style="color:#66d9ef">AVG</span>(salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dno
+</span></span></code></pre></div><p><img src="/notes/image_2021-06-28-14-15-30.png" alt="image_2021-06-28-14-15-30" /></p>
 <h3 id="having-clause">
   <code>HAVING</code> clause
   <a class="anchor" href="#having-clause">#</a>
@@ -5614,11 +5731,11 @@ This allows us to filter the results of the grouping by making sure each sub gro
 <li>it is <strong>not</strong> okay to have a <code>HAVING</code> clause without a <code>GROUP BY</code></li>
 </ul>
 <p>For each department which has more than two employees, retrieve the department number, the number of employees in the department, and their average salary.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> dno, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>), <span style="color:#66d9ef">AVG</span>(salary)
-<span style="color:#66d9ef">FROM</span> employee
-<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dno
-<span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>;
-</code></pre></div><h3 id="summary-of-sql-queries">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> dno, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>), <span style="color:#66d9ef">AVG</span>(salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dno
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>;
+</span></span></code></pre></div><h3 id="summary-of-sql-queries">
   Summary of SQL queries
   <a class="anchor" href="#summary-of-sql-queries">#</a>
 </h3>
@@ -5632,52 +5749,52 @@ This allows us to filter the results of the grouping by making sure each sub gro
 <p><img src="/notes/image_2021-06-10-16-56-31.png" alt="image_2021-06-10-16-56-31" /></p>
 <p>Retrieve the department name if the lowest employee salary of the department is greater than 50000.
 List department name and lowest salary.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> dname, <span style="color:#66d9ef">MIN</span>(salary)
-<span style="color:#66d9ef">FROM</span> department, employee
-<span style="color:#66d9ef">WHERE</span> dno<span style="color:#f92672">=</span>dnumber
-<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dname
-<span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">MIN</span>(salary) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50000</span>;
-</code></pre></div><h3 id="another-solution-to-a-previous-problem">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> dname, <span style="color:#66d9ef">MIN</span>(salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> department, employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> dno<span style="color:#f92672">=</span>dnumber
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">MIN</span>(salary) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50000</span>;
+</span></span></code></pre></div><h3 id="another-solution-to-a-previous-problem">
   Another solution to a previous problem
   <a class="anchor" href="#another-solution-to-a-previous-problem">#</a>
 </h3>
 <p>Our previous problem can be solved using our new clauses:</p>
 <p>List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> ssn, fname, lname
-<span style="color:#66d9ef">FROM</span> employee, department
-<span style="color:#66d9ef">WHERE</span> ssn<span style="color:#f92672">=</span>essn <span style="color:#66d9ef">AND</span>
-      relationship<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;daughter&#39;</span> <span style="color:#66d9ef">AND</span>
-      salary <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">60000</span>
-<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> ssn, fname, lname
-<span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>;
-</code></pre></div><h3 id="returning-to-earlier-problems-we-skipped">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> ssn, fname, lname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee, department
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> ssn<span style="color:#f92672">=</span>essn <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>      relationship<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;daughter&#39;</span> <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>      salary <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">60000</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> ssn, fname, lname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>;
+</span></span></code></pre></div><h3 id="returning-to-earlier-problems-we-skipped">
   Returning to earlier problems we skipped
   <a class="anchor" href="#returning-to-earlier-problems-we-skipped">#</a>
 </h3>
 <p>Before we skipped the delete statement with the subquery.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> employee
-<span style="color:#66d9ef">WHERE</span> dno <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> dnumber
-              <span style="color:#66d9ef">FROM</span> department
-              <span style="color:#66d9ef">WHERE</span> dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>);
-</code></pre></div><p>We can also use a subquery in an <code>UPDATE</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">UPDATE</span> employee
-<span style="color:#66d9ef">SET</span> salary<span style="color:#f92672">=</span>salary<span style="color:#f92672">*</span><span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">1</span>
-<span style="color:#66d9ef">WHERE</span> dno <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> dnumber
-              <span style="color:#66d9ef">FROM</span> department
-              <span style="color:#66d9ef">WHERE</span> dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>);
-</code></pre></div><p>We can use a subquery in an insert statement:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> dept_info(
-    dept_name VARCHAR(<span style="color:#ae81ff">10</span>),
-    no_of_emps INTEGER,
-    total_sal INTEGER
-);
-
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> dept_info (dept_name, no_of_emps, total_sal)
-    <span style="color:#66d9ef">SELECT</span> dname, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>), <span style="color:#66d9ef">SUM</span>(salary)
-    <span style="color:#66d9ef">FROM</span> department, employee
-    <span style="color:#66d9ef">WHERE</span> dnumber<span style="color:#f92672">=</span>dno
-    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dname;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> dno <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> dnumber
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span> department
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span> dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>);
+</span></span></code></pre></div><p>We can also use a subquery in an <code>UPDATE</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> salary<span style="color:#f92672">=</span>salary<span style="color:#f92672">*</span><span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> dno <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> dnumber
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span> department
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span> dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>);
+</span></span></code></pre></div><p>We can use a subquery in an insert statement:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> dept_info(
+</span></span><span style="display:flex;"><span>    dept_name VARCHAR(<span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span>    no_of_emps INTEGER,
+</span></span><span style="display:flex;"><span>    total_sal INTEGER
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> dept_info (dept_name, no_of_emps, total_sal)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> dname, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>), <span style="color:#66d9ef">SUM</span>(salary)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> department, employee
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WHERE</span> dnumber<span style="color:#f92672">=</span>dno
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> dname;
+</span></span></code></pre></div><ul>
 <li>the result of the subquery will be inserted into the <code>dept_info</code> table&rsquo;s values.</li>
 </ul>
 </article>

@@ -38,7 +38,7 @@ Sorted: [1, 2, 3(1), 3(2), 5] this is stable [1, 2, 3(2), 3(1), 5] this is unsta
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-sorting-algorithms/</guid>
       <description>Merge #  Merge.java
-/** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
+/** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge {  private static Comparable[] aux;   public static void sort(Comparable[] a)  {  aux = new Comparable[a.length];  sort(a, 0, a.length - 1);  }   private static void sort(Comparable[] a, int lo, int hi)  {  // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  }   private static void merge(Comparable[] a, int lo, int mid, int hi)  {  // merge a[lo.</description>
     </item>
     
     <item>

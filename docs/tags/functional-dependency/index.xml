@@ -15,7 +15,7 @@
       <description>SQL cont. #  Subqueries can be used inside insert statements:
 This insert statement will update the numbers dynamically based on the response from the subquery. The next time an employee is inserted, we can run this insert statement to update DEPTS_INFO using a trigger.
 Or, we can use views&amp;hellip;
-Virtual table view #  CREATE VIEW dept_info_view AS SELECT dname, COUNT(*) AS no_of_emps, SUM(salary) AS total_sal FROM department, employee WHERE dnumber=dno GROUP BY dname; This results in a self updating table, called a view:</description>
+Virtual table view #  CREATE VIEW dept_info_view AS  SELECT dname,  COUNT(*) AS no_of_emps,  SUM(salary) AS total_sal  FROM department, employee  WHERE dnumber=dno  GROUP BY dname; This results in a self updating table, called a view:</description>
     </item>
     
   </channel>

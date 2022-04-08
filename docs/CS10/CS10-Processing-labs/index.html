@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140  //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y&#43;50,100,20,10); rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); rect(x&#43;35,y&#43;40,20,100,10); //Legs  rect(x-30,y&#43;130,27,100,10); rect(x&#43;3,y&#43;130,27,100,10); //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160); triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255); //Blast off!">
+<meta name="description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */  //Setup size(800,600); background(0);  //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250);  //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350);  //Head noStroke(); fill(220); ellipse(200,100,70,70);  //Torso rectMode(CENTER); rect(200,190,60,100);  //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10);  //Legs rect(170,230,27,100,10); rect(203,230,27,100,10);  //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250);  //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350);  //Head noStroke(); fill(220); ellipse(600,100,70,70);  //Torso rectMode(CENTER); rect(600,190,60,100);  //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235);  //Dress quad(585,190,565,255,635,255,615,190);  //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10);  //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10);  //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450);  //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10);  //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */  //Setup void setup() {  size(400, 600);  background(0);   //Signpost  rectMode(CENTER);  noStroke();  fill(113, 86, 86);  rect(200, 475, 30, 250);   //Background circle  fill(70, 89, 255);  ellipseMode(CENTER);  stroke(255);  strokeWeight(5);  ellipse(200, 200, 350, 350); }  //Continuously redraw the human void draw() {  //Declare mouse  int x = mouseX;  int y = mouseY;   //Head  stroke(0);  strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y);  ellipse(x,y,70,70); //was 200,100   //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER);  rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140   //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230   //Torso  rectMode(CENTER);  rect(x,y&#43;90,60,100); //was 200,190 }  //Click mouse to reset void mousePressed() {  background(0);   //Signpost  rectMode(CENTER);  noStroke();  fill(113, 86, 86);  rect(200, 475, 30, 250);   //Background circle  fill(70, 89, 255);  ellipseMode(CENTER);  stroke(255);  strokeWeight(5);  ellipse(200, 200, 350, 350);   println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */  //Initialize variables float r = 0; float g = 0; float b = 0;  float x = 0; float y = 0;  void setup() {  size(400,600);  x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); }  void draw() {  background(0);   //Head  noStroke();  fill(255,255,255);  ellipse(x,y,70,70);   //Arms  rect(x,y&#43;50,100,20,10);  rectMode(CORNER);  rect(x-55,y&#43;40,20,100,10);  rect(x&#43;35,y&#43;40,20,100,10);   //Legs  rect(x-30,y&#43;130,27,100,10);  rect(x&#43;3,y&#43;130,27,100,10);   //Torso  rectMode(CENTER);  rect(x,y&#43;90,60,100);   //Rockets  r);  b = 5;  g);  fill(r,g,b); //Jets random color between yellow and red   triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160);   triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255);   //Blast off!">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS10-labs" />
-<meta property="og:description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140  //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y&#43;50,100,20,10); rectMode(CORNER); rect(x-55,y&#43;40,20,100,10); rect(x&#43;35,y&#43;40,20,100,10); //Legs  rect(x-30,y&#43;130,27,100,10); rect(x&#43;3,y&#43;130,27,100,10); //Torso  rectMode(CENTER); rect(x,y&#43;90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160); triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255); //Blast off!" />
+<meta property="og:description" content="CS10 Labs #  Lab 1 - My &ldquo;creature&rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &#34;creature&#34; */  //Setup size(800,600); background(0);  //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250);  //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350);  //Head noStroke(); fill(220); ellipse(200,100,70,70);  //Torso rectMode(CENTER); rect(200,190,60,100);  //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10);  //Legs rect(170,230,27,100,10); rect(203,230,27,100,10);  //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250);  //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350);  //Head noStroke(); fill(220); ellipse(600,100,70,70);  //Torso rectMode(CENTER); rect(600,190,60,100);  //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235);  //Dress quad(585,190,565,255,635,255,615,190);  //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10);  //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10);  //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450);  //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10);  //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&#39;s movement */  //Setup void setup() {  size(400, 600);  background(0);   //Signpost  rectMode(CENTER);  noStroke();  fill(113, 86, 86);  rect(200, 475, 30, 250);   //Background circle  fill(70, 89, 255);  ellipseMode(CENTER);  stroke(255);  strokeWeight(5);  ellipse(200, 200, 350, 350); }  //Continuously redraw the human void draw() {  //Declare mouse  int x = mouseX;  int y = mouseY;   //Head  stroke(0);  strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y);  ellipse(x,y,70,70); //was 200,100   //Arms  rect(x,y&#43;50,100,20,10); //was 200,150  rectMode(CORNER);  rect(x-55,y&#43;40,20,100,10); //was 145/140  rect(x&#43;35,y&#43;40,20,100,10); //was 235/140   //Legs  rect(x-30,y&#43;130,27,100,10); //was 170,230  rect(x&#43;3,y&#43;130,27,100,10); //was 203,230   //Torso  rectMode(CENTER);  rect(x,y&#43;90,60,100); //was 200,190 }  //Click mouse to reset void mousePressed() {  background(0);   //Signpost  rectMode(CENTER);  noStroke();  fill(113, 86, 86);  rect(200, 475, 30, 250);   //Background circle  fill(70, 89, 255);  ellipseMode(CENTER);  stroke(255);  strokeWeight(5);  ellipse(200, 200, 350, 350);   println(hour(),&#34;:&#34;,minute(),&#34;:&#34;,second(),&#34;-&#34;,&#34;Mouse input detected: Background reset&#34;); } Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &#34;creature&#34; like a rocket */  //Initialize variables float r = 0; float g = 0; float b = 0;  float x = 0; float y = 0;  void setup() {  size(400,600);  x = width/2; //x is centered  y = height &#43; 50; //starts 50 pixels below  background(0); }  void draw() {  background(0);   //Head  noStroke();  fill(255,255,255);  ellipse(x,y,70,70);   //Arms  rect(x,y&#43;50,100,20,10);  rectMode(CORNER);  rect(x-55,y&#43;40,20,100,10);  rect(x&#43;35,y&#43;40,20,100,10);   //Legs  rect(x-30,y&#43;130,27,100,10);  rect(x&#43;3,y&#43;130,27,100,10);   //Torso  rectMode(CENTER);  rect(x,y&#43;90,60,100);   //Rockets  r);  b = 5;  g);  fill(r,g,b); //Jets random color between yellow and red   triangle(x-55,y&#43;135,x-35,y&#43;135,x-45,y&#43;160); //Hand jets  triangle(x&#43;55,y&#43;135,x&#43;35,y&#43;135,x&#43;45,y&#43;160);   triangle(x-30,y&#43;225,x-5,y&#43;225,x-18,y&#43;255); //Feet jets  triangle(x&#43;30,y&#43;225,x&#43;5,y&#43;225,x&#43;18,y&#43;255);   //Blast off!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS10/CS10-Processing-labs/" /><meta property="article:section" content="CS10" />
 
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3694,6 +3694,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3941,6 +3980,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4463,6 +4515,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5449,6 +5540,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5510,7 +5627,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5567,449 +5684,449 @@ https://github.com/alex-shpak/hugo-book
   Lab 1 - My &ldquo;creature&rdquo;
   <a class="anchor" href="#lab-1---my-creature">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
-</span><span style="color:#75715e">Zed Chance
-</span><span style="color:#75715e">Lab 1
-</span><span style="color:#75715e">CS 10
-</span><span style="color:#75715e">Summer 18
-</span><span style="color:#75715e">My &#34;creature&#34; 
-</span><span style="color:#75715e">*/</span>
-
-<span style="color:#75715e">//Setup
-</span><span style="color:#75715e"></span>size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
-background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//MENS BATHROOM SIGN
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">//Signpost
-</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-noStroke<span style="color:#f92672">();</span>
-fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span>86<span style="color:#f92672">,</span>86<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>250<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Background circle
-</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span>89<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
-ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
-strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
-ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>200<span style="color:#f92672">,</span>350<span style="color:#f92672">,</span>350<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
-fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
-ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>145<span style="color:#f92672">,</span>140<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>235<span style="color:#f92672">,</span>140<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>170<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>203<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//WOMENS BATHROOM SIGN
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">//Signpost
-</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-noStroke<span style="color:#f92672">();</span>
-fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span>86<span style="color:#f92672">,</span>86<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>250<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Background circle
-</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span>89<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
-ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
-strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
-ellipse<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>200<span style="color:#f92672">,</span>350<span style="color:#f92672">,</span>350<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
-fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
-ellipse<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-stroke<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
-strokeWeight<span style="color:#f92672">(</span>25<span style="color:#f92672">);</span>
-line<span style="color:#f92672">(</span>560<span style="color:#f92672">,</span>155<span style="color:#f92672">,</span>535<span style="color:#f92672">,</span>235<span style="color:#f92672">);</span>
-line<span style="color:#f92672">(</span>640<span style="color:#f92672">,</span>155<span style="color:#f92672">,</span>665<span style="color:#f92672">,</span>235<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Dress
-</span><span style="color:#75715e"></span>quad<span style="color:#f92672">(</span>585<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>565<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>635<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>615<span style="color:#f92672">,</span>190<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
-rect<span style="color:#f92672">(</span>570<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>603<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//ARROW SIGNS
-</span><span style="color:#75715e">//left background
-</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>75<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-fill<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>145<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//left arrow
-</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>210<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>25<span style="color:#f92672">);</span>
-triangle<span style="color:#f92672">(</span>190<span style="color:#f92672">,</span>425<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>450<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//right background
-</span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>75<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-fill<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>145<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//right arrow
-</span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
-rect<span style="color:#f92672">(</span>590<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>25<span style="color:#f92672">);</span>
-triangle<span style="color:#f92672">(</span>610<span style="color:#f92672">,</span>425<span style="color:#f92672">,</span>610<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>650<span style="color:#f92672">,</span>450<span style="color:#f92672">);</span>
-</code></pre></div><h2 id="lab-2---making-my-creature-redraw-with-the-mouses-movement">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Zed Chance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Lab 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CS 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Summer 18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">My &#34;creature&#34; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Setup
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//MENS BATHROOM SIGN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Signpost
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span>86<span style="color:#f92672">,</span>86<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>250<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Background circle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span>89<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>200<span style="color:#f92672">,</span>350<span style="color:#f92672">,</span>350<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>145<span style="color:#f92672">,</span>140<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>235<span style="color:#f92672">,</span>140<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>170<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>203<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//WOMENS BATHROOM SIGN
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Signpost
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span>86<span style="color:#f92672">,</span>86<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>250<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Background circle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span>89<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>ellipse<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>200<span style="color:#f92672">,</span>350<span style="color:#f92672">,</span>350<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>ellipse<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>stroke<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>strokeWeight<span style="color:#f92672">(</span>25<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>line<span style="color:#f92672">(</span>560<span style="color:#f92672">,</span>155<span style="color:#f92672">,</span>535<span style="color:#f92672">,</span>235<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>line<span style="color:#f92672">(</span>640<span style="color:#f92672">,</span>155<span style="color:#f92672">,</span>665<span style="color:#f92672">,</span>235<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Dress
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>quad<span style="color:#f92672">(</span>585<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>565<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>635<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>615<span style="color:#f92672">,</span>190<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>570<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>603<span style="color:#f92672">,</span>230<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//ARROW SIGNS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//left background
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>75<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>145<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//left arrow
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>210<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>25<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>triangle<span style="color:#f92672">(</span>190<span style="color:#f92672">,</span>425<span style="color:#f92672">,</span>190<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>450<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//right background
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>220<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>150<span style="color:#f92672">,</span>75<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>fill<span style="color:#f92672">(</span>150<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>145<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//right arrow
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>fill<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>rect<span style="color:#f92672">(</span>590<span style="color:#f92672">,</span>450<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>25<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>triangle<span style="color:#f92672">(</span>610<span style="color:#f92672">,</span>425<span style="color:#f92672">,</span>610<span style="color:#f92672">,</span>475<span style="color:#f92672">,</span>650<span style="color:#f92672">,</span>450<span style="color:#f92672">);</span>
+</span></span></code></pre></div><h2 id="lab-2---making-my-creature-redraw-with-the-mouses-movement">
   Lab 2 - Making my creature redraw with the mouse&rsquo;s movement
   <a class="anchor" href="#lab-2---making-my-creature-redraw-with-the-mouses-movement">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
-</span><span style="color:#75715e">Zed Chance
-</span><span style="color:#75715e">Lab 2
-</span><span style="color:#75715e">CS 10
-</span><span style="color:#75715e">Summer 18
-</span><span style="color:#75715e">Making my creature redraw with the mouse&#39;s movement
-</span><span style="color:#75715e">*/</span>
-
-<span style="color:#75715e">//Setup
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  size<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span> 600<span style="color:#f92672">);</span>
-  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Signpost
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  noStroke<span style="color:#f92672">();</span>
-  fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span> 86<span style="color:#f92672">,</span> 86<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 475<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 250<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Background circle
-</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span> 89<span style="color:#f92672">,</span> 255<span style="color:#f92672">);</span>
-  ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
-  strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
-  ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 200<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 350<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#75715e">//Continuously redraw the human
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  <span style="color:#75715e">//Declare mouse
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> mouseX<span style="color:#f92672">;</span>
-  <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> mouseY<span style="color:#f92672">;</span>
-  
-  <span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>  stroke<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-  strokeWeight<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span> <span style="color:#75715e">//Had to add weight, otherwise it was hard to tell if it was moving
-</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>220<span style="color:#f92672">,</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">);</span>
-  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,100
-</span><span style="color:#75715e"></span>  
-  <span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,150
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 145/140
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 235/140
-</span><span style="color:#75715e"></span>  
-  <span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 170,230
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 203,230
-</span><span style="color:#75715e"></span>  
-  <span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,190
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-
-<span style="color:#75715e">//Click mouse to reset
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">mousePressed</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Signpost
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  noStroke<span style="color:#f92672">();</span>
-  fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span> 86<span style="color:#f92672">,</span> 86<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 475<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 250<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Background circle
-</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span> 89<span style="color:#f92672">,</span> 255<span style="color:#f92672">);</span>
-  ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
-  strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
-  ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 200<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 350<span style="color:#f92672">);</span>
-  
-  println<span style="color:#f92672">(</span>hour<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">,</span>minute<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">,</span>second<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;Mouse input detected: Background reset&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="lab-4---launching-my-creature-like-a-rocket">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Zed Chance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Lab 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CS 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Summer 18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Making my creature redraw with the mouse&#39;s movement
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Setup
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  size<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span> 600<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Signpost
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span> 86<span style="color:#f92672">,</span> 86<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 475<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 250<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Background circle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span> 89<span style="color:#f92672">,</span> 255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 200<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 350<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Continuously redraw the human
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Declare mouse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> mouseX<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> mouseY<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  stroke<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  strokeWeight<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span> <span style="color:#75715e">//Had to add weight, otherwise it was hard to tell if it was moving
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>220<span style="color:#f92672">,</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,150
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 145/140
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 235/140
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 170,230
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span> <span style="color:#75715e">//was 203,230
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span> <span style="color:#75715e">//was 200,190
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Click mouse to reset
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">mousePressed</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Signpost
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  fill<span style="color:#f92672">(</span>113<span style="color:#f92672">,</span> 86<span style="color:#f92672">,</span> 86<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 475<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 250<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Background circle
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>70<span style="color:#f92672">,</span> 89<span style="color:#f92672">,</span> 255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  ellipseMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  stroke<span style="color:#f92672">(</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  strokeWeight<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  ellipse<span style="color:#f92672">(</span>200<span style="color:#f92672">,</span> 200<span style="color:#f92672">,</span> 350<span style="color:#f92672">,</span> 350<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  println<span style="color:#f92672">(</span>hour<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">,</span>minute<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">,</span>second<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;Mouse input detected: Background reset&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="lab-4---launching-my-creature-like-a-rocket">
   Lab 4 - Launching my &ldquo;creature&rdquo; like a rocket
   <a class="anchor" href="#lab-4---launching-my-creature-like-a-rocket">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
-</span><span style="color:#75715e">Zed Chance
-</span><span style="color:#75715e">Lab 4
-</span><span style="color:#75715e">CS 10
-</span><span style="color:#75715e">Summer 18
-</span><span style="color:#75715e">Launching my &#34;creature&#34; like a rocket
-</span><span style="color:#75715e">*/</span>
-
-<span style="color:#75715e">//Initialize variables
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  size<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
-  x <span style="color:#f92672">=</span> width<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span> <span style="color:#75715e">//x is centered
-</span><span style="color:#75715e"></span>  y <span style="color:#f92672">=</span> height <span style="color:#f92672">+</span> 50<span style="color:#f92672">;</span> <span style="color:#75715e">//starts 50 pixels below
-</span><span style="color:#75715e"></span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
-  fill<span style="color:#f92672">(</span>255<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
-  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Rockets
-</span><span style="color:#75715e"></span>  r<span style="color:#f92672">);</span>
-  b <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
-  g<span style="color:#f92672">);</span>
-  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span> <span style="color:#75715e">//Jets random color between yellow and red
-</span><span style="color:#75715e"></span>  
-  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>45<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>160<span style="color:#f92672">);</span> <span style="color:#75715e">//Hand jets
-</span><span style="color:#75715e"></span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>45<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>160<span style="color:#f92672">);</span>
-  
-  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>5<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>18<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>255<span style="color:#f92672">);</span> <span style="color:#75715e">//Feet jets
-</span><span style="color:#75715e"></span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>5<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>18<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>255<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Blast off!
-</span><span style="color:#75715e"></span>  x<span style="color:#f92672">);</span>
-  y <span style="color:#f92672">=</span> y <span style="color:#f92672">-</span> 2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="lab-5---creature-screensaver">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Zed Chance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Lab 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CS 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Summer 18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Launching my &#34;creature&#34; like a rocket
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Initialize variables
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  size<span style="color:#f92672">(</span>400<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> width<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span> <span style="color:#75715e">//x is centered
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  y <span style="color:#f92672">=</span> height <span style="color:#f92672">+</span> 50<span style="color:#f92672">;</span> <span style="color:#75715e">//starts 50 pixels below
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  fill<span style="color:#f92672">(</span>255<span style="color:#f92672">,</span>255<span style="color:#f92672">,</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Rockets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  r<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  b <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  g<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span> <span style="color:#75715e">//Jets random color between yellow and red
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>45<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>160<span style="color:#f92672">);</span> <span style="color:#75715e">//Hand jets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>135<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>45<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>160<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>5<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">-</span>18<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>255<span style="color:#f92672">);</span> <span style="color:#75715e">//Feet jets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  triangle<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>5<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>225<span style="color:#f92672">,</span>x<span style="color:#f92672">+</span>18<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>255<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Blast off!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  x<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> y <span style="color:#f92672">-</span> 2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="lab-5---creature-screensaver">
   Lab 5 - Creature screensaver
   <a class="anchor" href="#lab-5---creature-screensaver">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
-</span><span style="color:#75715e">Zed Chance
-</span><span style="color:#75715e">Lab 5
-</span><span style="color:#75715e">CS 10
-</span><span style="color:#75715e">Summer 18
-</span><span style="color:#75715e">Creature screensaver
-</span><span style="color:#75715e">*/</span>
-
-<span style="color:#75715e">//Initialize variables
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">float</span> xSpeed <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> ySpeed <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  size<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
-  x <span style="color:#f92672">=</span> width<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span>
-  y <span style="color:#f92672">=</span> height<span style="color:#f92672">/</span>4<span style="color:#f92672">;</span>
-  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Horizontal movement
-</span><span style="color:#75715e"></span>  x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> xSpeed<span style="color:#f92672">;</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">-</span>55 <span style="color:#f92672">||</span> x <span style="color:#f92672">&lt;</span> 55<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    xSpeed <span style="color:#f92672">=</span> xSpeed<span style="color:#f92672">*-</span>1<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-  
-  <span style="color:#75715e">//Vertical movement
-</span><span style="color:#75715e"></span>  y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> ySpeed<span style="color:#f92672">;</span>
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">-</span>230 <span style="color:#f92672">||</span> y <span style="color:#f92672">&lt;</span> 35<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    ySpeed <span style="color:#f92672">=</span> ySpeed<span style="color:#f92672">*-</span>1<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-  
-  <span style="color:#75715e">//Color changes with quadrant
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">/</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    b <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-  
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">/</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    r <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
-    g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-  
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    g <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
-    b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-  
-  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    g <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
-    b <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-  
-  <span style="color:#75715e">//Fill body with color determined by above
-</span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
-  noStroke<span style="color:#f92672">();</span>
-  
-  <span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="lab-6---multiplying-creature-with-loops">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Zed Chance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Lab 5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CS 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Summer 18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Creature screensaver
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Initialize variables
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> xSpeed <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> ySpeed <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  size<span style="color:#f92672">(</span>600<span style="color:#f92672">,</span>600<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> width<span style="color:#f92672">/</span>2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> height<span style="color:#f92672">/</span>4<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Horizontal movement
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> xSpeed<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">-</span>55 <span style="color:#f92672">||</span> x <span style="color:#f92672">&lt;</span> 55<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    xSpeed <span style="color:#f92672">=</span> xSpeed<span style="color:#f92672">*-</span>1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Vertical movement
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  y <span style="color:#f92672">=</span> y <span style="color:#f92672">+</span> ySpeed<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">-</span>230 <span style="color:#f92672">||</span> y <span style="color:#f92672">&lt;</span> 35<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ySpeed <span style="color:#f92672">=</span> ySpeed<span style="color:#f92672">*-</span>1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Color changes with quadrant
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">/</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">/</span>2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> width<span style="color:#f92672">/</span>2 <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">/</span>3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    b <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Fill body with color determined by above
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="lab-6---multiplying-creature-with-loops">
   Lab 6 - Multiplying creature with loops
   <a class="anchor" href="#lab-6---multiplying-creature-with-loops">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
-</span><span style="color:#75715e">Zed Chance
-</span><span style="color:#75715e">Lab 6
-</span><span style="color:#75715e">CS 10
-</span><span style="color:#75715e">Summer 18
-</span><span style="color:#75715e">Multiplying creature with loops
-</span><span style="color:#75715e">*/</span>
-
-<span style="color:#75715e">//Setup
-</span><span style="color:#75715e"></span>size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>300<span style="color:#f92672">);</span>
-background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-
-<span style="color:#75715e">//Initialize variables
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>20<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 50<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-  <span style="color:#75715e">//Color
-</span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
-  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Randomly change color pallette
-</span><span style="color:#75715e"></span>  r<span style="color:#f92672">);</span>
-  g<span style="color:#f92672">);</span>
-  b<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Move creature over
-</span><span style="color:#75715e"></span>  x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> 120<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="lab-7---using-a-function-to-create-multiple-creatures">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Zed Chance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Lab 6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CS 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Summer 18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Multiplying creature with loops
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Setup
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>300<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Initialize variables
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>20<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> 50<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> r <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> g <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> width<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Color
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  fill<span style="color:#f92672">(</span>r<span style="color:#f92672">,</span>g<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Randomly change color pallette
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  r<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  g<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  b<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Move creature over
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> 120<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="lab-7---using-a-function-to-create-multiple-creatures">
   Lab 7 - Using a function to create multiple creatures
   <a class="anchor" href="#lab-7---using-a-function-to-create-multiple-creatures">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/*
-</span><span style="color:#75715e">Zed Chance
-</span><span style="color:#75715e">Lab 6
-</span><span style="color:#75715e">CS 10
-</span><span style="color:#75715e">Summer 18
-</span><span style="color:#75715e">Using a function to create multiple creatures
-</span><span style="color:#75715e">*/</span>
-
-<span style="color:#75715e">//Define my creature function
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myCreature</span><span style="color:#f92672">(</span><span style="color:#66d9ef">float</span> x<span style="color:#f92672">,</span><span style="color:#66d9ef">float</span> y<span style="color:#f92672">,</span>color c<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-  <span style="color:#75715e">//Color
-</span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
-  fill<span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Head
-</span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Arms
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Legs
-</span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
-  
-  <span style="color:#75715e">//Torso
-</span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
-  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>800<span style="color:#f92672">);</span>
-  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  <span style="color:#75715e">//Call my creature function in draw function
-</span><span style="color:#75715e"></span>  myCreature<span style="color:#f92672">(</span>random<span style="color:#f92672">(</span>width<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>height<span style="color:#f92672">),</span>color<span style="color:#f92672">(</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">)));</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Zed Chance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Lab 6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">CS 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Summer 18
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Using a function to create multiple creatures
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Define my creature function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myCreature</span><span style="color:#f92672">(</span><span style="color:#66d9ef">float</span> x<span style="color:#f92672">,</span><span style="color:#66d9ef">float</span> y<span style="color:#f92672">,</span>color c<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Color
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  noStroke<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  fill<span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Head
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ellipse<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">,</span>70<span style="color:#f92672">,</span>70<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Arms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>50<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rectMode<span style="color:#f92672">(</span>CORNER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>55<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>35<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>40<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Legs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>30<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">+</span>3<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>130<span style="color:#f92672">,</span>27<span style="color:#f92672">,</span>100<span style="color:#f92672">,</span>10<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Torso
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  rectMode<span style="color:#f92672">(</span>CENTER<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  rect<span style="color:#f92672">(</span>x<span style="color:#f92672">,</span>y<span style="color:#f92672">+</span>90<span style="color:#f92672">,</span>60<span style="color:#f92672">,</span>100<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  size<span style="color:#f92672">(</span>800<span style="color:#f92672">,</span>800<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  background<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Call my creature function in draw function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  myCreature<span style="color:#f92672">(</span>random<span style="color:#f92672">(</span>width<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>height<span style="color:#f92672">),</span>color<span style="color:#f92672">(</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">),</span>random<span style="color:#f92672">(</span>255<span style="color:#f92672">)));</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></article>
  
       
 

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Immutability #  Strings in Java are an example of immutability.
@@ -27,7 +27,7 @@ a.add(1, 5); b.get(1); Lets make an immutable List (pseudo): #  a = new List b =
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3704,6 +3704,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3951,6 +3990,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4473,6 +4525,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5459,6 +5550,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5520,7 +5637,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5580,8 +5697,8 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <p>Strings in Java are an example of immutability.</p>
 <p>Something like</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">s <span style="color:#f92672">=</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">;</span>
-</code></pre></div><p>Actually creates a new object with the 2 new strings, and the reference to <code>s</code> is updated, but actual strings are immutable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">;</span>
+</span></span></code></pre></div><p>Actually creates a new object with the 2 new strings, and the reference to <code>s</code> is updated, but actual strings are immutable.</p>
 <h2 id="lists">
   Lists
   <a class="anchor" href="#lists">#</a>
@@ -5589,9 +5706,9 @@ https://github.com/alex-shpak/hugo-book
 <p>In Java a popular List class is <code>LinkedList</code>.</p>
 <p><img src="/notes/853D3C5EAB6079BA8BEE413E038ACCA1.jpg" alt="IMAGE" /></p>
 <p>A change to either <code>a</code> or <code>b</code> will change both!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">a<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 5<span style="color:#f92672">);</span>
-b<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
-</code></pre></div><p><img src="/notes/5AE5F8B89006BF907A108C196865BF40.jpg" alt="IMAGE" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 5<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p><img src="/notes/5AE5F8B89006BF907A108C196865BF40.jpg" alt="IMAGE" /></p>
 <h3 id="lets-make-an-immutable-list-pseudo">
   Lets make an immutable List (pseudo):
   <a class="anchor" href="#lets-make-an-immutable-list-pseudo">#</a>
@@ -5628,35 +5745,35 @@ b<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span
   <a class="anchor" href="#racket">#</a>
 </h2>
 <p><a href="https://docs.racket-lang.org/guide/to-scheme.html">https://docs.racket-lang.org/guide/to-scheme.html</a></p>
-<p>Test using <a href="http://www.wescheme.org/openEditor">www.wescheme.org/openEditor</a></p>
+<p>Test using <a href="https://www.wescheme.org/openEditor">www.wescheme.org/openEditor</a></p>
 <ul>
 <li><code>empty</code> is a constant for the empty list</li>
 <li><code>cons</code> is the function that adds to the beginning of a list. <code>(cons elem list)</code> <code>elem</code> is element to be added, <code>list</code> is the list to be added to</li>
 <li><code>(rest nonemptylist)</code> returns the list of everything but the first element</li>
 <li><code>(first nonemptylist)</code> returns the first element of the list</li>
-<li><code>(empty? list)</code> returns true or false (because the <code>?</code> &ldquo;huh?&quot;) if the list is empty</li>
+<li><code>(empty? list)</code> returns true or false (because the <code>?</code> &ldquo;huh?&rdquo;) if the list is empty</li>
 <li><code>(list 1 2 3)</code> creates a list with elements <code>1</code> <code>2</code> <code>3</code>, can also be alised as <code>'(1 2 3)</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">empty -- const <span style="color:#66d9ef">for</span> the empty list
-(cons elem list)
-(rest nonemptylist)
-(first nonemptylist)
-(empty? list)
-(list <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)
-<span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(empty? empty)                    <span style="color:#75715e">; true</span>
-(empty? (list <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))             <span style="color:#75715e">; false</span>
-(cons <span style="color:#ae81ff">3</span> empty)                    <span style="color:#75715e">; (list 3)</span>
-(cons <span style="color:#ae81ff">2</span> (cons <span style="color:#ae81ff">3</span> empty)            <span style="color:#75715e">; (list 2 3)</span>
-(cons <span style="color:#ae81ff">1</span> (cons <span style="color:#ae81ff">2</span> (cons <span style="color:#ae81ff">3</span> empty)))  <span style="color:#75715e">; (list 1 2 3)</span>
-<span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)                          <span style="color:#75715e">; (list 1 2 3)</span>
-(first <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                  <span style="color:#75715e">; 1</span>
-(rest <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                   <span style="color:#75715e">; (list 2 3)</span>
-</code></pre></div><p>The <code>if</code> construct in Racket:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">if</span> boolexpr
-    trueexpr
-    falseexpr)
-</code></pre></div><h3 id="an-example-to-return-the-length-of-a-list">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>empty -- const <span style="color:#66d9ef">for</span> the empty list
+</span></span><span style="display:flex;"><span>(cons elem list)
+</span></span><span style="display:flex;"><span>(rest nonemptylist)
+</span></span><span style="display:flex;"><span>(first nonemptylist)
+</span></span><span style="display:flex;"><span>(empty? list)
+</span></span><span style="display:flex;"><span>(list <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(empty? empty)                    <span style="color:#75715e">; true</span>
+</span></span><span style="display:flex;"><span>(empty? (list <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))             <span style="color:#75715e">; false</span>
+</span></span><span style="display:flex;"><span>(cons <span style="color:#ae81ff">3</span> empty)                    <span style="color:#75715e">; (list 3)</span>
+</span></span><span style="display:flex;"><span>(cons <span style="color:#ae81ff">2</span> (cons <span style="color:#ae81ff">3</span> empty)            <span style="color:#75715e">; (list 2 3)</span>
+</span></span><span style="display:flex;"><span>(cons <span style="color:#ae81ff">1</span> (cons <span style="color:#ae81ff">2</span> (cons <span style="color:#ae81ff">3</span> empty)))  <span style="color:#75715e">; (list 1 2 3)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)                          <span style="color:#75715e">; (list 1 2 3)</span>
+</span></span><span style="display:flex;"><span>(first <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                  <span style="color:#75715e">; 1</span>
+</span></span><span style="display:flex;"><span>(rest <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                   <span style="color:#75715e">; (list 2 3)</span>
+</span></span></code></pre></div><p>The <code>if</code> construct in Racket:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">if</span> boolexpr
+</span></span><span style="display:flex;"><span>    trueexpr
+</span></span><span style="display:flex;"><span>    falseexpr)
+</span></span></code></pre></div><h3 id="an-example-to-return-the-length-of-a-list">
   An example to return the length of a list:
   <a class="anchor" href="#an-example-to-return-the-length-of-a-list">#</a>
 </h3>
@@ -5671,20 +5788,20 @@ else
 else
   return 1 + listlen(list without front)
 </code></pre><p>In racket:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (listlen xs)
-  (<span style="color:#66d9ef">if</span> (empty? xs)
-      <span style="color:#ae81ff">0</span>
-      (+ <span style="color:#ae81ff">1</span> (listlen (rest xs)))))
-</code></pre></div><p>Note</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (listlen xs)
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">if</span> (empty? xs)
+</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>      (+ <span style="color:#ae81ff">1</span> (listlen (rest xs)))))
+</span></span></code></pre></div><p>Note</p>
 <ul>
 <li>Traditional in Racket to pass the list name as plural: <code>xs</code></li>
 <li>There are no returns in Racket, everything is an expression</li>
 </ul>
 <p>We can then run this function via the interactions panel</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket">(listlen empty)           <span style="color:#75715e">; 0</span>
-(listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span>))            <span style="color:#75715e">; 1</span>
-(listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>))          <span style="color:#75715e">; 2</span>
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-racket" data-lang="racket"><span style="display:flex;"><span>(listlen empty)           <span style="color:#75715e">; 0</span>
+</span></span><span style="display:flex;"><span>(listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span>))            <span style="color:#75715e">; 1</span>
+</span></span><span style="display:flex;"><span>(listlen <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>))          <span style="color:#75715e">; 2</span>
+</span></span></code></pre></div></article>
  
       
 

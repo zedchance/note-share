@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SQL cont. #  Comparison operators #  To list all the names of employees whose salary is greater than the salary of all the employees in department 5:
-SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &gt; ALL (SELECT e.salary FROM employee AS e WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &gt; some (..., it doesn&rsquo;t need to be greater than all items in bag, just some (1 is enough).">
+SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &gt; ALL (SELECT e.salary  FROM employee AS e  WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &gt; some (.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS134-lecture-20210624" />
 <meta property="og:description" content="SQL cont. #  Comparison operators #  To list all the names of employees whose salary is greater than the salary of all the employees in department 5:
-SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &gt; ALL (SELECT e.salary FROM employee AS e WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &gt; some (..., it doesn&rsquo;t need to be greater than all items in bag, just some (1 is enough)." />
+SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &gt; ALL (SELECT e.salary  FROM employee AS e  WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &gt; some (." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/" /><meta property="article:section" content="CS134" />
 
@@ -19,7 +19,7 @@ SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &gt; ALL (SELECT e
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3696,6 +3696,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3943,6 +3982,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4465,6 +4517,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5451,6 +5542,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5512,7 +5629,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5575,12 +5692,12 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p><img src="/notes/image_2021-06-24-16-11-46.png" alt="image_2021-06-24-16-11-46" /></p>
 <p>To list all the names of employees whose salary is greater than the salary of all the employees in department 5:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> e1.lname, e1.fname
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e1
-<span style="color:#66d9ef">WHERE</span> e1.salary <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">ALL</span> (<span style="color:#66d9ef">SELECT</span> e.salary
-                       <span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
-                       <span style="color:#66d9ef">WHERE</span> e.dno<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>);
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e1.lname, e1.fname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> e1.salary <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">ALL</span> (<span style="color:#66d9ef">SELECT</span> e.salary
+</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
+</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">WHERE</span> e.dno<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>);
+</span></span></code></pre></div><ul>
 <li>it is <em>suggested</em> to use aliases when using nested queries</li>
 <li>if instead our <code>where</code> clause was <code>E1.SALARY &gt; some (...</code>, it doesn&rsquo;t need to be greater than all items in bag, just some (1 is enough).</li>
 </ul>
@@ -5591,13 +5708,13 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="/notes/image_2021-06-24-16-28-05.png" alt="image_2021-06-24-16-28-05" /></p>
 <p>Often we want to check whether the result of a query is empty.</p>
 <p>Retrieve the name of each employee who has a dependent with the same first name as the employee.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> e.fname, e.lname
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
-<span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">EXISTS</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-              <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> d
-              <span style="color:#66d9ef">WHERE</span> d.essn<span style="color:#f92672">=</span>e.ssn <span style="color:#66d9ef">AND</span>
-                    d.dependent_name<span style="color:#f92672">=</span>e.fname);
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e.fname, e.lname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">EXISTS</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> d
+</span></span><span style="display:flex;"><span>              <span style="color:#66d9ef">WHERE</span> d.essn<span style="color:#f92672">=</span>e.ssn <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>                    d.dependent_name<span style="color:#f92672">=</span>e.fname);
+</span></span></code></pre></div><ul>
 <li>if there are any tuples returned by the inner query, the <code>exists</code> will return true and the outer query was select the current employee</li>
 <li>the inner query can use the outer query&rsquo;s variables</li>
 <li>we <code>select *</code> in the inner query to get the entire table back</li>
@@ -5607,20 +5724,20 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 <p>Retrieve the names of employees who have no dependents.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> e.fname, e.lname
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
-<span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-                  <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> d
-                  <span style="color:#66d9ef">WHERE</span> d.essn<span style="color:#f92672">=</span>e.ssn);
-</code></pre></div><h3 id="explicit-sets">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e.fname, e.lname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> d
+</span></span><span style="display:flex;"><span>                  <span style="color:#66d9ef">WHERE</span> d.essn<span style="color:#f92672">=</span>e.ssn);
+</span></span></code></pre></div><h3 id="explicit-sets">
   Explicit sets
   <a class="anchor" href="#explicit-sets">#</a>
 </h3>
 <p><img src="/notes/image_2021-06-24-16-49-45.png" alt="image_2021-06-24-16-49-45" /></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> essn
-<span style="color:#66d9ef">FROM</span> works_on
-<span style="color:#66d9ef">WHERE</span> pno <span style="color:#66d9ef">IN</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> essn
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> works_on
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> pno <span style="color:#66d9ef">IN</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
+</span></span></code></pre></div><ul>
 <li>an easy way to explicitly declare a set</li>
 </ul>
 <h3 id="renaming-aliases">
@@ -5633,20 +5750,20 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#joined-tables">#</a>
 </h3>
 <p><img src="/notes/image_2021-06-24-16-52-35.png" alt="image_2021-06-24-16-52-35" /></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> fname, lname, address
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">JOIN</span> department
-    <span style="color:#66d9ef">ON</span> dnumber<span style="color:#f92672">=</span>dno
-<span style="color:#66d9ef">WHERE</span> dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> fname, lname, address
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">JOIN</span> department
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> dnumber<span style="color:#f92672">=</span>dno
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>;
+</span></span></code></pre></div><ul>
 <li>not all DBMS has support for <code>JOIN</code>, however MySQL does have support.</li>
 </ul>
 <p><img src="/notes/image_2021-06-24-16-56-16.png" alt="image_2021-06-24-16-56-16" /></p>
 <p><code>JOIN</code> on its own is the same as <code>INNER JOIN</code>.</p>
 <p><img src="/notes/image_2021-06-24-16-58-10.png" alt="image_2021-06-24-16-58-10" /></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> fname, lname, dname
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">OUTER</span> <span style="color:#66d9ef">JOIN</span> department
-    <span style="color:#66d9ef">ON</span> ssn<span style="color:#f92672">=</span>mgrssn;
-</code></pre></div><p><img src="/notes/image_2021-06-24-16-58-15.png" alt="image_2021-06-24-16-58-15" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> fname, lname, dname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">OUTER</span> <span style="color:#66d9ef">JOIN</span> department
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ON</span> ssn<span style="color:#f92672">=</span>mgrssn;
+</span></span></code></pre></div><p><img src="/notes/image_2021-06-24-16-58-15.png" alt="image_2021-06-24-16-58-15" /></p>
 <ul>
 <li><code>INNER JOIN</code> gets rid of the items that don&rsquo;t match</li>
 <li><code>LEFT OUTER JOIN</code> puts null values for items that don&rsquo;t exist in the left table</li>
@@ -5659,40 +5776,40 @@ https://github.com/alex-shpak/hugo-book
 </h3>
 <p><img src="/notes/image_2021-06-24-17-04-09.png" alt="image_2021-06-24-17-04-09" /></p>
 <p>Find the maximum salary, the minimum salary, and the average salary among all employees.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(salary), <span style="color:#66d9ef">MIN</span>(salary), <span style="color:#66d9ef">AVG</span>(salary)
-<span style="color:#66d9ef">FROM</span> employee
-</code></pre></div><blockquote class="book-hint danger">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(salary), <span style="color:#66d9ef">MIN</span>(salary), <span style="color:#66d9ef">AVG</span>(salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee
+</span></span></code></pre></div><blockquote class="book-hint danger">
   Include the next example in weekly homework
 </blockquote>
 
 <p>Find the maximum salary, the minimum salary, and the average salary among employees who work for the &lsquo;Research&rsquo; department.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(salary), <span style="color:#66d9ef">MIN</span>(salary), <span style="color:#66d9ef">AVG</span>(salary)
-<span style="color:#66d9ef">FROM</span> employee, department
-<span style="color:#66d9ef">WHERE</span> dno<span style="color:#f92672">=</span>dnumber <span style="color:#66d9ef">AND</span>
-      dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>;
-</code></pre></div><p>Retrieve the total number of employees in the company.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
-<span style="color:#66d9ef">FROM</span> employee;
-</code></pre></div><p>Consider these 2 queries</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- amount of different salaries
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#66d9ef">DISTINCT</span> salary)
-<span style="color:#66d9ef">FROM</span> employee;
-
-<span style="color:#75715e">-- amount of all employees with salary
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(salary)
-<span style="color:#66d9ef">FROM</span> employee;
-</code></pre></div><p>Retrieve the number of employees in the &lsquo;Research&rsquo; department</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
-<span style="color:#66d9ef">FROM</span> employee, department
-<span style="color:#66d9ef">WHERE</span> dno<span style="color:#f92672">=</span>dnumber <span style="color:#66d9ef">AND</span>
-      dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>;
-</code></pre></div><p>Retrieve the names of all employees who have two or more dependents.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> e.lname, e.fname
-<span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
-<span style="color:#66d9ef">WHERE</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
-       <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> d
-       <span style="color:#66d9ef">WHERE</span> e.ssn<span style="color:#f92672">=</span>d.essn) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(salary), <span style="color:#66d9ef">MIN</span>(salary), <span style="color:#66d9ef">AVG</span>(salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee, department
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> dno<span style="color:#f92672">=</span>dnumber <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>      dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>;
+</span></span></code></pre></div><p>Retrieve the total number of employees in the company.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee;
+</span></span></code></pre></div><p>Consider these 2 queries</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- amount of different salaries
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#66d9ef">DISTINCT</span> salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- amount of all employees with salary
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(salary)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee;
+</span></span></code></pre></div><p>Retrieve the number of employees in the &lsquo;Research&rsquo; department</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee, department
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> dno<span style="color:#f92672">=</span>dnumber <span style="color:#66d9ef">AND</span>
+</span></span><span style="display:flex;"><span>      dname<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Research&#39;</span>;
+</span></span></code></pre></div><p>Retrieve the names of all employees who have two or more dependents.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> e.lname, e.fname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> employee <span style="color:#66d9ef">AS</span> e
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">FROM</span> dependent <span style="color:#66d9ef">AS</span> d
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">WHERE</span> e.ssn<span style="color:#f92672">=</span>d.essn) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span>;
+</span></span></code></pre></div><ul>
 <li>when <code>COUNT</code> returns the value, it is a single row/column in a table.
 This is a special case where you can compare the table directly to the interger 2.</li>
 <li>you cannot use a comparison in a <code>SELECT</code> statement</li>

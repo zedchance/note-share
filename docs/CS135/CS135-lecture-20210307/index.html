@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Mergesort in Racket #  Mergesort breaks the list in half and sorts each half recursively.
@@ -21,7 +21,7 @@ ms(list) front = front half of list back = back half of list ms(front) ms(back) 
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3698,6 +3698,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3945,6 +3984,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4467,6 +4519,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5453,6 +5544,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5514,7 +5631,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5587,25 +5704,25 @@ https://github.com/alex-shpak/hugo-book
     return merge(front, back)
 </code></pre><p>In racket, there is a function called <code>drop</code> that takes a list and a number. It drops the numbers off the list.
 There is also <code>take</code>, that takes the first number of elements of the list and returns them.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> list <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>))            <span style="color:#75715e">; helper definition</span>
-(drop list <span style="color:#ae81ff">2</span>)                           <span style="color:#75715e">; &#39;(3 4 5 6)</span>
-(take list <span style="color:#ae81ff">2</span>)                           <span style="color:#75715e">; &#39;(1 2)</span>
-(drop list (quotient (length list) <span style="color:#ae81ff">2</span>))  <span style="color:#75715e">; drops the first half of the list</span>
-</code></pre></div><p>So we can start our mergesort definition:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (ms xs)
-    (<span style="color:#66d9ef">if</span> (&lt; (length xs) <span style="color:#ae81ff">2</span>)
-        xs
-        (merge (ms (take xs (quotient (length xs) <span style="color:#ae81ff">2</span>)))
-               (ms (drop xs (quotient (length xs) <span style="color:#ae81ff">2</span>))))))
-</code></pre></div><p>However, we haven&rsquo;t defined <code>merge</code> yet, so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (merge xs ys)
-    (<span style="color:#66d9ef">cond</span> ((empty? xs) ys)
-          ((empty? ys) xs)
-          ((&lt; (first xs) (first ys)) (cons (first xs) (merge (rest xs) ys)))
-          (<span style="color:#66d9ef">else</span> (cons (first ys) (merge (rest ys) xs)))))
-</code></pre></div><p>So we can test this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(ms <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span>))                   <span style="color:#75715e">; &#39;(1 2 3 4 5 6)</span>
-</code></pre></div><h2 id="higher-order-functions">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> list <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>))            <span style="color:#75715e">; helper definition</span>
+</span></span><span style="display:flex;"><span>(drop list <span style="color:#ae81ff">2</span>)                           <span style="color:#75715e">; &#39;(3 4 5 6)</span>
+</span></span><span style="display:flex;"><span>(take list <span style="color:#ae81ff">2</span>)                           <span style="color:#75715e">; &#39;(1 2)</span>
+</span></span><span style="display:flex;"><span>(drop list (quotient (length list) <span style="color:#ae81ff">2</span>))  <span style="color:#75715e">; drops the first half of the list</span>
+</span></span></code></pre></div><p>So we can start our mergesort definition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (ms xs)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">if</span> (&lt; (length xs) <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        xs
+</span></span><span style="display:flex;"><span>        (merge (ms (take xs (quotient (length xs) <span style="color:#ae81ff">2</span>)))
+</span></span><span style="display:flex;"><span>               (ms (drop xs (quotient (length xs) <span style="color:#ae81ff">2</span>))))))
+</span></span></code></pre></div><p>However, we haven&rsquo;t defined <code>merge</code> yet, so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (merge xs ys)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">cond</span> ((empty? xs) ys)
+</span></span><span style="display:flex;"><span>          ((empty? ys) xs)
+</span></span><span style="display:flex;"><span>          ((&lt; (first xs) (first ys)) (cons (first xs) (merge (rest xs) ys)))
+</span></span><span style="display:flex;"><span>          (<span style="color:#66d9ef">else</span> (cons (first ys) (merge (rest ys) xs)))))
+</span></span></code></pre></div><p>So we can test this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(ms <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span>))                   <span style="color:#75715e">; &#39;(1 2 3 4 5 6)</span>
+</span></span></code></pre></div><h2 id="higher-order-functions">
   Higher-order functions
   <a class="anchor" href="#higher-order-functions">#</a>
 </h2>
@@ -5628,16 +5745,16 @@ The <code>l</code> in <code>foldl</code> means that it is going from left to rig
 </ul>
 <p><img src="/notes/image_2021-03-07-09-06-45.png" alt="image_2021-03-07-09-06-45" /></p>
 <p>For example, to sum the elements of a list using <code>foldl</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(foldl + <span style="color:#ae81ff">0</span> xs)                          <span style="color:#75715e">; 10</span>
-</code></pre></div><p>Examples using <code>map</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(map add1 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                   <span style="color:#75715e">; &#39;(2 3 4 5)</span>
-</code></pre></div><p>We can use our own functions in <code>map</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (double x)
-    (+ x x))
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(map double <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                 <span style="color:#75715e">; &#39;(2 4 6 8)</span>
-</code></pre></div><p>Lets take a look at <code>filter</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(filter even? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))             <span style="color:#75715e">; &#39;(2 4)</span>
-</code></pre></div><h3 id="designing-filter">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(foldl + <span style="color:#ae81ff">0</span> xs)                          <span style="color:#75715e">; 10</span>
+</span></span></code></pre></div><p>Examples using <code>map</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(map add1 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                   <span style="color:#75715e">; &#39;(2 3 4 5)</span>
+</span></span></code></pre></div><p>We can use our own functions in <code>map</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (double x)
+</span></span><span style="display:flex;"><span>    (+ x x))
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(map double <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                 <span style="color:#75715e">; &#39;(2 4 6 8)</span>
+</span></span></code></pre></div><p>Lets take a look at <code>filter</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(filter even? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))             <span style="color:#75715e">; &#39;(2 4)</span>
+</span></span></code></pre></div><h3 id="designing-filter">
   Designing <code>filter</code>
   <a class="anchor" href="#designing-filter">#</a>
 </h3>
@@ -5645,106 +5762,106 @@ The <code>l</code> in <code>foldl</code> means that it is going from left to rig
 When we are calling the function recursively, we will have to use <code>rest</code>.</p>
 <p>Heres a screenshot using <code>even?</code> as <code>f</code>:</p>
 <p><img src="/notes/image_2021-03-07-09-24-49.png" alt="image_2021-03-07-09-24-49" /></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#75715e">; my-filter applies f to each element of xs</span>
-<span style="color:#75715e">; and builds a list from those that make f true</span>
-<span style="color:#75715e">; f: A --&gt; boolean</span>
-<span style="color:#75715e">; xs: list of A</span>
-(<span style="color:#66d9ef">define</span> (my-filter f xs)
-    (<span style="color:#66d9ef">if</span> (empty? xs)
-        empty
-        (<span style="color:#66d9ef">if</span> (f (first xs)) <span style="color:#75715e">; remember f is a function</span>
-            (cons (first xs) (my-filter f (rest xs)))
-            (my-filter f (rest xs)))))
-</code></pre></div><p>So:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(my-filter even? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))          <span style="color:#75715e">; &#39;(2 4)</span>
-</code></pre></div><h3 id="designing-foldl">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span><span style="color:#75715e">; my-filter applies f to each element of xs</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; and builds a list from those that make f true</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; f: A --&gt; boolean</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; xs: list of A</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (my-filter f xs)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">if</span> (empty? xs)
+</span></span><span style="display:flex;"><span>        empty
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">if</span> (f (first xs)) <span style="color:#75715e">; remember f is a function</span>
+</span></span><span style="display:flex;"><span>            (cons (first xs) (my-filter f (rest xs)))
+</span></span><span style="display:flex;"><span>            (my-filter f (rest xs)))))
+</span></span></code></pre></div><p>So:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(my-filter even? <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))          <span style="color:#75715e">; &#39;(2 4)</span>
+</span></span></code></pre></div><h3 id="designing-foldl">
   Designing <code>foldl</code>
   <a class="anchor" href="#designing-foldl">#</a>
 </h3>
 <p>Recall</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(foldl + <span style="color:#ae81ff">0</span> <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                  <span style="color:#75715e">; 10</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#75715e">; f: (A, B) --&gt; A</span>
-<span style="color:#75715e">; acc: A</span>
-<span style="color:#75715e">; xs: list of B</span>
-(<span style="color:#66d9ef">define</span> (my-foldl f acc xs)
-    (<span style="color:#66d9ef">if</span> (empty? xs)
-        acc
-        (my-foldl f (f acc (first xs)) (rest xs))))
-</code></pre></div><p>So lets test it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(my-foldl + <span style="color:#ae81ff">0</span> <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))               <span style="color:#75715e">; 10</span>
-</code></pre></div><h2 id="lambda-functions">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(foldl + <span style="color:#ae81ff">0</span> <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))                  <span style="color:#75715e">; 10</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span><span style="color:#75715e">; f: (A, B) --&gt; A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; acc: A</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; xs: list of B</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (my-foldl f acc xs)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">if</span> (empty? xs)
+</span></span><span style="display:flex;"><span>        acc
+</span></span><span style="display:flex;"><span>        (my-foldl f (f acc (first xs)) (rest xs))))
+</span></span></code></pre></div><p>So lets test it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(my-foldl + <span style="color:#ae81ff">0</span> <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>))               <span style="color:#75715e">; 10</span>
+</span></span></code></pre></div><h2 id="lambda-functions">
   Lambda functions
   <a class="anchor" href="#lambda-functions">#</a>
 </h2>
 <p>Lambdas are nameless (anonymous) functions.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">lambda</span> (x y)
-    (+ x y))
-</code></pre></div><p>How can we call this function if it doesn&rsquo;t have a name?
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">lambda</span> (x y)
+</span></span><span style="display:flex;"><span>    (+ x y))
+</span></span></code></pre></div><p>How can we call this function if it doesn&rsquo;t have a name?
 There are many uses, we can define an operation without writing the full definition.</p>
 <p>For example, to double all the numbers of a list:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (double-all xs)
-    (<span style="color:#66d9ef">if</span> (empty? xs)
-        empty
-        (cons (* <span style="color:#ae81ff">2</span> (first xs)) (double-all (rest xs)))))
-
-(double-all <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                   <span style="color:#75715e">; &#39;(2 4 6)</span>
-</code></pre></div><p>But we can do this with higher order functions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (double x)
-    (* <span style="color:#ae81ff">2</span> x))
-
-(<span style="color:#66d9ef">define</span> (double-all2 xs)
-    (map double xs))
-
-(double-all2 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                  <span style="color:#75715e">; &#39;(2 4 6)</span>
-</code></pre></div><p>Notice that we had to define our doubling function.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (double-all xs)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">if</span> (empty? xs)
+</span></span><span style="display:flex;"><span>        empty
+</span></span><span style="display:flex;"><span>        (cons (* <span style="color:#ae81ff">2</span> (first xs)) (double-all (rest xs)))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(double-all <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                   <span style="color:#75715e">; &#39;(2 4 6)</span>
+</span></span></code></pre></div><p>But we can do this with higher order functions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (double x)
+</span></span><span style="display:flex;"><span>    (* <span style="color:#ae81ff">2</span> x))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (double-all2 xs)
+</span></span><span style="display:flex;"><span>    (map double xs))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(double-all2 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                  <span style="color:#75715e">; &#39;(2 4 6)</span>
+</span></span></code></pre></div><p>Notice that we had to define our doubling function.
 This is where anonymous functions come in.
 Their main use is for one time application for a simple functions in a higher order situation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (double-all3 xs)
-    (map (<span style="color:#66d9ef">lambda</span> (x) (* <span style="color:#ae81ff">2</span> x)) xs))
-
-(double-all3 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                  <span style="color:#75715e">; &#39;(2 4 6)</span>
-</code></pre></div><h3 id="another-lambda-example">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (double-all3 xs)
+</span></span><span style="display:flex;"><span>    (map (<span style="color:#66d9ef">lambda</span> (x) (* <span style="color:#ae81ff">2</span> x)) xs))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(double-all3 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>))                  <span style="color:#75715e">; &#39;(2 4 6)</span>
+</span></span></code></pre></div><h3 id="another-lambda-example">
   Another lambda example
   <a class="anchor" href="#another-lambda-example">#</a>
 </h3>
 <p>Lets write a function that keeps the numbers 1 thru 100.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (keep-1-100 xs)
-    (filter (<span style="color:#66d9ef">lambda</span> (x) (<span style="color:#66d9ef">and</span> (&gt; x <span style="color:#ae81ff">0</span>) (&lt; x <span style="color:#ae81ff">101</span>))) xs))
-
-(keep-1-100 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">-10</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span>))  <span style="color:#75715e">; &#39;(1 50 99 100)</span>
-</code></pre></div><h3 id="returning-a-function-using-a-lambda">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (keep-1-100 xs)
+</span></span><span style="display:flex;"><span>    (filter (<span style="color:#66d9ef">lambda</span> (x) (<span style="color:#66d9ef">and</span> (&gt; x <span style="color:#ae81ff">0</span>) (&lt; x <span style="color:#ae81ff">101</span>))) xs))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(keep-1-100 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">-10</span> <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span>))  <span style="color:#75715e">; &#39;(1 50 99 100)</span>
+</span></span></code></pre></div><h3 id="returning-a-function-using-a-lambda">
   Returning a function using a lambda
   <a class="anchor" href="#returning-a-function-using-a-lambda">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#75715e">; g(f(x))</span>
-(<span style="color:#66d9ef">define</span> (composer g f)
-    (<span style="color:#66d9ef">lambda</span> (x)
-        (g (f x))))
-</code></pre></div><p>We can test out this function:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt"><span style="color:#75715e">; using double function from earlier</span>
-(<span style="color:#66d9ef">define</span> double-add1 (composer add1 double))
-
-(double-add1 <span style="color:#ae81ff">10</span>)                        <span style="color:#75715e">; 21</span>
-</code></pre></div><h3 id="expanding-the-keep-1-100-function">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span><span style="color:#75715e">; g(f(x))</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (composer g f)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">lambda</span> (x)
+</span></span><span style="display:flex;"><span>        (g (f x))))
+</span></span></code></pre></div><p>We can test out this function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span><span style="color:#75715e">; using double function from earlier</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> double-add1 (composer add1 double))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(double-add1 <span style="color:#ae81ff">10</span>)                        <span style="color:#75715e">; 21</span>
+</span></span></code></pre></div><h3 id="expanding-the-keep-1-100-function">
   Expanding the <code>keep-1-100</code> function
   <a class="anchor" href="#expanding-the-keep-1-100-function">#</a>
 </h3>
 <p>If we want to expand our 1-100 function to take any range, we can use lambdas.
 We can make a higher order function that creates a tester for a specific interval.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> (interval-factory x y)
-    (<span style="color:#66d9ef">lambda</span> (z)
-        (<span style="color:#66d9ef">and</span> (&lt; x z) (&gt; y z))))
-</code></pre></div><p>This returns a customized function based on the values we pass <code>x</code> and <code>y</code>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> (interval-factory x y)
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">lambda</span> (z)
+</span></span><span style="display:flex;"><span>        (<span style="color:#66d9ef">and</span> (&lt; x z) (&gt; y z))))
+</span></span></code></pre></div><p>This returns a customized function based on the values we pass <code>x</code> and <code>y</code>.
 We can define the 1-100 interval like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rkt" data-lang="rkt">(<span style="color:#66d9ef">define</span> in-1-100 (interval-factory <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">100</span>))
-(in-1-100 <span style="color:#ae81ff">50</span>)                           <span style="color:#75715e">; #t</span>
-(in-1-100 <span style="color:#ae81ff">150</span>)                          <span style="color:#75715e">; #f</span>
-(filter in-1-100 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span>))  <span style="color:#75715e">; &#39;(2 99)</span>
-
-<span style="color:#75715e">; another interval</span>
-(<span style="color:#66d9ef">define</span> in-50-1000 (interval-factory <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">1000</span>))
-(filter in-50-1000 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span>))<span style="color:#75715e">; &#39;(99 100 101)</span>
-</code></pre></div><h2 id="functional-closure">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rkt" data-lang="rkt"><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> in-1-100 (interval-factory <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">100</span>))
+</span></span><span style="display:flex;"><span>(in-1-100 <span style="color:#ae81ff">50</span>)                           <span style="color:#75715e">; #t</span>
+</span></span><span style="display:flex;"><span>(in-1-100 <span style="color:#ae81ff">150</span>)                          <span style="color:#75715e">; #f</span>
+</span></span><span style="display:flex;"><span>(filter in-1-100 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span>))  <span style="color:#75715e">; &#39;(2 99)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; another interval</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define</span> in-50-1000 (interval-factory <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">1000</span>))
+</span></span><span style="display:flex;"><span>(filter in-50-1000 <span style="color:#f92672">&#39;</span>(<span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span>))<span style="color:#75715e">; &#39;(99 100 101)</span>
+</span></span></code></pre></div><h2 id="functional-closure">
   Functional closure
   <a class="anchor" href="#functional-closure">#</a>
 </h2>

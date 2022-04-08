@@ -25,7 +25,7 @@ Multiplexing/demultiplexing #  Connectionless transport: UDP #  </description>
       <description>UDP cont. #  Principles of reliable data transfer #  Expected features
  No bit errors No loss of data   Problems
  Bit error Data loss   Solutions
- Error detection (checksum) Data recovery    So how do we do recovery? We learn from human to human conversation, &amp;ldquo;pardon?&amp;quot; to recover data loss in the conversation.
+ Error detection (checksum) Data recovery    So how do we do recovery? We learn from human to human conversation, &amp;ldquo;pardon?&amp;rdquo; to recover data loss in the conversation.
 Feedback: ACK for positive, NAK for negative.
 So the receiver will send an ACK if the packet was received without loss, otherwise it&amp;rsquo;ll send NAK.</description>
     </item>

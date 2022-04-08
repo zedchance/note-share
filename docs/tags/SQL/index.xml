@@ -25,7 +25,7 @@ History #  We will be covering the SQL core.
       
       <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/</guid>
       <description>Assignment 2 solution #  Assignment 3 solutions #  SQL cont. #  INSERT #  The attributes (VALUES) are listed one by one in the same order as when the table was declared. If they are put in the wrong order the attributes will go into the wrong places (or violate domain constraints). You can specify the attributes and their order is
-INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO) VALUES (&amp;#39;Richard&amp;#39;, &amp;#39;Marini&amp;#39;, &amp;#39;1932914921&amp;#39;, 4) The attributes that are not null must be specified in the command.</description>
+INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO)  VALUES (&amp;#39;Richard&amp;#39;, &amp;#39;Marini&amp;#39;, &amp;#39;1932914921&amp;#39;, 4) The attributes that are not null must be specified in the command.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO) VALUES (&amp;#39;Richard&amp;#39;, 
       <description>MySQL assignment 4 #  Note
  Login to MySQL server using csus username (ssh) MySQL on this server is case sensitive  SQL cont. #  Aliases #  Aliases are other names for a table.
 Consider our normal company schema,
-SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D, DEPT_LOCATION AS L WHERE D.DNUMBER=L.DNUMBER; Here
+SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D,  DEPT_LOCATION AS L WHERE D.DNUMBER=L.DNUMBER; Here
  D is an alias for DEPARTMENT L is an alias for DEPT_LOCATION  To make 2 aliases of one entity:</description>
     </item>
     
@@ -48,7 +48,7 @@ SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D, DEPT_LOCATION AS L WHERE D.DNUMB
       
       <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/</guid>
       <description>SQL cont. #  Comparison operators #  To list all the names of employees whose salary is greater than the salary of all the employees in department 5:
-SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELECT e.salary FROM employee AS e WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &amp;gt; some (..., it doesn&amp;rsquo;t need to be greater than all items in bag, just some (1 is enough).</description>
+SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELECT e.salary  FROM employee AS e  WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &amp;gt; some (.</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@ SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELE
       
       <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/</guid>
       <description>SQL cont. #  Aggregate functions cont. #  Include in weekly assignment.  List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.
-SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 AND (SELECT COUNT(*) FROM dependent AS dep WHERE e.ssn=dep.essn AND dep.relationship=&amp;#39;daughter&amp;#39;) &amp;gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.</description>
+SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 AND  (SELECT COUNT(*)  FROM dependent AS dep  WHERE e.ssn=dep.essn AND  dep.relationship=&amp;#39;daughter&amp;#39;) &amp;gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.</description>
     </item>
     
     <item>
@@ -70,7 +70,7 @@ SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 
       <description>SQL cont. #  Subqueries can be used inside insert statements:
 This insert statement will update the numbers dynamically based on the response from the subquery. The next time an employee is inserted, we can run this insert statement to update DEPTS_INFO using a trigger.
 Or, we can use views&amp;hellip;
-Virtual table view #  CREATE VIEW dept_info_view AS SELECT dname, COUNT(*) AS no_of_emps, SUM(salary) AS total_sal FROM department, employee WHERE dnumber=dno GROUP BY dname; This results in a self updating table, called a view:</description>
+Virtual table view #  CREATE VIEW dept_info_view AS  SELECT dname,  COUNT(*) AS no_of_emps,  SUM(salary) AS total_sal  FROM department, employee  WHERE dnumber=dno  GROUP BY dname; This results in a self updating table, called a view:</description>
     </item>
     
   </channel>

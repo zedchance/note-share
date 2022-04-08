@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Backtracking #  Recursive programming can be divided into two categories. One category creates the solution, and the other searches for the solution.
@@ -23,7 +23,7 @@ Strategies #  Examples #  Pretend that our maze is represented with 0 and 1, a 2
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3700,6 +3700,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3947,6 +3986,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4469,6 +4521,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5455,6 +5546,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5516,7 +5633,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5611,42 +5728,41 @@ When looking for a solution, if we ever reach a subtree that doesn&rsquo;t meet 
 <details >
   <summary>My solution in python</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">permute</span>(s):
-    <span style="color:#e6db74">&#34;&#34;&#34; outputs all possible rearrangements of letters in string s &#34;&#34;&#34;</span>
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_permute</span>(s, chosen):
-        <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-            print(chosen)
-        <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)):
-                _permute(s<span style="color:#f92672">.</span>replace(s[i], <span style="color:#e6db74">&#34;&#34;</span>), chosen <span style="color:#f92672">+</span> s[i])
-
-    _permute(s, <span style="color:#e6db74">&#34;&#34;</span>)
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">combinations</span>(n, k):
-    <span style="color:#e6db74">&#34;&#34;&#34; outputs all k combinations of the first n positive integers &#34;&#34;&#34;</span>
-    nums <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)]
-    
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_combinations</span>(n, k, start, output):
-        <span style="color:#66d9ef">if</span> len(output) <span style="color:#f92672">==</span> k:
-            print(output)
-        <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(start, len(nums)):
-                _combinations(n, k, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, output <span style="color:#f92672">+</span> str(nums[i]))
-    
-    _combinations(n, k, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;&#34;</span>)
-
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    print(<span style="color:#e6db74">&#39;permute(&#34;morty&#34;)&#39;</span>)
-    permute(<span style="color:#e6db74">&#34;morty&#34;</span>)
-
-    print(<span style="color:#e6db74">&#34;combinations(6, 3)&#34;</span>)
-    combinations(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>)
-
-</code></pre></div><p>Output</p>
-<pre tabindex="0"><code>permute(&quot;morty&quot;)
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">permute</span>(s):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34; outputs all possible rearrangements of letters in string s &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_permute</span>(s, chosen):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(chosen)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)):
+</span></span><span style="display:flex;"><span>                _permute(s<span style="color:#f92672">.</span>replace(s[i], <span style="color:#e6db74">&#34;&#34;</span>), chosen <span style="color:#f92672">+</span> s[i])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    _permute(s, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">combinations</span>(n, k):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34; outputs all k combinations of the first n positive integers &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    nums <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_combinations</span>(n, k, start, output):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(output) <span style="color:#f92672">==</span> k:
+</span></span><span style="display:flex;"><span>            print(output)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(start, len(nums)):
+</span></span><span style="display:flex;"><span>                _combinations(n, k, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, output <span style="color:#f92672">+</span> str(nums[i]))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    _combinations(n, k, <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;permute(&#34;morty&#34;)&#39;</span>)
+</span></span><span style="display:flex;"><span>    permute(<span style="color:#e6db74">&#34;morty&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;combinations(6, 3)&#34;</span>)
+</span></span><span style="display:flex;"><span>    combinations(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div><p>Output</p>
+<pre tabindex="0"><code>permute(&#34;morty&#34;)
 morty
 moryt
 motry
@@ -5832,96 +5948,95 @@ complexity being <span>
 <details >
   <summary>My solution in python</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># Place n queens on a nxn chess board, where no queen can attack another</span>
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_board</span>(n):
-    <span style="color:#66d9ef">return</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_board</span>(board):
-    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> board:
-        <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> row:
-            print(str(col) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
-        print()
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">place_queens</span>(board):
-    n <span style="color:#f92672">=</span> len(board)
-    cols <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">placeable</span>(row, col):
-        <span style="color:#75715e"># check row</span>
-        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> board[row]:
-            <span style="color:#66d9ef">if</span> r <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
-        <span style="color:#75715e"># check col</span>
-        <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> board:
-            <span style="color:#66d9ef">if</span> c[col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
-        <span style="color:#75715e"># check diags</span>
-        <span style="color:#75715e">## up left</span>
-        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
-            <span style="color:#66d9ef">else</span>:
-                r <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                c <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#75715e">## up right</span>
-        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">&lt;</span> n:
-            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
-            <span style="color:#66d9ef">else</span>:
-                r <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-                c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#75715e">## down left</span>
-        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> c <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
-            <span style="color:#66d9ef">else</span>:
-                r <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-                c <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#75715e">## down right</span>
-        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> c <span style="color:#f92672">&lt;</span> n:
-            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
-            <span style="color:#66d9ef">else</span>:
-                r <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-                c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#75715e"># valid</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">drop</span>(l, item):
-        new <span style="color:#f92672">=</span> l<span style="color:#f92672">.</span>copy()
-        new<span style="color:#f92672">.</span>remove(item)
-        <span style="color:#66d9ef">return</span> new
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_place_queens</span>(row, cols):
-        <span style="color:#66d9ef">if</span> len(cols) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-            print(<span style="color:#e6db74">&#34;SOLUTION:&#34;</span>)
-            print_board(board)
-            exit(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># remove to find ALL solutions</span>
-        <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> cols:
-                <span style="color:#66d9ef">if</span> placeable(row, col):
-                    <span style="color:#75715e"># choose</span>
-                    board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-                    <span style="color:#75715e"># explore</span>
-                    _place_queens(row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, drop(cols, col))
-                    <span style="color:#75715e"># unchoose</span>
-                    board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-
-    _place_queens(<span style="color:#ae81ff">0</span>, cols)
-
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    board <span style="color:#f92672">=</span> make_board(<span style="color:#ae81ff">8</span>)
-    place_queens(board)
-
-</code></pre></div><p>Output</p>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Place n queens on a nxn chess board, where no queen can attack another</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_board</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_board</span>(board):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> board:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> row:
+</span></span><span style="display:flex;"><span>            print(str(col) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>        print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">place_queens</span>(board):
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> len(board)
+</span></span><span style="display:flex;"><span>    cols <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">placeable</span>(row, col):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># check row</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> board[row]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> r <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># check col</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> board:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> c[col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># check diags</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## up left</span>
+</span></span><span style="display:flex;"><span>        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                r <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                c <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## up right</span>
+</span></span><span style="display:flex;"><span>        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">&lt;</span> n:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                r <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## down left</span>
+</span></span><span style="display:flex;"><span>        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> c <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                r <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                c <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">## down right</span>
+</span></span><span style="display:flex;"><span>        r, c <span style="color:#f92672">=</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> r <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> c <span style="color:#f92672">&lt;</span> n:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[r][c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                r <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># valid</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">drop</span>(l, item):
+</span></span><span style="display:flex;"><span>        new <span style="color:#f92672">=</span> l<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>        new<span style="color:#f92672">.</span>remove(item)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> new
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_place_queens</span>(row, cols):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(cols) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;SOLUTION:&#34;</span>)
+</span></span><span style="display:flex;"><span>            print_board(board)
+</span></span><span style="display:flex;"><span>            exit(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># remove to find ALL solutions</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> cols:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> placeable(row, col):
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># choose</span>
+</span></span><span style="display:flex;"><span>                    board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># explore</span>
+</span></span><span style="display:flex;"><span>                    _place_queens(row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, drop(cols, col))
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># unchoose</span>
+</span></span><span style="display:flex;"><span>                    board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    _place_queens(<span style="color:#ae81ff">0</span>, cols)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    board <span style="color:#f92672">=</span> make_board(<span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>    place_queens(board)
+</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>SOLUTION:
 1 0 0 0 0 0 0 0
 0 0 0 0 1 0 0 0
@@ -5943,93 +6058,93 @@ complexity being <span>
 <details >
   <summary>My solution in Python</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e"># Sudoku puzzle solver</span>
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_sudoku_board</span>():
-    <span style="color:#66d9ef">return</span> [
-            [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>],
-            [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>],
-            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>],
-
-            [<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>],
-            [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>],
-            [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>],
-
-            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>],
-            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>],
-            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>],
-           ]
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_board</span>(board):
-    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> board:
-        <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> row:
-            print(col, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
-        print()
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(board):
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_nums</span>(row, col):
-        nums <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>)]
-        <span style="color:#75715e"># eliminate nums from row</span>
-        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> board[row]:
-            <span style="color:#66d9ef">try</span>:
-                nums<span style="color:#f92672">.</span>remove(r)
-            <span style="color:#66d9ef">except</span>:
-                <span style="color:#66d9ef">pass</span>
-        <span style="color:#75715e"># eliminate nums from col</span>
-        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> board:
-            <span style="color:#66d9ef">try</span>:
-                nums<span style="color:#f92672">.</span>remove(r[col])
-            <span style="color:#66d9ef">except</span>:
-                <span style="color:#66d9ef">pass</span>
-        <span style="color:#75715e"># eliminate nums from matrix</span>
-        mat_row, mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">if</span> row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
-            mat_row <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">elif</span> row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>:
-            mat_row <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
-        <span style="color:#66d9ef">else</span>:
-            mat_row <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
-        <span style="color:#66d9ef">if</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
-            mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">elif</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>:
-            mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
-        <span style="color:#66d9ef">else</span>:
-            mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(mat_row, mat_row <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>):
-            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(mat_col, mat_col <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>):
-                <span style="color:#66d9ef">try</span>:
-                    nums<span style="color:#f92672">.</span>remove(board[i][j])
-                <span style="color:#66d9ef">except</span>:
-                    <span style="color:#66d9ef">pass</span>
-        <span style="color:#66d9ef">return</span> nums
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_solve</span>(row, col):
-        <span style="color:#66d9ef">if</span> row <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span> <span style="color:#f92672">and</span> col <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span>:
-            print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">SOLUTION:&#34;</span>)
-            print_board(board)
-            exit(<span style="color:#ae81ff">0</span>)
-        <span style="color:#66d9ef">if</span> board[row][col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-            <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> get_nums(row, col):
-                <span style="color:#75715e"># choose</span>
-                board[row][col] <span style="color:#f92672">=</span> t
-                <span style="color:#75715e"># explore</span>
-                _solve(row <span style="color:#66d9ef">if</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span> <span style="color:#66d9ef">else</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, (col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>)
-                <span style="color:#75715e"># unchoose</span>
-                board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">else</span>:
-            _solve(row <span style="color:#66d9ef">if</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span> <span style="color:#66d9ef">else</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, (col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>)
-
-    _solve(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
-
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    board <span style="color:#f92672">=</span> make_sudoku_board()
-    print_board(board)
-    solve(board)
-</code></pre></div><p>Output</p>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#75715e"># Sudoku puzzle solver</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_sudoku_board</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>],
+</span></span><span style="display:flex;"><span>            [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>],
+</span></span><span style="display:flex;"><span>           ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_board</span>(board):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> board:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> row:
+</span></span><span style="display:flex;"><span>            print(col, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>        print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solve</span>(board):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_nums</span>(row, col):
+</span></span><span style="display:flex;"><span>        nums <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>)]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># eliminate nums from row</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> board[row]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                nums<span style="color:#f92672">.</span>remove(r)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># eliminate nums from col</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> board:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                nums<span style="color:#f92672">.</span>remove(r[col])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># eliminate nums from matrix</span>
+</span></span><span style="display:flex;"><span>        mat_row, mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span>            mat_row <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>:
+</span></span><span style="display:flex;"><span>            mat_row <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            mat_row <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span>            mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>:
+</span></span><span style="display:flex;"><span>            mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            mat_col <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(mat_row, mat_row <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(mat_col, mat_col <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                    nums<span style="color:#f92672">.</span>remove(board[i][j])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">except</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> nums
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_solve</span>(row, col):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> row <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span> <span style="color:#f92672">and</span> col <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">SOLUTION:&#34;</span>)
+</span></span><span style="display:flex;"><span>            print_board(board)
+</span></span><span style="display:flex;"><span>            exit(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> board[row][col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> get_nums(row, col):
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># choose</span>
+</span></span><span style="display:flex;"><span>                board[row][col] <span style="color:#f92672">=</span> t
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># explore</span>
+</span></span><span style="display:flex;"><span>                _solve(row <span style="color:#66d9ef">if</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span> <span style="color:#66d9ef">else</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, (col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># unchoose</span>
+</span></span><span style="display:flex;"><span>                board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            _solve(row <span style="color:#66d9ef">if</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span> <span style="color:#66d9ef">else</span> row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, (col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    _solve(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    board <span style="color:#f92672">=</span> make_sudoku_board()
+</span></span><span style="display:flex;"><span>    print_board(board)
+</span></span><span style="display:flex;"><span>    solve(board)
+</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>5 3 0 0 7 0 0 0 0
 6 0 0 1 9 5 0 0 0
 0 9 8 0 0 0 0 6 0

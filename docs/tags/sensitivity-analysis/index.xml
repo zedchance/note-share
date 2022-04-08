@@ -25,7 +25,7 @@ Phase one completes because we have all negative coefficients in the last row, b
       <description>Sensitivity analysis cont. #  By increasing the right hand side of the   \( c_1 \)  constraint by 1 unit, we obtain a new  \( \tilde{z} \)  value of  \( \frac{108}{7} \)  .
 So the shadow price is  \( z - \tilde{z} = \frac{22}{7} \)  .
 Next, identify shadow prices from a completed simplex tableau:
-Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&#39; C=[-7 -6]&#39; lb=[0 0]&#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
+Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&amp;#39; C=[-7 -6]&amp;#39; lb=[0 0]&amp;#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
     </item>
     
     <item>

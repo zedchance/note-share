@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Processes cont. #  Using fork and execl #  Consider this code
-pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&#34;I am parent %d; child is %d\n&#34;,getpid(),pid1); pid2=wait3(&amp;status, 0, &amp;usage); printf(&#34;exit code for %d is %d\n&#34;, pid2, status); } else { execl(&#34;/bin/cat&#34;, &#34;/bin/cat&#34;, &#34;/csc/139/news/0001.txt&#34;, NULL); printf(&#34;we should never get here!\n&#34;); } execl loads cat into the child&rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf.">
+pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { 	printf(&#34;I am parent %d; child is %d\n&#34;,getpid(),pid1); 	pid2=wait3(&amp;status, 0, &amp;usage); 	printf(&#34;exit code for %d is %d\n&#34;, pid2, status); } else { 	execl(&#34;/bin/cat&#34;, &#34;/bin/cat&#34;, &#34;/csc/139/news/0001.txt&#34;, NULL); 	printf(&#34;we should never get here!\n&#34;); } execl loads cat into the child&rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CS139-lecture-20210923" />
 <meta property="og:description" content="Processes cont. #  Using fork and execl #  Consider this code
-pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&#34;I am parent %d; child is %d\n&#34;,getpid(),pid1); pid2=wait3(&amp;status, 0, &amp;usage); printf(&#34;exit code for %d is %d\n&#34;, pid2, status); } else { execl(&#34;/bin/cat&#34;, &#34;/bin/cat&#34;, &#34;/csc/139/news/0001.txt&#34;, NULL); printf(&#34;we should never get here!\n&#34;); } execl loads cat into the child&rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf." />
+pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { 	printf(&#34;I am parent %d; child is %d\n&#34;,getpid(),pid1); 	pid2=wait3(&amp;status, 0, &amp;usage); 	printf(&#34;exit code for %d is %d\n&#34;, pid2, status); } else { 	execl(&#34;/bin/cat&#34;, &#34;/bin/cat&#34;, &#34;/csc/139/news/0001.txt&#34;, NULL); 	printf(&#34;we should never get here!\n&#34;); } execl loads cat into the child&rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://zedchance.github.io/notes/CS139/CS139-lecture-20210923/" /><meta property="article:section" content="CS139" />
 
@@ -19,7 +19,7 @@ pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3696,6 +3696,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3943,6 +3982,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4465,6 +4517,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5451,6 +5542,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5512,7 +5629,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5577,20 +5694,20 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#using-fork-and-execl">#</a>
 </h3>
 <p>Consider this code</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">pid_t pid1, pid2; <span style="color:#66d9ef">int</span> status;
-<span style="color:#66d9ef">struct</span> rusage usage;
-<span style="color:#66d9ef">if</span> ((pid1<span style="color:#f92672">=</span>fork()))
-{
-	printf(<span style="color:#e6db74">&#34;I am parent %d; child is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,getpid(),pid1);
-	pid2<span style="color:#f92672">=</span>wait3(<span style="color:#f92672">&amp;</span>status, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">&amp;</span>usage);
-	printf(<span style="color:#e6db74">&#34;exit code for %d is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pid2, status);
-}
-<span style="color:#66d9ef">else</span>
-{
-	execl(<span style="color:#e6db74">&#34;/bin/cat&#34;</span>, <span style="color:#e6db74">&#34;/bin/cat&#34;</span>, <span style="color:#e6db74">&#34;/csc/139/news/0001.txt&#34;</span>, NULL);
-	printf(<span style="color:#e6db74">&#34;we should never get here!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-} 
-</code></pre></div><p><code>execl</code> loads <code>cat</code> into the child&rsquo;s memory space.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>pid_t pid1, pid2; <span style="color:#66d9ef">int</span> status;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> rusage usage;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ((pid1<span style="color:#f92672">=</span>fork()))
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;I am parent %d; child is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,getpid(),pid1);
+</span></span><span style="display:flex;"><span>	pid2<span style="color:#f92672">=</span>wait3(<span style="color:#f92672">&amp;</span>status, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">&amp;</span>usage);
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;exit code for %d is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pid2, status);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	execl(<span style="color:#e6db74">&#34;/bin/cat&#34;</span>, <span style="color:#e6db74">&#34;/bin/cat&#34;</span>, <span style="color:#e6db74">&#34;/csc/139/news/0001.txt&#34;</span>, NULL);
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;we should never get here!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div><p><code>execl</code> loads <code>cat</code> into the child&rsquo;s memory space.
 When this child <code>cat</code> exits, it will never reach the subsequent <code>printf</code>.</p>
 <p>This outputs</p>
 <pre tabindex="0"><code>I am parent ...; child is ...
@@ -5601,18 +5718,18 @@ exit code for ... is ...
 I am parent ...; child is ...
 exit code for ... is ...
 </code></pre><hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[])
-{
-    printf(<span style="color:#e6db74">&#34;A</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    fork();
-    printf(<span style="color:#e6db74">&#34;B</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    fork();
-    printf(<span style="color:#e6db74">&#34;C</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><p>Output</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc,<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;A</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    fork();
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;B</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    fork();
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;C</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>A
 B
 B

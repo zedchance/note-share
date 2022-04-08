@@ -131,6 +131,8 @@
     <loc>http://zedchance.github.io/notes/tags/applied-ethics/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/artificial-neural-networks/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/assembly/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
@@ -160,6 +162,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/bankers-algorithm/</loc>
     <lastmod>2021-12-05T14:41:45-08:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/bayesian-classification/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/behavior/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
@@ -1052,6 +1056,13 @@
     <lastmod>2022-03-13T19:41:53-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS177/CS177-lecture-20220315/</loc>
+    <lastmod>2022-03-20T23:12:44-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -1100,6 +1111,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/</loc>
     <lastmod>2022-03-13T19:41:53-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/CS192/CS192-lecture-20210903/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
@@ -1395,6 +1408,8 @@
     <loc>http://zedchance.github.io/notes/tags/inheritance/</loc>
     <lastmod>2021-02-24T17:42:17-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/instance-based-learning/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/instruction-set-architecture/</loc>
     <lastmod>2021-05-14T14:33:08-07:00</lastmod>
   </url><url>
@@ -1534,8 +1549,16 @@
     <lastmod>2022-03-13T19:41:53-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220315/</loc>
+    <lastmod>2022-03-20T23:12:44-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/</loc>
+    <lastmod>2022-03-20T23:12:44-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/MATH170/MATH170-latex-notes/</loc>
     <lastmod>2021-12-07T20:20:09-08:00</lastmod>
@@ -1648,6 +1671,8 @@
     <loc>http://zedchance.github.io/notes/tags/NAT/</loc>
     <lastmod>2021-04-23T10:44:47-07:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/nearest-neighbor/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/net-neutrality/</loc>
     <lastmod>2021-02-24T17:22:01-08:00</lastmod>
   </url><url>
@@ -1694,7 +1719,7 @@
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/overfitting/</loc>
-    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
+    <lastmod>2022-03-20T23:12:44-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/p2p/</loc>
     <lastmod>2021-03-02T20:30:55-08:00</lastmod>
@@ -1713,6 +1738,8 @@
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/parsers/</loc>
     <lastmod>2021-04-28T19:12:00-07:00</lastmod>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/tags/perceptron/</loc>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/perm384/</loc>
     <lastmod>2021-06-10T17:34:25-07:00</lastmod>
@@ -1966,6 +1993,10 @@
     <loc>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220308/</loc>
     <lastmod>2022-03-08T19:15:49-08:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/</loc>
+  </url><url>
+    <loc>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/RSA/</loc>
     <lastmod>2021-09-09T14:48:47-07:00</lastmod>
   </url><url>
@@ -2059,6 +2090,8 @@
     <loc>http://zedchance.github.io/notes/tags/stream-ciphers/</loc>
     <lastmod>2021-06-15T17:47:51-07:00</lastmod>
   </url><url>
+    <loc>http://zedchance.github.io/notes/tags/support-vector-machines/</loc>
+  </url><url>
     <loc>http://zedchance.github.io/notes/tags/switching-fabrics/</loc>
     <lastmod>2021-04-19T21:04:44-07:00</lastmod>
   </url><url>
@@ -2078,7 +2111,7 @@
     <lastmod>2021-06-25T07:13:07-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/</loc>
-    <lastmod>2022-03-13T19:41:53-07:00</lastmod>
+    <lastmod>2022-03-20T23:12:44-07:00</lastmod>
   </url><url>
     <loc>http://zedchance.github.io/notes/tags/tail-recursion/</loc>
     <lastmod>2021-06-03T18:00:57-07:00</lastmod>

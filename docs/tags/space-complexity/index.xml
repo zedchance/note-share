@@ -28,7 +28,7 @@ Exercise solutions:
  Runtime analysis cont. #  Space complexity analysis #  1MB) kB
 Strings have the fields: start address, length, offset, hash
 For example:
-str = &amp;quot;Java&amp;quot;; str1); The space is constant because the sub string isn&amp;rsquo;t copied, just more references are made.
+str = &amp;#34;Java&amp;#34;; str1); The space is constant because the sub string isn&amp;rsquo;t copied, just more references are made.
  c + 4n, so O(n)  32 + 64n)  Normally you don&amp;rsquo;t count the space of the parameters or the return.</description>
     </item>
     

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Processes cont. #  Scheduling cont. #  A single linked list works well for ready and wait queues. Note the addition of a tail pointer. The tail pointer gives us a constant time complexity to get to the end of the queue. New processes are added at the tail.
@@ -21,7 +21,7 @@ Note: Read more on medium term scheduling in the text." />
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3698,6 +3698,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3945,6 +3984,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4467,6 +4519,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5453,6 +5544,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5514,7 +5631,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5623,7 +5740,7 @@ It depends:</p>
 <ul>
 <li>Directly after the <code>fork()</code> system call, both parent and child are both the same program, ie <code>bash</code>.
 They will share their entire memory space, even the program counter (the child doesn&rsquo;t start from the beginning of the program).</li>
-<li>Once the child calls <code>exec()</code> it replaces the process' memory space with a new program, ie <code>ps</code>.</li>
+<li>Once the child calls <code>exec()</code> it replaces the process&rsquo; memory space with a new program, ie <code>ps</code>.</li>
 </ul>
 <p><img src="/notes/image_2021-09-16-14-23-13.png" alt="image_2021-09-16-14-23-13" /></p>
 <p>How do we tell the child and parent apart before the <code>exec()</code> call?</p>
@@ -5639,37 +5756,37 @@ They will share their entire memory space, even the program counter (the child d
   Example program using <code>fork()</code>
   <a class="anchor" href="#example-program-using-fork">#</a>
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/types.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-	pid_t pid;
-	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Running the fork example</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-	printf(<span style="color:#e6db74">&#34;The initial value of number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
-
-	pid <span style="color:#f92672">=</span> fork();
-	printf(<span style="color:#e6db74">&#34;PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pid);
-	
-	<span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-    {
-		number <span style="color:#f92672">*=</span> number;
-		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">In the child, the number is %d -- PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number, pid);
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-	}
-    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
-    {
-		wait(NULL);
-		printf(<span style="color:#e6db74">&#34;In the parent, the number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
-	}
-
-	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><p>Output</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/types.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	pid_t pid;
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Running the fork example</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;The initial value of number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	pid <span style="color:#f92672">=</span> fork();
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pid);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>		number <span style="color:#f92672">*=</span> number;
+</span></span><span style="display:flex;"><span>		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">In the child, the number is %d -- PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number, pid);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>		wait(NULL);
+</span></span><span style="display:flex;"><span>		printf(<span style="color:#e6db74">&#34;In the parent, the number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Running the fork example
 The initial value of number is 7
 PID is 15839
@@ -5677,38 +5794,38 @@ PID is 0
     In the child, the number is 49 -- PID is 0
 In the parent, the number is 7
 </code></pre><hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/types.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-	pid_t pid;
-	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Running the fork example</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-	printf(<span style="color:#e6db74">&#34;The initial value of number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
-
-	pid <span style="color:#f92672">=</span> fork();
-	printf(<span style="color:#e6db74">&#34;PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pid);
-	
-	<span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-    {
-		number <span style="color:#f92672">*=</span> number;
-		fork();
-		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">In the child, the number is %d -- PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number, pid);
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-	}
-    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
-    {
-		wait(NULL);
-		printf(<span style="color:#e6db74">&#34;In the parent, the number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
-	}
-
-	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><p>Output</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/types.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	pid_t pid;
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Running the fork example</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;The initial value of number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	pid <span style="color:#f92672">=</span> fork();
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pid);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>		number <span style="color:#f92672">*=</span> number;
+</span></span><span style="display:flex;"><span>		fork();
+</span></span><span style="display:flex;"><span>		printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">In the child, the number is %d -- PID is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number, pid);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>		wait(NULL);
+</span></span><span style="display:flex;"><span>		printf(<span style="color:#e6db74">&#34;In the parent, the number is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, number);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Output</p>
 <pre tabindex="0"><code>Running the fork example
 The initial value of number is 7
 PID is 15847

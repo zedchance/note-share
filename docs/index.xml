@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS10/CS10-Processing-labs/</guid>
-      <description>CS10 Labs #  Lab 1 - My &amp;ldquo;creature&amp;rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &amp;#34;creature&amp;#34; */ //Setup size(800,600); background(0); //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350); //Head noStroke(); fill(220); ellipse(200,100,70,70); //Torso rectMode(CENTER); rect(200,190,60,100); //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10); //Legs rect(170,230,27,100,10); rect(203,230,27,100,10); //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250); //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350); //Head noStroke(); fill(220); ellipse(600,100,70,70); //Torso rectMode(CENTER); rect(600,190,60,100); //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235); //Dress quad(585,190,565,255,635,255,615,190); //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10); //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10); //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450); //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10); //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&amp;rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&amp;#39;s movement */ //Setup void setup() { size(400, 600); background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); } //Continuously redraw the human void draw() { //Declare mouse  int x = mouseX; int y = mouseY; //Head  stroke(0); strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y); ellipse(x,y,70,70); //was 200,100  //Arms  rect(x,y+50,100,20,10); //was 200,150  rectMode(CORNER); rect(x-55,y+40,20,100,10); //was 145/140  rect(x+35,y+40,20,100,10); //was 235/140  //Legs  rect(x-30,y+130,27,100,10); //was 170,230  rect(x+3,y+130,27,100,10); //was 203,230  //Torso  rectMode(CENTER); rect(x,y+90,60,100); //was 200,190 } //Click mouse to reset void mousePressed() { background(0); //Signpost  rectMode(CENTER); noStroke(); fill(113, 86, 86); rect(200, 475, 30, 250); //Background circle  fill(70, 89, 255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200, 200, 350, 350); println(hour(),&amp;#34;:&amp;#34;,minute(),&amp;#34;:&amp;#34;,second(),&amp;#34;-&amp;#34;,&amp;#34;Mouse input detected: Background reset&amp;#34;); } Lab 4 - Launching my &amp;ldquo;creature&amp;rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &amp;#34;creature&amp;#34; like a rocket */ //Initialize variables float r = 0; float g = 0; float b = 0; float x = 0; float y = 0; void setup() { size(400,600); x = width/2; //x is centered  y = height + 50; //starts 50 pixels below  background(0); } void draw() { background(0); //Head  noStroke(); fill(255,255,255); ellipse(x,y,70,70); //Arms  rect(x,y+50,100,20,10); rectMode(CORNER); rect(x-55,y+40,20,100,10); rect(x+35,y+40,20,100,10); //Legs  rect(x-30,y+130,27,100,10); rect(x+3,y+130,27,100,10); //Torso  rectMode(CENTER); rect(x,y+90,60,100); //Rockets  r); b = 5; g); fill(r,g,b); //Jets random color between yellow and red  triangle(x-55,y+135,x-35,y+135,x-45,y+160); //Hand jets  triangle(x+55,y+135,x+35,y+135,x+45,y+160); triangle(x-30,y+225,x-5,y+225,x-18,y+255); //Feet jets  triangle(x+30,y+225,x+5,y+225,x+18,y+255); //Blast off!</description>
+      <description>CS10 Labs #  Lab 1 - My &amp;ldquo;creature&amp;rdquo; #  /* Zed Chance Lab 1 CS 10 Summer 18 My &amp;#34;creature&amp;#34; */  //Setup size(800,600); background(0);  //MENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(200,475,30,250);  //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(200,200,350,350);  //Head noStroke(); fill(220); ellipse(200,100,70,70);  //Torso rectMode(CENTER); rect(200,190,60,100);  //Arms rect(200,150,100,20,10); rectMode(CORNER); rect(145,140,20,100,10); rect(235,140,20,100,10);  //Legs rect(170,230,27,100,10); rect(203,230,27,100,10);  //WOMENS BATHROOM SIGN  //Signpost rectMode(CENTER); noStroke(); fill(113,86,86); rect(600,475,30,250);  //Background circle fill(70,89,255); ellipseMode(CENTER); stroke(255); strokeWeight(5); ellipse(600,200,350,350);  //Head noStroke(); fill(220); ellipse(600,100,70,70);  //Torso rectMode(CENTER); rect(600,190,60,100);  //Arms rect(600,150,100,20,10); rectMode(CORNER); stroke(220); strokeWeight(25); line(560,155,535,235); line(640,155,665,235);  //Dress quad(585,190,565,255,635,255,615,190);  //Legs noStroke(); rect(570,230,27,100,10); rect(603,230,27,100,10);  //ARROW SIGNS //left background rectMode(CENTER); fill(220); rect(200,450,150,75,10); fill(150); rect(200,450,145,70,10);  //left arrow fill(255); rect(210,450,60,25); triangle(190,425,190,475,150,450);  //right background rectMode(CENTER); fill(220); rect(600,450,150,75,10); fill(150); rect(600,450,145,70,10);  //right arrow fill(255); rect(590,450,60,25); triangle(610,425,610,475,650,450); Lab 2 - Making my creature redraw with the mouse&amp;rsquo;s movement #  /* Zed Chance Lab 2 CS 10 Summer 18 Making my creature redraw with the mouse&amp;#39;s movement */  //Setup void setup() {  size(400, 600);  background(0);   //Signpost  rectMode(CENTER);  noStroke();  fill(113, 86, 86);  rect(200, 475, 30, 250);   //Background circle  fill(70, 89, 255);  ellipseMode(CENTER);  stroke(255);  strokeWeight(5);  ellipse(200, 200, 350, 350); }  //Continuously redraw the human void draw() {  //Declare mouse  int x = mouseX;  int y = mouseY;   //Head  stroke(0);  strokeWeight(1); //Had to add weight, otherwise it was hard to tell if it was moving  fill(220,x,y);  ellipse(x,y,70,70); //was 200,100   //Arms  rect(x,y+50,100,20,10); //was 200,150  rectMode(CORNER);  rect(x-55,y+40,20,100,10); //was 145/140  rect(x+35,y+40,20,100,10); //was 235/140   //Legs  rect(x-30,y+130,27,100,10); //was 170,230  rect(x+3,y+130,27,100,10); //was 203,230   //Torso  rectMode(CENTER);  rect(x,y+90,60,100); //was 200,190 }  //Click mouse to reset void mousePressed() {  background(0);   //Signpost  rectMode(CENTER);  noStroke();  fill(113, 86, 86);  rect(200, 475, 30, 250);   //Background circle  fill(70, 89, 255);  ellipseMode(CENTER);  stroke(255);  strokeWeight(5);  ellipse(200, 200, 350, 350);   println(hour(),&amp;#34;:&amp;#34;,minute(),&amp;#34;:&amp;#34;,second(),&amp;#34;-&amp;#34;,&amp;#34;Mouse input detected: Background reset&amp;#34;); } Lab 4 - Launching my &amp;ldquo;creature&amp;rdquo; like a rocket #  /* Zed Chance Lab 4 CS 10 Summer 18 Launching my &amp;#34;creature&amp;#34; like a rocket */  //Initialize variables float r = 0; float g = 0; float b = 0;  float x = 0; float y = 0;  void setup() {  size(400,600);  x = width/2; //x is centered  y = height + 50; //starts 50 pixels below  background(0); }  void draw() {  background(0);   //Head  noStroke();  fill(255,255,255);  ellipse(x,y,70,70);   //Arms  rect(x,y+50,100,20,10);  rectMode(CORNER);  rect(x-55,y+40,20,100,10);  rect(x+35,y+40,20,100,10);   //Legs  rect(x-30,y+130,27,100,10);  rect(x+3,y+130,27,100,10);   //Torso  rectMode(CENTER);  rect(x,y+90,60,100);   //Rockets  r);  b = 5;  g);  fill(r,g,b); //Jets random color between yellow and red   triangle(x-55,y+135,x-35,y+135,x-45,y+160); //Hand jets  triangle(x+55,y+135,x+35,y+135,x+45,y+160);   triangle(x-30,y+225,x-5,y+225,x-18,y+255); //Feet jets  triangle(x+30,y+225,x+5,y+225,x+18,y+255);   //Blast off!</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ A class is a “blueprint&amp;quot; for objects in object-oriented coding
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS13/CS13-lecture-notes/</guid>
-      <description>CS 13 Lecture Notes #  Jan 28, 2019 #   Download BlueJ [2019-01-29]  Weather class #  public class Weather { private double highTemp; private double lowTemp; private String condition; private int rainChain; public Weather (double h, double l, String c, int r) { highTemp = h; lowTemp = l; condition = c; rainChain = r; } public double delta() { return highTemp - lowTemp; } public String toString() { return &amp;#34;High: &amp;#34; + highTemp + &amp;#34;, Low: &amp;#34; + lowTemp + &amp;#34;, Condition: &amp;#34; + condition + &amp;#34;, Chance of rain: &amp;#34; + rainChance; } } Using this class we can make another to populate a forecast</description>
+      <description>CS 13 Lecture Notes #  Jan 28, 2019 #   Download BlueJ [2019-01-29]  Weather class #  public class Weather {  private double highTemp;  private double lowTemp;  private String condition;  private int rainChain;   public Weather (double h, double l, String c, int r)  {  highTemp = h;  lowTemp = l;  condition = c;  rainChain = r;  }   public double delta()  {  return highTemp - lowTemp;  }   public String toString()  {  return &amp;#34;High: &amp;#34; + highTemp + &amp;#34;, Low: &amp;#34; + lowTemp + &amp;#34;, Condition: &amp;#34; + condition + &amp;#34;, Chance of rain: &amp;#34; + rainChance;  } } Using this class we can make another to populate a forecast</description>
     </item>
     
     <item>
@@ -108,7 +108,7 @@ Exercise solutions:
  Runtime analysis cont. #  Space complexity analysis #  1MB) kB
 Strings have the fields: start address, length, offset, hash
 For example:
-str = &amp;quot;Java&amp;quot;; str1); The space is constant because the sub string isn&amp;rsquo;t copied, just more references are made.
+str = &amp;#34;Java&amp;#34;; str1); The space is constant because the sub string isn&amp;rsquo;t copied, just more references are made.
  c + 4n, so O(n)  32 + 64n)  Normally you don&amp;rsquo;t count the space of the parameters or the return.</description>
     </item>
     
@@ -413,7 +413,7 @@ Final review #  </description>
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-priority-queues/</guid>
       <description>Maxpq #  MaxPQ.java
-/** * MaxPQ (maximum priority queue) implemented from Algorithms (Sedgewick, Wayne) * pg. 318 */ public class MaxPQ&amp;lt;Key extends Comparable&amp;lt;Key&amp;gt;&amp;gt; { private Key[] pq; // heap-ordered complete binary tree  private int n = 0; // pq[0] is unused, heap uses pq[1..n]  /** * Create new empty max priority queue. * Useful if inserting one by one, where each element * is inserting at the end and &amp;#34;swims&amp;#34; up into place.</description>
+/** * MaxPQ (maximum priority queue) implemented from Algorithms (Sedgewick, Wayne) * pg. 318 */ public class MaxPQ&amp;lt;Key extends Comparable&amp;lt;Key&amp;gt;&amp;gt; {  private Key[] pq; // heap-ordered complete binary tree  private int n = 0; // pq[0] is unused, heap uses pq[1..n]   /** * Create new empty max priority queue. * Useful if inserting one by one, where each element * is inserting at the end and &amp;#34;swims&amp;#34; up into place.</description>
     </item>
     
     <item>
@@ -423,7 +423,7 @@ Final review #  </description>
       
       <guid>http://zedchance.github.io/notes/CS130/CS130-sorting-algorithms/</guid>
       <description>Merge #  Merge.java
-/** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge { private static Comparable[] aux; public static void sort(Comparable[] a) { aux = new Comparable[a.length]; sort(a, 0, a.length - 1); } private static void sort(Comparable[] a, int lo, int hi) { // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  } private static void merge(Comparable[] a, int lo, int mid, int hi) { // merge a[lo.</description>
+/** * Mergesort algorithm implemented from Algorithms (Sedgewick, Wayne) * Section 2.2, pg. 270 */ public class Merge {  private static Comparable[] aux;   public static void sort(Comparable[] a)  {  aux = new Comparable[a.length];  sort(a, 0, a.length - 1);  }   private static void sort(Comparable[] a, int lo, int hi)  {  // sort a[lo..hi]  if (hi &amp;lt;= lo) return; // base case  int mid) / 2; // find mid point  sort(a, lo, mid); // sort left half (recursive call)  sort(a, mid + 1, hi); // sort right half (recursive call)  merge(a, lo, mid, hi); // merge 2 sorted arrays  }   private static void merge(Comparable[] a, int lo, int mid, int hi)  {  // merge a[lo.</description>
     </item>
     
     <item>
@@ -1037,7 +1037,7 @@ History #  We will be covering the SQL core.
       
       <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210621/</guid>
       <description>Assignment 2 solution #  Assignment 3 solutions #  SQL cont. #  INSERT #  The attributes (VALUES) are listed one by one in the same order as when the table was declared. If they are put in the wrong order the attributes will go into the wrong places (or violate domain constraints). You can specify the attributes and their order is
-INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO) VALUES (&amp;#39;Richard&amp;#39;, &amp;#39;Marini&amp;#39;, &amp;#39;1932914921&amp;#39;, 4) The attributes that are not null must be specified in the command.</description>
+INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO)  VALUES (&amp;#39;Richard&amp;#39;, &amp;#39;Marini&amp;#39;, &amp;#39;1932914921&amp;#39;, 4) The attributes that are not null must be specified in the command.</description>
     </item>
     
     <item>
@@ -1049,7 +1049,7 @@ INSERT INTO EMPLOYEE(FNAME, LNAME, SSN, DNO) VALUES (&amp;#39;Richard&amp;#39;, 
       <description>MySQL assignment 4 #  Note
  Login to MySQL server using csus username (ssh) MySQL on this server is case sensitive  SQL cont. #  Aliases #  Aliases are other names for a table.
 Consider our normal company schema,
-SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D, DEPT_LOCATION AS L WHERE D.DNUMBER=L.DNUMBER; Here
+SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D,  DEPT_LOCATION AS L WHERE D.DNUMBER=L.DNUMBER; Here
  D is an alias for DEPARTMENT L is an alias for DEPT_LOCATION  To make 2 aliases of one entity:</description>
     </item>
     
@@ -1060,7 +1060,7 @@ SELECT DNAME, L.DLOCATION FROM DEPARTMENT AS D, DEPT_LOCATION AS L WHERE D.DNUMB
       
       <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210624/</guid>
       <description>SQL cont. #  Comparison operators #  To list all the names of employees whose salary is greater than the salary of all the employees in department 5:
-SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELECT e.salary FROM employee AS e WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &amp;gt; some (..., it doesn&amp;rsquo;t need to be greater than all items in bag, just some (1 is enough).</description>
+SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELECT e.salary  FROM employee AS e  WHERE e.dno=5);  it is suggested to use aliases when using nested queries if instead our where clause was E1.SALARY &amp;gt; some (.</description>
     </item>
     
     <item>
@@ -1070,7 +1070,7 @@ SELECT e1.lname, e1.fname FROM employee AS e1 WHERE e1.salary &amp;gt; ALL (SELE
       
       <guid>http://zedchance.github.io/notes/CS134/CS134-lecture-20210628/</guid>
       <description>SQL cont. #  Aggregate functions cont. #  Include in weekly assignment.  List each employee(ssn, fname, lname) who has more than 3 daughters and the salary of the employee is less than 60000.
-SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 AND (SELECT COUNT(*) FROM dependent AS dep WHERE e.ssn=dep.essn AND dep.relationship=&amp;#39;daughter&amp;#39;) &amp;gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.</description>
+SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 AND  (SELECT COUNT(*)  FROM dependent AS dep  WHERE e.ssn=dep.essn AND  dep.relationship=&amp;#39;daughter&amp;#39;) &amp;gt; 3; GROUP BY clause #  A clause GROUP BY is used to create sub groups.</description>
     </item>
     
     <item>
@@ -1082,7 +1082,7 @@ SELECT e.ssn, e.fname, e.lname FROM employee AS e WHERE e.salary &amp;lt; 60000 
       <description>SQL cont. #  Subqueries can be used inside insert statements:
 This insert statement will update the numbers dynamically based on the response from the subquery. The next time an employee is inserted, we can run this insert statement to update DEPTS_INFO using a trigger.
 Or, we can use views&amp;hellip;
-Virtual table view #  CREATE VIEW dept_info_view AS SELECT dname, COUNT(*) AS no_of_emps, SUM(salary) AS total_sal FROM department, employee WHERE dnumber=dno GROUP BY dname; This results in a self updating table, called a view:</description>
+Virtual table view #  CREATE VIEW dept_info_view AS  SELECT dname,  COUNT(*) AS no_of_emps,  SUM(salary) AS total_sal  FROM department, employee  WHERE dnumber=dno  GROUP BY dname; This results in a self updating table, called a view:</description>
     </item>
     
     <item>
@@ -1128,7 +1128,7 @@ When we search:
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-hw-20210302/</guid>
       <description>Old MM2 hw #  1 Write a recursive Racket function &amp;ldquo;sum-alternate&amp;rdquo; that takes a positive integer x as a parameter. The function should return the sum of all the integers x, x-2, x-4, x-6, etc, as long as the numbers are positive. For example, (sum-alternate 5) should evaluate to 5+3+1, and (sum-alternate 6) should evaluate to 6+4+2.
-(define (sum-acc sum acc) (if (&amp;lt;= sum 0) acc (sum-acc (- sum 2) (+ sum acc)))) (define (sum-alternate sum) (sum-acc sum 0))    2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
+(define (sum-acc sum acc)  (if (&amp;lt;= sum 0)  acc  (sum-acc (- sum 2) (+ sum acc))))  (define (sum-alternate sum)  (sum-acc sum 0))    2 Write a recursive Racket function &amp;ldquo;sum&amp;rdquo; that takes two integers as parameters, each greater or equal to zero, and evaluates to their sum.</description>
     </item>
     
     <item>
@@ -1274,9 +1274,9 @@ ms(list) front = front half of list back = back half of list ms(front) ms(back) 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS135/CS135-lecture-20210309/</guid>
-      <description>Tail recursive sum #  (define (sum xs) (if (empty? xs) 0 (+ (first xs) (sum (rest xs))))) This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
+      <description>Tail recursive sum #  (define (sum xs)  (if (empty? xs)  0  (+ (first xs) (sum (rest xs))))) This isn&amp;rsquo;t tail recursive however. The recursive call must be the last call in the function. Lets define it tail recursively, we can use an accumulator:
 Invariant: acc + sum of xs is desired answer.
-(define (sum-helper acc xs) (if (empty? xs) acc (sum-helper (+ acc (first xs)) (rest xs)))) (define (sum xs) (sum-helper 0 xs)) (sum &amp;#39;(1 2 3 4)) ; 10 </description>
+(define (sum-helper acc xs)  (if (empty? xs)  acc  (sum-helper (+ acc (first xs)) (rest xs))))  (define (sum xs)  (sum-helper 0 xs))  (sum &amp;#39;(1 2 3 4)) ; 10 </description>
     </item>
     
     <item>
@@ -1830,7 +1830,7 @@ dig asks for the IP address of a site.</description>
       <description>Socket programming #  UDP Client in Python #  SOCK_DGRAM means it will use UDP. The server&amp;rsquo;s socket is always open.
 UDPClient.py:
 from socket import * serverName = &amp;#39;hostname&amp;#39; serverPort = 12000 clientSocket = socket(AF_NET, SOCK_DGRAM) message = raw_input(&amp;#39;Input lowercase sentence:&amp;#39;) clientSocket.sendto(message, (serverName, serverPort)) modifiedMessage, serverAddress = clientSocket.recvfrom(2048) print modifiedMessage clientSocket.close() UDPServer.py
-from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1: message, clientAddress = serverSocket.</description>
+from socket import * serverPort = 12000 serverSocket = socket(AF_INET, SOCK_DGRAM) serverSocket.bind((&amp;#39;&amp;#39;, serverPort)) print &amp;#39;The server is ready to receieve&amp;#39; while 1:  message, clientAddress = serverSocket.</description>
     </item>
     
     <item>
@@ -1852,7 +1852,7 @@ Multiplexing/demultiplexing #  Connectionless transport: UDP #  </description>
       <description>UDP cont. #  Principles of reliable data transfer #  Expected features
  No bit errors No loss of data   Problems
  Bit error Data loss   Solutions
- Error detection (checksum) Data recovery    So how do we do recovery? We learn from human to human conversation, &amp;ldquo;pardon?&amp;quot; to recover data loss in the conversation.
+ Error detection (checksum) Data recovery    So how do we do recovery? We learn from human to human conversation, &amp;ldquo;pardon?&amp;rdquo; to recover data loss in the conversation.
 Feedback: ACK for positive, NAK for negative.
 So the receiver will send an ACK if the packet was received without loss, otherwise it&amp;rsquo;ll send NAK.</description>
     </item>
@@ -2056,11 +2056,10 @@ IDS – intrusion detection systems #  Network security summary #  </description
       <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210902/</guid>
       <description>Introduction to Operating systems #  What is an OS? #  The OS is the intermediary between the hardware and the software.
 Possibly the most famous test program in C:
-#include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Hello, world!\n&amp;#34;); exit 0; } Which is compiled via
+#include &amp;lt;stdio.h&amp;gt; int main() {  printf(&amp;#34;Hello, world!\n&amp;#34;);  exit 0; } Which is compiled via
 gcc hello.c -o hello which creates the executable hello.
 We can run this via
-./hello we can run this with 2 instances like
-./hello &amp;amp; .</description>
+./hello we can run this with 2 instances like</description>
     </item>
     
     <item>
@@ -2124,7 +2123,7 @@ Inter-process communication #  Message passing
       
       <guid>http://zedchance.github.io/notes/CS139/CS139-lecture-20210923/</guid>
       <description>Processes cont. #  Using fork and execl #  Consider this code
-pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { printf(&amp;#34;I am parent %d; child is %d\n&amp;#34;,getpid(),pid1); pid2=wait3(&amp;amp;status, 0, &amp;amp;usage); printf(&amp;#34;exit code for %d is %d\n&amp;#34;, pid2, status); } else { execl(&amp;#34;/bin/cat&amp;#34;, &amp;#34;/bin/cat&amp;#34;, &amp;#34;/csc/139/news/0001.txt&amp;#34;, NULL); printf(&amp;#34;we should never get here!\n&amp;#34;); } execl loads cat into the child&amp;rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf.</description>
+pid_t pid1, pid2; int status; struct rusage usage; if ((pid1=fork())) { 	printf(&amp;#34;I am parent %d; child is %d\n&amp;#34;,getpid(),pid1); 	pid2=wait3(&amp;amp;status, 0, &amp;amp;usage); 	printf(&amp;#34;exit code for %d is %d\n&amp;#34;, pid2, status); } else { 	execl(&amp;#34;/bin/cat&amp;#34;, &amp;#34;/bin/cat&amp;#34;, &amp;#34;/csc/139/news/0001.txt&amp;#34;, NULL); 	printf(&amp;#34;we should never get here!\n&amp;#34;); } execl loads cat into the child&amp;rsquo;s memory space. When this child cat exits, it will never reach the subsequent printf.</description>
     </item>
     
     <item>
@@ -2489,7 +2488,7 @@ Note that the red circled part cannot be true, and since it is being OR&amp;rsqu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/</guid>
-      <description>Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &amp;lt; nitems; i++) if (p32[i] % 2 == 0) acc = acc + 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&amp;#34;%d\n&amp;#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.</description>
+      <description>Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; int num_even(void * p, int nbytes) {  uint32_t * p32 = (uint32_t *) p;  int nitems = nbytes / 4;  int acc = 0;  for (int i = 0; i &amp;lt; nitems; i++)  if (p32[i] % 2 == 0)  acc = acc + 1;  return acc; }  int main() {  uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};  printf(&amp;#34;%d\n&amp;#34;, num_even(buf, 8));  return 0; } Depending on the endian, the output is either 0 or 2.</description>
     </item>
     
     <item>
@@ -2572,7 +2571,7 @@ perm384bc(k, x) = perm384(k xor x) xor k Remember, perm384 is a public random pe
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210617/</guid>
-      <description>OpenSSL example from previous lecture, finished #  cbc_encrypt.c #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;openssl/evp.h&amp;gt; #define BLK_LEN 16 #define BUF_LEN 512  // NOTE!! For clarity&amp;#39;s sake, this example has no error checking. // In real code you need to test for errors and handle them.  int main(int argc, const char* argv[]) { int len, bytes_read; char passphrase[256]; unsigned char key[32]; // Receive SHA-2-256 hash of user pass phrase  unsigned char iv[BLK_LEN]; unsigned char in_buf[BUF_LEN]; unsigned char out_buf[BUF_LEN+BLK_LEN]; EVP_MD_CTX *mdctx; if (argc !</description>
+      <description>OpenSSL example from previous lecture, finished #  cbc_encrypt.c #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;openssl/evp.h&amp;gt; #define BLK_LEN 16 #define BUF_LEN 512  // NOTE!! For clarity&amp;#39;s sake, this example has no error checking. // In real code you need to test for errors and handle them.  int main(int argc, const char* argv[]) {  int len, bytes_read;  char passphrase[256];  unsigned char key[32]; // Receive SHA-2-256 hash of user pass phrase  unsigned char iv[BLK_LEN];  unsigned char in_buf[BUF_LEN];  unsigned char out_buf[BUF_LEN+BLK_LEN];  EVP_MD_CTX *mdctx;   if (argc !</description>
     </item>
     
     <item>
@@ -2804,6 +2803,33 @@ Classification cont. #  Methods of splitting #  How to determine the best split 
     </item>
     
     <item>
+      <title>CS177-lecture-20220329</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/</guid>
+      <description>Instance based classification #  Bayesian classifiers #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220405</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/</guid>
+      <description>Bayesian classifiers cont. #  Bayeisan belief networks #  Support vector machines #  Linear SVM #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220407</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/</guid>
+      <description>Artificial neural networks #  </description>
+    </item>
+    
+    <item>
       <title>CS190-lecture-20210830</title>
       <link>http://zedchance.github.io/notes/CS190/CS190-lecture-20210830/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2948,6 +2974,15 @@ Classification cont. #  Methods of splitting #  How to determine the best split 
       
       <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/</guid>
       <description>Clarifications #  Testing cont. #  </description>
+    </item>
+    
+    <item>
+      <title>CS191-lecture-20220406</title>
+      <link>http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/</guid>
+      <description>Test automation #  </description>
     </item>
     
     <item>
@@ -3096,7 +3131,7 @@ www.keil.com
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS46/CS46-lecture-notes/</guid>
-      <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() { for (int i) { printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } } #include &amp;lt;stdio.h&amp;gt; int main() { printf(&amp;#34;Enter your agge: &amp;#34;); int age; scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7; printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
+      <description>CS 46 Lecture Notes #  August 27 #  #include &amp;lt;stdio.h&amp;gt; int main() {  printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;); } #include &amp;lt;stdio.h&amp;gt; int main() {  for (int i)  {  printf(&amp;#34;I &amp;lt;3 C\n&amp;#34;);  } } #include &amp;lt;stdio.h&amp;gt; int main() {  printf(&amp;#34;Enter your agge: &amp;#34;);  int age;  scanf(&amp;#34;%d&amp;#34;, &amp;amp;age); // scanf is expecting a decimal (base 10), and stores it in age  int dogAge = age * 7;  printf(&amp;#34;You are %d dog years old \n&amp;#34;, dogAge); } To compile:</description>
     </item>
     
     <item>
@@ -3247,6 +3282,33 @@ The operations are what make a function, not the symbols.</description>
     </item>
     
     <item>
+      <title>MATH102-lecture-20220329</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/</guid>
+      <description>Congruent equations #  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220405</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/</guid>
+      <description>Quiz 6 solns #  </description>
+    </item>
+    
+    <item>
+      <title>MATH102-lecture-20220407</title>
+      <link>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/</guid>
+      <description>Quiz 7 solns #  </description>
+    </item>
+    
+    <item>
       <title>MATH170-latex-notes</title>
       <link>http://zedchance.github.io/notes/MATH170/MATH170-latex-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3272,7 +3334,7 @@ The operations are what make a function, not the symbols.</description>
       <guid>http://zedchance.github.io/notes/MATH170/MATH170-lecture-20211012/</guid>
       <description>MATLAB #  An introduction #  File: m170-matlab-linprog.pdf  For example, lets define a vector
 x = [1 2 3] If we want to transpose x, we can use the &#39;:
-x&#39; Or we can define a column vector like:
+x&amp;#39; Or we can define a column vector like:
 y=[1 2 3] which can also be defined with ;:
 y=[1;2;3] So, to define an entire matrix we can use a combination of both:
 A=[1 2 3; 4 5 6; 7 8 9] We can do some matrix multiplication:</description>
@@ -3306,7 +3368,7 @@ Phase one completes because we have all negative coefficients in the last row, b
       <description>Sensitivity analysis cont. #  By increasing the right hand side of the   \( c_1 \)  constraint by 1 unit, we obtain a new  \( \tilde{z} \)  value of  \( \frac{108}{7} \)  .
 So the shadow price is  \( z - \tilde{z} = \frac{22}{7} \)  .
 Next, identify shadow prices from a completed simplex tableau:
-Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&#39; C=[-7 -6]&#39; lb=[0 0]&#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
+Shadow prices using MATLAB #  A=[2 1; 1 4] b=[3 4]&amp;#39; C=[-7 -6]&amp;#39; lb=[0 0]&amp;#39; [x, u]=linprog(C,A,b,[],[],lb,[]) Optimal solution found.</description>
     </item>
     
     <item>
@@ -4006,6 +4068,25 @@ What is leisure? #  Leisure as a state of mind #  Leisure is political #  </desc
       
       <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220308/</guid>
       <description>Recap #  Media and consumption cont. #  Media consumption paper (1000 words) #  Helpful links #   https://library.csus.edu EBSCO Statista  </description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220329</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/</guid>
+      <description>Reminders #  1500 word paper due last week of semester is now canceled!
+Leisure and Markers of Identity #   someone who enjoys elegant solutions to interesting problems, a lover of music, and good food and family  </description>
+    </item>
+    
+    <item>
+      <title>RPTA125-lecture-20220405</title>
+      <link>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/</guid>
+      <description>Guest Speaker: Dr. Kivel #  </description>
     </item>
     
     <item>

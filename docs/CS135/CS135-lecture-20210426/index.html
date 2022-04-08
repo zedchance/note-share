@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Parsing using Java #  Consider
@@ -21,7 +21,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3698,6 +3698,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3945,6 +3984,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4467,6 +4519,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5453,6 +5544,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5514,7 +5631,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5628,44 +5745,44 @@ S \to aSx \mid bSx \mid \lambda \)
 </table>
 <p>In code:</p>
 <p>We are using a queue of strings to simulate the scanner.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Queue<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Arrays<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ParseTest</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> toks<span style="color:#f92672">;</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> toks<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">();</span> <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String  <span style="color:#a6e22e">next</span><span style="color:#f92672">()</span>    <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> toks<span style="color:#f92672">.</span><span style="color:#a6e22e">element</span><span style="color:#f92672">();</span> <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>String tok<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">()</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>tok<span style="color:#f92672">))</span>
-            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Error on match(&#34;</span> <span style="color:#f92672">+</span> tok <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">);</span>
-        toks<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">parseS</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// $ predicts S-&gt; \lambda, so leave toks alone
-</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span> parseS<span style="color:#f92672">();</span> match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span> parseS<span style="color:#f92672">();</span> match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// x predicts S-&gt; \lambda, so leave toks alone
-</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unexpected: &#34;</span> <span style="color:#f92672">+</span> next<span style="color:#f92672">());</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        toks <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">));</span>
-        parseS<span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">()</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;accept&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;reject&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h3 id="creating-a-parse-tree">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Queue<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.LinkedList<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Arrays<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ParseTest</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> toks<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> toks<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">();</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String  <span style="color:#a6e22e">next</span><span style="color:#f92672">()</span>    <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> toks<span style="color:#f92672">.</span><span style="color:#a6e22e">element</span><span style="color:#f92672">();</span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>String tok<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">()</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>tok<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Error on match(&#34;</span> <span style="color:#f92672">+</span> tok <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        toks<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">parseS</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// $ predicts S-&gt; \lambda, so leave toks alone
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span> parseS<span style="color:#f92672">();</span> match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span> parseS<span style="color:#f92672">();</span> match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// x predicts S-&gt; \lambda, so leave toks alone
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unexpected: &#34;</span> <span style="color:#f92672">+</span> next<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        toks <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        parseS<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">()</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;accept&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;reject&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="creating-a-parse-tree">
   Creating a parse tree
   <a class="anchor" href="#creating-a-parse-tree">#</a>
 </h3>
@@ -5681,65 +5798,65 @@ Whenever we do a parse, it returns a reference to a node representing that symbo
 <p>Each leaf will be a node, and each interior non-terminal will also be a node.
 The non-terminals have a responsibility to build a node and return a reference to it.</p>
 <p>We will use Java&rsquo;s <code>DefaultMutableTreeNode</code> class, which implements <code>TreeNode</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#f92672">import</span> javax.swing.tree.DefaultMutableTreeNode<span style="color:#f92672">;</span>
-    <span style="color:#75715e">// other existing methods from above
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> DefaultMutableTreeNode <span style="color:#a6e22e">parseS</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        DefaultMutableTreeNode rval <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;S&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">()</span> <span style="color:#f92672">||</span> next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>                 <span style="color:#75715e">// S --&gt; lambda
-</span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">));</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">||</span> next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// S --&gt; aSx | bSx
-</span><span style="color:#75715e"></span>            String tok <span style="color:#f92672">=</span> next<span style="color:#f92672">();</span>  
-            match<span style="color:#f92672">(</span>tok<span style="color:#f92672">);</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span>tok<span style="color:#f92672">));</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>parseS<span style="color:#f92672">());</span>
-            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">));</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>                                               <span style="color:#75715e">// Unexpected token
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unexpected: &#34;</span> <span style="color:#f92672">+</span> next<span style="color:#f92672">());</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">return</span> rval<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div><details >
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#f92672">import</span> javax.swing.tree.DefaultMutableTreeNode<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// other existing methods from above
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> DefaultMutableTreeNode <span style="color:#a6e22e">parseS</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        DefaultMutableTreeNode rval <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;S&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">()</span> <span style="color:#f92672">||</span> next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>                 <span style="color:#75715e">// S --&gt; lambda
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">||</span> next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// S --&gt; aSx | bSx
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            String tok <span style="color:#f92672">=</span> next<span style="color:#f92672">();</span>  
+</span></span><span style="display:flex;"><span>            match<span style="color:#f92672">(</span>tok<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span>tok<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>parseS<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>                                               <span style="color:#75715e">// Unexpected token
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unexpected: &#34;</span> <span style="color:#f92672">+</span> next<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rval<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><details >
   <summary>Same  method but thoroughly commented</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#f92672">import</span> javax.swing.tree.DefaultMutableTreeNode<span style="color:#f92672">;</span>
-    <span style="color:#75715e">// ....
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> DefaultMutableTreeNode <span style="color:#a6e22e">parseS</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// Create node to be returned and label it &#34;S&#34;
-</span><span style="color:#75715e"></span>        DefaultMutableTreeNode rval <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;S&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// S non-terminal is nullable, so $ and x both indicate S -&gt; lambda
-</span><span style="color:#75715e"></span>            <span style="color:#75715e">// Make child be a leaf node labeled &#34;&#34; (empty string)
-</span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">));</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Match &#34;a&#34; and add first child, a leaf node labeled &#34;a&#34;
-</span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span>
-            <span style="color:#75715e">// parseS() and have resulting subtree be our second child
-</span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>parseS<span style="color:#f92672">());</span>
-            <span style="color:#75715e">// Match &#34;x&#34; and add third child, a leaf node labeled &#34;x&#34;
-</span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Match &#34;b&#34; and add first child, a leaf node labeled &#34;b&#34;
-</span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span>
-            <span style="color:#75715e">// parseS() and have resulting subtree be our second child
-</span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>parseS<span style="color:#f92672">());</span>
-            <span style="color:#75715e">// Match &#34;x&#34; and add third child, a leaf node labeled &#34;x&#34;
-</span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
-            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// S non-terminal is nullable, so $ and x both indicate S -&gt; lambda
-</span><span style="color:#75715e"></span>            <span style="color:#75715e">// Make child be a leaf node labeled &#34;&#34; (empty string)
-</span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">));</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// Unexpected token, so throw an exception
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unexpected: &#34;</span> <span style="color:#f92672">+</span> next<span style="color:#f92672">());</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">return</span> rval<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#f92672">import</span> javax.swing.tree.DefaultMutableTreeNode<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ....
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> DefaultMutableTreeNode <span style="color:#a6e22e">parseS</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Create node to be returned and label it &#34;S&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        DefaultMutableTreeNode rval <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;S&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// S non-terminal is nullable, so $ and x both indicate S -&gt; lambda
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// Make child be a leaf node labeled &#34;&#34; (empty string)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Match &#34;a&#34; and add first child, a leaf node labeled &#34;a&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// parseS() and have resulting subtree be our second child
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>parseS<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Match &#34;x&#34; and add third child, a leaf node labeled &#34;x&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Match &#34;b&#34; and add first child, a leaf node labeled &#34;b&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// parseS() and have resulting subtree be our second child
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>parseS<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Match &#34;x&#34; and add third child, a leaf node labeled &#34;x&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            match<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>next<span style="color:#f92672">().</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// S non-terminal is nullable, so $ and x both indicate S -&gt; lambda
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// Make child be a leaf node labeled &#34;&#34; (empty string)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            rval<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultMutableTreeNode<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Unexpected token, so throw an exception
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalStateException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unexpected: &#34;</span> <span style="color:#f92672">+</span> next<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rval<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div>
   </div>
 </details>
 
@@ -5748,17 +5865,17 @@ The non-terminals have a responsibility to build a node and return a reference t
 </blockquote>
 
 <p>When we want to print out this tree we can use a method like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printLeaves</span><span style="color:#f92672">(</span>TreeNode noderef<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildCount</span><span style="color:#f92672">()==</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>           <span style="color:#75715e">// noderef is a leaf node
-</span><span style="color:#75715e"></span>            String label <span style="color:#f92672">=</span> noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>label<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildCount</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-                printLeaves<span style="color:#f92672">(</span>noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-</code></pre></div></article>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printLeaves</span><span style="color:#f92672">(</span>TreeNode noderef<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildCount</span><span style="color:#f92672">()==</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>           <span style="color:#75715e">// noderef is a leaf node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            String label <span style="color:#f92672">=</span> noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>label<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildCount</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                printLeaves<span style="color:#f92672">(</span>noderef<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div></article>
  
       
 

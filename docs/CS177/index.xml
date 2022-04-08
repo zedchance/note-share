@@ -140,5 +140,32 @@ Classification cont. #  Methods of splitting #  How to determine the best split 
       <description>Overfitting cont. #  </description>
     </item>
     
+    <item>
+      <title>CS177-lecture-20220329</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/</guid>
+      <description>Instance based classification #  Bayesian classifiers #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220405</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/</guid>
+      <description>Bayesian classifiers cont. #  Bayeisan belief networks #  Support vector machines #  Linear SVM #  </description>
+    </item>
+    
+    <item>
+      <title>CS177-lecture-20220407</title>
+      <link>http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/</guid>
+      <description>Artificial neural networks #  </description>
+    </item>
+    
   </channel>
 </rss>

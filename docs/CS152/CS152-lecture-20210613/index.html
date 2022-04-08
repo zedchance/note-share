@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.92.1" />
+  <meta name="generator" content="Hugo 0.96.0" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Block cipher encryption mode examples #  For these examples, consider
@@ -21,7 +21,7 @@
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.dfc677a7972fb0d86dd6eaf657edfad83e2c433246dffdf64911ee91450f0378.css" integrity="sha256-38Z3p5cvsNht1ur2V&#43;362D4sQzJG3/32SRHukUUPA3g=">
-<script defer src="/notes/en.search.min.f42a2e643b90495394c843f1a2c0ddd8698c35304e6c407fecd71bb7ef08f0c6.js" integrity="sha256-9CouZDuQSVOUyEPxosDd2GmMNTBObEB/7Ncbt&#43;8I8MY="></script>
+<script defer src="/notes/en.search.min.b7eae215fd5074a3988451a6308a2caa43dd682f13221fb7806fd1ecc919ea86.js" integrity="sha256-t&#43;riFf1QdKOYhFGmMIosqkPdaC8TIh&#43;3gG/R7MkZ6oY="></script>
 
 <script defer src="/notes/sw.min.102e0b752b65c874dd63b7b7ef9f8391b698d86adbb048ed0e6ddf02a6093f83.js" integrity="sha256-EC4LdStlyHTdY7e375&#43;DkbaY2GrbsEjtDm3fAqYJP4M="></script>
 <!--
@@ -3698,6 +3698,45 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220329/" class="">CS177-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220405/" class="">CS177-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS177/CS177-lecture-20220407/" class="">CS177-lecture-20220407</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -3945,6 +3984,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220309/" class="">CS191-lecture-20220309</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/CS191/CS191-lecture-20220406/" class="">CS191-lecture-20220406</a>
   
 
         </li>
@@ -4467,6 +4519,45 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220317/" class="">MATH102-lecture-20220317</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220329/" class="">MATH102-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220405/" class="">MATH102-lecture-20220405</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/MATH102/MATH102-lecture-20220407/" class="">MATH102-lecture-20220407</a>
   
 
         </li>
@@ -5453,6 +5544,32 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220329/" class="">RPTA125-lecture-20220329</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://zedchance.github.io/notes/RPTA125/RPTA125-lecture-20220405/" class="">RPTA125-lecture-20220405</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -5514,7 +5631,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -5946,64 +6063,64 @@ These intrinsic functions compile into 1 single assembly instruction.</p>
   <a class="anchor" href="#some-sse-example-code">#</a>
 </h3>
 <p>Consider,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;immintrin.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;time.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// accumulator function
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">sum</span>(<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> buf, <span style="color:#66d9ef">int</span> n)
-{
-    <span style="color:#66d9ef">uint32_t</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
-    {
-        res <span style="color:#f92672">=</span> res <span style="color:#f92672">+</span> buf[i];
-    }
-    <span style="color:#66d9ef">return</span> res;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> argv[])
-{
-    <span style="color:#75715e">// allocate 4 million bytes
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> buf <span style="color:#f92672">=</span> malloc(<span style="color:#ae81ff">1000000</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>);
-
-    <span style="color:#75715e">// read timer
-</span><span style="color:#75715e"></span>    clock_t t <span style="color:#f92672">=</span> clock();
-
-    <span style="color:#75715e">// sum all elements
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> total <span style="color:#f92672">=</span> sum(buf, <span style="color:#ae81ff">1000000</span>);
-
-    <span style="color:#75715e">// get elapsed time
-</span><span style="color:#75715e"></span>    t <span style="color:#f92672">=</span> clock() <span style="color:#f92672">-</span> t;
-    printf(<span style="color:#e6db74">&#34;%u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">unsigned</span>) t);
-}
-</code></pre></div><p>When this runs it outputs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;immintrin.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;time.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// accumulator function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">sum</span>(<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> buf, <span style="color:#66d9ef">int</span> n)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> res <span style="color:#f92672">+</span> buf[i];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> argv[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// allocate 4 million bytes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> buf <span style="color:#f92672">=</span> malloc(<span style="color:#ae81ff">1000000</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// read timer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    clock_t t <span style="color:#f92672">=</span> clock();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// sum all elements
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">uint32_t</span> total <span style="color:#f92672">=</span> sum(buf, <span style="color:#ae81ff">1000000</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// get elapsed time
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    t <span style="color:#f92672">=</span> clock() <span style="color:#f92672">-</span> t;
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;%u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">unsigned</span>) t);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When this runs it outputs</p>
 <pre tabindex="0"><code>4790
 </code></pre><p>which is different on each run, because it is measuring the amount of ticks it takes to complete the calculation.
 (They are averaging around 3000).</p>
 <p>Lets see if we can do better using SSE instructions.
 Instead of reading each element individually, lets read them in groups of 4.</p>
 <p>We can modify our <code>sum</code> function to use SSE instructions, we&rsquo;ll call it <code>sum_sse</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">sum_sse</span>(<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> buf, <span style="color:#66d9ef">int</span> n)
-{
-    <span style="color:#66d9ef">uint32_t</span> res_arr[<span style="color:#ae81ff">4</span>];
-    <span style="color:#66d9ef">__m128i</span> res <span style="color:#f92672">=</span> _mm_setzero_si128();  <span style="color:#75715e">// 0 0 0 0
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&lt;</span> n; i <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>)
-    {
-        <span style="color:#75715e">// load current element
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">__m128i</span> temp <span style="color:#f92672">=</span> _mm_loadu_si128((<span style="color:#66d9ef">__m128i</span> <span style="color:#f92672">*</span>)(buf <span style="color:#f92672">+</span> i));
-
-        <span style="color:#75715e">// add to sum
-</span><span style="color:#75715e"></span>        res <span style="color:#f92672">=</span> _mm_add_epi32(res, temp);
-    }
-
-    <span style="color:#75715e">// store res into memory
-</span><span style="color:#75715e"></span>    _mm_storeu_si128((<span style="color:#66d9ef">__m128i</span> <span style="color:#f92672">*</span>) res_arr, res);
-
-    <span style="color:#75715e">// return sum of 4 elements
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> res_arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> res_arr[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> res_arr[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> res_arr[<span style="color:#ae81ff">3</span>];
-}
-</code></pre></div><p>When we run this we get an average output time of around 1500, so while this was harder to write, it is a lot faster.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">sum_sse</span>(<span style="color:#66d9ef">uint32_t</span> <span style="color:#f92672">*</span> buf, <span style="color:#66d9ef">int</span> n)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">uint32_t</span> res_arr[<span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">__m128i</span> res <span style="color:#f92672">=</span> _mm_setzero_si128();  <span style="color:#75715e">// 0 0 0 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">&lt;</span> n; i <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// load current element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">__m128i</span> temp <span style="color:#f92672">=</span> _mm_loadu_si128((<span style="color:#66d9ef">__m128i</span> <span style="color:#f92672">*</span>)(buf <span style="color:#f92672">+</span> i));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// add to sum
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        res <span style="color:#f92672">=</span> _mm_add_epi32(res, temp);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// store res into memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    _mm_storeu_si128((<span style="color:#66d9ef">__m128i</span> <span style="color:#f92672">*</span>) res_arr, res);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// return sum of 4 elements
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> res_arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> res_arr[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> res_arr[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> res_arr[<span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When we run this we get an average output time of around 1500, so while this was harder to write, it is a lot faster.</p>
 <blockquote class="book-hint info">
   <p>Note: To sum the 4 values in our <code>res</code> value, we could do something like this:</p>
 <pre tabindex="0"><code>1 2 3 4
@@ -6036,15 +6153,15 @@ We will be using the open source toolkit because it contains implementations of 
 <p>We will be using the <a href="https://wiki.openssl.org/index.php/EVP_Symmetric_Encryption_and_Decryption">EVP</a> authenticated encryption and decryption.</p>
 <p>We will be using the <a href="https://github.com/openssl/openssl/blob/master/include/openssl/evp.h"><code>evp.h</code> header file</a>.</p>
 <p>So lets write something using some openssl code to make sure our environment is working, in a file called <code>test.c</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;openssl/evp.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-{
-    <span style="color:#75715e">// make a call to some kind of openssl function
-</span><span style="color:#75715e"></span>    EVP_aes_128_ctr();
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><p>We can compile with, linking the <code>crypto</code> lib</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;openssl/evp.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// make a call to some kind of openssl function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    EVP_aes_128_ctr();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>We can compile with, linking the <code>crypto</code> lib</p>
 <pre tabindex="0"><code>gcc -lcrypto test.c
 </code></pre><h3 id="an-openssl-encryption-example">
   An OpenSSL encryption example
@@ -6083,60 +6200,60 @@ This value is if you have a special implementation of your mode of operation.</l
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;openssl/evp.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-{
-    <span style="color:#75715e">/* ENCRYPTION */</span>
-    <span style="color:#75715e">// plaintext
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> pt[<span style="color:#ae81ff">44</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;The quick brown fox jumps over the lazy dog&#34;</span>;
-    <span style="color:#66d9ef">char</span> pt2[<span style="color:#ae81ff">44</span>];
-    <span style="color:#75715e">// ciphertext
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> ct[<span style="color:#ae81ff">44</span>];
-    <span style="color:#75715e">// key (should be random)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> key[<span style="color:#ae81ff">16</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>};
-    <span style="color:#75715e">// nonce || counter
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> iv[<span style="color:#ae81ff">16</span>]  <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>};
-
-    <span style="color:#75715e">// our cipher context
-</span><span style="color:#75715e"></span>    EVP_CIPHER_CTX <span style="color:#f92672">*</span> ctx;
-    ctx <span style="color:#f92672">=</span> EVP_CPHER_CTX_new();
-    EVP_EncryptInit_ex(ctx, EVP_aes_128_ctr(), NULL, key, iv);
-
-    <span style="color:#75715e">// do the encryption
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> len;                <span style="color:#75715e">// how many bytes written
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> ciphertext_len;
-    EVP_EncryptUpdate(ctx, ct, <span style="color:#f92672">&amp;</span>len, pt, <span style="color:#ae81ff">44</span>);
-    ciphertext_len <span style="color:#f92672">=</span> ciphertext_len <span style="color:#f92672">+</span> len;
-
-    <span style="color:#75715e">// finalize, then free context
-</span><span style="color:#75715e"></span>    EVP_EncryptFinal(ctx, ct <span style="color:#f92672">+</span> ciphertext_len, <span style="color:#f92672">&amp;</span>len);
-    ciphertext_len <span style="color:#f92672">=</span> ciphertext_len <span style="color:#f92672">+</span> len;
-    EVP_CIPHER_CTX_free(ctx);
-
-    <span style="color:#75715e">/* DECRYPTION */</span>
-    <span style="color:#75715e">// reset counter block
-</span><span style="color:#75715e"></span>    iv[<span style="color:#ae81ff">15</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-
-    <span style="color:#75715e">// reinit context
-</span><span style="color:#75715e"></span>    EVP_DecryptInit_ex(ctx, EVP_aes_128_ctr(), NULL, key, iv);
-
-    <span style="color:#75715e">// do the decryption
-</span><span style="color:#75715e"></span>    len <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">int</span> plaintext_len;
-    EVP_DecryptUpdate(ctx, pt2, <span style="color:#f92672">&amp;</span>len, ct, <span style="color:#ae81ff">44</span>);
-    plaintext_len <span style="color:#f92672">=</span> plaintext_len <span style="color:#f92672">+</span> len;
-
-    <span style="color:#75715e">// finalize, then free context
-</span><span style="color:#75715e"></span>    EVP_DecryptFinal_ex(ctx, pt2 <span style="color:#f92672">+</span> plaintext_len, <span style="color:#f92672">&amp;</span>len);
-    plaintext_len <span style="color:#f92672">=</span> plaintext_len <span style="color:#f92672">+</span> len;
-    EVP_CIPHER_CTX_free(ctx);
-
-    <span style="color:#75715e">// lets check if it worked
-</span><span style="color:#75715e"></span>    printf(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pt2);
-}
-</code></pre></div><pre tabindex="0"><code>gcc -lcrypto test.c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;openssl/evp.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* ENCRYPTION */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// plaintext
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> pt[<span style="color:#ae81ff">44</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;The quick brown fox jumps over the lazy dog&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> pt2[<span style="color:#ae81ff">44</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ciphertext
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> ct[<span style="color:#ae81ff">44</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// key (should be random)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> key[<span style="color:#ae81ff">16</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// nonce || counter
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> iv[<span style="color:#ae81ff">16</span>]  <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// our cipher context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    EVP_CIPHER_CTX <span style="color:#f92672">*</span> ctx;
+</span></span><span style="display:flex;"><span>    ctx <span style="color:#f92672">=</span> EVP_CPHER_CTX_new();
+</span></span><span style="display:flex;"><span>    EVP_EncryptInit_ex(ctx, EVP_aes_128_ctr(), NULL, key, iv);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// do the encryption
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> len;                <span style="color:#75715e">// how many bytes written
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> ciphertext_len;
+</span></span><span style="display:flex;"><span>    EVP_EncryptUpdate(ctx, ct, <span style="color:#f92672">&amp;</span>len, pt, <span style="color:#ae81ff">44</span>);
+</span></span><span style="display:flex;"><span>    ciphertext_len <span style="color:#f92672">=</span> ciphertext_len <span style="color:#f92672">+</span> len;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// finalize, then free context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    EVP_EncryptFinal(ctx, ct <span style="color:#f92672">+</span> ciphertext_len, <span style="color:#f92672">&amp;</span>len);
+</span></span><span style="display:flex;"><span>    ciphertext_len <span style="color:#f92672">=</span> ciphertext_len <span style="color:#f92672">+</span> len;
+</span></span><span style="display:flex;"><span>    EVP_CIPHER_CTX_free(ctx);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* DECRYPTION */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// reset counter block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    iv[<span style="color:#ae81ff">15</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// reinit context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    EVP_DecryptInit_ex(ctx, EVP_aes_128_ctr(), NULL, key, iv);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// do the decryption
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    len <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> plaintext_len;
+</span></span><span style="display:flex;"><span>    EVP_DecryptUpdate(ctx, pt2, <span style="color:#f92672">&amp;</span>len, ct, <span style="color:#ae81ff">44</span>);
+</span></span><span style="display:flex;"><span>    plaintext_len <span style="color:#f92672">=</span> plaintext_len <span style="color:#f92672">+</span> len;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// finalize, then free context
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    EVP_DecryptFinal_ex(ctx, pt2 <span style="color:#f92672">+</span> plaintext_len, <span style="color:#f92672">&amp;</span>len);
+</span></span><span style="display:flex;"><span>    plaintext_len <span style="color:#f92672">=</span> plaintext_len <span style="color:#f92672">+</span> len;
+</span></span><span style="display:flex;"><span>    EVP_CIPHER_CTX_free(ctx);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// lets check if it worked
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    printf(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pt2);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><pre tabindex="0"><code>gcc -lcrypto test.c
 ./a.out
 The quick brown fox jumps over the lazy dog
 </code></pre></article>

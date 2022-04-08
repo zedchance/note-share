@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://zedchance.github.io/notes/CS152/CS152-lecture-20210603/</guid>
-      <description>Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; int num_even(void * p, int nbytes) { uint32_t * p32 = (uint32_t *) p; int nitems = nbytes / 4; int acc = 0; for (int i = 0; i &amp;lt; nitems; i++) if (p32[i] % 2 == 0) acc = acc + 1; return acc; } int main() { uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00}; printf(&amp;#34;%d\n&amp;#34;, num_even(buf, 8)); return 0; } Depending on the endian, the output is either 0 or 2.</description>
+      <description>Data programming #  File: Topics in C programming useful for cryptography  Count the number of even chars #  in C #  #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdint.h&amp;gt; int num_even(void * p, int nbytes) {  uint32_t * p32 = (uint32_t *) p;  int nitems = nbytes / 4;  int acc = 0;  for (int i = 0; i &amp;lt; nitems; i++)  if (p32[i] % 2 == 0)  acc = acc + 1;  return acc; }  int main() {  uint8_t buf[] = {0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00};  printf(&amp;#34;%d\n&amp;#34;, num_even(buf, 8));  return 0; } Depending on the endian, the output is either 0 or 2.</description>
     </item>
     
   </channel>
